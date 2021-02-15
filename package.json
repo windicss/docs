@@ -1,7 +1,5 @@
 {
-  "name": "windicss_docs",
   "private": true,
-  "version": "unknown",
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev",
