@@ -1,3 +1,4 @@
+[windi css]: https://github.com/windicss/windicss
 [discussions]: https://github.com/windicss/windicss/discussions
 [GitHub Issues]: https://github.com/windicss/windicss/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
 [GitHub Discussions]: https://github.com/windicss/windicss/discussions

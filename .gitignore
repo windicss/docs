@@ -46,6 +46,7 @@ yarn.lock
 
 # Vitepress
 dist
+wiki/
 
 # Algolia
 .algolia.env
