@@ -41,11 +41,11 @@ module.exports = {
   description,
   head,
   themeConfig: {
-    algolia: {
-      // appId: '',
-      // apiKey: '',
-      indexName: 'windicss',
-    },
+    // algolia: {
+    //   appId: '',
+    //   apiKey: '',
+    //   indexName: 'windicss',
+    // },
     repo: 'windicss/windicss',
     logo: '/assets/logo.svg',
     docsDir: 'docs',
