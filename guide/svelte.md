@@ -1,4 +1,4 @@
-[utility groups]: /guide/introduction.html#🎳-utility-groups
+[utility groups]: /guide/features.html#🎳-utility-groups
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [migration]: /guide/migration
 
