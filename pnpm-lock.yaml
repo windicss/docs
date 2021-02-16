@@ -5,15 +5,17 @@ devDependencies:
   '@docsearch/js': 1.0.0-alpha.28
   '@typescript-eslint/eslint-plugin': 4.15.1_dd080f2a8fb4d0ac76cfb4c7062ee728
   '@typescript-eslint/parser': 4.15.1_eslint@7.20.0+typescript@4.1.5
-  '@vue/eslint-config-standard': 5.1.2_4e6ffd00624c0e94c3997446a7c4e341
+  '@vue/eslint-config-standard': 6.0.0_329279a7b6476a2af5a9c3a20d3f148c
   eslint: 7.20.0
   eslint-config-vuepress: 3.1.0_eslint@7.20.0
   eslint-formatter-friendly: 7.0.0
   eslint-plugin-import: 2.22.1_eslint@7.20.0
-  eslint-plugin-standard: 4.1.0_eslint@7.20.0
+  eslint-plugin-standard: 5.0.0_eslint@7.20.0
   eslint-plugin-vue: 7.6.0_eslint@7.20.0
   typescript: 4.1.5
-  vitepress: 0.11.5
+  vite: 2.0.0-beta.70
+  vite-plugin-windicss: 0.1.11_vite@2.0.0-beta.70
+  vitepress: 0.12.2
 lockfileVersion: 5.2
 packages:
   /@algolia/cache-browser-local-storage/4.8.5:
@@ -397,29 +399,27 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Wm//Kuxa1DpgjE4P9W0coZr8wklOfJ35Jtq61CbU+t601CpPTK4+FL2QDBItaG7aoUUDCWL5nnxMkuaOgzTBKg==
-  /@vue/eslint-config-standard/5.1.2_4e6ffd00624c0e94c3997446a7c4e341:
+  /@vue/eslint-config-standard/6.0.0_329279a7b6476a2af5a9c3a20d3f148c:
     dependencies:
       eslint: 7.20.0
-      eslint-config-standard: 14.1.1_685dad7101567ce6c44d4244b02c1226
+      eslint-config-standard: 16.0.2_be0c44e8b9ebd8c4c0e8e6022445aa98
       eslint-import-resolver-node: 0.3.4
-      eslint-import-resolver-webpack: 0.12.2_eslint-plugin-import@2.22.1
+      eslint-import-resolver-webpack: 0.13.0_eslint-plugin-import@2.22.1
       eslint-plugin-import: 2.22.1_eslint@7.20.0
-      eslint-plugin-standard: 4.1.0_eslint@7.20.0
       eslint-plugin-vue: 7.6.0_eslint@7.20.0
     dev: true
     peerDependencies:
-      '@vue/cli-service': ^3.0.0 || ^4.0.0-0
-      eslint: '>=6.2.2'
-      eslint-plugin-import: '>= 2.18.0'
-      eslint-plugin-node: '>= 9.1.0'
-      eslint-plugin-promise: '>= 4.2.1'
-      eslint-plugin-standard: '>= 4.0.0'
-      eslint-plugin-vue: '>= 6.1.2'
+      '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
+      eslint: ^7.12.1
+      eslint-plugin-import: ^2.22.1
+      eslint-plugin-node: ^11.1.0
+      eslint-plugin-promise: ^4.2.1
+      eslint-plugin-vue: ^7.0.0
     peerDependenciesMeta:
       '@vue/cli-service':
         optional: true
     resolution:
-      integrity: sha512-FTz0k77dIrj9r3xskt9jsZyL/YprrLiPRf4m3k7G6dZ5PKuD6OPqYrHR9eduUmHDFpTlRgFpTVQrq+1el9k3QQ==
+      integrity: sha512-1hIkQDMkZBxqlVITckUpcBvRMiWC/Bupc1qh8JkMSgP5vvB7fpGXprblj3ivXrKK9TCpKpy5pqnBKEFKTNfoow==
   /@vue/reactivity/3.0.5:
     dependencies:
       '@vue/shared': 3.0.5
@@ -1156,26 +1156,24 @@ packages:
       eslint: '>=7.0.0'
     resolution:
       integrity: sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
-  /eslint-config-standard/14.1.1_685dad7101567ce6c44d4244b02c1226:
-    dependencies:
-      eslint: 7.20.0
-      eslint-plugin-import: 2.22.1_eslint@7.20.0
-      eslint-plugin-standard: 4.1.0_eslint@7.20.0
-    dev: true
-    peerDependencies:
-      eslint: '>=6.2.2'
-      eslint-plugin-import: '>=2.18.0'
-      eslint-plugin-node: '>=9.1.0'
-      eslint-plugin-promise: '>=4.2.1'
-      eslint-plugin-standard: '>=4.0.0'
-    resolution:
-      integrity: sha512-Z9B+VR+JIXRxz21udPTL9HpFMyoMUEeX1G251EQ6e05WD9aPVtVBn09XUmZ259wCMlCDmYDSZG62Hhm+ZTJcUg==
   /eslint-config-standard/16.0.2_b9128b9dfce9b0a9c071f37ef4a8d1e9:
     dependencies:
       eslint: 7.20.0
       eslint-plugin-import: 2.22.1_eslint@7.20.0
       eslint-plugin-node: 11.1.0_eslint@7.20.0
       eslint-plugin-promise: 4.3.1
+    dev: true
+    peerDependencies:
+      eslint: ^7.12.1
+      eslint-plugin-import: ^2.22.1
+      eslint-plugin-node: ^11.1.0
+      eslint-plugin-promise: ^4.2.1
+    resolution:
+      integrity: sha512-fx3f1rJDsl9bY7qzyX8SAtP8GBSk6MfXFaTfaGgk12aAYW4gJSyRm7dM790L6cbXv63fvjY4XeSzXnb4WM+SKw==
+  /eslint-config-standard/16.0.2_be0c44e8b9ebd8c4c0e8e6022445aa98:
+    dependencies:
+      eslint: 7.20.0
+      eslint-plugin-import: 2.22.1_eslint@7.20.0
     dev: true
     peerDependencies:
       eslint: ^7.12.1
@@ -1230,7 +1228,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ogtf+5AB/O+nM6DIeBUNr2fuT7ot9Qg/1harBfBtaP13ekEWFQEEMP94BCB7zaNW3gyY+8SHYF00rnqYwXKWOA==
-  /eslint-import-resolver-webpack/0.12.2_eslint-plugin-import@2.22.1:
+  /eslint-import-resolver-webpack/0.13.0_eslint-plugin-import@2.22.1:
     dependencies:
       array-find: 1.0.0
       debug: 2.6.9
@@ -1248,7 +1246,7 @@ packages:
       eslint-plugin-import: '>=1.4.0'
       webpack: '>=1.11.0'
     resolution:
-      integrity: sha512-7Jnm4YAoNNkvqPaZkKdIHsKGmv8/uNnYC5QsXkiSodvX4XEEfH2AKOna98FK52fCDXm3q4HzuX+7pRMKkJ64EQ==
+      integrity: sha512-hZWGcmjaJZK/WSCYGI/y4+FMGQZT+cwW/1E/P4rDwFj2PbanlQHISViw4ccDJ+2wxAqjgwBfxwy3seABbVKDEw==
   /eslint-module-utils/2.6.0:
     dependencies:
       debug: 2.6.9
@@ -1332,14 +1330,15 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-bY2sGqyptzFBDLh/GMbAxfdJC+b0f23ME63FOE4+Jao0oZ3E1LEwFtWJX/1pGMJLiTtrSSern2CRM/g+dfc0eQ==
-  /eslint-plugin-standard/4.1.0_eslint@7.20.0:
+  /eslint-plugin-standard/5.0.0_eslint@7.20.0:
     dependencies:
       eslint: 7.20.0
+    deprecated: 'standard 16.0.0 and eslint-config-standard 16.0.0 no longer require the eslint-plugin-standard package. You can remove it from your dependencies with ''npm rm eslint-plugin-standard''. More info here: https://github.com/standard/standard/issues/1316'
     dev: true
     peerDependencies:
       eslint: '>=5.0.0'
     resolution:
-      integrity: sha512-ZL7+QRixjTR6/528YNGyDotyffm5OQst/sGxKDwGb9Uqs4In5Egi4+jbobhqJoyoCM6/7v/1A5fhQ7ScMtDjaQ==
+      integrity: sha512-eSIXPc9wBM4BrniMzJRBm2uoVuXz2EPa+NXPk2+itrVt+r5SbKFERx/IgrK/HmfjddyKVz2f+j+7gBRvu19xLg==
   /eslint-plugin-vue/7.6.0_eslint@7.20.0:
     dependencies:
       eslint: 7.20.0
@@ -3192,7 +3191,17 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
-  /vite/2.0.0-beta.69:
+  /vite-plugin-windicss/0.1.11_vite@2.0.0-beta.70:
+    dependencies:
+      fast-glob: 3.2.5
+      vite: 2.0.0-beta.70
+      windicss: 2.1.6
+    dev: true
+    peerDependencies:
+      vite: ^2.0.0-beta.69
+    resolution:
+      integrity: sha512-z1fqoeNv3YJtCWWr+a8lI6y3zAxAbGXKnX0Hj4GiU3Q88JF/0a9yD1D24+hR2RpPyEO/WuNhHVHGVzLkY5Eh0g==
+  /vite/2.0.0-beta.70:
     dependencies:
       esbuild: 0.8.46
       postcss: 8.2.6
@@ -3205,8 +3214,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     resolution:
-      integrity: sha512-Wf4bWOK/b6Q+06Wyk7uJIBy/LiENGx26do6tn9gOMRRZLEuLizN/cDzGqnQkGVVevbb18xdilyxhnTes0lFjZg==
-  /vitepress/0.11.5:
+      integrity: sha512-rbuAYZE8T0jNOUykkyfjiiKmz4MpW2KqzHO8++WCCDXyxzIg56ICQ/B6NLZzVpWyk0iSKiUKr2k8NMkmDlZAQQ==
+  /vitepress/0.12.2:
     dependencies:
       '@docsearch/css': 1.0.0-alpha.28
       '@docsearch/js': 1.0.0-alpha.28
@@ -3233,14 +3242,14 @@ packages:
       prismjs: 1.23.0
       sirv: 1.0.11
       slash: 3.0.0
-      vite: 2.0.0-beta.69
+      vite: 2.0.0-beta.70
       vue: 3.0.5
     dev: true
     engines:
       node: '>=12.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-QElAGDxXcvn3G1UrW6VKWX6hd748+07cU1mMH5/gRN/QDdXTVAyt5Ulxmo+IXAmrZQhN5nvvY7jCWWJIDNXQOA==
+      integrity: sha512-dU4O7nG4TfI4CbGbrry1TAXlg19+xm9wlHJdvZnYYjTFRlS7zvHDWgxcP7zduUvhqXCGoGURFKjMPo8MRghVNg==
   /vm-browserify/1.1.2:
     dev: true
     resolution:
@@ -3283,6 +3292,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
+  /windicss/2.1.6:
+    dev: true
+    engines:
+      node: '>= 12'
+    hasBin: true
+    resolution:
+      integrity: sha512-G+RCA/SC+LVDf9xXNYKjljmNDZOlS4XhZrHySH7Anh9ymTbo4AXsKGqZU1jKWTzSky6IP5fR4ug5YVBo44NV8Q==
   /word-wrap/1.2.3:
     dev: true
     engines:
@@ -3312,13 +3328,15 @@ specifiers:
   '@docsearch/js': ^1.0.0-alpha.28
   '@typescript-eslint/eslint-plugin': ^4.15.1
   '@typescript-eslint/parser': ^4.15.1
-  '@vue/eslint-config-standard': ^5.1.2
+  '@vue/eslint-config-standard': ^6.0.0
   eslint: ^7.20.0
   eslint-config-vuepress: ^3.1.0
   eslint-formatter-friendly: ^7.0.0
   eslint-plugin-import: ^2.22.1
-  eslint-plugin-standard: ^4.1.0
+  eslint-plugin-standard: ^5.0.0
   eslint-plugin-vue: ^7.6.0
   typescript: ^4.1.5
-  vitepress: ^0.11.5
+  vite: ^2.0.0-beta.70
+  vite-plugin-windicss: ^0.1.11
+  vitepress: ^0.12.2
   vue: ^3.0.5

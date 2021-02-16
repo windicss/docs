@@ -1,6 +1,6 @@
 :root {
   --c-brand: #0ea5e9;
-  --c-brand-light: #22d3ee;
+  --c-brand-light: #25b3f5;
 
   --bg-colored-light: #f3f6f7;
 }
@@ -54,4 +54,13 @@ code kbd {
 
 code .token.inserted.token.inserted {
     color: var(--c-brand-light);
+}
+
+.footer .container {
+  border-top: 0 !important;
+}
+
+.home-hero + .home-features .wrapper {
+  border-bottom: 1px solid var(--c-divider);
+  padding-bottom: 3.25rem;
 }
