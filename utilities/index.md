@@ -1,7 +1,5 @@
 # Utilities
 
-Full keyword search is coming soon. In the meantime:
-
 - [Accessibility](/utilities/accessibility)
 - [Backgrounds](/utilities/backgrounds)
 - [Borders](/utilities/borders)
@@ -20,3 +18,7 @@ Full keyword search is coming soon. In the meantime:
 - [Transitions](/utilities/transitions)
 - [Typography](/utilities/typography)
 - [Variants](/utilities/variants)
+
+::: tip
+Use the search bar to quickly find the utilities you need.
+:::

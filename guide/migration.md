@@ -7,7 +7,7 @@ While Windi CSS aims to be compatible with Tailwind CSS, there are some slight d
 
 Some options are no longer necessary, because of its [design].
 
-## From Tailwind CSS
+## Migrate from Tailwind CSS
 
 If you are using Tailwind CSS with the PostCSS plugin, you can follow these instructions to migrate your installation.
 
