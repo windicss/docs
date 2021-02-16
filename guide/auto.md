@@ -52,3 +52,27 @@ bg-$${variableName}
   background-color: rgba(var(--test-variable), var(--tw-bg-opacity));
 }
 ```
+
+## Other Features ⚡️
+
+### 🌓 More States and Light/Dark theme support
+
+Adds `@dark` and `@light` classes based on `prefers-color-scheme`.
+
+### 🎳 Utility Groups
+
+You can apply several utilities for the same variant by grouping them with parenthesis.
+
+```html
+<div class="bg-white font-light sm:hover:(bg-gray-100 font-medium)"/>
+```
+
+### 🖥 Screen Utilities
+
+Automatically generates `-` and `+` classes, even for your custom screens.
+
+```css
+sm: @media (min-width:640px);
++sm: @media (min-width:640px) and (max-width:768px);
+-sm: @media (max-width:640px);
+```

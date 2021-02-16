@@ -4,6 +4,9 @@
 [autoprefixer]: https://autoprefixer.github.io/
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
 [svelte]: /guide/svelte.html#additional-features-in-svelte-⚡%EF%B8%8F
+[options]: /guide/configuration
+[directives]: /guide/directives
+[utilities]: /utilities/
 
 # Introduction
 
@@ -23,11 +26,11 @@ It detects utilities and directives in your CSS, and process them on demand, whi
 
 #### 🔌 Compatibility
 
-Windi CSS supports Tailwind CSS configuration options, directives, and utilities.
+Windi CSS supports [Tailwind CSS] configuration [options], [directives], and [utilities].
 
 #### 😎 Auto-Inferred Variables and Variants
 
-No need to configure custom variables like numbers, sizes, scores, and colors. Windi CSS will [automatically](/utilities/auto) generate them based on the class semantics.
+No need to configure custom variables like numbers, sizes, scores, and colors. Windi CSS will [automatically](/guide/auto) generate them based on the class semantics.
 
 For example, if you use `p-3.2`, it will become available and work as you would expect.
 
