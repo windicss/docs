@@ -1,8 +1,16 @@
+[pseudo-selector]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
 # Variants
 
-Variants specify under what circumstances your utilities will be activated, it may be screen size or system theme or dom element status.
+Variants allow you to specify under what circumstances your utilities will be activated.
 
-By default, you will specify it by `:` separator, and you can combine them arbitrarily. Such as, `sm:bg-red-500 sm:hover:bg-green-300 dark:bg-white`.
+You may use the screen size, system theme, or any [pseudo-selector], such as `:hover`.
+
+You specify a variant by using the `:` separator, and you can combine them arbitrarily as in:
+
+```
+sm:bg-red-500 sm:hover:bg-green-300 dark:bg-white
+```
 
 ## Screen Variants
 
@@ -35,6 +43,32 @@ By default, you will specify it by `:` separator, and you can combine them arbit
 | +lg | @media (min-width: 1024px) and (max-width: 1280px) { ... } | Enable utility when the screen width is greater than 1024px and less than 1280px |
 | +xl | @media (min-width: 1280px) and (max-width: 1536px) { ... } | Enable utility when the screen width is greater than 1280px and less than 1536px |
 | +2xl | @media (min-width: 1536px) { ... } | Enable utility when the screen width is greater than 1536px |
+
+
+### Max-Width Breakpoints
+
+You can define custom breakpoints that use `max-width` instead, or ranges, by
+using the following configuration options:
+
+```js
+  theme: {
+    screens: {
+      '2xl': { 'max': '1535px' },
+      'sm': { 'min': '640px', 'max': '767px' },
+```
+
+### Raw Media Queries
+
+You can define a custom screen by providing a raw media query in the config:
+
+```js
+  theme: {
+    screens: {
+      'portrait': { 'raw': '(orientation: portrait)' },
+      'print': { 'raw': 'print' },
+```
+
+For example, you could then use `print:hidden` to hide elements when styling for print.
 
 ## State Variants
 
