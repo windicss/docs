@@ -1,10 +1,17 @@
 [auto]: /utilities/auto
+[design]: /guide/modes
 
 # Migrating to Windi CSS
 
-If you are already using Tailwind CSS for your Vite app, you can follow these instructions to migrate your installation.
+While Windi CSS aims to be compatible with Tailwind CSS, there are some slight differences in configuration.
 
-## `package.json`
+Some options are no longer necessary, because of its [design].
+
+## From Tailwind CSS
+
+If you are using Tailwind CSS with the PostCSS plugin, you can follow these instructions to migrate your installation.
+
+### `package.json`
 
 Some of your dependencies are no longer required, you can remove them if they were only needed for Tailwind CSS.
 
@@ -15,7 +22,7 @@ Some of your dependencies are no longer required, you can remove them if they we
 + "windicss": "*"
 ```
 
-## Base Styles
+### Base Styles
 
 You can now remove the Tailwind CSS imports from your css entry.
 
@@ -27,7 +34,7 @@ You can now remove the Tailwind CSS imports from your css entry.
 
 These are now handled automatically by Windi CSS.
 
-## `tailwind.config.js`
+### `tailwind.config.js`
 
 Since all variants are [automatically enabled][auto], `purge` is no longer needed.
 
@@ -65,25 +72,7 @@ module.exports = {
 }
 ```
 
-## `vite.config.js`
-
-Add this plugin into your configuration.
-
-```ts
-// vite.config.js
-import WindiCSS from 'vite-plugin-windicss'
-
-export default {
-  plugins: [
-    /* ... */
-    ...WindiCSS({
-      safelist: 'prose prose-sm m-auto'
-    })
-  ],
-};
-```
-
-## Cleanup (optional)
+### Cleanup (optional)
 
 The following files can be removed if you don't use their other features.
 

@@ -14,11 +14,11 @@ If you are looking for utilities, check out the [utilities reference].
 
 - [__CLI__](/guide/cli)
 
-- Svelte: <kbd>[svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess)</kbd>
+- Svelte: <kbd>[svelte-windicss-preprocess](/guide/svelte)</kbd>
 
-- Vite: <kbd>[vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss)</kbd>
+- Vite: <kbd>[vite-plugin-windicss](/guide/vite)</kbd>
 
-- Vue: <kbd>[vue-windicss-preprocess](https://github.com/windicss/vue-windicss-preprocess)</kbd>
+- Vue: <kbd>[vue-windicss-preprocess](/guide/vue)</kbd>
 
 - React: Coming soon
 

@@ -3,6 +3,7 @@
 [tailwind css]: https://tailwindcss.com/docs
 [autoprefixer]: https://autoprefixer.github.io/
 [additional features]: /guide/svelte
+[video comparison]: https://twitter.com/antfu7/status/1361398324587163648
 
 # Introduction
 
@@ -18,7 +19,7 @@ Everything you know and love about [Tailwind CSS], plus:
 
 #### ⚡️ Speed
 
-It detects utilities and directives in your CSS, and process them on demand, which greatly improves the compilation speed. Windi only loads the CSS you use, no purging required!
+It detects utilities and directives in your CSS, and process them on demand, which [greatly improves][video comparison] the compilation speed. Windi only loads the CSS you use, no purging required!
 
 #### 🔌 Compatibility
 

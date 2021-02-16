@@ -1,4 +1,4 @@
-### Command Line Interface ⌨️
+# Command Line Interface ⌨️
 
 You can install the CLI by running:
 
