@@ -16,7 +16,7 @@ If you are using Tailwind CSS with the PostCSS plugin, you can follow these inst
 Some of your dependencies are no longer required, you can remove them if they were only needed for Tailwind CSS.
 
 ```diff
-- "tailwindccs": "*",
+- "tailwindcss": "*",
 - "postcss": "*",
 - "autoprefixer": "*",
 + "windicss": "*"
