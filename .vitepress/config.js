@@ -57,14 +57,8 @@ module.exports = {
     nav: [
       { text: 'Guide', link: '/guide/' },
       { text: 'Utilities', link: '/utilities/' },
-      {
-        text: 'Tailwind CSS',
-        link: 'https://tailwindcss.com/docs',
-      },
-      // {
-      //   text: 'Changelog',
-      //   link: 'https://github.com/windicss/windicss/blob/main/CHANGELOG.md',
-      // },
+      { text: 'Releases', link: 'https://github.com/windicss/windicss/releases' },
+      { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs' },
     ],
 
     sidebar: {

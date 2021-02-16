@@ -5,7 +5,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "search": "docker run -it --env-file=.algolia/.env -e \"CONFIG=$(cat .algolia/config.json | jq -r tostring)\" algolia/docsearch-scraper",
-    "lint": "eslint --ignore-pattern '!.vitepress' .vitepress --ext .js,.vue --format node_modules/eslint-formatter-friendly"
+    "lint": "eslint --ignore-pattern 'dist/' .vitepress --ext .js,.vue --format node_modules/eslint-formatter-friendly"
   },
   "dependencies": {
     "vue": "^3.0.5"
