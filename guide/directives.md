@@ -63,7 +63,7 @@ If you'd like to `@apply` an existing class and make it `!important`, simply add
 
 ## [@variants](https://tailwindcss.com/docs/functions-and-directives#variants)
 
-You can generate [screen variants, state variants, theme variants](Variants) of your own utilities by wrapping their definitions in the `@variants` directive.
+You can generate [screen variants, state variants, theme variants](/utilities/variants) of your own utilities by wrapping their definitions in the `@variants` directive.
 
 ```css
 /* Input */
