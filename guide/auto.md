@@ -1,6 +1,8 @@
 # Auto-Inferred Variables and Variants
 
-No need to configure custom variables like numbers, sizes, scores, and colors. Windi CSS will automatically generate them based on the class semantics.
+No need to configure custom variables like numbers, sizes, scores, and colors.
+
+Windi CSS will automatically generate them based on the class semantics.
 
 You can even pass in variable names, which is very useful in combination with css variables.
 
@@ -16,7 +18,8 @@ p-3.2 -> padding: 0.8rem;
 ## Sizes
 
 ```js
-p-${size} -> padding: ${size} // ${size} should end up with rem|em|px|vh|vw|ch|ex
+// ${size} must end up with rem|em|px|vh|vw|ch|ex
+p-${size} -> padding: ${size}
 
 p-3px -> padding: 3px;
 p-4rem -> padding: 4rem;

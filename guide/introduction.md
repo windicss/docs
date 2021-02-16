@@ -2,8 +2,8 @@
 [windi css]: https://github.com/windicss/windicss
 [tailwind css]: https://tailwindcss.com/docs
 [autoprefixer]: https://autoprefixer.github.io/
-[additional features]: /guide/svelte
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
+[svelte]: /guide/svelte.html#additional-features-in-svelte-⚡%EF%B8%8F
 
 # Introduction
 
@@ -61,4 +61,4 @@ sm: @media (min-width:640px);
 
 ### And more!
 
-<kbd>[svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess)</kbd> adds [additional features].
+<kbd>[svelte-windicss-preprocess][svelte]</kbd> adds [additional features][svelte].

@@ -1,6 +1,29 @@
-# Configuration
+[windi css]: https://github.com/windicss/windicss
+[tailwind css]: https://tailwindcss.com/docs
+[extend]: https://tailwindcss.com/docs/theme#extending-the-default-theme
+[auto]: /guide/auto
 
-Configuration is very similar to what you would expect in Tailwind CSS.
+# Configuring Windi CSS
+
+Configuration in [Windi CSS] is very similar to what you would expect in [Tailwind CSS].
+
+There are a few differences that we believe make it easier to configure:
+
+## No need to configure variants
+
+Windi CSS enables all variants for all utilities by default.
+
+When you input the corresponding class, such as `hover:bg-red-500`, the corresponding variant CSS will be [automatically inferred and generated][auto].
+
+Variant configuration is thus no longer necesary, and will be ignored if provided.
+
+## No need to clear defaults
+
+Any configuration options you provide will [extend] the default options.
+
+If you don't use a certain utility the corresponding CSS will not be generated, so there is no need to clear the defaults.
+
+## Example Configuration
 
 ```js
 // Example `tailwind.config.js` file
@@ -97,11 +120,3 @@ module.exports = {
   ]
 }
 ```
-
-::: tip No need to clear
-All configuration will perform like extend, you can not clear (and don't need to) clear the defaults because if you don't use the configuration, the corresponding CSS will not be generated, so there is no need to remove it.
-:::
-
-::: tip No need for variants
-**Variant configuration will not be used**. Windi CSS enables all variants for all utilities by default. When you input the corresponding class, such as hover:bg-red-500, the corresponding variant css will be generated.
-:::

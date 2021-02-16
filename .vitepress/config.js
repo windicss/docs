@@ -72,7 +72,6 @@ module.exports = {
         text: 'Utilities',
         children: [
           { text: 'Accessibility', link: '/utilities/accessibility' },
-          { text: 'Auto', link: '/utilities/auto' },
           { text: 'Backgrounds', link: '/utilities/backgrounds' },
           { text: 'Borders', link: '/utilities/borders' },
           { text: 'Box Alignment', link: '/utilities/box-alignment' },
@@ -98,6 +97,7 @@ module.exports = {
           children: [
             { text: 'Introduction', link: '/guide/introduction' },
             { text: 'Getting Started', link: '/guide/' },
+            { text: 'Automatic Variants', link: '/guide/auto' },
             { text: 'Configuration', link: '/guide/configuration' },
             { text: 'Directives', link: '/guide/directives' },
             { text: 'Plugins', link: '/guide/plugins' },

@@ -1,4 +1,4 @@
-[auto]: /utilities/auto
+[auto]: /guide/auto
 [design]: /guide/modes
 
 # Migrating to Windi CSS
