@@ -12,7 +12,7 @@ So far, we have implemented the following features:
 - support add plugin interfaces
 - support [directives `@apply`,` @screen`,`@variants`](/guide/directives)
 - support preflight
-- support [all tailwind utilities](/utilities)
+- support [all tailwind utilities](/utilities/)
 - A lot of [new features](/guide/introduction)
 
 ## Beginning
