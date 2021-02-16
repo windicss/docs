@@ -48,8 +48,9 @@ module.exports = {
     // },
     repo: 'windicss/windicss',
     logo: '/assets/logo.svg',
-    docsDir: 'docs',
+    docsDir: '.',
     docsBranch: 'main',
+    docsRepo: 'windicss/docs',
     editLinks: true,
     editLinkText: 'Suggest changes to this page',
 
@@ -100,7 +101,15 @@ module.exports = {
             { text: 'Configuration', link: '/guide/configuration' },
             { text: 'Directives', link: '/guide/directives' },
             { text: 'Plugins', link: '/guide/plugins' },
+          ],
+        },
+        {
+          text: 'Installation',
+          children: [
             { text: 'Migration', link: '/guide/migration' },
+            { text: 'Svelte', link: '/guide/svelte' },
+            { text: 'Vite', link: '/guide/vite' },
+            { text: 'Vue', link: '/guide/vue' },
           ],
         },
         {
@@ -108,7 +117,6 @@ module.exports = {
           children: [
             { text: 'CLI', link: '/guide/cli' },
             { text: 'Modes', link: '/guide/modes' },
-            { text: 'Svelte', link: '/guide/svelte' },
             { text: 'The Story', link: '/guide/story' },
           ],
         },
