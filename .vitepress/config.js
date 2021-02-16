@@ -4,8 +4,8 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const title = 'Windi CSS 🌬'
 const description = 'Next generation Tailwind CSS compiler.'
-const site = isProd ? 'https://windicss.github.io' : 'http://localhost:3000'
-const image = `${site}/banner.png`
+const site = isProd ? 'https://windicss.netlify.app' : 'http://localhost:3000'
+const image = `${site}/assets/banner.png`
 
 const head = [
   ['style', {}, 'img { border-radius: 10px }' + 'h1.title { margin-left: 0.5em }'],
