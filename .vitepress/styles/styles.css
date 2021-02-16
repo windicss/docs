@@ -7,7 +7,7 @@
 
 .custom-block.custom-block.tip {
   background-color: var(--bg-colored-light);
-  border-color: #d344ef;
+  border-color: var(--c-brand);
 }
 
 .custom-block.custom-block.tip a {
@@ -50,4 +50,8 @@ kbd {
 code kbd {
   font-size: 0.7rem;
   padding: 2px 5px;
+}
+
+code .token.inserted.token.inserted {
+    color: var(--c-brand-light);
 }
