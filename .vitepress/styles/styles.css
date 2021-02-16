@@ -64,3 +64,15 @@ code .token.inserted.token.inserted {
   border-bottom: 1px solid var(--c-divider);
   padding-bottom: 3.25rem;
 }
+
+/* Utility CSS should be formatted as code */
+table {
+  @apply font-mono text-sm;
+  white-space: pre-wrap;
+}
+
+/* Utility classes should not wrap */
+.content tbody tr td:nth-child(1) {
+  white-space: nowrap;
+}
+

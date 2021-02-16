@@ -125,7 +125,7 @@ The `@screen` directive allows you to create media queries that reference your b
 }
 ```
 
-## Develop progress
+## Compatibility Chart
 
 | Directive |	Status |
 | :-------- | :----- |
@@ -134,5 +134,5 @@ The `@screen` directive allows you to create media queries that reference your b
 | [@screen](https://tailwindcss.com/docs/functions-and-directives#screen) | ✅ &ensp;Supported |
 | [@layer](https://tailwindcss.com/docs/functions-and-directives#layer) | ❗️&ensp;In development |
 | [theme()](https://tailwindcss.com/docs/functions-and-directives#theme) | ❗️&ensp;In development |
-| [@tailwind](https://tailwindcss.com/docs/functions-and-directives#tailwind) | ❌ &ensp;Adandoned |
-| [@responsive](https://tailwindcss.com/docs/functions-and-directives#responsive) | ❌ &ensp;Adandoned |\
+| [@tailwind](https://tailwindcss.com/docs/functions-and-directives#tailwind) | ❌ &ensp;Not Needed |
+| [@responsive](https://tailwindcss.com/docs/functions-and-directives#responsive) | ❌ &ensp;Not Needed |\
