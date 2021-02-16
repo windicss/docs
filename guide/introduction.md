@@ -7,6 +7,7 @@
 [options]: /guide/configuration
 [directives]: /guide/directives
 [utilities]: /utilities/
+[features]: /guide/features
 
 # Introduction
 
@@ -30,7 +31,7 @@ Windi CSS supports [Tailwind CSS] configuration [options], [directives], and [ut
 
 #### 😎 Auto-Inferred Variables and Variants
 
-No need to configure custom variables like numbers, sizes, scores, and colors. Windi CSS will [automatically](/guide/auto) generate them based on the class semantics.
+No need to configure custom variables like numbers, sizes, scores, and colors. Windi CSS will [automatically](/guide/features) generate them based on the class semantics.
 
 For example, if you use `p-3.2`, it will become available and work as you would expect.
 
@@ -38,30 +39,6 @@ For example, if you use `p-3.2`, it will become available and work as you would 
 
 The generated CSS for all utilities is already cross-browser compatible, so there is no need to use [autoprefixer] unless you want to.
 
-#### 🌓 More States and Light/Dark theme support
-
-Support all css [pseudo elements and pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
-
-Also, adds `@dark` and `@light` classes based on `prefers-color-scheme`.
-
-#### 🎳 Utility Groups
-
-You can apply several utilities for the same variant by grouping them with parenthesis.
-
-```html
-<div class="bg-white font-light sm:hover:(bg-gray-100 font-medium)"/>
-```
-
-#### 🖥 More Screen Utilities
-
-Automatically generates `-` and `+` classes, even for your custom screens.
-
-```css
-sm: @media (min-width:640px);
-+sm: @media (min-width:640px) and (max-width:768px);
--sm: @media (max-width:640px);
-```
-
 ### And more!
 
-<kbd>[svelte-windicss-preprocess][svelte]</kbd> adds [additional features][svelte].
+[Continue reading][features] about the [features] in [Windi CSS].

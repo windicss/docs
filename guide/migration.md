@@ -1,4 +1,4 @@
-[auto]: /guide/auto
+[auto]: /guide/features.html#🤖-auto-inferred-variables-and-variants
 [design]: /guide/modes
 
 # Migrating to Windi CSS
