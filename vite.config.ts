@@ -4,7 +4,7 @@ import WindiCSS from 'vite-plugin-windicss'
 export default defineConfig({
   plugins: [
     ...WindiCSS({
-      searchDirs: [''],
+      searchDirs: ['.vitepress'],
       preflight: false
     }),
   ],

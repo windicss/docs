@@ -17,6 +17,14 @@ If you are already familiar with [Tailwind CSS], think about [Windi CSS] as an a
 
 If you are not familiar with [Tailwind CSS], you can think of [Windi CSS] as a utility-first CSS library.
 
+## Why Windi CSS? 🤔
+
+A quote from the author should illustrate his motivation to create [Windi CSS]:
+
+<Quote author="@voorjar">When my project became larger and there were about dozens of components, the initial compilation time reached 3s, and hot updates took more than 1s.</Quote>
+
+By scanning your HTML and CSS and generating utilities on demand, [Windi CSS] is able to provide [faster load times][video comparison] and a speedy HMR in development, and does not require purging in production.
+
 ## Features ⚡️
 
 Everything you know and love about [Tailwind CSS], plus:

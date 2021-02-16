@@ -53,7 +53,7 @@ code kbd {
 }
 
 code .token.inserted.token.inserted {
-    color: var(--c-brand-light);
+  color: var(--c-brand-light);
 }
 
 .footer .container {
