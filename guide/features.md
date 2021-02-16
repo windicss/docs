@@ -4,7 +4,7 @@
 
 # New in Windi CSS
 
-Discover additional features in [Windi CSS], in addition to all the great utilities in [Tailwind CSS].
+Discover new features in [Windi CSS], in addition to all the great utilities in [Tailwind CSS].
 
 ## 🎳 Utility Groups
 
