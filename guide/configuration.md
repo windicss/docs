@@ -1,7 +1,7 @@
 [windi css]: https://github.com/windicss/windicss
 [tailwind css]: https://tailwindcss.com/docs
 [extend]: https://tailwindcss.com/docs/theme#extending-the-default-theme
-[auto]: /guide/auto
+[auto]: /guide/features.html#🤖-auto-inferred-variables-and-variants
 
 # Configuring Windi CSS
 
@@ -11,7 +11,7 @@ There are a few differences that we believe make it easier to configure:
 
 ## No need to configure variants
 
-Windi CSS enables all variants for all utilities by default.
+Windi CSS [enables][auto] all variants for all utilities by default.
 
 When you input the corresponding class, such as `hover:bg-red-500`, the corresponding variant CSS will be [automatically inferred and generated][auto].
 
