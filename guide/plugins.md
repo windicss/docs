@@ -267,7 +267,7 @@ inspired by [tailwindcss-scroll-snap](https://github.com/innocenzi/tailwindcss-s
 | __Padding__ | | |
 | `snap-p${direction}-${value}` | scroll-snap-padding`${direction}`: `${value}` | same [Padding Utilities](/utilities/spacing.html#padding-%E2%AD%90%EF%B8%8F) |
 | __Other__ | | |
-| `scrollbar-hide` | scrollbar-width": "none<br>::-webkit-scrollbar": {<br>&nbsp;&nbsp;display: "none",<br>} | visual hide scrollbar |
+| `scrollbar-hide` | scrollbar-width: none<br>::-webkit-scrollbar: {<br>&nbsp;&nbsp;display: none<br>} | visual hide scrollbar |
 
 
 ### Usage
