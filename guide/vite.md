@@ -13,7 +13,7 @@ Check this [video comparison] with the PostCSS plugin for Tailwind CSS.
 Add the package:
 
 ```
-npx ni vite-plugin-windicss -D
+npm install vite-plugin-windicss --save-dev
 ```
 
 Then, install the plugin in your Vite configuration:
