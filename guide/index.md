@@ -13,7 +13,7 @@ If you are interested to learn more about Windi CSS before trying it, check out 
 
 If you are looking for utilities, check out the [utilities reference].
 
-## Intergrations 💿
+## Integrations 💿
 
 | Frameworks | Package | Version |
 | --- | --- | --- |
