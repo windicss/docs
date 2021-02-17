@@ -21,7 +21,7 @@ features:
     details: Infers number, sizes, and colors from your classes
   - title: ✅ Cross-Browser Support
     details: All utilities have cross-browser support
-footer: MIT Licensed | Copyright © 2020 Windi CSS Contributors
+footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---
 
 <p class="text-center opacity-75 -my-4">
