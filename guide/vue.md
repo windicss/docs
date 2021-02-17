@@ -14,7 +14,7 @@ If using Vite.js, check [this page instead](/guide/vite).
 Install the package:
 
 ```sh
-npx ni vue-windicss-preprocess -D
+npm install vue-windicss-preprocess --save-dev
 ```
 
 ::: tip Migrating
