@@ -57,8 +57,8 @@ module.exports = {
     nav: [
       { text: 'Guide', link: '/guide/' },
       { text: 'Utilities', link: '/utilities/' },
-      { text: 'Releases', link: 'https://github.com/windicss/windicss/releases' },
       { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs' },
+      { text: 'Releases', link: 'https://github.com/windicss/windicss/releases' },
     ],
 
     sidebar: {
@@ -104,12 +104,12 @@ module.exports = {
             { text: 'Svelte', link: '/guide/svelte' },
             { text: 'Vite', link: '/guide/vite' },
             { text: 'Vue', link: '/guide/vue' },
+            { text: 'CLI', link: '/guide/cli' },
           ],
         },
         {
           text: 'Advanced',
           children: [
-            { text: 'CLI', link: '/guide/cli' },
             { text: 'Modes', link: '/guide/modes' },
             { text: 'The Story', link: '/guide/story' },
           ],

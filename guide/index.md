@@ -13,19 +13,16 @@ If you are interested to learn more about Windi CSS before trying it, check out 
 
 If you are looking for utilities, check out the [utilities reference].
 
-## Installation 💿
+## Intergrations 💿
 
-- [__CLI__](/guide/cli)
-
-- Svelte: <kbd>[svelte-windicss-preprocess](/guide/svelte)</kbd>
-
-- Vite: <kbd>[vite-plugin-windicss](/guide/vite)</kbd>
-
-- Vue: <kbd>[vue-windicss-preprocess](/guide/vue)</kbd>
-
-- React: Coming soon
-
-- Angular: Coming soon
+| Frameworks | Package | Version |
+| --- | --- | --- |
+| CLI | [Built-in](https://windicss.netlify.app/guide/cli) | ![](https://img.shields.io/npm/v/windicss?label=) |
+| Vite | [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) | ![](https://img.shields.io/npm/v/vite-plugin-windicss?label=) |
+| Vue (Webpack) | [vue-windicss-preprocess](https://github.com/windicss/vue-windicss-preprocess) | ![](https://img.shields.io/npm/v/vue-windicss-preprocess?label=) |
+| Svelte | [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) | ![](https://img.shields.io/npm/v/svelte-windicss-preprocess?label=) |
+| React | Coming soon... | |
+| Angular | Coming soon... | |
 
 ## Usage 🚀
 
