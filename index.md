@@ -20,7 +20,7 @@ features:
   - title: 😎 Auto-Utilities
     details: Infers number, sizes, and colors from your classes
   - title: ✅ Cross-Browser Support
-    details: All utilitites have cross-browser support
+    details: All utilities have cross-browser support
 footer: MIT Licensed | Copyright © 2020 Windi CSS Contributors
 ---
 
