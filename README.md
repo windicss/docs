@@ -8,9 +8,9 @@ This is the documentation website for [Windi CSS] built using [Vitepress].
 
 ## Development
 
-- Install dependencies: `npx ni`
-- Start development server: `nr dev`
-- Run linter `nr lint`
+- Install dependencies: `npm install`
+- Start development server: `npm run dev`
+- Run linter `npm run lint`
 
 
 ## Screenshots 📷
