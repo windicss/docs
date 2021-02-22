@@ -6,7 +6,7 @@
 
 <kbd>[svelte-windicss-preprocess]</kbd> provides simple integration for Windi CSS in Svelte and Sapper.
 
-> Now we have a great playground, you can [try it online](https://voorjaar.github.io/svelte-windicss-preprocess/) before installing it.
+> Now we have a great playground, you can [try it online](https://windicss.github.io/svelte-windicss-preprocess/) before installing it.
 
 ## Installation 💿
 
