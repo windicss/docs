@@ -189,6 +189,8 @@ Utilities for setting the height of an element
 
 ### Dynamic Utilities
 
+| Class | Properties |
+| :---- | :--------- |
 | `h-${float}` | height: `${float/4}rem;` |
 | `h-${fraction}` | height: `${percent};` |
 | `h-${int}xl` | height: `${(number - 3) * 8 + 48}rem;` |
