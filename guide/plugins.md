@@ -281,3 +281,17 @@ module.exports = {
   ],
 }
 ```
+
+or in vite
+
+```ts
+// tailwind.config.ts
+import scrollSnapPlugin from 'windicss/plugin/scroll-snap'
+
+export default defineConfig({
+  plugins: [
+    scrollSnapPlugin,
+    // ...
+  ],
+})
+```
