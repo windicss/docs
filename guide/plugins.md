@@ -282,7 +282,7 @@ module.exports = {
 }
 ```
 
-or in vite
+with TypeScript:
 
 ```ts
 // tailwind.config.ts
