@@ -33,7 +33,7 @@ And finally, import `windi.css` in your Vite entries:
 
 ```
 // main.js
-import 'windi.css'
+import 'virtual:windi.css'
 ```
 
 That's it! Build your app as you would do with Tailwind CSS, but with a faster dev experience! ⚡️
