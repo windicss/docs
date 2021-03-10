@@ -30,26 +30,32 @@ If using:
 
 Add <kbd>[svelte-windicss-preprocess]</kbd> to your `rollup.config.js`.
 
+> Typescript is **optional**. Include `sveltePreprocess.typescript()` into `preprocess` if you are using typescript in your Svelte component.
+
 ```js
 // rollup.config.js
+import sveltePreprocess from "svelte-preprocess";
 // ...
 export default {
   // ...
   plugins: [
     svelte({
       // svelte-windicss-preprocess
-      preprocess: require('svelte-windicss-preprocess').preprocess({
-        config: 'tailwind.config.js', // tailwind config file path (optional)
-        compile: true,          // false: interpretation mode; true: compilation mode
-        prefix: 'windi-',       // set compilation mode style prefix
-        globalPreflight: true,  // set preflight style is global or scoped
-        globalUtility: true,    // set utility style is global or scoped
-      })
+      preprocess: [
+        sveltePreprocess.typescript(), // to support typescript (optional)
+        require('svelte-windicss-preprocess').preprocess({
+          config: 'tailwind.config.js', // tailwind config file path (optional)
+          compile: true, // false: interpretation mode; true: compilation mode
+          prefix: 'windi-', // set compilation mode style prefix
+          globalPreflight: true, // set preflight style is global or scoped
+          globalUtility: true, // set utility style is global or scoped
+        })
+      ],
       // ...
     }),
-  ]
+  ],
   // ...
-}
+};
 ```
 
 ### Sveltekit
