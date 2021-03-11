@@ -7,11 +7,12 @@ const description = 'Next generation Tailwind CSS compiler.'
 const site = isProd ? 'https://windicss.netlify.app' : 'http://localhost:3000'
 const image = `${site}/assets/banner.png`
 
+/**
+ * @type {import('vitepress').HeadConfig[]}
+ */
 const head = [
-  ['style', {}, 'img { border-radius: 10px }' + 'h1.title { margin-left: 0.5em }'],
   ['meta', { name: 'author', content: 'Windi CSS Team' }],
   ['meta', { name: 'keywords', content: 'windi, tailwind, tailwindcss, vitejs, svelte, vue' }],
-
   ['link', { rel: 'icon', type: 'image/svg+xml', href: '/assets/logo.svg' }],
 
   ['meta', { name: 'HandheldFriendly', content: 'True' }],
@@ -36,7 +37,7 @@ const head = [
 /**
  * @type {import('vitepress').UserConfig}
  */
-module.exports = {
+const config = {
   title: 'Windi CSS',
   description,
   head,
@@ -118,3 +119,5 @@ module.exports = {
     },
   },
 }
+
+module.exports = config
