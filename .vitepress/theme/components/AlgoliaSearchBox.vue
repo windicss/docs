@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import '@docsearch/css'
+import '@docsearch/css/dist/style.css'
 import { useRoute, useRouter } from 'vitepress'
 import { defineProps, getCurrentInstance, onMounted, watch } from 'vue'
 import docsearch from '@docsearch/js'
