@@ -1,5 +1,6 @@
 dependencies:
   '@vueuse/core': 4.3.5_vue@3.0.7
+  codemirror: 5.59.4
   prismjs: 1.23.0
   vue: 3.0.7
   windicss: 2.4.0
@@ -9,6 +10,7 @@ devDependencies:
   '@docsearch/js': 1.0.0-alpha.28
   '@docsearch/react': 1.0.0-alpha.28
   '@iconify/json': 1.1.314
+  '@types/codemirror': 0.0.108
   '@types/node': 14.14.33
   '@types/prismjs': 1.16.3
   algoliasearch: 4.8.6
@@ -481,6 +483,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
+  /@types/codemirror/0.0.108:
+    dependencies:
+      '@types/tern': 0.23.3
+    dev: true
+    resolution:
+      integrity: sha512-3FGFcus0P7C2UOGCNUVENqObEb4SFk+S8Dnxq7K6aIsLVs/vDtlangl3PEO0ykaKXyK56swVF6Nho7VsA44uhw==
+  /@types/estree/0.0.46:
+    dev: true
+    resolution:
+      integrity: sha512-laIjwTQaD+5DukBZaygQ79K1Z0jb1bPEMRrkXSLjtCcZm+abyp5YbrqpSLzD42FwWW6gK/aS4NYpJ804nG2brg==
   /@types/json-schema/7.0.7:
     dev: true
     resolution:
@@ -501,6 +513,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7lbX0Odbg9rnzXRdYdgPQZFkjd38QHpD6tvWxbLi6VXGQbXr054doixIS+TwftHP6afffA1zxCZrIcJRS/MkYQ==
+  /@types/tern/0.23.3:
+    dependencies:
+      '@types/estree': 0.0.46
+    dev: true
+    resolution:
+      integrity: sha512-imDtS4TAoTcXk0g7u4kkWqedB3E4qpjXzCpD2LU5M5NAXHzCDsypyvXSaG7mM8DKYkCRa7tFp4tS/lp/Wo7Q3w==
   /@typescript-eslint/eslint-plugin/4.17.0_3641211d697b4d4d12940eb9cf33dc28:
     dependencies:
       '@typescript-eslint/experimental-utils': 4.17.0_eslint@7.21.0+typescript@4.2.3
@@ -1129,6 +1147,10 @@ packages:
       node: '>=0.8'
     resolution:
       integrity: sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+  /codemirror/5.59.4:
+    dev: false
+    resolution:
+      integrity: sha512-achw5JBgx8QPcACDDn+EUUXmCYzx/zxEtOGXyjvLEvYY8GleUrnfm5D+Zb+UjShHggXKDT9AXrbkBZX6a0YSQg==
   /collapse-white-space/1.0.6:
     dev: true
     resolution:
@@ -4232,10 +4254,12 @@ specifiers:
   '@docsearch/js': ^1.0.0-alpha.28
   '@docsearch/react': ^1.0.0-alpha.28
   '@iconify/json': ^1.1.314
+  '@types/codemirror': ^0.0.108
   '@types/node': ^14.14.33
   '@types/prismjs': ^1.16.3
   '@vueuse/core': ^4.3.5
   algoliasearch: ^4.8.6
+  codemirror: ^5.59.4
   docsearch.js: ^2.6.3
   esbuild-register: ^2.2.0
   eslint: ^7.21.0

@@ -1,8 +1,11 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html */
-import { ref, computed, watchEffect, defineProps } from 'vue'
+import { ref, computed, watchEffect, defineProps, onMounted, watch } from 'vue'
 import Windi from 'windicss'
+import { StyleSheet } from 'windicss/utils/style'
 import Prism from 'prismjs'
+import CodeMirror from 'codemirror'
+import 'codemirror/lib/codemirror.css'
 import 'prismjs/components/prism-css'
 
 const props = defineProps({
@@ -19,19 +22,17 @@ const props = defineProps({
 const processor = new Windi()
 
 const frame = ref<HTMLIFrameElement | null>()
-const classes = ref(props.classes.replace(/::/g, ':'))
+const input = ref<HTMLTextAreaElement | null>()
+const classes = ref(props.classes)
 
 const tab = ref<'code' | 'css'>('code')
 
 let acceped: string[] = []
 
+const decorations: CodeMirror.TextMarker<CodeMirror.MarkerRange>[] = []
 const preflight = processor.preflight('<div <p', true, true, true)
 
-const style = computed(() => {
-  const { styleSheet, success } = processor.interpret(classes.value.replace(/\n/g, ' '))
-  acceped = success
-  return styleSheet
-})
+const style = ref<StyleSheet>(new StyleSheet())
 
 const highlighted = computed(() => {
   return Prism.highlight(style.value.build().trim(), Prism.languages.css, 'css').trim()
@@ -61,7 +62,91 @@ function resizeIframe() {
   frame.value.style.height = `${frame.value.contentWindow.document.documentElement.scrollHeight}px`
 }
 
+function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Editor) {
+  decorations.push(cm.markText(
+    cm.posFromIndex(start),
+    cm.posFromIndex(end),
+    { className: matched ? 'text-green-600' : 'text-orange-600' },
+  ))
+}
+
+function interpret(cm: CodeMirror.Editor) {
+  const { styleSheet, success, ignored } = processor.interpret(classes.value.replace(/\n/g, ' '))
+  acceped = success
+
+  // clear previous
+  decorations.forEach(i => i.clear())
+
+  // hightlight for classes
+  let start = 0
+  classes.value.split(/\s/g).forEach((i) => {
+    const end = start + i.length
+    if (success.includes(i))
+      mark(start, end, true, cm)
+    else if (ignored.includes(i))
+      mark(start, end, false, cm)
+    start = end + 1
+  })
+
+  // hightlight for groups
+  Array.from(classes.value.matchAll(/([\w:]+):\((.*?)\)/g))
+    .forEach((match) => {
+      const [full, prefix, itemStr] = match
+      let start = match.index!
+      const items = itemStr.split(/\s/g)
+      // group success
+      if (success.some(i => i.startsWith(prefix))) {
+        // prefix
+        mark(start, start + prefix.length + 2, true, cm)
+        // end braket
+        mark(start + full.length - 1, start + full.length, true, cm)
+
+        start += prefix.length + 2
+
+        // group items
+        items.forEach((i) => {
+          const item = `${prefix}:${i}`
+          const end = start + i.length
+          if (success.includes(item))
+            mark(start, end, true, cm)
+          else if (ignored.includes(item))
+            mark(start, end, false, cm)
+
+          start = end + 1
+        })
+      }
+      // group failed
+      else {
+        mark(start, start + full.length, false, cm)
+      }
+    })
+
+  style.value = styleSheet
+}
+
 watchEffect(updateIframe)
+
+onMounted(() => {
+  const cm = CodeMirror.fromTextArea(input.value!, {
+    scrollbarStyle: 'null',
+    lineWrapping: true,
+  })
+
+  cm.on('change', () => {
+    classes.value = cm.getValue()
+  })
+
+  watch(
+    classes,
+    (v) => {
+      if (v !== cm.getValue())
+        cm.replaceRange(v, cm.posFromIndex(0), cm.posFromIndex(Infinity))
+    },
+    { immediate: true },
+  )
+
+  watchEffect(() => interpret(cm))
+})
 </script>
 
 <template>
@@ -80,7 +165,7 @@ watchEffect(updateIframe)
     >
       <div class="flex-auto flex flex-col overflow-auto">
         <textarea
-          v-model="classes"
+          ref="input"
           spellcheck="false"
           autocomplete="false"
           autocapitalize="false"
@@ -124,5 +209,9 @@ watchEffect(updateIframe)
 }
 .tabs .tab.active {
   @apply text-blue-500 bg-white opacity-100;
+}
+
+.CodeMirror {
+  @apply px-3 py-2 h-6em;
 }
 </style>
