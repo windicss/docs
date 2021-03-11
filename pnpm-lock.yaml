@@ -1,4 +1,5 @@
 dependencies:
+  '@vueuse/core': 4.3.5_vue@3.0.7
   prismjs: 1.23.0
   vue: 3.0.7
   windicss: 2.4.0
@@ -692,6 +693,23 @@ packages:
   /@vue/shared/3.0.7:
     resolution:
       integrity: sha512-dn5FyfSc4ky424jH4FntiHno7Ss5yLkqKNmM/NXwANRnlkmqu74pnGetexDFVG5phMk9/FhwovUZCWGxsotVKg==
+  /@vueuse/core/4.3.5_vue@3.0.7:
+    dependencies:
+      '@vueuse/shared': 4.3.5_vue@3.0.7
+      vue-demi: 0.7.1_vue@3.0.7
+    dev: false
+    peerDependencies:
+      vue: '*'
+    resolution:
+      integrity: sha512-9oBR7892aQyuMOFlQe7kFa/Ab6/R2OwLTap4RRPeih7LvwW1eiuhVDwG0nCameJjjBKZNV013n6RiRrSCJ9t5w==
+  /@vueuse/shared/4.3.5_vue@3.0.7:
+    dependencies:
+      vue-demi: 0.7.1_vue@3.0.7
+    dev: false
+    peerDependencies:
+      vue: '*'
+    resolution:
+      integrity: sha512-+AkucPD6Fs03fonj0dAfZb6PovDXzxM2OKj368Y20dMda1a1CG/2b1ztpExP1IfETOjusOY4kfCZvTCk1Q/rtA==
   /@windicss/plugin-utils/0.8.2:
     dependencies:
       fast-glob: 3.2.5
@@ -4104,6 +4122,20 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-dU4O7nG4TfI4CbGbrry1TAXlg19+xm9wlHJdvZnYYjTFRlS7zvHDWgxcP7zduUvhqXCGoGURFKjMPo8MRghVNg==
+  /vue-demi/0.7.1_vue@3.0.7:
+    dependencies:
+      vue: 3.0.7
+    dev: false
+    hasBin: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-beta.1
+      vue: ^2.6.0 || >=3.0.0-rc.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-cJ3QnpcbIqdpeV3NnNgSDwneCJifvHct+6JNvfYn/49geK/uv5VJicZDvyg20guNhz+DZmUHBHyRQTJ32lSC2g==
   /vue-eslint-parser/7.6.0_eslint@7.21.0:
     dependencies:
       debug: 4.3.1
@@ -4202,6 +4234,7 @@ specifiers:
   '@iconify/json': ^1.1.314
   '@types/node': ^14.14.33
   '@types/prismjs': ^1.16.3
+  '@vueuse/core': ^4.3.5
   algoliasearch: ^4.8.6
   docsearch.js: ^2.6.3
   esbuild-register: ^2.2.0

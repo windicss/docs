@@ -8,6 +8,7 @@
     "lint": "eslint --fix --ext .js,.ts,.md ./"
   },
   "dependencies": {
+    "@vueuse/core": "^4.3.5",
     "prismjs": "^1.23.0",
     "vue": "^3.0.7",
     "windicss": "^2.4.0"
