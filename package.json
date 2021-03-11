@@ -8,24 +8,23 @@
     "lint": "eslint --ignore-pattern 'dist/' .vitepress --ext .js,.vue --format node_modules/eslint-formatter-friendly"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.0.7"
   },
   "devDependencies": {
     "@docsearch/css": "^1.0.0-alpha.28",
     "@docsearch/js": "^1.0.0-alpha.28",
-    "@types/node": "^14.14.28",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.15.1",
+    "@types/node": "^14.14.33",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
     "@vue/eslint-config-standard": "^6.0.0",
-    "eslint": "^7.20.0",
-    "eslint-config-vuepress": "^3.1.0",
+    "eslint": "^7.21.0",
+    "eslint-config-vuepress": "^3.2.0",
     "eslint-formatter-friendly": "^7.0.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-vue": "^7.6.0",
-    "typescript": "^4.1.5",
-    "vite": "^2.0.0",
-    "vite-plugin-windicss": "^0.2.0",
+    "eslint-plugin-vue": "^7.7.0",
+    "typescript": "^4.2.3",
+    "vite": "^2.0.5",
+    "vite-plugin-windicss": "^0.8.2",
     "vitepress": "^0.12.2"
   }
 }
