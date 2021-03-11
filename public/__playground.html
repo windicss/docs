@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <div id="container">
+    Hello
+  </div>
+  <script>
+    let styleEl
+    const container = document.getElementById('container')
+    window.addEventListener('message', (e) => {
+      const {
+        style,
+        classes,
+      } = JSON.parse(e.data)
+
+      if (styleEl)
+        document.body.removeChild(styleEl)
+    
+      styleEl = document.createElement('style')
+      styleEl.innerHTML = style
+      document.body.appendChild(styleEl)
+    
+      container.className = classes
+    }, false)
+  </script>
+</body>
+</html>

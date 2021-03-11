@@ -8,6 +8,7 @@
     "lint": "eslint --fix --ext .js,.ts,.md ./"
   },
   "dependencies": {
+    "prismjs": "^1.23.0",
     "vue": "^3.0.7",
     "windicss": "^2.4.0"
   },
@@ -18,6 +19,7 @@
     "@docsearch/react": "^1.0.0-alpha.28",
     "@iconify/json": "^1.1.314",
     "@types/node": "^14.14.33",
+    "@types/prismjs": "^1.16.3",
     "algoliasearch": "^4.8.6",
     "docsearch.js": "^2.6.3",
     "esbuild-register": "^2.2.0",
