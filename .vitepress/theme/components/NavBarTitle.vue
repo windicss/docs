@@ -27,7 +27,7 @@
 
 .logo {
   margin-right: 0.75rem;
-  height: 1.3rem;
   vertical-align: bottom;
+  height: 30px;
 }
 </style>
