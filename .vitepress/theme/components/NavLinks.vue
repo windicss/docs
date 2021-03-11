@@ -11,9 +11,9 @@
       <NavDropdownLink :item="localeLinks" />
     </div>
 
-    <div v-if="repo" class="item">
+    <!-- <div v-if="repo" class="item">
       <NavLink :item="repo" />
-    </div>
+    </div> -->
   </nav>
 </template>
 

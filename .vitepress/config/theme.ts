@@ -17,7 +17,7 @@ const themeConfig: ThemeConfig = {
   nav: [
     { text: 'Guide', link: '/guide/' },
     { text: 'Utilities', link: '/utilities/' },
-    { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs' },
+    // { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs' },
     { text: 'Releases', link: 'https://github.com/windicss/windicss/releases' },
   ],
 
