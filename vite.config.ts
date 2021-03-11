@@ -22,6 +22,7 @@ export default defineConfig({
       scan: {
         dirs: ['.vitepress', 'src'],
         include: ['index.md'],
+        fileExtensions: ['vue'],
       },
     }),
   ],
