@@ -34,11 +34,11 @@ module.exports = {
   theme: {
     extend: {
       transformOrigin: {
-        '24': '6rem',
-        'full': '100%',
-      }
-    }
-  }
+        24: '6rem',
+        full: '100%',
+      },
+    },
+  },
 }
 ```
 
@@ -59,10 +59,10 @@ Utilities for scaling elements with transform.
 module.exports = {
   theme: {
     scale: {
-      'half': '.5',
-      'full': '1',
-    }
-  }
+      half: '.5',
+      full: '1',
+    },
+  },
 }
 ```
 
@@ -82,9 +82,9 @@ Utilities for rotating elements with transform.
 module.exports = {
   theme: {
     rotate: {
-      'sq': '90deg',
-    }
-  }
+      sq: '90deg',
+    },
+  },
 }
 ```
 
@@ -136,12 +136,12 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        '72': '18rem',
-        '84': '21rem',
-        '96': '24rem',
-      }
-    }
-  }
+        72: '18rem',
+        84: '21rem',
+        96: '24rem',
+      },
+    },
+  },
 }
 ```
 
@@ -159,9 +159,9 @@ module.exports = {
         '4/7': '57.1428571%',
         '5/7': '71.4285714%',
         '6/7': '85.7142857%',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 
@@ -184,9 +184,9 @@ module.exports = {
   theme: {
     extend: {
       skew: {
-        'sq': '90deg',
-      }
-    }
-  }
+        sq: '90deg',
+      },
+    },
+  },
 }
 ```

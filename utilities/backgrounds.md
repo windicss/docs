@@ -39,11 +39,11 @@ module.exports = {
   theme: {
     backgroundColor: theme => ({
       ...theme('colors'),
-      'primary': '#3490dc',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-    })
-  }
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    }),
+  },
 }
 ```
 
@@ -61,10 +61,10 @@ module.exports = {
   theme: {
     extend: {
       opacity: {
-        'light': '0.15',
-      }
-    }
-  }
+        light: '0.15',
+      },
+    },
+  },
 }
 ```
 
@@ -102,8 +102,8 @@ module.exports = {
       'right-top': 'right top',
       top: 'top',
       'top-4': 'center top 1rem',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -136,13 +136,13 @@ Utilities for controlling the background size of an element's background image.
 module.exports = {
   theme: {
     backgroundSize: {
-      'auto': 'auto',
-      'cover': 'cover',
-      'contain': 'contain',
+      auto: 'auto',
+      cover: 'cover',
+      contain: 'contain',
       '50%': '50%',
-      '16': '4rem',
-    }
-  }
+      16: '4rem',
+    },
+  },
 }
 ```
 
@@ -170,11 +170,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'hero-pattern': "url('/img/hero-pattern.svg')",
-        'footer-texture': "url('/img/footer-texture.png')",
-      })
-    }
-  }
+        'hero-pattern': 'url(\'/img/hero-pattern.svg\')',
+        'footer-texture': 'url(\'/img/footer-texture.png\')',
+      }),
+    },
+  },
 }
 ```
 

@@ -13,7 +13,7 @@ If using Vite.js, check [this page instead](/guide/vite).
 
 Install the package:
 
-```sh
+```bash
 npm install vue-windicss-preprocess --save-dev
 ```
 
@@ -40,15 +40,15 @@ module.exports = {
       use: [{
         loader: 'vue-windicss-preprocess',
         options: {
-          config: "tailwind.config.js",  // tailwind config file path (optional)
-          compile: false,                // false: interpretation mode; true: compilation mode
-          globalPreflight: true,         // set preflight style is global or scoped
-          globalUtility: true,           // set utility style is global or scoped
-          prefix: 'windi-'               // set compilation mode style prefix
-        }
-      }]
+          config: 'tailwind.config.js', // tailwind config file path (optional)
+          compile: false, // false: interpretation mode; true: compilation mode
+          globalPreflight: true, // set preflight style is global or scoped
+          globalUtility: true, // set utility style is global or scoped
+          prefix: 'windi-', // set compilation mode style prefix
+        },
+      }],
     })
-  }
+  },
 }
 ```
 
@@ -67,15 +67,15 @@ module.exports = {
         use: [{
           loader: 'vue-windicss-preprocess',
           options: {
-            config: "tailwind.config.js",  // tailwind config file path (optional)
-            compile: false,                // false: interpretation mode; true: compilation mode
-            globalPreflight: true,         // set preflight style is global or scoped
-            globalUtility: true,           // set utility style is global or scoped
-            prefix: 'windi-'               // set compilation mode style prefix
-          }
-        }]
-      }
-    ]
+            config: 'tailwind.config.js', // tailwind config file path (optional)
+            compile: false, // false: interpretation mode; true: compilation mode
+            globalPreflight: true, // set preflight style is global or scoped
+            globalUtility: true, // set utility style is global or scoped
+            prefix: 'windi-', // set compilation mode style prefix
+          },
+        }],
+      },
+    ],
   },
   // plugin omitted
 }
@@ -96,15 +96,15 @@ export default {
         test: /\.vue$/,
         loader: 'vue-windicss-preprocess',
         options: {
-          config: "tailwind.config.js",  // tailwind config file path (optional)
-          compile: false,                // false: interpretation mode; true: compilation mode
-          globalPreflight: true,         // set preflight style is global or scoped
-          globalUtility: true,           // set utility style is global or scoped
-          prefix: 'windi-'               // set compilation mode style prefix
-        }
+          config: 'tailwind.config.js', // tailwind config file path (optional)
+          compile: false, // false: interpretation mode; true: compilation mode
+          globalPreflight: true, // set preflight style is global or scoped
+          globalUtility: true, // set utility style is global or scoped
+          prefix: 'windi-', // set compilation mode style prefix
+        },
       })
-    }
-  }
+    },
+  },
 }
 ```
 

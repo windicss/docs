@@ -22,11 +22,11 @@ module.exports = {
   theme: {
     extend: {
       transitionProperty: {
-        'height': 'height',
-        'spacing': 'margin, padding',
-      }
-    }
-  }
+        height: 'height',
+        spacing: 'margin, padding',
+      },
+    },
+  },
 }
 ```
 
@@ -46,11 +46,11 @@ module.exports = {
   theme: {
     extend: {
       transitionDuration: {
-        'zero': '0ms',
-        'long': '2000ms',
-      }
-    }
-  }
+        zero: '0ms',
+        long: '2000ms',
+      },
+    },
+  },
 }
 ```
 
@@ -75,9 +75,9 @@ module.exports = {
       transitionTimingFunction: {
         'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
         'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 
@@ -97,11 +97,11 @@ module.exports = {
   theme: {
     extend: {
       transitionDelay: {
-        'zero': '0ms',
-        'long': '2000ms',
-      }
-    }
-  }
+        zero: '0ms',
+        long: '2000ms',
+      },
+    },
+  },
 }
 ```
 
@@ -126,9 +126,9 @@ module.exports = {
     extend: {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 
@@ -143,9 +143,9 @@ module.exports = {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 }
 ```

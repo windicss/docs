@@ -27,18 +27,18 @@ If you don't use a certain utility the corresponding CSS will not be generated, 
 
 ```js
 // Example `tailwind.config.js` file
-const colors = require('windicss/colors');
-const plugin = require('windicss/plugin');
+const colors = require('windicss/colors')
+const plugin = require('windicss/plugin')
 
 module.exports = {
-  darkMode: "class", // or 'media'
+  darkMode: 'class', // or 'media'
   theme: {
     screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
     },
     colors: {
       gray: colors.coolGray,
@@ -52,22 +52,22 @@ module.exports = {
     },
     extend: {
       spacing: {
-        '128': '32rem',
-        '144': '36rem',
+        128: '32rem',
+        144: '36rem',
       },
       borderRadius: {
         '4xl': '2rem',
-      }
-    }
+      },
+    },
   },
   variants: {
     extend: {
       borderColor: ['focus-visible'],
       opacity: ['disabled'],
-    }
+    },
   },
   plugins: [
-    plugin(function({ addUtilities }) {
+    plugin(({ addUtilities }) => {
       const newUtilities = {
         '.skew-10deg': {
           transform: 'skewY(-10deg)',
@@ -78,7 +78,7 @@ module.exports = {
       }
       addUtilities(newUtilities)
     }),
-    plugin(function({ addComponents }) {
+    plugin(({ addComponents }) => {
       const buttons = {
         '.btn': {
           padding: '.5rem 1rem',
@@ -89,26 +89,26 @@ module.exports = {
           backgroundColor: '#3490dc',
           color: '#fff',
           '&:hover': {
-            backgroundColor: '#2779bd'
+            backgroundColor: '#2779bd',
           },
         },
         '.btn-red': {
           backgroundColor: '#e3342f',
           color: '#fff',
           '&:hover': {
-            backgroundColor: '#cc1f1a'
+            backgroundColor: '#cc1f1a',
           },
         },
       }
       addComponents(buttons)
     }),
-    plugin(function({ addDynamic, variants }) {
-      addDynamic("skew", ({ Utility, theme }) => {
+    plugin(({ addDynamic, variants }) => {
+      addDynamic('skew', ({ Utility, theme }) => {
         return Utility.handler
-          .handleStatic(theme("skew"))
-          .handleNumber(0, 360, "int", (number) => `skewY(-${number}deg)`)
-          .createProperty('transform');
-        }, variants('skew'));
+          .handleStatic(theme('skew'))
+          .handleNumber(0, 360, 'int', number => `skewY(-${number}deg)`)
+          .createProperty('transform')
+      }, variants('skew'))
     }),
     require('windicss/plugin/filters'),
     require('windicss/plugin/forms'),
@@ -117,6 +117,6 @@ module.exports = {
     require('windicss/plugin/typography')({
       modifiers: ['DEFAULT', 'sm', 'lg', 'red'],
     }),
-  ]
+  ],
 }
 ```

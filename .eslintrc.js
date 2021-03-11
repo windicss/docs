@@ -1,20 +1,24 @@
-// https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
   root: true,
   env: {
     browser: true,
     node: true,
   },
-  extends: '@antfu/eslint-config',
+  extends: ['@antfu/eslint-config'],
   plugins: ['markdown'],
   overrides: [
     {
-      files: ['*.md'],
+      // 2. Enable the Markdown processor for all .md files.
+      files: ['**/*.md'],
+      processor: 'markdown/markdown',
+    },
+    {
+      files: ['**/*.md/*.{js,ts}'],
       rules: {
         'no-undef': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],

@@ -120,15 +120,15 @@ Utilities for controlling the border radius of an element.
 module.exports = {
   theme: {
     borderRadius: {
-      'none': '0',
-      'sm': '0.125rem',
+      none: '0',
+      sm: '0.125rem',
       DEFAULT: '4px',
-      'md': '0.375rem',
-      'lg': '0.5rem',
-      'full': '9999px',
-      'large': '12px',
-    }
-  }
+      md: '0.375rem',
+      lg: '0.5rem',
+      full: '9999px',
+      large: '12px',
+    },
+  },
 }
 ```
 
@@ -169,10 +169,10 @@ module.exports = {
   theme: {
     borderWidth: {
       DEFAULT: '1px',
-      'none': '0',
-      'sm': '2px',
-    }
-  }
+      none: '0',
+      sm: '2px',
+    },
+  },
 }
 ```
 
@@ -197,11 +197,11 @@ module.exports = {
     borderColor: theme => ({
       ...theme('colors'),
       DEFAULT: theme('colors.gray.300', 'currentColor'),
-      'primary': '#3490dc',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-    })
-  }
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    }),
+  },
 }
 ```
 
@@ -219,10 +219,10 @@ module.exports = {
   theme: {
     extend: {
       borderOpacity: {
-        'light': '0.1',
-      }
-    }
-  }
+        light: '0.1',
+      },
+    },
+  },
 }
 ```
 
@@ -268,14 +268,14 @@ module.exports = {
   theme: {
     borderWidth: {
       DEFAULT: '1px',
-      '0': '0',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px',
-    }
-  }
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+    },
+  },
 }
 ```
 
@@ -287,14 +287,14 @@ module.exports = {
   theme: {
     divideWidth: {
       DEFAULT: '1px',
-      '0': '0',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px',
-    }
-  }
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+    },
+  },
 }
 ```
 
@@ -316,11 +316,11 @@ module.exports = {
   theme: {
     divideColor: theme => ({
       ...theme('borderColors'),
-      'primary': '#3490dc',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-    })
-  }
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    }),
+  },
 }
 ```
 
@@ -341,12 +341,12 @@ module.exports = {
   theme: {
     extend: {
       divideOpacity: {
-        '10': '0.1',
-        '20': '0.2',
-        '95': '0.95',
-      }
-    }
-  }
+        10: '0.1',
+        20: '0.2',
+        95: '0.95',
+      },
+    },
+  },
 }
 ```
 
@@ -388,12 +388,12 @@ module.exports = {
   theme: {
     extend: {
       ringWidth: {
-        'DEFAULT': '2px',
-        '6': '6px',
-        '10': '10px',
-      }
-    }
-  }
+        DEFAULT: '2px',
+        6: '6px',
+        10: '10px',
+      },
+    },
+  },
 }
 ```
 
@@ -418,8 +418,8 @@ module.exports = {
     ringColor: {
       white: colors.white,
       pink: colors.fuchsia,
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -439,12 +439,12 @@ module.exports = {
   theme: {
     extend: {
       ringOpacity: {
-        '15': '0.15',
-        '35': '0.35',
-        '65': '0.65',
-      }
-    }
-  }
+        15: '0.15',
+        35: '0.35',
+        65: '0.65',
+      },
+    },
+  },
 }
 ```
 
@@ -464,12 +464,12 @@ module.exports = {
   theme: {
     extend: {
       ringOffsetWidth: {
-        '3': '3px',
-        '6': '6px',
-        '10': '10px',
-      }
-    }
-  }
+        3: '3px',
+        6: '6px',
+        10: '10px',
+      },
+    },
+  },
 }
 ```
 
@@ -494,7 +494,7 @@ module.exports = {
     ringOffsetColor: {
       white: colors.white,
       pink: colors.fuchsia,
-    }
-  }
+    },
+  },
 }
 ```

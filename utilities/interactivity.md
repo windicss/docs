@@ -38,8 +38,8 @@ module.exports = {
       'not-allowed': 'not-allowed',
       crosshair: 'crosshair',
       'zoom-in': 'zoom-in',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -72,9 +72,9 @@ module.exports = {
     extend: {
       outline: {
         blue: '2px solid #0000ff',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 
@@ -87,9 +87,9 @@ module.exports = {
     extend: {
       outline: {
         blue: ['2px solid #0000ff', '1px'],
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 

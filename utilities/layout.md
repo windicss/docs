@@ -84,7 +84,7 @@ module.exports = {
       },
     },
   },
-};
+}
 ```
 
 ***
@@ -189,10 +189,10 @@ module.exports = {
       'right-bottom': 'right bottom',
       'right-top': 'right top',
       top: 'top',
-      'center-bottom': 'center bottom'
+      'center-bottom': 'center bottom',
       'center-top': 'center top',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -430,10 +430,10 @@ Utilities for controlling the placement of positioned elements.
 module.exports = {
   theme: {
     inset: {
-      'sm': '1rem',
-      'lg': '4rem'
-    }
-  }
+      sm: '1rem',
+      lg: '4rem',
+    },
+  },
 }
 ```
 
@@ -470,9 +470,9 @@ Utilities for controlling the stack order of an element.
 module.exports = {
   theme: {
     zIndex: {
-      'first': 10,
-      'seconde': 20,
-    }
-  }
+      first: 10,
+      seconde: 20,
+    },
+  },
 }
 ```

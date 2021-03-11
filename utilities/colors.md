@@ -3,20 +3,22 @@
 ## Default Configuration
 
 ```js
-theme: {
-  colors: {
-    transparent: "transparent",
-    current: "currentColor",
-    ...colors,
-    gray: colors.coolGray,
-    yellow: colors.amber,
-    green: colors.emerald,
-    purple: colors.violet,
-    "light-blue": colors.lightBlue,
-    "warm-gray": colors.warmGray,
-    "true-gray": colors.trueGray,
-    "cool-gray": colors.coolGray,
-    "blue-gray": colors.blueGray,
+const config = {
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      ...colors,
+      gray: colors.coolGray,
+      yellow: colors.amber,
+      green: colors.emerald,
+      purple: colors.violet,
+      'light-blue': colors.lightBlue,
+      'warm-gray': colors.warmGray,
+      'true-gray': colors.trueGray,
+      'cool-gray': colors.coolGray,
+      'blue-gray': colors.blueGray,
+    },
   },
 }
 ```

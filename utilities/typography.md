@@ -12,24 +12,21 @@ Utilities for controlling the font family of an element.
 
 ### Customizing
 
-```js
-// tailwind.config.js
-module.exports = {
-  theme: {
-    fontFamily: {
-      'sans': ['ui-sans-serif', 'system-ui', ...],
-      'serif': ['ui-serif', 'Georgia', ...],
-      'mono': ['ui-monospace', 'SFMono-Regular', ...],
-      'display': ['Oswald', ...],
-      'body': ['Open Sans', ...],
-    }
+```json5
+theme: {
+  fontFamily: {
+    'sans': ['ui-sans-serif', 'system-ui', ...],
+    'serif': ['ui-serif', 'Georgia', ...],
+    'mono': ['ui-monospace', 'SFMono-Regular', ...],
+    'display': ['Oswald', ...],
+    'body': ['Open Sans', ...],
   }
 }
 ```
 
 Font families can be specified as an array or as a simple comma-delimited string:
 
-```js
+```json5
 {
   // Array format:
   'sans': ['Helvetica', 'Arial', 'sans-serif'],
@@ -41,7 +38,7 @@ Font families can be specified as an array or as a simple comma-delimited string
 
 Note that Tailwind does not automatically escape font names for you. If you're using a font that contains an invalid identifier, wrap it in quotes or escape the invalid characters.
 
-```js
+```json5
 {
   // Won't work:
   'sans': ['Exo 2', ...],
@@ -82,20 +79,20 @@ Utilities for controlling the font size of an element.
 module.exports = {
   theme: {
     fontSize: {
-      'xs': '.75rem',
-      'sm': '.875rem',
-      'tiny': '.875rem',
-      'base': '1rem',
-      'lg': '1.125rem',
-      'xl': '1.25rem',
+      xs: '.75rem',
+      sm: '.875rem',
+      tiny: '.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
       '2xl': '1.5rem',
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
       '7xl': '5rem',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -110,8 +107,8 @@ module.exports = {
       base: ['16px', '24px'],
       lg: ['20px', '28px'],
       xl: ['24px', '32px'],
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -130,8 +127,8 @@ module.exports = {
         letterSpacing: '-0.02em',
         lineHeight: '40px',
       }],
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -188,8 +185,8 @@ module.exports = {
       extrabold: 800,
       'extra-bold': 800,
       black: 900,
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -238,8 +235,8 @@ module.exports = {
       wide: '.025em',
       wider: '.05em',
       widest: '.25em',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -266,9 +263,9 @@ module.exports = {
     extend: {
       lineHeight: {
         'extra-loose': '2.5',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 
@@ -294,8 +291,8 @@ module.exports = {
       decimal: 'decimal',
       square: 'square',
       roman: 'upper-roman',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -325,11 +322,11 @@ Utilities for controlling the color of placeholder text.
 module.exports = {
   theme: {
     placeholderColor: {
-      'primary': '#3490dc',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-    }
-  }
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    },
+  },
 }
 ```
 
@@ -349,10 +346,10 @@ module.exports = {
   theme: {
     extend: {
       placeholderOpacity: {
-        'light': '0.1',
-      }
-    }
-  }
+        light: '0.1',
+      },
+    },
+  },
 }
 ```
 
@@ -384,11 +381,11 @@ Utilities for controlling the text color of an element.
 module.exports = {
   theme: {
     textColor: {
-      'primary': '#3490dc',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-    }
-  }
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    },
+  },
 }
 ```
 
@@ -406,12 +403,12 @@ module.exports = {
   theme: {
     extend: {
       textOpacity: {
-        '10': '0.1',
-        '20': '0.2',
-        '95': '0.95',
-      }
-    }
-  }
+        10: '0.1',
+        20: '0.2',
+        95: '0.95',
+      },
+    },
+  },
 }
 ```
 

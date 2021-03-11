@@ -77,7 +77,7 @@ module.exports = {
             },
           },
         },
-      }
+      },
     },
   },
   plugins: [
@@ -190,8 +190,8 @@ module.exports = {
     lineClamp: {
       sm: '3',
       lg: '10',
-    }
-  }
+    },
+  },
   plugins: [
     require('windicss/plugin/line-clamp'),
     // ...
@@ -215,14 +215,14 @@ module.exports = {
 module.exports = {
   theme: {
     filter: {
-      'none': 'none',
-      'grayscale': 'grayscale(1)',
-      'invert': 'invert(1)',
-      'sepia': 'sepia(1)',
+      none: 'none',
+      grayscale: 'grayscale(1)',
+      invert: 'invert(1)',
+      sepia: 'sepia(1)',
     },
     backdropFilter: {
-      'none': 'none',
-      'blur': 'blur(20px)',
+      none: 'none',
+      blur: 'blur(20px)',
     },
   },
   variants: {
@@ -232,7 +232,7 @@ module.exports = {
   plugins: [
     require('windicss/plugin/filters'),
   ],
-};
+}
 ```
 
 ## Scroll Snap

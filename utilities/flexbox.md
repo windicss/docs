@@ -39,14 +39,14 @@ Utilities for controlling how flex items both grow and shrink.
 module.exports = {
   theme: {
     flex: {
-      '1': '1 1 0%',
+      1: '1 1 0%',
       auto: '1 1 auto',
       initial: '0 1 auto',
       inherit: 'inherit',
       none: 'none',
-      '2': '2 2 0%',
-    }
-  }
+      2: '2 2 0%',
+    },
+  },
 }
 ```
 
@@ -66,11 +66,11 @@ Utilities for controlling how flex items grow.
 module.exports = {
   theme: {
     flexGrow: {
-      '0': 0,
+      0: 0,
       DEFAULT: 2,
-      '1': 1,
-    }
-  }
+      1: 1,
+    },
+  },
 }
 ```
 
@@ -90,11 +90,11 @@ Utilities for controlling how flex items shrink.
 module.exports = {
   theme: {
     flexShrink: {
-      '0': 0,
+      0: 0,
       DEFAULT: 2,
-      '1': 1,
-    }
-  }
+      1: 1,
+    },
+  },
 }
 ```
 
@@ -128,7 +128,7 @@ module.exports = {
       last: '9999',
       none: '0',
       normal: '0',
-    }
-  }
+    },
+  },
 }
 ```

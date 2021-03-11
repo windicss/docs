@@ -17,11 +17,11 @@ Utilities for styling the fill of SVG elements.
 module.exports = {
   theme: {
     fill: theme => ({
-      'red': theme('colors.red.500'),
-      'green': theme('colors.green.500'),
-      'blue': theme('colors.blue.500'),
-    })
-  }
+      red: theme('colors.red.500'),
+      green: theme('colors.green.500'),
+      blue: theme('colors.blue.500'),
+    }),
+  },
 }
 ```
 
@@ -42,11 +42,11 @@ Utilities for styling the stroke of SVG elements.
 module.exports = {
   theme: {
     stroke: theme => ({
-      'red': theme('colors.red.500'),
-      'green': theme('colors.green.500'),
-      'blue': theme('colors.blue.500'),
-    })
-  }
+      red: theme('colors.red.500'),
+      green: theme('colors.green.500'),
+      blue: theme('colors.blue.500'),
+    }),
+  },
 }
 ```
 
@@ -67,9 +67,9 @@ module.exports = {
     extend: {
       strokeWidth: {
         sm: '4',
-        lg: '8'
-      }
-    }
-  }
+        lg: '8',
+      },
+    },
+  },
 }
 ```

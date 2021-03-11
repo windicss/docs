@@ -53,8 +53,8 @@ module.exports = {
       md: '16px',
       lg: '24px',
       xl: '48px',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -132,8 +132,8 @@ module.exports = {
       md: '16px',
       lg: '24px',
       xl: '48px',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -176,7 +176,7 @@ module.exports = {
       md: '16px',
       lg: '24px',
       xl: '48px',
-    }
-  }
+    },
+  },
 }
 ```

@@ -46,10 +46,10 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        'half': '50%',
-      }
-    }
-  }
+        half: '50%',
+      },
+    },
+  },
 }
 ```
 
@@ -98,10 +98,10 @@ Utilities for setting the minimum width of an element
 module.exports = {
   theme: {
     minWidth: {
-      'half': '50%',
-      'full': '100%',
-    }
-  }
+      half: '50%',
+      full: '100%',
+    },
+  },
 }
 ```
 
@@ -153,8 +153,8 @@ module.exports = {
       '1/4': '25%',
       '1/2': '50%',
       '3/4': '75%',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -207,8 +207,8 @@ module.exports = {
       md: '16px',
       lg: '24px',
       xl: '48px',
-    }
-  }
+    },
+  },
 }
 ```
 
@@ -258,13 +258,13 @@ Utilities for setting the minimum height of an element
 module.exports = {
   theme: {
     minHeight: {
-      '0': '0',
+      0: '0',
       '1/4': '25%',
       '1/2': '50%',
       '3/4': '75%',
-      'full': '100%',
-    }
-  }
+      full: '100%',
+    },
+  },
 }
 ```
 
@@ -313,12 +313,12 @@ Utilities for setting the maximum height of an element
 module.exports = {
   theme: {
     maxHeight: {
-      '0': '0',
+      0: '0',
       '1/4': '25%',
       '1/2': '50%',
       '3/4': '75%',
-      'full': '100%',
-    }
-  }
+      full: '100%',
+    },
+  },
 }
 ```

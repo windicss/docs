@@ -24,11 +24,11 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'nt': 'repeat(16, minmax(0, 1fr))',
-        'footer': '200px minmax(900px, 1fr) 100px',
-      }
-    }
-  }
+        nt: 'repeat(16, minmax(0, 1fr))',
+        footer: '200px minmax(900px, 1fr) 100px',
+      },
+    },
+  },
 }
 ```
 
@@ -64,13 +64,13 @@ module.exports = {
         'span-16': 'span 16 / span 16',
       },
       gridColumnStart: {
-        'first': '1',
+        first: '1',
       },
       gridColumnEnd: {
-        'last': '20',
-      }
-    }
-  }
+        last: '20',
+      },
+    },
+  },
 }
 ```
 
@@ -98,10 +98,10 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateRows: {
-        'layout': '200px minmax(900px, 1fr) 100px',
-      }
-    }
-  }
+        layout: '200px minmax(900px, 1fr) 100px',
+      },
+    },
+  },
 }
 ```
 
@@ -137,13 +137,13 @@ module.exports = {
         'span-16': 'span 16 / span 16',
       },
       gridRowStart: {
-        'first': '1',
+        first: '1',
       },
       gridRowEnd: {
-        'last': '20',
-      }
-    }
-  }
+        last: '20',
+      },
+    },
+  },
 }
 ```
 
@@ -178,9 +178,9 @@ module.exports = {
     extend: {
       gridAutoColumns: {
         '2fr': 'minmax(0, 2fr)',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 
@@ -204,9 +204,9 @@ module.exports = {
     extend: {
       gridAutoRows: {
         '2fr': 'minmax(0, 2fr)',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 ```
 
@@ -243,24 +243,24 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        'lg': '18rem',
-      }
-    }
-  }
+        lg: '18rem',
+      },
+    },
+  },
 }
 ```
 
 To customize the gap scale separately, use the gap section of your Tailwind theme config.
 
 ```js
- // tailwind.config.js
+// tailwind.config.js
 module.exports = {
   theme: {
     extend: {
       gap: {
-        'sm': '2.75rem',
-      }
-    }
-  }
+        sm: '2.75rem',
+      },
+    },
+  },
 }
 ```

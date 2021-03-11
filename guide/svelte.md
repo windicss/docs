@@ -12,7 +12,7 @@
 
 Add the package:
 
-```sh
+```bash
 npm install svelte-windicss-preprocess --save-dev
 ```
 
@@ -34,7 +34,7 @@ Add <kbd>[svelte-windicss-preprocess]</kbd> to your `rollup.config.js`.
 
 ```js
 // rollup.config.js
-import sveltePreprocess from "svelte-preprocess";
+import sveltePreprocess from 'svelte-preprocess'
 // ...
 export default {
   // ...
@@ -49,13 +49,13 @@ export default {
           prefix: 'windi-', // set compilation mode style prefix
           globalPreflight: true, // set preflight style is global or scoped
           globalUtility: true, // set utility style is global or scoped
-        })
+        }),
       ],
       // ...
     }),
   ],
   // ...
-};
+}
 ```
 
 ### Sveltekit
@@ -67,26 +67,26 @@ Add <kbd>[svelte-windicss-preprocess]</kbd> to your `svelte.config.cjs`.
 ```js
 // svelte.config.cjs
 module.exports = {
-  preprocess: require("svelte-windicss-preprocess").preprocess({
+  preprocess: require('svelte-windicss-preprocess').preprocess({
     // uncomment this, if you need a config file
     // config: 'tailwind.config.js',
     compile: false,
-    prefix: "windi-",
+    prefix: 'windi-',
     globalPreflight: true,
     globalUtility: true,
   }),
   kit: {
-    adapter: "@sveltejs/adapter-node",
-    target: "#svelte",
+    adapter: '@sveltejs/adapter-node',
+    target: '#svelte',
   },
-};
+}
 ```
 
 with Typescript
 
 ```js
 // svelte.config.cjs
-const sveltePreprocess = require('svelte-preprocess');
+const sveltePreprocess = require('svelte-preprocess')
 module.exports = {
   preprocess: [
     sveltePreprocess.typescript(),
@@ -101,9 +101,9 @@ module.exports = {
   ],
   kit: {
     adapter: '@sveltejs/adapter-node',
-    target: '#svelte'
-  }
-};
+    target: '#svelte',
+  },
+}
 
 ```
 
@@ -124,20 +124,20 @@ export default {
       svelte({
         // svelte-windicss-preprocess
         preprocess: require('svelte-windicss-preprocess').preprocess({
-          config: 'tailwind.config.js',     // tailwind config file path
-          compile: true,                    // false: interpretation mode; true: compilation mode
-          prefix: 'windi-',                 // set compilation mode style prefix
-          globalPreflight: true,            // set preflight style is global or scoped
-          globalUtility: true,              // set utility style is global or scoped
+          config: 'tailwind.config.js', // tailwind config file path
+          compile: true, // false: interpretation mode; true: compilation mode
+          prefix: 'windi-', // set compilation mode style prefix
+          globalPreflight: true, // set preflight style is global or scoped
+          globalUtility: true, // set utility style is global or scoped
         }),
         compilerOptions: {
           // ...
-        }
+        },
       }),
       // ...
-    ]
+    ],
   // ...
-  }
+  },
   server: {
     input: config.server.input(),
     output: config.server.output(),
@@ -146,19 +146,19 @@ export default {
       svelte({
         // svelte-windicss-preprocess
         preprocess: require('svelte-windicss-preprocess').preprocess({
-          config: 'tailwind.config.js',      // tailwind config file path
-          compile: true,                     // false: interpretation mode; true: compilation mode
-          prefix: 'windi-',                  // set compilation mode style prefix
-          globalPreflight: true,             // set preflight style is global or scoped
-          globalUtility: true,               // set utility style is global or scoped
+          config: 'tailwind.config.js', // tailwind config file path
+          compile: true, // false: interpretation mode; true: compilation mode
+          prefix: 'windi-', // set compilation mode style prefix
+          globalPreflight: true, // set preflight style is global or scoped
+          globalUtility: true, // set utility style is global or scoped
         }),
         compilerOptions: {
           // ...
         },
       }),
       // ...
-    ]
-  }
+    ],
+  },
   // ...
 }
 ```
@@ -182,17 +182,17 @@ module.exports = {
               // ... other options
               // svelte-windicss-preprocess
               preprocess: require('svelte-windicss-preprocess').preprocess({
-                config: 'tailwind.config.js',    // tailwind config file path
-                compile: true,                   // false: interpretation mode; true: compilation mode
-                prefix: 'windi-',                // set compilation mode style prefix
-                globalPreflight: true,           // set preflight style is global or scoped
-                globalUtility: true,             // set utility style is global or scoped
-              })
-            }
-          }
+                config: 'tailwind.config.js', // tailwind config file path
+                compile: true, // false: interpretation mode; true: compilation mode
+                prefix: 'windi-', // set compilation mode style prefix
+                globalPreflight: true, // set preflight style is global or scoped
+                globalUtility: true, // set utility style is global or scoped
+              }),
+            },
+          },
         },
         // ...
-      ]
+      ],
     },
   },
 
@@ -208,19 +208,19 @@ module.exports = {
               // ... other options
               // svelte-windicss-preprocess
               preprocess: require('svelte-windicss-preprocess').preprocess({
-                config: 'tailwind.config.js',     // tailwind config file path
-                compile: true,                    // false: interpretation mode; true: compilation mode
-                prefix: 'windi-',                 // set compilation mode style prefix
-                globalPreflight: true,            // set preflight style is global or scoped
-                globalUtility: true,              // set utility style is global or scoped
-              })
-            }
-          }
+                config: 'tailwind.config.js', // tailwind config file path
+                compile: true, // false: interpretation mode; true: compilation mode
+                prefix: 'windi-', // set compilation mode style prefix
+                globalPreflight: true, // set preflight style is global or scoped
+                globalUtility: true, // set utility style is global or scoped
+              }),
+            },
+          },
         },
         // ...
-      ]
+      ],
     },
-  }
+  },
 }
 ```
 
