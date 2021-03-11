@@ -20,7 +20,7 @@ export default defineConfig({
     Icons(),
     WindiCSS({
       scan: {
-        dirs: ['.vitepress'],
+        dirs: ['.vitepress', 'src'],
         include: ['index.md'],
       },
       preflight: false,

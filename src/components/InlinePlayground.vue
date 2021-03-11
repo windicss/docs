@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, watch, watchEffect } from 'vue'
+import { ref, computed, onMounted, watchEffect } from 'vue'
 import Windi from 'windicss'
 import Prism from 'prismjs'
 
