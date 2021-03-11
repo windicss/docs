@@ -1,4 +1,5 @@
 dependencies:
+  prismjs: 1.23.0
   vue: 3.0.7
   windicss: 2.4.0
 devDependencies:
@@ -8,6 +9,7 @@ devDependencies:
   '@docsearch/react': 1.0.0-alpha.28
   '@iconify/json': 1.1.314
   '@types/node': 14.14.33
+  '@types/prismjs': 1.16.3
   algoliasearch: 4.8.6
   docsearch.js: 2.6.3
   eslint: 7.21.0
@@ -492,6 +494,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
+  /@types/prismjs/1.16.3:
+    dev: true
+    resolution:
+      integrity: sha512-7lbX0Odbg9rnzXRdYdgPQZFkjd38QHpD6tvWxbLi6VXGQbXr054doixIS+TwftHP6afffA1zxCZrIcJRS/MkYQ==
   /@typescript-eslint/eslint-plugin/4.17.0_3641211d697b4d4d12940eb9cf33dc28:
     dependencies:
       '@typescript-eslint/experimental-utils': 4.17.0_eslint@7.21.0+typescript@4.2.3
@@ -1094,7 +1100,6 @@ packages:
       good-listener: 1.2.2
       select: 1.1.2
       tiny-emitter: 2.1.0
-    dev: true
     optional: true
     resolution:
       integrity: sha512-Y6WO0unAIQp5bLmk1zdThRhgJt/x3ks6f30s3oE3H1mgIEU33XyQjEf8gsf6DxC7NPX8Y1SsNWjUjL/ywLnnbQ==
@@ -1283,7 +1288,6 @@ packages:
     resolution:
       integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
   /delegate/3.2.0:
-    dev: true
     optional: true
     resolution:
       integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
@@ -2059,7 +2063,6 @@ packages:
   /good-listener/1.2.2:
     dependencies:
       delegate: 3.2.0
-    dev: true
     optional: true
     resolution:
       integrity: sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
@@ -3185,7 +3188,6 @@ packages:
     resolution:
       integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
   /prismjs/1.23.0:
-    dev: true
     optionalDependencies:
       clipboard: 2.0.8
     resolution:
@@ -3473,7 +3475,6 @@ packages:
     resolution:
       integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==
   /select/1.1.2:
-    dev: true
     optional: true
     resolution:
       integrity: sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
@@ -3754,7 +3755,6 @@ packages:
     resolution:
       integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
   /tiny-emitter/2.1.0:
-    dev: true
     optional: true
     resolution:
       integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
@@ -4183,10 +4183,12 @@ specifiers:
   '@docsearch/react': ^1.0.0-alpha.28
   '@iconify/json': ^1.1.314
   '@types/node': ^14.14.33
+  '@types/prismjs': ^1.16.3
   algoliasearch: ^4.8.6
   docsearch.js: ^2.6.3
   eslint: ^7.21.0
   eslint-plugin-markdown: ^2.0.0
+  prismjs: ^1.23.0
   typescript: ^4.2.3
   vite: ^2.0.5
   vite-plugin-components: ^0.8.0
