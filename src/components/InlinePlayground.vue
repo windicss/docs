@@ -158,7 +158,7 @@ onMounted(() => {
       <bx:bxl-css3 class="inline-block" />
     </div>
   </div>
-  <div class="border border-gray-300 rounded relative">
+  <div class="border bc rounded relative">
     <div
       class="grid w-full"
       style="grid-template-columns: 1fr max-content;"
@@ -174,17 +174,17 @@ onMounted(() => {
         />
         <div
           v-show="tab === 'css'"
-          class="text-sm p-2 border-t border-gray-300"
+          class="text-sm p-2 border-t bc"
         >
           <div class="ml-1 mb-2 opacity-50 text-sm">
             CSS
           </div>
-          <pre><code v-html="highlighted" /></pre>
+          <pre class="px-1"><code v-html="highlighted" /></pre>
         </div>
       </div>
       <div
         v-if="preview"
-        class="p-2 border-l border-gray-300"
+        class="p-2 border-l bc"
       >
         <div class="ml-1 mb-2 opacity-50 text-sm">
           Preview
@@ -204,14 +204,14 @@ onMounted(() => {
 
 <style>
 .tabs .tab {
-  @apply px-3 py-1 mx-1 cursor-pointer bg-gray-50 text-gray-400 opacity-75
-    border-t border-l border-r rounded-tr rounded-tl border-gray-300;
+  @apply px-3 py-1 mx-1 cursor-pointer bg-gray-50 dark:bg-true-gray-800 text-gray-400 opacity-75
+    border-t border-l border-r rounded-tr rounded-tl bc;
 }
 .tabs .tab.active {
-  @apply text-blue-500 bg-white opacity-100;
+  @apply text-blue-500 bg-bg opacity-100;
 }
 
 .CodeMirror {
-  @apply px-3 py-2 h-6em;
+  @apply px-3 py-2 h-6em bg-transparent;
 }
 </style>
