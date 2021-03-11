@@ -8,7 +8,8 @@
     "lint": "eslint --fix --ext .js,.ts,.md ./"
   },
   "dependencies": {
-    "vue": "^3.0.7"
+    "vue": "^3.0.7",
+    "windicss": "^2.4.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.4.3",

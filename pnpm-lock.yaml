@@ -1,5 +1,6 @@
 dependencies:
   vue: 3.0.7
+  windicss: 2.4.0
 devDependencies:
   '@antfu/eslint-config': 0.4.3_eslint@7.21.0+typescript@4.2.3
   '@docsearch/css': 1.0.0-alpha.28
@@ -4138,7 +4139,6 @@ packages:
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   /windicss/2.4.0:
-    dev: true
     engines:
       node: '>= 12'
     hasBin: true
@@ -4194,3 +4194,4 @@ specifiers:
   vite-plugin-windicss: ^0.8.2
   vitepress: ^0.12.2
   vue: ^3.0.7
+  windicss: ^2.4.0

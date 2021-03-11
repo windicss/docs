@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [
     Components({
       dirs: [
+        'src/components',
         '.vitepress/theme/components',
       ],
       customLoaderMatcher: id => id.endsWith('.md'),

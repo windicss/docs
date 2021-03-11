@@ -10,14 +10,11 @@ import '../styles/styles.css'
 import { Theme } from 'vitepress'
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
-import Quote from '../components/Quote.vue'
 
 const theme: Theme = {
   Layout,
   NotFound,
-  enhanceApp ({ app }) {
-    app.component('Quote', Quote)
-  },
+  enhanceApp ({ app }) {},
 }
 
 export default theme
