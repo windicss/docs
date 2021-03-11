@@ -10,8 +10,10 @@ devDependencies:
   '@types/node': 14.14.33
   algoliasearch: 4.8.6
   docsearch.js: 2.6.3
+  esbuild-register: 2.2.0
   eslint: 7.21.0
   eslint-plugin-markdown: 2.0.0_eslint@7.21.0
+  prism-theme-vars: 0.2.0
   typescript: 4.2.3
   vite: 2.0.5
   vite-plugin-components: 0.8.0_vite@2.0.5
@@ -1456,6 +1458,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+  /esbuild-register/2.2.0:
+    dependencies:
+      jsonc-parser: 3.0.0
+    dev: true
+    peerDependencies:
+      esbuild: '>=0.8.31'
+    resolution:
+      integrity: sha512-27039YMtpC3lI8yYGGm78SAQBtBo/4IPMReWVsNh4++VtvozmasBd1a2HiTdk0297iuA2pMzrzvL5cZJqQCKxQ==
   /esbuild/0.8.57:
     dev: true
     hasBin: true
@@ -2475,6 +2485,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
+  /jsonc-parser/3.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==
   /jsonfile/6.1.0:
     dependencies:
       universalify: 2.0.0
@@ -3184,6 +3198,10 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+  /prism-theme-vars/0.2.0:
+    dev: true
+    resolution:
+      integrity: sha512-3hsFwPB8UiMzy+o0hVgS85zZ7KNvwbBYydeOAo09Qyu3F5vYjrteorCAqIn/2oipcSL9UzizWItdNEiPaZK9KA==
   /prismjs/1.23.0:
     dev: true
     optionalDependencies:
@@ -4185,8 +4203,10 @@ specifiers:
   '@types/node': ^14.14.33
   algoliasearch: ^4.8.6
   docsearch.js: ^2.6.3
+  esbuild-register: ^2.2.0
   eslint: ^7.21.0
   eslint-plugin-markdown: ^2.0.0
+  prism-theme-vars: ^0.2.0
   typescript: ^4.2.3
   vite: ^2.0.5
   vite-plugin-components: ^0.8.0
