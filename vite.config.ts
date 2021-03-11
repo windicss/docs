@@ -23,7 +23,6 @@ export default defineConfig({
         dirs: ['.vitepress'],
         include: ['index.md'],
       },
-      preflight: false,
     }),
   ],
 })

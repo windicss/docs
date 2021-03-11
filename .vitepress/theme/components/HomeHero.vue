@@ -86,13 +86,12 @@ const hasAltAction = computed(
 }
 
 .title {
-  margin-top: 1.5rem;
-  font-size: 2rem;
+  @apply text-2xl;
 }
 
 @media (min-width: 420px) {
   .title {
-    font-size: 3rem;
+    @apply text-5xl;
   }
 }
 

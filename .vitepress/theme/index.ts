@@ -1,10 +1,11 @@
+import 'windi.css'
+
 import './styles/vars.css'
-import './styles/layout.css'
+import './styles/layout.postcss'
 import './styles/code.css'
 import './styles/custom-blocks.css'
 import './styles/sidebar-links.css'
 
-import 'windi.css'
 import '../styles/styles.css'
 
 import { Theme } from 'vitepress'

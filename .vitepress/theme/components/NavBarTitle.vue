@@ -1,6 +1,6 @@
 <template>
   <a
-    class="nav-bar-title"
+    class="nav-bar-title inline-flex items-center"
     :href="$withBase($localePath)"
     :aria-label="`${$siteByRoute.title}, back to home`"
   >

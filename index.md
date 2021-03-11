@@ -24,7 +24,7 @@ features:
 footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---
 
-<p class="text-center opacity-75 -my-4">
+<p class="flex justify-center opacity-75 -my-4">
   <a href="https://www.netlify.com" target="_blank">
     <img src="/assets/netlify.svg" alt="Deploys by Netlify">
   </a>
