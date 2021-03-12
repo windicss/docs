@@ -87,7 +87,7 @@ function updateIframe() {
   frame.value.contentWindow.postMessage(
     JSON.stringify({
       style: fullStyle.build(),
-      classes: `${acceped.join(' ')} ${props.fixed}`,
+      classes: `${[...acceped, props.fixed].filter(Boolean).join(' ')}`,
     }),
     location.origin,
   )
