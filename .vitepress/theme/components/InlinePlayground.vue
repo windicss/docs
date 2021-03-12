@@ -64,7 +64,7 @@ const plainCSS = ref('')
 const highlighted = ref('')
 const copied = ref(false)
 
-const clipboard = useClipboard()
+const clipboard = useClipboard({ read: false })
 
 function copy() {
   clipboard.copy(plainCSS.value)
