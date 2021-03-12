@@ -106,11 +106,9 @@ kbd {
   font-size: 0.9rem;
   line-height: 10px;
   vertical-align: middle;
-  background-color: #fafbfc;
+  background-color: var(--prism-inline-background);
   border-bottom-color: #d1d5da;
-  border: 1px solid #d1d5da;
   border-radius: 6px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
 }
 
 code kbd {
