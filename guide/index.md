@@ -13,18 +13,20 @@ If you are interested to learn more about Windi CSS before trying it, check out 
 
 If you are looking for utilities, check out the [utilities reference].
 
-## Integrations 💿
+## Integrations
 
 | Frameworks | Package | Version |
 | --- | --- | --- |
-| CLI | [Built-in](https://windicss.netlify.app/guide/cli) | ![](https://img.shields.io/npm/v/windicss?label=) |
-| Vite | [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) | ![](https://img.shields.io/npm/v/vite-plugin-windicss?label=) |
-| Vue (Webpack) | [vue-windicss-preprocess](https://github.com/windicss/vue-windicss-preprocess) | ![](https://img.shields.io/npm/v/vue-windicss-preprocess?label=) |
-| Svelte | [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) | ![](https://img.shields.io/npm/v/svelte-windicss-preprocess?label=) |
+| CLI | [Built-in](https://windicss.netlify.app/guide/cli) | ![](https://img.shields.io/npm/v/windicss?label=&color=0EA5E9) |
+| VSCode Extension | [windicss-intellisense](https://github.com/windicss/windicss-intellisense) | ![](https://img.shields.io/visual-studio-marketplace/v/voorjaar.windicss-intellisense.svg?label=&color=1388bd) |
+| Vite | [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) | ![](https://img.shields.io/npm/v/vite-plugin-windicss?label=&color=0EA5E9) |
+| Rollup | [rollup-plugin-windicss](https://github.com/windicss/vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss) | ![](https://img.shields.io/npm/v/rollup-plugin-windicss?label=&color=1388bd) |
+| Vue (Webpack) | [vue-windicss-preprocess](https://github.com/windicss/vue-windicss-preprocess) | ![](https://img.shields.io/npm/v/vue-windicss-preprocess?label=&color=0EA5E9) |
+| Svelte | [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) | ![](https://img.shields.io/npm/v/svelte-windicss-preprocess?label=&color=1388bd) |
 | React | Coming soon... | |
 | Angular | Coming soon... | |
 
-## Usage 🚀
+## Usage
 
 Windi CSS provides all [utilities] in [Tailwind CSS], so usage is very [similar][tailwind css].
 
@@ -58,8 +60,6 @@ You can use utility classes in your components and stylesheets as usual:
 }
 ```
 
-## Contact ✉️
+## Additional Features
 
-Please visit [GitHub Issues] to report bugs you find, and [GitHub Discussions] to make feature requests, or to get help.
-
-Don't hesitate to [⭐️ star the project][Windi CSS] if you find it useful!
+In addition of Tailwind CSS v2, we also have some great features that only possible for Windi CSS. Refer to the [next chapter](./features) for more details.

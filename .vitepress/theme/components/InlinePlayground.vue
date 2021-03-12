@@ -32,6 +32,9 @@ const props = defineProps({
   showCopy: {
     default: true,
   },
+  fixed: {
+    default: '',
+  },
   tab: {
     type: String as PropType<'code' | 'css'>,
     default: 'code',
@@ -53,10 +56,10 @@ const mode = ref(props.mode)
 let acceped: string[] = []
 
 const decorations: CodeMirror.TextMarker<CodeMirror.MarkerRange>[] = []
-const preflight = processor.preflight('<div <p', true, true, true)
+const preflightStyles = processor.preflight('<div <p', true, true, true)
+const fixedStyles = processor.interpret(props.fixed).styleSheet
 
 const style = ref<StyleSheet>(new StyleSheet())
-
 const plainCSS = ref('')
 const highlighted = ref('')
 const copied = ref(false)
@@ -78,14 +81,13 @@ function updateIframe() {
   if (!frame.value?.contentWindow)
     return
 
-  const fulll = preflight.extend(style.value)
-  fulll.sort()
+  const fullStyle = preflightStyles.extend(fixedStyles).extend(style.value).sort()
 
   frame.value.contentWindow.document.querySelector('html')?.classList.toggle('dark', isDark.value)
   frame.value.contentWindow.postMessage(
     JSON.stringify({
-      style: fulll.build(),
-      classes: acceped.join(' '),
+      style: fullStyle.build(),
+      classes: `${acceped.join(' ')} ${props.fixed}`,
     }),
     location.origin,
   )
