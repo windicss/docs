@@ -106,7 +106,7 @@ function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Edito
   decorations.push(cm.markText(
     cm.posFromIndex(start),
     cm.posFromIndex(end),
-    { className: matched ? 'text-green-600' : 'text-orange-600' },
+    { className: ['text-0.95rem', matched ? 'text-green-600' : 'text-orange-600'].join(' ') },
   ))
 }
 
