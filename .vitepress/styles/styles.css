@@ -5,11 +5,6 @@
   --bg-colored-light: #f3f6f7;
 }
 
-.custom-block.custom-block.tip {
-  background-color: var(--bg-colored-light);
-  border-color: var(--c-brand);
-}
-
 .custom-block.custom-block.tip a {
   color: #007d80;
 }

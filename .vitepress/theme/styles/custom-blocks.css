@@ -1,21 +1,20 @@
 .custom-block.tip,
 .custom-block.warning,
 .custom-block.danger {
-  margin: 1rem 0;
-  border-left: 0.5rem solid;
-  padding: 0.1rem 1.5rem;
+  margin: 2rem 0 1rem 0;
+  border-left: .5rem solid;
+  padding: .1rem 1.5rem;
   overflow-x: auto;
 }
 
 .custom-block.tip {
-  background-color: #f3f5f7;
+  background-color: var(--c-bg-secondary);
   border-color: #42b983;
 }
 
 .custom-block.warning {
   border-color: #e7c000;
-  color: #6b5900;
-  background-color: rgba(255, 229, 100, 0.3);
+  background-color: rgba(255, 229, 100, .3);
 }
 
 .custom-block.warning .custom-block-title {
@@ -28,7 +27,6 @@
 
 .custom-block.danger {
   border-color: #c00;
-  color: #4d0000;
   background-color: #ffe6e6;
 }
 
@@ -65,6 +63,5 @@
 }
 
 .custom-block-title {
-  margin-bottom: -0.4rem;
-  font-weight: 600;
+  display: none;
 }

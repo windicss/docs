@@ -93,8 +93,4 @@ defineEmit(['toggle'])
 .nav-icons .item {
   padding-left: 12px;
 }
-
-.nav-icons .item a {
-  color: inherit;
-}
 </style>
