@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html */
-import { ref, computed, watchEffect, defineProps, onMounted, watch } from 'vue'
+import { ref, watchEffect, defineProps, onMounted, watch, defineEmit, toRef } from 'vue'
 import Windi from 'windicss'
 import { StyleSheet } from 'windicss/utils/style'
 import Prism from 'prismjs'
@@ -17,6 +17,9 @@ const props = defineProps({
   preview: {
     default: true,
   },
+  tab: {
+    default: 'code',
+  },
 })
 
 const processor = new Windi()
@@ -25,7 +28,7 @@ const frame = ref<HTMLIFrameElement | null>()
 const input = ref<HTMLTextAreaElement | null>()
 const classes = ref(props.classes)
 
-const tab = ref<'code' | 'css'>('code')
+const tab = ref(props.tab)
 
 let acceped: string[] = []
 
@@ -34,9 +37,11 @@ const preflight = processor.preflight('<div <p', true, true, true)
 
 const style = ref<StyleSheet>(new StyleSheet())
 
-const highlighted = computed(() => {
-  return Prism.highlight(style.value.build().trim(), Prism.languages.css, 'css').trim()
-})
+const highlighted = ref('')
+
+watch(style, () => {
+  highlighted.value = Prism.highlight(style.value.build().trim(), Prism.languages.css, 'css').trim()
+}, { immediate: true })
 
 function updateIframe() {
   if (!frame.value?.contentWindow)
@@ -149,7 +154,7 @@ onMounted(async() => {
     { immediate: true },
   )
 
-  watchEffect(() => interpret(cm))
+  watch(classes, () => interpret(cm), { immediate: true })
 })
 </script>
 
@@ -216,6 +221,6 @@ onMounted(async() => {
 }
 
 .CodeMirror {
-  @apply px-3 py-2 h-6em bg-transparent;
+  @apply px-3 py-2 h-7em bg-transparent;
 }
 </style>

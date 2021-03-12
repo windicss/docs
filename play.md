@@ -2,6 +2,6 @@
 sidebar: false
 ---
 
-# Playground (WIP)
+## Windi CSS Inline Playground (WIP)
 
 <InlinePlayground/>
