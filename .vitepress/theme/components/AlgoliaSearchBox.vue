@@ -151,11 +151,15 @@ function initialize(userOptions: any) {
   --docsearch-text-color: var(--c-text-light);
   --docsearch-muted-color: var(--c-text-lighter);
   --docsearch-key-gradient: rgba(125,125,125,0.1);
-  --docsearch-key-shadow: rgba(125,125,125,0.3);
+  --docsearch-key-shadow: rgba(125,125,125,0.1);
 }
 
 html.dark .DocSearch {
   --docsearch-container-background: rgba(0,0,0,0.8);
+  --docsearch-searchbox-background: rgba(255,255,255,0.1);
+  --docsearch-searchbox-focus-background: rgba(255,255,255,0.05);
+  --docsearch-key-gradient: rgba(85, 85, 85, 0.5);
+  --docsearch-key-shadow: rgba(48, 48, 48, 0.201);
 }
 
 .DocSearch-Button-Key {
