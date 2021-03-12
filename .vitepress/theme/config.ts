@@ -1,6 +1,5 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable @typescript-eslint/no-namespace */
-
 export namespace DefaultTheme {
   export interface Config {
     logo?: string
@@ -37,7 +36,7 @@ export namespace DefaultTheme {
     docsDir?: string
 
     /**
-     * If your docs are in a different branch. Defaults to `main`.
+     * If your docs are in a different branch. Defaults to `master`.
      *
      * @example `"next"`
      */
@@ -64,6 +63,14 @@ export namespace DefaultTheme {
     nextLinks?: boolean
 
     locales?: Record<string, LocaleConfig & Omit<Config, 'locales'>>
+
+    algolia?: AlgoliaSearchOptions
+
+    carbonAds?: {
+      carbon: string
+      custom?: string
+      placement: string
+    }
   }
 
   // navbar --------------------------------------------------------------------
@@ -111,6 +118,18 @@ export namespace DefaultTheme {
     collapsable?: boolean
 
     children: SideBarItem[]
+  }
+
+  // algolia  ------------------------------------------------------------------
+  // partially copied from @docsearch/react/dist/esm/DocSearch.d.ts
+  export interface AlgoliaSearchOptions {
+    appId?: string
+    apiKey: string
+    indexName: string
+    placeholder?: string
+    searchParameters?: any
+    disableUserPersonalization?: boolean
+    initialQuery?: string
   }
 
   // locales -------------------------------------------------------------------
