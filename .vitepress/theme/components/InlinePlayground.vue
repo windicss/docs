@@ -1,6 +1,7 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html */
 import { ref, watchEffect, defineProps, onMounted, watch } from 'vue'
+import type { PropType } from 'vue'
 import Windi from 'windicss'
 import { StyleSheet } from 'windicss/utils/style'
 import Prism from 'prismjs'
@@ -18,8 +19,22 @@ const props = defineProps({
   showPreview: {
     default: true,
   },
+  showMode: {
+    default: true,
+  },
+  showTabs: {
+    default: true,
+  },
+  showCSS: {
+    default: true,
+  },
   tab: {
+    type: String as PropType<'code' | 'css'>,
     default: 'code',
+  },
+  mode: {
+    type: String as PropType<'interpret' | 'compile'>,
+    default: 'interpret',
   },
 })
 
@@ -28,8 +43,8 @@ const processor = new Windi()
 const frame = ref<HTMLIFrameElement | null>()
 const textarea = ref<HTMLTextAreaElement | null>()
 const input = ref(props.input)
-
 const tab = ref(props.tab)
+const mode = ref(props.mode)
 
 let acceped: string[] = []
 
@@ -51,7 +66,7 @@ function updateIframe() {
   const fulll = preflight.extend(style.value)
   fulll.sort()
 
-  frame.value.contentWindow.document.querySelector('html')!.classList.toggle('dark', isDark.value)
+  frame.value.contentWindow.document.querySelector('html')?.classList.toggle('dark', isDark.value)
   frame.value.contentWindow.postMessage(
     JSON.stringify({
       style: fulll.build(),
@@ -78,9 +93,20 @@ function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Edito
   ))
 }
 
+function toggleMode() {
+  mode.value = mode.value === 'compile' ? 'interpret' : 'compile'
+}
+
 function interpret(cm: CodeMirror.Editor) {
-  const { styleSheet, success, ignored } = processor.interpret(input.value.replace(/\n/g, ' '))
-  acceped = success
+  // @ts-expect-error
+  const { styleSheet, success, ignored, className } = mode.value === 'interpret'
+    ? processor.interpret(input.value.replace(/\n/g, ' ')) || {}
+    : processor.compile(input.value.replace(/\n/g, ' ')) || {}
+
+  if (mode.value === 'interpret')
+    acceped = success || []
+  else
+    acceped = [className]
 
   // clear previous
   decorations.forEach(i => i.clear())
@@ -133,7 +159,6 @@ function interpret(cm: CodeMirror.Editor) {
 }
 
 watchEffect(updateIframe)
-watch(isDark, updateIframe)
 
 onMounted(async() => {
   if (typeof window === 'undefined')
@@ -158,12 +183,12 @@ onMounted(async() => {
     { immediate: true },
   )
 
-  watch(input, () => interpret(cm), { immediate: true })
+  watchEffect(() => interpret(cm))
 })
 </script>
 
 <template>
-  <div class="flex tabs mt-4">
+  <div v-if="showTabs" class="flex tabs mt-4">
     <div class="tab" :class="{active: tab === 'code'}" @click="tab = 'code'">
       <carbon:code class="inline-block" />
     </div>
@@ -187,23 +212,30 @@ onMounted(async() => {
           :class="{'h-full': tab === 'code' }"
         />
         <div
+          v-if="showCSS"
           v-show="tab === 'css'"
           class="text-sm p-2 border-t bc"
         >
-          <div class="ml-1 mb-2 opacity-50 text-sm">
-            CSS
+          <div class="ml-1 mb-2 opacity-50 text-sm flex">
+            <span>CSS</span>
+            <div class="flex-auto" />
+            <div v-if="showMode" class="icon-button" @click="toggleMode">
+              <span class="text-sm mr-1.5 -mt-0.5 capitalize">{{ mode }}</span>
+              <carbon:circle-packing v-if="mode === 'compile'" />
+              <carbon:chart-bubble-packed v-else />
+            </div>
           </div>
-          <pre class="px-1"><code v-html="highlighted" /></pre>
+          <pre class="px-1 overflow-auto"><code v-html="highlighted" /></pre>
         </div>
       </div>
       <div
         v-if="showPreview"
-        class="p-2 border-l bc"
+        class="p-2 border-l flex bc"
       >
         <iframe
           ref="frame"
           src="/__playground.html"
-          class="overflow-hidden outline-none w-10em h-0"
+          class="overflow-hidden outline-none w-10em h-0 m-auto"
           frameborder="0"
           scrolling="no"
           @load="updateIframe()"
