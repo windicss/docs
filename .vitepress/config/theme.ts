@@ -1,6 +1,6 @@
-import { Config as ThemeConfig } from '../theme/config'
+import type { DefaultTheme } from 'vitepress'
 
-const themeConfig: ThemeConfig = {
+const themeConfig: DefaultTheme.Config = {
   algolia: {
     appId: 'RYAT0G9BU3',
     apiKey: 'c0dfcf1e50c42717f0d536ac6fd11d78',
@@ -18,6 +18,15 @@ const themeConfig: ThemeConfig = {
     { text: 'Guide', link: '/guide/' },
     { text: 'Utilities', link: '/utilities/' },
     // { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs' },
+    {
+      text: 'Community',
+      items: [
+        { text: 'Discord', link: 'https://discord.com/invite/aRYWm8r8Eq' },
+        { text: 'GitHub', link: 'https://github.com/windicss/windicss' },
+        { text: 'Discussions', link: 'https://github.com/windicss/windicss/discussions' },
+        { text: 'Team', link: 'https://github.com/orgs/windicss/people' },
+      ],
+    },
     { text: 'Releases', link: 'https://github.com/windicss/windicss/releases' },
   ],
 
