@@ -7,6 +7,14 @@
 [utilities]: /utilities/
 [directives]: /guide/directives
 
+[Built-in]: /guide/cli
+[windicss-intellisense]: https://github.com/windicss/windicss-intellisense
+[vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
+[rollup-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss
+[windicss-webpack-plugin]: https://github.com/windicss/windicss-webpack-plugin
+[nuxt-windicss-module]: https://github.com/windicss/nuxt-windicss-module
+[svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
+
 # Getting Started
 
 If you are interested to learn more about Windi CSS before trying it, check out the [Introduction](./introduction).
@@ -16,13 +24,14 @@ If you are looking for utilities, check out the [utilities reference].
 ## Integrations
 
 | Frameworks | Package | Version |
-| --- | --- | --- |
-| CLI | [Built-in](https://windicss.netlify.app/guide/cli) | ![](https://img.shields.io/npm/v/windicss?label=&color=0EA5E9) |
-| VSCode Extension | [windicss-intellisense](https://github.com/windicss/windicss-intellisense) | ![](https://img.shields.io/visual-studio-marketplace/v/voorjaar.windicss-intellisense.svg?label=&color=1388bd) |
-| Vite | [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) | ![](https://img.shields.io/npm/v/vite-plugin-windicss?label=&color=0EA5E9) |
-| Rollup | [rollup-plugin-windicss](https://github.com/windicss/vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss) | ![](https://img.shields.io/npm/v/rollup-plugin-windicss?label=&color=1388bd) |
-| Vue (Webpack) | [vue-windicss-preprocess](https://github.com/windicss/vue-windicss-preprocess) | ![](https://img.shields.io/npm/v/vue-windicss-preprocess?label=&color=0EA5E9) |
-| Svelte | [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) | ![](https://img.shields.io/npm/v/svelte-windicss-preprocess?label=&color=1388bd) |
+| :--------- | :------ | :------ |
+| CLI | [Built-in] | ![](https://img.shields.io/npm/v/windicss?label=&color=0EA5E9) |
+| VSCode Extension | [windicss-intellisense] | ![](https://img.shields.io/visual-studio-marketplace/v/voorjaar.windicss-intellisense.svg?label=&color=1388bd) |
+| Vite | [vite-plugin-windicss] | ![](https://img.shields.io/npm/v/vite-plugin-windicss?label=&color=0EA5E9) |
+| Rollup | [rollup-plugin-windicss] | ![](https://img.shields.io/npm/v/rollup-plugin-windicss?label=&color=1388bd) |
+| Webpack | [windicss-webpack-plugin] | ![](https://img.shields.io/npm/v/windicss-webpack-plugin?label=&color=0EA5E9) |
+| Nuxt | [nuxt-windicss-module] | ![](https://img.shields.io/npm/v/nuxt-windicss-module?label=&color=0EA5E9) |
+| Svelte | [svelte-windicss-preprocess] | ![](https://img.shields.io/npm/v/svelte-windicss-preprocess?label=&color=1388bd) |
 | React | Coming soon... | |
 | Angular | Coming soon... | |
 
