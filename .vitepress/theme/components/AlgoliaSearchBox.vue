@@ -129,17 +129,9 @@ function initialize(userOptions: any) {
 }
 </script>
 
-<style>
+<style lang="postcss">
 .algolia-search-box {
-  padding-top: 1px;
-}
-
-@media (min-width: 751px) {
-  .algolia-search-box .DocSearch-Button-Placeholder {
-    padding-left: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
+  @apply pt-1px md:(pl-2 text-0.9rem font-medium);
 }
 
 .DocSearch {
@@ -160,8 +152,6 @@ function initialize(userOptions: any) {
   --docsearch-muted-color: var(--c-text-lighter);
   --docsearch-key-gradient: rgba(125,125,125,0.1);
   --docsearch-key-shadow: rgba(125,125,125,0.3);
-  margin-left: 0.6rem;
-  margin-right: -0.2rem;
 }
 
 html.dark .DocSearch {
@@ -169,6 +159,6 @@ html.dark .DocSearch {
 }
 
 .DocSearch-Button-Key {
-  padding-bottom: 0;
+  @apply static pb-0;
 }
 </style>

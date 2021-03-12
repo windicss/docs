@@ -7,7 +7,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      {{ text }} <OutboundLink class="icon" />
+      {{ text }} <OutboundLink class="ml-1" />
     </a>
   </div>
 </template>
@@ -19,20 +19,11 @@ import OutboundLink from './icons/OutboundLink.vue'
 const { url, text } = useEditLink()
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .link {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--c-text-light);
-}
-
-.link:hover {
-  text-decoration: none;
-  color: var(--c-brand);
-}
-
-.icon {
-  margin-left: 4px;
+  @apply inline-block
+    text-base font-medium
+    text-$c-text-light
+    hover:(no-underline text-$c-brand);
 }
 </style>

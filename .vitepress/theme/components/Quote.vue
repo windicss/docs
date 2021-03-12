@@ -7,12 +7,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="custom-block tip quote">
-    <p>
+  <div class="custom-block tip">
+    <p class="mb-0">
       <slot />
     </p>
-    <p v-if="author" class="text-right text-sm mb-2 -mt-6 font-semibold">
+    <span v-if="author" class="text-right block text-sm font-semibold mb-3">
       —{{ author }}
-    </p>
+    </span>
   </div>
 </template>

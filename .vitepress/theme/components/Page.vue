@@ -48,6 +48,11 @@ import NextAndPrevLinks from './NextAndPrevLinks.vue'
   padding-bottom: 1.5rem;
 }
 
+/* Utility classes should not wrap */
+.content tbody tr td:nth-child(1) {
+  white-space: nowrap;
+}
+
 @media (max-width: 420px) {
   .content {
     /* fix carbon ads display */

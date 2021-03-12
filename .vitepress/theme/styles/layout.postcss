@@ -73,9 +73,9 @@ h1 {
   font-size: 1.9rem;
 }
 
-@screen sm {
+@media screen and (min-width: 420px) {
   h1 {
-    @apply text-3xl;
+    font-size: 2.2rem;
   }
 }
 
@@ -150,6 +150,7 @@ figure {
 
 img {
   max-width: 100%;
+  border-radius: 10px;
 }
 
 ul,
@@ -167,6 +168,8 @@ table {
   border-collapse: collapse;
   margin: 1rem 0;
   overflow-x: auto;
+  @apply font-mono text-sm;
+  white-space: pre-wrap;
 }
 
 tr:nth-child(2n) {

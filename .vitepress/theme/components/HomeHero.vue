@@ -58,7 +58,7 @@ const hasAltAction = computed(
 )
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .home-hero {
   margin: 2.5rem 0 2.75rem;
   padding: 0 1.5rem;
@@ -86,7 +86,7 @@ const hasAltAction = computed(
   margin: 0 auto;
   width: auto;
   max-width: 100%;
-  max-height: 280px;
+  max-height: 120px;
 }
 
 .title {
@@ -95,7 +95,7 @@ const hasAltAction = computed(
 
 @media (min-width: 420px) {
   .title {
-    @apply text-5xl;
+    @apply text-5xl leading-16;
   }
 }
 

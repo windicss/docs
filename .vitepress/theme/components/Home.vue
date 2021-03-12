@@ -1,5 +1,5 @@
 <template>
-  <main class="home" aria-labelledby="main-title">
+  <main class="pt-$header-height" aria-labelledby="main-title">
     <HomeHero />
     <slot name="hero" />
     <HomeFeatures />
@@ -18,21 +18,14 @@ import HomeFeatures from './HomeFeatures.vue'
 import HomeFooter from './HomeFooter.vue'
 </script>
 
-<style scoped>
-.home {
-  padding-top: var(--header-height);
-}
-
+<style scoped lang="postcss">
 .home-content {
-  max-width: 960px;
-  margin: 0px auto;
-  padding: 0 1.5rem;
+  @apply max-w-960px mx-auto py-6;
 }
 
 @media (max-width: 720px) {
   .home-content {
-    max-width: 392px;
-    padding: 0;
+    @apply max-w-392px p-0;
   }
 }
 </style>

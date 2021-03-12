@@ -24,11 +24,12 @@
   padding: 2rem 1.5rem 2.25rem;
 }
 
+/*
 .home-hero + .footer .container,
 .home-features + .footer .container,
 .home-content + .footer .container {
   border-top: 1px solid var(--c-divider);
-}
+} */
 
 @media (min-width: 420px) {
   .container {

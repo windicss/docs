@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useSiteDataByRoute, useFrontmatter } from 'vitepress'
+import { useFrontmatter } from 'vitepress'
 
 const data = useFrontmatter()
 
@@ -36,31 +36,21 @@ const features = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .home-features {
-  margin: 0 auto;
-  padding: 2.5rem 0 2.75rem;
-  max-width: 960px;
+  @apply
+    mx-auto pt-10 pb-11 max-w-960px
+    xs:(pt-13 pb-14)
+    md:(px-6);
 }
 
 .home-hero + .home-features {
-  padding-top: 0;
+  @apply pt-0;
 }
 
-@media (min-width: 420px) {
-  .home-features {
-    padding: 3.25rem 0 3.5rem;
-  }
-
+@screen xs {
   .home-hero + .home-features {
-    padding-top: 0;
-  }
-}
-
-@media (min-width: 720px) {
-  .home-features {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    @apply pt-0;
   }
 }
 
@@ -71,6 +61,8 @@ const features = computed(() => {
 .home-hero + .home-features .wrapper {
   border-top: 1px solid var(--c-divider);
   padding-top: 2.5rem;
+  border-bottom: 1px solid var(--c-divider);
+  padding-bottom: 3.25rem;
 }
 
 @media (min-width: 420px) {

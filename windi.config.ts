@@ -7,6 +7,10 @@ export default defineConfig({
   },
   theme: {
     extend: {
+      screens: {
+        xs: '420px',
+        md: '720px',
+      },
       colors: {
         bg: 'var(--c-bg)',
       },
