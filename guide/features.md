@@ -24,6 +24,57 @@ You can use `+` for __Only Screen__ and `-` for __Desktop First__ in screen util
 
 See [screen variants](http://localhost:4002/utilities/variants.html#screen-variants) for more details.
 
+## Important Utility
+
+You can add `!important` rule by adding a `!` mark, which is very useful when you want to override ALL previous styling rules for that specific property on that element!
+
+```css
+!text-green-300
+```
+
+<InlinePlayground :input="'!text-green-300'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+
+## Shortcuts Config
+
+We have also added a shortcuts config to help you quickly add utilities. With this feature, you can even share inline components.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    /* ... */
+  },
+  shortcuts: {
+    btn: 'py-2 px-4 font-semibold rounded-lg shadow-md',
+    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
+  },
+}
+```
+
+css-in-js syntax is also supported for complex utility
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    /* ... */
+  },
+  shortcuts: {
+    btn: {
+      color: 'white',
+      '@apply': 'py-2 px-4 font-semibold rounded-lg',
+      '&:hover': {
+        '@apply': 'bg-green-700',
+        color: 'black',
+      },
+    },
+    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
+  },
+}
+```
+
+The utility added by this configuration can also be directly wrapped with variant, such as sm:btn. The function of this feature is similar to @apply, it will merge all utilities into one style.
+
 <!-- 
 ## More States and Light/Dark theme support
 
