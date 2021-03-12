@@ -5,6 +5,7 @@ import type { PropType } from 'vue'
 import Windi from 'windicss'
 import { StyleSheet } from 'windicss/utils/style'
 import Prism from 'prismjs'
+import { useClipboard } from '@vueuse/core'
 import type CodeMirror from 'codemirror'
 import { isDark } from '../composables/dark'
 import 'prismjs/components/prism-css'
@@ -26,6 +27,9 @@ const props = defineProps({
     default: true,
   },
   showCSS: {
+    default: true,
+  },
+  showCopy: {
     default: true,
   },
   tab: {
@@ -53,10 +57,21 @@ const preflight = processor.preflight('<div <p', true, true, true)
 
 const style = ref<StyleSheet>(new StyleSheet())
 
+const plainCSS = ref('')
 const highlighted = ref('')
+const copied = ref(false)
+
+const clipboard = useClipboard()
+
+function copy() {
+  clipboard.copy(plainCSS.value)
+  copied.value = true
+  setTimeout(() => { copied.value = false }, 2000)
+}
 
 watch(style, () => {
-  highlighted.value = Prism.highlight(style.value.build().trim(), Prism.languages.css, 'css').trim()
+  plainCSS.value = style.value.build().trim()
+  highlighted.value = Prism.highlight(plainCSS.value, Prism.languages.css, 'css').trim()
 }, { immediate: true })
 
 function updateIframe() {
@@ -219,10 +234,14 @@ onMounted(async() => {
           <div class="ml-1 mb-2 opacity-50 text-sm flex">
             <span>CSS</span>
             <div class="flex-auto" />
-            <div v-if="showMode" class="icon-button" @click="toggleMode">
+            <div v-if="showMode" class="icon-button" title="Toggle Mode" @click="toggleMode">
               <span class="text-sm mr-1.5 -mt-0.5 capitalize">{{ mode }}</span>
               <carbon:circle-packing v-if="mode === 'compile'" />
               <carbon:chart-bubble-packed v-else />
+            </div>
+            <div v-if="showCopy" class="icon-button ml-3" :class="{ active: copied }" title="Copy" @click="copy()">
+              <carbon:checkmark-outline v-if="copied" class="text-green-500" />
+              <carbon:copy v-else />
             </div>
           </div>
           <pre class="px-1 overflow-auto"><code v-html="highlighted" /></pre>
