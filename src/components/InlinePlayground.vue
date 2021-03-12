@@ -4,9 +4,9 @@ import { ref, computed, watchEffect, defineProps, onMounted, watch } from 'vue'
 import Windi from 'windicss'
 import { StyleSheet } from 'windicss/utils/style'
 import Prism from 'prismjs'
-import CodeMirror from 'codemirror'
-import 'codemirror/lib/codemirror.css'
+import type CodeMirror from 'codemirror'
 import 'prismjs/components/prism-css'
+import 'codemirror/lib/codemirror.css'
 
 const props = defineProps({
   classes: {
@@ -126,7 +126,11 @@ function interpret(cm: CodeMirror.Editor) {
 
 watchEffect(updateIframe)
 
-onMounted(() => {
+onMounted(async() => {
+  if (typeof window === 'undefined')
+    return
+
+  const CodeMirror = await import('codemirror')
   const cm = CodeMirror.fromTextArea(input.value!, {
     scrollbarStyle: 'null',
     lineWrapping: true,
