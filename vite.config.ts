@@ -16,7 +16,9 @@ export default defineConfig({
         }),
       ],
     }),
-    Icons(),
+    Icons({
+      defaultStyle: 'vertical-align: middle;',
+    }),
     WindiCSS({
       scan: {
         dirs: ['.vitepress'],
