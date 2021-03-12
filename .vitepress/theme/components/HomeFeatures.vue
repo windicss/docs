@@ -6,7 +6,7 @@
           <section
             v-for="(feature, index) in features"
             :key="index"
-            class="feature"
+            class="feature space-y-2"
           >
             <h2 v-if="feature.title" class="title">
               {{ feature.title }}
@@ -43,92 +43,32 @@ const features = computed(() => {
     xs:(pt-13 pb-14)
     md:(px-6);
 }
-
 .home-hero + .home-features {
   @apply pt-0;
 }
-
-@screen xs {
-  .home-hero + .home-features {
-    @apply pt-0;
-  }
-}
-
 .wrapper {
-  padding: 0 1.5rem;
+  @apply px-6 md:px-0;
 }
-
 .home-hero + .home-features .wrapper {
-  border-top: 1px solid var(--c-divider);
-  padding-top: 2.5rem;
-  border-bottom: 1px solid var(--c-divider);
-  padding-bottom: 3.25rem;
+  @apply
+    pt-10 pb-13
+    border-b border-t border-$c-divider
+    xs:pt-13;
 }
-
-@media (min-width: 420px) {
-  .home-hero + .home-features .wrapper {
-    padding-top: 3.25rem;
-  }
-}
-
-@media (min-width: 720px) {
-  .wrapper {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 .container {
-  margin: 0 auto;
-  max-width: 392px;
+  @apply max-w-392px mx-auto md:max-w-960px;
 }
-
-@media (min-width: 720px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -20px -24px;
+  @apply flex flex-wrap -my-5 -mx-6;
 }
-
 .feature {
-  flex-shrink: 0;
-  padding: 20px 24px;
-  width: 100%;
+  @apply w-full py-5 px-6 flex-shrink-0 md:w-1/3;
 }
-
-@media (min-width: 720px) {
-  .feature {
-    width: calc(100% / 3);
-  }
-}
-
 .title {
-  margin: 0;
-  border-bottom: 0;
-  line-height: 1.4;
-  font-size: 1.25rem;
-  font-weight: 500;
+  @apply
+    m-0 border-b-0 leading-6rem text-xl font-medium xs:(text-1.4rem leading-7);
 }
-
-@media (min-width: 420px) {
-  .title {
-    font-size: 1.4rem;
-  }
-}
-
 .details {
-  margin: 0;
-  line-height: 1.6;
-  font-size: 1rem;
-  color: var(--c-text-light);
-}
-
-.title + .details {
-  padding-top: 0.25rem;
+  @apply m-0 leading-1.6rem text-base text-$c-text-light;
 }
 </style>

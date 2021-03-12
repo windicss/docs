@@ -20,12 +20,6 @@ import HomeFooter from './HomeFooter.vue'
 
 <style scoped lang="postcss">
 .home-content {
-  @apply max-w-960px mx-auto py-6;
-}
-
-@screen md {
-  .home-content {
-    @apply max-w-392px p-0;
-  }
+  @apply max-w-960px mx-auto py-6 md:(max-w-392px p-0);
 }
 </style>

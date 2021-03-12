@@ -26,7 +26,6 @@ watch(
 )
 
 onMounted(() => {
-  console.log(props.options)
   initialize(props.options)
 })
 

@@ -14,18 +14,18 @@
     <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-6 text-$c-text-light xs:(text-2xl)">
       {{ tagline }}
     </p>
-
-    <NavLink
-      v-if="hasAction"
-      :item="{ link: data.actionLink, text: data.actionText }"
-      class="action"
-    />
-
-    <NavLink
-      v-if="hasAltAction"
-      :item="{ link: data.altActionLink, text: data.altActionText }"
-      class="action alt"
-    />
+    <div class="space-x-6">
+      <NavLink
+        v-if="hasAction"
+        :item="{ link: data.actionLink, text: data.actionText }"
+        class="action"
+      />
+      <NavLink
+        v-if="hasAltAction"
+        :item="{ link: data.altActionLink, text: data.altActionText }"
+        class="action alt"
+      />
+    </div>
   </header>
 </template>
 
@@ -60,37 +60,10 @@ const hasAltAction = computed(
 
 <style scoped lang="postcss">
 .home-hero {
-  margin: 2.5rem 0 2.75rem;
-  padding: 0 1.5rem;
-  text-align: center;
+  @apply mt-10 mb-11 px-6 text-center xs:my-14 md:(mt-16 mb-17);
 }
-
-@media (min-width: 420px) {
-  .home-hero {
-    margin: 3.5rem 0;
-  }
-}
-
-@media (min-width: 720px) {
-  .home-hero {
-    margin: 4rem 0 4.25rem;
-  }
-}
-
 .action {
-  margin-top: 1.5rem;
-  display: inline-block;
-}
-
-.action.alt {
-  margin-left: 1.5rem;
-}
-
-@media (min-width: 420px) {
-  .action {
-    margin-top: 2rem;
-    display: inline-block;
-  }
+  @apply mt-6 inline-block xs:mt-8;
 }
 
 .action :deep(.item) {
