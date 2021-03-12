@@ -163,24 +163,25 @@ li > ol {
 }
 
 table {
-  display: block;
+  width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   margin: 1rem 0;
   overflow-x: auto;
 }
 
-tr {
-  border-top: 1px solid var(--c-divider-light);
+tr:nth-child(2n) {
+  @apply bg-gray-400 bg-opacity-2;
 }
 
-tr:nth-child(2n) {
-  background-color: var(--code-inline-bg-color);
+thead th {
+  @apply font-sans;
 }
 
 th,
 td {
-  border: 1px solid var(--c-divider-light);
-  padding: 0.6em 1em;
+  border-bottom: 1px solid var(--c-divider-light);
+  padding: 0.2em 1em;
 }
 
 blockquote {

@@ -70,7 +70,9 @@ div[class*='language-'] {
 div[class*='language-'] pre {
   margin: 0;
   z-index: 1;
+  background: transparent !important;
 }
+
 
 
 /* Line highlighting */
