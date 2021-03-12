@@ -8,10 +8,10 @@
       >
     </figure>
 
-    <h1 v-if="hasHeroText" id="main-title" class="text-2xl xs:(text-5xl leading-16) md:(mt-8)">
+    <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) md:(mt-8)">
       {{ heroText }}
     </h1>
-    <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-5 text-$c-text-light xs:(text-2xl)">
+    <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-6 text-$c-text-light xs:(text-2xl)">
       {{ tagline }}
     </p>
 
