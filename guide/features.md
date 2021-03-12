@@ -18,13 +18,11 @@ You can apply several utilities for the same variant by grouping them with paren
 
 ## 🖥 Screen Utilities
 
-You can use `+` and `-` screen utilities, even for your custom screen sizes.
+You can use `+` for __Only Screen__ and `-` for __Desktop First__ in screen utilities, for example:
 
-```css
-sm: @media (min-width:640px);
-+sm: @media (min-width:640px) and (max-width:768px);
--sm: @media (max-width:640px);
-```
+<InlinePlayground :input="'sm:p-1\n+sm:p-2\n-sm:p-3'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+
+See [screen variants](http://localhost:4002/utilities/variants.html#screen-variants) for more details.
 
 ## 🌓 More States and Light/Dark theme support
 
@@ -32,68 +30,53 @@ sm: @media (min-width:640px);
 
 Also, it adds `@dark` and `@light` classes based on `prefers-color-scheme`.
 
-## 🤖 Auto-Inferred Variables and Variants
+## 🤖 Auto-Inferred Variants and Variables
 
-Since [Windi CSS] will only generate the CSS utilities you use, it's no longer necessary to configure custom variables like numbers, sizes, scores, and colors.
-
-[Windi CSS] will automatically detect utilities, and generate them based on the appropriate semantics.
-
-You can even pass in variable names, which is very useful in combination with css variables.
+Since [Windi CSS] will only generate the CSS utilities you use, it's no longer necessary to configure custom variables like numbers, sizes, scores, and colors. It can detect utilities automatically, and generate CSS based on the appropriate semantics.
 
 ### Numbers
 
-```css
-p-${float[0,...infinite]} -> padding: ${float/4}rem;
-
-p-2.5 -> padding: 0.625rem;
-p-3.2 -> padding: 0.8rem;
+```less
+p-{float} -> padding: {float/4}rem;
 ```
+
+<InlinePlayground :input="'p-2.5\np-3.2'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
 
 ### Sizes
 
-```css
-// ${size} must end up with rem|em|px|vh|vw|ch|ex
-p-${size} -> padding: ${size};
-
-p-3px -> padding: 3px;
-p-4rem -> padding: 4rem;
+```less
+// {size} should be end with rem|em|px|vh|vw|ch|ex
+p-{size} -> padding: {size};
 ```
+
+<InlinePlayground :input="'p-3px\np-4rem'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+
 
 ### Fractions
 
-```css
-w-${fraction} -> width: ${fraction -> precent};
-
-w-9/12 -> width: 75%;
+```less
+w-{fraction} -> width: {fraction -> precent};
 ```
+
+<InlinePlayground :input="'w-9/12'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+
 
 ### Colors
 
 ```css
-bg-${color} -> background-color: rgba(...);
+text-{color} -> color: rgba(...);
 
-bg-gray-300 -> background-color: rgba(209, 213, 219, var(--tw-bg-opacity);
-
-bg-hex-${hex} -> background-color: rgba(...);
-
-bg-hex-1c1c1e -> background-color: rgba(28, 28, 30, var(--tw-bg-opacity));
+bg-hex-{hex} -> background-color: rgba(...);
 ```
+
+<InlinePlayground :input="'text-yellow-400\nbg-hex-6dd1c7'" tab="css" :showTabs="false" :showMode="false" fixed="px-4 py-2"/>
 
 ### Variables
 
-```css
-bg-$${variableName}
+You can even pass variable names, which is very useful in combination with css variables.
 
-.bg-$test-variable {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--test-variable), var(--tw-bg-opacity));
-}
+```css
+bg-${variableName}
 ```
 
-::: tip How does it work? 🤔
-Learn more about what makes this possible in the [Modes page](/guide/modes)
-:::
-
-## And more!
-
-<kbd>[svelte-windicss-preprocess][svelte]</kbd> adds [additional features][svelte].
+<InlinePlayground :input="'bg-$test-variable'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
