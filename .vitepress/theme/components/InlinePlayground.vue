@@ -266,7 +266,7 @@ onMounted(async() => {
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 .tabs .tab {
   @apply px-3 py-1 mx-1 cursor-pointer bg-gray-50 dark:bg-true-gray-800 text-gray-400 opacity-75
     border-t border-l border-r rounded-tr rounded-tl bc;

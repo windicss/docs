@@ -1,47 +1,21 @@
 <template>
-  <footer v-if="$frontmatter.footer" class="footer">
+  <footer v-if="$frontmatter.footer" class="mx-auto max-w-960px md:px-6">
     <div class="container">
-      <p class="text">
+      <p class="m-0 text-center leading-6 text-0.9rem text-$c-text-light">
         {{ $frontmatter.footer }}
       </p>
     </div>
   </footer>
 </template>
 
-<style scoped>
-.footer {
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-@media (min-width: 720px) {
-  .footer {
-    padding: 0 1.5rem;
-  }
-}
-
+<style scoped lang="postcss">
 .container {
   padding: 2rem 1.5rem 2.25rem;
 }
 
-/*
-.home-hero + .footer .container,
-.home-features + .footer .container,
-.home-content + .footer .container {
-  border-top: 1px solid var(--c-divider);
-} */
-
-@media (min-width: 420px) {
+@screen xs {
   .container {
     padding: 3rem 1.5rem 3.25rem;
   }
-}
-
-.text {
-  margin: 0;
-  text-align: center;
-  line-height: 1.4;
-  font-size: 0.9rem;
-  color: var(--c-text-light);
 }
 </style>

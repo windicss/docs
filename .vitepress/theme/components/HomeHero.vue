@@ -1,17 +1,17 @@
 <template>
   <header v-if="showHero" class="home-hero">
-    <figure v-if="$frontmatter.heroImage" class="figure">
+    <figure v-if="$frontmatter.heroImage" class="px-6">
       <img
-        class="image"
+        class="block w-auto mx-auto max-w-full max-h-120px"
         :src="$withBase($frontmatter.heroImage)"
         :alt="$frontmatter.heroAlt"
       >
     </figure>
 
-    <h1 v-if="hasHeroText" id="main-title" class="title">
+    <h1 v-if="hasHeroText" id="main-title" class="text-2xl xs:(text-5xl leading-16) md:(mt-8)">
       {{ heroText }}
     </h1>
-    <p v-if="hasTagline" class="description">
+    <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-5 text-$c-text-light xs:(text-2xl)">
       {{ tagline }}
     </p>
 
@@ -74,49 +74,6 @@ const hasAltAction = computed(
 @media (min-width: 720px) {
   .home-hero {
     margin: 4rem 0 4.25rem;
-  }
-}
-
-.figure {
-  padding: 0 1.5rem;
-}
-
-.image {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 120px;
-}
-
-.title {
-  @apply text-2xl;
-}
-
-@media (min-width: 420px) {
-  .title {
-    @apply text-5xl leading-16;
-  }
-}
-
-@media (min-width: 720px) {
-  .title {
-    margin-top: 2rem;
-  }
-}
-
-.description {
-  margin: 0;
-  margin-top: 0.25rem;
-  line-height: 1.3;
-  font-size: 1.2rem;
-  color: var(--c-text-light);
-}
-
-@media (min-width: 420px) {
-  .description {
-    line-height: 1.2;
-    font-size: 1.6rem;
   }
 }
 
