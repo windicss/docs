@@ -10,6 +10,16 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+  @apply bg-$c-scrollbar-bg;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-$c-scrollbar rounded-full;
+}
+
 body {
   margin: 0;
   width: 100%;
@@ -164,7 +174,7 @@ li > ol {
 }
 
 table {
-  width: 100%;
+  width: auto;
   border-collapse: collapse;
   margin: 1rem 0;
   overflow-x: auto;
