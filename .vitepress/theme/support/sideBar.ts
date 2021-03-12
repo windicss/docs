@@ -1,5 +1,5 @@
 import { DefaultTheme } from '../config'
-import { isArray, ensureStartingSlash, removeExtention } from '../utils'
+import { isArray, ensureStartingSlash, removeExtension } from '../utils'
 
 export function isSideBarConfig(
   sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig,
@@ -52,7 +52,7 @@ export function getFlatSideBarLinks(
 ): DefaultTheme.SideBarLink[] {
   return sidebar.reduce<DefaultTheme.SideBarLink[]>((links, item) => {
     if (item.link)
-      links.push({ text: item.text, link: removeExtention(item.link) })
+      links.push({ text: item.text, link: removeExtension(item.link) })
 
     if (isSideBarGroup(item))
       links = [...links, ...getFlatSideBarLinks(item.children)]
