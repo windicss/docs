@@ -1,9 +1,9 @@
 <template>
   <div class="nav-dropdown-link-item">
     <a class="item" v-bind="linkProps">
-      <span class="arrow" />
-      <span class="text">{{ item.text }}</span>
-      <span class="icon"><OutboundLink v-if="isExternal" /></span>
+      <!-- <span class="arrow" /> -->
+      <span class="text">{{ item.text }} <OutboundLink v-if="isExternal" /></span>
+      <!-- <span class="icon"><OutboundLink v-if="isExternal" /></span> -->
     </a>
   </div>
 </template>
@@ -36,7 +36,7 @@ const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
 
 @media (min-width: 720px) {
   .item {
-    padding: 0 24px 0 12px;
+    padding: 0 12px;
     line-height: 32px;
     font-size: 0.85rem;
     font-weight: 500;
