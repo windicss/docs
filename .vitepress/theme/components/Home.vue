@@ -23,7 +23,7 @@ import HomeFooter from './HomeFooter.vue'
   @apply max-w-960px mx-auto py-6;
 }
 
-@media (max-width: 720px) {
+@screen md {
   .home-content {
     @apply max-w-392px p-0;
   }
