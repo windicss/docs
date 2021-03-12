@@ -9,7 +9,7 @@ They are similar to the ones from Tailwind CSS, but adapted to the interface of 
 ### Utilities
 
 | Class       |  Body font size |
-| ----------- | --------------: |
+| :---------- | :-------------- |
 | `prose-sm`  | 0.875rem (14px) |
 | `prose`     |     1rem (16px) |
 | `prose-lg`  | 1.125rem (18px) |
@@ -17,7 +17,7 @@ They are similar to the ones from Tailwind CSS, but adapted to the interface of 
 | `prose-2xl` |   1.5rem (24px) |
 
 | Class          | Link color   |
-| -------------- | ------------ |
+| :------------- | :----------- |
 | `prose-red`    | `red.600`    |
 | `prose-yellow` | `yellow.600` |
 | `prose-green`  | `green.600`  |
