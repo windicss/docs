@@ -5,11 +5,15 @@
         class="image"
         :src="$withBase($frontmatter.heroImage)"
         :alt="$frontmatter.heroAlt"
-      />
+      >
     </figure>
 
-    <h1 v-if="hasHeroText" id="main-title" class="title">{{ heroText }}</h1>
-    <p v-if="hasTagline" class="description">{{ tagline }}</p>
+    <h1 v-if="hasHeroText" id="main-title" class="title">
+      {{ heroText }}
+    </h1>
+    <p v-if="hasTagline" class="description">
+      {{ tagline }}
+    </p>
 
     <NavLink
       v-if="hasAction"
@@ -35,10 +39,10 @@ const data = useFrontmatter()
 
 const showHero = computed(() => {
   return (
-    data.value.heroImage ||
-    hasHeroText.value ||
-    hasTagline.value ||
-    hasAction.value
+    data.value.heroImage
+    || hasHeroText.value
+    || hasTagline.value
+    || hasAction.value
   )
 })
 
@@ -50,7 +54,7 @@ const tagline = computed(() => data.value.tagline || site.value.description)
 
 const hasAction = computed(() => data.value.actionLink && data.value.actionText)
 const hasAltAction = computed(
-  () => data.value.altActionLink && data.value.altActionText
+  () => data.value.altActionLink && data.value.altActionText,
 )
 </script>
 

@@ -6,5 +6,5 @@ export const metaData = {
   title: 'Windi CSS 🌬',
   description: 'Next generation Tailwind CSS compiler.',
   site,
-  image: `${site}/assets/banner.png`
+  image: `${site}/assets/banner.png`,
 }

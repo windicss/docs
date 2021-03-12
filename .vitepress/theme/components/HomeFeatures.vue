@@ -8,8 +8,12 @@
             :key="index"
             class="feature"
           >
-            <h2 class="title" v-if="feature.title">{{ feature.title }}</h2>
-            <p class="details" v-if="feature.details">{{ feature.details }}</p>
+            <h2 v-if="feature.title" class="title">
+              {{ feature.title }}
+            </h2>
+            <p v-if="feature.details" class="details">
+              {{ feature.details }}
+            </p>
           </section>
         </div>
       </div>

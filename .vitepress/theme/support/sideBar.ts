@@ -2,13 +2,13 @@ import { DefaultTheme } from '../config'
 import { isArray, ensureStartingSlash, removeExtention } from '../utils'
 
 export function isSideBarConfig(
-  sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig
+  sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig,
 ): sidebar is DefaultTheme.SideBarConfig {
   return sidebar === false || sidebar === 'auto' || isArray(sidebar)
 }
 
 export function isSideBarGroup(
-  item: DefaultTheme.SideBarItem
+  item: DefaultTheme.SideBarItem,
 ): item is DefaultTheme.SideBarGroup {
   return (item as DefaultTheme.SideBarGroup).children !== undefined
 }
@@ -25,19 +25,17 @@ export function isSideBarEmpty(sidebar?: DefaultTheme.SideBarConfig): boolean {
  */
 export function getSideBarConfig(
   sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig,
-  path: string
+  path: string,
 ): DefaultTheme.SideBarConfig {
-  if (isSideBarConfig(sidebar)) {
+  if (isSideBarConfig(sidebar))
     return sidebar
-  }
 
   path = ensureStartingSlash(path)
 
-  for (const dir in sidebar) {
+  for (const dir of Object.keys(sidebar)) {
     // make sure the multi sidebar key starts with slash too
-    if (path.startsWith(ensureStartingSlash(dir))) {
+    if (path.startsWith(ensureStartingSlash(dir)))
       return sidebar[dir]
-    }
   }
 
   return 'auto'
@@ -50,16 +48,14 @@ export function getSideBarConfig(
  * link contains it.
  */
 export function getFlatSideBarLinks(
-  sidebar: DefaultTheme.SideBarItem[]
+  sidebar: DefaultTheme.SideBarItem[],
 ): DefaultTheme.SideBarLink[] {
   return sidebar.reduce<DefaultTheme.SideBarLink[]>((links, item) => {
-    if (item.link) {
+    if (item.link)
       links.push({ text: item.text, link: removeExtention(item.link) })
-    }
 
-    if (isSideBarGroup(item)) {
+    if (isSideBarGroup(item))
       links = [...links, ...getFlatSideBarLinks(item.children)]
-    }
 
     return links
   }, [])

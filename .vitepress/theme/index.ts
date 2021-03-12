@@ -15,7 +15,7 @@ import NotFound from './NotFound.vue'
 const theme: Theme = {
   Layout,
   NotFound,
-  enhanceApp ({ app }) {},
+  enhanceApp({ app }) {},
 }
 
 export default theme

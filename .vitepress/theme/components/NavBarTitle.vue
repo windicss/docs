@@ -9,7 +9,7 @@
       class="logo"
       :src="$withBase($themeConfig.logo)"
       alt="Logo"
-    />
+    >
     {{ $site.title }}
   </a>
 </template>

@@ -31,7 +31,7 @@ watch(
   () => route.path,
   () => {
     open.value = false
-  }
+  },
 )
 
 function toggle() {

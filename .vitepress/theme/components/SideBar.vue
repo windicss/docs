@@ -16,7 +16,7 @@ import NavLinks from './NavLinks.vue'
 import SideBarLinks from './SideBarLinks.vue'
 
 defineProps({
-  open: { type: Boolean, required: true }
+  open: { type: Boolean, required: true },
 })
 </script>
 

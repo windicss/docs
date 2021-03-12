@@ -10,15 +10,13 @@ export function useLocaleLinks() {
     const theme = site.value.themeConfig as DefaultTheme.Config
     const locales = theme.locales
 
-    if (!locales) {
+    if (!locales)
       return null
-    }
 
     const localeKeys = Object.keys(locales)
 
-    if (localeKeys.length <= 1) {
+    if (localeKeys.length <= 1)
       return null
-    }
 
     // handle site base
     const siteBase = inBrowser ? site.value.base : '/'
@@ -43,11 +41,11 @@ export function useLocaleLinks() {
 
       return {
         text: locales[v].label,
-        link: `${localePath}${currentContentPath}`
+        link: `${localePath}${currentContentPath}`,
       }
     })
 
-    const currentLangKey = currentLangBase ? currentLangBase : '/'
+    const currentLangKey = currentLangBase || '/'
 
     const selectText = locales[currentLangKey].selectText
       ? locales[currentLangKey].selectText
@@ -55,7 +53,7 @@ export function useLocaleLinks() {
 
     return {
       text: selectText,
-      items: candidates
+      items: candidates,
     } as DefaultTheme.NavItemWithChildren
   })
 }

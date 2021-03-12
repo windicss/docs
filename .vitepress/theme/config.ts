@@ -1,144 +1,129 @@
-export interface Config {
-  logo?: string
-  nav?: NavItem[] | false
-  sidebar?: SideBarConfig | MultiSideBarConfig
+/* eslint-disable no-use-before-define */
+/* eslint-disable @typescript-eslint/no-namespace */
 
-  /**
-   * GitHub repository following the format <user>/<project>.
-   *
-   * @example `"vuejs/vue-next"`
-   */
-  repo?: string
+export namespace DefaultTheme {
+  export interface Config {
+    logo?: string
+    nav?: NavItem[] | false
+    sidebar?: SideBarConfig | MultiSideBarConfig
 
-  /**
-   * Customize the header label. Defaults to GitHub/Gitlab/Bitbucket
-   * depending on the provided repo.
-   *
-   * @example `"Contribute!"`
-   */
-  repoLabel?: string
+    /**
+     * GitHub repository following the format <user>/<project>.
+     *
+     * @example `"vuejs/vue-next"`
+     */
+    repo?: string
 
-  /**
-   * If your docs are in a different repository from your main project.
-   *
-   * @example `"vuejs/docs-next"`
-   */
-  docsRepo?: string
+    /**
+     * Customize the header label. Defaults to GitHub/Gitlab/Bitbucket
+     * depending on the provided repo.
+     *
+     * @example `"Contribute!"`
+     */
+    repoLabel?: string
 
-  /**
-   * If your docs are not at the root of the repo.
-   *
-   * @example `"docs"`
-   */
-  docsDir?: string
+    /**
+     * If your docs are in a different repository from your main project.
+     *
+     * @example `"vuejs/docs-next"`
+     */
+    docsRepo?: string
 
-  /**
-   * If your docs are in a different branch. Defaults to `master`.
-   *
-   * @example `"next"`
-   */
-  docsBranch?: string
+    /**
+     * If your docs are not at the root of the repo.
+     *
+     * @example `"docs"`
+     */
+    docsDir?: string
 
-  /**
-   * Enable links to edit pages at the bottom of the page.
-   */
-  editLinks?: boolean
+    /**
+     * If your docs are in a different branch. Defaults to `main`.
+     *
+     * @example `"next"`
+     */
+    docsBranch?: string
 
-  /**
-   * Custom text for edit link. Defaults to "Edit this page".
-   */
-  editLinkText?: string
+    /**
+     * Enable links to edit pages at the bottom of the page.
+     */
+    editLinks?: boolean
 
-  /**
-   * Show last updated time at the bottom of the page. Defaults to `false`.
-   * If given a string, it will be displayed as a prefix (default value:
-   * "Last Updated").
-   */
-  lastUpdated?: string | boolean
+    /**
+     * Custom text for edit link. Defaults to "Edit this page".
+     */
+    editLinkText?: string
 
-  prevLinks?: boolean
-  nextLinks?: boolean
+    /**
+     * Show last updated time at the bottom of the page. Defaults to `false`.
+     * If given a string, it will be displayed as a prefix (default value:
+     * "Last Updated").
+     */
+    lastUpdated?: string | boolean
 
-  locales?: Record<string, LocaleConfig & Omit<Config, 'locales'>>
+    prevLinks?: boolean
+    nextLinks?: boolean
 
-  algolia?: AlgoliaSearchOptions
-
-  carbonAds?: {
-    carbon: string
-    custom?: string
-    placement: string
+    locales?: Record<string, LocaleConfig & Omit<Config, 'locales'>>
   }
-}
 
-// navbar --------------------------------------------------------------------
+  // navbar --------------------------------------------------------------------
 
-export type NavItem = NavItemWithLink | NavItemWithChildren
+  export type NavItem = NavItemWithLink | NavItemWithChildren
 
-export interface NavItemBase {
-  text: string
-  target?: string
-  rel?: string
-  ariaLabel?: string
-  activeMatch?: string
-}
+  export interface NavItemBase {
+    text: string
+    target?: string
+    rel?: string
+    ariaLabel?: string
+    activeMatch?: string
+  }
 
-export interface NavItemWithLink extends NavItemBase {
-  link: string
-}
+  export interface NavItemWithLink extends NavItemBase {
+    link: string
+  }
 
-export interface NavItemWithChildren extends NavItemBase {
-  items: NavItemWithLink[]
-}
+  export interface NavItemWithChildren extends NavItemBase {
+    items: NavItemWithLink[]
+  }
 
-// sidebar -------------------------------------------------------------------
+  // sidebar -------------------------------------------------------------------
 
-export type SideBarConfig = SideBarItem[] | 'auto' | false
+  export type SideBarConfig = SideBarItem[] | 'auto' | false
 
-export interface MultiSideBarConfig {
-  [path: string]: SideBarConfig
-}
+  export interface MultiSideBarConfig {
+    [path: string]: SideBarConfig
+  }
 
-export type SideBarItem = SideBarLink | SideBarGroup
+  export type SideBarItem = SideBarLink | SideBarGroup
 
-export interface SideBarLink {
-  text: string
-  link: string
-}
+  export interface SideBarLink {
+    text: string
+    link: string
+  }
 
-export interface SideBarGroup {
-  text: string
-  link?: string
+  export interface SideBarGroup {
+    text: string
+    link?: string
 
-  /**
-   * @default false
-   */
-  collapsable?: boolean
+    /**
+     * @default false
+     */
+    collapsable?: boolean
 
-  children: SideBarItem[]
-}
+    children: SideBarItem[]
+  }
 
-// algolia  ------------------------------------------------------------------
-// partially copied from @docsearch/react/dist/esm/DocSearch.d.ts
-export interface AlgoliaSearchOptions {
-  appId?: string
-  apiKey: string
-  indexName: string
-  placeholder?: string
-  searchParameters?: any
-  disableUserPersonalization?: boolean
-  initialQuery?: string
-}
+  // locales -------------------------------------------------------------------
 
-// locales -------------------------------------------------------------------
+  export interface LocaleConfig {
+    /**
+     * Text for the language dropdown.
+     */
+    selectText?: string
 
-export interface LocaleConfig {
-  /**
-   * Text for the language dropdown.
-   */
-  selectText?: string
-
-  /**
-   * Label for this locale in the language dropdown.
-   */
-  label?: string
+    /**
+     * Label for this locale in the language dropdown.
+     */
+    label?: string
+  }
 }

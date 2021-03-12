@@ -16,10 +16,11 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
     let active = false
     if (item.value.activeMatch) {
       active = new RegExp(item.value.activeMatch).test(routePath)
-    } else {
+    }
+    else {
       const itemPath = normalizePath(withBase(item.value.link))
-      active =
-        itemPath === '/'
+      active
+        = itemPath === '/'
           ? itemPath === routePath
           : routePath.startsWith(itemPath)
     }
@@ -27,18 +28,18 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
     return {
       class: {
         active,
-        isExternal
+        isExternal,
       },
       href: isExternal ? item.value.link : withBase(item.value.link),
-      target: item.value.target || isExternal ? `_blank` : null,
-      rel: item.value.rel || isExternal ? `noopener noreferrer` : null,
-      'aria-label': item.value.ariaLabel
+      target: item.value.target || isExternal ? '_blank' : null,
+      rel: item.value.rel || isExternal ? 'noopener noreferrer' : null,
+      'aria-label': item.value.ariaLabel,
     }
   })
 
   return {
     props,
-    isExternal
+    isExternal,
   }
 }
 

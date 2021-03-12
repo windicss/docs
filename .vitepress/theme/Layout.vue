@@ -35,30 +35,12 @@
 
     <Page v-else>
       <template #top>
-        <slot name="page-top-ads">
-          <div
-            id="ads-container"
-            v-if="theme.carbonAds && theme.carbonAds.carbon"
-          >
-            <CarbonAds
-              :key="'carbon' + page.relativePath"
-              :code="theme.carbonAds.carbon"
-              :placement="theme.carbonAds.placement"
-            />
-          </div>
-        </slot>
+        <slot name="page-top-ads" />
         <slot name="page-top" />
       </template>
       <template #bottom>
         <slot name="page-bottom" />
-        <slot name="page-bottom-ads">
-          <BuySellAds
-            v-if="theme.carbonAds && theme.carbonAds.custom"
-            :key="'custom' + page.relativePath"
-            :code="theme.carbonAds.custom"
-            :placement="theme.carbonAds.placement"
-          />
-        </slot>
+        <slot name="page-bottom-ads" />
       </template>
     </Page>
   </div>
@@ -71,8 +53,8 @@ import { ref, computed, watch, defineAsyncComponent } from 'vue'
 import {
   useRoute,
   useSiteData,
-  usePageData,
-  useSiteDataByRoute
+  // usePageData,
+  useSiteDataByRoute,
 } from 'vitepress'
 import { isSideBarEmpty, getSideBarConfig } from './support/sideBar'
 import type { DefaultTheme } from './config'
@@ -86,12 +68,8 @@ const Home = defineAsyncComponent(() => import('./components/Home.vue'))
 
 const NoopComponent = () => null
 
-const CarbonAds = __CARBON__
-  ? defineAsyncComponent(() => import('./components/CarbonAds.vue'))
-  : NoopComponent
-const BuySellAds = __BSA__
-  ? defineAsyncComponent(() => import('./components/BuySellAds.vue'))
-  : NoopComponent
+// @ts-ignore
+// eslint-disable-next-line no-undef
 const AlgoliaSearchBox = __ALGOLIA__
   ? defineAsyncComponent(() => import('./components/AlgoliaSearchBox.vue'))
   : NoopComponent
@@ -101,7 +79,7 @@ const route = useRoute()
 const siteData = useSiteData<DefaultTheme.Config>()
 const siteRouteData = useSiteDataByRoute()
 const theme = computed(() => siteData.value.themeConfig)
-const page = usePageData()
+// const page = usePageData()
 
 // custom layout
 const isCustomLayout = computed(() => !!route.data.frontmatter.customLayout)
@@ -112,14 +90,14 @@ const enableHome = computed(() => !!route.data.frontmatter.home)
 const showNavbar = computed(() => {
   const { themeConfig } = siteRouteData.value
   const { frontmatter } = route.data
-  if (frontmatter.navbar === false || themeConfig.navbar === false) {
+  if (frontmatter.navbar === false || themeConfig.navbar === false)
     return false
-  }
+
   return (
-    siteData.value.title ||
-    themeConfig.logo ||
-    themeConfig.repo ||
-    themeConfig.nav
+    siteData.value.title
+    || themeConfig.logo
+    || themeConfig.repo
+    || themeConfig.nav
   )
 })
 
@@ -129,14 +107,13 @@ const openSideBar = ref(false)
 const showSidebar = computed(() => {
   const { frontmatter } = route.data
 
-  if (frontmatter.home || frontmatter.sidebar === false) {
+  if (frontmatter.home || frontmatter.sidebar === false)
     return false
-  }
 
   const { themeConfig } = siteRouteData.value
 
   return !isSideBarEmpty(
-    getSideBarConfig(themeConfig.sidebar, route.data.relativePath)
+    getSideBarConfig(themeConfig.sidebar, route.data.relativePath),
   )
 })
 
@@ -156,8 +133,8 @@ const pageClasses = computed(() => {
     {
       'no-navbar': !showNavbar.value,
       'sidebar-open': openSideBar.value,
-      'no-sidebar': !showSidebar.value
-    }
+      'no-sidebar': !showSidebar.value,
+    },
   ]
 })
 </script>

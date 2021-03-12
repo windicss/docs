@@ -4,7 +4,6 @@ import { metaData } from './constants'
 import head from './head'
 import themeConfig from './theme'
 
-
 const config: UserConfig<ThemeConfig> = {
   title: 'Windi CSS',
   description: metaData.description,
