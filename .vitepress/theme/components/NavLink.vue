@@ -1,7 +1,7 @@
 <template>
   <div class="nav-link">
     <a class="item" v-bind="linkProps">
-      {{ item.text }} <OutboundLink v-if="isExternal" />
+      {{ item.text }} <uil-external-link-alt v-if="isExternal" class="ml-1 text-xs" />
     </a>
   </div>
 </template>
@@ -10,7 +10,6 @@
 import { defineProps, toRefs } from 'vue'
 import type { DefaultTheme } from '../config'
 import { useNavLink } from '../composables/navLink'
-import OutboundLink from './icons/OutboundLink.vue'
 
 const props = defineProps<{
   item: DefaultTheme.NavItemWithLink
@@ -21,15 +20,15 @@ const propsRefs = toRefs(props)
 const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .item {
-  display: block;
   padding: 0 1.5rem;
   line-height: 36px;
   font-size: 1rem;
   font-weight: 600;
   color: var(--c-text);
   white-space: nowrap;
+  @apply inline-flex items-center;
 }
 
 .item:hover,
