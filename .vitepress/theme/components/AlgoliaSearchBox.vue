@@ -1,5 +1,5 @@
 <template>
-  <div class="algolia-search-box" id="docsearch" />
+  <div id="docsearch" class="algolia-search-box" />
 </template>
 
 <script setup lang="ts">
@@ -7,8 +7,8 @@ import '@docsearch/css/dist/style.css'
 import { useRoute, useRouter } from 'vitepress'
 import { defineProps, getCurrentInstance, onMounted, watch } from 'vue'
 import docsearch from '@docsearch/js'
-import type { DefaultTheme } from '../config'
 import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
+import type { DefaultTheme } from '../config'
 
 const props = defineProps<{
   options: DefaultTheme.AlgoliaSearchOptions
@@ -22,21 +22,21 @@ watch(
   () => props.options,
   (value) => {
     update(value)
-  }
+  },
 )
 
 onMounted(() => {
-  console.log(props.options);
+  console.log(props.options)
   initialize(props.options)
 })
 
 function isSpecialClick(event: MouseEvent) {
   return (
-    event.button === 1 ||
-    event.altKey ||
-    event.ctrlKey ||
-    event.metaKey ||
-    event.shiftKey
+    event.button === 1
+    || event.altKey
+    || event.ctrlKey
+    || event.metaKey
+    || event.shiftKey
   )
 }
 
@@ -48,8 +48,8 @@ function getRelativePath(absoluteUrl: string) {
 
 function update(options: any) {
   if (vm && vm.vnode.el) {
-    vm.vnode.el.innerHTML =
-      '<div class="algolia-search-box" id="docsearch"></div>'
+    vm.vnode.el.innerHTML
+      = '<div class="algolia-search-box" id="docsearch"></div>'
     initialize(options)
   }
 }
@@ -64,30 +64,30 @@ function initialize(userOptions: any) {
       navigator: {
         navigate: ({ suggestionUrl }: { suggestionUrl: string }) => {
           const { pathname: hitPathname } = new URL(
-            window.location.origin + suggestionUrl
+            window.location.origin + suggestionUrl,
           )
 
           // Router doesn't handle same-page navigation so we use the native
           // browser location API for anchor navigation
-          if (route.path === hitPathname) {
+          if (route.path === hitPathname)
             window.location.assign(window.location.origin + suggestionUrl)
-          } else {
+
+          else
             router.go(suggestionUrl)
-          }
-        }
+        },
       },
 
       transformItems: (items: DocSearchHit[]) => {
         return items.map((item) => {
           return Object.assign({}, item, {
-            url: getRelativePath(item.url)
+            url: getRelativePath(item.url),
           })
         })
       },
 
       hitComponent: ({
         hit,
-        children
+        children,
       }: {
         hit: DocSearchHit
         children: any
@@ -104,30 +104,27 @@ function initialize(userOptions: any) {
           props: {
             href: hit.url,
             onClick: (event: MouseEvent) => {
-              if (isSpecialClick(event)) {
+              if (isSpecialClick(event))
                 return
-              }
 
               // we rely on the native link scrolling when user is already on
               // the right anchor because Router doesn't support duplicated
               // history entries
-              if (route.path === relativeHit) {
+              if (route.path === relativeHit)
                 return
-              }
 
               // if the hits goes to another page, we prevent the native link
               // behavior to leverage the Router loading feature
-              if (route.path !== relativeHit) {
+              if (route.path !== relativeHit)
                 event.preventDefault()
-              }
 
               router.go(relativeHit)
             },
-            children
-          }
+            children,
+          },
         }
-      }
-    })
+      },
+    }),
   )
 }
 </script>

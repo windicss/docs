@@ -9,7 +9,7 @@ defineProps({
 <template>
   <div class="custom-block tip quote">
     <p>
-      <slot/>
+      <slot />
     </p>
     <p v-if="author" class="text-right text-sm mb-2 -mt-6 font-semibold">
       —{{ author }}

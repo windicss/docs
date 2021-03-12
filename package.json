@@ -12,6 +12,7 @@
     "codemirror": "^5.59.4",
     "prismjs": "^1.23.0",
     "vue": "^3.0.7",
+    "vue-demi": "^0.7.1",
     "windicss": "^2.4.0"
   },
   "devDependencies": {

@@ -1,20 +1,21 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html */
-import { ref, watchEffect, defineProps, onMounted, watch, defineEmit, toRef } from 'vue'
+import { ref, watchEffect, defineProps, onMounted, watch } from 'vue'
 import Windi from 'windicss'
 import { StyleSheet } from 'windicss/utils/style'
 import Prism from 'prismjs'
 import type CodeMirror from 'codemirror'
+import { isDark } from '../composables/dark'
 import 'prismjs/components/prism-css'
 import 'codemirror/lib/codemirror.css'
 
 const props = defineProps({
-  classes: {
+  input: {
     type: String,
     // eslint-disable-next-line no-useless-escape
     default: 'px-1.2em py-2 bg-hex-0ea5e9 text-white rounded\nhover:\(shadow bg-opacity-85)',
   },
-  preview: {
+  showPreview: {
     default: true,
   },
   tab: {
@@ -25,8 +26,8 @@ const props = defineProps({
 const processor = new Windi()
 
 const frame = ref<HTMLIFrameElement | null>()
-const input = ref<HTMLTextAreaElement | null>()
-const classes = ref(props.classes)
+const textarea = ref<HTMLTextAreaElement | null>()
+const input = ref(props.input)
 
 const tab = ref(props.tab)
 
@@ -46,9 +47,11 @@ watch(style, () => {
 function updateIframe() {
   if (!frame.value?.contentWindow)
     return
+
   const fulll = preflight.extend(style.value)
   fulll.sort()
 
+  frame.value.contentWindow.document.querySelector('html')!.classList.toggle('dark', isDark.value)
   frame.value.contentWindow.postMessage(
     JSON.stringify({
       style: fulll.build(),
@@ -76,7 +79,7 @@ function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Edito
 }
 
 function interpret(cm: CodeMirror.Editor) {
-  const { styleSheet, success, ignored } = processor.interpret(classes.value.replace(/\n/g, ' '))
+  const { styleSheet, success, ignored } = processor.interpret(input.value.replace(/\n/g, ' '))
   acceped = success
 
   // clear previous
@@ -84,7 +87,7 @@ function interpret(cm: CodeMirror.Editor) {
 
   // hightlight for classes
   let start = 0
-  classes.value.split(/\s/g).forEach((i) => {
+  input.value.split(/\s/g).forEach((i) => {
     const end = start + i.length
     if (success.includes(i))
       mark(start, end, true, cm)
@@ -94,7 +97,7 @@ function interpret(cm: CodeMirror.Editor) {
   })
 
   // hightlight for groups
-  Array.from(classes.value.matchAll(/([\w:]+):\((.*?)\)/g))
+  Array.from(input.value.matchAll(/([\w:]+):\((.*?)\)/g))
     .forEach((match) => {
       const [full, prefix, itemStr] = match
       let start = match.index!
@@ -130,23 +133,24 @@ function interpret(cm: CodeMirror.Editor) {
 }
 
 watchEffect(updateIframe)
+watch(isDark, updateIframe)
 
 onMounted(async() => {
   if (typeof window === 'undefined')
     return
 
   const CodeMirror = await import('codemirror')
-  const cm = CodeMirror.fromTextArea(input.value!, {
+  const cm = CodeMirror.fromTextArea(textarea.value!, {
     scrollbarStyle: 'null',
     lineWrapping: true,
   })
 
   cm.on('change', () => {
-    classes.value = cm.getValue()
+    input.value = cm.getValue()
   })
 
   watch(
-    classes,
+    input,
     (v) => {
       if (v !== cm.getValue())
         cm.replaceRange(v, cm.posFromIndex(0), cm.posFromIndex(Infinity))
@@ -154,7 +158,7 @@ onMounted(async() => {
     { immediate: true },
   )
 
-  watch(classes, () => interpret(cm), { immediate: true })
+  watch(input, () => interpret(cm), { immediate: true })
 })
 </script>
 
@@ -166,6 +170,7 @@ onMounted(async() => {
     <div class="tab" :class="{active: tab === 'css'}" @click="tab = 'css'">
       <bx:bxl-css3 class="inline-block" />
     </div>
+    <div class="flex-auto" />
   </div>
   <div class="border bc rounded relative">
     <div
@@ -174,7 +179,7 @@ onMounted(async() => {
     >
       <div class="flex-auto flex flex-col overflow-auto">
         <textarea
-          ref="input"
+          ref="textarea"
           spellcheck="false"
           autocomplete="false"
           autocapitalize="false"
@@ -192,12 +197,9 @@ onMounted(async() => {
         </div>
       </div>
       <div
-        v-if="preview"
+        v-if="showPreview"
         class="p-2 border-l bc"
       >
-        <div class="ml-1 mb-2 opacity-50 text-sm">
-          Preview
-        </div>
         <iframe
           ref="frame"
           src="/__playground.html"
@@ -221,6 +223,6 @@ onMounted(async() => {
 }
 
 .CodeMirror {
-  @apply px-3 py-2 h-7em bg-transparent;
+  @apply px-3 py-2 h-auto bg-transparent;
 }
 </style>

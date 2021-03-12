@@ -7,7 +7,6 @@ export default defineConfig({
   plugins: [
     Components({
       dirs: [
-        'src/components',
         '.vitepress/theme/components',
       ],
       customLoaderMatcher: id => id.endsWith('.md'),
@@ -20,10 +19,19 @@ export default defineConfig({
     Icons(),
     WindiCSS({
       scan: {
-        dirs: ['.vitepress', 'src'],
+        dirs: ['.vitepress'],
         include: ['index.md'],
         fileExtensions: ['vue'],
       },
     }),
   ],
+  optimizeDeps: {
+    include: [
+      'vue',
+      '@vueuse/core',
+    ],
+    exclude: [
+      'vue-demi',
+    ],
+  },
 })
