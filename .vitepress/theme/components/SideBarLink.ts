@@ -1,6 +1,6 @@
 import { FunctionalComponent, h, VNode } from 'vue'
 import { useRoute, useSiteData } from 'vitepress'
-import { Header } from '/@types/shared'
+import { Header } from '../types/shared'
 import { DefaultTheme } from '../config'
 import { joinUrl, isActive } from '../utils'
 

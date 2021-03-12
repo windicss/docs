@@ -25,8 +25,8 @@ export function useActiveSidebarLinks() {
   }
 
   function activateLink(hash: string | null): void {
-    deactiveLink(activeLink)
-    deactiveLink(rootActiveLink)
+    deactivateLink(activeLink)
+    deactivateLink(rootActiveLink)
 
     activeLink = document.querySelector(`.sidebar a[href="${hash}"]`)
 
@@ -47,7 +47,7 @@ export function useActiveSidebarLinks() {
     }
   }
 
-  function deactiveLink(link: HTMLAnchorElement | null): void {
+  function deactivateLink(link: HTMLAnchorElement | null): void {
     link && link.classList.remove('active')
   }
 

@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useSiteDataByRoute, usePageData } from 'vitepress'
-import { isArray, ensureStartingSlash, removeExtention } from '../utils'
+import { isArray, ensureStartingSlash, removeExtension } from '../utils'
 import { getSideBarConfig, getFlatSideBarLinks } from '../support/sideBar'
 
 export function useNextAndPrevLinks() {
@@ -8,7 +8,7 @@ export function useNextAndPrevLinks() {
   const page = usePageData()
 
   const path = computed(() => {
-    return removeExtention(ensureStartingSlash(page.value.relativePath))
+    return removeExtension(ensureStartingSlash(page.value.relativePath))
   })
 
   const candidates = computed(() => {
