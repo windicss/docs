@@ -150,7 +150,7 @@ const hasAltAction = computed(
 }
 
 .action.alt :deep(.item) {
-  background-color: #fff;
+  background-color: transparent;
   color: var(--c-brand);
 }
 
