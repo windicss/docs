@@ -31,18 +31,8 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .last-updated {
-  display: inline-block;
-  margin: 0;
-  line-height: 1.4;
-  font-size: 0.9rem;
-  color: var(--c-text-light);
-}
-
-@media (min-width: 960px) {
-  .last-updated {
-    font-size: 1rem;
-  }
+  @apply inline-block m-0 text-0.9rem leading-1.4rem text-$c-text-light lg:(text-base leading-1.4rem);
 }
 </style>

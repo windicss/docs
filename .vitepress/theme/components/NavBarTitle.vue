@@ -1,12 +1,12 @@
 <template>
   <a
-    class="nav-bar-title inline-flex items-center"
+    class="nav-bar-title"
     :href="$withBase($localePath)"
     :aria-label="`${$siteByRoute.title}, back to home`"
   >
     <img
       v-if="$themeConfig.logo"
-      class="logo"
+      class="mr-3 align-bottom h-30px"
       :src="$withBase($themeConfig.logo)"
       alt="Logo"
     >
@@ -14,20 +14,11 @@
   </a>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 .nav-bar-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--c-text);
-}
-
-.nav-bar-title:hover {
-  text-decoration: none;
-}
-
-.logo {
-  margin-right: 0.75rem;
-  vertical-align: bottom;
-  height: 30px;
+  @apply
+    text-1.3rem font-semibold text-$c-text
+    inline-flex items-center
+    hover:no-underline;
 }
 </style>

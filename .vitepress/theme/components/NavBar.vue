@@ -6,20 +6,15 @@
 
     <div class="flex-grow" />
 
-    <div class="nav">
+    <div class="hidden md:flex px-3">
       <NavLinks />
     </div>
 
-    <div class="nav-icons">
-      <div v-if="repo" class="item">
-        <a class="icon-button" :href="repo.link" target="_blank">
-          <carbon-logo-github />
-        </a>
-      </div>
-
-      <div class="item">
-        <dark-mode-switch />
-      </div>
+    <div class="nav-icons space-x-3">
+      <a v-if="repo" class="icon-button" :href="repo.link" target="_blank">
+        <carbon-logo-github />
+      </a>
+      <dark-mode-switch />
     </div>
 
     <slot name="search" />
@@ -38,59 +33,22 @@ const repo = useRepo()
 defineEmit(['toggle'])
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .nav-bar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: var(--z-index-navbar);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--c-divider);
-  padding: 0.7rem 1.5rem 0.7rem 4rem;
-  height: var(--header-height);
-  background-color: var(--c-bg);
+  @apply
+    fixed top-0 inset-x-0 z-$z-index-navbar
+    flex space-between align-center
+    border-b-1px border-$c-divider
+    py-0.7rem pr-6 pl-16
+    h-$header-height bg-$c-bg
+    md:(py-0.7rem pr-0.8rem pl-6);
 }
 
 .nav-bar.root {
-  border-color: transparent;
-  background-color: var(--c-bg-semi);
-}
-
-@media (min-width: 720px) {
-  .nav-bar {
-    padding: 0.7rem 0.8rem 0.7rem 1.5rem;
-  }
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-.nav {
-  display: none;
-}
-
-@media (min-width: 720px) {
-  .nav {
-    display: flex;
-  }
-  .navbar__dark-mode {
-    display: none;
-  }
+  @apply border-transparent bg-$c-bg-semi;
 }
 
 .nav-icons {
-  display: flex;
-  padding: 2px 0 0;
-  align-items: center;
-  border-bottom: 0;
-  margin-left: 12px;
-}
-
-.nav-icons .item {
-  padding-left: 12px;
+  @apply flex pt-2px items-center border-b-0 ml-3;
 }
 </style>

@@ -71,35 +71,19 @@ const hasAltAction = computed(
 }
 
 .action :deep(.item) {
-  @apply rounded-full;
-  display: inline-block;
-  padding: 0 20px;
-  line-height: 44px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: var(--c-brand);
-  border: 2px solid var(--c-brand);
-  transition: background-color 0.1s ease;
+  @apply rounded-full
+    inline-block px-5
+    text-base font-medium text-white leading-11
+    bg-$c-brand border-2px border-$c-brand transition-colors
+    xs:(text-xl leading-13 font-medium px-6);
 }
 
 .action.alt :deep(.item) {
-  background-color: transparent;
-  color: var(--c-brand);
+  @apply
+    bg-transparent text-$c-brand;
 }
 
 .action :deep(.item:hover) {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: var(--c-brand-light);
-}
-
-@media (min-width: 420px) {
-  .action :deep(.item) {
-    padding: 0 24px;
-    line-height: 52px;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
+  @apply no-underline text-white bg-$c-brand-light;
 }
 </style>
