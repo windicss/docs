@@ -1,5 +1,5 @@
 dependencies:
-  '@vueuse/core': 4.3.6_vue@3.0.7
+  '@vueuse/core': 4.4.0_vue@3.0.7
   codemirror: 5.59.4
   json5: 2.2.0
   prismjs: 1.23.0
@@ -713,23 +713,23 @@ packages:
   /@vue/shared/3.0.7:
     resolution:
       integrity: sha512-dn5FyfSc4ky424jH4FntiHno7Ss5yLkqKNmM/NXwANRnlkmqu74pnGetexDFVG5phMk9/FhwovUZCWGxsotVKg==
-  /@vueuse/core/4.3.6_vue@3.0.7:
+  /@vueuse/core/4.4.0_vue@3.0.7:
     dependencies:
-      '@vueuse/shared': 4.3.6_vue@3.0.7
+      '@vueuse/shared': 4.4.0_vue@3.0.7
       vue-demi: 0.7.2_vue@3.0.7
     dev: false
     peerDependencies:
       vue: '*'
     resolution:
-      integrity: sha512-XqfU/OIxHWq5Ii8pYLGyXADvY0Jbs4t9q3Nx5ItYNjtN9kCdZ1q+arwjqCgIyjCA25hfqdinZNtWjVXsheZUzQ==
-  /@vueuse/shared/4.3.6_vue@3.0.7:
+      integrity: sha512-9WAlh0OCYNxH+o6eDJ/uPY+ZU6er+31rkPNogYpn5xR+PfmspRqzqxQKIaZjEMy6YqwBvEes7mYOIAtx7rV81Q==
+  /@vueuse/shared/4.4.0_vue@3.0.7:
     dependencies:
       vue-demi: 0.7.2_vue@3.0.7
     dev: false
     peerDependencies:
       vue: '*'
     resolution:
-      integrity: sha512-sGowcpeVxilaV03wD7N7XL+LZBy0e2FGreYyCWWofVN96PSYPw/hyVrxmZiBrfKn6fFllKf+87wi1TTs4C6ZXg==
+      integrity: sha512-kt9jRtVTZmMLGugFqJnVfcPcp27wxi0cPcRAXebnlwwMA3KIcTdGAfZoI/reNH1/M4sjPDSyxt9hdlbpGSBq0w==
   /@windicss/plugin-utils/0.8.2:
     dependencies:
       fast-glob: 3.2.5
@@ -4261,7 +4261,7 @@ specifiers:
   '@types/codemirror': ^0.0.108
   '@types/node': ^14.14.34
   '@types/prismjs': ^1.16.3
-  '@vueuse/core': ^4.3.6
+  '@vueuse/core': ^4.4.0
   algoliasearch: ^4.8.6
   codemirror: ^5.59.4
   docsearch.js: ^2.6.3

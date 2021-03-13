@@ -2,9 +2,25 @@
 sidebar: false
 ---
 
-## Windi CSS Inline Playground (WIP)
+# Windi CSS Playground (WIP)
 
-<PlaygroundBorder />
+## Rounded
+
+<PlaygroundWithBox
+  size='3xl'
+  :sizes="['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '1/2', 'full']"
+  prefix='rounded'
+/>
+
+## Border
+
+<PlaygroundWithBox
+  size=''
+  mode='edges'
+  :sizes="['', '0', 1, 2, 3]"
+  prefix='border'
+  fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-4 w-30 h-30 text-transparent'
+/>
 
 <!-- 
 <InlinePlayground 
