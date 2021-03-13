@@ -8,7 +8,7 @@
 --c-bg-semi: rgba(255,255,255,0.8);
 --c-bg-secondary: #f3f5f7;
 
---c-scrollbar: theme('colors.gray.300');
+--c-scrollbar: theme('colors.gray.200');
 --c-scrollbar-bg: theme('colors.gray.100');
 
 --c-white: #ffffff;
@@ -73,8 +73,8 @@ html.dark {
 --c-bg-semi: rgba(17,17,17,0.8);
 --c-bg-secondary: #222;
 
---c-scrollbar: #000;
---c-scrollbar-bg: #111;
+--c-scrollbar: #333;
+--c-scrollbar-bg: #212121;
 
 --c-text: #f5f7fa;
 --c-text-light: #f9f9f9;
