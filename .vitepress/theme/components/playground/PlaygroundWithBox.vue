@@ -5,29 +5,29 @@ import { useVModels } from '@vueuse/core'
 const emit = defineEmit()
 const props = defineProps({
   directions: {
-    default: () => ['ALL']
+    default: () => ['ALL'],
   },
   size: {
-    default: ''
+    default: '',
   },
   sizes: {
-    default: () => ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '1/2', 'full']
+    default: () => ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '1/2', 'full'],
   },
   prefix: {
-    default: 'rounded'
+    default: 'rounded',
   },
   mode: {
-    default: 'all'
+    default: 'all',
   },
   fixed: {
-    default: 'bg-teal-500 m-4 w-30 h-30 text-transparent transition-all duration-300'
-  }
+    default: '',
+  },
 })
 
 const {
   directions,
   size,
-  prefix
+  prefix,
 } = useVModels(props, emit, { passive: true })
 
 const classes = computed(() => {
@@ -45,16 +45,22 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <SelectorBox v-model="directions" :mode="mode"/>
-  <div class="mt-1" />
-  <SelectorSize
-    v-model="size" 
-    :sizes="sizes"
-  />
+  <div class="flex gap-4">
+    <SelectorBox
+      v-model="directions"
+      class="flex-none"
+      :mode="mode"
+    />
+    <SelectorSize
+      v-model="size"
+      class="max-w-20em mt-auto"
+      :sizes="sizes"
+    />
+  </div>
   <div class="mt-4" />
-  <InlinePlayground 
-    :input="classes" 
+  <InlinePlayground
+    :input="classes"
     :fixed="fixed"
-    :showMode="true"
+    :show-mode="true"
   />
 </template>

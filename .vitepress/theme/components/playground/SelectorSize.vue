@@ -27,24 +27,30 @@ watch(() => props.modelValue, v => size.value = v)
 </script>
 
 <template>
-  <div class="selector">
+  <div class="selector flex flex-wrap gap-2">
     <div
       v-for="s of sizes"
       :key="s"
       class="item"
-      :class="{ active: has(s) }"
+      :class="{ active: has(s), default: !s }"
       @click="set(s)"
     >
-      {{ s || 'Normal' }}
+      {{ s || 'default' }}
     </div>
   </div>
 </template>
 
 <style scoped>
+.selector {
+  height: max-content;
+}
 .item {
-  @apply px-2 py-0.5 bg-gray-100 inline-block m-1 rounded text-sm cursor-pointer select-none;
+  height: max-content;
+  @apply px-2 py-0.5 inline-block rounded font-mono
+         border bc border-opacity-50 dark:border-opacity-50
+         text-sm cursor-pointer select-none;
 }
 .item.active {
-  @apply bg-light-blue-400 bg-opacity-10 text-light-blue-600;
+  @apply border-light-blue-500 text-light-blue-500;
 }
 </style>
