@@ -31,7 +31,14 @@ export default defineConfig({
   optimizeDeps: {
     include: [
       'vue',
+      'json5',
       '@vueuse/core',
+      'windicss',
+      'windicss/utils/style',
+      'prismjs',
+      'prismjs/components/prism-css', 
+      'codemirror',
+      'codemirror/mode/javascript/javascript'
     ],
     exclude: [
       'vue-demi',
