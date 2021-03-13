@@ -1,17 +1,19 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html */
 import { ref, watchEffect, defineProps, onMounted, watch, computed } from 'vue'
-import type { PropType } from 'vue'
-import Windi from 'windicss'
-import type { Config } from 'windicss/types/interfaces'
 import { StyleSheet } from 'windicss/utils/style'
-import Prism from 'prismjs'
 import { useClipboard } from '@vueuse/core'
-import type CodeMirror from 'codemirror'
+import Windi from 'windicss'
 import JSON5 from 'json5'
+import Prism from 'prismjs'
+
+import type { PropType } from 'vue'
+import type CodeMirror from 'codemirror'
+import type { Config } from 'windicss/types/interfaces'
+
 import { isDark } from '../composables/dark'
-import 'prismjs/components/prism-css'
 import { useCodeMirror } from '../composables/useCodeMirror'
+import 'prismjs/components/prism-css'
 
 const props = defineProps({
   input: {
@@ -79,10 +81,10 @@ const style = ref<StyleSheet>(new StyleSheet())
 const plainCSS = ref('')
 const highlighted = ref('')
 
-const { copy, copied } = useClipboard({ 
-  read: false, 
-  source: plainCSS, 
-  copiedDuring: 2000
+const { copy, copied } = useClipboard({
+  read: false,
+  source: plainCSS,
+  copiedDuring: 2000,
 })
 
 watch(style, () => {
@@ -112,7 +114,7 @@ function resizeIframe() {
     return
 
   frame.value.style.height = '0'
-  frame.value.style.height = `${frame.value.contentWindow.document.documentElement.scrollHeight}px`
+  frame.value.style.height = `${frame.value.contentWindow.document.documentElement.scrollHeight + 30}px`
 }
 
 function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Editor) {
@@ -264,13 +266,15 @@ onMounted(async() => {
           <div class="ml-1 p-2 pb-0 text-sm opacity-50 flex">
             <span>Config</span>
           </div>
-          <textarea
-            ref="textareaConfig"
-            spellcheck="false"
-            autocomplete="false"
-            autocapitalize="false"
-            class="bg-transparent outline-none"
-          />
+          <div class="max-h-20em overflow-y-auto">
+            <textarea
+              ref="textareaConfig"
+              spellcheck="false"
+              autocomplete="false"
+              autocapitalize="false"
+              class="bg-transparent outline-none"
+            />
+          </div>
         </div>
         <div
           v-show="showCSS"
@@ -289,17 +293,17 @@ onMounted(async() => {
               <carbon:copy v-else />
             </div>
           </div>
-          <pre class="px-3 pb-2 overflow-auto"><code v-html="highlighted" /></pre>
+          <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlighted" /></pre>
         </div>
       </div>
       <div
         v-if="showPreview"
-        class="p-2 border-l flex bc"
+        class="border-l bc"
       >
         <iframe
           ref="frame"
           src="/__playground.html"
-          class="overflow-hidden outline-none w-10em h-0 m-auto"
+          class="overflow-visiable outline-none w-10em h-0 m-auto"
           frameborder="0"
           scrolling="no"
           @load="updateIframe()"
