@@ -1,7 +1,6 @@
 import { Ref, watch, WritableComputedRef } from 'vue'
 import type CodeMirror from 'codemirror'
 import 'codemirror/lib/codemirror.css'
-import 'codemirror/mode/javascript/javascript'
 
 export async function useCodeMirror(
   textarea: Ref<HTMLTextAreaElement | null>,
@@ -9,11 +8,13 @@ export async function useCodeMirror(
   options: CodeMirror.EditorConfiguration = {},
 ) {
   const CodeMirror = await import('codemirror')
+
+  // @ts-expect-error untyped
+  await import('codemirror/mode/javascript/javascript')
+
   const cm = CodeMirror.fromTextArea(textarea.value!, options)
 
-  cm.on('change', () => {
-    input.value = cm.getValue()
-  })
+  cm.on('change', () => input.value = cm.getValue())
 
   watch(
     input,

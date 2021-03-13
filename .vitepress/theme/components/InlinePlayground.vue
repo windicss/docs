@@ -78,15 +78,12 @@ const fixedStyles = processor.value.interpret(props.fixed).styleSheet
 const style = ref<StyleSheet>(new StyleSheet())
 const plainCSS = ref('')
 const highlighted = ref('')
-const copied = ref(false)
 
-const clipboard = useClipboard({ read: false })
-
-function copy() {
-  clipboard.copy(plainCSS.value)
-  copied.value = true
-  setTimeout(() => { copied.value = false }, 2000)
-}
+const { copy, copied } = useClipboard({ 
+  read: false, 
+  source: plainCSS, 
+  copiedDuring: 2000
+})
 
 watch(style, () => {
   plainCSS.value = style.value.build().trim()
@@ -206,7 +203,7 @@ onMounted(async() => {
   if (typeof window === 'undefined')
     return
 
-  const cm1 = await useCodeMirror(textareaInput, input, { scrollbarStyle: 'null', lineWrapping: true })
+  const cm1 = await useCodeMirror(textareaInput, input, { mode: 'text', scrollbarStyle: 'null', lineWrapping: true })
 
   if (textareaConfig.value)
     await useCodeMirror(textareaConfig, configString, { mode: 'javascript' })
@@ -227,7 +224,7 @@ onMounted(async() => {
       :class="{active: showCSS}"
       @click="showCSS = !showCSS"
     >
-      <bx:bxl-css3 class="inline-block" />
+      <uil:css3-simple class="inline-block" />
     </div>
     <div
       v-if="enableConfig"
