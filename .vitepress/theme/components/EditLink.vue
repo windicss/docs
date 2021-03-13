@@ -7,7 +7,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      {{ text }} <carbon:launch class="ml-1 text-xs opacity-50" />
+      {{ text }}<carbon:launch class="inline-block ml-1.5 text-xs leading-6 opacity-50" />
     </a>
   </div>
 </template>
@@ -20,8 +20,7 @@ const { url, text } = useEditLink()
 
 <style scoped lang="postcss">
 .link {
-  @apply inline-flex
-    items-center
+  @apply
     text-base font-medium
     text-$c-text-light
     hover:(no-underline text-$c-brand);
