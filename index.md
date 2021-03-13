@@ -6,7 +6,7 @@ title: ''
 heroText: Windi CSS
 
 actionText: Get Started
-actionLink: /guide
+actionLink: /guide/
 
 altActionText: Features
 altActionLink: /guide/features
