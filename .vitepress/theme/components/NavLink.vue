@@ -1,7 +1,7 @@
 <template>
   <div class="nav-link">
     <a class="item" v-bind="linkProps">
-      {{ item.text }} <uil-external-link-alt v-if="isExternal" class="ml-1 text-xs" />
+      {{ item.text }}
     </a>
   </div>
 </template>
@@ -17,7 +17,7 @@ const props = defineProps<{
 
 const propsRefs = toRefs(props)
 
-const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
+const { props: linkProps } = useNavLink(propsRefs.item)
 </script>
 
 <style scoped lang="postcss">

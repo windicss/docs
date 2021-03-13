@@ -2,7 +2,7 @@
   <div class="nav-dropdown-link-item">
     <a class="item" v-bind="linkProps">
       <!-- <span class="arrow" /> -->
-      <span class="inline-flex items-center">{{ item.text }} <uil-external-link-alt v-if="isExternal" class="ml-1 text-xs" /></span>
+      <span class="inline-flex items-center">{{ item.text }}</span>
       <!-- <span class="icon"><OutboundLink v-if="isExternal" /></span> -->
     </a>
   </div>
@@ -19,11 +19,12 @@ const props = defineProps<{
 
 const propsRefs = toRefs(props)
 
-const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
+const { props: linkProps } = useNavLink(propsRefs.item)
 </script>
 
 <style scoped lang="postcss">
 .item {
+  display: block;
   padding: 0 1.5rem 0 2.5rem;
   line-height: 32px;
   font-size: 0.9rem;

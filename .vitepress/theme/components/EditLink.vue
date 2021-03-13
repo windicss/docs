@@ -7,7 +7,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      {{ text }} <uil-external-link-alt class="ml-1 text-xs" />
+      {{ text }} <carbon:launch class="ml-1 text-xs opacity-50" />
     </a>
   </div>
 </template>
