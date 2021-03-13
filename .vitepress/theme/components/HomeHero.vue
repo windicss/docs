@@ -1,30 +1,34 @@
 <template>
   <header v-if="showHero" class="home-hero">
-    <figure v-if="$frontmatter.heroImage" class="px-6">
-      <img
-        class="block w-auto mx-auto max-w-full max-h-120px"
-        :src="$withBase($frontmatter.heroImage)"
-        :alt="$frontmatter.heroAlt"
-      >
-    </figure>
+    <div class="text-left max-w-40em pt-20 py-50 m-auto">
+      <figure v-if="$frontmatter.heroImage">
+        <img
+          class="block w-auto max-w-full max-h-120px"
+          :src="$withBase($frontmatter.heroImage)"
+          :alt="$frontmatter.heroAlt"
+        >
+      </figure>
 
-    <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) md:(mt-8)">
-      {{ heroText }}
-    </h1>
-    <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-6 text-$c-text-light xs:(text-2xl)">
-      {{ tagline }}
-    </p>
-    <div class="space-x-6">
-      <NavLink
-        v-if="hasAction"
-        :item="{ link: data.actionLink, text: data.actionText }"
-        class="action"
-      />
-      <NavLink
-        v-if="hasAltAction"
-        :item="{ link: data.altActionLink, text: data.altActionText }"
-        class="action alt"
-      />
+      <div class="ml-2">
+        <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0">
+          {{ heroText }}
+        </h1>
+        <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-6 text-$c-text-light xs:(text-2xl)">
+          {{ tagline }}
+        </p>
+        <div class="mt-2 md:(block space-x-6) flex flex-col">
+          <NavLink
+            v-if="hasAction"
+            :item="{ link: data.actionLink, text: data.actionText }"
+            class="action"
+          />
+          <NavLink
+            v-if="hasAltAction"
+            :item="{ link: data.altActionLink, text: data.altActionText }"
+            class="action alt"
+          />
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -63,12 +67,12 @@ const hasAltAction = computed(
   @apply mt-10 mb-11 px-6 text-center xs:my-14 md:(mt-16 mb-17);
 }
 .action {
-  @apply mt-6 inline-block xs:mt-8;
+  @apply mt-4 inline-block xs:mt-8;
 }
 
 .action :deep(.item) {
+  @apply rounded-full;
   display: inline-block;
-  border-radius: 6px;
   padding: 0 20px;
   line-height: 44px;
   font-size: 1rem;

@@ -5,11 +5,11 @@ title: ''
 
 heroText: Windi CSS
 
-altActionText: Learn More
-altActionLink: /guide/features
-
 actionText: Get Started
-actionLink: /guide/
+actionLink: /guide
+
+altActionText: Features
+altActionLink: /guide/features
 
 heroImage: /assets/logo.svg
 heroAlt: Windi CSS logo
