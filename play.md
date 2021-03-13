@@ -4,6 +4,9 @@ sidebar: false
 
 ## Windi CSS Inline Playground (WIP)
 
+<PlaygroundBorder />
+
+<!-- 
 <InlinePlayground 
   :input="'bg-primary font-light p-2\ndark:hover:(bg-gray-800 font-medium)'"
   :showCSS="true"
@@ -24,4 +27,4 @@ sidebar: false
     }
   }
 }"
-/>
+/> -->

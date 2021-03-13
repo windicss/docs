@@ -11,9 +11,10 @@ import type { PropType } from 'vue'
 import type CodeMirror from 'codemirror'
 import type { Config } from 'windicss/types/interfaces'
 
-import { isDark } from '../composables/dark'
-import { useCodeMirror } from '../composables/useCodeMirror'
 import 'prismjs/components/prism-css'
+
+import { isDark } from '../../composables/dark'
+import { useCodeMirror } from '../../composables/useCodeMirror'
 
 const props = defineProps({
   input: {
@@ -71,6 +72,11 @@ const textareaConfig = ref<HTMLTextAreaElement | null>(null)
 const input = ref(props.input)
 const mode = ref(props.mode)
 
+watch(
+  () => props.input,
+  v => input.value = v,
+)
+
 let acceped: string[] = []
 
 const decorations: CodeMirror.TextMarker<CodeMirror.MarkerRange>[] = []
@@ -96,7 +102,11 @@ function updateIframe() {
   if (!frame.value?.contentWindow)
     return
 
-  const fullStyle = preflightStyles.extend(fixedStyles).extend(style.value).sort()
+  const fullStyle = new StyleSheet()
+    .extend(preflightStyles)
+    .extend(fixedStyles)
+    .extend(style.value)
+    .sort()
 
   frame.value.contentWindow.document.querySelector('html')?.classList.toggle('dark', isDark.value)
   frame.value.contentWindow.postMessage(
