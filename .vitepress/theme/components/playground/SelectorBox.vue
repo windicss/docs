@@ -45,6 +45,7 @@ function toggle(str: string) {
     else
       add(str)
     normalize()
+    normalize()
   }
 
   triggerRef(directions)

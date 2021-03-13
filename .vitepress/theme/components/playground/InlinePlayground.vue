@@ -104,7 +104,6 @@ function updateIframe() {
 
   const fullStyle = new StyleSheet()
     .extend(preflightStyles)
-    .extend(fixedStyles)
     .extend(style.value)
     .sort()
 
@@ -112,6 +111,7 @@ function updateIframe() {
   frame.value.contentWindow.postMessage(
     JSON.stringify({
       style: fullStyle.build(),
+      fixed: fixedStyles.build(),
       classes: `${[...acceped, props.fixed].filter(Boolean).join(' ')}`.trim(),
     }),
     location.origin,

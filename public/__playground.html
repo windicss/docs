@@ -11,21 +11,28 @@
     Preview
   </div>
   <script>
-    let styleEl
+    let styleEl, fixedStyleEl
     const container = document.getElementById('container')
     window.addEventListener('message', (e) => {
       const {
         style,
+        fixed,
         classes,
       } = JSON.parse(e.data)
 
       if (styleEl)
         document.body.removeChild(styleEl)
-    
       styleEl = document.createElement('style')
       styleEl.innerHTML = style
       document.body.appendChild(styleEl)
     
+      // one-time
+      if (!fixedStyleEl && fixed){
+        fixedStyleEl = document.createElement('style')
+        fixedStyleEl.innerHTML = fixed
+        document.body.appendChild(fixedStyleEl)
+      }
+
       container.className = classes
     }, false)
   </script>
