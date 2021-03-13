@@ -58,7 +58,7 @@ const themeConfig: DefaultTheme.Config = {
       {
         text: 'Guide',
         children: [
-          { text: 'Introduction', link: '/guide/introduction' },
+          // { text: 'Introduction', link: '/guide/introduction' },
           { text: 'Getting Started', link: '/guide/' },
           { text: 'Features', link: '/guide/features' },
           { text: 'Configuration', link: '/guide/configuration' },

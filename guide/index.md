@@ -1,25 +1,33 @@
 [windi css]: https://github.com/windicss/windicss
+[windicss]: https://github.com/windicss/windicss
 [tailwind css]: https://tailwindcss.com/docs
 [discussions]: https://github.com/windicss/windicss/discussions
 [GitHub Issues]: https://github.com/windicss/windicss/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
 [GitHub Discussions]: https://github.com/windicss/windicss/discussions
+[autoprefixer]: https://autoprefixer.github.io/
 [utilities reference]: /utilities/
 [utilities]: /utilities/
 [directives]: /guide/directives
 
-[Built-in]: /guide/cli
-[windicss-intellisense]: https://github.com/windicss/windicss-intellisense
-[vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
-[rollup-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss
-[windicss-webpack-plugin]: https://github.com/windicss/windicss-webpack-plugin
-[nuxt-windicss-module]: https://github.com/windicss/nuxt-windicss-module
-[svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
+[video comparison]: https://twitter.com/antfu7/status/1361398324587163648
+[options]: /guide/configuration
+[features]: /guide/features
 
 # Getting Started
 
-If you are interested to learn more about Windi CSS before trying it, check out the [Introduction](./introduction).
+[__Windi CSS__][windicss] is a next generation compiler for [Tailwind CSS].
 
-If you are looking for utilities, check out the [utilities reference].
+If you are already familiar with [Tailwind CSS], think about [Windi CSS] as an alternative to Tailwind, which provides faster load times, and supports all the features in Tailwind v2.0 and more.
+
+If you are not familiar with [Tailwind CSS], you can think of [Windi CSS] as a utility-first CSS library.
+
+## Why Windi CSS? 🤔
+
+A quote from the author should illustrate his motivation to create [Windi CSS]:
+
+<Quote author="@voorjar">When my project became larger and there were about dozens of components, the initial compilation time reached 3s, and hot updates took more than 1s.</Quote>
+
+By scanning your HTML and CSS and generating utilities on demand, [Windi CSS] is able to provide [faster load times][video comparison] and a speedy HMR in development, and does not require purging in production.
 
 ## Integrations
 
