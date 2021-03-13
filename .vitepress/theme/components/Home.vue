@@ -15,12 +15,11 @@
 
 <script setup lang="ts">
 import HomeHero from './HomeHero.vue'
-import HomeFeatures from './HomeFeatures.vue'
 import HomeFooter from './HomeFooter.vue'
 </script>
 
 <style scoped lang="postcss">
 .home-content {
-  @apply max-w-960px mx-auto py-6 md:(max-w-392px p-0);
+  @apply max-w-62rem mx-auto py-6 md:(p-0);
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineProps, defineEmit } from 'vue'
+import { computed, defineProps, defineEmit } from 'vue'
 import { useVModels } from '@vueuse/core'
 
 const emit = defineEmit()

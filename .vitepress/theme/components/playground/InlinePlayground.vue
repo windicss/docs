@@ -1,5 +1,4 @@
 <script setup lang="ts">
-/* eslint-disable vue/no-v-html */
 import { ref, watchEffect, defineProps, onMounted, watch, computed } from 'vue'
 import { StyleSheet } from 'windicss/utils/style'
 import { useClipboard } from '@vueuse/core'

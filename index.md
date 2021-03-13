@@ -24,7 +24,34 @@ features:
 footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---
 
-<p class="flex justify-center opacity-75 -my-4">
+
+<InlinePlayground 
+  :input="`bg-gradient-to-r from-green-400 h-50 to-blue-500
+m-4 p-4 text-white italic rounded cursor-default 
+transition-all duration-400
+hover:rounded-r-4xl
+dark:\(from-teal-400 to-yellow-500)`"
+  :showCSS="true"
+  :showMode="true"
+  :showTabs="true"
+  :showConfig="false"
+  :enableConfig="true"
+  :config="{
+  shortcuts: {
+    btn: 'py-2 px-4 font-semibold rounded-lg shadow-md',
+    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
+  },
+  theme: {
+    extend: {
+      colors: {
+        primary: '#0ea5e9'
+      }
+    }
+  }
+}"
+/> 
+
+<p class="flex justify-center opacity-75 mt-12">
   <a href="https://www.netlify.com" target="_blank">
     <img src="/assets/netlify.svg" alt="Deploys by Netlify">
   </a>
