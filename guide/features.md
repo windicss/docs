@@ -14,27 +14,32 @@ You can apply several utilities for the same variant by grouping them with paren
 <div class="bg-white font-light dark:hover:(bg-gray-800 font-medium)"/>
 ```
 
-<InlinePlayground :input="'bg-blue-200 font-light p-2\ndark:hover:(bg-gray-800 font-medium)'"/>
+<InlinePlayground 
+  :input="'bg-blue-200 font-light p-2\ndark:hover:(bg-gray-800 font-medium)'"
+  :showCSS="true"
+  :showMode="true"
+  :showTabs="true"
+/>
 
 ## Screen Utilities
 
 You can use `+` for __Only Screen__ and `-` for __Desktop First__ in screen utilities, for example:
 
-<InlinePlayground :input="'sm:p-1\n+sm:p-2\n-sm:p-3'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+<InlinePlayground :input="'sm:p-1\n+sm:p-2\n-sm:p-3'" :showCSS="true" :showPreview="false"/>
 
 See [screen variants](http://localhost:4002/utilities/variants.html#screen-variants) for more details.
 
 ## Important Utility
 
-You can add `!important` rule by adding a `!` mark, which is very useful when you want to override ALL previous styling rules for that specific property on that element!
+You can prefix any utility classes with `!` to make them as `!important`. This could be very useful when you want to override previous styling rules for that specific property.
 
 ```css
 !text-green-300
 ```
 
-<InlinePlayground :input="'!text-green-300'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+<InlinePlayground :input="'text-blue-200\n!text-green-300'" :showCSS="true" :showPreview="false"/>
 
-## Shortcuts Config
+## Shortcuts
 
 We have also added a shortcuts config to help you quickly add utilities. With this feature, you can even share inline components.
 
@@ -50,6 +55,19 @@ module.exports = {
   },
 }
 ```
+
+<InlinePlayground 
+  :input="'btn btn-green'" 
+  :config="{ shortcuts: {
+    btn: 'py-2 px-4 font-semibold rounded-lg shadow-md',
+    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
+  }}"
+  :showCSS="true"
+  :showMode="false"
+  :showTabs="true"
+  :showConfig="true"
+  :enableConfig="true"
+/>
 
 css-in-js syntax is also supported for complex utility
 
@@ -73,6 +91,28 @@ module.exports = {
 }
 ```
 
+
+<InlinePlayground 
+  :input="'btn btn-green'" 
+  :config="{ shortcuts: {
+    btn: {
+      color: 'white',
+      '@apply': 'py-2 px-4 font-semibold rounded-lg',
+      '&:hover': {
+        '@apply': 'bg-green-700',
+        color: 'black',
+      },
+    },
+    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
+  }}"
+  :showCSS="false"
+  :showMode="false"
+  :showTabs="true"
+  :showConfig="true"
+  :enableConfig="true"
+/>
+
+
 The utility added by this configuration can also be directly wrapped with variant, such as sm:btn. The function of this feature is similar to @apply, it will merge all utilities into one style.
 
 <!-- 
@@ -92,7 +132,7 @@ Since [Windi CSS] will only generate the CSS utilities you use, it's no longer n
 p-{float} -> padding: {float/4}rem;
 ```
 
-<InlinePlayground :input="'p-2.5\np-3.2'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+<InlinePlayground :input="'p-2.5\np-3.2'" :showCSS="true" :showPreview="false"/>
 
 ### Sizes
 
@@ -101,7 +141,7 @@ p-{float} -> padding: {float/4}rem;
 p-{size} -> padding: {size};
 ```
 
-<InlinePlayground :input="'p-3px\np-4rem'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+<InlinePlayground :input="'p-3px\np-4rem'" :showCSS="true" :showPreview="false"/>
 
 
 ### Fractions
@@ -110,7 +150,7 @@ p-{size} -> padding: {size};
 w-{fraction} -> width: {fraction -> precent};
 ```
 
-<InlinePlayground :input="'w-9/12'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+<InlinePlayground :input="'w-9/12'" :showCSS="true" :showPreview="false"/>
 
 
 ### Colors
@@ -121,7 +161,12 @@ text-{color} -> color: rgba(...);
 border-hex-{hex} -> background-color: rgba(...);
 ```
 
-<InlinePlayground :input="'text-cyan-400\nborder-hex-6dd1c7'" tab="css" :showTabs="false" :showMode="false" fixed="border border-2 px-4 py-2 rounded"/>
+<InlinePlayground 
+  :input="'text-cyan-400\nborder-hex-6dd1c7'" 
+  :showCSS="true" 
+  :showPreview="false"
+  fixed="border border-2 px-4 py-2 rounded"
+/>
 
 ### Variables
 
@@ -131,4 +176,8 @@ You can even pass variable names, which is very useful in combination with css v
 bg-${variableName}
 ```
 
-<InlinePlayground :input="'bg-$test-variable'" tab="css" :showPreview="false" :showTabs="false" :showMode="false"/>
+<InlinePlayground 
+  :input="'bg-$test-variable'" 
+  :showCSS="true" 
+  :showPreview="false"
+/>

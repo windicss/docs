@@ -1,6 +1,7 @@
 dependencies:
   '@vueuse/core': 4.3.5_vue@3.0.7
   codemirror: 5.59.4
+  json5: 2.2.0
   prismjs: 1.23.0
   vue: 3.0.7
   vue-demi: 0.7.1_vue@3.0.7
@@ -715,7 +716,7 @@ packages:
   /@vueuse/core/4.3.5_vue@3.0.7:
     dependencies:
       '@vueuse/shared': 4.3.5_vue@3.0.7
-      vue-demi: 0.7.1_vue@3.0.7
+      vue-demi: 0.7.2_vue@3.0.7
     dev: false
     peerDependencies:
       vue: '*'
@@ -723,7 +724,7 @@ packages:
       integrity: sha512-9oBR7892aQyuMOFlQe7kFa/Ab6/R2OwLTap4RRPeih7LvwW1eiuhVDwG0nCameJjjBKZNV013n6RiRrSCJ9t5w==
   /@vueuse/shared/4.3.5_vue@3.0.7:
     dependencies:
-      vue-demi: 0.7.1_vue@3.0.7
+      vue-demi: 0.7.2_vue@3.0.7
     dev: false
     peerDependencies:
       vue: '*'
@@ -2523,7 +2524,6 @@ packages:
   /json5/2.2.0:
     dependencies:
       minimist: 1.2.5
-    dev: true
     engines:
       node: '>=6'
     hasBin: true
@@ -2788,7 +2788,6 @@ packages:
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   /minimist/1.2.5:
-    dev: true
     resolution:
       integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
   /mkdirp/0.3.0:
@@ -4159,6 +4158,20 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-cJ3QnpcbIqdpeV3NnNgSDwneCJifvHct+6JNvfYn/49geK/uv5VJicZDvyg20guNhz+DZmUHBHyRQTJ32lSC2g==
+  /vue-demi/0.7.2_vue@3.0.7:
+    dependencies:
+      vue: 3.0.7
+    dev: false
+    hasBin: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-beta.1
+      vue: ^2.6.0 || >=3.0.0-rc.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-cRaQymWYC3gcj3Y8CGDjPI7r2BIvHNMuoLSlfyo7CeqtFzV6eIlYK7xPnExPl4m3j6y5D1FOqdclEIWeim5EJg==
   /vue-eslint-parser/7.6.0_eslint@7.21.0:
     dependencies:
       debug: 4.3.1
@@ -4265,6 +4278,7 @@ specifiers:
   esbuild-register: ^2.2.0
   eslint: ^7.21.0
   eslint-plugin-markdown: ^2.0.0
+  json5: ^2.2.0
   prism-theme-vars: ^0.2.0
   prismjs: ^1.23.0
   typescript: ^4.2.3

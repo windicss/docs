@@ -1,15 +1,17 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html */
-import { ref, watchEffect, defineProps, onMounted, watch } from 'vue'
+import { ref, watchEffect, defineProps, onMounted, watch, computed } from 'vue'
 import type { PropType } from 'vue'
 import Windi from 'windicss'
+import type { Config } from 'windicss/types/interfaces'
 import { StyleSheet } from 'windicss/utils/style'
 import Prism from 'prismjs'
 import { useClipboard } from '@vueuse/core'
 import type CodeMirror from 'codemirror'
+import JSON5 from 'json5'
 import { isDark } from '../composables/dark'
 import 'prismjs/components/prism-css'
-import 'codemirror/lib/codemirror.css'
+import { useCodeMirror } from '../composables/useCodeMirror'
 
 const props = defineProps({
   input: {
@@ -21,10 +23,10 @@ const props = defineProps({
     default: true,
   },
   showMode: {
-    default: true,
+    default: false,
   },
   showTabs: {
-    default: true,
+    default: false,
   },
   showCSS: {
     default: true,
@@ -32,32 +34,46 @@ const props = defineProps({
   showCopy: {
     default: true,
   },
+  showConfig: {
+    default: false,
+  },
+  enableConfig: {
+    default: false,
+  },
+  enablePreview: {
+    default: true,
+  },
   fixed: {
     default: '',
   },
   tab: {
-    type: String as PropType<'code' | 'css'>,
+    type: String as PropType<'code' | 'css' | 'config'>,
     default: 'code',
   },
   mode: {
     type: String as PropType<'interpret' | 'compile'>,
     default: 'interpret',
   },
+  config: {
+    type: Object as PropType<Config>,
+    default: () => {},
+  },
 })
 
-const processor = new Windi()
+const config = ref(props.config)
+const processor = computed(() => new Windi(config.value))
 
-const frame = ref<HTMLIFrameElement | null>()
-const textarea = ref<HTMLTextAreaElement | null>()
+const frame = ref<HTMLIFrameElement | null>(null)
+const textareaInput = ref<HTMLTextAreaElement | null>(null)
+const textareaConfig = ref<HTMLTextAreaElement | null>(null)
 const input = ref(props.input)
-const tab = ref(props.tab)
 const mode = ref(props.mode)
 
 let acceped: string[] = []
 
 const decorations: CodeMirror.TextMarker<CodeMirror.MarkerRange>[] = []
-const preflightStyles = processor.preflight('<div <p', true, true, true)
-const fixedStyles = processor.interpret(props.fixed).styleSheet
+const preflightStyles = processor.value.preflight('<div <p', true, true, true)
+const fixedStyles = processor.value.interpret(props.fixed).styleSheet
 
 const style = ref<StyleSheet>(new StyleSheet())
 const plainCSS = ref('')
@@ -87,7 +103,7 @@ function updateIframe() {
   frame.value.contentWindow.postMessage(
     JSON.stringify({
       style: fullStyle.build(),
-      classes: `${[...acceped, props.fixed].filter(Boolean).join(' ')}`,
+      classes: `${[...acceped, props.fixed].filter(Boolean).join(' ')}`.trim(),
     }),
     location.origin,
   )
@@ -106,7 +122,7 @@ function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Edito
   decorations.push(cm.markText(
     cm.posFromIndex(start),
     cm.posFromIndex(end),
-    { className: ['text-0.95rem', matched ? 'text-green-600' : 'text-orange-600'].join(' ') },
+    { className: [matched ? 'text-green-600' : 'text-orange-600'].join(' ') },
   ))
 }
 
@@ -117,8 +133,8 @@ function toggleMode() {
 function interpret(cm: CodeMirror.Editor) {
   // @ts-expect-error
   const { styleSheet, success, ignored, className } = mode.value === 'interpret'
-    ? processor.interpret(input.value.replace(/\n/g, ' ')) || {}
-    : processor.compile(input.value.replace(/\n/g, ' ')) || {}
+    ? processor.value.interpret(input.value.replace(/\n/g, ' ')) || {}
+    : processor.value.compile(input.value.replace(/\n/g, ' ')) || {}
 
   if (mode.value === 'interpret')
     acceped = success || []
@@ -175,44 +191,62 @@ function interpret(cm: CodeMirror.Editor) {
   style.value = styleSheet
 }
 
+const configString = computed<string>({
+  get() {
+    return JSON5.stringify(config.value, { space: 2, quote: '\'' }) || ''
+  },
+  set(v) {
+    config.value = JSON5.parse(v)
+  },
+})
+
 watchEffect(updateIframe)
 
 onMounted(async() => {
   if (typeof window === 'undefined')
     return
 
-  const CodeMirror = await import('codemirror')
-  const cm = CodeMirror.fromTextArea(textarea.value!, {
-    scrollbarStyle: 'null',
-    lineWrapping: true,
-  })
+  const cm1 = await useCodeMirror(textareaInput, input, { scrollbarStyle: 'null', lineWrapping: true })
 
-  cm.on('change', () => {
-    input.value = cm.getValue()
-  })
+  if (textareaConfig.value)
+    await useCodeMirror(textareaConfig, configString, { mode: 'javascript' })
 
-  watch(
-    input,
-    (v) => {
-      if (v !== cm.getValue())
-        cm.replaceRange(v, cm.posFromIndex(0), cm.posFromIndex(Infinity))
-    },
-    { immediate: true },
-  )
-
-  watchEffect(() => interpret(cm))
+  watchEffect(() => interpret(cm1))
 })
 </script>
 
 <template>
   <div v-if="showTabs" class="flex tabs mt-4">
-    <div class="tab" :class="{active: tab === 'code'}" @click="tab = 'code'">
+    <!-- <div class="tab" :class="{active: tab === 'code'}" @click="tab = 'code'">
       <carbon:code class="inline-block" />
-    </div>
-    <div class="tab" :class="{active: tab === 'css'}" @click="tab = 'css'">
+    </div> -->
+    <div class="flex-auto" />
+    <div
+      class="tab"
+      title="Toggle CSS"
+      :class="{active: showCSS}"
+      @click="showCSS = !showCSS"
+    >
       <bx:bxl-css3 class="inline-block" />
     </div>
-    <div class="flex-auto" />
+    <div
+      v-if="enableConfig"
+      class="tab"
+      title="Toggle Configurations"
+      :class="{active: showConfig}"
+      @click="showConfig = !showConfig"
+    >
+      <carbon:settings-adjust class="inline-block" />
+    </div>
+    <div
+      v-if="enablePreview"
+      class="tab"
+      title="Toggle Preview"
+      :class="{active: showPreview}"
+      @click="showPreview = !showPreview"
+    >
+      <carbon:camera class="inline-block" />
+    </div>
   </div>
   <div class="border bc rounded relative">
     <div
@@ -220,20 +254,32 @@ onMounted(async() => {
       style="grid-template-columns: 1fr max-content;"
     >
       <div class="flex-auto flex flex-col overflow-auto">
-        <textarea
-          ref="textarea"
-          spellcheck="false"
-          autocomplete="false"
-          autocapitalize="false"
-          class="text-sm font-mono border-none resize-none p-2 m-0 rounded min-height-1em outline-none w-full overflow-auto"
-          :class="{'h-full': tab === 'code' }"
-        />
+        <div>
+          <textarea
+            ref="textareaInput"
+            spellcheck="false"
+            autocomplete="false"
+            autocapitalize="false"
+            class="bg-transparent outline-none"
+          />
+        </div>
+        <div v-show="showConfig" class="border-t bc">
+          <div class="ml-1 p-2 pb-0 text-sm opacity-50 flex">
+            <span>Config</span>
+          </div>
+          <textarea
+            ref="textareaConfig"
+            spellcheck="false"
+            autocomplete="false"
+            autocapitalize="false"
+            class="bg-transparent outline-none"
+          />
+        </div>
         <div
-          v-if="showCSS"
-          v-show="tab === 'css'"
-          class="text-sm p-2 border-t bc"
+          v-show="showCSS"
+          class="text-sm border-t bc"
         >
-          <div class="ml-1 mb-2 opacity-50 text-sm flex">
+          <div class="ml-1 p-2 text-sm opacity-50 flex">
             <span>CSS</span>
             <div class="flex-auto" />
             <div v-if="showMode" class="icon-button" title="Toggle Mode" @click="toggleMode">
@@ -246,7 +292,7 @@ onMounted(async() => {
               <carbon:copy v-else />
             </div>
           </div>
-          <pre class="px-1 overflow-auto"><code v-html="highlighted" /></pre>
+          <pre class="px-3 pb-2 overflow-auto"><code v-html="highlighted" /></pre>
         </div>
       </div>
       <div
@@ -276,6 +322,6 @@ onMounted(async() => {
 }
 
 .CodeMirror {
-  @apply px-3 py-2 h-auto bg-transparent;
+  @apply px-3 py-2 h-auto bg-transparent font-mono text-sm;
 }
 </style>

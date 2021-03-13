@@ -7,6 +7,19 @@ export default defineConfig({
   },
   theme: {
     extend: {
+      fontFamily: {
+        mono: [
+          '"Input Mono"',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace',
+        ],
+      },
       screens: {
         xs: '420px',
         md: '720px',
