@@ -17,7 +17,7 @@
     "windicss": "^2.4.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.4.3",
+    "@antfu/eslint-config": "^0.5.0",
     "@docsearch/css": "^1.0.0-alpha.28",
     "@docsearch/js": "^1.0.0-alpha.28",
     "@docsearch/react": "^1.0.0-alpha.28",
