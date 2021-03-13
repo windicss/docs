@@ -76,6 +76,6 @@ You can use utility classes in your components and stylesheets as usual:
 }
 ```
 
-## Additional Features
+## Core Features
 
 In addition of Tailwind CSS v2, we also have some great features that only possible for Windi CSS. Refer to the [next chapter](./features) for more details.

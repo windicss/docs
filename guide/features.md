@@ -2,7 +2,7 @@
 [tailwind css]: https://tailwindcss.com/docs
 [svelte]: /guide/svelte.html#additional-features-in-svelte-⚡%EF%B8%8F
 
-# Additional Features
+# Core Features
 
 [Windi CSS] is fully compatible with [Tailwind CSS] v2. In top of that, we have a number of additional features that boost your work further and open up much more possibility.
 
