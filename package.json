@@ -13,15 +13,15 @@
     "json5": "^2.2.0",
     "prismjs": "^1.23.0",
     "vue": "^3.0.7",
-    "vue-demi": "^0.7.2",
-    "windicss": "^2.4.3"
+    "vue-demi": "^0.7.3",
+    "windicss": "^2.4.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.5.1",
     "@docsearch/css": "^1.0.0-alpha.28",
     "@docsearch/js": "^1.0.0-alpha.28",
     "@docsearch/react": "^1.0.0-alpha.28",
-    "@iconify/json": "^1.1.315",
+    "@iconify/json": "^1.1.316",
     "@types/codemirror": "^0.0.108",
     "@types/node": "^14.14.34",
     "@types/prismjs": "^1.16.3",
@@ -33,7 +33,7 @@
     "prism-theme-vars": "^0.2.0",
     "typescript": "^4.2.3",
     "vite": "^2.0.5",
-    "vite-plugin-components": "^0.8.0",
+    "vite-plugin-components": "^0.8.2",
     "vite-plugin-icons": "^0.3.2",
     "vite-plugin-windicss": "^0.8.2",
     "vitepress": "^0.12.2"
