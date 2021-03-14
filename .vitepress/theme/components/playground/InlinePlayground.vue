@@ -266,7 +266,7 @@ onMounted(async() => {
           <textarea
             ref="textareaInput"
             spellcheck="false"
-            autocomplete="false"
+            autocomplete="off"
             autocapitalize="false"
             class="bg-transparent outline-none"
           />
@@ -279,7 +279,7 @@ onMounted(async() => {
             <textarea
               ref="textareaConfig"
               spellcheck="false"
-              autocomplete="false"
+              autocomplete="off"
               autocapitalize="false"
               class="bg-transparent outline-none"
             />
@@ -302,6 +302,7 @@ onMounted(async() => {
               <carbon:copy v-else />
             </div>
           </div>
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlighted" /></pre>
         </div>
       </div>

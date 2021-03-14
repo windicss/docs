@@ -14,7 +14,6 @@ module.exports = {
   },
   overrides: [
     {
-      // 2. Enable the Markdown processor for all .md files.
       files: ['**/*.md'],
       processor: 'markdown/markdown',
     },
