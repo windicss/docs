@@ -23,6 +23,6 @@ defineProps({})
 <style scoped lang="postcss">
 .headers-sidebar {
   height: calc(100vh - var(--header-height));
-  @apply sticky top-$header-height py-6 px-6 overflow-y-auto;
+  @apply sticky top-$header-height py-7 px-6 overflow-y-auto;
 }
 </style>

@@ -82,8 +82,6 @@ const siteRouteData = useSiteDataByRoute()
 const theme = computed(() => siteData.value.themeConfig)
 // const page = usePageData()
 
-// custom layout
-const isCustomLayout = computed(() => !!route.data.frontmatter.customLayout)
 // home
 const enableHome = computed(() => !!route.data.frontmatter.home)
 

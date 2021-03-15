@@ -1,18 +1,16 @@
 <template>
-  <main class="page">
-    <div class="px-6 pb-16">
-      <slot name="top" />
+  <main class="px-6 pb-16 pt-1">
+    <slot name="top" />
 
-      <div class="content">
-        <Content />
-      </div>
-
-      <PageFooter />
-
-      <NextAndPrevLinks />
-
-      <slot name="bottom" />
+    <div class="content">
+      <Content />
     </div>
+
+    <PageFooter />
+
+    <NextAndPrevLinks />
+
+    <slot name="bottom" />
   </main>
 </template>
 
