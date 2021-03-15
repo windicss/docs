@@ -11,7 +11,6 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    'quote-props': ['error', 'as-needed'],
   },
   overrides: [
     {
@@ -25,7 +24,6 @@ module.exports = {
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-var-requires': 'off',
-        'quote-props': ['error', 'consistent-as-needed'],
         'jsonc/quotes': ['error', 'single'],
         'jsonc/no-dupe-keys': 'off',
       },
