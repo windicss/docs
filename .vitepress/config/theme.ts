@@ -88,7 +88,7 @@ const themeConfig: DefaultTheme.Config = {
         text: 'Features',
         children: [
           { text: 'Overview', link: '/guide/features/' },
-          { text: 'Variant Auto-infer', link: '/guide/features/variant-auto-inferr' },
+          { text: 'Variant Auto-infer', link: '/guide/features/variant-auto-infer' },
         ],
       },
       {
