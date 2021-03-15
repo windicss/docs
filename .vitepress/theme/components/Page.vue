@@ -1,6 +1,6 @@
 <template>
   <main class="page">
-    <div class="container">
+    <div class="px-6 pb-16">
       <slot name="top" />
 
       <div class="content">
@@ -22,22 +22,6 @@ import NextAndPrevLinks from './NextAndPrevLinks.vue'
 </script>
 
 <style scoped>
-.page {
-  padding-top: var(--header-height);
-}
-
-@media (min-width: 720px) {
-  .page {
-    margin-left: 16.4rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .page {
-    margin-left: 20rem;
-  }
-}
-
 .container {
   margin: 0 auto;
   padding: 0 1.5rem 4rem;

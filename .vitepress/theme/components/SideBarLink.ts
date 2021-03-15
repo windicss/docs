@@ -79,7 +79,7 @@ function groupHeaders(headers: Header[]): HeaderWithChildren[] {
     else if (lastH2)
       (lastH2.children || (lastH2.children = [])).push(h)
   })
-  return headers.filter(h => h.level === 2)
+  return headers.filter(h => h.level === 1)
 }
 
 function mapHeaders(headers: HeaderWithChildren[]): DefaultTheme.SideBarItem[] {

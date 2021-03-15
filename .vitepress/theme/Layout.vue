@@ -7,42 +7,43 @@
         </slot>
       </template>
     </NavBar>
+    <div class="container !max-w-screen-xl mx-auto pt-$header-height" :class="{'grid-layout': !enableHome}">
+      <SideBar :open="openSideBar">
+        <template #sidebar-top>
+          <slot name="sidebar-top" />
+        </template>
+        <template #sidebar-bottom>
+          <slot name="sidebar-bottom" />
+        </template>
+      </SideBar>
+      <!-- TODO: make this button accessible -->
+      <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
-    <SideBar :open="openSideBar">
-      <template #sidebar-top>
-        <slot name="sidebar-top" />
-      </template>
-      <template #sidebar-bottom>
-        <slot name="sidebar-bottom" />
-      </template>
-    </SideBar>
-    <!-- TODO: make this button accessible -->
-    <div class="sidebar-mask" @click="toggleSidebar(false)" />
+      <Home v-if="enableHome">
+        <template #hero>
+          <slot name="home-hero" />
+        </template>
+        <template #features>
+          <slot name="home-features" />
+        </template>
+        <template #footer>
+          <slot name="home-footer" />
+        </template>
+      </Home>
 
-    <Content v-if="isCustomLayout" />
+      <Page v-else>
+        <template #top>
+          <slot name="page-top-ads" />
+          <slot name="page-top" />
+        </template>
+        <template #bottom>
+          <slot name="page-bottom" />
+          <slot name="page-bottom-ads" />
+        </template>
+      </Page>
 
-    <Home v-else-if="enableHome">
-      <template #hero>
-        <slot name="home-hero" />
-      </template>
-      <template #features>
-        <slot name="home-features" />
-      </template>
-      <template #footer>
-        <slot name="home-footer" />
-      </template>
-    </Home>
-
-    <Page v-else>
-      <template #top>
-        <slot name="page-top-ads" />
-        <slot name="page-top" />
-      </template>
-      <template #bottom>
-        <slot name="page-bottom" />
-        <slot name="page-bottom-ads" />
-      </template>
-    </Page>
+      <HeadersSideBar />
+    </div>
   </div>
 
   <Debug />
@@ -139,7 +140,22 @@ const pageClasses = computed(() => {
 })
 </script>
 
-<style>
+<style lang="postcss">
+@screen md {
+  .grid-layout {
+    display: grid;
+    grid-template-columns: min-content minmax(100px, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 16px;
+  }
+}
+
+@screen lg {
+  .grid-layout {
+    grid-template-columns: min-content minmax(100px, 2fr) 16rem;
+  }
+}
+
 #ads-container {
   margin: 0 auto;
 }
