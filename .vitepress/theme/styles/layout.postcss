@@ -1,11 +1,20 @@
 *::-webkit-scrollbar {
   width: 6px;
   height: 6px;
-  @apply bg-$c-scrollbar-bg;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  @apply bg-$c-scrollbar rounded-full;
+  transition: background .2s ease-in-out;
+  @apply bg-transparent rounded-full;
+}
+
+*:hover > ::-webkit-scrollbar-thumb {
+  @apply bg-$c-scrollbar;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 body {

@@ -1,15 +1,11 @@
 [auto]: /guide/features/variant-auto-inferr
 [design]: /guide/modes
 
-# Migrating to Windi CSS
+# Migrate from Tailwind CSS
 
 While Windi CSS aims to be compatible with Tailwind CSS, there are some slight differences in configuration.
 
 Some options are no longer necessary, because of its [design].
-
-## Migrate from Tailwind CSS
-
-If you are using Tailwind CSS with the PostCSS plugin, you can follow these instructions to migrate your installation.
 
 ### `package.json`
 

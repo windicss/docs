@@ -3,7 +3,9 @@
 [migration]: /guide/migration
 [vue-windicss-preprocess]: https://github.com/windicss/vue-windicss-preprocess
 
-# Using Windi CSS with Vue
+# Vue CLI integration
+
+> TODO: rewrite
 
 If using Vite.js, check [this page instead](/guide/vite).
 

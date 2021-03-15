@@ -2,13 +2,13 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [migration]: /guide/migration
 
-# Using Windi CSS in Svelte
+# Sapper integration
 
 <kbd>[svelte-windicss-preprocess]</kbd> provides simple integration for Windi CSS in Svelte and Sapper.
 
 > Now we have a great playground, you can [try it online](https://windicss.github.io/svelte-windicss-preprocess/) before installing it.
 
-## Installation 💿
+## Installation
 
 Add the package:
 
