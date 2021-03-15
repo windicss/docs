@@ -1,9 +1,8 @@
-import { resolve, posix } from 'path'
-import { readFileSync, writeFileSync } from 'fs'
-import { defineConfig, Plugin } from 'vite'
+import { defineConfig } from 'vite'
 import Components from 'vite-plugin-components'
 import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 import WindiCSS from 'vite-plugin-windicss'
+import ViteRestart from 'vite-plugin-restart'
 
 export default defineConfig({
   plugins: [
@@ -28,20 +27,9 @@ export default defineConfig({
         fileExtensions: ['vue'],
       },
     }),
-    ((): Plugin => {
-      const dir = posix.resolve(__dirname, '.vitepress/config')
-      return {
-        name: 'watch:config',
-        handleHotUpdate(ctx) {
-          if (ctx.file.startsWith(dir)) {
-            // hack to force the server restart
-            const v = readFileSync('vite.config.ts', 'utf-8')
-            writeFileSync('vite.config.ts', v, 'utf-8')
-            console.log('Bingo!')
-          }
-        },
-      }
-    })(),
+    ViteRestart({
+      restart: '.vitepress/config/*.*',
+    }),
   ],
   optimizeDeps: {
     include: [

@@ -26,6 +26,7 @@ devDependencies:
   vite: 2.0.5
   vite-plugin-components: 0.8.3_vite@2.0.5
   vite-plugin-icons: 0.3.2_@iconify+json@1.1.316
+  vite-plugin-restart: 0.0.1_vite@2.0.5
   vite-plugin-windicss: 0.8.2_vite@2.0.5
   vitepress: 0.12.2
 lockfileVersion: 5.2
@@ -4059,6 +4060,16 @@ packages:
       vue-template-compiler: ^2.6.12
     resolution:
       integrity: sha512-6HDBO6aqJLaJ8lkT9FChAUtniRRzhDWbhNzJLfT7QdDcQ2kaapReksngNEA1+tNlFd5Auey4VGS2VjI3V1KkvA==
+  /vite-plugin-restart/0.0.1_vite@2.0.5:
+    dependencies:
+      chalk: 4.1.0
+      micromatch: 4.0.2
+      vite: 2.0.5
+    dev: true
+    peerDependencies:
+      vite: ^2.0.0-beta.69
+    resolution:
+      integrity: sha512-PSAUOfgDZW7tKDqnDZaq2GBYUFcQ2NS9hsIyYNxt5IMRTkxd/6c3J51n1Y4f7tHvNyZ5boEv9BELudswhk4Q4w==
   /vite-plugin-windicss/0.8.2_vite@2.0.5:
     dependencies:
       '@windicss/plugin-utils': 0.8.2
@@ -4260,6 +4271,7 @@ specifiers:
   vite: ^2.0.5
   vite-plugin-components: ^0.8.3
   vite-plugin-icons: ^0.3.2
+  vite-plugin-restart: ^0.0.1
   vite-plugin-windicss: ^0.8.2
   vitepress: ^0.12.2
   vue: ^3.0.7

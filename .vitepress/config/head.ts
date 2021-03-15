@@ -8,7 +8,7 @@ const head: HeadConfig[] = [
 
   ['meta', { name: 'HandheldFriendly', content: 'True' }],
   ['meta', { name: 'MobileOptimized', content: '320' }],
-  ['meta', { name: 'theme-color', content: '#cc0000' }],
+  ['meta', { name: 'theme-color', content: '#0ea5e9' }],
 
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: metaData.site }],
