@@ -1,6 +1,6 @@
 # Tables
 
-## [Border Collapse](https://tailwindcss.com/docs/border-collapse)
+## Border Collapse
 
 Utilities for controlling whether table borders should collapse or be separated.
 
@@ -9,7 +9,7 @@ Utilities for controlling whether table borders should collapse or be separated.
 | border-collapse | border-collapse: collapse; |
 | border-separate | border-collapse: separate; |
 
-## [Table Layout](https://tailwindcss.com/docs/table-layout)
+## Table Layout
 
 Utilities for controlling the table layout algorithm.
 

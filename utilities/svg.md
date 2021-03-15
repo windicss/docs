@@ -1,6 +1,6 @@
 # SVG
 
-## [Fill](https://tailwindcss.com/docs/fill) ⭐️
+## Fill
 
 Utilities for styling the fill of SVG elements.
 
@@ -13,7 +13,7 @@ Utilities for styling the fill of SVG elements.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     fill: theme => ({
@@ -25,7 +25,7 @@ module.exports = {
 }
 ```
 
-## [Stroke](https://tailwindcss.com/docs/stroke) ⭐️
+## Stroke
 
 Utilities for styling the stroke of SVG elements.
 
@@ -38,7 +38,7 @@ Utilities for styling the stroke of SVG elements.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     stroke: theme => ({
@@ -50,7 +50,7 @@ module.exports = {
 }
 ```
 
-## [Stroke Width](https://tailwindcss.com/docs/stroke-width) ⭐️
+## Stroke Width
 
 Utilities for styling the stroke width of SVG elements.
 
@@ -61,7 +61,7 @@ Utilities for styling the stroke width of SVG elements.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {

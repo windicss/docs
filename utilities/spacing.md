@@ -1,6 +1,6 @@
 # Spacing
 
-## [Padding](https://tailwindcss.com/docs/padding) ⭐️
+## Padding
 
 Utilities for controlling an element's padding.
 
@@ -45,7 +45,7 @@ Utilities for controlling an element's padding.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     padding: {
@@ -58,7 +58,7 @@ module.exports = {
 }
 ```
 
-## [Margin](https://tailwindcss.com/docs/margin) ⭐️
+## Margin
 
 Utilities for controlling an element's margin.
 
@@ -124,7 +124,7 @@ Utilities for controlling an element's margin.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     margin: {
@@ -137,7 +137,7 @@ module.exports = {
 }
 ```
 
-## [Space Between](https://tailwindcss.com/docs/space) ⭐️
+## Space Between
 
 Utilities for controlling the space between child elements.
 
@@ -168,7 +168,7 @@ Utilities for controlling the space between child elements.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     space: {

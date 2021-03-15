@@ -2,9 +2,9 @@
 
 Windi CSS provides official plugins which you can add in your configuration file.
 
-They are similar to the ones from Tailwind CSS, but adapted to the interface of Windi CSS to add improvements like variant-auto-inferr utilities.
+They are similar to the ones from Tailwind CSS, but adapted to the interface of Windi CSS to add improvements like variant-auto-infer utilities.
 
-## [Typography](https://github.com/tailwindlabs/tailwindcss-typography)
+## Typography
 
 ### Utilities
 
@@ -29,7 +29,7 @@ They are similar to the ones from Tailwind CSS, but adapted to the interface of 
 ### Basic Usage
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     // ...
@@ -44,7 +44,7 @@ module.exports = {
 ### Disabling size modifiers
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     // ...
@@ -61,7 +61,7 @@ module.exports = {
 ### Customization
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -87,7 +87,7 @@ module.exports = {
 }
 ```
 
-## [Forms](https://github.com/tailwindlabs/tailwindcss-forms)
+## Forms
 
 ### Base Styles
 
@@ -112,7 +112,7 @@ module.exports = {
 ### Usage
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     // ...
@@ -124,7 +124,7 @@ module.exports = {
 }
 ```
 
-## [Aspect Ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
+## Aspect Ratio
 
 ### Utilities
 
@@ -160,7 +160,7 @@ module.exports = {
 ### Usage
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     // ...
@@ -172,7 +172,7 @@ module.exports = {
 }
 ```
 
-## [Line Clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
+## Line Clamp
 
 ### Utilities
 
@@ -184,7 +184,7 @@ module.exports = {
 ### Usage
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   extend: {
     lineClamp: {
@@ -199,7 +199,7 @@ module.exports = {
 }
 ```
 
-## [Filters](https://github.com/benface/tailwindcss-filters)
+## Filters
 
 ### Utilities
 
@@ -211,7 +211,7 @@ module.exports = {
 ### Usage
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     filter: {
@@ -273,7 +273,7 @@ inspired by [tailwindcss-scroll-snap](https://github.com/innocenzi/tailwindcss-s
 ### Usage
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   plugins: [
     require('windicss/plugin/scroll-snap'),
@@ -285,7 +285,7 @@ module.exports = {
 with TypeScript:
 
 ```ts
-// tailwind.config.ts
+// windi.config.ts
 import scrollSnapPlugin from 'windicss/plugin/scroll-snap'
 
 export default defineConfig({

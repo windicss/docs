@@ -1,6 +1,6 @@
 # Layout
 
-## [Container](https://tailwindcss.com/docs/container)
+## Container
 
 A component for fixing an element's width to the current breakpoint.
 
@@ -45,7 +45,7 @@ To use a container at only a certain breakpoint and up:
 #### Centering by default
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     container: {
@@ -58,7 +58,7 @@ module.exports = {
 #### Horizontal padding
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     container: {
@@ -71,7 +71,7 @@ module.exports = {
 Specify a different padding amount for each breakpoint
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     container: {
@@ -89,7 +89,7 @@ module.exports = {
 
 ***
 
-## [Box Sizing](https://tailwindcss.com/docs/box-sizing)
+## Box Sizing
 
 Utilities for controlling how the browser should calculate an element's total size.
 
@@ -98,7 +98,7 @@ Utilities for controlling how the browser should calculate an element's total si
 | box-border  | box-sizing: border-box;   |
 | box-content | box-sizing: content-box;  |
 
-## [Display](https://tailwindcss.com/docs/display)
+## Display
 
 Utilities for controlling the display box type of an element.
 
@@ -124,7 +124,7 @@ Utilities for controlling the display box type of an element.
 | contents	| display: contents; |
 | hidden	| display: none; |
 
-## [Floats](https://tailwindcss.com/docs/float)
+## Floats
 
 Utilities for controlling the wrapping of content around an element.
 
@@ -134,7 +134,7 @@ Utilities for controlling the wrapping of content around an element.
 | float-left | float: left; |
 | float-none | float: none; |
 
-## [Clear](https://tailwindcss.com/docs/clear)
+## Clear
 
 Utilities for controlling the wrapping of content around an element.
 
@@ -145,7 +145,7 @@ Utilities for controlling the wrapping of content around an element.
 | clear-both | clear: both; |
 | clear-none | clear: none; |
 
-## [Object Fit](https://tailwindcss.com/docs/object-fit)
+## Object Fit
 
 Utilities for controlling how a replaced element's content should be resized.
 
@@ -157,7 +157,7 @@ Utilities for controlling how a replaced element's content should be resized.
 | object-none | object-fit: none; |
 | object-scale-down | object-fit: scale-down; |
 
-## [Object Position](https://tailwindcss.com/docs/object-position)
+## Object Position
 
 Utilities for controlling how a replaced element's content should be positioned within its container.
 
@@ -176,7 +176,7 @@ Utilities for controlling how a replaced element's content should be positioned 
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     objectPosition: {
@@ -196,7 +196,7 @@ module.exports = {
 }
 ```
 
-## [Overflow](https://tailwindcss.com/docs/overflow)
+## Overflow
 
 Utilities for controlling how an element handles content that is too large for the container.
 
@@ -215,7 +215,7 @@ Utilities for controlling how an element handles content that is too large for t
 | overflow-x-scroll | overflow-x: scroll; |
 | overflow-y-scroll | overflow-y: scroll; |
 
-## [Overscroll Behavior](https://tailwindcss.com/docs/overscroll-behavior)
+## Overscroll Behavior
 
 Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area.
 
@@ -231,7 +231,7 @@ Utilities for controlling how the browser behaves when reaching the boundary of 
 | overscroll-x-contain | overscroll-behavior-x: contain; |
 | overscroll-x-none | overscroll-behavior-x: none; |
 
-## [Position](https://tailwindcss.com/docs/position)
+## Position
 
 Utilities for controlling how an element is positioned in the DOM.
 
@@ -243,7 +243,7 @@ Utilities for controlling how an element is positioned in the DOM.
 | relative | position: relative; |
 | sticky | position: sticky; |
 
-## [Top / Right / Bottom / Left](https://tailwindcss.com/docs/top-right-bottom-left) ⭐️
+## Top / Right / Bottom / Left
 
 Utilities for controlling the placement of positioned elements.
 
@@ -426,7 +426,7 @@ Utilities for controlling the placement of positioned elements.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     inset: {
@@ -437,7 +437,7 @@ module.exports = {
 }
 ```
 
-## [Visibility](https://tailwindcss.com/docs/visibility)
+## Visibility
 
 Utilities for controlling the visibility of an element.
 
@@ -446,7 +446,7 @@ Utilities for controlling the visibility of an element.
 | visible | visibility: visible; |
 | invisible | visibility: hidden; |
 
-## [Z-Index](https://tailwindcss.com/docs/z-index) ⭐️
+## Z-Index
 
 Utilities for controlling the stack order of an element.
 
@@ -466,7 +466,7 @@ Utilities for controlling the stack order of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     zIndex: {

@@ -1,6 +1,6 @@
 # Backgrounds
 
-## [Background Attachment](https://tailwindcss.com/docs/background-attachment)
+## Background Attachment
 
 Utilities for controlling how a background image behaves when scrolling.
 
@@ -10,7 +10,7 @@ Utilities for controlling how a background image behaves when scrolling.
 | bg-local | background-attachment: local; |
 | bg-scroll | background-attachment: scroll; |
 
-## [Background Clip](https://tailwindcss.com/docs/background-clip)
+## Background Clip
 
 Utilities for controlling the bounding box of an element's background.
 
@@ -21,7 +21,7 @@ Utilities for controlling the bounding box of an element's background.
 | bg-clip-content | background-clip: content-box; |
 | bg-clip-text | background-clip: text; |
 
-## [Background Color](https://tailwindcss.com/docs/background-color) ⭐️
+## Background Color
 
 Utilities for controlling an element's background color.
 
@@ -34,7 +34,7 @@ Utilities for controlling an element's background color.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     backgroundColor: theme => ({
@@ -47,7 +47,7 @@ module.exports = {
 }
 ```
 
-## [Background Opacity](https://tailwindcss.com/docs/background-opacity) ⭐️
+## Background Opacity
 
 Utilities for controlling the opacity of an element's background color.
 
@@ -56,7 +56,7 @@ Utilities for controlling the opacity of an element's background color.
 | `bg-opacity-${int<=100}` | --tw-bg-opacity: `${int/100};` |
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -68,7 +68,7 @@ module.exports = {
 }
 ```
 
-## [Background Position](https://tailwindcss.com/docs/background-position)
+## Background Position
 
 Utilities for controlling the position of an element's background image.
 
@@ -87,7 +87,7 @@ Utilities for controlling the position of an element's background image.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     backgroundPosition: {
@@ -107,7 +107,7 @@ module.exports = {
 }
 ```
 
-## [Background Repeat](https://tailwindcss.com/docs/background-repeat)
+## Background Repeat
 
 Utilities for controlling the repetition of an element's background image.
 
@@ -120,7 +120,7 @@ Utilities for controlling the repetition of an element's background image.
 | bg-repeat-round | background-repeat: round; |
 | bg-repeat-space | background-repeat: space; |
 
-## [Background Size](https://tailwindcss.com/docs/background-size)
+## Background Size
 
 Utilities for controlling the background size of an element's background image.
 
@@ -146,7 +146,7 @@ module.exports = {
 }
 ```
 
-## [Background Image](https://tailwindcss.com/docs/background-image)
+## Background Image
 
 Utilities for controlling an element's background image.
 
@@ -165,7 +165,7 @@ Utilities for controlling an element's background image.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -178,7 +178,7 @@ module.exports = {
 }
 ```
 
-## [Gradient Color Stops](https://tailwindcss.com/docs/gradient-color-stops) ⭐️
+## Gradient Color Stops
 
 Utilities for controlling the color stops in background gradients.
 

@@ -2,7 +2,7 @@
 
 You can use a combination of directives and CSS to take advantage of the available utilities.
 
-## [@apply](https://tailwindcss.com/docs/functions-and-directives#apply)
+## @apply
 
 Use `@apply` to inline any existing utility classes into your style block.
 
@@ -61,7 +61,7 @@ If you'd like to `@apply` an existing class and make it `!important`, simply add
 }
 ```
 
-## [@variants](https://tailwindcss.com/docs/functions-and-directives#variants)
+## @variants
 
 You can generate [screen variants, state variants, theme variants](/utilities/variants) of your own utilities by wrapping their definitions in the `@variants` directive.
 
@@ -109,7 +109,7 @@ You can generate [screen variants, state variants, theme variants](/utilities/va
 }
 ```
 
-## [@screen](https://tailwindcss.com/docs/functions-and-directives#screen)
+## @screen
 
 The `@screen` directive allows you to create media queries that reference your breakpoints by name instead of duplicating their values in your own CSS.
 
@@ -129,10 +129,10 @@ The `@screen` directive allows you to create media queries that reference your b
 
 | Directive |	Status |
 | :-------- | :----- |
-| [@apply](https://tailwindcss.com/docs/functions-and-directives#apply) | ✅ &ensp;Supported |
-| [@variants](https://tailwindcss.com/docs/functions-and-directives#variants) | ✅ &ensp;Supported |
-| [@screen](https://tailwindcss.com/docs/functions-and-directives#screen) | ✅ &ensp;Supported |
-| [@layer](https://tailwindcss.com/docs/functions-and-directives#layer) | ❗️&ensp;In development |
-| [theme()](https://tailwindcss.com/docs/functions-and-directives#theme) | ❗️&ensp;In development |
-| [@tailwind](https://tailwindcss.com/docs/functions-and-directives#tailwind) | ❌ &ensp;Not Needed |
-| [@responsive](https://tailwindcss.com/docs/functions-and-directives#responsive) | ❌ &ensp;Not Needed |\
+| @apply | ✅ &ensp;Supported |
+| @variants | ✅ &ensp;Supported |
+| @screen | ✅ &ensp;Supported |
+| @layer | ❗️&ensp;In development |
+| theme() | ❗️&ensp;In development |
+| @tailwind | ❌ &ensp;Not Needed |
+| @responsive | ❌ &ensp;Not Needed |

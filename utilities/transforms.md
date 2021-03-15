@@ -1,6 +1,6 @@
 # Transforms
 
-## [Transform](https://tailwindcss.com/docs/transform)
+## Transform
 
 Utilities for controlling transform behaviour.
 
@@ -10,7 +10,7 @@ Utilities for controlling transform behaviour.
 | transform-gpu | --tw-translate-x: 0;<br>--tw-translate-y: 0;<br>--tw-rotate: 0;<br>--tw-skew-x: 0;<br>--tw-skew-y: 0;<br>--tw-scale-x: 1;<br>--tw-scale-y: 1;<br>transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); |
 | transform-none | transform: none; |
 
-## [Transform Origin](https://tailwindcss.com/docs/transform-origin)
+## Transform Origin
 
 Utilities for specifying the origin for an element's transformations.
 
@@ -29,7 +29,7 @@ Utilities for specifying the origin for an element's transformations.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -42,7 +42,7 @@ module.exports = {
 }
 ```
 
-## [Scale](https://tailwindcss.com/docs/scale) ⭐️
+## Scale
 
 Utilities for scaling elements with transform.
 
@@ -55,7 +55,7 @@ Utilities for scaling elements with transform.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     scale: {
@@ -66,7 +66,7 @@ module.exports = {
 }
 ```
 
-## [Rotate](https://tailwindcss.com/docs/rotate) ⭐️
+## Rotate
 
 Utilities for rotating elements with transform.
 
@@ -78,7 +78,7 @@ Utilities for rotating elements with transform.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     rotate: {
@@ -88,7 +88,7 @@ module.exports = {
 }
 ```
 
-## [Translate](https://tailwindcss.com/docs/translate) ⭐️
+## Translate
 
 Utilities for translating elements with transform.
 
@@ -128,10 +128,10 @@ Utilities for translating elements with transform.
 
 ### Customizing
 
-You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your tailwind.config.js file:
+You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -145,10 +145,10 @@ module.exports = {
 }
 ```
 
-To customize the translate scale separately, use the theme.translate section of your tailwind.config.js file.
+To customize the translate scale separately, use the theme.translate section of your windi.config.js file.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -165,7 +165,7 @@ module.exports = {
 }
 ```
 
-## [Skew](https://tailwindcss.com/docs/skew) ⭐️
+## Skew
 
 Utilities for skewing elements with transform.
 
@@ -179,7 +179,7 @@ Utilities for skewing elements with transform.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {

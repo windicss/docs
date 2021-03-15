@@ -1,6 +1,6 @@
 # Effects
 
-## [Box Shadow](https://tailwindcss.com/docs/box-shadow)
+## Box Shadow
 
 Utilities for controlling the box shadow of an element.
 
@@ -19,7 +19,7 @@ Utilities for controlling the box shadow of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     boxShadow: {
@@ -37,7 +37,7 @@ module.exports = {
 }
 ```
 
-## [Opacity](https://tailwindcss.com/docs/opacity) ⭐️
+## Opacity
 
 Utilities for controlling the opacity of an element.
 
@@ -48,7 +48,7 @@ Utilities for controlling the opacity of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     opacity: {

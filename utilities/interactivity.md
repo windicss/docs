@@ -1,6 +1,6 @@
 # Interactivity
 
-## [Appearance](https://tailwindcss.com/docs/appearance)
+## Appearance
 
 Utilities for suppressing native form control styling.
 
@@ -8,7 +8,7 @@ Utilities for suppressing native form control styling.
 | :---- | :--------- |
 | appearance-none | appearance: none; |
 
-## [Cursor](https://tailwindcss.com/docs/cursor)
+## Cursor
 
 Utilities for controlling the cursor style when hovering over an element.
 
@@ -25,7 +25,7 @@ Utilities for controlling the cursor style when hovering over an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     cursor: {
@@ -43,7 +43,7 @@ module.exports = {
 }
 ```
 
-## [Outline](https://tailwindcss.com/docs/outline) ⭐️
+## Outline
 
 Utilities for controlling an element's outline.
 
@@ -66,7 +66,7 @@ Utilities for controlling an element's outline.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -81,7 +81,7 @@ module.exports = {
 You can also provide an outline-offset value for any custom outline utilities using a tuple of the form [outline, outlineOffset]:
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -93,7 +93,7 @@ module.exports = {
 }
 ```
 
-## [Pointer Events](https://tailwindcss.com/docs/pointer-events)
+## Pointer Events
 
 Utilities for controlling whether an element responds to pointer events.
 
@@ -102,7 +102,7 @@ Utilities for controlling whether an element responds to pointer events.
 | pointer-events-none | pointer-events: none; |
 | pointer-events-auto | pointer-events: auto; |
 
-## [Resize](https://tailwindcss.com/docs/resize)
+## Resize
 
 Utilities for controlling how an element can be resized.
 
@@ -113,7 +113,7 @@ Utilities for controlling how an element can be resized.
 | resize-x | resize: horizontal; |
 | resize | resize: both; |
 
-## [User Select](https://tailwindcss.com/docs/user-select)
+## User Select
 
 Utilities for controlling whether the user can select text in an element.
 

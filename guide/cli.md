@@ -15,12 +15,12 @@ windicss --help
 windicss --init <project>
 windicss --init <project> --compile
 ```
-- Compile to Tailwind CSS
+- Compile to CSS
 ```bash
-windicss './**/*.html' -to tailwind.css
-windicss './**/*.html' -mto tailwind.min.css
+windicss './**/*.html' -to windi.css
+windicss './**/*.html' -mto windi.min.css
 ```
-- Transform Tailwind CSS to normal css file
+- Transform CSS to normal css file
 ```bash
 windicss './**/*.html' -cto windi.css
 windicss './**/*.html' -ts

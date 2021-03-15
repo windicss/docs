@@ -26,7 +26,7 @@ If you don't use a certain utility the corresponding CSS will not be generated, 
 ## Example Configuration
 
 ```js
-// Example `tailwind.config.js` file
+// Example `windi.config.js` file
 const colors = require('windicss/colors')
 const plugin = require('windicss/plugin')
 

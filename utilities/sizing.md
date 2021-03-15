@@ -1,6 +1,6 @@
 # Sizing
 
-## [Width](https://tailwindcss.com/docs/width) ⭐️
+## Width
 
 Utilities for setting the width of an element
 
@@ -41,7 +41,7 @@ Utilities for setting the width of an element
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -53,7 +53,7 @@ module.exports = {
 }
 ```
 
-## [Min-Width](https://tailwindcss.com/docs/min-width) ⭐️
+## Min-Width
 
 Utilities for setting the minimum width of an element
 
@@ -94,7 +94,7 @@ Utilities for setting the minimum width of an element
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     minWidth: {
@@ -105,7 +105,7 @@ module.exports = {
 }
 ```
 
-## [Max-Width](https://tailwindcss.com/docs/max-width) ⭐️
+## Max-Width
 
 Utilities for setting the maximum width of an element
 
@@ -146,7 +146,7 @@ Utilities for setting the maximum width of an element
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     maxWidth: {
@@ -158,7 +158,7 @@ module.exports = {
 }
 ```
 
-## [Height](https://tailwindcss.com/docs/height) ⭐️
+## Height
 
 Utilities for setting the height of an element
 
@@ -199,7 +199,7 @@ Utilities for setting the height of an element
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     height: {
@@ -212,7 +212,7 @@ module.exports = {
 }
 ```
 
-## [Min-Height](https://tailwindcss.com/docs/min-height) ⭐️
+## Min-Height
 
 Utilities for setting the minimum height of an element
 
@@ -254,7 +254,7 @@ Utilities for setting the minimum height of an element
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     minHeight: {
@@ -268,7 +268,7 @@ module.exports = {
 }
 ```
 
-## [Max-Height](https://tailwindcss.com/docs/max-height) ⭐️
+## Max-Height
 
 Utilities for setting the maximum height of an element
 
@@ -309,7 +309,7 @@ Utilities for setting the maximum height of an element
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     maxHeight: {

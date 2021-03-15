@@ -15,11 +15,9 @@
 
 # Getting Started
 
-[__Windi CSS__][windicss] is a next generation compiler for [Tailwind CSS].
+[__Windi CSS__][windicss] is a next generation utility-first CSS framework.
 
 If you are already familiar with [Tailwind CSS], think about [Windi CSS] as an alternative to Tailwind, which provides faster load times, and supports all the features in Tailwind v2.0 and more.
-
-If you are not familiar with [Tailwind CSS], you can think of [Windi CSS] as a utility-first CSS library.
 
 ## Why Windi CSS? 🤔
 

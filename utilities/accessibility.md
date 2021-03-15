@@ -1,6 +1,6 @@
 # Accessibility
 
-## [Screen Readers](https://tailwindcss.com/docs/screen-readers)
+## Screen Readers
 
 Utilities for improving accessibility with screen readers.
 

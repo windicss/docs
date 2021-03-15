@@ -1,6 +1,6 @@
 # Transitions and Animations
 
-## [Transition Property](https://tailwindcss.com/docs/transition-property)
+## Transition Property
 
 Utilities for controlling which CSS properties transition.
 
@@ -17,7 +17,7 @@ Utilities for controlling which CSS properties transition.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -30,7 +30,7 @@ module.exports = {
 }
 ```
 
-## [Transition Duration](https://tailwindcss.com/docs/transition-duration) ⭐️
+## Transition Duration
 
 Utilities for controlling the duration of CSS transitions.
 
@@ -41,7 +41,7 @@ Utilities for controlling the duration of CSS transitions.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -54,7 +54,7 @@ module.exports = {
 }
 ```
 
-## [Transition Timing Function](https://tailwindcss.com/docs/transition-timing-function)
+## Transition Timing Function
 
 Utilities for controlling the easing of CSS transitions.
 
@@ -68,7 +68,7 @@ Utilities for controlling the easing of CSS transitions.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -81,7 +81,7 @@ module.exports = {
 }
 ```
 
-## [Transition Delay](https://tailwindcss.com/docs/transition-delay) ⭐️
+## Transition Delay
 
 Utilities for controlling the delay of CSS transitions.
 
@@ -92,7 +92,7 @@ Utilities for controlling the delay of CSS transitions.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -105,7 +105,7 @@ module.exports = {
 }
 ```
 
-## [Animation](https://tailwindcss.com/docs/animation)
+## Animation
 
 Utilities for animating elements with CSS animations.
 
@@ -120,7 +120,7 @@ Utilities for animating elements with CSS animations.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -135,7 +135,7 @@ module.exports = {
 To add new animation @keyframes, use the keyframes section of your theme configuration:
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {

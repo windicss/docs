@@ -1,6 +1,6 @@
 # Borders
 
-## [Border Radius](https://tailwindcss.com/docs/border-radius) ⭐️
+## Border Radius
 
 Utilities for controlling the border radius of an element.
 
@@ -116,7 +116,7 @@ Utilities for controlling the border radius of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     borderRadius: {
@@ -132,7 +132,7 @@ module.exports = {
 }
 ```
 
-## [Border Width](https://tailwindcss.com/docs/border-width) ⭐️
+## Border Width
 
 Utilities for controlling the width of an element's borders.
 
@@ -164,7 +164,7 @@ Utilities for controlling the width of an element's borders.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     borderWidth: {
@@ -176,7 +176,7 @@ module.exports = {
 }
 ```
 
-## [Border Color](https://tailwindcss.com/docs/border-color) ⭐️
+## Border Color
 
 Utilities for controlling the color of an element's borders.
 
@@ -188,10 +188,10 @@ Utilities for controlling the color of an element's borders.
 
 ### Customizing
 
-You can customize your color palette by editing the `theme.colors` section of your `tailwind.config.js` file, or customize just your border colors using the theme.borderColor section.
+You can customize your color palette by editing the `theme.colors` section of your `windi.config.js` file, or customize just your border colors using the theme.borderColor section.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     borderColor: theme => ({
@@ -205,7 +205,7 @@ module.exports = {
 }
 ```
 
-## [Border Opacity](https://tailwindcss.com/docs/border-opacity) ⭐️
+## Border Opacity
 
 Utilities for controlling the opacity of an element's border color.
 
@@ -214,7 +214,7 @@ Utilities for controlling the opacity of an element's border color.
 | `border-opacity-${int<=100}` | --tw-border-opacity: `${int/100};` |
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -226,7 +226,7 @@ module.exports = {
 }
 ```
 
-## [Border Style](https://tailwindcss.com/docs/border-style)
+## Border Style
 
 Utilities for controlling the style of an element's borders.
 
@@ -238,7 +238,7 @@ Utilities for controlling the style of an element's borders.
 | border-double | border-style: double; |
 | border-none | border-style: none; |
 
-## [Divide Width](https://tailwindcss.com/docs/divide-width) ⭐️
+## Divide Width
 
 Utilities for controlling the border width between elements.
 
@@ -260,10 +260,10 @@ Utilities for controlling the border width between elements.
 
 ### Customizing
 
-The divide width scale inherits its values from the `borderWidth` scale by default, so if you'd like to customize your values for both border width and divide width together, use the `theme.borderWidth` section of your `tailwind.config.js` file.
+The divide width scale inherits its values from the `borderWidth` scale by default, so if you'd like to customize your values for both border width and divide width together, use the `theme.borderWidth` section of your `windi.config.js` file.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     borderWidth: {
@@ -279,10 +279,10 @@ module.exports = {
 }
 ```
 
-To customize only the divide width values, use the theme.divideWidth section of your tailwind.config.js file.
+To customize only the divide width values, use the theme.divideWidth section of your windi.config.js file.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     divideWidth: {
@@ -298,7 +298,7 @@ module.exports = {
 }
 ```
 
-## [Divide Color](https://tailwindcss.com/docs/divide-color) ⭐️
+## Divide Color
 
 Utilities for controlling the border color between elements.
 
@@ -311,7 +311,7 @@ Utilities for controlling the border color between elements.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     divideColor: theme => ({
@@ -324,7 +324,7 @@ module.exports = {
 }
 ```
 
-## [Divide Opacity](https://tailwindcss.com/docs/divide-opacity) ⭐️
+## Divide Opacity
 
 Utilities for controlling the opacity borders between elements.
 
@@ -336,7 +336,7 @@ Utilities for controlling the opacity borders between elements.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -350,7 +350,7 @@ module.exports = {
 }
 ```
 
-## [Divide Style](https://tailwindcss.com/docs/divide-style)
+## Divide Style
 
 Utilities for controlling the border style between elements.
 
@@ -362,7 +362,7 @@ Utilities for controlling the border style between elements.
 | divide-double | border-style: double; |
 | divide-none | border-style: none; |
 
-## [Ring Width](https://tailwindcss.com/docs/ring-width) ⭐️
+## Ring Width
 
 Utilities for creating outline rings with box-shadows.
 
@@ -383,7 +383,7 @@ Utilities for creating outline rings with box-shadows.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -397,7 +397,7 @@ module.exports = {
 }
 ```
 
-## [Ring Color](https://tailwindcss.com/docs/ring-color) ⭐️
+## Ring Color
 
 Utilities for setting the color of outline rings.
 
@@ -410,7 +410,7 @@ Utilities for setting the color of outline rings.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 const colors = require('windicss/colors')
 
 module.exports = {
@@ -423,7 +423,7 @@ module.exports = {
 }
 ```
 
-## [Ring Opacity](https://tailwindcss.com/docs/ring-opacity) ⭐️
+## Ring Opacity
 
 Utilities for setting the opacity of outline rings.
 
@@ -434,7 +434,7 @@ Utilities for setting the opacity of outline rings.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -448,7 +448,7 @@ module.exports = {
 }
 ```
 
-## [Ring Offset Width](https://tailwindcss.com/docs/ring-offset-width) ⭐️
+## Ring Offset Width
 
 Utilities for simulating an offset when adding outline rings.
 
@@ -459,7 +459,7 @@ Utilities for simulating an offset when adding outline rings.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -473,7 +473,7 @@ module.exports = {
 }
 ```
 
-## [Ring Offset Color](https://tailwindcss.com/docs/ring-offset-color) ⭐️
+## Ring Offset Color
 
 Utilities for setting the color of outline ring offsets.
 
@@ -486,7 +486,7 @@ Utilities for setting the color of outline ring offsets.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 const colors = require('windicss/colors')
 
 module.exports = {

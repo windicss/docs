@@ -1,6 +1,6 @@
 # Flexbox
 
-## [Flex Direction](https://tailwindcss.com/docs/flex-direction)
+## Flex Direction
 
 Utilities for controlling the direction of flex items.
 
@@ -11,7 +11,7 @@ Utilities for controlling the direction of flex items.
 | flex-col | flex-direction: column; |
 | flex-col-reverse | flex-direction: column-reverse; |
 
-## [Flex Wrap](https://tailwindcss.com/docs/flex-wrap)
+## Flex Wrap
 
 Utilities for controlling how flex items wrap.
 
@@ -21,7 +21,7 @@ Utilities for controlling how flex items wrap.
 | flex-wrap-reverse | flex-wrap: wrap-reverse; |
 | flex-nowrap | flex-wrap: nowrap; |
 
-## [Flex](https://tailwindcss.com/docs/flex)
+## Flex
 
 Utilities for controlling how flex items both grow and shrink.
 
@@ -35,7 +35,7 @@ Utilities for controlling how flex items both grow and shrink.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     flex: {
@@ -50,7 +50,7 @@ module.exports = {
 }
 ```
 
-## [Flex Grow](https://tailwindcss.com/docs/flex-grow)
+## Flex Grow
 
 Utilities for controlling how flex items grow.
 
@@ -62,7 +62,7 @@ Utilities for controlling how flex items grow.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     flexGrow: {
@@ -74,7 +74,7 @@ module.exports = {
 }
 ```
 
-## [Flex Shrink](https://tailwindcss.com/docs/flex-shrink)
+## Flex Shrink
 
 Utilities for controlling how flex items shrink.
 
@@ -86,7 +86,7 @@ Utilities for controlling how flex items shrink.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     flexShrink: {
@@ -98,7 +98,7 @@ module.exports = {
 }
 ```
 
-## [Order](https://tailwindcss.com/docs/order) ⭐️
+## Order
 
 Utilities for controlling the order of flex and grid items.
 
@@ -120,7 +120,7 @@ Utilities for controlling the order of flex and grid items.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     order: {

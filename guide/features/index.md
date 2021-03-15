@@ -44,7 +44,7 @@ You can prefix any utility classes with `!` to make them as `!important`. This c
 We have also added a shortcuts config to help you quickly add utilities. With this feature, you can even share inline components.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     /* ... */
@@ -72,7 +72,7 @@ module.exports = {
 css-in-js syntax is also supported for complex utility
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     /* ... */

@@ -34,7 +34,7 @@ You can now remove the Tailwind CSS imports from your css entry.
 
 These are now handled automatically by Windi CSS.
 
-### `tailwind.config.js`
+### `windi.config.js`
 
 Since all variants are [automatically enabled][auto], `purge` is no longer needed.
 

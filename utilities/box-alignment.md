@@ -1,6 +1,6 @@
 # Box Alignment
 
-## [Justify Content](https://tailwindcss.com/docs/justify-content)
+## Justify Content
 
 Utilities for controlling how flex and grid items are positioned along a container's main axis.
 
@@ -13,7 +13,7 @@ Utilities for controlling how flex and grid items are positioned along a contain
 | justify-around | justify-content: space-around; |
 | justify-evenly | justify-content: space-evenly; |
 
-## [Justify Items](https://tailwindcss.com/docs/justify-items)
+## Justify Items
 
 Utilities for controlling how grid items are aligned along their inline axis.
 
@@ -25,7 +25,7 @@ Utilities for controlling how grid items are aligned along their inline axis.
 | justify-items-center | justify-items: center; |
 | justify-items-stretch | justify-items: stretch; |
 
-## [Justify Self](https://tailwindcss.com/docs/justify-self)
+## Justify Self
 
 Utilities for controlling how an individual grid item is aligned along its inline axis.
 
@@ -37,7 +37,7 @@ Utilities for controlling how an individual grid item is aligned along its inlin
 | justify-self-center | justify-self: center; |
 | justify-self-stretch | justify-self: stretch; |
 
-## [Align Content](https://tailwindcss.com/docs/align-content)
+## Align Content
 
 Utilities for controlling how rows are positioned in multi-row flex and grid containers.
 
@@ -50,7 +50,7 @@ Utilities for controlling how rows are positioned in multi-row flex and grid con
 | content-around | align-content: space-around; |
 | content-evenly | align-content: space-evenly; |
 
-## [Align Items](https://tailwindcss.com/docs/align-items)
+## Align Items
 
 Utilities for controlling how flex and grid items are positioned along a container's cross axis.
 
@@ -62,7 +62,7 @@ Utilities for controlling how flex and grid items are positioned along a contain
 | items-baseline | align-items: baseline; |
 | items-stretch | align-items: stretch; |
 
-## [Align Self](https://tailwindcss.com/docs/align-self)
+## Align Self
 
 Utilities for controlling how an individual flex or grid item is positioned along its container's cross axis.
 
@@ -74,7 +74,7 @@ Utilities for controlling how an individual flex or grid item is positioned alon
 | self-center | align-self: center; |
 | self-stretch | align-self: stretch; |
 
-## [Place Content](https://tailwindcss.com/docs/place-content)
+## Place Content
 
 Utilities for controlling how content is justified and aligned at the same time.
 
@@ -88,7 +88,7 @@ Utilities for controlling how content is justified and aligned at the same time.
 | place-content-evenly | place-content: space-evenly; |
 | place-content-stretch | place-content: stretch; |
 
-## [Place Items](https://tailwindcss.com/docs/place-items)
+## Place Items
 
 Utilities for controlling how items are justified and aligned at the same time.
 
@@ -100,7 +100,7 @@ Utilities for controlling how items are justified and aligned at the same time.
 | place-items-center | place-items: center; |
 | place-items-stretch | place-items: stretch; |
 
-## [Place Self](https://tailwindcss.com/docs/place-self)
+## Place Self
 
 Utilities for controlling how an individual item is justified and aligned at the same time.
 

@@ -1,6 +1,6 @@
 # Grid
 
-## [Grid Template Columns](https://tailwindcss.com/docs/grid-template-columns) ⭐️
+## Grid Template Columns
 
 Utilities for specifying the columns in a grid layout.
 
@@ -19,7 +19,7 @@ Utilities for specifying the columns in a grid layout.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -32,7 +32,7 @@ module.exports = {
 }
 ```
 
-## [Grid Column Start / End](https://tailwindcss.com/docs/grid-column) ⭐️
+## Grid Column Start / End
 
 Utilities for controlling how elements are sized and placed across grid columns.
 
@@ -56,7 +56,7 @@ Utilities for controlling how elements are sized and placed across grid columns.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -74,7 +74,7 @@ module.exports = {
 }
 ```
 
-## [Grid Template Rows](https://tailwindcss.com/docs/grid-template-rows) ⭐️
+## Grid Template Rows
 
 Utilities for specifying the rows in a grid layout.
 
@@ -93,7 +93,7 @@ Utilities for specifying the rows in a grid layout.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -105,7 +105,7 @@ module.exports = {
 }
 ```
 
-## [Grid Row Start / End](https://tailwindcss.com/docs/grid-row) ⭐️
+## Grid Row Start / End
 
 Utilities for controlling how elements are sized and placed across grid rows.
 
@@ -129,7 +129,7 @@ Utilities for controlling how elements are sized and placed across grid rows.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -147,7 +147,7 @@ module.exports = {
 }
 ```
 
-## [Grid Auto Flow](https://tailwindcss.com/docs/grid-auto-flow)
+## Grid Auto Flow
 
 Utilities for controlling how elements in a grid are auto-placed.
 
@@ -158,7 +158,7 @@ Utilities for controlling how elements in a grid are auto-placed.
 | grid-flow-row-dense | grid-auto-flow: row dense; |
 | grid-flow-col-dense | grid-auto-flow: column dense; |
 
-## [Grid Auto Columns](https://tailwindcss.com/docs/grid-auto-columns)
+## Grid Auto Columns
 
 Utilities for controlling the size of implicitly-created grid columns.
 
@@ -172,7 +172,7 @@ Utilities for controlling the size of implicitly-created grid columns.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -184,7 +184,7 @@ module.exports = {
 }
 ```
 
-## [Grid Auto Rows](https://tailwindcss.com/docs/grid-auto-rows)
+## Grid Auto Rows
 
 Utilities for controlling the size of implicitly-created grid rows.
 
@@ -198,7 +198,7 @@ Utilities for controlling the size of implicitly-created grid rows.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -210,7 +210,7 @@ module.exports = {
 }
 ```
 
-## [Gap](https://tailwindcss.com/docs/gap) ⭐️
+## Gap
 
 Utilities for controlling gutters between grid rows and columns.
 
@@ -235,10 +235,10 @@ Utilities for controlling gutters between grid rows and columns.
 
 ### Customizing
 
-You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your tailwind.config.js file:
+You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -253,7 +253,7 @@ module.exports = {
 To customize the gap scale separately, use the gap section of your Tailwind theme config.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {

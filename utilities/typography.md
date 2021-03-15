@@ -1,6 +1,6 @@
 # Typography
 
-## [Font Family](https://tailwindcss.com/docs/font-family)
+## Font Family
 
 Utilities for controlling the font family of an element.
 
@@ -51,7 +51,7 @@ Note that Tailwind does not automatically escape font names for you. If you're u
 }
 ```
 
-## [Font Size](https://tailwindcss.com/docs/font-size) ⭐️
+## Font Size
 
 Utilities for controlling the font size of an element.
 
@@ -75,7 +75,7 @@ Utilities for controlling the font size of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     fontSize: {
@@ -96,10 +96,10 @@ module.exports = {
 }
 ```
 
-You can provide a default line-height for each of your font-sizes using a tuple of the form [fontSize, lineHeight] in your tailwind.config.js file.
+You can provide a default line-height for each of your font-sizes using a tuple of the form [fontSize, lineHeight] in your windi.config.js file.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     fontSize: {
@@ -112,10 +112,10 @@ module.exports = {
 }
 ```
 
-If you also want to provide a default letter-spacing value for a font size, you can do so using a tuple of the form [fontSize, { letterSpacing, lineHeight }] in your tailwind.config.js file.
+If you also want to provide a default letter-spacing value for a font size, you can do so using a tuple of the form [fontSize, { letterSpacing, lineHeight }] in your windi.config.js file.
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     fontSize: {
@@ -132,7 +132,7 @@ module.exports = {
 }
 ```
 
-## [Font Smoothing](https://tailwindcss.com/docs/font-smoothing)
+## Font Smoothing
 
 Utilities for controlling the font smoothing of an element.
 
@@ -141,7 +141,7 @@ Utilities for controlling the font smoothing of an element.
 | antialiased | -webkit-font-smoothing: antialiased;<br>-moz-osx-font-smoothing: grayscale; |
 | subpixel-antialiased | -webkit-font-smoothing: auto;<br>-moz-osx-font-smoothing: auto; |
 
-## [Font Style](https://tailwindcss.com/docs/font-style)
+## Font Style
 
 Utilities for controlling the style of text.
 
@@ -150,7 +150,7 @@ Utilities for controlling the style of text.
 | italic | font-style: italic; |
 | not-italic | font-style: normal; |
 
-## [Font Weight](https://tailwindcss.com/docs/font-weight) ⭐️
+## Font Weight
 
 Utilities for controlling the font weight of an element.
 
@@ -170,7 +170,7 @@ Utilities for controlling the font weight of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     fontWeight: {
@@ -190,7 +190,7 @@ module.exports = {
 }
 ```
 
-## [Font Variant Numeric](https://tailwindcss.com/docs/font-variant-numeric)
+## Font Variant Numeric
 
 Utilities for controlling the variant of numbers.
 
@@ -206,7 +206,7 @@ Utilities for controlling the variant of numbers.
 | diagonal-fractions | font-variant-numeric: diagonal-fractions; |
 | stacked-fractions | font-variant-numeric: stacked-fractions; |
 
-## [Letter Spacing](https://tailwindcss.com/docs/letter-spacing) ⭐️
+## Letter Spacing
 
 Utilities for controlling the tracking (letter spacing) of an element.
 
@@ -224,7 +224,7 @@ Utilities for controlling the tracking (letter spacing) of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     letterSpacing: {
@@ -240,7 +240,7 @@ module.exports = {
 }
 ```
 
-## [Line Height](https://tailwindcss.com/docs/line-height) ⭐️
+## Line Height
 
 Utilities for controlling the leading (line height) of an element.
 
@@ -257,7 +257,7 @@ Utilities for controlling the leading (line height) of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -269,7 +269,7 @@ module.exports = {
 }
 ```
 
-## [List Style Type](https://tailwindcss.com/docs/list-style-type)
+## List Style Type
 
 Utilities for controlling the bullet/number style of a list.
 
@@ -282,7 +282,7 @@ Utilities for controlling the bullet/number style of a list.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     listStyleType: {
@@ -296,7 +296,7 @@ module.exports = {
 }
 ```
 
-## [List Style Position](https://tailwindcss.com/docs/list-style-position)
+## List Style Position
 
 Utilities for controlling the position of bullets/numbers in lists.
 
@@ -305,7 +305,7 @@ Utilities for controlling the position of bullets/numbers in lists.
 | list-inside | list-style-position: inside; |
 | list-outside | list-style-position: outside; |
 
-## [Placeholder Color](https://tailwindcss.com/docs/placeholder-color) ⭐️
+## Placeholder Color
 
 Utilities for controlling the color of placeholder text.
 
@@ -318,7 +318,7 @@ Utilities for controlling the color of placeholder text.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     placeholderColor: {
@@ -330,7 +330,7 @@ module.exports = {
 }
 ```
 
-## [Placeholder Opacity](https://tailwindcss.com/docs/placeholder-opacity) ⭐️
+## Placeholder Opacity
 
 Utilities for controlling the opacity of an element's placeholder color.
 
@@ -341,7 +341,7 @@ Utilities for controlling the opacity of an element's placeholder color.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -353,7 +353,7 @@ module.exports = {
 }
 ```
 
-## [Text Alignment](https://tailwindcss.com/docs/text-align)
+## Text Alignment
 
 Utilities for controlling the alignment of text.
 
@@ -364,7 +364,7 @@ Utilities for controlling the alignment of text.
 | text-right | text-align: right; |
 | text-justify | text-align: justify; |
 
-## [Text Color](https://tailwindcss.com/docs/text-color) ⭐️
+## Text Color
 
 Utilities for controlling the text color of an element.
 
@@ -377,7 +377,7 @@ Utilities for controlling the text color of an element.
 ### Customizing
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     textColor: {
@@ -389,7 +389,7 @@ module.exports = {
 }
 ```
 
-## [Text Opacity](https://tailwindcss.com/docs/text-opacity) ⭐️
+## Text Opacity
 
 Utilities for controlling the opacity of an element's text color.
 
@@ -398,7 +398,7 @@ Utilities for controlling the opacity of an element's text color.
 | `text-opacity-${int<=100}` | --tw-text-opacity: `${int/100};` |
 
 ```js
-// tailwind.config.js
+// windi.config.js
 module.exports = {
   theme: {
     extend: {
@@ -412,7 +412,7 @@ module.exports = {
 }
 ```
 
-## [Text Decoration](https://tailwindcss.com/docs/text-decoration)
+## Text Decoration
 
 Utilities for controlling the decoration of text.
 
@@ -422,7 +422,7 @@ Utilities for controlling the decoration of text.
 | line-through | text-decoration: line-through; |
 | no-underline | text-decoration: none; |
 
-## [Text Transform](https://tailwindcss.com/docs/text-transform)
+## Text Transform
 
 Utilities for controlling the transformation of text.
 
@@ -433,7 +433,7 @@ Utilities for controlling the transformation of text.
 | capitalize | text-transform: capitalize; |
 | normal-case | text-transform: none; |
 
-## [Text Overflow](https://tailwindcss.com/docs/text-overflow)
+## Text Overflow
 
 Utilities for controlling text overflow in an element.
 
@@ -443,7 +443,7 @@ Utilities for controlling text overflow in an element.
 | overflow-ellipsis | text-overflow: ellipsis; |
 | overflow-clip | text-overflow: clip; |
 
-## [Vertical Alignment](https://tailwindcss.com/docs/vertical-align)
+## Vertical Alignment
 
 Utilities for controlling the vertical alignment of an inline or table-cell box.
 
@@ -456,7 +456,7 @@ Utilities for controlling the vertical alignment of an inline or table-cell box.
 | align-text-top | vertical-align: text-top; |
 | align-text-bottom | vertical-align: text-bottom; |
 
-## [Whitespace](https://tailwindcss.com/docs/whitespace)
+## Whitespace
 
 Utilities for controlling an element's white-space property.
 
@@ -468,7 +468,7 @@ Utilities for controlling an element's white-space property.
 | whitespace-pre-line | white-space: pre-line; |
 | whitespace-pre-wrap | white-space: pre-wrap; |
 
-## [Word Break](https://tailwindcss.com/docs/word-break)
+## Word Break
 
 Utilities for controlling word breaks in an element.
 
