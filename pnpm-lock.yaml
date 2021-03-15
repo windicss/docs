@@ -201,10 +201,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-HV1Cm0Q3ZrpCR93tkWOYiuYIgLxZXZFVG2VgK+MBWjUqZTundupbfx2aXarXuw5Ko5aMcjtJgbSs4vUGBS5v6g==
-  /@babel/compat-data/7.13.8:
+  /@babel/compat-data/7.13.11:
     dev: true
     resolution:
-      integrity: sha512-EaI33z19T4qN3xLXsGf48M2cDqa6ei9tPZlfLdb2HC+e/cFtREiRd8hdSqDbwdLB0/+gLwqJmCYASH0z2bUdog==
+      integrity: sha512-BwKEkO+2a67DcFeS3RLl0Z3Gs2OvdXewuWjc1Hfokhb5eQWP9YRYH1/+VrVZvql2CfjOiNGqSAFOYt4lsqTHzg==
   /@babel/core/7.13.10:
     dependencies:
       '@babel/code-frame': 7.12.13
@@ -212,7 +212,7 @@ packages:
       '@babel/helper-compilation-targets': 7.13.10_@babel+core@7.13.10
       '@babel/helper-module-transforms': 7.13.0
       '@babel/helpers': 7.13.10
-      '@babel/parser': 7.13.10
+      '@babel/parser': 7.13.11
       '@babel/template': 7.12.13
       '@babel/traverse': 7.13.0
       '@babel/types': 7.13.0
@@ -253,7 +253,7 @@ packages:
       integrity: sha512-mHOOmY0Axl/JCTkxTU6Lf5sWOg/v8nUa+Xkt4zMTftX0wqmb6Sh7J8gvcehBw7q0AhrhAR+FDacKjCZ2X8K+Sw==
   /@babel/helper-compilation-targets/7.13.10_@babel+core@7.13.10:
     dependencies:
-      '@babel/compat-data': 7.13.8
+      '@babel/compat-data': 7.13.11
       '@babel/core': 7.13.10
       '@babel/helper-validator-option': 7.12.17
       browserslist: 4.16.3
@@ -353,16 +353,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-5aPpe5XQPzflQrFwL1/QoeHkP2MsA4JCntcXHRhEsdsfPVkvPi2w7Qix4iV7t5S/oC9OodGrggd8aco1g3SZFg==
-  /@babel/parser/7.13.10:
+  /@babel/parser/7.13.11:
     engines:
       node: '>=6.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-0s7Mlrw9uTWkYua7xWr99Wpk2bnGa0ANleKfksYAES8LpWH4gW1OUr42vqKNf0us5UQNfru2wPqMqRITzq/SIQ==
+      integrity: sha512-PhuoqeHoO9fc4ffMEVk4qb/w/s2iOSWohvbHxLtxui0eBg3Lg5gN1U8wp1V1u61hOWkPQJJyJzGH6Y+grwkq8Q==
   /@babel/template/7.12.13:
     dependencies:
       '@babel/code-frame': 7.12.13
-      '@babel/parser': 7.13.10
+      '@babel/parser': 7.13.11
       '@babel/types': 7.13.0
     dev: true
     resolution:
@@ -373,7 +373,7 @@ packages:
       '@babel/generator': 7.13.9
       '@babel/helper-function-name': 7.12.13
       '@babel/helper-split-export-declaration': 7.12.13
-      '@babel/parser': 7.13.10
+      '@babel/parser': 7.13.11
       '@babel/types': 7.13.0
       debug: 4.3.1
       globals: 11.12.0
@@ -395,7 +395,7 @@ packages:
   /@docsearch/js/1.0.0-alpha.28:
     dependencies:
       '@docsearch/react': 1.0.0-alpha.28
-      preact: 10.5.12
+      preact: 10.5.13
     dev: true
     resolution:
       integrity: sha512-2g7aPhBy7FoEyeZW2G3LYHWVa8CFvqyozEz8PXt3hyywdFcmEIqmoCRwn8kboVftrOKCjtPcuLCewsaBoB3uiw==
@@ -628,7 +628,7 @@ packages:
       integrity: sha512-4DV8VPYo8/OR1YsnK39QN16xhKENt2XvcmJxqfRtyz75kvbjBYh1zTSHLp7XsXqv4R2I+fOZlbEBvxosMYLcPA==
   /@vue/compiler-core/3.0.7:
     dependencies:
-      '@babel/parser': 7.13.10
+      '@babel/parser': 7.13.11
       '@babel/types': 7.13.0
       '@vue/shared': 3.0.7
       estree-walker: 2.0.2
@@ -643,7 +643,7 @@ packages:
       integrity: sha512-VnIH9EbWQm/Tkcp+8dCaNVsVvhm/vxCrIKWRkXY9215hTqOqQOvejT8IMjd2kc++nIsYMsdQk6H9qqBvoLe/Cw==
   /@vue/compiler-sfc/3.0.7_vue@3.0.7:
     dependencies:
-      '@babel/parser': 7.13.10
+      '@babel/parser': 7.13.11
       '@babel/types': 7.13.0
       '@vue/compiler-core': 3.0.7
       '@vue/compiler-dom': 3.0.7
@@ -1007,7 +1007,7 @@ packages:
       integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
   /browserslist/4.16.3:
     dependencies:
-      caniuse-lite: 1.0.30001199
+      caniuse-lite: 1.0.30001200
       colorette: 1.2.2
       electron-to-chromium: 1.3.687
       escalade: 3.1.1
@@ -1044,10 +1044,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
-  /caniuse-lite/1.0.30001199:
+  /caniuse-lite/1.0.30001200:
     dev: true
     resolution:
-      integrity: sha512-ifbK2eChUCFUwGhlEzIoVwzFt1+iriSjyKKFYNfv6hN34483wyWpLLavYQXhnR036LhkdUYaSDpHg1El++VgHQ==
+      integrity: sha512-ic/jXfa6tgiPBAISWk16jRI2q8YfjxHnSG7ddSL1ptrIP8Uy11SayFrjXRAk3NumHpDb21fdTkbTxb/hOrFrnQ==
   /caseless/0.12.0:
     dev: true
     resolution:
@@ -3198,10 +3198,10 @@ packages:
       node: ^10 || ^12 || >=14
     resolution:
       integrity: sha512-1F0Xb2T21xET7oQV9eKuctbM9S7BC0fetoHCc4H13z0PT6haiRLP4T0ZY4XWh7iLP0usgqykT6p9B2RtOf4FPw==
-  /preact/10.5.12:
+  /preact/10.5.13:
     dev: true
     resolution:
-      integrity: sha512-r6siDkuD36oszwlCkcqDJCAKBQxGoeEGytw2DGMD5A/GGdu5Tymw+N2OBXwvOLxg6d1FeY8MgMV3cc5aVQo4Cg==
+      integrity: sha512-q/vlKIGNwzTLu+jCcvywgGrt+H/1P/oIRSD6mV4ln3hmlC+Aa34C7yfPI4+5bzW8pONyVXYS7SvXosy2dKKtWQ==
   /prelude-ls/1.2.1:
     dev: true
     engines:
