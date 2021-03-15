@@ -1,3 +1,7 @@
 # Installation
 
 > TODO:
+
+## Integrations
+
+<Integrations/>
