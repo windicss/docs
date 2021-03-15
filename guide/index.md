@@ -11,7 +11,7 @@
 
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
 [options]: /guide/configuration
-[features]: /guide/features
+[features]: /guide/features/
 
 # Getting Started
 

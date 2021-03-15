@@ -7,7 +7,7 @@
 So far, we have implemented the following features:
 
 - support [tailwind.config.js](/guide/configuration)
-- support [official plugins](/guide/plugins)
+- support [official plugins](/guide/plugins/)
 - support plugin CSS-in-JS syntax
 - support add plugin interfaces
 - support [directives `@apply`,` @screen`,`@variants`](/guide/directives)

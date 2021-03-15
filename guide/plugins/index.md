@@ -2,7 +2,7 @@
 
 Windi CSS provides official plugins which you can add in your configuration file.
 
-They are similar to the ones from Tailwind CSS, but adapted to the interface of Windi CSS to add improvements like auto-inferred utilities.
+They are similar to the ones from Tailwind CSS, but adapted to the interface of Windi CSS to add improvements like variant-auto-inferr utilities.
 
 ## [Typography](https://github.com/tailwindlabs/tailwindcss-typography)
 
@@ -70,7 +70,7 @@ module.exports = {
           css: {
             color: '#333',
             a: {
-              color: '#3182ce',
+              'color': '#3182ce',
               '&:hover': {
                 color: '#2c5282',
               },

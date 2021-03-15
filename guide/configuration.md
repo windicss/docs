@@ -1,7 +1,7 @@
 [windi css]: https://github.com/windicss/windicss
 [tailwind css]: https://tailwindcss.com/docs
 [extend]: https://tailwindcss.com/docs/theme#extending-the-default-theme
-[auto]: /guide/features.html#🤖-auto-inferred-variables-and-variants
+[auto]: /guide/features/variant-auto-infer
 
 # Configuring Windi CSS
 
@@ -34,10 +34,10 @@ module.exports = {
   darkMode: 'class', // or 'media'
   theme: {
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
       '2xl': '1536px',
     },
     colors: {
@@ -86,15 +86,15 @@ module.exports = {
           fontWeight: '600',
         },
         '.btn-blue': {
-          backgroundColor: '#3490dc',
-          color: '#fff',
+          'backgroundColor': '#3490dc',
+          'color': '#fff',
           '&:hover': {
             backgroundColor: '#2779bd',
           },
         },
         '.btn-red': {
-          backgroundColor: '#e3342f',
-          color: '#fff',
+          'backgroundColor': '#e3342f',
+          'color': '#fff',
           '&:hover': {
             backgroundColor: '#cc1f1a',
           },

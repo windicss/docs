@@ -79,12 +79,16 @@ const themeConfig: DefaultTheme.Config = {
       {
         text: 'Guide',
         children: [
-          // { text: 'Introduction', link: '/guide/introduction' },
           { text: 'Getting Started', link: '/guide/' },
-          { text: 'Features', link: '/guide/features' },
           { text: 'Configuration', link: '/guide/configuration' },
           { text: 'Directives', link: '/guide/directives' },
-          { text: 'Plugins', link: '/guide/plugins' },
+        ],
+      },
+      {
+        text: 'Features',
+        children: [
+          { text: 'Overview', link: '/guide/features/' },
+          { text: 'Variant Auto-infer', link: '/guide/features/variant-auto-inferr' },
         ],
       },
       {
@@ -95,6 +99,12 @@ const themeConfig: DefaultTheme.Config = {
           { text: 'Vite', link: '/guide/vite' },
           { text: 'Vue', link: '/guide/vue' },
           { text: 'CLI', link: '/guide/cli' },
+        ],
+      },
+      {
+        text: 'Plugins',
+        children: [
+          { text: 'Overview', link: '/guide/plugins/' },
         ],
       },
       {
