@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: ['@antfu/eslint-config'],
+  extends: ['@antfu/eslint-config', 'plugin:jsonc/recommended-with-json5'],
   plugins: ['markdown'],
   rules: {
     'no-unused-vars': 'off',
@@ -19,13 +19,15 @@ module.exports = {
       processor: 'markdown/markdown',
     },
     {
-      files: ['**/*.md/*.{js,ts}'],
+      files: ['**/*.md/*.{js,ts,json,json5}'],
       rules: {
         'no-undef': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-var-requires': 'off',
         'quote-props': ['error', 'consistent-as-needed'],
+        'jsonc/quotes': ['error', 'single'],
+        'jsonc/no-dupe-keys': 'off',
       },
     },
   ],

@@ -13,13 +13,13 @@ Utilities for controlling the font family of an element.
 ### Customizing
 
 ```json5
-theme: {
-  fontFamily: {
-    'sans': ['ui-sans-serif', 'system-ui', ...],
-    'serif': ['ui-serif', 'Georgia', ...],
-    'mono': ['ui-monospace', 'SFMono-Regular', ...],
-    'display': ['Oswald', ...],
-    'body': ['Open Sans', ...],
+{
+  'fontFamily': {
+    'sans': ['ui-sans-serif', 'system-ui', /* ... */],
+    'serif': ['ui-serif', 'Georgia', /* ... */],
+    'mono': ['ui-monospace', 'SFMono-Regular', /* ... */],
+    'display': ['Oswald', /* ... */],
+    'body': ['Open Sans', /* ... */],
   }
 }
 ```
@@ -41,13 +41,13 @@ Note that Tailwind does not automatically escape font names for you. If you're u
 ```json5
 {
   // Won't work:
-  'sans': ['Exo 2', ...],
+  'sans': ['Exo 2', /* ... */],
 
   // Add quotes:
-  'sans': ['"Exo 2"', ...],
+  'sans': ['"Exo 2"', /* ... */],
 
   // ...or escape the space:
-  'sans': ['Exo\\ 2', ...],
+  'sans': ['Exo\\ 2', /* ... */],
 }
 ```
 
