@@ -3,7 +3,7 @@ import { metaData } from './constants'
 
 const head: HeadConfig[] = [
   ['meta', { name: 'author', content: 'Windi CSS Team' }],
-  ['meta', { name: 'keywords', content: 'windi, tailwind, tailwindcss, vitejs, svelte, vue' }],
+  ['meta', { name: 'keywords', content: 'windi, windicss, tailwind, tailwindcss, vitejs, svelte, vue' }],
   ['link', { rel: 'icon', type: 'image/svg+xml', href: '/assets/logo.svg' }],
 
   ['meta', { name: 'HandheldFriendly', content: 'True' }],
