@@ -76,10 +76,10 @@ module.exports = {
   theme: {
     container: {
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
+        'DEFAULT': '1rem',
+        'sm': '2rem',
+        'lg': '4rem',
+        'xl': '5rem',
         '2xl': '6rem',
       },
     },
@@ -180,15 +180,15 @@ Utilities for controlling how a replaced element's content should be positioned 
 module.exports = {
   theme: {
     objectPosition: {
-      bottom: 'bottom',
-      center: 'center',
-      left: 'left',
+      'bottom': 'bottom',
+      'center': 'center',
+      'left': 'left',
       'left-bottom': 'left bottom',
       'left-top': 'left top',
-      right: 'right',
+      'right': 'right',
       'right-bottom': 'right bottom',
       'right-top': 'right top',
-      top: 'top',
+      'top': 'top',
       'center-bottom': 'center bottom',
       'center-top': 'center top',
     },

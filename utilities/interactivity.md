@@ -29,14 +29,14 @@ Utilities for controlling the cursor style when hovering over an element.
 module.exports = {
   theme: {
     cursor: {
-      auto: 'auto',
-      default: 'default',
-      pointer: 'pointer',
-      wait: 'wait',
-      text: 'text',
-      move: 'move',
+      'auto': 'auto',
+      'default': 'default',
+      'pointer': 'pointer',
+      'wait': 'wait',
+      'text': 'text',
+      'move': 'move',
       'not-allowed': 'not-allowed',
-      crosshair: 'crosshair',
+      'crosshair': 'crosshair',
       'zoom-in': 'zoom-in',
     },
   },
