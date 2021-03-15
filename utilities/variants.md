@@ -51,10 +51,14 @@ You can define custom breakpoints that use `max-width` instead, or ranges, by
 using the following configuration options:
 
 ```json5
-theme: {
-  screens: {
-    '2xl': { 'max': '1535px' },
-    'sm': { 'min': '640px', 'max': '767px' },
+{
+  'theme': {
+    'screens': {
+      '2xl': { 'max': '1535px' },
+      'sm': { 'min': '640px', 'max': '767px' },
+    }
+  }
+}
 ```
 
 ### Raw Media Queries
@@ -62,10 +66,14 @@ theme: {
 You can define a custom screen by providing a raw media query in the config:
 
 ```json5
-theme: {
-  screens: {
-    'portrait': { 'raw': '(orientation: portrait)' },
-    'print': { 'raw': 'print' },
+{
+  'theme': {
+    'screens': {
+      'portrait': { 'raw': '(orientation: portrait)' },
+      'print': { 'raw': 'print' },
+    }
+  }
+}
 ```
 
 For example, you could then use `print:hidden` to hide elements when styling for print.
