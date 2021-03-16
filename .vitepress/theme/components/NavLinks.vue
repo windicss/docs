@@ -43,7 +43,7 @@ const links = computed(() => site.value.themeConfig.nav)
 @media (min-width: 720px) {
   .nav-links {
     display: flex;
-    padding: 4px 0 0;
+    padding: 2px 0 0;
     align-items: center;
     border-bottom: 0;
   }

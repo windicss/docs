@@ -6,6 +6,8 @@
 
     <div class="flex-grow" />
 
+    <slot name="search" />
+
     <div class="hidden md:flex px-3">
       <NavLinks />
     </div>
@@ -16,8 +18,6 @@
       </a>
       <dark-mode-switch />
     </div>
-
-    <slot name="search" />
   </header>
 </template>
 
@@ -41,7 +41,7 @@ defineEmit(['toggle'])
     border-b-1px border-$c-divider
     py-0.7rem pr-6 pl-16
     h-$header-height bg-$c-bg
-    md:(py-0.7rem pr-0.8rem pl-6);
+    md:(px-6);
 }
 
 .nav-bar.root {

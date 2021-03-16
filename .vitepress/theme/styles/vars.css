@@ -77,8 +77,8 @@ html.dark {
 --c-scrollbar-bg: #212121;
 
 --c-text: #f5f7fa;
---c-text-light: #f9f9f9;
---c-text-lighter: #ffffff;
+--c-text-light: #ffffff;
+--c-text-lighter: theme('colors.gray.300');
 
 --c-divider-light: rgba(200, 200, 200, .12);
 --c-divider-dark: rgba(200, 200, 200, .48);

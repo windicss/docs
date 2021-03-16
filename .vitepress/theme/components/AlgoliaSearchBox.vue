@@ -144,24 +144,38 @@ function initialize(userOptions: any) {
   --docsearch-hit-shadow: none;
   --docsearch-primary-color: var(--c-brand);
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-searchbox-background: rgba(125,125,125,0.05);
-  --docsearch-searchbox-focus-background: rgba(125,125,125,0.05);
-  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
+  --docsearch-searchbox-background: transparent;
+  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-searchbox-shadow: none;
   --docsearch-text-color: var(--c-text-light);
   --docsearch-muted-color: var(--c-text-lighter);
-  --docsearch-key-gradient: rgba(125,125,125,0.1);
-  --docsearch-key-shadow: rgba(125,125,125,0.1);
+  --docsearch-key-gradient: transparent;
+  --docsearch-key-shadow: none;
 }
 
 html.dark .DocSearch {
   --docsearch-container-background: rgba(0,0,0,0.8);
-  --docsearch-searchbox-background: rgba(255,255,255,0.1);
-  --docsearch-searchbox-focus-background: rgba(255,255,255,0.05);
-  --docsearch-key-gradient: rgba(85, 85, 85, 0.5);
-  --docsearch-key-shadow: rgba(48, 48, 48, 0.201);
+  --docsearch-searchbox-background: transparent;
+  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-key-gradient: transparent;
+  --docsearch-key-shadow: none;
 }
 
 .DocSearch-Button-Key {
-  @apply static pb-0;
+  @apply static pb-0 border border-gray-300 bg-transparent;
+}
+.DocSearch-Button-Placeholder {
+  @apply pl-3 font-normal;
+}
+
+.DocSearch-Button:hover .DocSearch-Button-Key {
+  @apply text-$docsearch-text-color border-$docsearch-text-color;
+}
+
+.DocSearch-Search-Icon {
+  @apply h-16px w-16px;
+}
+.DocSearch-Button:hover .DocSearch-Search-Icon {
+  @apply text-$docsearch-text-color;
 }
 </style>
