@@ -1,3 +1,9 @@
+<script lang='ts'>
+export default {
+  inheritAttrs: false,
+}
+</script>
+
 <script setup lang="ts">
 import { ref, defineProps, toRefs, watchEffect } from 'vue'
 import { isDark } from '../../composables/dark'
@@ -62,6 +68,7 @@ function ready() {
       class="overflow-visiable outline-none h-0 m-auto"
       frameborder="0"
       scrolling="no"
+      v-bind="$attrs"
       @load="ready"
     />
   </client-only>
