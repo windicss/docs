@@ -3,7 +3,7 @@
 @import 'prism-theme-vars/to-codemirror.css';
 
 :root {
-  --prism-font-family: 'Input Mono', monospace;
+  --prism-font-family: var(--font-family-mono);
   --prism-font-size: 0.85rem;
   --prism-marker-opacity: 0;
 }

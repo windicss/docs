@@ -23,6 +23,8 @@ const head: HeadConfig[] = [
   ['meta', { property: 'og:title', content: metaData.title }],
   ['meta', { property: 'og:image', content: metaData.image }],
   ['meta', { property: 'og:description', content: metaData.description }],
+
+  ['link', { href: 'https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;600&display=swap', rel: 'stylesheet' }],
 ]
 
 export default head

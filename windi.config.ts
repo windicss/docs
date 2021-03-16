@@ -8,17 +8,8 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
-        mono: [
-          '"Input Mono"',
-          'ui-monospace',
-          'SFMono-Regular',
-          'Menlo',
-          'Monaco',
-          'Consolas',
-          '"Liberation Mono"',
-          '"Courier New"',
-          'monospace',
-        ],
+        sans: 'var(--font-family-base)',
+        mono: 'var(--font-family-mono)',
       },
       screens: {
         xs: '420px',
