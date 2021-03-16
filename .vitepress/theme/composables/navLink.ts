@@ -19,10 +19,11 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
     }
     else {
       const itemPath = normalizePath(withBase(item.value.link))
-      active
-        = itemPath === '/'
-          ? itemPath === routePath
-          : routePath.startsWith(itemPath)
+      const deepCount = itemPath.substring(1).split('/').length
+      if (deepCount < 3)
+        active = itemPath === routePath
+      else
+        active = routePath.startsWith(itemPath)
     }
 
     return {
