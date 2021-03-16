@@ -224,115 +224,116 @@ onMounted(async() => {
 </script>
 
 <template>
-  <div v-if="showTabs" class="flex tabs mt-4">
-    <!-- <div class="tab" :class="{active: tab === 'code'}" @click="tab = 'code'">
+  <div class="inline-playground">
+    <div v-if="showTabs" class="flex tabs mt-4">
+      <!-- <div class="tab" :class="{active: tab === 'code'}" @click="tab = 'code'">
       <carbon:code class="inline-block" />
     </div> -->
-    <div class="flex-auto" />
-    <div
-      class="tab"
-      title="Toggle CSS"
-      :class="{active: showCSS}"
-      @click="showCSS = !showCSS"
-    >
-      <uil:css3-simple class="inline-block" />
+      <div class="flex-auto" />
+      <div
+        class="tab"
+        title="Toggle CSS"
+        :class="{active: showCSS}"
+        @click="showCSS = !showCSS"
+      >
+        <uil:css3-simple class="inline-block" />
+      </div>
+      <div
+        v-if="enableConfig"
+        class="tab"
+        title="Toggle Configurations"
+        :class="{active: showConfig}"
+        @click="showConfig = !showConfig"
+      >
+        <carbon:settings-adjust class="inline-block" />
+      </div>
+      <div
+        v-if="enablePreview"
+        class="tab"
+        title="Toggle Preview"
+        :class="{active: showPreview}"
+        @click="showPreview = !showPreview"
+      >
+        <carbon:camera class="inline-block" />
+      </div>
     </div>
-    <div
-      v-if="enableConfig"
-      class="tab"
-      title="Toggle Configurations"
-      :class="{active: showConfig}"
-      @click="showConfig = !showConfig"
-    >
-      <carbon:settings-adjust class="inline-block" />
-    </div>
-    <div
-      v-if="enablePreview"
-      class="tab"
-      title="Toggle Preview"
-      :class="{active: showPreview}"
-      @click="showPreview = !showPreview"
-    >
-      <carbon:camera class="inline-block" />
-    </div>
-  </div>
-  <div class="border bc rounded relative">
-    <div
-      class="grid w-full"
-      style="grid-template-columns: 1fr max-content;"
-    >
-      <div class="flex-auto flex flex-col overflow-auto">
-        <div>
-          <textarea
-            ref="textareaInput"
-            spellcheck="false"
-            autocomplete="off"
-            autocapitalize="false"
-            class="bg-transparent outline-none"
-          />
-        </div>
-        <div v-show="showConfig" class="border-t bc">
-          <div class="ml-1 p-2 pb-0 text-sm opacity-50 flex">
-            <span>Config</span>
-          </div>
-          <div class="max-h-20em overflow-y-auto">
+    <div class="border bc rounded relative">
+      <div
+        class="grid w-full"
+        style="grid-template-columns: 1fr max-content;"
+      >
+        <div class="flex-auto flex flex-col overflow-auto">
+          <div>
             <textarea
-              ref="textareaConfig"
+              ref="textareaInput"
               spellcheck="false"
               autocomplete="off"
               autocapitalize="false"
               class="bg-transparent outline-none"
             />
           </div>
-        </div>
-        <div
-          v-show="showCSS"
-          class="text-sm border-t bc"
-        >
-          <div class="ml-1 p-2 text-sm opacity-50 flex">
-            <span>CSS</span>
-            <div class="flex-auto" />
-            <div v-if="showMode" class="icon-button" title="Toggle Mode" @click="toggleMode">
-              <span class="text-sm mr-1.5 -mt-0.5 capitalize">{{ mode }}</span>
-              <carbon:circle-packing v-if="mode === 'compile'" />
-              <carbon:chart-bubble-packed v-else />
+          <div v-show="showConfig" class="border-t bc">
+            <div class="ml-1 p-2 pb-0 text-sm opacity-50 flex">
+              <span>Config</span>
             </div>
-            <div v-if="showCopy" class="icon-button ml-3" :class="{ active: copied }" title="Copy" @click="copy()">
-              <carbon:checkmark-outline v-if="copied" class="text-green-500" />
-              <carbon:copy v-else />
+            <div class="max-h-20em overflow-y-auto">
+              <textarea
+                ref="textareaConfig"
+                spellcheck="false"
+                autocomplete="off"
+                autocapitalize="false"
+                class="bg-transparent outline-none"
+              />
             </div>
           </div>
-          <!-- eslint-disable-next-line vue/no-v-html -->
-          <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlighted" /></pre>
+          <div
+            v-show="showCSS"
+            class="text-sm border-t bc"
+          >
+            <div class="ml-1 p-2 text-sm opacity-50 flex">
+              <span>CSS</span>
+              <div class="flex-auto" />
+              <div v-if="showMode" class="icon-button" title="Toggle Mode" @click="toggleMode">
+                <span class="text-sm mr-1.5 -mt-0.5 capitalize">{{ mode }}</span>
+                <carbon:circle-packing v-if="mode === 'compile'" />
+                <carbon:chart-bubble-packed v-else />
+              </div>
+              <div v-if="showCopy" class="icon-button ml-3" :class="{ active: copied }" title="Copy" @click="copy()">
+                <carbon:checkmark-outline v-if="copied" class="text-green-500" />
+                <carbon:copy v-else />
+              </div>
+            </div>
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlighted" /></pre>
+          </div>
         </div>
-      </div>
-      <div
-        v-if="showPreview"
-        class="border-l bc"
-      >
-        <iframe
-          ref="frame"
-          src="/__playground.html"
-          class="overflow-visiable outline-none w-10em h-0 m-auto"
-          frameborder="0"
-          scrolling="no"
-          @load="updateIframe()"
-        />
+        <div
+          v-if="showPreview"
+          class="border-l bc"
+        >
+          <iframe
+            ref="frame"
+            src="/__playground.html"
+            class="overflow-visiable outline-none w-10em h-0 m-auto"
+            frameborder="0"
+            scrolling="no"
+            @load="updateIframe()"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="postcss">
-.tabs .tab {
+.inline-playground .tabs .tab {
   @apply px-3 py-1 mx-1 cursor-pointer bg-gray-50 dark:bg-true-gray-800 text-gray-400 opacity-75
     border-t border-l border-r rounded-tr rounded-tl bc;
 }
-.tabs .tab.active {
+.inline-playground .tabs .tab.active {
   @apply text-blue-500 bg-bg opacity-100;
 }
-
-.CodeMirror {
+.inline-playground .CodeMirror {
   @apply px-3 py-2 h-auto bg-transparent font-mono text-sm;
 }
 </style>

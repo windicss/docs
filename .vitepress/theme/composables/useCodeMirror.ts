@@ -11,6 +11,8 @@ export async function useCodeMirror(
 
   // @ts-expect-error untyped
   await import('codemirror/mode/javascript/javascript')
+  // @ts-expect-error untyped
+  await import('codemirror/mode/css/css')
 
   const cm = CodeMirror.fromTextArea(textarea.value!, options)
 
