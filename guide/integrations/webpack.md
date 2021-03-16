@@ -2,6 +2,8 @@
 
 Plugin Source: [windicss-webpack-plugin](https://github.com/windicss/windicss-webpack-plugin)
 
+## About
+
 The webpack plugin aims to be a language and framework agnostic solution to implement Windi CSS.
 
 ⚠️ While it should work for most setups, some setups do have issues and more have not been tested. Caution should be used if you aren't using one of the passing solutions below.
@@ -15,16 +17,16 @@ The webpack plugin aims to be a language and framework agnostic solution to impl
 | Svelt | ⚠️ Use [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) |
 | Angular | ❌ style-loader misconfiguration |
 
-## Install
+## Installation
+
+Add the package:
 
 ```bash
 yarn add -D windicss-webpack-plugin 
 # npm i -D windicss-webpack-plugin 
 ```
 
-### Add plugin to the webpack config
-
-If you have access to modify the webpack.config.js directly, then you would do the following.
+Then, if you have access to modify the webpack.config.js directly, then you would do the following.
 
 ```ts
 // webpack.config.js
