@@ -1,11 +1,9 @@
 <template>
-  <div class="nav-dropdown-link-item">
-    <a class="item" v-bind="linkProps">
-      <!-- <span class="arrow" /> -->
-      <span class="inline-flex items-center">{{ item.text }}</span>
-      <!-- <span class="icon"><OutboundLink v-if="isExternal" /></span> -->
-    </a>
-  </div>
+  <a class="item" v-bind="linkProps">
+    <!-- <span class="arrow" /> -->
+    <span class="inline-flex items-center">{{ item.text }}</span>
+    <!-- <span class="icon"><OutboundLink v-if="isExternal" /></span> -->
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -24,25 +22,11 @@ const { props: linkProps } = useNavLink(propsRefs.item)
 
 <style scoped lang="postcss">
 .item {
-  display: block;
-  padding: 0 1.5rem 0 2.5rem;
-  line-height: 32px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--c-text);
-  white-space: nowrap;
+  @apply block pr-6 pl-10 py-1 font-medium text-$c-text whitespace-nowrap text-base
+  md:(px-3 py-1.5 text-sm);
 }
 
-@media (min-width: 720px) {
-  .item {
-    padding: 0 12px;
-    line-height: 32px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--c-text);
-    white-space: nowrap;
-  }
-
+@screen md {
   .item.active .arrow {
     opacity: 1;
   }
@@ -59,7 +43,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
   color: var(--c-text);
 }
 
-@media (min-width: 720px) {
+@screen md {
   .arrow {
     display: inline-block;
     margin-right: 8px;

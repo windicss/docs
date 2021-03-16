@@ -39,20 +39,14 @@ function toggle() {
 }
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .nav-dropdown-link {
-  position: relative;
-  height: 36px;
-  overflow: hidden;
-  cursor: pointer;
+  @apply
+    relative h-36px overflow-hidden cursor-pointer
+    md:(h-auto overflow-visible);
 }
 
-@media (min-width: 720px) {
-  .nav-dropdown-link {
-    height: auto;
-    overflow: visible;
-  }
-
+@screen md {
   .nav-dropdown-link:hover .dialog {
     display: block;
   }
@@ -63,33 +57,14 @@ function toggle() {
 }
 
 .button {
-  display: block;
-  border: 0;
-  padding: 0 1.5rem;
-  width: 100%;
-  text-align: left;
-  line-height: 36px;
-  font-family: var(--font-family-base);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--c-text);
-  white-space: nowrap;
-  background-color: transparent;
-  cursor: pointer;
+  @apply
+    block border-0 px-6 py-1.5 w-full
+    text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
+    md:(border-b-2px border-transparent px-0 font-medium text-0.9rem);
 }
 
 .button:focus {
   outline: 0;
-}
-
-@media (min-width: 720px) {
-  .button {
-    border-bottom: 2px solid transparent;
-    padding: 0;
-    line-height: 24px;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
 }
 
 .button-arrow {
@@ -107,29 +82,21 @@ function toggle() {
   transform: rotate(-90deg);
 }
 
-@media (min-width: 720px) {
+@screen md {
   .button-arrow.right {
     transform: rotate(0);
   }
 }
 
 .dialog {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @apply m-0 p-0 list-none;
 }
 
-@media (min-width: 720px) {
+@screen md {
   .dialog {
-    display: none;
-    position: absolute;
-    top: 26px;
     right: -8px;
-    border-radius: 6px;
-    padding: 12px 0;
-    min-width: 128px;
-    background-color: var(--c-bg);
     box-shadow: var(--shadow-3);
+    @apply hidden absolute top-26px rounded-md py-1.5 min-w-128px bg-$c-bg;
   }
 }
 </style>
