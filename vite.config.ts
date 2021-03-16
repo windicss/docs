@@ -38,6 +38,7 @@ export default defineConfig({
       '@vueuse/core',
       'windicss',
       'windicss/utils/style',
+      'windicss/utils/parser',
       'prismjs',
       'prismjs/components/prism-css',
       'codemirror',
