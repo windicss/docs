@@ -41,6 +41,7 @@ export default defineConfig({
       'prismjs',
       'prismjs/components/prism-css',
       'codemirror',
+      'codemirror/mode/css/css',
       'codemirror/mode/javascript/javascript',
     ],
     exclude: [
