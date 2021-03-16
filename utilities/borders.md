@@ -5,8 +5,8 @@
 Utilities for controlling the border radius of an element.
 
 <PlaygroundWithBox
-  size='3xl'
-  :sizes="['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '1/2', 'full']"
+  variant='3xl'
+  :variants="['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '1/2', 'full']"
   prefix='rounded'
   fixed='bg-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all duration-300'
 />
@@ -35,9 +35,9 @@ module.exports = {
 Utilities for controlling the width of an element's borders.
 
 <PlaygroundWithBox
-  size=''
   mode='edges'
-  :sizes="['', '0', 1, 2, 3, 4, 5]"
+  variant=''
+  :variants="['', '0', 1, 2, 3, 4, 5]"
   prefix='border'
   fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent'
 />
@@ -111,13 +111,12 @@ module.exports = {
 
 Utilities for controlling the style of an element's borders.
 
-| Class | Properties |
-| :---- | :--------- |
-| border-solid | border-style: solid; |
-| border-dashed | border-style: dashed; |
-| border-dotted | border-style: dotted; |
-| border-double | border-style: double; |
-| border-none | border-style: none; |
+<PlaygroundWithVariants
+  variant='solid'
+  :variants="['solid', 'dashed', 'dotted', 'double', 'none']"
+  prefix='border'
+  fixed='bg-gray-500 bg-opacity-5 border-3 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent'
+/>
 
 ## Divide Width
 

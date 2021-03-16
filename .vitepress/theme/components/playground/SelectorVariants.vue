@@ -5,31 +5,31 @@ const props = defineProps({
   modelValue: {
     default: '',
   },
-  sizes: {
+  variants: {
     default: () => ['sm', '', 'lg', 'xl', '2xl', '3xl'],
   },
 })
 
 const emit = defineEmit()
 
-const size = ref(props.modelValue)
-const sizes = toRef(props, 'sizes')
+const variant = ref(props.modelValue)
+const variants = toRef(props, 'variants')
 
 function set(str: string) {
-  size.value = str
+  variant.value = str
 }
 function has(str: string) {
-  return size.value === str
+  return variant.value === str
 }
 
-watch(size, v => emit('update:modelValue', v))
-watch(() => props.modelValue, v => size.value = v)
+watch(variant, v => emit('update:modelValue', v))
+watch(() => props.modelValue, v => variant.value = v)
 </script>
 
 <template>
   <div class="selector flex flex-wrap gap-2">
     <div
-      v-for="s of sizes"
+      v-for="s of variants"
       :key="s"
       class="item"
       :class="{ active: has(s), default: !s }"

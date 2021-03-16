@@ -6,8 +6,8 @@
 ## Rounded
 
 <PlaygroundWithBox
-  size='3xl'
-  :sizes="['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '1/2', 'full']"
+  variant='3xl'
+  :variants="['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '1/2', 'full']"
   prefix='rounded'
   fixed='bg-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all duration-300'
 />
@@ -15,9 +15,9 @@
 ## Border
 
 <PlaygroundWithBox
-  size=''
   mode='edges'
-  :sizes="['', '0', 1, 2, 3, 4, 5]"
+  variant=''
+  :variants="['', '0', 1, 2, 3, 4, 5]"
   prefix='border'
   fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent'
 />
