@@ -8,6 +8,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Installation', link: '/guide/installation' },
       { text: 'Migration', link: '/guide/migration' },
       { text: 'Features', link: '/guide/features/' },
+      { text: 'Configurations', link: '/guide/configurations/' },
     ],
   },
   {
@@ -34,10 +35,14 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
   },
   {
-    text: 'Config',
+    text: 'Plugins',
     items: [
-      { text: 'Configurations', link: '/configs/' },
-      { text: 'Plugins', link: '/configs/plugins/' },
+      { text: 'Aspect Ratio', link: '/plugins/aspect-ratio' },
+      { text: 'Forms', link: '/plugins/forms' },
+      { text: 'Filters', link: '/plugins/filters' },
+      { text: 'Line Clamp', link: '/plugins/line-clamp' },
+      { text: 'Scroll Snap', link: '/plugins/scroll-snap' },
+      { text: 'Typography', link: '/plugins/typography' },
     ],
   },
   {

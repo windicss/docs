@@ -26,6 +26,19 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
   ],
+  '/plugins': [
+    {
+      text: 'Plugins',
+      children: [
+        { text: 'Aspect Ratio', link: '/plugins/aspect-ratio' },
+        { text: 'Forms', link: '/plugins/forms' },
+        { text: 'Filters', link: '/plugins/filters' },
+        { text: 'Line Clamp', link: '/plugins/line-clamp' },
+        { text: 'Scroll Snap', link: '/plugins/scroll-snap' },
+        { text: 'Typography', link: '/plugins/typography' },
+      ],
+    },
+  ],
   '/configs': [
     {
       text: 'Configurations',
