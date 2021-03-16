@@ -39,7 +39,7 @@ Utilities for controlling the width of an element's borders.
   variant=''
   :variants="['', '0', 1, 2, 3, 4, 5]"
   prefix='border'
-  fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent'
+  fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all'
 />
 
 ### Customizing
@@ -115,7 +115,7 @@ Utilities for controlling the style of an element's borders.
   variant='solid'
   :variants="['solid', 'dashed', 'dotted', 'double', 'none']"
   prefix='border'
-  fixed='bg-gray-500 bg-opacity-5 border-3 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent'
+  fixed='bg-gray-500 bg-opacity-5 border-3 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all'
 />
 
 ## Divide Width
