@@ -144,8 +144,8 @@ function initialize(userOptions: any) {
   --docsearch-hit-shadow: none;
   --docsearch-primary-color: var(--c-brand);
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-searchbox-background: transparent;
-  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-searchbox-background: theme('colors.gray.200');
+  --docsearch-searchbox-focus-background: theme('colors.gray.200');
   --docsearch-searchbox-shadow: none;
   --docsearch-text-color: var(--c-text-light);
   --docsearch-muted-color: var(--c-text-lighter);
@@ -155,15 +155,15 @@ function initialize(userOptions: any) {
 
 html.dark .DocSearch {
   --docsearch-container-background: rgba(0,0,0,0.8);
-  --docsearch-searchbox-background: transparent;
-  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-searchbox-background: theme('colors.gray.200');
+  --docsearch-searchbox-focus-background: theme('colors.gray.200');
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
 }
 
 .DocSearch-Button {
   @apply rounded-md px-3 ml-0 rounded-lg
-  bg-gray-200 bg-opacity-50 hover:bg-opacity-60
+  bg-gray-200 bg-opacity-50 hover:bg-opacity-60 hover:bg-gray-200
   dark:(bg-gray-700 bg-opacity-40 hover:bg-opacity-60);
 }
 .DocSearch-Button-Key {
