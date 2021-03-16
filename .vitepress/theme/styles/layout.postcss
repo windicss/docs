@@ -1,12 +1,14 @@
 *::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background: transparent;
+  @apply bg-transparent w-6px h-6px;
 }
 
 *::-webkit-scrollbar-thumb {
   transition: background .2s ease-in-out;
   @apply bg-transparent rounded-full;
+}
+
+*::-webkit-scrollbar-corner {
+  @apply bg-transparent;
 }
 
 *:hover > ::-webkit-scrollbar-thumb {
