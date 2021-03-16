@@ -1,5 +1,4 @@
 {
-  "volar.tsPlugin": true,
   "cSpell.words": [
     "codemirror",
     "composables",
@@ -7,8 +6,15 @@
     "prismjs"
   ],
   "eslint.packageManager": "pnpm",
-  "eslint.workingDirectories": ["./"],
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "volar.style.defaultLanguage": "postcss",
+  "volar.tsPlugin": true,
+  "volar.tsPluginStatus": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    "*.css": "postcss"
   }
 }
