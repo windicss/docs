@@ -55,12 +55,14 @@ function ready() {
 </script>
 
 <template>
-  <iframe
-    ref="frame"
-    src="/__playground.html"
-    class="overflow-visiable outline-none h-0 m-auto"
-    frameborder="0"
-    scrolling="no"
-    @load="ready"
-  />
+  <client-only>
+    <iframe
+      ref="frame"
+      src="/__playground.html"
+      class="overflow-visiable outline-none h-0 m-auto"
+      frameborder="0"
+      scrolling="no"
+      @load="ready"
+    />
+  </client-only>
 </template>
