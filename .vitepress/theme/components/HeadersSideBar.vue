@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useRoute } from 'vitepress'
 
-const headers = useRoute().data.headers || []
-
+const route = useRoute()
+const headers = computed(() => {
+  return route.data.headers || []
+})
 </script>
 
 <template>
