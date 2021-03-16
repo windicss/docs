@@ -13,7 +13,7 @@
 
 # Getting Started
 
-__Windi CSS__ is a next generation utility-first CSS framework.
+**Windi CSS** is a next generation utility-first CSS framework.
 
 If you are already familiar with [Tailwind CSS], think about Windi CSS as an **on-demanded** alternative to Tailwind, which provides faster load times, **fully compatible with Tailwind v2.0** and with a bunch of additional cool features.
 
@@ -50,18 +50,18 @@ You can use utility classes in your components and stylesheets as usual:
 
 ### Directives
 
-You can also use [directives] to to apply utilities in your css files.
+You can also use `@apply` to enabled the Windi CSS utilities for your css files.
 
-```css
+<DirectivesPlayground 
+:input='`
 .btn {
   @apply font-bold py-2 px-4 rounded;
 }
-
 .btn-blue {
   @apply text-white bg-blue-500 hover:bg-blue-700;
   padding-top: 1rem;
-}
-```
+}`.trim()'
+/>
 
 Refer to the [directives] section for more usage details.
 
