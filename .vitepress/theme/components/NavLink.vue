@@ -25,7 +25,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
   padding: 0 1.5rem;
   line-height: 36px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--c-text);
   white-space: nowrap;
   @apply inline-flex items-center;
@@ -48,7 +48,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
     padding: 0;
     line-height: 24px;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .item:hover,

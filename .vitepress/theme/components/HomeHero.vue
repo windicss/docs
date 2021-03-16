@@ -73,9 +73,9 @@ const hasAltAction = computed(
 .action :deep(.item) {
   @apply rounded-full
     inline-block px-5
-    text-base font-medium text-white leading-11
+    text-base text-white leading-11
     bg-$c-brand border-2px border-$c-brand transition-colors
-    xs:(text-xl leading-13 font-medium px-6);
+    xs:(text-xl leading-13 px-6);
 }
 
 .action.alt :deep(.item) {
