@@ -1,12 +1,25 @@
-[video comparison]: https://twitter.com/antfu7/status/1361398324587163648
+[speed comparison]: https://twitter.com/antfu7/status/1361398324587163648
 [vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
+[CSS directives]: /guide/features/directives
+[classes utilities]: /guide/features/utilities
 [migration]: /guide/migration
 
-# Vite Integration
+# Integration for Vite
 
-<kbd>[vite-plugin-windicss]</kbd> provides simple integration for Windi CSS in Vite.
+Plugin Source: [vite-plugin-windicss]
 
-Check this [video comparison] with the PostCSS plugin for Tailwind CSS.
+## Features
+
+- ⚡️ **It's FAST** - 20~100x times faster than Tailwind on Vite
+- 🧩 On-demand CSS utilities
+- 📦 On-demand native elements style reseting
+- 🔥 Hot module replacement (HMR)
+- 🍃 Load configurations from `tailwind.config.js`
+- 🤝 Framework-agnostic - Vue, React, Svelte and vanilla!
+- 📄 CSS `@apply` / `@screen` directives transforms (also works for Vue SFC's `<style>`)
+- 🎳 Support Utility Groups - e.g. `bg-gray-200 hover:(bg-gray-100 text-red-300)`
+
+> Check out the [speed comparison] between Windi CSS and Tailwind CSS on Vite.
 
 ## Installation
 
@@ -29,21 +42,17 @@ export default {
 }
 ```
 
-And finally, import `windi.css` in your Vite entries:
+And finally, import `virtual:windi.css` in your Vite entries:
 
 ```js
 // main.js
 import 'virtual:windi.css'
 ```
 
-That's it! Build your app as you would do with Tailwind CSS, but with a faster dev experience! ⚡️
+That's it! Starting using [classes utilities] or [CSS directives] in your app, and enjoy the speed! ⚡️
 
-::: tip Migrating
-If migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
-:::
+> If you are migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
 
-## Configuration
+## Example
 
-Check [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/src/box/options.ts#L9-L103) for configuration reference specific to <kbd>[vite-plugin-windicss]</kbd>.
-
-See [./example](./example) or [`Vitesse`](https://github.com/antfu/vitesse/tree/feat/windicss) for an example.
+See [`Vitesse`](https://github.com/antfu/vitesse) for an example.

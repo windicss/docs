@@ -45,7 +45,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'Guide',
       children: [
         { text: 'Getting Started', link: '/guide/' },
-        { text: 'Installation', link: '/guide/installation' },
+        { text: 'Installation', link: '/guide/#installation' },
         { text: 'Configuration', link: '/guide/configuration' },
         { text: 'Migration from Tailwind', link: '/guide/migration' },
       ],

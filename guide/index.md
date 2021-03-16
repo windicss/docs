@@ -1,12 +1,10 @@
-[windi css]: https://github.com/windicss/windicss
-[windicss]: https://github.com/windicss/windicss
 [tailwind css]: https://tailwindcss.com/docs
 [discussions]: https://github.com/windicss/windicss/discussions
 [GitHub Issues]: https://github.com/windicss/windicss/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
 [GitHub Discussions]: https://github.com/windicss/windicss/discussions
 [autoprefixer]: https://autoprefixer.github.io/
 [utilities reference]: /utilities/
-[utilities]: /utilities/
+[utilities]: /guide/utilities
 [directives]: /guide/directives
 
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
@@ -15,11 +13,11 @@
 
 # Getting Started
 
-[__Windi CSS__][windicss] is a next generation utility-first CSS framework.
+__Windi CSS__ is a next generation utility-first CSS framework.
 
-If you are already familiar with [Tailwind CSS], think about [Windi CSS] as an alternative to Tailwind, which provides faster load times, and supports all the features in Tailwind v2.0 and more.
+If you are already familiar with [Tailwind CSS], think about [Windi CSS] as an **on-demanded** alternative to Tailwind, which provides faster load times, **fully compatible with Tailwind v2.0** and with a bunch of additional cool features.
 
-## Why Windi CSS? 🤔
+## Why Windi CSS?
 
 A quote from the author should illustrate his motivation to create [Windi CSS]:
 
@@ -27,41 +25,40 @@ A quote from the author should illustrate his motivation to create [Windi CSS]:
 
 By scanning your HTML and CSS and generating utilities on demand, [Windi CSS] is able to provide [faster load times][video comparison] and a speedy HMR in development, and does not require purging in production.
 
-## Integrations
+## Installation
 
-| Frameworks | Package | Version |
-| --- | --- | --- |
-| CLI | [Built-in](https://windicss.org/guide/cli) | ![](https://img.shields.io/npm/v/windicss?label=&color=0EA5E9) |
-| VSCode Extension | [windicss-intellisense](https://github.com/windicss/windicss-intellisense) | ![](https://img.shields.io/visual-studio-marketplace/v/voorjaar.windicss-intellisense.svg?label=&color=1388bd) |
-| Vite | [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) | ![](https://img.shields.io/npm/v/vite-plugin-windicss?label=&color=0EA5E9) |
-| Rollup | [rollup-plugin-windicss](https://github.com/windicss/vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss) | ![](https://img.shields.io/npm/v/rollup-plugin-windicss?label=&color=1388bd) |
-| Webpack | [windicss-webpack-plugin](https://github.com/windicss/windicss-webpack-plugin) | ![](https://img.shields.io/npm/v/windicss-webpack-plugin?label=&color=1388bd) |
-| Vue (Webpack) | [vue-windicss-preprocess](https://github.com/windicss/vue-windicss-preprocess) | ![](https://img.shields.io/npm/v/vue-windicss-preprocess?label=&color=0EA5E9) |
-| Nuxt | [nuxt-windicss-module](https://github.com/windicss/nuxt-windicss-module) | ![](https://img.shields.io/npm/v/nuxt-windicss-module?label=&color=1388bd) |
-| Svelte | [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) | ![](https://img.shields.io/npm/v/svelte-windicss-preprocess?label=&color=1388bd) |
+Windi CSS provides first-class integrations for your favorite tools, select yours and get started.
 
-## Usage
+<Integrations class="mb-5"/>
 
-Windi CSS provides all [utilities] in [Tailwind CSS], so usage is very [similar][tailwind css].
+> Didn't see the framework you use? [Submit an framework request on GitHub](https://github.com/windicss/windicss/issues/new).
+
+## Basic Usage
+
+All [utilities] of [Tailwind CSS] are supported in Windi CSS without any extra configurations.
 
 You can use utility classes in your components and stylesheets as usual:
 
 ```html
-<div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
-  <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0" src="/img/erin-lindford.jpg" alt="Woman's Face" />
+<div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-2 sm:(py-4 flex items-center space-y-0 space-x-6)">
+  <img class="block mx-auto h-24 rounded-full sm:(mx-0 flex-shrink-0)" src="/img/erin-lindford.jpg" alt="Woman's Face" />
   <div class="text-center space-y-2 sm:text-left">
     <div class="space-y-0.5">
       <p class="text-lg text-black font-semibold">Erin Lindford</p>
       <p class="text-gray-500 font-medium">Product Engineer</p>
     </div>
-    <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
+    <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:(text-white bg-purple-600 border-transparent) focus:(outline-none ring-2 ring-purple-600 ring-offset-2)">
       Message
     </button>
   </div>
 </div>
 ```
 
-[Directives] are also supported:
+**Only the utilities you use will generate the corresponding CSS.**
+
+### Directives
+
+You can also use [directives] to to apply utilities in your css files.
 
 ```css
 .btn {
@@ -69,11 +66,13 @@ You can use utility classes in your components and stylesheets as usual:
 }
 
 .btn-blue {
-  @apply bg-blue-500 hover:bg-blue-700 text-white;
+  @apply text-white bg-blue-500 hover:bg-blue-700;
   padding-top: 1rem;
 }
 ```
 
+Refer to the [directives] section for more usage details.
+
 ## Core Features
 
-In addition of Tailwind CSS v2, we also have some great features that only possible for Windi CSS. Refer to the [next chapter](./features) for more details.
+In addition of Tailwind CSS v2, we also have some great features that only possible for Windi CSS. Refer to the [next chapter][features] for more details.

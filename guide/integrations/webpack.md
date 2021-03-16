@@ -1,3 +1,3 @@
-# Nuxt Integration
+# Integration for Webpack
 
 > TODO:

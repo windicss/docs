@@ -5,17 +5,17 @@
 
 # Configuring Windi CSS
 
+> TODO: rewrite
+
 Configuration in [Windi CSS] is very similar to what you would expect in [Tailwind CSS].
 
 There are a few differences that we believe make it easier to configure:
 
 ## No need to configure variants
 
-Windi CSS [enables][auto] all variants for all utilities by default.
+Windi CSS [enables][auto] all variants for all utilities by default, configuration for variants is no longer needed.
 
 When you input the corresponding class, such as `hover:bg-red-500`, the corresponding variant CSS will be [automatically inferred and generated][auto].
-
-Variant configuration is thus no longer necesary, and will be ignored if provided.
 
 ## No need to clear defaults
 

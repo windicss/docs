@@ -115,6 +115,10 @@ ul {
   line-height: 1.7;
 }
 
+ul {
+  list-style: circle;
+}
+
 a,
 area,
 button,
@@ -188,10 +192,7 @@ td {
 }
 
 blockquote {
-  margin: 1rem 0;
-  border-left: 0.2rem solid #dfe2e5;
-  padding: 0.25rem 0 0.25rem 1rem;
-  font-size: 1rem;
+  @apply bg-gray-400 bg-opacity-5 rounded-r px-6 py-1 mt-6 opacity-85 border-l-2 border-$c-brand;
   color: var(--c-text);
 }
 

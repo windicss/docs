@@ -2,7 +2,7 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [migration]: /guide/migration
 
-# Sapper integration
+# Integration for Svelte (Sapper)
 
 <kbd>[svelte-windicss-preprocess]</kbd> provides simple integration for Windi CSS in Svelte and Sapper.
 
@@ -16,11 +16,9 @@ Add the package:
 npm install svelte-windicss-preprocess --save-dev
 ```
 
-::: tip Migrating
-If migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
-:::
+> If migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
 
-## Configuration ⚙️
+## Configuration
 
 Add <kbd>[svelte-windicss-preprocess]</kbd> to your Rollup or Webpack configuration.
 

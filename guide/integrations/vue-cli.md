@@ -1,17 +1,16 @@
-[video comparison]: https://twitter.com/antfu7/status/1361398324587163648
-[vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [migration]: /guide/migration
 [vue-windicss-preprocess]: https://github.com/windicss/vue-windicss-preprocess
 
-# Vue CLI integration
+# Integration for Vue (Webpack)
 
-> TODO: rewrite
+> TODO: rewrite, depreacted?
 
-If using Vite.js, check [this page instead](/guide/vite).
+> If you are using Vite.js, check [this page instead](/guide/integrations/vite).
+> If you are using Nuxt.js, check [this page instead](/guide/integrations/nuxt).
 
 <kbd>[vue-windicss-preprocess]</kbd> is a Vue loader for Windi CSS.
 
-## Installation 💿
+## Installation
 
 Install the package:
 
@@ -19,15 +18,9 @@ Install the package:
 npm install vue-windicss-preprocess --save-dev
 ```
 
-::: tip Migrating
-If migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
-:::
+> If your are migrating from Tailwind CSS, also check out the [_Migration_ guide][migration]
 
-## Configuration ⚙️
-
-Add <kbd>[vue-windicss-preprocess]</kbd> to your Webpack configuration.
-
-If you are using:
+## Configuration 
 
 ### Vue CLI
 
@@ -80,33 +73,6 @@ module.exports = {
     ],
   },
   // plugin omitted
-}
-```
-
-### Nuxt
-
-Add the loader to your `nuxt.config.js`
-
-```js
-// nuxt.config.js
-export default {
-  // ... other configurations omitted
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-    extend(config) {
-      config.module.rules.push({
-        test: /\.vue$/,
-        loader: 'vue-windicss-preprocess',
-        options: {
-          config: 'windi.config.js', // windi config file path (optional)
-          compile: false, // false: interpretation mode; true: compilation mode
-          globalPreflight: true, // set preflight style is global or scoped
-          globalUtility: true, // set utility style is global or scoped
-          prefix: 'windi-', // set compilation mode style prefix
-        },
-      })
-    },
-  },
 }
 ```
 

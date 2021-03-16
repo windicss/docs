@@ -1,4 +1,4 @@
-# Command Line Interface
+# Windi CSS Command Line Interface
 
 > TODO: rewrite
 

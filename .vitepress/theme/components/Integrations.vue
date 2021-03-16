@@ -3,8 +3,8 @@ import Nuxt from '/@vite-icons/logos/nuxt-icon'
 import Vue from '/@vite-icons/logos/vue'
 import Svelte from '/@vite-icons/logos/svelte-icon'
 import Webpack from '/@vite-icons/logos/webpack'
-import Vite from './logos/Vite.vue'
-import Windi from './logos/Windi.vue'
+import Vite from './logos/ViteLogo.vue'
+import Windi from './logos/WindiLogo.vue'
 
 const items = [
   {
