@@ -24,7 +24,7 @@ export default defineConfig({
       scan: {
         dirs: ['.vitepress'],
         include: ['index.md'],
-        fileExtensions: ['vue'],
+        fileExtensions: ['vue', 'ts'],
       },
     }),
     ViteRestart({

@@ -3,6 +3,9 @@
 
 # Windi CSS Playground (WIP)
 
+<ColorsPalette />
+
+<!-- 
 ## Rounded
 
 <PlaygroundWithBox
@@ -20,7 +23,7 @@
   :variants="['', '0', 1, 2, 3, 4, 5]"
   prefix='border'
   fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent'
-/>
+/> -->
 
 <!-- 
 <InlinePlayground 
