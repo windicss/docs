@@ -1,22 +1,24 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { useRoute } from 'vitepress'
 
-defineProps({
-  open: {
-    default: true,
-  },
-})
+const headers = useRoute().data.headers || []
+
 </script>
 
 <template>
-  <aside class="hidden lg:block h-full" :class="{ open }">
-    <div v-if="$page?.headers?.length" class="headers-sidebar">
+  <aside class="hidden lg:block h-full">
+    <div v-if="headers.length" class="headers-sidebar">
       <div class="sidebar-link-item head !pl-0 !mb-1">
         Sections
       </div>
       <ul class="sidebar-links space-y-1.5">
-        <li v-for="item of $page.headers" :key="item.text" class="sidebar-link">
-          <a class="sidebar-link-item" :href="`#${item.slug}`">{{ item.title }}</a>
+        <li v-for="item of headers" :key="item.title" class="sidebar-link">
+          <!-- '!ml-0 !ml-4 !ml-8 !ml-16' -->
+          <a
+            class="sidebar-link-item"
+            :href="`#${item.slug}`"
+            :class="`!ml-${(item.level - 2) * 4} ${item.level >2 ? 'text-sm opacity-65': ''}`"
+          >{{ item.title }}</a>
         </li>
       </ul>
     </div>
