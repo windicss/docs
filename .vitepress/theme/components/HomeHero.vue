@@ -64,7 +64,8 @@ const hasAltAction = computed(
 
 <style scoped lang="postcss">
 .home-hero {
-  @apply mt-10 mb-11 px-6 text-center xs:my-14 md:(mt-16 mb-17);
+  min-height: calc(100vh - var(--header-height));
+  @apply pt-10 pb-11 px-6 text-center xs:py-14 md:(pt-16 pb-17) flex;
 }
 .action {
   @apply mt-4 inline-block xs:mt-8;

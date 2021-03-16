@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-$header-height" aria-labelledby="main-title">
+  <main aria-labelledby="main-title">
     <HomeHero />
     <slot name="hero" />
     <!-- <HomeFeatures /> -->
