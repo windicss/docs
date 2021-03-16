@@ -14,7 +14,13 @@ export async function useCodeMirror(
   // @ts-expect-error untyped
   await import('codemirror/mode/css/css')
 
-  const cm = CodeMirror.fromTextArea(textarea.value!, options)
+  const cm = CodeMirror.fromTextArea(
+    textarea.value!,
+    {
+      theme: 'vars',
+      ...options,
+    },
+  )
 
   cm.on('change', () => input.value = cm.getValue())
 
