@@ -4,114 +4,12 @@
 
 Utilities for controlling the border radius of an element.
 
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| rounded-none | border-radius: 0px; |
-| rounded-sm | border-radius: 0.125rem; |
-| rounded | border-radius: 0.25rem; |
-| rounded-md | border-radius: 0.375rem; |
-| rounded-lg | border-radius: 0.5rem; |
-| rounded-xl | border-radius: 0.75rem; |
-| rounded-2xl | border-radius: 1rem; |
-| rounded-3xl | border-radius: 1.5rem; |
-| rounded-full | border-radius: 9999px; |
-| rounded-t-none | border-top-left-radius: 0px;<br>border-top-right-radius: 0px; |
-| rounded-r-none | border-top-right-radius: 0px;<br>border-bottom-right-radius: 0px; |
-| rounded-b-none | border-bottom-right-radius: 0px;<br>border-bottom-left-radius: 0px; |
-| rounded-l-none | border-top-left-radius: 0px;<br>border-bottom-left-radius: 0px; |
-| rounded-t-sm | border-top-left-radius: 0.125rem;<br>border-top-right-radius: 0.125rem; |
-| rounded-r-sm | border-top-right-radius: 0.125rem;<br>border-bottom-right-radius: 0.125rem; |
-| rounded-b-sm | border-bottom-right-radius: 0.125rem;<br>border-bottom-left-radius: 0.125rem; |
-| rounded-l-sm | border-top-left-radius: 0.125rem;<br>border-bottom-left-radius: 0.125rem; |
-| rounded-t | border-top-left-radius: 0.25rem;<br>border-top-right-radius: 0.25rem; |
-| rounded-r | border-top-right-radius: 0.25rem;<br>border-bottom-right-radius: 0.25rem; |
-| rounded-b | border-bottom-right-radius: 0.25rem;<br>border-bottom-left-radius: 0.25rem; |
-| rounded-l | border-top-left-radius: 0.25rem;<br>border-bottom-left-radius: 0.25rem; |
-| rounded-t-md | border-top-left-radius: 0.375rem;<br>border-top-right-radius: 0.375rem; |
-| rounded-r-md | border-top-right-radius: 0.375rem;<br>border-bottom-right-radius: 0.375rem; |
-| rounded-b-md | border-bottom-right-radius: 0.375rem;<br>border-bottom-left-radius: 0.375rem; |
-| rounded-l-md | border-top-left-radius: 0.375rem;<br>border-bottom-left-radius: 0.375rem; |
-| rounded-t-lg | border-top-left-radius: 0.5rem;<br>border-top-right-radius: 0.5rem; |
-| rounded-r-lg | border-top-right-radius: 0.5rem;<br>border-bottom-right-radius: 0.5rem; |
-| rounded-b-lg | border-bottom-right-radius: 0.5rem;<br>border-bottom-left-radius: 0.5rem; |
-| rounded-l-lg | border-top-left-radius: 0.5rem;<br>border-bottom-left-radius: 0.5rem; |
-| rounded-t-xl | border-top-left-radius: 0.75rem;<br>border-top-right-radius: 0.75rem; |
-| rounded-r-xl | border-top-right-radius: 0.75rem;<br>border-bottom-right-radius: 0.75rem; |
-| rounded-b-xl | border-bottom-right-radius: 0.75rem;<br>border-bottom-left-radius: 0.75rem; |
-| rounded-l-xl | border-top-left-radius: 0.75rem;<br>border-bottom-left-radius: 0.75rem; |
-| rounded-t-2xl | border-top-left-radius: 1rem;<br>border-top-right-radius: 1rem; |
-| rounded-r-2xl | border-top-right-radius: 1rem;<br>border-bottom-right-radius: 1rem; |
-| rounded-b-2xl | border-bottom-right-radius: 1rem;<br>border-bottom-left-radius: 1rem; |
-| rounded-l-2xl | border-top-left-radius: 1rem;<br>border-bottom-left-radius: 1rem; |
-| rounded-t-3xl | border-top-left-radius: 1.5rem;<br>border-top-right-radius: 1.5rem; |
-| rounded-r-3xl | border-top-right-radius: 1.5rem;<br>border-bottom-right-radius: 1.5rem; |
-| rounded-b-3xl | border-bottom-right-radius: 1.5rem;<br>border-bottom-left-radius: 1.5rem; |
-| rounded-l-3xl | border-top-left-radius: 1.5rem;<br>border-bottom-left-radius: 1.5rem; |
-| rounded-t-full | border-top-left-radius: 9999px;<br>border-top-right-radius: 9999px; |
-| rounded-r-full | border-top-right-radius: 9999px;<br>border-bottom-right-radius: 9999px; |
-| rounded-b-full | border-bottom-right-radius: 9999px;<br>border-bottom-left-radius: 9999px; |
-| rounded-l-full | border-top-left-radius: 9999px;<br>border-bottom-left-radius: 9999px; |
-| rounded-tl-none | border-top-left-radius: 0px; |
-| rounded-tr-none | border-top-right-radius: 0px; |
-| rounded-br-none | border-bottom-right-radius: 0px; |
-| rounded-bl-none | border-bottom-left-radius: 0px; |
-| rounded-tl-sm | border-top-left-radius: 0.125rem; |
-| rounded-tr-sm | border-top-right-radius: 0.125rem; |
-| rounded-br-sm | border-bottom-right-radius: 0.125rem; |
-| rounded-bl-sm | border-bottom-left-radius: 0.125rem; |
-| rounded-tl | border-top-left-radius: 0.25rem; |
-| rounded-tr | border-top-right-radius: 0.25rem; |
-| rounded-br | border-bottom-right-radius: 0.25rem; |
-| rounded-bl | border-bottom-left-radius: 0.25rem; |
-| rounded-tl-md | border-top-left-radius: 0.375rem; |
-| rounded-tr-md | border-top-right-radius: 0.375rem; |
-| rounded-br-md | border-bottom-right-radius: 0.375rem; |
-| rounded-bl-md | border-bottom-left-radius: 0.375rem; |
-| rounded-tl-lg | border-top-left-radius: 0.5rem; |
-| rounded-tr-lg | border-top-right-radius: 0.5rem; |
-| rounded-br-lg | border-bottom-right-radius: 0.5rem; |
-| rounded-bl-lg | border-bottom-left-radius: 0.5rem; |
-| rounded-tl-xl | border-top-left-radius: 0.75rem; |
-| rounded-tr-xl | border-top-right-radius: 0.75rem; |
-| rounded-br-xl | border-bottom-right-radius: 0.75rem; |
-| rounded-bl-xl | border-bottom-left-radius: 0.75rem; |
-| rounded-tl-2xl | border-top-left-radius: 1rem; |
-| rounded-tr-2xl | border-top-right-radius: 1rem; |
-| rounded-br-2xl | border-bottom-right-radius: 1rem; |
-| rounded-bl-2xl | border-bottom-left-radius: 1rem; |
-| rounded-tl-3xl | border-top-left-radius: 1.5rem; |
-| rounded-tr-3xl | border-top-right-radius: 1.5rem; |
-| rounded-br-3xl | border-bottom-right-radius: 1.5rem; |
-| rounded-bl-3xl | border-bottom-left-radius: 1.5rem; |
-| rounded-tl-full | border-top-left-radius: 9999px; |
-| rounded-tr-full | border-top-right-radius: 9999px; |
-| rounded-br-full | border-bottom-right-radius: 9999px; |
-| rounded-bl-full | border-bottom-left-radius: 9999px; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `rounded-${int}xl`| border-radius: `${int/2}rem;` |
-| `rounded-${size}`| border-radius: `${size};` |
-| `rounded-t-${int}xl`| border-top-left-radius: `${int/2}rem;`<br>border-top-right-radius: `${int/2}rem;` |
-| `rounded-t-${size}`| border-top-left-radius: `${size};`<br>border-top-right-radius: `${size};` |
-| `rounded-l-${int}xl`| border-top-left-radius: `${int/2}rem;`<br>border-bottom-left-radius: `${int/2}rem;` |
-| `rounded-l-${size}`| border-top-left-radius: `${size};`<br>border-bottom-left-radius: `${size};` |
-| `rounded-r-${int}xl`| border-top-right-radius:`${int/2}rem;`<br>border-bottom-right-radius: `${int/2}rem;` |
-| `rounded-r-${size}`| border-top-right-radius:`${size};`<br>border-bottom-right-radius: `${size};` |
-| `rounded-b-${int}xl`| border-bottom-right-radius: `${int/2}rem;`<br>border-bottom-left-radius: `${int/2}rem;` |
-| `rounded-b-${size}`| border-bottom-right-radius: `${size};`<br>border-bottom-left-radius: `${size};` |
-| `rounded-tl-${int}xl`| border-top-left-radius: `${int/2}rem;` |
-| `rounded-tl-${size}`| border-top-left-radius: `${size};` |
-| `rounded-tr-${int}xl`| border-top-right-radius: `${int/2}rem;` |
-| `rounded-tr-${size}`| border-top-right-radius: `${size};` |
-| `rounded-br-${int}xl`| border-bottom-right-radius: `${int/2}rem;` |
-| `rounded-br-${size}`| border-bottom-right-radius: `${size};` |
-| `rounded-bl-${int}xl`| border-bottom-left-radius: `${int/2}rem;` |
-| `rounded-bl-${size}`| border-bottom-left-radius: `${size};` |
+<PlaygroundWithBox
+  size='3xl'
+  :sizes="['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '1/2', 'full']"
+  prefix='rounded'
+  fixed='bg-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all duration-300'
+/>
 
 ### Customizing
 
@@ -136,30 +34,13 @@ module.exports = {
 
 Utilities for controlling the width of an element's borders.
 
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| border | border-width: 1px; |
-| border-t | border-top-width: 1px; |
-| border-r | border-right-width: 1px; |
-| border-b | border-bottom-width: 1px; |
-| border-l | border-left-width: 1px; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `border-${int}` | border-width: `${int}px;` |
-| `border-${size}` | border-width: `${size};` |
-| `border-t-${int}` | border-top-width: `${int}px;` |
-| `border-t-${size}` | border-top-width: `${size};` |
-| `border-r-${int}` | border-right-width: `${int}px;` |
-| `border-r-${size}` | border-right-width: `${size};` |
-| `border-b-${int}` | border-bottom-width: `${int}px;` |
-| `border-b-${size}` | border-bottom-width: `${size};` |
-| `border-l-${int}` | border-left-width: `${int}px;` |
-| `border-l-${size}` | border-leftwidth: `${size};` |
+<PlaygroundWithBox
+  size=''
+  mode='edges'
+  :sizes="['', '0', 1, 2, 3, 4, 5]"
+  prefix='border'
+  fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent'
+/>
 
 ### Customizing
 

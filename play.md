@@ -1,5 +1,4 @@
 ---
-sidebar: false
 ---
 
 # Windi CSS Playground (WIP)
