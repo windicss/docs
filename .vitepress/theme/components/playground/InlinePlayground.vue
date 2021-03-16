@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shallowRef, ref, watchEffect, defineProps, onMounted, computed, toRef } from 'vue'
+import { shallowRef, ref, watchEffect, defineProps, onMounted, computed, toRef, reactive } from 'vue'
 import { syncRef } from '@vueuse/core'
 import { StyleSheet } from 'windicss/utils/style'
 import Windi from 'windicss'
@@ -9,7 +9,6 @@ import type { PropType } from 'vue'
 import type CodeMirror from 'codemirror'
 import type { Config } from 'windicss/types/interfaces'
 
-import { isDark } from '../../composables/dark'
 import { useCodeMirror } from '../../composables/useCodeMirror'
 import { usePrismCSS } from '../../composables/usePrismCSS'
 
@@ -63,7 +62,6 @@ const props = defineProps({
 const config = ref(props.config)
 const processor = computed(() => new Windi(config.value))
 
-const frame = ref<HTMLIFrameElement | null>(null)
 const textareaInput = ref<HTMLTextAreaElement | null>(null)
 const textareaConfig = ref<HTMLTextAreaElement | null>(null)
 const input = ref(props.input)
@@ -71,7 +69,7 @@ const mode = ref(props.mode)
 
 syncRef(toRef(props, 'input'), input)
 
-let acceped: string[] = []
+const acceped = ref<string[]>([])
 
 const decorations: CodeMirror.TextMarker<CodeMirror.MarkerRange>[] = []
 const preflightStyles = processor.value.preflight('<div <p', true, true, true)
@@ -80,34 +78,16 @@ const fixedStyles = processor.value.interpret(props.fixed).styleSheet
 const style = shallowRef<StyleSheet>(new StyleSheet())
 const { highlightedCSS, copy, copied } = usePrismCSS(() => style.value.build().trim())
 
-function updateIframe() {
-  if (!frame.value?.contentWindow)
-    return
-
-  const fullStyle = new StyleSheet()
+const iframeData = reactive({
+  css: computed(() => new StyleSheet()
     .extend(preflightStyles)
     .extend(style.value)
     .sort()
-
-  frame.value.contentWindow.document.querySelector('html')?.classList.toggle('dark', isDark.value)
-  frame.value.contentWindow.postMessage(
-    JSON.stringify({
-      style: fullStyle.build(),
-      fixed: fixedStyles.build(),
-      classes: `${[...acceped, props.fixed].filter(Boolean).join(' ')}`.trim(),
-    }),
-    location.origin,
-  )
-  setTimeout(resizeIframe, 100)
-}
-
-function resizeIframe() {
-  if (!frame.value?.contentWindow)
-    return
-
-  frame.value.style.height = '0'
-  frame.value.style.height = `${frame.value.contentWindow.document.documentElement.scrollHeight + 30}px`
-}
+    .build(),
+  ),
+  fixedCss: computed(() => fixedStyles.build()),
+  classes: computed(() => `${[...acceped.value, props.fixed].filter(Boolean).join(' ')}`.trim()),
+})
 
 function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Editor) {
   decorations.push(cm.markText(
@@ -130,9 +110,9 @@ function interpret(cm: CodeMirror.Editor) {
     : processor.value.compile(value.replace(/\n/g, ' ')) || {}
 
   if (mode.value === 'interpret')
-    acceped = success || []
+    acceped.value = success || []
   else
-    acceped = [className]
+    acceped.value = [className]
 
   // clear previous
   decorations.forEach(i => i.clear())
@@ -192,8 +172,6 @@ const configString = computed<string>({
     config.value = JSON5.parse(v)
   },
 })
-
-watchEffect(updateIframe)
 
 onMounted(async() => {
   if (typeof window === 'undefined')
@@ -296,13 +274,10 @@ onMounted(async() => {
           v-if="showPreview"
           class="border-l bc"
         >
-          <iframe
-            ref="frame"
-            src="/__playground.html"
-            class="overflow-visiable outline-none w-10em h-0 m-auto"
-            frameborder="0"
-            scrolling="no"
-            @load="updateIframe()"
+          <PlaygroundIframe
+            class="w-10em"
+            v-bind="iframeData"
+            :height-offset="40"
           />
         </div>
       </div>

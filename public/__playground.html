@@ -16,27 +16,38 @@
   <script>
     let styleEl, fixedStyleEl
     const container = document.getElementById('container')
+
     window.addEventListener('message', (e) => {
       const {
-        style,
-        fixed,
+        css,
+        fixedCss,
         classes,
       } = JSON.parse(e.data)
 
-      if (styleEl)
-        document.body.removeChild(styleEl)
-      styleEl = document.createElement('style')
-      styleEl.innerHTML = style
-      document.body.appendChild(styleEl)
-    
-      // one-time
-      if (!fixedStyleEl && fixed){
+      console.log({
+        css,
+        fixedCss,
+        classes,
+      })
+
+      if (css != null) {
+        if (styleEl)
+          document.body.removeChild(styleEl)
+        styleEl = document.createElement('style')
+        styleEl.innerHTML = css
+        document.body.appendChild(styleEl)
+      }
+
+      if (fixedCss != null) {
+        if (fixedStyleEl)
+          document.body.removeChild(fixedStyleEl)
         fixedStyleEl = document.createElement('style')
-        fixedStyleEl.innerHTML = fixed
+        fixedStyleEl.innerHTML = fixedCss
         document.body.appendChild(fixedStyleEl)
       }
 
-      container.className = classes
+      if (classes != null)
+        container.className = classes
     }, false)
   </script>
 </body>
