@@ -130,7 +130,7 @@ function initialize(userOptions: any) {
 
 <style lang="postcss">
 .algolia-search-box {
-  @apply pt-1px md:(pl-2 text-0.9rem font-medium);
+  @apply pt-1px md:(pl-4 text-0.9rem font-medium);
 }
 
 .DocSearch {
@@ -144,8 +144,8 @@ function initialize(userOptions: any) {
   --docsearch-hit-shadow: none;
   --docsearch-primary-color: var(--c-brand);
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-searchbox-background: rgba(162, 162, 162, 0.1);
-  --docsearch-searchbox-focus-background: rgba(162, 162, 162, 0.1);
+  --docsearch-searchbox-background: transparent;
+  --docsearch-searchbox-focus-background: transparent;
   --docsearch-searchbox-shadow: none;
   --docsearch-text-color: var(--c-text-light);
   --docsearch-muted-color: var(--c-text-lighter);
@@ -155,14 +155,16 @@ function initialize(userOptions: any) {
 
 html.dark .DocSearch {
   --docsearch-container-background: rgba(0,0,0,0.8);
-  --docsearch-searchbox-background: rgba(255, 255, 255, 0.1);
-  --docsearch-searchbox-focus-background: rgba(255, 255, 255, 0.1);
+  --docsearch-searchbox-background: transparent;
+  --docsearch-searchbox-focus-background: transparent;
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
 }
 
 .DocSearch-Button {
-  @apply rounded-md px-3 mr-4;
+  @apply rounded-md px-3 ml-0 rounded-lg
+  bg-gray-200 bg-opacity-50 hover:bg-opacity-60
+  dark:(bg-gray-700 bg-opacity-40 hover:bg-opacity-60);
 }
 .DocSearch-Button-Key {
   @apply static pb-0 border border-gray-300 bg-transparent m-0;

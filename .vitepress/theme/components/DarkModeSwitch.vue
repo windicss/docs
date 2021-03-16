@@ -1,7 +1,7 @@
 <template>
   <a class="icon-button" @click="toggle">
     <carbon-moon v-show="isDark" />
-    <carbon-sun v-show="!isDark" />
+    <ion-ios-sunny v-show="!isDark" />
   </a>
 </template>
 

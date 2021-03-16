@@ -4,20 +4,19 @@
 
     <NavBarTitle />
 
-    <div class="flex-grow" />
-
-    <slot name="search" />
-
-    <div class="hidden md:flex px-3">
+    <div class="hidden md:flex px-3 ml-10">
       <NavLinks />
     </div>
 
-    <div class="nav-icons space-x-3">
+    <div class="flex-grow" />
+    <div class="nav-icons space-x-4 mx-4">
       <a v-if="repo" class="icon-button" :href="repo.link" target="_blank">
         <carbon-logo-github />
       </a>
       <dark-mode-switch />
     </div>
+    <div class="w-1px h-auto my-2 bg-gray-200 dark:bg-gray-700"></div>
+    <slot name="search" />
   </header>
 </template>
 
@@ -50,5 +49,10 @@ defineEmit(['toggle'])
 
 .nav-icons {
   @apply flex items-center border-b-0 ml-3;
+}
+.icon-button {
+  @apply rounded-lg p-2 bg-gray-200
+  bg-opacity-50 hover:bg-opacity-60
+  dark:(bg-gray-700 bg-opacity-60 hover:bg-opacity-70);
 }
 </style>
