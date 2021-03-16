@@ -5,9 +5,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: 'Guide',
     items: [
       { text: 'Getting Started', link: '/guide/' },
-      { text: 'Installation', link: '/guide/#installation' },
-      { text: 'Features', link: '/guide/features/' },
+      { text: 'Installation', link: '/guide/installation' },
       { text: 'Migration', link: '/guide/migration' },
+      { text: 'Features', link: '/guide/features/' },
     ],
   },
   {

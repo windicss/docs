@@ -11,7 +11,7 @@ defineProps({
 <template>
   <aside class="hidden lg:block h-full" :class="{ open }">
     <div v-if="$page?.headers?.length" class="headers-sidebar">
-      <div class="text-base font-bold mb-2 py-1">
+      <div class="sidebar-link-item head !pl-0 !mb-1">
         Sections
       </div>
       <ul class="sidebar-links space-y-1.5">

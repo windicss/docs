@@ -45,7 +45,7 @@ function resolveLink(base: string, path?: string): string | undefined {
   return joinUrl(base, path)
 }
 
-function createChildren(
+export function createChildren(
   active: boolean,
   children?: DefaultTheme.SideBarItem[],
   headers?: Header[],
@@ -65,7 +65,7 @@ function createChildren(
     : null
 }
 
-function resolveHeaders(headers: Header[]): DefaultTheme.SideBarItem[] {
+export function resolveHeaders(headers: Header[]): DefaultTheme.SideBarItem[] {
   return mapHeaders(groupHeaders(headers))
 }
 

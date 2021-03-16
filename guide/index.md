@@ -25,14 +25,6 @@ A quote from the author should illustrate his motivation to create [Windi CSS]:
 
 By scanning your HTML and CSS and generating utilities on demand, [Windi CSS] is able to provide [faster load times][video comparison] and a speedy HMR in development, and does not require purging in production.
 
-## Installation
-
-Windi CSS provides first-class integrations for your favorite tools, select yours and get started.
-
-<Integrations class="mb-5"/>
-
-> Didn't see the framework you use? [Submit an framework request on GitHub](https://github.com/windicss/windicss/issues/new).
-
 ## Basic Usage
 
 All [utilities] of [Tailwind CSS] are supported in Windi CSS without any extra configurations.

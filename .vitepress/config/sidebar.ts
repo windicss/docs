@@ -45,7 +45,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'Guide',
       children: [
         { text: 'Getting Started', link: '/guide/' },
-        { text: 'Installation', link: '/guide/#installation' },
+        { text: 'Installation', link: '/guide/installation' },
         { text: 'Configuration', link: '/guide/configuration' },
         { text: 'Migration from Tailwind', link: '/guide/migration' },
       ],
@@ -54,11 +54,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'Features',
       children: [
         { text: 'Overview', link: '/guide/features/' },
-        { text: 'Directives', link: '/guide/features/directives' },
-        { text: 'Dark Mode', link: '/guide/features/dark-mode' },
+        { text: 'Variant Auto-infer', link: '/guide/features/variant-auto-infer' },
         { text: 'Variant Groups', link: '/guide/features/variant-groups' },
         { text: 'Shortcuts', link: '/guide/features/shortcuts' },
-        { text: 'Variant Auto-infer', link: '/guide/features/variant-auto-infer' },
+        { text: 'Responsive Design', link: '/guide/features/responsive-design' },
+        { text: 'Dark Mode', link: '/guide/features/dark-mode' },
+        { text: 'Directives', link: '/guide/features/directives' },
       ],
     },
     {
