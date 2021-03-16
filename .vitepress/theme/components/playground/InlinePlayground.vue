@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import { ref, watchEffect, defineProps, onMounted, watch, computed } from 'vue'
+import { shallowRef, ref, watchEffect, defineProps, onMounted, computed, toRef } from 'vue'
+import { syncRef } from '@vueuse/core'
 import { StyleSheet } from 'windicss/utils/style'
-import { useClipboard } from '@vueuse/core'
 import Windi from 'windicss'
 import JSON5 from 'json5'
-import Prism from 'prismjs'
 
 import type { PropType } from 'vue'
 import type CodeMirror from 'codemirror'
 import type { Config } from 'windicss/types/interfaces'
 
-import 'prismjs/components/prism-css'
-
 import { isDark } from '../../composables/dark'
 import { useCodeMirror } from '../../composables/useCodeMirror'
+import { usePrismCSS } from '../../composables/usePrismCSS'
 
 const props = defineProps({
   input: {
@@ -71,10 +69,7 @@ const textareaConfig = ref<HTMLTextAreaElement | null>(null)
 const input = ref(props.input)
 const mode = ref(props.mode)
 
-watch(
-  () => props.input,
-  v => input.value = v,
-)
+syncRef(toRef(props, 'input'), input)
 
 let acceped: string[] = []
 
@@ -82,20 +77,8 @@ const decorations: CodeMirror.TextMarker<CodeMirror.MarkerRange>[] = []
 const preflightStyles = processor.value.preflight('<div <p', true, true, true)
 const fixedStyles = processor.value.interpret(props.fixed).styleSheet
 
-const style = ref<StyleSheet>(new StyleSheet())
-const plainCSS = ref('')
-const highlighted = ref('')
-
-const { copy, copied } = useClipboard({
-  read: false,
-  source: plainCSS,
-  copiedDuring: 2000,
-})
-
-watch(style, () => {
-  plainCSS.value = style.value.build().trim()
-  highlighted.value = Prism.highlight(plainCSS.value, Prism.languages.css, 'css').trim()
-}, { immediate: true })
+const style = shallowRef<StyleSheet>(new StyleSheet())
+const { highlightedCSS, copy, copied } = usePrismCSS(() => style.value.build().trim())
 
 function updateIframe() {
   if (!frame.value?.contentWindow)
@@ -139,10 +122,12 @@ function toggleMode() {
 }
 
 function interpret(cm: CodeMirror.Editor) {
+  const value = input.value
+
   // @ts-expect-error
   const { styleSheet, success, ignored, className } = mode.value === 'interpret'
-    ? processor.value.interpret(input.value.replace(/\n/g, ' ')) || {}
-    : processor.value.compile(input.value.replace(/\n/g, ' ')) || {}
+    ? processor.value.interpret(value.replace(/\n/g, ' ')) || {}
+    : processor.value.compile(value.replace(/\n/g, ' ')) || {}
 
   if (mode.value === 'interpret')
     acceped = success || []
@@ -154,7 +139,7 @@ function interpret(cm: CodeMirror.Editor) {
 
   // hightlight for classes
   let start = 0
-  input.value.split(/\s/g).forEach((i) => {
+  value.split(/\s/g).forEach((i) => {
     const end = start + i.length
     if (success.includes(i))
       mark(start, end, true, cm)
@@ -164,7 +149,7 @@ function interpret(cm: CodeMirror.Editor) {
   })
 
   // hightlight for groups
-  Array.from(input.value.matchAll(/([\w:]+):\((.*?)\)/g))
+  Array.from(value.matchAll(/([\w:]+):\((.*?)\)/g))
     .forEach((match) => {
       const [full, prefix, itemStr] = match
       let start = match.index!
@@ -304,7 +289,7 @@ onMounted(async() => {
               </div>
             </div>
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlighted" /></pre>
+            <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlightedCSS" /></pre>
           </div>
         </div>
         <div

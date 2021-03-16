@@ -1,41 +1,25 @@
 <script setup lang="ts">
-import { ref, defineProps, onMounted, watch, defineEmit } from 'vue'
+import { ref, defineProps, onMounted, defineEmit } from 'vue'
 import Windi from 'windicss'
 import { CSSParser } from 'windicss/utils/parser'
-import { useClipboard, useVModel } from '@vueuse/core'
-import Prism from 'prismjs'
-
-import 'prismjs/components/prism-css'
+import { useVModel } from '@vueuse/core'
 
 import { useCodeMirror } from '../../composables/useCodeMirror'
+import { usePrismCSS } from '../../composables/usePrismCSS'
 
 const emit = defineEmit()
 const props = defineProps({
   input: {
     type: String,
-    // eslint-disable-next-line no-useless-escape
     default: '',
   },
 })
 
-const input = useVModel(props, 'input', emit)
+const input = useVModel(props, 'input', emit, { passive: true })
 const textareaInput = ref<HTMLTextAreaElement | null>(null)
 
-const plainCSS = ref('')
-const highlighted = ref('')
-
-const { copy, copied } = useClipboard({
-  read: false,
-  source: plainCSS,
-  copiedDuring: 2000,
-})
-
 const processor = new Windi()
-
-watch(input, () => {
-  plainCSS.value = new CSSParser(input.value, processor).parse().build()
-  highlighted.value = Prism.highlight(plainCSS.value, Prism.languages.css, 'css').trim()
-}, { immediate: true })
+const { highlightedCSS, copy, copied } = usePrismCSS(() => new CSSParser(input.value, processor).parse().build())
 
 onMounted(async() => {
   if (typeof window === 'undefined')
@@ -73,7 +57,7 @@ onMounted(async() => {
             </div>
           </div>
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlighted" /></pre>
+          <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlightedCSS" /></pre>
         </div>
       </div>
     </div>

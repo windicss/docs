@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 
-defineProps({})
+defineProps({
+  open: {
+    default: true,
+  },
+})
 </script>
 
 <template>
