@@ -42,7 +42,6 @@ dist/
 !test/assets/**
 # ignore yarn.lock
 yarn.lock
-.vscode
 
 # Vitepress
 dist

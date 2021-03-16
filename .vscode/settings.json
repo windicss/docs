@@ -1,0 +1,14 @@
+{
+  "volar.tsPlugin": true,
+  "cSpell.words": [
+    "codemirror",
+    "composables",
+    "demi",
+    "prismjs"
+  ],
+  "eslint.packageManager": "pnpm",
+  "eslint.workingDirectories": ["./"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
