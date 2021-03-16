@@ -49,6 +49,6 @@ defineEmit(['toggle'])
 }
 
 .nav-icons {
-  @apply flex pt-2px items-center border-b-0 ml-3;
+  @apply flex items-center border-b-0 ml-3;
 }
 </style>

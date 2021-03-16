@@ -173,7 +173,7 @@ html.dark .DocSearch {
 }
 
 .DocSearch-Search-Icon {
-  @apply h-16px w-16px;
+  @apply h-18px w-18px md:(h-16px w-16px);
 }
 .DocSearch-Button:hover .DocSearch-Search-Icon {
   @apply text-$docsearch-text-color;
