@@ -60,7 +60,7 @@ function toggle() {
   @apply
     block border-0 px-6 py-1.5 w-full
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
-    md:(border-b-2px border-transparent px-0 font-medium text-0.9rem);
+    md:(border-b-2px border-transparent px-0 font-normal text-0.9rem);
 }
 
 .button:focus {

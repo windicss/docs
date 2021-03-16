@@ -1,7 +1,7 @@
 <template>
   <a class="item" v-bind="linkProps">
     <!-- <span class="arrow" /> -->
-    <span class="inline-flex items-center">{{ item.text }}</span>
+    <span class="inline-flex items-center font-normal">{{ item.text }}</span>
     <!-- <span class="icon"><OutboundLink v-if="isExternal" /></span> -->
   </a>
 </template>
@@ -22,7 +22,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
 
 <style scoped lang="postcss">
 .item {
-  @apply block pr-6 pl-10 py-1 font-medium text-$c-text whitespace-nowrap text-base
+  @apply block pr-6 pl-10 py-1 text-$c-text whitespace-nowrap text-base
   md:(px-3 py-1.5 text-sm);
 }
 
