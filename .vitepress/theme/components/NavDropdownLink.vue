@@ -60,7 +60,7 @@ function toggle() {
   @apply
     block border-0 px-6 py-1.5 w-full
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
-    md:(border-b-2px border-transparent px-0 font-normal text-0.9rem);
+    md:(border-b-2px border-transparent px-0 py-5 font-normal text-0.9rem);
 }
 
 .button:focus {
@@ -96,7 +96,7 @@ function toggle() {
   .dialog {
     right: -8px;
     box-shadow: var(--shadow-3);
-    @apply hidden absolute top-26px rounded-md py-1.5 min-w-128px bg-$c-bg;
+    @apply hidden absolute top-48px rounded-md py-1.5 min-w-128px bg-$c-bg;
   }
 }
 </style>
