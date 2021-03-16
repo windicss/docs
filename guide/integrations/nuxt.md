@@ -14,10 +14,10 @@ Then within your `nuxt.config.js` add the following:
 ```js
 // nuxt.config.js
 export default {
-    // ...
-    buildModules: [
-        'nuxt-windicss',
-    ],
+  // ...
+  buildModules: [
+    'nuxt-windicss',
+  ],
 }
 ```
 
@@ -41,25 +41,25 @@ If you were previously using `@nuxtjs/tailwindcss`, please consult the [document
 - Default:
 ```js
 export default {
-    // ...
-    windicss: {
-        scan: {
-            dirs: [ './' ],
-            exclude: [
-                '.nuxt/**/*',
-                '*.template.html',
-                // Any classes added in app.html (that have not previously been referenced) will need to be added to the safelist
-                'app.html'
-            ]
-        },
-        transformCSS: 'pre',
-        preflight: {
-            alias: {
-                // add nuxt aliases
-                'nuxt-link': 'a',
-            }
-        }
-    }
+  // ...
+  windicss: {
+    scan: {
+      dirs: ['./'],
+      exclude: [
+        '.nuxt/**/*',
+        '*.template.html',
+        // Any classes added in app.html (that have not previously been referenced) will need to be added to the safelist
+        'app.html',
+      ],
+    },
+    transformCSS: 'pre',
+    preflight: {
+      alias: {
+        // add nuxt aliases
+        'nuxt-link': 'a',
+      },
+    },
+  },
 }
 ```  
 
@@ -74,11 +74,11 @@ The nuxt module provides the same configuration API as the vite plugin.
 _nuxt.config.js_
 ```js
 export default {
-    // ...
-    windicss: {
-        preflight: false
-    },
-}  
+  // ...
+  windicss: {
+    preflight: false,
+  },
+}
 ```
 
 ## Hooks

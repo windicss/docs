@@ -36,10 +36,10 @@ export default {
   // ...
   plugins: [
     new WindiCSSWebpackPlugin([
-        // options
-    ])
+      // options
+    ]),
   ],
-};
+}
 ```
 
 Within an entry point file or something only loaded once, add the import of `windi.css`. For this, to work you need to be using a [style-loader](https://webpack.js.org/loaders/style-loader/#modules) with
