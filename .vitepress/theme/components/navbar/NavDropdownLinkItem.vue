@@ -22,7 +22,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
 
 <style scoped lang="postcss">
 .item {
-  @apply block pr-6 pl-10 py-1 text-$c-text whitespace-nowrap text-base
+  @apply block px-6 py-2 text-$c-text whitespace-nowrap text-0.95rem
   md:(px-4 py-2 text-sm);
 }
 

@@ -57,7 +57,7 @@ function toggle() {
 
 .button {
   @apply
-    block border-0 px-6 py-1.5 w-full
+    block border-0 px-3 py-1.5 w-full
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
     md:(border-b-2px border-transparent px-0 py-5 font-normal text-0.9rem);
 }
@@ -88,7 +88,7 @@ function toggle() {
 }
 
 .dialog {
-  @apply m-0 p-0 list-none;
+  @apply m-0 p-0 mb-2 list-none;
 }
 
 @screen md {
