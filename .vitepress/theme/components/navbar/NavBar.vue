@@ -31,7 +31,7 @@ defineEmit(['toggle'])
     border-b-1px border-$c-divider
     py-0.7rem px-4
     h-$header-height bg-$c-bg
-    md:(px-6);
+    md:px-5 lg:px-6;
 }
 
 .nav-bar.root {

@@ -18,7 +18,7 @@
 .nav-bar-title {
   @apply
     text-xl md:text-1.3rem font-semibold text-$c-text
-    inline-flex items-center
+    inline-flex items-center whitespace-nowrap
     hover:no-underline;
 }
 </style>
