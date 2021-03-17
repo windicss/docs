@@ -14,8 +14,21 @@
 </template>
 
 <script setup lang="ts">
-import HomeHero from './HomeHero.vue'
-import HomeFooter from './HomeFooter.vue'
+import { onMounted, onUnmounted } from 'vue'
+let emitted = false
+function scrollDown() {
+  if (!emitted) {
+    window.scrollTo({ top: 10000, behavior: 'smooth' })
+    emitted = true
+  }
+}
+onMounted(() => {
+  document.addEventListener('scroll', scrollDown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('scroll', scrollDown)
+})
 </script>
 
 <style scoped lang="postcss">
