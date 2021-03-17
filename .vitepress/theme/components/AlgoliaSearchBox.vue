@@ -138,7 +138,7 @@ function initialize(userOptions: any) {
 
 <style lang="postcss">
 .algolia-search-box {
-  @apply pt-1px md:(pl-4 text-0.9rem font-medium);
+  @apply pt-1px lg:(pl-4);
 }
 
 .DocSearch {
@@ -179,7 +179,7 @@ html.dark .DocSearch {
   @apply mr-2;
 }
 .DocSearch-Button-Placeholder {
-  @apply pl-3 font-normal pr-32;
+  @apply pl-3 font-normal lg:pr-32;
 }
 
 .DocSearch-Button:hover .DocSearch-Button-Key {
@@ -199,5 +199,12 @@ html.dark .DocSearch {
 }
 .DocSearch-Button:hover .DocSearch-Search-Icon {
   @apply text-$docsearch-text-color;
+}
+@screen -lg {
+  .DocSearch-Button-Key,
+  .DocSearch-Button-KeySeparator,
+  .DocSearch-Button-Placeholder {
+      display: none;
+  }
 }
 </style>
