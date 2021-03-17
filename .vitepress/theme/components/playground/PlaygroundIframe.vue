@@ -52,7 +52,7 @@ function resizeIframe() {
     return
 
   frame.value.style.height = '0'
-  frame.value.style.height = `${frame.value.contentWindow.document.documentElement.scrollHeight + props.heightOffset}px`
+  frame.value.style.height = `${frame.value.contentWindow.document.documentElement?.scrollHeight + props.heightOffset}px`
 }
 
 function ready() {
