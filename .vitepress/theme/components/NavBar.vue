@@ -15,7 +15,7 @@
       </a>
       <dark-mode-switch />
     </div>
-    <div class="w-1px h-auto my-2 bg-gray-200 dark:bg-gray-700"></div>
+    <div class="hidden md:block w-1px h-auto my-2 bg-gray-200 dark:bg-gray-700"></div>
     <slot name="search" />
   </header>
 </template>
@@ -38,7 +38,7 @@ defineEmit(['toggle'])
     fixed top-0 inset-x-0 z-$z-index-navbar
     flex space-between align-center
     border-b-1px border-$c-divider
-    py-0.7rem pr-6 pl-16
+    py-0.7rem pr-4 pl-16
     h-$header-height bg-$c-bg
     md:(px-6);
 }

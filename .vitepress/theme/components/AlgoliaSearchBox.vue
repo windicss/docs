@@ -162,7 +162,7 @@ html.dark .DocSearch {
 }
 
 .DocSearch-Button {
-  @apply rounded-lg px-3 ml-0 rounded-lg
+  @apply rounded-lg px-2 md:px-3 ml-0 rounded-lg
   bg-gray-200 bg-opacity-50 hover:bg-opacity-60 hover:bg-gray-200
   dark:(bg-gray-700 bg-opacity-40 hover:bg-opacity-60);
 }
