@@ -1,5 +1,5 @@
 <template>
-  <aside class="h-auto">
+  <aside class="h-auto border-r-1px border-$c-divider">
     <div class="sidebar" :class="{ open }">
       <NavLinks class="nav" />
 
@@ -46,7 +46,7 @@ defineProps({
 
 @media (min-width: 960px) {
   .sidebar {
-    width: 16rem;
+    width: auto;
   }
 }
 

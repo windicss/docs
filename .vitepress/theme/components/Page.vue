@@ -1,5 +1,5 @@
 <template>
-  <main class="px-6 pb-16 pt-1">
+  <main class="px-6 pb-16 pt-1 container !max-w-780px mx-auto">
     <slot name="top" />
 
     <div class="content">

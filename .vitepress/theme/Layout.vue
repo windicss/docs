@@ -7,7 +7,7 @@
         </slot>
       </template>
     </NavBar>
-    <div class="container !max-w-screen-xl mx-auto pt-$header-height" :class="{'grid-layout': !enableHome}">
+    <div class="pt-$header-height" :class="{'grid-layout': !enableHome}">
       <SideBar :open="openSideBar">
         <template #sidebar-top>
           <slot name="sidebar-top" />
@@ -42,7 +42,7 @@
         </template>
       </Page>
 
-      <HeadersSideBar />
+      <!-- <HeadersSideBar /> -->
     </div>
   </div>
 
@@ -137,17 +137,17 @@ const pageClasses = computed(() => {
 @screen md {
   .grid-layout {
     display: grid;
-    grid-template-columns: min-content minmax(100px, 1fr);
+    grid-template-columns: 16rem minmax(100px, 1fr);
     grid-template-rows: 1fr;
     gap: 0px 16px;
   }
 }
 
-@screen lg {
+/* @screen lg {
   .grid-layout {
     grid-template-columns: min-content minmax(100px, 2fr) 16rem;
   }
-}
+} */
 
 #ads-container {
   margin: 0 auto;
