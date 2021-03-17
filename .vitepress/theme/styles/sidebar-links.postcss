@@ -18,6 +18,7 @@ a.sidebar-link-item:hover {
 
 a.sidebar-link-item.active {
   color: var(--c-brand);
+  @apply bg-blue-50 rounded-lg;
 }
 
 .sidebar > .sidebar-links {
@@ -42,7 +43,7 @@ a.sidebar-link-item.active {
 
 .sidebar > .sidebar-links > .sidebar-link > .sidebar-link-item,
 .sidebar-link-item.head {
-  padding: 0.35rem 1.5rem 0.35rem 1.25rem;
+  padding: 0.35rem 1.5rem 0.35rem 1rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 600;
@@ -52,7 +53,11 @@ a.sidebar-link-item.active {
 
 .sidebar > .sidebar-links > .sidebar-link > a.sidebar-link-item.active {
   border-left-color: var(--c-brand);
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.sidebar {
+  @apply px-4;
 }
 
 .sidebar
@@ -62,9 +67,9 @@ a.sidebar-link-item.active {
   > .sidebar-link
   > .sidebar-link-item {
   display: block;
-  padding: 0.35rem 1.5rem 0.35rem 1.25rem;
+  padding: 0.35rem 1.5rem 0.35rem 1rem;
   line-height: 1.4;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
 }
 
@@ -75,7 +80,7 @@ a.sidebar-link-item.active {
   > .sidebar-link
   > a.sidebar-link-item.active {
   border-left-color: var(--c-brand);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .sidebar
