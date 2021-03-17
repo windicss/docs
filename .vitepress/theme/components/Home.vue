@@ -21,6 +21,8 @@ function scrollDown() {
     window.scrollTo({ top: 10000, behavior: 'smooth' })
     emitted = true
   }
+  if (window.scrollY === 0)
+    emitted = false
 }
 onMounted(() => {
   document.addEventListener('scroll', scrollDown)
