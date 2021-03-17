@@ -8,7 +8,7 @@ heroText: Windi CSS
 actionText: Get Started
 actionLink: /guide/
 
-altActionText: Features
+altActionText: Learn More
 altActionLink: /guide/features/
 
 heroImage: /assets/logo.svg

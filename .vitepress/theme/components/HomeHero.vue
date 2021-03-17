@@ -16,7 +16,7 @@
         <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-6 text-$c-text-light xs:(text-2xl)">
           {{ tagline }}
         </p>
-        <div class="mt-2 md:(block space-x-6) flex flex-col">
+        <div class="mt-8 xs:mt-12 flex space-x-6">
           <NavLink
             v-if="hasAction"
             :item="{ link: data.actionLink, text: data.actionText }"
@@ -68,15 +68,15 @@ const hasAltAction = computed(
   @apply pt-10 pb-11 px-6 text-center xs:py-14 md:(pt-16 pb-17) flex;
 }
 .action {
-  @apply mt-4 inline-block xs:mt-8;
+  @apply inline-block;
 }
 
 .action :deep(.item) {
-  @apply rounded-full
-    inline-block px-5
-    text-base text-white leading-11
+  @apply rounded-lg
+    inline-block px-4 py-2.5
+    text-lg text-white
     bg-$c-brand border-2px border-$c-brand transition-colors
-    xs:(text-xl leading-13 px-6);
+    xs:(text-xl px-5 py-2.8);
 }
 
 .action.alt :deep(.item) {
@@ -85,6 +85,6 @@ const hasAltAction = computed(
 }
 
 .action :deep(.item:hover) {
-  @apply no-underline text-white bg-$c-brand-light;
+  @apply no-underline text-white bg-$c-brand-light border-$c-brand-light;
 }
 </style>
