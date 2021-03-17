@@ -80,11 +80,14 @@ const hasAltAction = computed(
 }
 
 .action.alt :deep(.item) {
-  @apply
-    bg-transparent text-$c-brand;
+  @apply bg-transparent text-$c-brand;
+}
+
+.action.alt :deep(.item:hover) {
+  @apply text-$c-brand-light bg-transparent border-$c-brand-light;
 }
 
 .action :deep(.item:hover) {
-  @apply no-underline text-white bg-$c-brand-light border-$c-brand-light;
+  @apply no-underline bg-$c-brand-light border-$c-brand-light;
 }
 </style>
