@@ -3,7 +3,7 @@
     <div class="text-left max-w-40em pt-20 py-50 m-auto">
       <figure v-if="$frontmatter.heroImage">
         <img
-          class="block w-auto max-w-full max-h-120px"
+          class="block w-auto max-w-full max-h-120px -ml-2"
           :src="$withBase($frontmatter.heroImage)"
           :alt="$frontmatter.heroAlt"
         >
@@ -65,7 +65,7 @@ const hasAltAction = computed(
 <style scoped lang="postcss">
 .home-hero {
   min-height: calc(100vh - var(--header-height));
-  @apply pt-10 pb-11 px-6 text-center xs:py-14 md:(pt-16 pb-17) flex;
+  @apply pt-10 pb-11 px-4 md:px-6 text-center xs:py-14 md:(pt-16 pb-17) flex;
 }
 .action {
   @apply inline-block;

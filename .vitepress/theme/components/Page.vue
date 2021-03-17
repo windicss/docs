@@ -1,5 +1,5 @@
 <template>
-  <main class="px-6 pb-16 pt-1 container !max-w-780px mx-auto">
+  <main class="px-4 md:px-6 pb-16 pt-1 container !max-w-780px mx-auto">
     <slot name="top" />
 
     <div class="content">
@@ -20,12 +20,6 @@ import NextAndPrevLinks from './NextAndPrevLinks.vue'
 </script>
 
 <style scoped>
-.container {
-  margin: 0 auto;
-  padding: 0 1.5rem 4rem;
-  max-width: 62rem;
-}
-
 .content {
   padding-bottom: 1.5rem;
 }
