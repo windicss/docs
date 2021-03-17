@@ -17,6 +17,7 @@ const repo = useRepo()
 .icon-button {
   @apply rounded-lg p-2 bg-gray-200
   bg-opacity-50 hover:bg-opacity-60
+  focus:outline-none
   dark:(bg-gray-700 bg-opacity-60 hover:bg-opacity-70);
 }
 </style>
