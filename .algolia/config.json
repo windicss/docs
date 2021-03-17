@@ -8,6 +8,11 @@
       "page_rank": 3
     },
     {
+      "url": "https://windicss.netlify.app/plugins/",
+      "tags": ["plugins"],
+      "page_rank": 2
+    },
+    {
       "url": "https://windicss.netlify.app/guide/",
       "tags": ["guide"],
       "page_rank": 1

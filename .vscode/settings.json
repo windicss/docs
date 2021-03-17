@@ -3,6 +3,7 @@
     "codemirror",
     "composables",
     "demi",
+    "docsearch",
     "prismjs"
   ],
   "eslint.packageManager": "pnpm",

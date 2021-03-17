@@ -54,77 +54,85 @@ function update(options: any) {
 }
 
 function initialize(userOptions: any) {
-  docsearch(
-    Object.assign({}, userOptions, {
-      container: '#docsearch',
+  docsearch({
+    apiKey: userOptions.apiKey,
+    appId: userOptions.appId,
+    indexName: userOptions.indexName,
+    container: '#docsearch',
 
-      searchParameters: Object.assign({}, userOptions.searchParameters),
+    searchParameters: Object.assign({}, userOptions.searchParameters),
 
-      navigator: {
-        navigate: ({ suggestionUrl }: { suggestionUrl: string }) => {
-          const { pathname: hitPathname } = new URL(
-            window.location.origin + suggestionUrl,
-          )
+    navigator: {
+      navigate: ({ suggestionUrl }) => {
+        const { pathname: hitPathname } = new URL(
+          window.location.origin + suggestionUrl,
+        )
 
-          // Router doesn't handle same-page navigation so we use the native
-          // browser location API for anchor navigation
-          if (route.path === hitPathname)
-            window.location.assign(window.location.origin + suggestionUrl)
+        // Router doesn't handle same-page navigation so we use the native
+        // browser location API for anchor navigation
+        if (route.path === hitPathname)
+          window.location.assign(window.location.origin + suggestionUrl)
 
-          else
-            router.go(suggestionUrl)
-        },
+        else
+          router.go(suggestionUrl)
       },
+      navigateNewTab({ suggestionUrl }) {
+        const windowReference = window.open(suggestionUrl, '_blank', 'noopener')
 
-      transformItems: (items: DocSearchHit[]) => {
-        return items.map((item) => {
-          return Object.assign({}, item, {
-            url: getRelativePath(item.url),
-          })
+        if (windowReference)
+          windowReference.focus()
+      },
+      navigateNewWindow({ suggestionUrl }) {
+        window.open(suggestionUrl, '_blank', 'noopener')
+      },
+    },
+
+    transformItems: (items: DocSearchHit[]) => {
+      return items.map((item) => {
+        return Object.assign({}, item, {
+          url: getRelativePath(item.url),
         })
-      },
+      })
+    },
 
-      hitComponent: ({
-        hit,
-        children,
-      }: {
-        hit: DocSearchHit
-        children: any
-      }) => {
-        const relativeHit = hit.url.startsWith('http')
-          ? getRelativePath(hit.url as string)
-          : hit.url
+    hitComponent: ({
+      hit,
+      children,
+    }) => {
+      const relativeHit = hit.url.startsWith('http')
+        ? getRelativePath(hit.url as string)
+        : hit.url
 
-        return {
-          type: 'a',
-          ref: undefined,
-          constructor: undefined,
-          key: undefined,
-          props: {
-            href: hit.url,
-            onClick: (event: MouseEvent) => {
-              if (isSpecialClick(event))
-                return
+      return {
+        type: 'a',
+        ref: undefined,
+        constructor: undefined,
+        key: undefined,
+        props: {
+          href: hit.url,
+          onClick: (event: MouseEvent) => {
+            console.log(children)
+            if (isSpecialClick(event))
+              return
 
-              // we rely on the native link scrolling when user is already on
-              // the right anchor because Router doesn't support duplicated
-              // history entries
-              if (route.path === relativeHit)
-                return
+            // we rely on the native link scrolling when user is already on
+            // the right anchor because Router doesn't support duplicated
+            // history entries
+            if (route.path === relativeHit)
+              return
 
-              // if the hits goes to another page, we prevent the native link
-              // behavior to leverage the Router loading feature
-              if (route.path !== relativeHit)
-                event.preventDefault()
+            // if the hits goes to another page, we prevent the native link
+            // behavior to leverage the Router loading feature
+            if (route.path !== relativeHit)
+              event.preventDefault()
 
-              router.go(relativeHit)
-            },
-            children,
+            router.go(relativeHit)
           },
-        }
-      },
-    }),
-  )
+          children,
+        },
+      }
+    },
+  })
 }
 </script>
 
