@@ -7,7 +7,6 @@ import '@docsearch/css/dist/style.css'
 import { useRoute, useRouter } from 'vitepress'
 import { defineProps, getCurrentInstance, onMounted, watch } from 'vue'
 import docsearch from '@docsearch/js'
-import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
 import type { DefaultTheme } from '../config'
 
 const props = defineProps<{
@@ -45,15 +44,16 @@ function getRelativePath(absoluteUrl: string) {
   return pathname + hash
 }
 
-function update(options: any) {
+function update(options: DefaultTheme.AlgoliaSearchOptions) {
   if (vm && vm.vnode.el) {
     vm.vnode.el.innerHTML
-      = '<div class="algolia-search-box" id="docsearch"></div>'
+      = '<div id="docsearch" class="algolia-search-box"></div>'
     initialize(options)
   }
 }
 
-function initialize(userOptions: any) {
+function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
+  console.log(userOptions)
   docsearch({
     apiKey: userOptions.apiKey,
     appId: userOptions.appId,
@@ -72,7 +72,6 @@ function initialize(userOptions: any) {
         // browser location API for anchor navigation
         if (route.path === hitPathname)
           window.location.assign(window.location.origin + suggestionUrl)
-
         else
           router.go(suggestionUrl)
       },
@@ -87,7 +86,7 @@ function initialize(userOptions: any) {
       },
     },
 
-    transformItems: (items: DocSearchHit[]) => {
+    transformItems: (items) => {
       return items.map((item) => {
         return Object.assign({}, item, {
           url: getRelativePath(item.url),
