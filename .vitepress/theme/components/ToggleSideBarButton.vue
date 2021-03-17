@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-button" @click="$emit('toggle')">
+  <div class="sidebar-button -ml-2" @click="$emit('toggle')">
     <svg
       class="icon"
       xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,6 @@ export default {
 
 <style>
 .sidebar-button {
-  position: absolute;
-  top: 0.6rem;
-  left: 1rem;
   display: none;
   padding: 0.6rem;
   cursor: pointer;

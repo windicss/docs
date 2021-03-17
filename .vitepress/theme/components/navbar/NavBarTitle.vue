@@ -17,7 +17,7 @@
 <style scoped lang="postcss">
 .nav-bar-title {
   @apply
-    text-lg md:text-1.3rem font-semibold text-$c-text
+    text-xl md:text-1.3rem font-semibold text-$c-text
     inline-flex items-center
     hover:no-underline;
 }

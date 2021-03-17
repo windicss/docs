@@ -22,8 +22,6 @@ import { computed } from 'vue'
 import { useSiteDataByRoute } from 'vitepress'
 import { useLocaleLinks } from '../composables/nav'
 import { useRepo } from '../composables/repo'
-import NavLink from './NavLink.vue'
-import NavDropdownLink from './NavDropdownLink.vue'
 
 const site = useSiteDataByRoute()
 const localeLinks = useLocaleLinks()
