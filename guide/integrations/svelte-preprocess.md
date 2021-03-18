@@ -59,16 +59,10 @@ module.exports = {
 };
 ```
 
-### Setup VSCode Extension
+### Setup VS Code Extension
 
-If you are using `Svelte for VS Code` vscode extension, I believe most people are using it. You will need to add `"vetur.validation.style": false` to your configuration file.
-
-Hit `ctrl-shift-p` or `cmd-shift-p` on mac, type open settings, and select `Preferences: Open Settings (JSON)`. Add `"vetur.validation.style": false` to `settings.json` then save it.
-
-Then you will need to tell svelte-vscode to **restart the svelte language server** in order to pick up a new configuration.
-
-Hit `ctrl-shift-p` or `cmd-shift-p` on mac, type svelte restart, and select `Svelte: Restart Language Server`. Any errors you were seeing should now go away and you're now all set up!
-
+If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your condfig.
+Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
 
 ## Additional Features in Svelte  ⚡️
 
