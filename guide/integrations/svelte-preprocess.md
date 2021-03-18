@@ -22,7 +22,42 @@ Add <kbd>[svelte-windicss-preprocess]</kbd> to your bundler configuration.
 
 ### Vanilla Svelte
 
+```js
+// rollup.config.js
+export default {
+  // ...
+  plugins: [
+    svelte({
+      // ...
+      preprocess: [
+        require('svelte-windicss-preprocess').preprocess({
+          config: 'windi.config.js', // windi config file path (optional)
+          compile: true, // false: interpretation mode; true: compilation mode (optional)
+          prefix: 'windi-', // set compilation mode style prefix
+          safeList: ["bg-gray-600", "text-white"] // (optional)
+        })
+      ],
+    }),
+  ],
+  // ...
+};
+```
 
+### Snowpack Svelte
+
+```js
+// svelte.config.js
+module.exports = {
+  preprocess: [
+    require('svelte-windicss-preprocess').preprocess({
+      config: 'windi.config.js', // windi config file path (optional)
+      compile: true, // false: interpretation mode; true: compilation mode (optional)
+      prefix: 'windi-', // set compilation mode style prefix
+      safeList: ["bg-gray-600", "text-white"] // (optional)
+    })
+  ],
+};
+```
 
 ### Setup VSCode Extension
 
