@@ -1,7 +1,11 @@
 <template>
-  <div class="theme">
-    <h1>404</h1>
-    <blockquote>{{ getMsg() }}</blockquote>
+  <div class="theme flex flex-col items-center">
+    <h1 class="text-6xl">
+      404
+    </h1>
+    <p>
+      {{ getMsg() }}
+    </p>
     <a :href="$site.base" aria-label="go to home">Take me home.</a>
   </div>
 </template>
