@@ -59,6 +59,113 @@ module.exports = {
 };
 ```
 
+### Rollup Sapper (prefer [SvelteKit](https://next.windicss.org/guide/integrations/svelte-kit.html) once released)
+
+```js
+// rollup.config.js
+export default {
+  client: {
+    // ...
+    plugins: [
+      // ...
+      svelte({
+        // ...
+        preprocess: [
+          require('svelte-windicss-preprocess').preprocess({
+            config: 'windi.config.js', // windi config file path (optional)
+            compile: true, // false: interpretation mode; true: compilation mode (optional)
+            prefix: 'windi-', // set compilation mode style prefix
+            safeList: ["bg-gray-600", "text-white"] // (optional)
+          })
+        ],
+      }),
+      // ...
+    ],
+  },
+
+  server: {
+    // ...
+    plugins: [
+      // ...
+      svelte({
+        // ...
+        preprocess: [
+          require('svelte-windicss-preprocess').preprocess({
+            config: 'windi.config.js', // windi config file path (optional)
+            compile: true, // false: interpretation mode; true: compilation mode (optional)
+            prefix: 'windi-', // set compilation mode style prefix
+            safeList: ["bg-gray-600", "text-white"] // (optional)
+          })
+        ],
+      }),
+      // ...
+    ],
+  },
+};
+```
+
+### Webpack Sapper (prefer [SvelteKit](https://next.windicss.org/guide/integrations/svelte-kit.html) once released)
+
+```js
+// webpack.config.js
+module.exports = {
+  client: {
+    // ...
+    module: {
+      rules: [
+        {
+          test: /\.(svelte|html)$/,
+          use: {
+            loader: 'svelte-loader',
+            options: {
+              // ...
+              preprocess: [
+                require('svelte-windicss-preprocess').preprocess({
+                  config: 'windi.config.js', // windi config file path (optional)
+                  compile: true, // false: interpretation mode; true: compilation mode (optional)
+                  prefix: 'windi-', // set compilation mode style prefix
+                  safeList: ["bg-gray-600", "text-white"] // (optional)
+                })
+              ],
+            }
+          }
+        },
+        // ...
+      ]
+    },
+    // ...
+  },
+
+  server: {
+    // ...
+    module: {
+      rules: [
+        {
+          test: /\.(svelte|html)$/,
+          use: {
+            loader: 'svelte-loader',
+            options: {
+              // ...
+              preprocess: [
+                require('svelte-windicss-preprocess').preprocess({
+                  config: 'windi.config.js', // windi config file path (optional)
+                  compile: true, // false: interpretation mode; true: compilation mode (optional)
+                  prefix: 'windi-', // set compilation mode style prefix
+                  safeList: ["bg-gray-600", "text-white"] // (optional)
+                })
+              ],
+            }
+          }
+        },
+      // ...
+      ]
+    },
+    // ...
+  },
+};
+
+```
+
 ### Setup VS Code Extension
 
 If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your condfig.
