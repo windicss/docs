@@ -27,7 +27,7 @@ You can use `+` for __Only Screen__ and `-` for __Desktop First__ in screen util
 
 <InlinePlayground :input="'sm:p-1\n+sm:p-2\n-sm:p-3'" :showCSS="true" :showPreview="false"/>
 
-See [screen variants](http://localhost:4002/utilities/variants.html#screen-variants) for more details.
+See [screen variants](https://next.windicss.org/utilities/variants.html#https://next.windicss.org/utilities/variants.html#screen-variants) for more details.
 
 ## Important Prefix
 
