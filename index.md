@@ -14,17 +14,15 @@ actionLink: /guide/introduction
 heroImage: /assets/logo.svg
 heroAlt: Windi CSS logo
 
-features:
-  - title: ⚡️ Speed
-    details: Windi only loads the CSS you use
-  - title: 😎 Auto-Utilities
-    details: Infers number, sizes, and colors from your classes
-  - title: ✅ Cross-Browser Support
-    details: All utilities have cross-browser support
 footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---
 
-<p class="text-center opacity-75 -my-4">
+::: tip
+We are working on a fresh new docs with major docs rewrites and some pretty cool [intreactive playgrounds](https://twitter.com/antfu7/status/1371779599084888064?s=20), stay tuned!
+:::
+
+
+<p class="text-center opacity-75 mt-4 -mb-4">
   <a href="https://www.netlify.com" target="_blank">
     <img src="/assets/netlify.svg" alt="Deploys by Netlify">
   </a>
