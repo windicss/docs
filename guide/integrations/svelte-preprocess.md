@@ -18,7 +18,7 @@ npm i -D svelte-windicss-preprocess
 
 ## Configuration
 
-Add <kbd>[svelte-windicss-preprocess]</kbd> to your Rollup or Webpack configuration.
+Add <kbd>[svelte-windicss-preprocess]</kbd> to your bundler configuration.
 
 If using:
 
@@ -52,55 +52,6 @@ export default {
   ],
   // ...
 }
-```
-
-### Sveltekit
-
-Add <kbd>[svelte-windicss-preprocess]</kbd> to your `svelte.config.cjs`.
-
-> For now, sveltekit has an issue of setting the preprocessor. Make sure your `snowpack.config.cjs` is consistent with our [example](https://github.com/voorjaar/svelte-windicss-preprocess/blob/v2.1.0/example/svelte-next/snowpack.config.cjs) before setting.
-
-```js
-// svelte.config.cjs
-module.exports = {
-  preprocess: require('svelte-windicss-preprocess').preprocess({
-    // uncomment this, if you need a config file
-    // config: 'windi.config.js',
-    compile: false,
-    prefix: 'windi-',
-    globalPreflight: true,
-    globalUtility: true,
-  }),
-  kit: {
-    adapter: '@sveltejs/adapter-node',
-    target: '#svelte',
-  },
-}
-```
-
-with Typescript
-
-```js
-// svelte.config.cjs
-const sveltePreprocess = require('svelte-preprocess')
-module.exports = {
-  preprocess: [
-    sveltePreprocess.typescript(),
-    require('svelte-windicss-preprocess').preprocess({
-      // uncomment this, if you need a config file
-      // config: 'windi.config.js',
-      compile: false,
-      prefix: 'windi-',
-      globalPreflight: true,
-      globalUtility: true,
-    }),
-  ],
-  kit: {
-    adapter: '@sveltejs/adapter-node',
-    target: '#svelte',
-  },
-}
-
 ```
 
 ### Sapper(rollup)
