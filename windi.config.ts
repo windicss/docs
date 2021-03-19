@@ -18,6 +18,9 @@ export default defineConfig({
       colors: {
         bg: 'var(--c-bg)',
       },
+      boxShadow: {
+        box: '0px 5px 15px 0px rgba(0, 0, 0, 0.35)',
+      },
     },
   },
 })

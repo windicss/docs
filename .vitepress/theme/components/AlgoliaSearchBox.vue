@@ -53,7 +53,6 @@ function update(options: DefaultTheme.AlgoliaSearchOptions) {
 }
 
 function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
-  console.log(userOptions)
   docsearch({
     apiKey: userOptions.apiKey,
     appId: userOptions.appId,
@@ -110,7 +109,6 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
         props: {
           href: hit.url,
           onClick: (event: MouseEvent) => {
-            console.log(children)
             if (isSpecialClick(event))
               return
 

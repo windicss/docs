@@ -7,40 +7,43 @@
         </slot>
       </template>
     </NavBar>
-    <div class="pt-$header-height" :class="{'grid-layout': !enableHome}">
-      <SideBar :open="openSideBar">
-        <template #sidebar-top>
-          <slot name="sidebar-top" />
-        </template>
-        <template #sidebar-bottom>
-          <slot name="sidebar-bottom" />
-        </template>
-      </SideBar>
-      <!-- TODO: make this button accessible -->
-      <div class="sidebar-mask" @click="toggleSidebar(false)" />
-
-      <Home v-if="enableHome">
-        <template #hero>
-          <slot name="home-hero" />
-        </template>
-        <template #features>
-          <slot name="home-features" />
-        </template>
-        <template #footer>
-          <slot name="home-footer" />
-        </template>
-      </Home>
-
-      <Page v-else>
-        <template #top>
-          <slot name="page-top-ads" />
-          <slot name="page-top" />
-        </template>
-        <template #bottom>
-          <slot name="page-bottom" />
-          <slot name="page-bottom-ads" />
-        </template>
-      </Page>
+    <div class="pt-$header-height min-h-screen" :class="{'grid-layout': !enableHome && !enablePlayground}">
+      <template v-if="!enablePlayground">
+        <SideBar :open="openSideBar">
+          <template #sidebar-top>
+            <slot name="sidebar-top" />
+          </template>
+          <template #sidebar-bottom>
+            <slot name="sidebar-bottom" />
+          </template>
+        </SideBar>
+        <!-- TODO: make this button accessible -->
+        <div class="sidebar-mask" @click="toggleSidebar(false)" />
+        <Home v-if="enableHome">
+          <template #hero>
+            <slot name="home-hero" />
+          </template>
+          <template #features>
+            <slot name="home-features" />
+          </template>
+          <template #footer>
+            <slot name="home-footer" />
+          </template>
+        </Home>
+        <Page v-else>
+          <template #top>
+            <slot name="page-top-ads" />
+            <slot name="page-top" />
+          </template>
+          <template #bottom>
+            <slot name="page-bottom" />
+            <slot name="page-bottom-ads" />
+          </template>
+        </Page>
+      </template>
+      <template v-else>
+        <Playground />
+      </template>
 
       <!-- <HeadersSideBar /> -->
     </div>
@@ -79,6 +82,9 @@ const theme = computed(() => siteData.value.themeConfig)
 
 // home
 const enableHome = computed(() => !!route.data.frontmatter.home)
+
+// playground
+const enablePlayground = computed(() => !!route.data.frontmatter.playground)
 
 // navbar
 const showNavbar = computed(() => {

@@ -1,3 +1,11 @@
+
+// declare global {
+//   import type { Environment } from 'monaco-editor'
+//   interface Window {
+//     MonacoEnvironment?: Environment
+//   }
+// }
+
 declare module '*.vue' {
   // eslint-disable-next-line import/no-duplicates
   import { ComponentOptions } from 'vue'

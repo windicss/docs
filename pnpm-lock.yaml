@@ -3,6 +3,7 @@ dependencies:
   change-case: 4.1.2
   codemirror: 5.59.4
   json5: 2.2.0
+  monaco-editor: 0.23.0
   prismjs: 1.23.0
   vue: 3.0.7
   vue-demi: 0.7.3_vue@3.0.7
@@ -730,7 +731,7 @@ packages:
       fast-glob: 3.2.5
       micromatch: 4.0.2
       sucrase: 3.17.1
-      windicss: 2.5.1
+      windicss: 2.5.2
     dev: true
     resolution:
       integrity: sha512-mYKqjRVc2NYHp5uA5cDyHtqHFNK1pBC6RYYLywuUPTxsUVszYGnRbUXSeZwisGrHqD5dlHtpcefM5QOuTm53KA==
@@ -2953,6 +2954,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-G79asbqCevI1dRQ0kEJkVfSB/h4=
+  /monaco-editor/0.23.0:
+    dev: false
+    resolution:
+      integrity: sha512-q+CP5zMR/aFiMTE9QlIavGyGicKnG2v/H8qVvybLzeFsARM8f6G9fL0sMST2tyVYCwDKkGamZUI6647A0jR/Lg==
   /ms/2.0.0:
     dev: true
     resolution:
@@ -4507,6 +4512,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-KcNCruJiarEMQGiwp+UsEM+gBtOu2ne74/AZ5LmVOGHpbFAt8ulFztumb5svDJDB5bVauDL9dRu11dgxsn5q4w==
+  /windicss/2.5.2:
+    dev: true
+    engines:
+      node: '>= 12'
+    hasBin: true
+    resolution:
+      integrity: sha512-WzynOx1rQGzgUq62wqyWjUzOEPArwP8oeWyLqymiF54LSFC7f0oIYXR01bxY/y6OK2wODyK/OuwahPNAsseqqg==
   /word-wrap/1.2.3:
     dev: true
     engines:
@@ -4573,6 +4585,7 @@ specifiers:
   eslint-plugin-jsonc: ^1.2.1
   eslint-plugin-markdown: ^2.0.0
   json5: ^2.2.0
+  monaco-editor: ^0.23.0
   prism-theme-vars: ^0.2.2
   prismjs: ^1.23.0
   typescript: ^4.2.3

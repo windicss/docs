@@ -21,6 +21,9 @@ const props = defineProps({
   heightOffset: {
     default: 0,
   },
+  html: {
+    default: 'Preview'
+  }
 })
 
 const isReady = ref(false)

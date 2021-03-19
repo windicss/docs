@@ -10,6 +10,7 @@ export default defineConfig({
       dirs: [
         '.vitepress/theme/components',
       ],
+      extensions: ['vue', 'ts'],
       customLoaderMatcher: id => id.endsWith('.md'),
       customComponentResolvers: [
         ViteIconsResolver({
@@ -24,6 +25,7 @@ export default defineConfig({
       scan: {
         dirs: ['.vitepress'],
         include: ['index.md'],
+        exclude: ['**/examples/**/*'],
         fileExtensions: ['vue', 'ts'],
       },
     }),

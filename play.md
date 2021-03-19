@@ -1,9 +1,11 @@
 ---
+playground: true
 ---
 
 # Windi CSS Playground (WIP)
 
-<ColorsPalette />
+<!-- <ColorsPalette /> -->
+<Playground />
 
 <!-- 
 ## Rounded

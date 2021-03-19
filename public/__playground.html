@@ -4,7 +4,7 @@
   <style>
     html, body {
       margin: 0;
-      padding: 0;
+      padding: 4px;
     }
     #container {
       display: flex;
@@ -22,6 +22,7 @@
         css,
         fixedCss,
         classes,
+        html,
       } = JSON.parse(e.data)
 
       // console.log({
@@ -48,6 +49,8 @@
 
       if (classes != null)
         container.className = classes
+      if (html != null)
+        container.innerHTML = html
     }, false)
   </script>
 </body>
