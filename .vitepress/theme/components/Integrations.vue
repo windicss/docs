@@ -29,7 +29,7 @@ const items = [
   },
   {
     title: 'Svelte',
-    link: '/guide/integrations/svelte-sapper',
+    link: '/guide/integrations/svelte-preprocess',
     logo: Svelte,
   },
   {
