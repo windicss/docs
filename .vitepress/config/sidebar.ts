@@ -83,7 +83,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Nuxt', link: '/guide/integrations/nuxt' },
         { text: 'Vue CLI', link: '/guide/integrations/vue-cli' },
         { text: 'SvelteKit', link: '/guide/integrations/svelte-kit' },
-        { text: 'Sapper', link: '/guide/integrations/svelte-sapper' },
+        { text: 'Sapper', link: '/guide/integrations/svelte-preprocess' },
         { text: 'CLI', link: '/guide/integrations/cli' },
       ],
     },
