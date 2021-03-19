@@ -48,6 +48,8 @@ export default defineConfig({
       'codemirror',
       'codemirror/mode/css/css',
       'codemirror/mode/javascript/javascript',
+      'monaco-editor',
+      'monaco-editor/esm/vs/basic-languages/scss/scss.contribution.js',
     ],
     exclude: [
       'vue-demi',
