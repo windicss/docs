@@ -8,6 +8,17 @@
     "lint": "eslint --fix --ext .js,.ts,.md,.vue ./"
   },
   "dependencies": {
+    "@codemirror/basic-setup": "^0.18.0",
+    "@codemirror/commands": "^0.18.0",
+    "@codemirror/lang-css": "^0.18.0",
+    "@codemirror/lang-html": "^0.18.0",
+    "@codemirror/lang-javascript": "^0.18.0",
+    "@codemirror/legacy-modes": "^0.18.0",
+    "@codemirror/state": "^0.18.2",
+    "@codemirror/stream-parser": "^0.18.1",
+    "@codemirror/text": "^0.18.0",
+    "@codemirror/theme-one-dark": "^0.18.0",
+    "@codemirror/view": "^0.18.3",
     "@vueuse/core": "^4.4.1",
     "change-case": "^4.1.2",
     "codemirror": "^5.59.4",

@@ -13,6 +13,8 @@ export async function useCodeMirror(
   await import('codemirror/mode/javascript/javascript')
   // @ts-expect-error untyped
   await import('codemirror/mode/css/css')
+  // // @ts-expect-error untyped
+  // await import('codemirror/mode/htmlem')
 
   const cm = CodeMirror.fromTextArea(
     textarea.value!,

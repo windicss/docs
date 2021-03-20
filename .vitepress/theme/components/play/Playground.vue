@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref, computed, watch } from 'vue'
+import { defineProps, ref, computed, defineAsyncComponent } from 'vue'
 import type { PropType } from 'vue'
 import Windi from 'windicss'
 import type { Config } from 'windicss/types/interfaces'
@@ -7,6 +7,8 @@ import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
 import type monaco from 'monaco-editor'
 import { html, css } from '../../examples/playground'
+
+const CodeMirror = defineAsyncComponent(() => import('../CodeMirror'))
 
 const styleCode = ref(css)
 
@@ -54,9 +56,6 @@ const generatedCSS = computed(() => new StyleSheet()
   .sort()
   .build(),
 )
-
-watch(htmlCode, v => console.log(v))
-
 </script>
 
 <template>
@@ -69,7 +68,7 @@ watch(htmlCode, v => console.log(v))
         </div>
         <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
           <ClientOnly>
-            <MonacoEditor v-model="styleCode" class="h-full w-full" language="css" :options="editorOptions" />
+            <CodeMirror v-model="styleCode" class="h-full w-full" language="css" :options="editorOptions" />
           </ClientOnly>
         </div>
       </div>
@@ -79,7 +78,7 @@ watch(htmlCode, v => console.log(v))
         </div>
         <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
           <ClientOnly>
-            <MonacoEditor v-model="htmlCode" class="h-full w-full" language="html" :options="editorOptions" />
+            <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" :options="editorOptions" />
           </ClientOnly>
         </div>
       </div>
