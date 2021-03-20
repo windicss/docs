@@ -1,5 +1,7 @@
 import { defineComponent, h, nextTick, onMounted, ref, watch, onUnmounted } from 'vue'
 import * as monaco from 'monaco-editor'
+// Emmet Plugin
+import { emmetHTML, emmetCSS } from 'emmet-monaco-es'
 
 // Import language
 import 'monaco-editor/esm/vs/basic-languages/scss/scss.contribution.js'
@@ -86,6 +88,13 @@ export default defineComponent({
 
         emit('editorDidMount', editor)
       })
+
+      // Add emmet to editor
+      const lang = options.value.language
+      if (lang === 'html')
+        emmetHTML(monaco)
+      if (lang === 'css' || lang === 'scss' || lang === 'less')
+        emmetCSS(monaco)
     }
     onMounted(() => {
       nextTick(() => {

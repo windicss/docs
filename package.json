@@ -11,6 +11,7 @@
     "@vueuse/core": "^4.4.1",
     "change-case": "^4.1.2",
     "codemirror": "^5.59.4",
+    "emmet-monaco-es": "^4.6.2",
     "json5": "^2.2.0",
     "monaco-editor": "^0.23.0",
     "prismjs": "^1.23.0",
