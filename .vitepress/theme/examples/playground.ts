@@ -1,7 +1,7 @@
 export const css = `.box {
   @apply
     py-8 px-8 max-w-sm mx-auto
-    bg-white dark:bg-gray-800 dark:bg-opacity-50
+    bg-white dark:bg-gray-400 dark:bg-opacity-10
     rounded-xl shadow-md space-y-2
     sm:(py-4 flex items-center space-y-0 space-x-6);
 }
@@ -17,8 +17,12 @@ export const css = `.box {
 export const html = `<div class="box">
   <div class="text-center space-y-2 sm:text-left">
     <div class="space-y-0.5">
-      <p class="text-lg text-black dark:text-white font-semibold mb-2">Erin Lindford</p>
-      <p class="text-gray-500 dark:text-gray-300 font-medium pb-3">Product Engineer</p>
+      <p class="text-lg text-black dark:text-white font-semibold mb-2">
+        Erin Lindford
+      </p>
+      <p class="text-gray-500 dark:text-gray-300 font-medium pb-3">
+        Product Engineer
+      </p>
     </div>
     <button class="btn">
       Message

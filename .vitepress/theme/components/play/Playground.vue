@@ -51,7 +51,7 @@ const generatedCSS = computed(() => new StyleSheet()
   <div class="playground flex flex-col space-y-4 md:(flex-row space-x-4 space-y-0)">
     <!-- html -->
     <div class="h-full w-full md:w-3/5 grid gap-4">
-      <div class="min-h-300px bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl w-full h-full relative">
+      <div class="min-h-300px block-bg rounded-lg shadow-xl w-full h-full relative">
         <div class="px-4 py-1.5 font-semibold">
           Style
         </div>
@@ -61,7 +61,7 @@ const generatedCSS = computed(() => new StyleSheet()
           </ClientOnly>
         </div>
       </div>
-      <div class="min-h-300px bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl w-full h-full relative">
+      <div class="min-h-300px block-bg rounded-lg shadow-xl w-full h-full relative">
         <div class="px-4 py-1.5 font-semibold">
           Template
         </div>
@@ -73,7 +73,7 @@ const generatedCSS = computed(() => new StyleSheet()
       </div>
     </div>
     <!-- preview -->
-    <div class="h-full w-full md:w-2/5 bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl overflow-hidden">
+    <div class="h-full w-full md:w-2/5 block-bg rounded-lg shadow-xl overflow-hidden">
       <div class="px-4 py-1.5 font-semibold">
         Preview
       </div>
@@ -101,5 +101,11 @@ const generatedCSS = computed(() => new StyleSheet()
 }
 .cm-editor.cm-focused {
   outline: none;
+}
+.cm-scroller {
+  outline: none;
+}
+.block-bg {
+  @apply bg-gray-200 dark:bg-gray-500 dark:bg-opacity-10;
 }
 </style>
