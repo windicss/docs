@@ -132,7 +132,7 @@ The `@screen` directive allows you to create media queries that reference your b
 | [@apply](https://tailwindcss.com/docs/functions-and-directives#apply) | ✅ &ensp;Supported |
 | [@variants](https://tailwindcss.com/docs/functions-and-directives#variants) | ✅ &ensp;Supported |
 | [@screen](https://tailwindcss.com/docs/functions-and-directives#screen) | ✅ &ensp;Supported |
-| [@layer](https://tailwindcss.com/docs/functions-and-directives#layer) | ❗️&ensp;In development |
+| [@layer](https://tailwindcss.com/docs/functions-and-directives#layer) | ✅ &ensp;Supported |
 | [theme()](https://tailwindcss.com/docs/functions-and-directives#theme) | ❗️&ensp;In development |
 | [@tailwind](https://tailwindcss.com/docs/functions-and-directives#tailwind) | ❌ &ensp;Not Needed |
 | [@responsive](https://tailwindcss.com/docs/functions-and-directives#responsive) | ❌ &ensp;Not Needed |\
