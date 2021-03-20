@@ -38,7 +38,7 @@ const links = computed(() => site.value.themeConfig.nav)
   border-bottom: 1px solid var(--c-divider);
 }
 
-@media (min-width: 720px) {
+@screen lg {
   .nav-links {
     display: flex;
     padding: 2px 0 0;

@@ -140,7 +140,7 @@ const pageClasses = computed(() => {
 </script>
 
 <style lang="postcss">
-@screen md {
+@screen lg {
   .grid-layout {
     display: grid;
     grid-template-columns: 16rem minmax(100px, 1fr);

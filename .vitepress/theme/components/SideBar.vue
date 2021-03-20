@@ -35,10 +35,10 @@ defineProps({
   transform: translateX(-100%);
   transition: transform 0.25s ease;
   height: calc(100vh - var(--header-height));
-  @apply fixed top-$header-height bottom-0 left-0 md:sticky;
+  @apply fixed top-$header-height bottom-0 left-0 lg:sticky;
 }
 
-@media (min-width: 720px) {
+@screen lg {
   .sidebar {
     transform: translateX(0);
   }
@@ -58,7 +58,7 @@ defineProps({
   display: block;
 }
 
-@media (min-width: 720px) {
+@screen lg {
   .nav {
     display: none;
   }

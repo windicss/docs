@@ -26,7 +26,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
   md:(px-4 py-2 text-sm);
 }
 
-@screen md {
+@screen lg {
   .item.active .arrow {
     opacity: 1;
   }

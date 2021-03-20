@@ -42,10 +42,10 @@ function toggle() {
 .nav-dropdown-link {
   @apply
     relative h-36px overflow-hidden cursor-pointer
-    md:(h-auto overflow-visible);
+    lg:(h-auto overflow-visible);
 }
 
-@screen md {
+@screen lg {
   .nav-dropdown-link:hover .dialog {
     display: block;
   }
@@ -59,7 +59,7 @@ function toggle() {
   @apply
     block border-0 px-3 py-1.5 w-full
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
-    md:(border-b-2px border-transparent px-0 py-5 font-normal text-0.9rem);
+    lg:(border-b-2px border-transparent px-0 py-5 font-normal text-0.9rem);
 }
 
 .button:focus {
@@ -81,7 +81,7 @@ function toggle() {
   transform: rotate(-90deg);
 }
 
-@screen md {
+@screen lg {
   .button-arrow.right {
     transform: rotate(0);
   }
@@ -91,7 +91,7 @@ function toggle() {
   @apply m-0 p-0 mb-2 list-none;
 }
 
-@screen md {
+@screen lg {
   .dialog {
     right: -8px;
     box-shadow: var(--shadow-3);

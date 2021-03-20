@@ -22,13 +22,9 @@ const { props: linkProps } = useNavLink(propsRefs.item)
 
 <style scoped lang="postcss">
 .item {
-  padding: 0 1.5rem;
-  line-height: 36px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--c-text);
-  white-space: nowrap;
-  @apply inline-flex items-center;
+  @apply block border-0 px-3 py-1.5 w-full
+    text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
+    lg:(border-b-2px border-transparent px-0 font-normal text-0.9rem);
 }
 
 .item:hover,
@@ -42,15 +38,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
   color: var(--c-text);
 }
 
-@media (min-width: 720px) {
-  .item {
-    border-bottom: 2px solid transparent;
-    padding: 0;
-    line-height: 24px;
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
+@screen lg {
   .item:hover,
   .item.active {
     border-bottom-color: var(--c-brand);

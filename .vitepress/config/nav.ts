@@ -54,5 +54,5 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Team', link: 'https://github.com/orgs/windicss/people' },
     ],
   },
-  // { text: 'Releases', link: 'https://github.com/windicss/windicss/releases' },
+  { text: 'Play', link: '/play' },
 ]
