@@ -21,21 +21,19 @@
     "@codemirror/view": "^0.18.3",
     "@vueuse/core": "^4.4.1",
     "change-case": "^4.1.2",
-    "codemirror": "^5.59.4",
-    "emmet-monaco-es": "^4.6.2",
+    "codemirror": "^5.60.0",
     "json5": "^2.2.0",
-    "monaco-editor": "^0.23.0",
     "prismjs": "^1.23.0",
     "vue": "^3.0.7",
     "vue-demi": "^0.7.3",
-    "windicss": "^2.5.1"
+    "windicss": "^2.5.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.2",
     "@docsearch/css": "^1.0.0-alpha.28",
     "@docsearch/js": "^1.0.0-alpha.28",
     "@docsearch/react": "^1.0.0-alpha.28",
-    "@iconify/json": "^1.1.318",
+    "@iconify/json": "^1.1.319",
     "@types/codemirror": "^0.0.108",
     "@types/node": "^14.14.35",
     "@types/prismjs": "^1.16.3",
@@ -52,7 +50,7 @@
     "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.3.2",
     "vite-plugin-restart": "^0.0.1",
-    "vite-plugin-windicss": "^0.9.2",
+    "vite-plugin-windicss": "^0.9.4",
     "vitepress": "^0.12.2"
   }
 }

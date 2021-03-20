@@ -5,7 +5,6 @@ import Windi from 'windicss'
 import type { Config } from 'windicss/types/interfaces'
 import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
-import type monaco from 'monaco-editor'
 import { html, css } from '../../examples/playground'
 
 const CodeMirror = defineAsyncComponent(() => import('../CodeMirror'))
@@ -19,16 +18,6 @@ const props = defineProps({
     type: Object as PropType<Config>,
   },
 })
-
-const editorOptions: monaco.editor.IStandaloneEditorConstructionOptions = {
-  minimap: {
-    enabled: false,
-  },
-  scrollBeyondLastLine: false,
-  // hideCursorInOverviewRuler: true,
-  // overviewRulerBorder: false,
-  // overviewRulerLanes: 0,
-}
 
 const processor = computed(() => new Windi(props.config))
 
@@ -68,7 +57,7 @@ const generatedCSS = computed(() => new StyleSheet()
         </div>
         <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
           <ClientOnly>
-            <CodeMirror v-model="styleCode" class="h-full w-full" language="css" :options="editorOptions" />
+            <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
           </ClientOnly>
         </div>
       </div>
@@ -78,7 +67,7 @@ const generatedCSS = computed(() => new StyleSheet()
         </div>
         <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
           <ClientOnly>
-            <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" :options="editorOptions" />
+            <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
           </ClientOnly>
         </div>
       </div>
