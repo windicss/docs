@@ -15,17 +15,17 @@ module.exports = {
     adapter: '@sveltejs/adapter-node',
 
     // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte'
+    target: '#svelte',
   },
   preprocess: [
-    require("svelte-windicss-preprocess").preprocess({
+    require('svelte-windicss-preprocess').preprocess({
       config: 'windi.config.js', // windi config file path (optional)
       compile: true, // false: interpretation mode; true: compilation mode (optional)
       prefix: 'windi-', // set compilation mode style prefix
-      safeList: ["bg-gray-600", "text-white"] // (optional)
+      safeList: ['bg-gray-600', 'text-white'], // (optional)
     }),
-  ]
-};
+  ],
+}
 
 ```
 
