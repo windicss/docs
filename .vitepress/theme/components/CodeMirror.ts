@@ -5,6 +5,7 @@ import { basicSetup } from '@codemirror/basic-setup'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
 import { javascript } from '@codemirror/lang-javascript'
+import { prismTheme } from '../codemirror'
 
 import { isDark } from '../composables/dark'
 
@@ -32,45 +33,10 @@ export default defineComponent({
     let view: EditorView | null = null
     let state: EditorState | null = null
 
-    const myTheme = EditorView.theme({
-      '&': {
-        color: '#8ADDFF',
-        backgroundColor: 'transparent',
-      },
-      '.cm-content': {
-        caretColor: '#0e9',
-      },
-      '&.cm-focused .cm-cursor': {
-        borderLeftColor: '#0e9',
-      },
-      '&.cm-focused .cm-selectionBackground, ::selection': {
-        backgroundColor: '#004767',
-      },
-      '.cm-gutters': {
-        'backgroundColor': 'transparent',
-        'padding-left': '1rem',
-        'padding-right': '1rem',
-        'color': '#ddd',
-        'border': 'none',
-      },
-      // ".cm-line": {
-      //   color: '#727272'
-      // },
-      '.cm-line .ͼk': {
-        color: '#4C7C40',
-      },
-      '.cm-line .ͼg': {
-        color: '#3A95CF',
-      },
-      '.cm-line .ͼc': {
-        color: '#D88E73',
-      },
-    }, { dark: true })
-
     async function initEditor() {
       const extensions = [
         basicSetup,
-        myTheme,
+        prismTheme,
         ViewPlugin.define((view) => {
           return {
             update(update) {

@@ -51,21 +51,21 @@ const generatedCSS = computed(() => new StyleSheet()
   <div class="playground flex flex-col space-y-4 md:(flex-row space-x-4 space-y-0)">
     <!-- html -->
     <div class="h-full w-full md:w-3/5 grid gap-4">
-      <div class="min-h-300px block-bg rounded-lg shadow-xl w-full h-full relative">
-        <div class="px-4 py-1.5 font-semibold">
+      <div class="min-h-300px block-bg rounded-lg w-full h-full relative">
+        <div class="block-title">
           Style
         </div>
-        <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
+        <div class="block-code">
           <ClientOnly>
             <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
           </ClientOnly>
         </div>
       </div>
-      <div class="min-h-300px block-bg rounded-lg shadow-xl w-full h-full relative">
-        <div class="px-4 py-1.5 font-semibold">
+      <div class="min-h-300px block-bg rounded-lg w-full h-full relative">
+        <div class="block-title">
           Template
         </div>
-        <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
+        <div class="block-code">
           <ClientOnly>
             <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
           </ClientOnly>
@@ -73,8 +73,8 @@ const generatedCSS = computed(() => new StyleSheet()
       </div>
     </div>
     <!-- preview -->
-    <div class="h-full w-full md:w-2/5 block-bg rounded-lg shadow-xl overflow-hidden">
-      <div class="px-4 py-1.5 font-semibold">
+    <div class="h-full w-full md:w-2/5 block-bg rounded-lg overflow-hidden">
+      <div class="block-title">
         Preview
       </div>
       <div class="p-4">
@@ -106,6 +106,12 @@ const generatedCSS = computed(() => new StyleSheet()
   outline: none;
 }
 .block-bg {
-  @apply bg-gray-200 dark:bg-gray-500 dark:bg-opacity-10;
+  @apply bg-gray-100 bg-opacity-50 shadow-md dark:bg-gray-500 dark:bg-opacity-10;
+}
+.block-title {
+  @apply px-4 py-2 font-semibold border-b border-gray-500 border-dashed;
+}
+.block-code {
+  @apply absolute pt-12 inset-0 w-full h-full overflow-hidden rounded-b-lg;
 }
 </style>
