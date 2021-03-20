@@ -60,18 +60,18 @@ watch(htmlCode, v => console.log(v))
 </script>
 
 <template>
-  <div class="playground flex space-x-4">
+  <div class="playground flex flex-col space-y-4 md:(flex-row space-x-4 space-y-0)">
     <!-- html -->
-    <div class="h-full w-3/5 grid gap-4">
-      <div class="bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl w-full h-full relative">
+    <div class="h-full w-full md:w-3/5 grid gap-4">
+      <div class="min-h-300px bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl w-full h-full relative">
         <div class="px-4 py-1.5 font-semibold">
           Style
         </div>
         <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
-          <MonacoEditor v-model="styleCode" class="h-full w-full" language="scss" :options="editorOptions" />
+          <MonacoEditor v-model="styleCode" class="h-full w-full" language="css" :options="editorOptions" />
         </div>
       </div>
-      <div class="bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl w-full h-full relative">
+      <div class="min-h-300px bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl w-full h-full relative">
         <div class="px-4 py-1.5 font-semibold">
           Template
         </div>
@@ -81,7 +81,7 @@ watch(htmlCode, v => console.log(v))
       </div>
     </div>
     <!-- preview -->
-    <div class="h-full w-2/5 bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl overflow-hidden">
+    <div class="h-full w-full md:w-2/5 bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl overflow-hidden">
       <div class="px-4 py-1.5 font-semibold">
         Preview
       </div>
@@ -94,7 +94,13 @@ watch(htmlCode, v => console.log(v))
 
 <style>
 .playground {
-  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
   @apply p-4;
 }
+@screen md {
+  .playground {
+    height: calc(100vh - var(--header-height));
+  }
+}
+
 </style>

@@ -1,20 +1,21 @@
 <template>
-  <div class="sidebar-button -ml-2 text-2xl" @click="$emit('toggle')">
-    <ion:menu />
+  <div class="sidebar-button -ml-2 text-xl" :class="{ '!hidden': enablePlayground }" @click="emit('toggle')">
+    <ri-menu-4-fill />
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  emits: ['toggle'],
-}
+<script setup lang="ts">
+import { defineEmit, computed } from 'vue'
+import { useRoute } from 'vitepress'
+
+const emit = defineEmit(['toggle'])
+const route = useRoute()
+
+const enablePlayground = computed(() => !!route.data.frontmatter.playground)
 </script>
 
 <style>
 .sidebar-button {
-  display: block;
-  padding: 0.6rem;
-  cursor: pointer;
-  @apply cursor-pointer hidden h-full inline-flex px-2 items-center lg:hidden;
+  @apply cursor-pointer h-full inline-flex px-2 items-center lg:hidden;
 }
 </style>
