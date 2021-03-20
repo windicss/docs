@@ -96,5 +96,10 @@ const generatedCSS = computed(() => new StyleSheet()
     height: calc(100vh - var(--header-height));
   }
 }
-
+.cm-editor {
+  @apply h-full w-full;
+}
+.cm-editor.cm-focused {
+  outline: none;
+}
 </style>
