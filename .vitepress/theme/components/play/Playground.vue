@@ -68,7 +68,9 @@ watch(htmlCode, v => console.log(v))
           Style
         </div>
         <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
-          <MonacoEditor v-model="styleCode" class="h-full w-full" language="css" :options="editorOptions" />
+          <ClientOnly>
+            <MonacoEditor v-model="styleCode" class="h-full w-full" language="css" :options="editorOptions" />
+          </ClientOnly>
         </div>
       </div>
       <div class="min-h-300px bg-gray-200 dark:bg-black bg-opacity-50 rounded-lg shadow-xl w-full h-full relative">
@@ -76,7 +78,9 @@ watch(htmlCode, v => console.log(v))
           Template
         </div>
         <div class="absolute pt-9 inset-0 w-full h-full overflow-hidden rounded-b-lg">
-          <MonacoEditor v-model="htmlCode" class="h-full w-full" language="html" :options="editorOptions" />
+          <ClientOnly>
+            <MonacoEditor v-model="htmlCode" class="h-full w-full" language="html" :options="editorOptions" />
+          </ClientOnly>
         </div>
       </div>
     </div>
@@ -86,7 +90,9 @@ watch(htmlCode, v => console.log(v))
         Preview
       </div>
       <div class="p-4">
-        <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
+        <ClientOnly>
+          <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
+        </ClientOnly>
       </div>
     </div>
   </div>

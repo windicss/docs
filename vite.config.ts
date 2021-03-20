@@ -33,6 +33,15 @@ export default defineConfig({
       restart: '.vitepress/config/*.*',
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'monaco-editor': ['monaco-editor'],
+        },
+      },
+    },
+  },
   optimizeDeps: {
     include: [
       'vue',
