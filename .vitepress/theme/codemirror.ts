@@ -21,6 +21,10 @@ export const prismTheme = EditorView.theme({
     'color': 'var(--prism-foreground)',
     'border': 'none',
   },
+  '.cm-foldPlaceholder': {
+    background: 'var(--prism-background)',
+    border: 'none',
+  },
   '.cm-activeLine': {
     background: 'none',
   },

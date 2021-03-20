@@ -109,7 +109,7 @@ const generatedCSS = computed(() => new StyleSheet()
   @apply bg-gray-100 bg-opacity-50 shadow-md dark:bg-gray-500 dark:bg-opacity-10;
 }
 .block-title {
-  @apply px-4 py-2 font-semibold border-b border-gray-500 border-dashed;
+  @apply px-4 py-2 font-semibold border-b border-gray-200 dark:border-dark-300;
 }
 .block-code {
   @apply absolute pt-12 inset-0 w-full h-full overflow-hidden rounded-b-lg;
