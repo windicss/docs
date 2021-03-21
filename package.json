@@ -33,7 +33,7 @@
     "@docsearch/css": "^1.0.0-alpha.28",
     "@docsearch/js": "^1.0.0-alpha.28",
     "@docsearch/react": "^1.0.0-alpha.28",
-    "@iconify/json": "^1.1.319",
+    "@iconify/json": "^1.1.320",
     "@types/codemirror": "^0.0.108",
     "@types/node": "^14.14.35",
     "@types/prismjs": "^1.16.3",
@@ -50,7 +50,7 @@
     "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.3.2",
     "vite-plugin-restart": "^0.0.1",
-    "vite-plugin-windicss": "^0.9.4",
+    "vite-plugin-windicss": "^0.9.5",
     "vitepress": "^0.12.2"
   }
 }

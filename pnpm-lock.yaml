@@ -23,7 +23,7 @@ devDependencies:
   '@docsearch/css': 1.0.0-alpha.28
   '@docsearch/js': 1.0.0-alpha.28
   '@docsearch/react': 1.0.0-alpha.28
-  '@iconify/json': 1.1.319
+  '@iconify/json': 1.1.320
   '@types/codemirror': 0.0.108
   '@types/node': 14.14.35
   '@types/prismjs': 1.16.3
@@ -38,9 +38,9 @@ devDependencies:
   typescript: 4.2.3
   vite: 2.1.2
   vite-plugin-components: 0.8.3_vite@2.1.2
-  vite-plugin-icons: 0.3.2_@iconify+json@1.1.319
+  vite-plugin-icons: 0.3.2_@iconify+json@1.1.320
   vite-plugin-restart: 0.0.1_vite@2.1.2
-  vite-plugin-windicss: 0.9.4_vite@2.1.2
+  vite-plugin-windicss: 0.9.5_vite@2.1.2
   vitepress: 0.12.2
 lockfileVersion: 5.2
 packages:
@@ -699,10 +699,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-LFelJDOLZ6JHlmlAkgrvmcu4hpNPB91KYcr4f60D/exzU1eNOb4/KCVHIydGHIQFaOacIOD+Xy+B7P1z812cZg==
-  /@iconify/json/1.1.319:
+  /@iconify/json/1.1.320:
     dev: true
     resolution:
-      integrity: sha512-wOfBhDboA08oj71+EaSyZ38q61aO9f/vShBwnuk+VPZ3CZQHPeZdmbtsYfTCutPfwp4BukYjZbL40YzBz0D4UA==
+      integrity: sha512-cQpdMwjnGsKHCkabowCQ01figNBSwZ3UQxRLDD9gVlEpLuccpE2aWmRYPhbp7ofvZEyhffFn/zX9tPeoCAZnNQ==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -980,7 +980,7 @@ packages:
       vue: '*'
     resolution:
       integrity: sha512-pY7bXgYaA9g25XNREE3zeuIWfOwbyiKeQ0IppE4nIRuro4gVGuLoV/BIU6D0VOTv7hYefv5eqE+WS03v61y8xA==
-  /@windicss/plugin-utils/0.9.4:
+  /@windicss/plugin-utils/0.9.5:
     dependencies:
       debug: 4.3.2
       fast-glob: 3.2.5
@@ -989,7 +989,7 @@ packages:
       windicss: 2.5.3
     dev: true
     resolution:
-      integrity: sha512-udA6kvgj1/zUrDvKw8To0BqG3PsaDwJkOHgT0GnEzyXg3b37TUEJ/8H1sW98ai12K5jL+ovd6/8hmve0wkvvoA==
+      integrity: sha512-7nu7/xE+PLKHOJrX3gf061kfbKFTH/SbYKoly9mGjlsvJZUuCdN0Zqu6HkVnalVkW4D721/L9rtsR65QaMgD7A==
   /abbrev/1.1.1:
     dev: true
     resolution:
@@ -1812,17 +1812,17 @@ packages:
       integrity: sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
   /esbuild-register/2.3.0:
     dependencies:
-      esbuild: 0.9.5
+      esbuild: 0.9.6
       jsonc-parser: 3.0.0
     dev: true
     resolution:
       integrity: sha512-uT3WXEQGAqzrI0SLy1Jz39BzIBiLWd5La9zFZ+FUSCPGqJbE+ZJHUTE8yHP1GVfyHKrrAFCZqLieaHkSprIRDQ==
-  /esbuild/0.9.5:
+  /esbuild/0.9.6:
     dev: true
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-ZBOtZX9HxgSdwkAroVifEUgylWqbOjqbu1i1ohRvhoaYt6aj81dxbizODx419gwDAupqut44ehFVwUq7WRN/OA==
+      integrity: sha512-F6vASxU0wT/Davt9aj2qtDwDNSkQxh9VbyO56M7PDWD+D/Vgq/rmUDGDQo7te76W5auauVojjnQr/wTu3vpaUA==
   /escalade/3.1.1:
     dev: true
     engines:
@@ -4520,9 +4520,9 @@ packages:
       vite: ^2.0.0-beta.69
     resolution:
       integrity: sha512-wqKt3DU7RzWJvE46qbZsi9E6TCaUwkOQZfRSDnRndKel72psJae02nD+qu/ObkRduqK9kdeGmAOcZw1qUkNUrg==
-  /vite-plugin-icons/0.3.2_@iconify+json@1.1.319:
+  /vite-plugin-icons/0.3.2_@iconify+json@1.1.320:
     dependencies:
-      '@iconify/json': 1.1.319
+      '@iconify/json': 1.1.320
       '@iconify/json-tools': 1.0.10
       vue-template-es2015-compiler: 1.9.1
     dev: true
@@ -4542,9 +4542,9 @@ packages:
       vite: ^2.0.0-beta.69
     resolution:
       integrity: sha512-PSAUOfgDZW7tKDqnDZaq2GBYUFcQ2NS9hsIyYNxt5IMRTkxd/6c3J51n1Y4f7tHvNyZ5boEv9BELudswhk4Q4w==
-  /vite-plugin-windicss/0.9.4_vite@2.1.2:
+  /vite-plugin-windicss/0.9.5_vite@2.1.2:
     dependencies:
-      '@windicss/plugin-utils': 0.9.4
+      '@windicss/plugin-utils': 0.9.5
       debug: 4.3.2
       vite: 2.1.2
       windicss: 2.5.3
@@ -4552,10 +4552,10 @@ packages:
     peerDependencies:
       vite: ^2.0.1
     resolution:
-      integrity: sha512-hLrPV+9KF260iIRVK4XirG3zb7T9qJyZ5xfUGrF560cA7I8IsTMI91ePk8F0H70cWzME+h/wSQiUejRvcvaSnA==
+      integrity: sha512-5x/Y0bviBdBXmui5TpUEgRSoygGozTJ2/H+hTPjjG2pNdyCFspWNLi6+ohPT68lKy85cJVzmm97M4Gyw06x7Tw==
   /vite/2.1.2:
     dependencies:
-      esbuild: 0.9.5
+      esbuild: 0.9.6
       postcss: 8.2.8
       resolve: 1.20.0
       rollup: 2.42.1
@@ -4740,7 +4740,7 @@ specifiers:
   '@docsearch/css': ^1.0.0-alpha.28
   '@docsearch/js': ^1.0.0-alpha.28
   '@docsearch/react': ^1.0.0-alpha.28
-  '@iconify/json': ^1.1.319
+  '@iconify/json': ^1.1.320
   '@types/codemirror': ^0.0.108
   '@types/node': ^14.14.35
   '@types/prismjs': ^1.16.3
@@ -4762,7 +4762,7 @@ specifiers:
   vite-plugin-components: ^0.8.3
   vite-plugin-icons: ^0.3.2
   vite-plugin-restart: ^0.0.1
-  vite-plugin-windicss: ^0.9.4
+  vite-plugin-windicss: ^0.9.5
   vitepress: ^0.12.2
   vue: ^3.0.7
   vue-demi: ^0.7.3
