@@ -13,8 +13,6 @@ import { commentKeymap } from '@codemirror/comment'
 import { rectangularSelection } from '@codemirror/rectangular-selection'
 import { classHighlightStyle } from '@codemirror/highlight'
 import { lintKeymap } from '@codemirror/lint'
-export { EditorView } from '@codemirror/view'
-export { EditorState } from '@codemirror/state'
 
 export const basicSetup = [
   lineNumbers(),
