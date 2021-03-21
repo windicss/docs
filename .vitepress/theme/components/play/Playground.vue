@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref, computed, defineAsyncComponent } from 'vue'
+import { defineProps, ref, computed } from 'vue'
 import type { PropType } from 'vue'
 import Windi from 'windicss'
 import type { Config } from 'windicss/types/interfaces'
@@ -7,8 +7,6 @@ import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
 import { Board } from 'vue-board'
 import { html, css } from '../../examples/playground'
-
-const CodeMirror = defineAsyncComponent(() => import('../CodeMirror'))
 
 const styleCode = ref(css)
 
@@ -76,37 +74,10 @@ const generatedCSS = computed(() => new StyleSheet()
     </NavBar>
     <Board class="playground md:(flex-row)">
       <Board vertical>
-        <div class="block-border relative border-b">
-          <div class="block-title">
-            Template
-          </div>
-          <div class="block-code">
-            <ClientOnly>
-              <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
-            </ClientOnly>
-          </div>
-        </div>
-        <div class="block-border relative">
-          <div class="block-title">
-            Style
-          </div>
-          <div class="block-code">
-            <ClientOnly>
-              <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
-            </ClientOnly>
-          </div>
-        </div>
+        <TemplateBlock v-model="htmlCode" />
+        <StyleBlock v-model="styleCode" />
       </Board>
-      <div class="block-bg overflow-hidden">
-        <div class="block-title">
-          Preview
-        </div>
-        <div class="p-4 h-full">
-          <ClientOnly>
-            <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
-          </ClientOnly>
-        </div>
-      </div>
+      <PreviewBlock :html="htmlCode" :css="generatedCSS" />
     </Board>
   </div>
 </template>
