@@ -112,10 +112,10 @@ const generatedCSS = computed(() => new StyleSheet()
   @apply border-r border-b bc;
 }
 .block-bg {
-  @apply bg-gray-100 bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-10;
+  @apply bg-gray-100 bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-5;
 }
 .block-title {
-  @apply px-4 pt-2 opacity-50 text-sm uppercase tracking-wider;
+  @apply px-4 pt-2 text-sm font-bold opacity-85;
 }
 .block-code {
   @apply absolute pt-2em inset-0 w-full h-full overflow-hidden rounded-b-lg;
