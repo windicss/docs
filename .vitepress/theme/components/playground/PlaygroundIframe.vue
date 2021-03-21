@@ -67,6 +67,7 @@ function ready() {
   <client-only>
     <iframe
       ref="frame"
+      title="preview"
       src="/__playground.html"
       class="overflow-visiable outline-none h-0 m-auto"
       frameborder="0"

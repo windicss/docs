@@ -52,7 +52,7 @@ dark:\(from-teal-400 to-yellow-500)`"
 /> 
 
 <p class="flex justify-center opacity-75 mt-12">
-  <a href="https://www.netlify.com" target="_blank">
+  <a href="https://www.netlify.com" rel="noreferrer" target="_blank">
     <img src="/assets/netlify.svg" alt="Deploys by Netlify">
   </a>
 </p>

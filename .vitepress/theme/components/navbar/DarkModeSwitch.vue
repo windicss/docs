@@ -1,5 +1,5 @@
 <template>
-  <NavBarIcon @click="toggle">
+  <NavBarIcon aria-label="Toggle dark mode" @click="toggle">
     <carbon-moon v-show="isDark" />
     <ion-ios-sunny v-show="!isDark" />
   </NavBarIcon>

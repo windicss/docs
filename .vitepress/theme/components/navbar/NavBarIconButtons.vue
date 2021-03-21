@@ -7,7 +7,14 @@ const repo = useRepo()
 <template>
   <div class="flex items-center border-b-0 ml-3 space-x-4 ml-4">
     <slot />
-    <NavBarIcon v-if="repo" tag="a" :href="repo.link" target="_blank">
+    <NavBarIcon
+      v-if="repo"
+      aria-label="Github"
+      tag="a"
+      :href="repo.link"
+      rel="noreferrer"
+      target="_blank"
+    >
       <carbon-logo-github />
     </NavBarIcon>
     <DarkModeSwitch />
