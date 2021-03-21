@@ -13,7 +13,7 @@ const props = defineProps<{
       :key="item.link"
       class="
         border bc rounded-lg p-4 text-$c-fg text-center relative
-        no-underline transition-all duration-500 w-30 h-30 hover:(shadow-xl)
+        no-underline transition-all duration-500 w-30 h-30 hover:(shadow-xl) dark:hover:(bg-gray-400 bg-opacity-10)
       "
       :href="item.link"
     >

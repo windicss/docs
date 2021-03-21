@@ -47,17 +47,17 @@ Windi CSS provides first-class integrations for your favorite tools, select your
   },
 ]"/>
 
-## IDEs
+## Editors
 
 <Integrations class="mb-5" :items="[
   {
     title: 'VS Code',
-    link: '/guide/ide/vscode',
+    link: '/guide/editors/vscode',
     logo: 'vscode',
   },
   {
     title: 'WebStorm',
-    link: '/guide/ide/webstorm',
+    link: '/guide/editors/webstorm',
     logo: 'webstorm',
   },
 ]"/>
