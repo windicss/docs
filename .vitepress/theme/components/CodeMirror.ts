@@ -1,11 +1,10 @@
 import { defineComponent, h, nextTick, onMounted, ref, onUnmounted } from 'vue'
 import { EditorState } from '@codemirror/state'
 import { EditorView, ViewPlugin } from '@codemirror/view'
-import { basicSetup } from '@codemirror/basic-setup'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
 import { javascript } from '@codemirror/lang-javascript'
-import { prismTheme } from '../codemirror'
+import { basicSetup } from '../codemirror'
 
 import { isDark } from '../composables/dark'
 
@@ -36,7 +35,6 @@ export default defineComponent({
     async function initEditor() {
       const extensions = [
         basicSetup,
-        prismTheme,
         ViewPlugin.define((view) => {
           return {
             update(update) {
@@ -76,14 +74,6 @@ export default defineComponent({
     onUnmounted(() => {
       view?.destroy()
     })
-
-    // watch(isDark, (isDark) => {
-    //   monaco.editor.setTheme(isDark ? 'vs-dark' : 'vs')
-    // })
-
-    // watch(options, (v) => {
-    //   editor?.updateOptions(v)
-    // })
 
     return () => h('div', {
       ref: root,

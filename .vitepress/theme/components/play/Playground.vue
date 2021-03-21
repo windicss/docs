@@ -96,15 +96,6 @@ const generatedCSS = computed(() => new StyleSheet()
     height: calc(100vh - var(--header-height));
   }
 }
-.cm-editor {
-  @apply h-full w-full;
-}
-.cm-editor.cm-focused {
-  outline: none;
-}
-.cm-scroller {
-  outline: none;
-}
 .block-bg {
   @apply bg-gray-100 bg-opacity-50 shadow-md dark:bg-gray-500 dark:bg-opacity-10;
 }

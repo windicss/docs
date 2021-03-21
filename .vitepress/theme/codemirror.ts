@@ -1,49 +1,44 @@
-import { EditorView } from '@codemirror/view'
+import { highlightSpecialChars, drawSelection, keymap } from '@codemirror/view'
+import { EditorState } from '@codemirror/state'
+// import { history, historyKeymap } from '@codemirror/history'
+import { foldGutter, foldKeymap } from '@codemirror/fold'
+import { indentOnInput } from '@codemirror/language'
+import { lineNumbers } from '@codemirror/gutter'
+import { defaultKeymap } from '@codemirror/commands'
+import { bracketMatching } from '@codemirror/matchbrackets'
+import { closeBrackets, closeBracketsKeymap } from '@codemirror/closebrackets'
+import { highlightSelectionMatches, searchKeymap } from '@codemirror/search'
+import { autocompletion, completionKeymap } from '@codemirror/autocomplete'
+import { commentKeymap } from '@codemirror/comment'
+import { rectangularSelection } from '@codemirror/rectangular-selection'
+import { classHighlightStyle } from '@codemirror/highlight'
+import { lintKeymap } from '@codemirror/lint'
+export { EditorView } from '@codemirror/view'
+export { EditorState } from '@codemirror/state'
 
-export const prismTheme = EditorView.theme({
-  '&': {
-    color: 'var(--prism-foreground)',
-    backgroundColor: 'transparent',
-  },
-  '.cm-content': {
-    caretColor: 'var(--prism-foreground)',
-  },
-  '&.cm-focused .cm-cursor': {
-    borderLeftColor: '#0e9',
-  },
-  '&.cm-focused .cm-selectionBackground, ::selection': {
-    backgroundColor: '#004767',
-  },
-  '.cm-gutters': {
-    'backgroundColor': 'transparent',
-    'padding-left': '1rem',
-    'padding-right': '1rem',
-    'color': 'var(--prism-foreground)',
-    'border': 'none',
-  },
-  '.cm-foldPlaceholder': {
-    background: 'var(--prism-background)',
-    border: 'none',
-  },
-  '.cm-activeLine': {
-    background: 'none',
-  },
-  '.cm-line .ͼk': {
-    color: '#4C7C40',
-  },
-  '.cm-line .ͼg': {
-    color: 'var(--prism-builtin)',
-  },
-  '.cm-line .ͼc': {
-    color: 'var(--prism-selector)',
-  },
-  '.cm-line .ͼ9': {
-    color: 'var(--prism-namespace)',
-  },
-  '.cm-line .ͼh': {
-    color: 'var(--prism-selector)',
-  },
-  '.cm-line .ͼa': {
-    color: 'var(--prism-selector)',
-  },
-})
+export const basicSetup = [
+  lineNumbers(),
+  highlightSpecialChars(),
+  // history(),
+  foldGutter(),
+  drawSelection(),
+  EditorState.allowMultipleSelections.of(true),
+  indentOnInput(),
+  classHighlightStyle.fallback,
+  bracketMatching(),
+  closeBrackets(),
+  autocompletion(),
+  rectangularSelection(),
+  // highlightActiveLine(),
+  highlightSelectionMatches(),
+  keymap.of([
+    ...closeBracketsKeymap,
+    ...defaultKeymap,
+    ...searchKeymap,
+    // ...historyKeymap,
+    ...foldKeymap,
+    ...commentKeymap,
+    ...completionKeymap,
+    ...lintKeymap,
+  ]),
+]
