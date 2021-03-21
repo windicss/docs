@@ -68,21 +68,20 @@ cd vite-svelte-windicss-app
 npm i -D svelte-windicss-preprocess
 ```
 
-```js
+```ts
 // vite.config.js
-...
 export default defineConfig(({ command, mode }) => {
-  const production = mode === "production";
+  const production = mode === 'production'
   return {
     plugins: [
       svelte({
         preprocess: [
-          require("svelte-windicss-preprocess").preprocess({
-            compile: false,                     // false: interpretation mode; true: compilation mode (optional)
-            prefix: 'windi-',                   // set compilation mode style prefix
-            mode: production ? "prod" : "dev",  
-            // config: "windi.config.js",       // (optional)
-            // safeList: ['bg-gray-600', 'text-white'], //  (optional)
+          require('svelte-windicss-preprocess').preprocess({
+            compile: false, // false: interpretation mode; true: compilation mode (optional)
+            prefix: 'windi-', // set compilation mode style prefix
+            mode: production ? 'prod' : 'dev',
+            // config: "windi.config.js", // (optional)
+            // safeList: ['bg-gray-600', 'text-white'], // (optional)
           }),
         ],
         emitCss: true,
@@ -90,7 +89,7 @@ export default defineConfig(({ command, mode }) => {
       }),
     ],
   }
-});
+})
 ```
 
 ### Rollup Sapper (prefer [SvelteKit](https://next.windicss.org/guide/integrations/svelte-kit.html) once released)
