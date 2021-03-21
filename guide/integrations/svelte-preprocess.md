@@ -59,6 +59,40 @@ module.exports = {
 }
 ```
 
+### Vite Svelte
+
+```bash
+# vite project installation & setup
+npm init @vitejs/app --template svelte vite-svelte-windicss-app
+cd vite-svelte-windicss-app
+npm i -D svelte-windicss-preprocess
+```
+
+```js
+// vite.config.js
+...
+export default defineConfig(({ command, mode }) => {
+  const production = mode === "production";
+  return {
+    plugins: [
+      svelte({
+        preprocess: [
+          require("svelte-windicss-preprocess").preprocess({
+            compile: false,                     // false: interpretation mode; true: compilation mode (optional)
+            prefix: 'windi-',                   // set compilation mode style prefix
+            mode: production ? "prod" : "dev",  
+            // config: "windi.config.js",       // (optional)
+            // safeList: ['bg-gray-600', 'text-white'], //  (optional)
+          }),
+        ],
+        emitCss: true,
+        hot: !production,
+      }),
+    ],
+  }
+});
+```
+
 ### Rollup Sapper (prefer [SvelteKit](https://next.windicss.org/guide/integrations/svelte-kit.html) once released)
 
 ```js
