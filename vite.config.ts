@@ -28,6 +28,9 @@ export default defineConfig({
         exclude: ['**/examples/**/*'],
         fileExtensions: ['vue', 'ts'],
       },
+      safelist: [
+        'pb-5',
+      ],
     }),
     ViteRestart({
       restart: '.vitepress/config/*.*',
