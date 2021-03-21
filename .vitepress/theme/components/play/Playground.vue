@@ -74,36 +74,40 @@ const generatedCSS = computed(() => new StyleSheet()
 
       <NavBarIconButtons /> -->
     </NavBar>
-    <ClientOnly>
-      <Board class="playground md:(flex-row)">
-        <Board vertical>
-          <div class="block-border relative border-b">
-            <div class="block-title">
-              Template
-            </div>
-            <div class="block-code">
-              <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
-            </div>
-          </div>
-          <div class="block-border relative">
-            <div class="block-title">
-              Style
-            </div>
-            <div class="block-code">
-              <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
-            </div>
-          </div>
-        </Board>
-        <div class="block-bg overflow-hidden">
+    <Board class="playground md:(flex-row)">
+      <Board vertical>
+        <div class="block-border relative border-b">
           <div class="block-title">
-            Preview
+            Template
           </div>
-          <div class="p-4 h-full">
-            <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
+          <div class="block-code">
+            <ClientOnly>
+              <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
+            </ClientOnly>
+          </div>
+        </div>
+        <div class="block-border relative">
+          <div class="block-title">
+            Style
+          </div>
+          <div class="block-code">
+            <ClientOnly>
+              <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
+            </ClientOnly>
           </div>
         </div>
       </Board>
-    </ClientOnly>
+      <div class="block-bg overflow-hidden">
+        <div class="block-title">
+          Preview
+        </div>
+        <div class="p-4 h-full">
+          <ClientOnly>
+            <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
+          </ClientOnly>
+        </div>
+      </div>
+    </Board>
   </div>
 </template>
 
