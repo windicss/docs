@@ -43,4 +43,7 @@ export const prismTheme = EditorView.theme({
   '.cm-line .ͼh': {
     color: 'var(--prism-selector)',
   },
+  '.cm-line .ͼa': {
+    color: 'var(--prism-selector)',
+  },
 })
