@@ -75,9 +75,9 @@ const generatedCSS = computed(() => new StyleSheet()
       <NavBarIconButtons /> -->
     </NavBar>
     <ClientOnly>
-      <Board class="playground flex flex-col md:(flex-row)">
-        <Board vertical class="h-full w-full grid">
-          <div class="min-h-300px block-border w-full h-full relative border-b">
+      <Board class="playground md:(flex-row)">
+        <Board vertical>
+          <div class="block-border relative border-b">
             <div class="block-title">
               Template
             </div>
@@ -85,7 +85,7 @@ const generatedCSS = computed(() => new StyleSheet()
               <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
             </div>
           </div>
-          <div class="min-h-300px block-border w-full h-full relative">
+          <div class="block-border relative">
             <div class="block-title">
               Style
             </div>
@@ -94,7 +94,7 @@ const generatedCSS = computed(() => new StyleSheet()
             </div>
           </div>
         </Board>
-        <div class="h-full w-full block-bg overflow-hidden">
+        <div class="block-bg overflow-hidden">
           <div class="block-title">
             Preview
           </div>
