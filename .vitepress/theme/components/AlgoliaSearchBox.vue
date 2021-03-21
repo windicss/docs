@@ -135,7 +135,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
 
 <style lang="postcss">
 .algolia-search-box {
-  @apply pt-1px lg:(pl-4);
+  @apply pt-1px;
 }
 
 .DocSearch {

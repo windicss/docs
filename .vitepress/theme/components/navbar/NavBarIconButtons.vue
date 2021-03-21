@@ -5,7 +5,7 @@ const repo = useRepo()
 </script>
 
 <template>
-  <div class="flex items-center border-b-0 ml-3 space-x-4 mx-4">
+  <div class="flex items-center border-b-0 ml-3 space-x-4 ml-4">
     <a v-if="repo" class="icon-button" :href="repo.link" target="_blank">
       <carbon-logo-github />
     </a>

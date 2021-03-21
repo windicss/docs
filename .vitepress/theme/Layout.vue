@@ -7,7 +7,7 @@
       <NavBar v-if="showNavbar" @toggle="toggleSidebar">
         <template #search>
           <slot name="navbar-search">
-            <div class="hidden lg:block w-1px h-auto my-2 bg-gray-200 dark:bg-gray-700"></div>
+            <div class="hidden lg:block w-1px h-auto my-2 mx-4 bg-gray-200 dark:bg-gray-700"></div>
             <AlgoliaSearchBox v-if="theme.algolia" :options="theme.algolia" />
           </slot>
         </template>
