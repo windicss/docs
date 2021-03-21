@@ -1,14 +1,18 @@
 <template>
   <div class="theme" :class="pageClasses">
-    <NavBar v-if="showNavbar" @toggle="toggleSidebar">
-      <template #search>
-        <slot name="navbar-search">
-          <AlgoliaSearchBox v-if="theme.algolia" :options="theme.algolia" />
-        </slot>
-      </template>
-    </NavBar>
-    <div class="pt-$header-height min-h-screen" :class="{'grid-layout': !enableHome && !enablePlayground}">
-      <template v-if="!enablePlayground">
+    <template v-if="fullpage">
+      <Content />
+    </template>
+    <template v-else>
+      <NavBar v-if="showNavbar" @toggle="toggleSidebar">
+        <template #search>
+          <slot name="navbar-search">
+            <div class="hidden lg:block w-1px h-auto my-2 bg-gray-200 dark:bg-gray-700"></div>
+            <AlgoliaSearchBox v-if="theme.algolia" :options="theme.algolia" />
+          </slot>
+        </template>
+      </NavBar>
+      <div class="pt-$header-height min-h-screen" :class="{'grid-layout': !enableHome}">
         <SideBar :open="openSideBar">
           <template #sidebar-top>
             <slot name="sidebar-top" />
@@ -40,16 +44,11 @@
             <slot name="page-bottom-ads" />
           </template>
         </Page>
-      </template>
-      <template v-else>
-        <Playground />
-      </template>
-
       <!-- <HeadersSideBar /> -->
-    </div>
+      </div>
+    </template>
   </div>
-
-  <Debug />
+  <!-- <Debug /> -->
 </template>
 
 <script setup lang="ts">
@@ -84,7 +83,7 @@ const theme = computed(() => siteData.value.themeConfig)
 const enableHome = computed(() => !!route.data.frontmatter.home)
 
 // playground
-const enablePlayground = computed(() => !!route.data.frontmatter.playground)
+const fullpage = computed(() => !!route.data.frontmatter.fullpage)
 
 // navbar
 const showNavbar = computed(() => {

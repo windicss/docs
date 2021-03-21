@@ -18,18 +18,19 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, defineProps } from 'vue'
 import { useSiteDataByRoute } from 'vitepress'
-import { useLocaleLinks } from '../composables/nav'
-import { useRepo } from '../composables/repo'
+import { useLocaleLinks } from '../../composables/nav'
+import { useRepo } from '../../composables/repo'
+
+const props = defineProps<{ links?: any[] }>()
 
 const site = useSiteDataByRoute()
 const localeLinks = useLocaleLinks()
 const repo = useRepo()
 
+const links = computed(() => props.links || site.value.themeConfig.nav)
 const show = computed(() => links.value || repo.value)
-
-const links = computed(() => site.value.themeConfig.nav)
 </script>
 
 <style scoped>

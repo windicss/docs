@@ -48,39 +48,52 @@ const generatedCSS = computed(() => new StyleSheet()
 </script>
 
 <template>
-  <div class="playground flex flex-col space-y-4 md:(flex-row space-x-4 space-y-0)">
-    <!-- html -->
-    <div class="h-full w-full md:w-3/5 grid gap-4">
-      <div class="min-h-300px block-bg rounded-lg w-full h-full relative">
-        <div class="block-title">
-          Style
+  <div>
+    <NavBar>
+      <!-- <NavBarTitle />
+
+      <nav class="flex px-3 ml-4 ml-10">
+        <NavLinks :links="[{ text: 'Home', link:'/'}, { text: 'Play', link:'/play'}]" />
+      </nav>
+
+      <div class="flex-grow" />
+
+      <NavBarIconButtons /> -->
+    </NavBar>
+    <div class="playground flex flex-col md:(flex-row)">
+      <!-- html -->
+      <div class="h-full w-full md:w-3/5 grid">
+        <div class="min-h-300px block-border w-full h-full relative">
+          <div class="block-title">
+            Template
+          </div>
+          <div class="block-code">
+            <ClientOnly>
+              <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
+            </ClientOnly>
+          </div>
         </div>
-        <div class="block-code">
+        <div class="min-h-300px block-border w-full h-full relative">
+          <div class="block-title">
+            Style
+          </div>
+          <div class="block-code">
+            <ClientOnly>
+              <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
+            </ClientOnly>
+          </div>
+        </div>
+      </div>
+      <!-- preview -->
+      <div class="h-full w-full md:w-2/5 block-bg overflow-hidden">
+        <div class="block-title">
+          Preview
+        </div>
+        <div class="p-4">
           <ClientOnly>
-            <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
+            <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
           </ClientOnly>
         </div>
-      </div>
-      <div class="min-h-300px block-bg rounded-lg w-full h-full relative">
-        <div class="block-title">
-          Template
-        </div>
-        <div class="block-code">
-          <ClientOnly>
-            <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
-          </ClientOnly>
-        </div>
-      </div>
-    </div>
-    <!-- preview -->
-    <div class="h-full w-full md:w-2/5 block-bg rounded-lg overflow-hidden">
-      <div class="block-title">
-        Preview
-      </div>
-      <div class="p-4">
-        <ClientOnly>
-          <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
-        </ClientOnly>
       </div>
     </div>
   </div>
@@ -88,21 +101,23 @@ const generatedCSS = computed(() => new StyleSheet()
 
 <style>
 .playground {
-  min-height: calc(100vh - var(--header-height));
-  @apply p-4;
+  @apply pt-$header-height min-h-screen;
 }
 @screen md {
   .playground {
     height: calc(100vh - var(--header-height));
   }
 }
+.block-border {
+  @apply border-r border-b bc;
+}
 .block-bg {
-  @apply bg-gray-100 bg-opacity-50 shadow-md dark:bg-gray-500 dark:bg-opacity-10;
+  @apply bg-gray-100 bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-10;
 }
 .block-title {
-  @apply px-4 py-2 font-semibold border-b border-gray-200 dark:border-dark-300;
+  @apply px-4 pt-2 opacity-50 text-sm uppercase tracking-wider;
 }
 .block-code {
-  @apply absolute pt-12 inset-0 w-full h-full overflow-hidden rounded-b-lg;
+  @apply absolute pt-2em inset-0 w-full h-full overflow-hidden rounded-b-lg;
 }
 </style>

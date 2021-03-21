@@ -36,7 +36,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useSiteDataByRoute, useFrontmatter } from 'vitepress'
-import NavLink from './NavLink.vue'
 
 const site = useSiteDataByRoute()
 const data = useFrontmatter()

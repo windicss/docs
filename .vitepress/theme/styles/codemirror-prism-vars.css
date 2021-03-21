@@ -4,6 +4,12 @@
   color: var(--prism-foreground);
 }
 
+.cm-content {
+  font-size: var(--prism-font-size);
+  font-family: var(--prism-font-family);
+  line-height: var(--prism-line-height);
+}
+
 .cm-editor.cm-focused {
   outline: none;
 }
