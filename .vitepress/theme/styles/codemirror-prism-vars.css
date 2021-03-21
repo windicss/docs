@@ -12,10 +12,6 @@
   outline: none;
 }
 
-.cm-editor .cm-line {
-  caret-color: var(--prism-foreground) !important;
-}
-
 .cm-editor.cm-focused .cm-selectionBackground, .cm-editor ::selection {
   background-color: var(--prism-selection-background);
 }
