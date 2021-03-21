@@ -1,8 +1,8 @@
 <template>
-  <button class="icon-button" @click="toggle">
+  <NavBarIcon @click="toggle">
     <carbon-moon v-show="isDark" />
     <ion-ios-sunny v-show="!isDark" />
-  </button>
+  </NavBarIcon>
 </template>
 
 <script setup lang='ts'>

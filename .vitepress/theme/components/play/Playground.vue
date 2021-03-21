@@ -50,6 +50,19 @@ const generatedCSS = computed(() => new StyleSheet()
 <template>
   <div>
     <NavBar>
+      <template #icons>
+        <!-- TODO -->
+        <NavBarIcon>
+          <carbon:open-panel-bottom />
+        </NavBarIcon>
+        <NavBarIcon>
+          <carbon:open-panel-left />
+        </NavBarIcon>
+        <NavBarIcon>
+          <carbon:open-panel-right />
+        </NavBarIcon>
+        <NavDivider />
+      </template>
       <!-- <NavBarTitle />
 
       <nav class="flex px-3 ml-4 ml-10">

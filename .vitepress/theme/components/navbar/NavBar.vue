@@ -11,7 +11,9 @@
 
       <div class="flex-grow" />
 
-      <NavBarIconButtons />
+      <NavBarIconButtons>
+        <slot name="icons" />
+      </NavBarIconButtons>
 
       <slot name="search" />
     </slot>
