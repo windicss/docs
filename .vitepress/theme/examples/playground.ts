@@ -15,7 +15,7 @@ export const css = `.box {
 `
 
 export const html = `<div class="box">
-  <div class="text-center space-y-2 sm:text-left">
+  <div class="text-center space-y-2">
     <div class="space-y-0.5">
       <p class="text-lg text-black dark:text-white font-semibold mb-2">
         Erin Lindford

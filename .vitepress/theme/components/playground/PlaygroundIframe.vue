@@ -32,7 +32,7 @@ const frame = ref<HTMLIFrameElement | null>(null)
 
 for (const key of Object.keys(propRefs) as (keyof typeof propRefs)[]) {
   watchEffect(() => {
-    setTimeout(resizeIframe, 100)
+    // setTimeout(resizeIframe, 100)
     if (!isReady.value)
       return
     frame.value?.contentWindow?.postMessage(
@@ -50,6 +50,10 @@ watchEffect(() => {
   frame.value?.contentWindow?.document?.querySelector('html')?.classList?.toggle('dark', isDark.value)
 })
 
+const resizeObserver = new ResizeObserver(entries => {
+  resizeIframe()
+})
+
 function resizeIframe() {
   if (!frame.value?.contentWindow)
     return
@@ -60,6 +64,7 @@ function resizeIframe() {
 
 function ready() {
   isReady.value = true
+  resizeObserver.observe(frame.value!)
 }
 </script>
 
