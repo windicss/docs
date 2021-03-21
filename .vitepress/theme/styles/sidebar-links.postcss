@@ -13,12 +13,11 @@
 
 a.sidebar-link-item:hover {
   text-decoration: none;
-  color: var(--c-brand);
+  @apply bg-gray-100 dark:bg-dark-400 rounded-md;
 }
 
 a.sidebar-link-item.active {
-  color: var(--c-brand);
-  @apply bg-blue-50 dark:bg-dark-300 rounded-lg;
+  @apply text-$c-brand bg-gray-100 dark:bg-dark-400 rounded-md;
 }
 
 .sidebar > .sidebar-links {
@@ -53,7 +52,7 @@ a.sidebar-link-item.active {
 
 .sidebar > .sidebar-links > .sidebar-link > a.sidebar-link-item.active {
   border-left-color: var(--c-brand);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .sidebar {
@@ -67,9 +66,11 @@ a.sidebar-link-item.active {
   > .sidebar-link
   > .sidebar-link-item {
   display: block;
-  padding: 0.4rem 1.5rem 0.4rem 1rem;
+  padding: 0.45rem 0 0.45rem 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
   line-height: 1.4;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -80,7 +81,7 @@ a.sidebar-link-item.active {
   > .sidebar-link
   > a.sidebar-link-item.active {
   border-left-color: var(--c-brand);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .sidebar

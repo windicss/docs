@@ -1,6 +1,9 @@
 <template>
-  <aside class="h-auto border-r-1px border-$c-divider">
+  <aside class="h-full">
     <div class="sidebar" :class="{ open }">
+      <div class="px-2 -mt-1px w-56">
+        <NavBarTitle />
+      </div>
       <NavLinks class="nav" />
 
       <slot name="sidebar-top" />
@@ -14,6 +17,7 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue'
+import NavBarTitle from './navbar/NavBarTitle.vue'
 import NavLinks from './navbar/NavLinks.vue'
 import SideBarLinks from './SideBarLinks.vue'
 
@@ -23,30 +27,18 @@ defineProps({
 </script>
 
 <style scoped lang="postcss">
+
 .sidebar {
-  /* position: fixed;
-  top: var(--header-height);
-  bottom: 0;
-  left: 0; */
-  z-index: var(--z-index-sidebar);
-  width: 16.4rem;
   background-color: var(--c-bg);
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform 0.25s ease;
-  height: calc(100vh - var(--header-height));
-  @apply fixed top-$header-height bottom-0 left-0 lg:sticky;
+  @apply h-screen fixed left-0 top-0 z-50 border-r-1px border-$c-divider py-4;
 }
 
 @screen lg {
   .sidebar {
     transform: translateX(0);
-  }
-}
-
-@media (min-width: 960px) {
-  .sidebar {
-    width: auto;
   }
 }
 

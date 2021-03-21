@@ -1,6 +1,6 @@
 <template>
   <NavBarIcon aria-label="Toggle dark mode" @click="toggle">
-    <carbon-moon v-show="isDark" />
+    <bx:bx-moon v-show="isDark" />
     <ion-ios-sunny v-show="!isDark" />
   </NavBarIcon>
 </template>

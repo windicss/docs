@@ -69,7 +69,8 @@ function toggle() {
 .button-arrow {
   display: inline-block;
   margin-top: -1px;
-  margin-left: 8px;
+  margin-left: 0.6rem;
+  margin-right: 0.4rem;
   border-top: 6px solid #ccc;
   border-right: 4px solid transparent;
   border-bottom: 0;
@@ -79,6 +80,10 @@ function toggle() {
 
 .button-arrow.right {
   transform: rotate(-90deg);
+}
+
+.dialog-item:hover {
+  @apply bg-gray-100 dark:bg-dark-300;
 }
 
 @screen lg {
@@ -93,9 +98,7 @@ function toggle() {
 
 @screen lg {
   .dialog {
-    right: -8px;
-    box-shadow: var(--shadow-3);
-    @apply hidden absolute top-48px rounded-md py-1.5 min-w-128px bg-$c-bg;
+    @apply hidden absolute top-12 left-0 rounded-md py-1.5 min-w-36 bg-white dark:bg-dark-700;
   }
 }
 </style>

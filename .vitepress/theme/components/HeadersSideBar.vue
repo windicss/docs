@@ -16,7 +16,6 @@ const headers = computed(() => {
       </div>
       <ul class="sidebar-links space-y-1.5">
         <li v-for="item of headers" :key="item.title" class="sidebar-link">
-          <!-- '!ml-0 !ml-4 !ml-8 !ml-16' -->
           <a
             class="sidebar-link-item"
             :href="`#${item.slug}`"

@@ -5,7 +5,7 @@
 
       <NavBarTitle />
 
-      <div class="hidden lg:flex px-3 ml-4 lg:ml-10">
+      <div class="hidden xl:flex px-3 ml-4 xl:ml-28">
         <NavLinks />
       </div>
 

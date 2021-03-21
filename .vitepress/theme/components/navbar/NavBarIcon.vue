@@ -20,6 +20,6 @@ export default defineComponent({
   text-$c-text text-1.05rem cursor-pointer
   focus:outline-none
   bg-gray-100 hover:bg-gray-200
-  dark:(bg-dark-200 hover:bg-dark-100);
+  dark:(bg-dark-400 hover:bg-dark-300);
 }
 </style>

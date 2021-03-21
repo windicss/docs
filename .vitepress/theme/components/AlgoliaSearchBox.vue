@@ -152,6 +152,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
   --docsearch-searchbox-background: theme('colors.gray.100');
   --docsearch-searchbox-focus-background: theme('colors.gray.200');
   --docsearch-searchbox-shadow: none;
+  --docsearch-searchbox-height: 3rem;
   --docsearch-text-color: var(--c-text-light);
   --docsearch-muted-color: var(--c-text-lighter);
   --docsearch-key-gradient: transparent;
@@ -159,9 +160,9 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
 }
 
 html.dark .DocSearch {
-  --docsearch-container-background: rgba(0,0,0,0.8);
-  --docsearch-searchbox-background: theme('colors.dark.200');
-  --docsearch-searchbox-focus-background: theme('colors.dark.100');
+  --docsearch-container-background: rgba(12,12,12,0.9);
+  --docsearch-searchbox-background: theme('colors.dark.400');
+  --docsearch-searchbox-focus-background: theme('colors.dark.300');
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
 }
@@ -192,13 +193,21 @@ html.dark .DocSearch {
   @apply rounded-lg;
 }
 .DocSearch-Footer {
-  @apply border-t border-dashed dark:border-gray-500;
+  @apply border-t dark:border-dark-300;
 }
 .DocSearch-Search-Icon {
-  @apply h-18px w-18px md:(h-16px w-16px);
+  @apply !h-18px !w-18px md:(!h-20px !w-20px);
 }
 .DocSearch-Button:hover .DocSearch-Search-Icon {
   @apply text-$docsearch-text-color;
+}
+.DocSearch-Input {
+  padding-left: 1rem;
+  font-size: 1em;
+}
+.DocSearch-StartScreen {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 @screen -lg {
   .DocSearch-Button-Key,
