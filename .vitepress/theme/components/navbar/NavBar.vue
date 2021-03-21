@@ -13,9 +13,10 @@
 
       <NavBarIconButtons>
         <slot name="icons" />
+        <template #search>
+          <slot name="search" />
+        </template>
       </NavBarIconButtons>
-
-      <slot name="search" />
     </slot>
   </header>
 </template>
