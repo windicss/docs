@@ -5,6 +5,7 @@ import Windi from 'windicss'
 import type { Config } from 'windicss/types/interfaces'
 import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
+import { Board } from 'vue-board'
 import { html, css } from '../../examples/playground'
 
 const CodeMirror = defineAsyncComponent(() => import('../CodeMirror'))
@@ -73,10 +74,9 @@ const generatedCSS = computed(() => new StyleSheet()
 
       <NavBarIconButtons /> -->
     </NavBar>
-    <div class="playground flex flex-col md:(flex-row)">
-      <!-- html -->
-      <div class="h-full w-full md:w-3/5 grid">
-        <div class="min-h-300px block-border w-full h-full relative">
+    <Board class="playground flex flex-col md:(flex-row)">
+      <Board vertical class="h-full w-full grid">
+        <div class="min-h-300px block-border w-full h-full relative border-b">
           <div class="block-title">
             Template
           </div>
@@ -96,19 +96,18 @@ const generatedCSS = computed(() => new StyleSheet()
             </ClientOnly>
           </div>
         </div>
-      </div>
-      <!-- preview -->
-      <div class="h-full w-full md:w-2/5 block-bg overflow-hidden">
+      </Board>
+      <div class="h-full w-full block-bg overflow-hidden">
         <div class="block-title">
           Preview
         </div>
-        <div class="p-4">
+        <div class="p-4 h-full">
           <ClientOnly>
             <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
           </ClientOnly>
         </div>
       </div>
-    </div>
+    </Board>
   </div>
 </template>
 
@@ -122,7 +121,7 @@ const generatedCSS = computed(() => new StyleSheet()
   }
 }
 .block-border {
-  @apply border-r border-b bc;
+  @apply border-r bc;
 }
 .block-bg {
   @apply bg-gray-100 bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-5;

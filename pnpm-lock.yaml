@@ -16,6 +16,7 @@ dependencies:
   json5: 2.2.0
   prismjs: 1.23.0
   vue: 3.0.7
+  vue-board: 0.0.1_vue@3.0.7
   vue-demi: 0.7.3_vue@3.0.7
   windicss: 2.5.3
 devDependencies:
@@ -4602,6 +4603,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-dU4O7nG4TfI4CbGbrry1TAXlg19+xm9wlHJdvZnYYjTFRlS7zvHDWgxcP7zduUvhqXCGoGURFKjMPo8MRghVNg==
+  /vue-board/0.0.1_vue@3.0.7:
+    dependencies:
+      '@vueuse/core': 4.4.1_vue@3.0.7
+      vue: 3.0.7
+    dev: false
+    peerDependencies:
+      vue: '>=3'
+    resolution:
+      integrity: sha512-AJYTW+bXzePfbkMiHMND+KPSWapEZf1gTN/r71uzgq3YKCpoTAOw5zVzf9bM+omXF6noegcgbqmjVsCL44Ip4g==
   /vue-demi/0.7.3_vue@3.0.7:
     dependencies:
       vue: 3.0.7
@@ -4765,5 +4775,6 @@ specifiers:
   vite-plugin-windicss: ^0.9.5
   vitepress: ^0.12.2
   vue: ^3.0.7
+  vue-board: ^0.0.1
   vue-demi: ^0.7.3
   windicss: ^2.5.3
