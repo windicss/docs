@@ -149,8 +149,8 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
   --docsearch-hit-shadow: none;
   --docsearch-primary-color: var(--c-brand);
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-searchbox-background: rgba(229, 231, 235, 0.5);
-  --docsearch-searchbox-focus-background: rgba(229, 231, 235, 0.6);
+  --docsearch-searchbox-background: theme('colors.gray.100');
+  --docsearch-searchbox-focus-background: theme('colors.gray.200');
   --docsearch-searchbox-shadow: none;
   --docsearch-text-color: var(--c-text-light);
   --docsearch-muted-color: var(--c-text-lighter);
@@ -160,8 +160,8 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
 
 html.dark .DocSearch {
   --docsearch-container-background: rgba(0,0,0,0.8);
-  --docsearch-searchbox-background: rgba(55, 65, 81, 0.4);
-  --docsearch-searchbox-focus-background: rgba(55, 65, 81, 0.6);
+  --docsearch-searchbox-background: theme('colors.dark.200');
+  --docsearch-searchbox-focus-background: theme('colors.dark.100');
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
 }
@@ -184,6 +184,9 @@ html.dark .DocSearch {
 }
 .DocSearch-Form, .DocSearch-Hit a {
   @apply rounded-lg;
+}
+.DocSearch-Form {
+  @apply bg-gray-100 dark:bg-dark-500;
 }
 .DocSearch-Modal {
   @apply rounded-lg;

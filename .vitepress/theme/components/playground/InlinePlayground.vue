@@ -187,8 +187,8 @@ onMounted(async() => {
 </script>
 
 <template>
-  <div class="inline-playground">
-    <div v-if="showTabs" class="flex tabs mt-4">
+  <div class="inline-playground mt-4">
+    <div v-if="showTabs" class="flex tabs">
       <!-- <div class="tab" :class="{active: tab === 'code'}" @click="tab = 'code'">
       <carbon:code class="inline-block" />
     </div> -->
@@ -257,7 +257,7 @@ onMounted(async() => {
               <span>CSS</span>
               <div class="flex-auto" />
               <div v-if="showMode" class="icon-button" title="Toggle Mode" @click="toggleMode">
-                <span class="text-sm mr-1.5 -mt-0.5 capitalize">{{ mode }}</span>
+                <span class="text-sm mr-1.5 capitalize">{{ mode }}</span>
                 <carbon:circle-packing v-if="mode === 'compile'" />
                 <carbon:chart-bubble-packed v-else />
               </div>
@@ -267,7 +267,7 @@ onMounted(async() => {
               </div>
             </div>
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <pre class="px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlightedCSS" /></pre>
+            <pre class="language-css !m-0 !bg-transparent text-transparentpx-3 pb-2 overflow-auto max-h-30em"><code v-html="highlightedCSS" /></pre>
           </div>
         </div>
         <div
@@ -295,5 +295,15 @@ onMounted(async() => {
 }
 .inline-playground .CodeMirror {
   @apply px-3 py-2 h-auto bg-transparent font-mono text-sm;
+}
+.icon-button {
+  @apply
+    flex items-center text-1.05rem border-0
+    focus:outline-none text-$c-text
+    opacity-80 cursor-pointer select-none
+    hover:opacity-100;
+  &.active {
+    @apply opacity-100;
+  }
 }
 </style>

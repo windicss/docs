@@ -15,9 +15,10 @@ const repo = useRepo()
 
 <style scoped lang="postcss">
 .icon-button {
-  @apply rounded-lg p-2 bg-gray-200
-  bg-opacity-50 hover:bg-opacity-60
+  @apply flex rounded-lg p-2
+  text-$c-text text-1.05rem cursor-pointer
   focus:outline-none
-  dark:(bg-gray-700 bg-opacity-60 hover:bg-opacity-70);
+  bg-gray-100 hover:bg-gray-200
+  dark:(bg-dark-200 hover:bg-dark-100);
 }
 </style>
