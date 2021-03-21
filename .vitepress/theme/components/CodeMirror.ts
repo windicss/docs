@@ -2,8 +2,11 @@ import { defineComponent, h, nextTick, onMounted, ref, onUnmounted } from 'vue'
 import { EditorState } from '@codemirror/state'
 import { EditorView, ViewPlugin } from '@codemirror/view'
 import { html } from '@codemirror/lang-html'
-import { css } from '@codemirror/lang-css'
+// import { css } from '@codemirror/lang-css'
 import { javascript } from '@codemirror/lang-javascript'
+
+import { StreamLanguage } from '@codemirror/stream-parser'
+import { css } from '@codemirror/legacy-modes/mode/css'
 import { basicSetup } from '../codemirror'
 
 import { isDark } from '../composables/dark'
@@ -51,7 +54,7 @@ export default defineComponent({
         extensions.push(html())
 
       if (props.language === 'css')
-        extensions.push(css())
+        extensions.push(StreamLanguage.define(css))
 
       if (props.language === 'js')
         extensions.push(javascript())

@@ -51,8 +51,11 @@
 .cmt-strong,
 .cmt-keyword {
   color: var(--prism-keyword-control);
+}
+.cmt-strong {
   font-weight: bold;
 }
+
 
 .cmt-atom {}
 
