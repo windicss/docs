@@ -62,12 +62,10 @@ module.exports = {
 ### Vite Svelte
 
 ```bash
-npm init @vitejs/app --template svelte my-svelte-app
-cd my-svelte-app
+# vite project installation & setup
+npm init @vitejs/app --template svelte vite-svelte-windicss-app
+cd vite-svelte-windicss-app
 npm i -D svelte-windicss-preprocess
-# update vite.config.js as below
-npm i
-npm run dev -- --open
 ```
 
 ```js
@@ -83,8 +81,8 @@ export default defineConfig(({ command, mode }) => {
             compile: false,                     // false: interpretation mode; true: compilation mode (optional)
             prefix: 'windi-',                   // set compilation mode style prefix
             mode: production ? "prod" : "dev",  
-            // config: "windi.config.js",         
-            // safeList: ['bg-gray-600', 'text-white'], 
+            // config: "windi.config.js",       // (optional)
+            // safeList: ['bg-gray-600', 'text-white'], //  (optional)
           }),
         ],
         emitCss: true,
