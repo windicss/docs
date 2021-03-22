@@ -1,5 +1,4 @@
 .git/
 node_modules/
 !.vitepress
-.vitepress/theme/styles/highlight.pack.js
 **/dist

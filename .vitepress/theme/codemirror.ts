@@ -58,7 +58,6 @@ export const hoverPreview = (processor: Processor) => {
       while (end < to && /[^\s"'`]/.test(text[end - from])) end++
       if ((start === pos && side < 0) || (end === pos && side > 0)) return null
       const word = text.slice(start - from, end - from)
-      // TODO
       const result = processor.interpret(word)
       if (result.ignored.length > 0) return null
       return {
@@ -70,7 +69,6 @@ export const hoverPreview = (processor: Processor) => {
           const { highlightedCSS } = usePrismCSS(() => result.styleSheet.build())
           dom.className = 'text-sm border p-2 rounded !bg-dark-300'
           dom.innerHTML = `<pre><code>${highlightedCSS.value}</code></pre>`
-          // dom.innerHTML = `<code><pre>${hljs.highlightAuto(result.styleSheet.build()).value}</pre></code>`
           return { dom }
         },
       }
