@@ -54,8 +54,8 @@ export const hoverPreview = (processor: Processor) => {
     hoverTooltip((view, pos, side) => {
       const { from, to, text } = view.state.doc.lineAt(pos)
       let start = pos; let end = pos
-      while (start > from && /[^\s"'`]/.test(text[start - from - 1])) start--
-      while (end < to && /[^\s"'`]/.test(text[end - from])) end++
+      while (start > from && /[^\s"';`]/.test(text[start - from - 1])) start--
+      while (end < to && /[^\s"';`]/.test(text[end - from])) end++
       if ((start === pos && side < 0) || (end === pos && side > 0)) return null
       const word = text.slice(start - from, end - from)
       const result = processor.interpret(word)
