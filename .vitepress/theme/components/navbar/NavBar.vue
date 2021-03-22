@@ -5,7 +5,7 @@
 
       <NavBarTitle />
 
-      <div v-if="!fullpage" class="hidden lg:flex px-3 ml-4 xl:ml-6">
+      <div v-if="!fullpage" class="hidden lg:flex px-3 ml-4 xl:ml-6" :class="{'!xl:ml-28': sidebarState}">
         <NavLinks />
       </div>
 
@@ -22,10 +22,14 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmit, computed } from 'vue'
+import { defineEmit, computed, defineProps } from 'vue'
 import { useRoute } from 'vitepress'
 
 const route = useRoute()
+
+defineProps({
+  sidebarState: Boolean,
+})
 
 defineEmit(['toggle'])
 

@@ -4,7 +4,7 @@
       <Content />
     </template>
     <template v-else>
-      <NavBar v-if="showNavbar" @toggle="toggleSidebar">
+      <NavBar v-if="showNavbar" :sidebar-state="showSidebar" @toggle="toggleSidebar">
         <template #search>
           <slot name="navbar-search">
             <NavDivider />
