@@ -3,7 +3,7 @@ export const css = `.box {
     py-8 px-8 max-w-sm mx-auto
     bg-white dark:bg-gray-400 dark:bg-opacity-10
     rounded-xl shadow-md space-y-2
-    sm:(py-4 flex items-center space-y-0 space-x-6);
+    sm:(py-6 flex items-center space-y-0 space-x-6);
 }
 .btn {
   @apply
