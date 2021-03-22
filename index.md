@@ -18,7 +18,7 @@ footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---
 
 ::: tip
-We are working on a fresh new docs with major docs rewrites and some pretty cool [intreactive playgrounds](https://twitter.com/antfu7/status/1371779599084888064?s=20), stay tuned!
+We are working on a fresh new docs with major docs rewrites and some pretty cool [interactive playgrounds](https://twitter.com/antfu7/status/1371779599084888064?s=20), stay tuned!
 :::
 
 
