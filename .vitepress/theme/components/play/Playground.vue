@@ -75,7 +75,7 @@ const generatedCSS = computed(() => new StyleSheet()
     <Board class="playground">
       <Board vertical>
         <TemplateBlock v-model="htmlCode" :processor="processor" />
-        <StyleBlock v-model="styleCode" />
+        <StyleBlock v-model="styleCode" :processor="processor" />
       </Board>
       <Board>
         <PreviewBlock :html="htmlCode" :css="generatedCSS" />

@@ -1,41 +1,14 @@
-import { defineComponent, h, nextTick, onMounted, ref, onUnmounted, PropType } from 'vue'
-import { EditorState, Compartment } from '@codemirror/state'
-import { EditorView, ViewPlugin, keymap } from '@codemirror/view'
-import { defaultTabBinding } from '@codemirror/commands'
+import { defineComponent, h, nextTick, onMounted, ref, onUnmounted } from 'vue'
+import { EditorState } from '@codemirror/state'
+import { EditorView, ViewPlugin } from '@codemirror/view'
 import { StreamLanguage } from '@codemirror/stream-parser'
 import { javascript } from '@codemirror/lang-javascript'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/legacy-modes/mode/css'
-import { hoverTooltip } from '@codemirror/tooltip'
-import hljs from 'highlight.js'
 import type Processor from 'windicss'
-import { basicSetup } from '../codemirror'
+import type { PropType } from 'vue'
+import { basicSetup, hoverPreview } from '../codemirror'
 import { isDark } from '../composables/dark'
-
-const tabSize = new Compartment()
-
-const hoverPreview = hoverTooltip((view, pos, side) => {
-  const { from, to, text } = view.state.doc.lineAt(pos)
-  let start = pos; let end = pos
-  while (start > from && /[^\s"'`]/.test(text[start - from - 1])) start--
-  while (end < to && /[^\s"'`]/.test(text[end - from])) end++
-  if ((start === pos && side < 0) || (end === pos && side > 0)) return null
-  const word = text.slice(start - from, end - from)
-  // TODO
-  // const result = processor.interpret(word)
-  // if (result.ignored.length > 0) return null
-  return {
-    pos: start,
-    end,
-    above: true,
-    create(view) {
-      const dom = document.createElement('div')
-      dom.innerHTML = `<code><pre>${hljs.highlightAuto('.test {\n  color: red;\n}').value}</pre></code>`
-      // dom.innerHTML = `<code><pre>${hljs.highlightAuto(result.styleSheet.build()).value}</pre></code>`
-      return { dom }
-    },
-  }
-})
 
 export default defineComponent({
   name: 'CodeMirror',
@@ -63,32 +36,26 @@ export default defineComponent({
     let view: EditorView | null = null
     let state: EditorState | null = null
 
+    const reactivePlugin = ViewPlugin.define((view) => {
+      return {
+        update(update) {
+          if (update.docChanged) {
+            const value = view.state.doc.toString()
+            if (props.modelValue !== value)
+              emit('update:modelValue', value)
+          }
+        },
+      }
+    })
+
     async function initEditor() {
       const extensions = [
         basicSetup,
-        hoverPreview,
-        keymap.of([defaultTabBinding]),
-        tabSize.of(EditorState.tabSize.of(2)),
-        EditorView.theme({
-          '.cm-tooltip': {
-            padding: '5px 15px',
-            borderRadius: '5px',
-            borderColor: 'var(--c-scrollbar)',
-            background: 'var(--c-bg)',
-          },
-        }),
-        ViewPlugin.define((view) => {
-          return {
-            update(update) {
-              if (update.docChanged) {
-                const value = view.state.doc.toString()
-                if (props.modelValue !== value)
-                  emit('update:modelValue', value)
-              }
-            },
-          }
-        }),
+        reactivePlugin,
       ]
+      if (props.processor)
+        extensions.push(hoverPreview(props.processor))
+
       if (props.language === 'html')
         extensions.push(html())
 
