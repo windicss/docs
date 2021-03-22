@@ -27,7 +27,10 @@ const htmlCode = computed({
 <template>
   <div class="block-bg ml-4 mt-4 mb-2 relative">
     <div class="block-title">
-      Template
+      <div class="w-full flex justify-between items-center">
+        <span>Template</span>
+        <ToolsDropdown />
+      </div>
     </div>
     <div class="block-code">
       <ClientOnly>

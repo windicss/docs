@@ -1,7 +1,10 @@
 <template>
   <div class="block-bg m-4 overflow-hidden relative">
     <div class="block-title">
-      Preview
+      <div class="w-full flex justify-between items-center">
+        <span>Preview</span>
+        <ToolsDropdown />
+      </div>
     </div>
     <div class="p-4 h-full">
       <slot />

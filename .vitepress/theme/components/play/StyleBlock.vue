@@ -27,7 +27,10 @@ const styleCode = computed({
 <template>
   <div class="block-bg ml-4 mb-4 mt-2 relative">
     <div class="block-title">
-      Style
+      <div class="w-full flex justify-between items-center">
+        <span>Style</span>
+        <ToolsDropdown />
+      </div>
     </div>
     <div class="block-code">
       <ClientOnly>
