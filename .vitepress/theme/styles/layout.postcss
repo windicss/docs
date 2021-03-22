@@ -173,12 +173,10 @@ ol {
 }
 
 table {
-  width: auto;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  overflow-x: auto;
-  @apply font-mono text-sm;
-  white-space: pre-wrap;
+  @apply
+    font-mono text-sm my-4 overflow-x-auto border-collapse
+    relative w-full table-fixed whitespace-pre-wrap
+    md:(table-auto w-auto);
 }
 
 tr:nth-child(2n) {
@@ -192,7 +190,7 @@ thead th {
 th,
 td {
   border-bottom: 1px solid var(--c-divider-light);
-  padding: 0.5rem 1rem;
+  @apply px-2 py-1 break-words overflow-hidden md:(px-4 py-2 break-normal);
 }
 
 blockquote {
