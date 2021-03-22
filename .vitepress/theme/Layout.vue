@@ -1,52 +1,50 @@
 <template>
   <div class="theme" :class="pageClasses">
-    <template v-if="fullpage">
-      <Content />
-    </template>
-    <template v-else>
-      <NavBar v-if="showNavbar" :sidebar-state="showSidebar" @toggle="toggleSidebar">
-        <template #search>
-          <slot name="navbar-search">
-            <NavDivider />
-            <AlgoliaSearchBox v-if="theme.algolia" :options="theme.algolia" />
-          </slot>
+    <NavBar v-if="showNavbar" :sidebar-state="showSidebar" @toggle="toggleSidebar">
+      <template #search>
+        <slot name="navbar-search">
+          <NavDivider />
+          <AlgoliaSearchBox v-if="theme.algolia" :options="theme.algolia" />
+        </slot>
+      </template>
+    </NavBar>
+    <div class="pt-$header-height min-h-screen" :class="{'grid-layout': !enableHome && !playground}">
+      <SideBar :open="openSideBar">
+        <template #sidebar-top>
+          <slot name="sidebar-top" />
         </template>
-      </NavBar>
-      <div class="pt-$header-height min-h-screen" :class="{'grid-layout': !enableHome}">
-        <SideBar :open="openSideBar">
-          <template #sidebar-top>
-            <slot name="sidebar-top" />
-          </template>
-          <template #sidebar-bottom>
-            <slot name="sidebar-bottom" />
-          </template>
-        </SideBar>
-        <!-- TODO: make this button accessible -->
-        <div class="sidebar-mask" @click="toggleSidebar(false)" />
-        <Home v-if="enableHome">
-          <template #hero>
-            <slot name="home-hero" />
-          </template>
-          <template #features>
-            <slot name="home-features" />
-          </template>
-          <template #footer>
-            <slot name="home-footer" />
-          </template>
-        </Home>
-        <Page v-else>
-          <template #top>
-            <slot name="page-top-ads" />
-            <slot name="page-top" />
-          </template>
-          <template #bottom>
-            <slot name="page-bottom" />
-            <slot name="page-bottom-ads" />
-          </template>
-        </Page>
+        <template #sidebar-bottom>
+          <slot name="sidebar-bottom" />
+        </template>
+      </SideBar>
+      <!-- TODO: make this button accessible -->
+      <div class="sidebar-mask" @click="toggleSidebar(false)" />
+      <Home v-if="enableHome">
+        <template #hero>
+          <slot name="home-hero" />
+        </template>
+        <template #features>
+          <slot name="home-features" />
+        </template>
+        <template #footer>
+          <slot name="home-footer" />
+        </template>
+      </Home>
+      <template v-else-if="playground">
+        <Content />
+      </template>
+      <Page v-else>
+        <template #top>
+          <slot name="page-top-ads" />
+          <slot name="page-top" />
+        </template>
+        <template #bottom>
+          <slot name="page-bottom" />
+          <slot name="page-bottom-ads" />
+        </template>
+      </Page>
       <!-- <HeadersSideBar /> -->
-      </div>
-    </template>
+    </div>
   </div>
   <!-- <Debug /> -->
 </template>
@@ -83,7 +81,7 @@ const theme = computed(() => siteData.value.themeConfig)
 const enableHome = computed(() => !!route.data.frontmatter.home)
 
 // playground
-const fullpage = computed(() => !!route.data.frontmatter.fullpage)
+const playground = computed(() => !!route.data.frontmatter.playground)
 
 // navbar
 const showNavbar = computed(() => {
@@ -106,7 +104,7 @@ const openSideBar = ref(false)
 const showSidebar = computed(() => {
   const { frontmatter } = route.data
 
-  if (frontmatter.home || frontmatter.sidebar === false)
+  if (frontmatter.home || frontmatter.playground || frontmatter.sidebar === false)
     return false
 
   const { themeConfig } = siteRouteData.value

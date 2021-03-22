@@ -1,5 +1,5 @@
 ---
-fullpage: true
+playground: true
 ---
 
 <Playground />

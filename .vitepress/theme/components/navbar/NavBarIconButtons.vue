@@ -14,6 +14,7 @@ const repo = useRepo()
       :href="repo.link"
       rel="noreferrer"
       target="_blank"
+      class="!hidden md:block"
     >
       <carbon-logo-github />
     </NavBarIcon>

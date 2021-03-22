@@ -96,9 +96,8 @@ const generatedCSS = computed(() => new StyleSheet()
 
 <style>
 .playground {
-  padding-top: calc(1rem + var(--header-height));
   height: calc(100vh - var(--header-height));
-  @apply px-4 pb-4 min-h-screen bg-blue-gray-100 dark:bg-dark-800;
+  @apply p-4 min-h-screen bg-blue-gray-100 dark:bg-dark-800;
 }
 .block-bg {
   @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500 shadow;

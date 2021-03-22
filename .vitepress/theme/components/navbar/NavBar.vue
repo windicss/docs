@@ -1,11 +1,11 @@
 <template>
   <header class="nav-bar">
     <slot>
-      <ToggleSideBarButton v-if="!fullpage" @toggle="$emit('toggle')" />
+      <ToggleSideBarButton @toggle="$emit('toggle')" />
 
       <NavBarTitle />
 
-      <div v-if="!fullpage" class="hidden lg:flex px-3 ml-4 xl:ml-6" :class="{'!xl:ml-28': sidebarState}">
+      <div class="hidden lg:flex px-3 ml-4 xl:ml-6" :class="{'!xl:ml-28': sidebarState}">
         <NavLinks />
       </div>
 
@@ -22,18 +22,13 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmit, computed, defineProps } from 'vue'
-import { useRoute } from 'vitepress'
-
-const route = useRoute()
+import { defineEmit, defineProps } from 'vue'
 
 defineProps({
   sidebarState: Boolean,
 })
 
 defineEmit(['toggle'])
-
-const fullpage = computed(() => !!route.data.frontmatter.fullpage)
 </script>
 
 <style scoped lang="postcss">
