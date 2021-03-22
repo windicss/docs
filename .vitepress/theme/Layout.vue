@@ -1,6 +1,21 @@
 <template>
   <div class="theme" :class="pageClasses">
     <NavBar v-if="showNavbar" :sidebar-state="showSidebar" @toggle="toggleSidebar">
+      <template v-if="playground" #icons>
+        <!-- TODO -->
+        <NavBarIcon>
+          <ion:settings-outline />
+        </NavBarIcon>
+        <NavBarIcon>
+          <carbon:open-panel-right />
+        </NavBarIcon>
+        <NavDivider />
+      </template>
+      <template v-if="playground" #play>
+        <NavBarIcon>
+          <ion:settings-outline />
+        </NavBarIcon>
+      </template>
       <template #search>
         <slot name="navbar-search">
           <NavDivider />
@@ -31,7 +46,7 @@
         </template>
       </Home>
       <template v-else-if="playground">
-        <Content />
+        <Playground />
       </template>
       <Page v-else>
         <template #top>

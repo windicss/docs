@@ -49,55 +49,27 @@ const generatedCSS = computed(() => new StyleSheet()
 </script>
 
 <template>
-  <div>
-    <NavBar>
-      <template #icons>
-        <!-- TODO -->
-        <NavBarIcon>
-          <ion:settings-outline />
-        </NavBarIcon>
-        <NavBarIcon>
-          <carbon:open-panel-right />
-        </NavBarIcon>
-        <NavDivider />
-      </template>
-      <template #play>
-        <NavBarIcon>
-          <ion:settings-outline />
-        </NavBarIcon>
-      </template>
-      <!-- <NavBarTitle />
-
-      <nav class="flex px-3 ml-4 ml-10">
-        <NavLinks :links="[{ text: 'Home', link:'/'}, { text: 'Play', link:'/play'}]" />
-      </nav>
-
-      <div class="flex-grow" />
-
-      <NavBarIconButtons /> -->
-    </NavBar>
-    <div class="playground">
-      <Board class="h-full">
-        <Board vertical>
-          <TemplateBlock v-model="htmlCode" :processor="processor" />
-          <StyleBlock v-model="styleCode" :processor="processor" />
-        </Board>
-        <Board>
-          <PreviewBlock>
-            <ClientOnly>
-              <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
-            </ClientOnly>
-          </PreviewBlock>
-        </Board>
+  <div class="playground">
+    <Board class="h-full">
+      <Board vertical>
+        <TemplateBlock v-model="htmlCode" :processor="processor" />
+        <StyleBlock v-model="styleCode" :processor="processor" />
       </Board>
-    </div>
+      <Board>
+        <PreviewBlock>
+          <ClientOnly>
+            <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
+          </ClientOnly>
+        </PreviewBlock>
+      </Board>
+    </Board>
   </div>
 </template>
 
 <style>
 .playground {
   height: calc(100vh - var(--header-height));
-  @apply p-4 min-h-screen bg-blue-gray-100 dark:bg-dark-800;
+  @apply p-4 bg-blue-gray-100 dark:bg-dark-800;
 }
 .block-bg {
   @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500 shadow;
