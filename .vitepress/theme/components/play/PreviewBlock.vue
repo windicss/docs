@@ -1,5 +1,5 @@
 <template>
-  <div class="block-bg m-4 overflow-hidden relative">
+  <div class="block-bg ml-2 overflow-hidden relative">
     <div class="block-title">
       <div class="w-full flex justify-between items-center">
         <span>Preview</span>

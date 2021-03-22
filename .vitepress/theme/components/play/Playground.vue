@@ -76,30 +76,29 @@ const generatedCSS = computed(() => new StyleSheet()
 
       <NavBarIconButtons /> -->
     </NavBar>
-    <Board class="playground">
-      <Board vertical>
-        <TemplateBlock v-model="htmlCode" :processor="processor" />
-        <StyleBlock v-model="styleCode" :processor="processor" />
+    <div class="playground">
+      <Board class="h-full">
+        <Board vertical>
+          <TemplateBlock v-model="htmlCode" :processor="processor" />
+          <StyleBlock v-model="styleCode" :processor="processor" />
+        </Board>
+        <Board>
+          <PreviewBlock>
+            <ClientOnly>
+              <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
+            </ClientOnly>
+          </PreviewBlock>
+        </Board>
       </Board>
-      <Board>
-        <PreviewBlock>
-          <ClientOnly>
-            <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
-          </ClientOnly>
-        </PreviewBlock>
-      </Board>
-    </Board>
+    </div>
   </div>
 </template>
 
 <style>
 .playground {
-  @apply pt-$header-height min-h-screen bg-blue-gray-100 dark:bg-dark-800;
-}
-@screen md {
-  .playground {
-    height: calc(100vh - var(--header-height));
-  }
+  padding-top: calc(1rem + var(--header-height));
+  height: calc(100vh - var(--header-height));
+  @apply px-4 pb-4 min-h-screen bg-blue-gray-100 dark:bg-dark-800;
 }
 .block-bg {
   @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500 shadow;

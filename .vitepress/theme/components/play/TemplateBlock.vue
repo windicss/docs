@@ -25,7 +25,7 @@ const htmlCode = computed({
 </script>
 
 <template>
-  <div class="block-bg ml-4 mt-4 mb-2 relative">
+  <div class="block-bg mb-2 mr-2 relative">
     <div class="block-title">
       <div class="w-full flex justify-between items-center">
         <span>Template</span>

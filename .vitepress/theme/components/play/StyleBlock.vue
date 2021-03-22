@@ -25,7 +25,7 @@ const styleCode = computed({
 </script>
 
 <template>
-  <div class="block-bg ml-4 mb-4 mt-2 relative">
+  <div class="block-bg mt-2 mr-2 relative">
     <div class="block-title">
       <div class="w-full flex justify-between items-center">
         <span>Style</span>
