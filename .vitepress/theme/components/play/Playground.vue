@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref, computed } from 'vue'
+import { defineProps, ref, computed, watch } from 'vue'
 import type { PropType } from 'vue'
 import Windi from 'windicss'
 import type { Config } from 'windicss/types/interfaces'
@@ -17,6 +17,8 @@ const props = defineProps({
     type: Object as PropType<Config>,
   },
 })
+
+watch(htmlCode, v => console.log('play'))
 
 const processor = computed(() => new Windi(props.config))
 
@@ -78,7 +80,16 @@ const generatedCSS = computed(() => new StyleSheet()
         <StyleBlock v-model="styleCode" :processor="processor" />
       </Board>
       <Board>
-        <PreviewBlock :html="htmlCode" :css="generatedCSS" />
+        <div class="block-bg m-4 overflow-hidden">
+          <div class="block-title">
+            Preview
+          </div>
+          <div class="p-4 h-full">
+            <ClientOnly>
+              <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
+            </ClientOnly>
+          </div>
+        </div>
       </Board>
     </Board>
   </div>

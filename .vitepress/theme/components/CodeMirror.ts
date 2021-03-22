@@ -41,8 +41,7 @@ export default defineComponent({
         update(update) {
           if (update.docChanged) {
             const value = view.state.doc.toString()
-            if (props.modelValue !== value)
-              emit('update:modelValue', value)
+            emit('update:modelValue', value)
           }
         },
       }
