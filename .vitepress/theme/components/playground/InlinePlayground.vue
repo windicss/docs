@@ -220,7 +220,7 @@ onMounted(async() => {
         <carbon:camera class="inline-block" />
       </div>
     </div>
-    <div class="border bc border-dashed rounded relative">
+    <div class="border bc rounded relative pb-2">
       <div
         class="grid w-full"
         style="grid-template-columns: 1fr max-content;"
@@ -235,7 +235,7 @@ onMounted(async() => {
               class="bg-transparent outline-none"
             />
           </div>
-          <div v-show="showConfig" class="border-t bc border-dashed">
+          <div v-show="showConfig" class="border-t bc">
             <div class="ml-1 p-2 pb-0 text-sm opacity-50 flex">
               <span>Config</span>
             </div>
@@ -251,7 +251,7 @@ onMounted(async() => {
           </div>
           <div
             v-show="showCSS"
-            class="text-sm border-t bc border-dashed"
+            class="text-sm border-t bc"
           >
             <div class="ml-1 p-2 text-sm opacity-50 flex">
               <span>CSS</span>
@@ -272,7 +272,7 @@ onMounted(async() => {
         </div>
         <div
           v-if="showPreview"
-          class="border-l bc border-dashed"
+          class="border-l bc"
         >
           <PlaygroundIframe
             class="w-10em"

@@ -173,7 +173,7 @@ function toggleAll() {
     <!-- all -->
     <div
       class="
-        button absolute w-6 h-6 transform border-dashed border-2 rounded
+        button absolute w-6 h-6 transform border-2 rounded
         border-gray-400 border-opacity-25
         left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2
       "

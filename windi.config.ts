@@ -5,7 +5,7 @@ import { defineConfig } from 'windicss/helpers'
 export default defineConfig({
   darkMode: 'class',
   shortcuts: {
-    bc: 'border-gray-300 dark:border-true-gray-600',
+    bc: 'border-cool-gray-200 dark:border-dark-300',
   },
   theme: {
     extend: {
