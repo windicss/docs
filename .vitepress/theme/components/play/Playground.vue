@@ -72,33 +72,32 @@ const generatedCSS = computed(() => new StyleSheet()
 
       <NavBarIconButtons /> -->
     </NavBar>
-    <Board class="playground md:(flex-row)">
+    <Board class="playground">
       <Board vertical>
         <TemplateBlock v-model="htmlCode" />
         <StyleBlock v-model="styleCode" />
       </Board>
-      <PreviewBlock :html="htmlCode" :css="generatedCSS" />
+      <Board>
+        <PreviewBlock :html="htmlCode" :css="generatedCSS" />
+      </Board>
     </Board>
   </div>
 </template>
 
 <style>
 .playground {
-  @apply pt-$header-height min-h-screen;
+  @apply pt-$header-height min-h-screen bg-blue-gray-100 dark:bg-dark-800;
 }
 @screen md {
   .playground {
     height: calc(100vh - var(--header-height));
   }
 }
-.block-border {
-  @apply border-r bc;
-}
 .block-bg {
-  @apply bg-gray-100 bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-5;
+  @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500 shadow;
 }
 .block-title {
-  @apply px-4 pt-2 text-sm font-bold opacity-85;
+  @apply px-4 pt-2 text-sm font-bold opacity-85 select-none;
 }
 .block-code {
   @apply absolute pt-2em inset-0 w-full h-full overflow-hidden rounded-b-lg;

@@ -16,7 +16,7 @@ watch(() => props.html, v => console.log(v))
 </script>
 
 <template>
-  <div class="block-bg overflow-hidden">
+  <div class="block-bg m-4 overflow-hidden">
     <div class="block-title">
       Preview
     </div>

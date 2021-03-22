@@ -19,13 +19,13 @@ const styleCode = computed({
 </script>
 
 <template>
-  <div class="block-border relative">
+  <div class="block-bg ml-4 mb-4 mt-2 relative">
     <div class="block-title">
       Style
     </div>
     <div class="block-code">
       <ClientOnly>
-        <CodeMirror v-model="styleCode" class="h-full w-full" language="css" />
+        <CodeMirror v-model="styleCode" class="h-full w-full pb-2" language="css" />
       </ClientOnly>
     </div>
   </div>

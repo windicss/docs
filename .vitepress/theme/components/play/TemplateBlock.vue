@@ -19,13 +19,13 @@ const htmlCode = computed({
 </script>
 
 <template>
-  <div class="block-border relative border-b">
+  <div class="block-bg ml-4 mt-4 mb-2 relative">
     <div class="block-title">
       Template
     </div>
     <div class="block-code">
       <ClientOnly>
-        <CodeMirror v-model="htmlCode" class="h-full w-full" language="html" />
+        <CodeMirror v-model="htmlCode" class="h-full w-full pb-2" language="html" />
       </ClientOnly>
     </div>
   </div>
