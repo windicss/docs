@@ -54,15 +54,17 @@ const generatedCSS = computed(() => new StyleSheet()
       <template #icons>
         <!-- TODO -->
         <NavBarIcon>
-          <carbon:open-panel-bottom />
-        </NavBarIcon>
-        <NavBarIcon>
-          <carbon:open-panel-left />
+          <ion:settings-outline />
         </NavBarIcon>
         <NavBarIcon>
           <carbon:open-panel-right />
         </NavBarIcon>
         <NavDivider />
+      </template>
+      <template #play>
+        <NavBarIcon>
+          <ion:settings-outline />
+        </NavBarIcon>
       </template>
       <!-- <NavBarTitle />
 
