@@ -7,8 +7,7 @@ import { javascript } from '@codemirror/lang-javascript'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/legacy-modes/mode/css'
 import { hoverTooltip } from '@codemirror/tooltip'
-// @ts-expect-error no types
-import hljs from '../styles/highlight.pack.js'
+import hljs from 'highlight.js'
 import { basicSetup } from '../codemirror'
 import { isDark } from '../composables/dark'
 
