@@ -139,7 +139,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
 }
 
 .DocSearch {
-  --docsearch-container-background: rgba(220,220,220,0.6);
+  --docsearch-container-background: rgba(173,181,189,0.7);
   --docsearch-modal-background: var(--c-bg);
   --docsearch-modal-shadow: var(--c-bg);
   --docsearch-hit-color: var(--c-text-light);
@@ -149,8 +149,8 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
   --docsearch-hit-shadow: none;
   --docsearch-primary-color: var(--c-brand);
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-searchbox-background: theme('colors.gray.100');
-  --docsearch-searchbox-focus-background: theme('colors.gray.200');
+  --docsearch-searchbox-background: theme('colors['blue-gray'].100');
+  --docsearch-searchbox-focus-background: theme('colors['blue-gray'].200');
   --docsearch-searchbox-shadow: none;
   --docsearch-searchbox-height: 3rem;
   --docsearch-text-color: var(--c-text-light);

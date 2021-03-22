@@ -19,7 +19,7 @@ export default defineComponent({
   @apply flex rounded-lg p-2
   text-$c-text text-1.05rem cursor-pointer
   focus:outline-none
-  bg-gray-100 hover:bg-gray-200
+  bg-blue-gray-100 hover:bg-blue-gray-200
   dark:(bg-dark-400 hover:bg-dark-300);
 }
 </style>

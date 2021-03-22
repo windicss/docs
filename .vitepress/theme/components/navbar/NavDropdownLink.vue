@@ -2,7 +2,8 @@
   <div class="nav-dropdown-link" :class="{ open }">
     <button class="button" :aria-label="item.ariaLabel" @click="toggle">
       <span class="button-text">{{ item.text }}</span>
-      <span class="button-arrow" :class="open ? 'down' : 'right'" />
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-cool-gray-500 ml-2" version="1.1" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+      <!-- <span class="button-arrow" :class="open ? 'down' : 'right'" /> -->
     </button>
 
     <ul class="dialog">
@@ -57,7 +58,7 @@ function toggle() {
 
 .button {
   @apply
-    block border-0 px-3 py-1.5 w-full
+    block border-0 px-3 py-1.5 w-full flex flex-row items-center
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
     lg:(border-b-2px border-transparent px-0 py-5 font-normal text-0.9rem);
 }
@@ -83,7 +84,7 @@ function toggle() {
 }
 
 .dialog-item:hover {
-  @apply bg-gray-100 dark:bg-dark-300;
+  @apply bg-blue-gray-100 dark:bg-dark-300;
 }
 
 @screen lg {
@@ -93,7 +94,7 @@ function toggle() {
 }
 
 .dialog {
-  @apply m-0 p-0 mb-2 list-none;
+  @apply m-0 p-0 mb-2 list-none border border-blue-gray-200 dark:border-dark-300;
 }
 
 @screen lg {
