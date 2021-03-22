@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { defineProps, watch } from 'vue'
+import { defineProps } from 'vue'
 
-const props = defineProps({
+defineProps({
   html: {
     type: String,
     required: true,
@@ -11,8 +11,6 @@ const props = defineProps({
     required: true,
   },
 })
-
-watch(() => props.html, v => console.log(v))
 </script>
 
 <template>
