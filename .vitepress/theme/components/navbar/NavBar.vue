@@ -5,7 +5,7 @@
 
       <NavBarTitle />
 
-      <div v-if="!fullpage" class="hidden lg:flex px-3 ml-4 xl:ml-28">
+      <div v-if="!fullpage" class="hidden lg:flex px-3 ml-4 xl:ml-6">
         <NavLinks />
       </div>
 
