@@ -32,15 +32,19 @@ const { props: linkProps } = useNavLink(propsRefs.item)
   }
 }
 
+.item.active {
+  color: var(--c-brand);
+}
+
 .item:hover,
 .item.active {
   text-decoration: none;
-  color: var(--c-brand);
+  @apply bg-blue-gray-100 dark:bg-dark-300;
 }
 
 .item.external:hover {
   border-bottom-color: transparent;
-  color: var(--c-text);
+  @apply bg-blue-gray-100 dark:bg-dark-300;
 }
 
 @screen md {

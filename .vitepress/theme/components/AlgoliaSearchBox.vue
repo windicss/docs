@@ -168,7 +168,7 @@ html.dark .DocSearch {
 }
 
 .DocSearch-Button {
-  @apply rounded-lg px-2 md:px-3 ml-0 rounded-lg;
+  @apply rounded-lg p-9px ml-0 rounded-lg h-auto lg:(px-3 h-36px);
 }
 .DocSearch-Button-Key {
   @apply static pb-0 border border-gray-300 bg-transparent m-0;
@@ -196,7 +196,7 @@ html.dark .DocSearch {
   @apply border-t dark:border-dark-300;
 }
 .DocSearch-Search-Icon {
-  @apply !h-18px !w-18px md:(!h-20px !w-20px);
+  @apply h-18px w-18px lg:(h-20px w-20px);
 }
 .DocSearch-Button:hover .DocSearch-Search-Icon {
   @apply text-$docsearch-text-color;
