@@ -80,16 +80,11 @@ const generatedCSS = computed(() => new StyleSheet()
         <StyleBlock v-model="styleCode" :processor="processor" />
       </Board>
       <Board>
-        <div class="block-bg m-4 overflow-hidden">
-          <div class="block-title">
-            Preview
-          </div>
-          <div class="p-4 h-full">
-            <ClientOnly>
-              <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS"></PlaygroundIframe>
-            </ClientOnly>
-          </div>
-        </div>
+        <PreviewBlock>
+          <ClientOnly>
+            <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
+          </ClientOnly>
+        </PreviewBlock>
       </Board>
     </Board>
   </div>
