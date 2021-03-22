@@ -4,6 +4,7 @@
     "composables",
     "demi",
     "docsearch",
+    "hljs",
     "prismjs"
   ],
   "eslint.packageManager": "pnpm",

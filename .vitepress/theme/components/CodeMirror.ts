@@ -1,4 +1,4 @@
-import { defineComponent, h, nextTick, onMounted, ref, onUnmounted } from 'vue'
+import { defineComponent, h, nextTick, onMounted, ref, onUnmounted, PropType } from 'vue'
 import { EditorState, Compartment } from '@codemirror/state'
 import { EditorView, ViewPlugin, keymap } from '@codemirror/view'
 import { defaultTabBinding } from '@codemirror/commands'
@@ -8,6 +8,7 @@ import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/legacy-modes/mode/css'
 import { hoverTooltip } from '@codemirror/tooltip'
 import hljs from 'highlight.js'
+import type Processor from 'windicss'
 import { basicSetup } from '../codemirror'
 import { isDark } from '../composables/dark'
 
@@ -53,6 +54,8 @@ export default defineComponent({
     },
     // eslint-disable-next-line vue/require-default-prop
     options: Object,
+    // eslint-disable-next-line vue/require-default-prop
+    processor: Object as PropType<Processor>,
   },
   emits: ['update:modelValue', 'editorDidMount'],
   setup(props, { emit }) {
