@@ -14,7 +14,7 @@
   "volar.tsPlugin": true,
   "volar.tsPluginStatus": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": false
   },
   "files.associations": {
     "*.css": "postcss"
