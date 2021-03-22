@@ -50,10 +50,6 @@ watchEffect(() => {
   frame.value?.contentWindow?.document?.querySelector('html')?.classList?.toggle('dark', isDark.value)
 })
 
-const resizeObserver = new ResizeObserver(entries => {
-  resizeIframe()
-})
-
 function resizeIframe() {
   if (!frame.value?.contentWindow)
     return
@@ -64,7 +60,12 @@ function resizeIframe() {
 
 function ready() {
   isReady.value = true
-  resizeObserver.observe(frame.value!)
+  if(typeof window !== 'undefined') {
+    const resizeObserver = new ResizeObserver(entries => {
+      resizeIframe()
+    })
+    resizeObserver.observe(frame.value!)
+  }
 }
 </script>
 
