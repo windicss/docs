@@ -6,8 +6,9 @@ import './styles/code.css'
 import './styles/custom-blocks.css'
 import './styles/sidebar-links.postcss'
 import './styles/codemirror-prism-vars.css'
-
+import './styles/hover-preview.css'
 import { Theme } from 'vitepress'
+
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
 

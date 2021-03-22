@@ -74,7 +74,7 @@ const generatedCSS = computed(() => new StyleSheet()
     </NavBar>
     <Board class="playground">
       <Board vertical>
-        <TemplateBlock v-model="htmlCode" />
+        <TemplateBlock v-model="htmlCode" :processor="processor" />
         <StyleBlock v-model="styleCode" />
       </Board>
       <Board>
