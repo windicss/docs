@@ -28,14 +28,31 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/plugins': [
     {
-      text: 'Plugins',
+      text: 'Base',
       children: [
-        { text: 'Aspect Ratio', link: '/plugins/aspect-ratio' },
-        { text: 'Forms', link: '/plugins/forms' },
-        { text: 'Filters', link: '/plugins/filters' },
-        { text: 'Line Clamp', link: '/plugins/line-clamp' },
-        { text: 'Scroll Snap', link: '/plugins/scroll-snap' },
-        { text: 'Typography', link: '/plugins/typography' },
+        { text: 'Plugin Interfaces', link: '/plugins/interfaces' },
+        { text: 'Transform API', link: '/plugins/transform' },
+      ],
+    },
+    {
+      text: 'Official',
+      children: [
+        { text: 'Aspect Ratio', link: '/plugins/official/aspect-ratio' },
+        { text: 'Forms', link: '/plugins/official/forms' },
+        { text: 'Filters', link: '/plugins/official/filters' },
+        { text: 'Line Clamp', link: '/plugins/official/line-clamp' },
+        { text: 'Scroll Snap', link: '/plugins/official/scroll-snap' },
+        { text: 'Typography', link: '/plugins/official/typography' },
+      ],
+    },
+    {
+      text: 'Community',
+      children: [
+        { text: 'Animations', link: '/plugins/community/animations' },
+        { text: 'Scrollbar', link: '/plugins/community/scrollbar' },
+        { text: 'Question Mark', link: '/plugins/community/question-mark' },
+        { text: 'Hero Patterns', link: '/plugins/community/heropatterns' },
+        { text: 'Interaction Variants', link: '/plugins/community/interaction-variants' },
       ],
     },
   ],
@@ -96,10 +113,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: 'Advanced',
       children: [
-        { text: 'API', link: '/guide/api' },
-        { text: 'Modes', link: '/guide/modes' },
-        { text: 'Plugin', link: '/guide/plugin' },
-        { text: 'The Story', link: '/guide/story' },
+        { text: 'API', link: '/guide/advanced/api' },
+        { text: 'Modes', link: '/guide/advanced/modes' },
+        { text: 'Plugin', link: '/guide/advanced/plugin' },
+        { text: 'The Story', link: '/guide/advanced/story' },
       ],
     },
   ],
