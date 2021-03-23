@@ -3,26 +3,42 @@ import type { DefaultTheme } from '../theme/config'
 export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/utilities': [
     {
-      text: 'Utilities',
+      text: 'General',
       children: [
-        { text: 'Accessibility', link: '/utilities/accessibility' },
+        { text: 'Colors', link: '/utilities/colors' },
+        { text: 'Variants', link: '/utilities/variants' },
+        { text: 'Variables', link: '/utilities/variables' },
+      ],
+    },
+    {
+      text: 'Content',
+      children: [
+        { text: 'Typography', link: '/utilities/typography' },
         { text: 'Backgrounds', link: '/utilities/backgrounds' },
         { text: 'Borders', link: '/utilities/borders' },
-        { text: 'Box Alignment', link: '/utilities/box-alignment' },
-        { text: 'Colors', link: '/utilities/colors' },
-        { text: 'Effects', link: '/utilities/effects' },
+        { text: 'SVG', link: '/utilities/svg' },
+      ],
+    },
+    {
+      text: 'Position',
+      children: [
+        { text: 'Layout', link: '/utilities/layout' },
+        { text: 'Spacing', link: '/utilities/spacing' },
+        { text: 'Sizing', link: '/utilities/sizing' },
         { text: 'Flexbox', link: '/utilities/flexbox' },
         { text: 'Grid', link: '/utilities/grid' },
-        { text: 'Interactivity', link: '/utilities/interactivity' },
-        { text: 'Layout', link: '/utilities/layout' },
-        { text: 'Sizing', link: '/utilities/sizing' },
-        { text: 'Spacing', link: '/utilities/spacing' },
-        { text: 'SVG', link: '/utilities/svg' },
+        { text: 'Box Alignment', link: '/utilities/box-alignment' },
         { text: 'Tables', link: '/utilities/tables' },
-        { text: 'Transforms', link: '/utilities/transforms' },
+      ],
+    },
+    {
+      text: 'Enhancement',
+      children: [
+        { text: 'Effects', link: '/utilities/effects' },
         { text: 'Transitions', link: '/utilities/transitions' },
-        { text: 'Typography', link: '/utilities/typography' },
-        { text: 'Variants', link: '/utilities/variants' },
+        { text: 'Transforms', link: '/utilities/transforms' },
+        { text: 'Interactivity', link: '/utilities/interactivity' },
+        { text: 'Accessibility', link: '/utilities/accessibility' },
       ],
     },
   ],
