@@ -46,6 +46,15 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
   },
   {
+    text: 'Translations',
+    items: [
+      { text: 'English', link: '/plugins/aspect-ratio' },
+      { text: '中文', link: '/plugins/forms' },
+      { text: '日本語', link: '/plugins/filters' },
+      { text: 'Français', link: '/plugins/line-clamp' },
+    ],
+  },
+  {
     text: 'Community',
     items: [
       { text: 'Discord', link: 'https://chat.windicss.org' },
