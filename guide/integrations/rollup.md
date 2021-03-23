@@ -27,60 +27,6 @@ import 'virtual:windi.css'
 That's all.
 
 
-## Supports
-
-### TypeScript
-
-Enable TypeScript for your `tailwind.config.js`? Sure, why not?
-
-Rename it to `tailwind.config.ts` and things will just work!
-
-```ts
-// tailwind.config.ts
-import { defineConfig } from 'vite-plugin-windicss'
-import formsPlugin from 'windicss/plugin/forms'
-
-export default defineConfig({
-  darkMode: 'class',
-  theme: {
-    extend: {
-      colors: {
-        teal: {
-          100: '#096',
-        },
-      },
-    },
-  },
-  plugins: [formsPlugin],
-})
-```
-
-### Pug Support
-
-It will automatically enable Pug support for `.pug` and Vue SFC when dependency `pug` is found in the workspace.
-
-### "Design in DevTools"
-
-> ⚗️ Experimental
-
-It might be a common practice when you use the purge-based Tailwind where you have all the classes in your browser and you can try how things work by directly changing the classes in DevTools. While you might think this is some kind of limitation of "on-demand" where the DevTools don't know those you haven't used in your source code yet.
-
-But unfortunately, **we are here to BREAK the limitation** 😎 See the [video demo](https://twitter.com/antfu7/status/1372244287975387145).
-
-Just add the following line to your main entry
-
-```js
-import 'virtual:windi-devtools'
-```
-
-It will be enabled automatically for you, have fun!
-
-Oh and don't worry about the final bundle, in production build `virtual:windi-devtools` will be an empty module and you don't have to do anything about it :)
-
-> ⚠️ Please use it with caution, under the hood we use [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to detect the class changes. Which means not only your manual changes but also the changes made by your scripts will be detected and included in the stylesheet. This could cause some misalignment between dev and the production build when **using dynamically constructed classes** (false-positive). We recommended adding your dynamic parts to the `safelist` or setup UI regression tests for your production build if possible.
-
-💡 Idea by @ElMassimo.
-
 ## Configuration
 
 ### Preflight (style reseting)
@@ -162,15 +108,3 @@ export default {
 ### More
 
 See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts) for more configuration reference.
-
-## Caveats
-
-### Scoped Style
-
-You will need to **set `transformCSS: 'pre'` to get Scoped Style work**.
-
-`@media` directive with scoped style can **only works** with `css` `postcss` `scss` but not `sass`, `less` nor `stylus`
-
-## Example
-
-See [./examples](./examples) for *react*, *vue* and *vue with pug* sample projects, or [`Vitesse`](https://github.com/antfu/vitesse)
