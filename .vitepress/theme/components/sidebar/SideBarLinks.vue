@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { useSideBar } from '../composables/sideBar'
+import { useSideBar } from '../../composables/sideBar'
 import { SideBarLink } from './SideBarLink'
 
 const items = useSideBar()

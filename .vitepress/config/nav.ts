@@ -10,7 +10,11 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Configuration', link: '/guide/configuration/' },
       { text: 'Intergrations', link: '/guide/intergrations/' },
       { text: 'Features', link: '/guide/features/' },
+<<<<<<< HEAD
       { text: 'Advanced', link: '/guide/advanced/api' },
+=======
+      { text: 'Configuration', link: '/guide/configuration/' },
+>>>>>>> 9b28a84731e78145b208f81ed4c882039534b25e
     ],
   },
   {

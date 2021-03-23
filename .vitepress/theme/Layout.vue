@@ -1,6 +1,6 @@
 <template>
-  <div class="theme" :class="pageClasses">
-    <NavBar v-if="showNavbar" :sidebar-state="showSidebar" @toggle="toggleSidebar">
+  <div class="theme flex" :class="pageClasses">
+    <NavBar :sidebar-state="showSidebar">
       <template v-if="playground" #icons>
         <!-- TODO -->
         <NavBarIcon class="!hidden !md:inline-flex">
@@ -16,40 +16,11 @@
         <AlgoliaSearchBox :options="theme.algolia" />
       </template>
     </NavBar>
-    <div class="pt-$header-height min-h-screen" :class="{'grid-layout': !enableHome && !playground}">
-      <SideBar :open="openSideBar">
-        <template #sidebar-top>
-          <slot name="sidebar-top" />
-        </template>
-        <template #sidebar-bottom>
-          <slot name="sidebar-bottom" />
-        </template>
-      </SideBar>
-      <Home v-if="enableHome">
-        <template #hero>
-          <slot name="home-hero" />
-        </template>
-        <template #features>
-          <slot name="home-features" />
-        </template>
-        <template #footer>
-          <slot name="home-footer" />
-        </template>
-      </Home>
-      <template v-else-if="playground">
-        <Playground />
-      </template>
-      <Page v-else>
-        <template #top>
-          <slot name="page-top-ads" />
-          <slot name="page-top" />
-        </template>
-        <template #bottom>
-          <slot name="page-bottom" />
-          <slot name="page-bottom-ads" />
-        </template>
-      </Page>
-      <!-- <HeadersSideBar /> -->
+    <SideBar />
+    <div class="relative pt-$header-height min-h-screen w-full" :class="{'lg:pl-$sidebar-width': showSidebar}">
+      <Home v-if="enableHome" />
+      <Playground v-else-if="playground" />
+      <Page v-else />
     </div>
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
   </div>
@@ -57,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, defineAsyncComponent } from 'vue'
+import { computed, watch, defineAsyncComponent } from 'vue'
 import {
   useRoute,
   useSiteData,
@@ -65,9 +36,11 @@ import {
   useSiteDataByRoute,
 } from 'vitepress'
 import { isSideBarEmpty, getSideBarConfig } from './support/sideBar'
+import { openSideBar, toggleSidebar } from './composables/sideBar'
 import type { DefaultTheme } from './config'
 
 const Home = defineAsyncComponent(() => import('./components/Home.vue'))
+const Playground = defineAsyncComponent(() => import('./components/play/Playground.vue'))
 
 const NoopComponent = () => null
 
@@ -105,9 +78,6 @@ const showNavbar = computed(() => {
   )
 })
 
-// sidebar
-const openSideBar = ref(false)
-
 const showSidebar = computed(() => {
   const { frontmatter } = route.data
 
@@ -120,10 +90,6 @@ const showSidebar = computed(() => {
     getSideBarConfig(themeConfig.sidebar, route.data.relativePath),
   )
 })
-
-const toggleSidebar = (to?: boolean) => {
-  openSideBar.value = typeof to === 'boolean' ? to : !openSideBar.value
-}
 
 const hideSidebar = toggleSidebar.bind(null, false)
 // close the sidebar when navigating to a different location

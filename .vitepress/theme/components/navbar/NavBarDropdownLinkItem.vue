@@ -1,8 +1,6 @@
 <template>
   <a class="item" v-bind="linkProps">
-    <!-- <span class="arrow" /> -->
-    <span class="inline-flex items-center font-normal">{{ item.text }}</span>
-    <!-- <span class="icon"><OutboundLink v-if="isExternal" /></span> -->
+    <span class="font-normal">{{ item.text }}</span>
   </a>
 </template>
 
