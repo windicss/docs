@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-dropdown-link">
+  <div class="nav-dropdown-link" :class="{ open }" @mouseenter="open = true" @mouseleave="open = false">
     <button class="button" :aria-label="item.ariaLabel">
       <span class="button-text">{{ item.text }}</span>
       <uil:angle-down class="w-4 h-4 text-gray-500 ml-1" />
@@ -17,12 +17,23 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, ref, watch } from 'vue'
+import { useRoute } from 'vitepress'
 import type { DefaultTheme } from '../../config'
 
 defineProps<{
   item: DefaultTheme.NavItemWithChildren
 }>()
+
+const route = useRoute()
+const open = ref(false)
+
+watch(
+  () => route.path,
+  () => {
+    open.value = false
+  },
+)
 </script>
 
 <style scoped lang="postcss">
@@ -30,7 +41,7 @@ defineProps<{
   @apply relative overflow-visible;
 }
 
-.nav-dropdown-link:hover .dialog {
+.nav-dropdown-link.open .dialog {
   display: flex;
 }
 

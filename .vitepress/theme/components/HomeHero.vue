@@ -3,7 +3,7 @@
     <div class="text-left px-2 pb-20">
       <figure v-if="$frontmatter.heroImage">
         <img
-          class="block w-auto max-w-full max-h-120px -ml-2"
+          class="block w-auto max-w-full max-h-120px -ml-2 select-none"
           :src="$withBase($frontmatter.heroImage)"
           :alt="$frontmatter.heroAlt"
         >

@@ -1,6 +1,6 @@
 <template>
   <aside class="sidebar" :class="{ 'open': openSideBar }">
-    <div class="flex items-center justify-between pr-2 mb-2">
+    <div class="sticky bg-$c-bg top-0 flex items-center justify-between p-4 -mx-4 z-51">
       <NavBarTitle class="px-2" />
       <ToggleSideBarButton @toggle="toggleSidebar" />
     </div>
@@ -25,7 +25,7 @@ import { openSideBar, toggleSidebar } from '../../composables/sideBar'
   overflow-y: auto;
   transform: translateX(100%);
   transition: transform 0.25s ease;
-  @apply h-screen fixed lg:left-0 -lg:right-0 top-0 z-50 border-r-1px border-$c-divider py-4 w-full md:w-$sidebar-width;
+  @apply relative h-screen fixed lg:left-0 -lg:right-0 top-0 z-50 border-r-1px border-$c-divider px-4 pb-4 w-full md:w-$sidebar-width;
 }
 
 @screen lg {
