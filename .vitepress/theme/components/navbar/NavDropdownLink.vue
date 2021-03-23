@@ -42,7 +42,8 @@ function toggle() {
 <style scoped lang="postcss">
 .nav-dropdown-link {
   @apply
-    relative h-36px overflow-hidden cursor-pointer
+    relative overflow-hidden cursor-pointer
+    border-b-1px border-blue-gray-200 dark:border-dark-300
     lg:(h-auto overflow-visible);
 }
 
@@ -56,9 +57,13 @@ function toggle() {
   height: auto;
 }
 
+.nav-dropdown-link.open .dialog {
+  @apply h-auto pb-2;
+}
+
 .button {
   @apply
-    block border-0 px-3 py-1.5 w-full flex flex-row items-center
+    block border-0 px-3 py-2 w-full flex flex-row items-center
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
     lg:(border-b-2px border-transparent px-0 py-5 font-normal text-0.9rem);
 }
@@ -94,12 +99,12 @@ function toggle() {
 }
 
 .dialog {
-  @apply m-0 p-0 mb-2 list-none border border-blue-gray-200 dark:border-dark-300;
+  @apply m-0 p-0 list-none h-0;
 }
 
 @screen lg {
   .dialog {
-    @apply hidden absolute top-12 left-0 rounded-md py-1.5 min-w-36 bg-white dark:bg-dark-700;
+    @apply hidden absolute top-12 left-0 rounded-md py-1.5 min-w-36 bg-white dark:bg-dark-700 h-auto;
   }
 }
 </style>

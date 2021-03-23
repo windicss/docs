@@ -1,7 +1,7 @@
 <template>
   <aside class="h-full">
     <div class="sidebar" :class="{ open }">
-      <div class="px-2 -mt-1px w-56">
+      <div class="px-2 -mt-1px w-56 hidden md:block">
         <NavBarTitle />
       </div>
       <NavLinks class="nav" />
@@ -31,9 +31,9 @@ defineProps({
 .sidebar {
   background-color: var(--c-bg);
   overflow-y: auto;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: transform 0.25s ease;
-  @apply h-screen fixed left-0 top-0 z-50 border-r-1px border-$c-divider py-4;
+  @apply h-screen fixed lg:left-0 -lg:right-0 top-0 z-50 border-r-1px border-$c-divider py-4;
 }
 
 @screen lg {
@@ -52,7 +52,7 @@ defineProps({
 
 @screen lg {
   .nav {
-    display: none;
+    @apply !hidden;
   }
 }
 </style>

@@ -33,10 +33,10 @@ const links = computed(() => props.links || site.value.themeConfig.nav)
 const show = computed(() => links.value || repo.value)
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .nav-links {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--c-divider);
+  padding: 0.5rem 0;
+  @apply border-b-1px border-blue-gray-200 dark:border-dark-300;
 }
 
 @screen lg {

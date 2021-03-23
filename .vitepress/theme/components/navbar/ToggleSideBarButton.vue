@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-button -ml-2 text-xl" @click="emit('toggle')">
+  <div class="sidebar-button -mr-2 ml-2 text-xl" @click="emit('toggle')">
     <ri-menu-4-fill />
   </div>
 </template>

@@ -3,24 +3,17 @@
     <NavBar v-if="showNavbar" :sidebar-state="showSidebar" @toggle="toggleSidebar">
       <template v-if="playground" #icons>
         <!-- TODO -->
-        <NavBarIcon>
+        <NavBarIcon class="!hidden !md:inline-flex">
           <ion:settings-outline />
         </NavBarIcon>
-        <NavBarIcon>
+        <NavBarIcon class="!hidden !md:inline-flex">
           <carbon:open-panel-right />
         </NavBarIcon>
         <NavDivider />
       </template>
-      <template v-if="playground" #play>
-        <NavBarIcon>
-          <ion:settings-outline />
-        </NavBarIcon>
-      </template>
       <template #search>
-        <slot name="navbar-search">
-          <NavDivider />
-          <AlgoliaSearchBox v-if="theme.algolia" :options="theme.algolia" />
-        </slot>
+        <NavDivider />
+        <AlgoliaSearchBox :options="theme.algolia" />
       </template>
     </NavBar>
     <div class="pt-$header-height min-h-screen" :class="{'grid-layout': !enableHome && !playground}">
@@ -32,8 +25,6 @@
           <slot name="sidebar-bottom" />
         </template>
       </SideBar>
-      <!-- TODO: make this button accessible -->
-      <div class="sidebar-mask" @click="toggleSidebar(false)" />
       <Home v-if="enableHome">
         <template #hero>
           <slot name="home-hero" />
@@ -60,6 +51,7 @@
       </Page>
       <!-- <HeadersSideBar /> -->
     </div>
+    <div class="sidebar-mask" @click="toggleSidebar(false)" />
   </div>
   <!-- <Debug /> -->
 </template>

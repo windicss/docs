@@ -1,23 +1,20 @@
 <template>
   <header class="nav-bar">
-    <slot>
-      <ToggleSideBarButton @toggle="$emit('toggle')" />
+    <NavBarTitle />
 
-      <NavBarTitle />
+    <div class="hidden lg:flex px-3 ml-4 xl:ml-6" :class="{'!xl:ml-28': sidebarState}">
+      <NavLinks />
+    </div>
 
-      <div class="hidden lg:flex px-3 ml-4 xl:ml-6" :class="{'!xl:ml-28': sidebarState}">
-        <NavLinks />
-      </div>
+    <div class="flex-grow" />
 
-      <div class="flex-grow" />
-
-      <NavBarIconButtons>
-        <slot name="icons" />
-        <template #search>
-          <slot name="search" />
-        </template>
-      </NavBarIconButtons>
-    </slot>
+    <NavBarIconButtons>
+      <slot name="icons" />
+      <template #search>
+        <slot name="search" />
+      </template>
+    </NavBarIconButtons>
+    <ToggleSideBarButton @toggle="$emit('toggle')" />
   </header>
 </template>
 
