@@ -1,9 +1,15 @@
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute, useSiteDataByRoute } from 'vitepress'
 import { Header } from '../types/shared'
 import { useActiveSidebarLinks } from '../composables/activeSidebarLink'
 import { getSideBarConfig } from '../support/sideBar'
 import { DefaultTheme } from '../config'
+
+export const openSideBar = ref(false)
+
+export const toggleSidebar = (to?: boolean) => {
+  openSideBar.value = typeof to === 'boolean' ? to : !openSideBar.value
+}
 
 export function useSideBar() {
   const route = useRoute()

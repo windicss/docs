@@ -1,9 +1,8 @@
 <template>
-  <header class="nav-bar">
-    <NavBarTitle />
-
-    <div class="hidden lg:flex px-3 ml-4 xl:ml-6" :class="{'!xl:ml-28': sidebarState}">
-      <NavLinks />
+  <header class="nav-bar" :class="{'lg:ml-$sidebar-width': sidebarState}">
+    <NavBarTitle :class="{'!lg:hidden': sidebarState}" />
+    <div class="hidden lg:flex px-3">
+      <NavBarLinks />
     </div>
 
     <div class="flex-grow" />
@@ -14,18 +13,17 @@
         <slot name="search" />
       </template>
     </NavBarIconButtons>
-    <ToggleSideBarButton @toggle="$emit('toggle')" />
+    <ToggleSideBarButton @toggle="toggleSidebar" />
   </header>
 </template>
 
 <script setup lang="ts">
-import { defineEmit, defineProps } from 'vue'
+import { defineProps } from 'vue'
+import { toggleSidebar } from '../../composables/sideBar'
 
 defineProps({
   sidebarState: Boolean,
 })
-
-defineEmit(['toggle'])
 </script>
 
 <style scoped lang="postcss">
