@@ -6,8 +6,11 @@
     </button>
 
     <div class="dialog">
-      <div v-for="item in item.items" :key="item.text" class="dialog-item">
-        <NavBarDropdownLinkItem :item="item" />
+      <div v-for="item in item.items" :key="item.text">
+        <NavBarDropdownLinkItem v-if="item.text !== 'separator'" :item="item" />
+        <div v-else class="separator px-4 py-1">
+          <div class="w-full h-1px bg-blue-gray-200 dark:bg-dark-300"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -24,7 +27,7 @@ defineProps<{
 
 <style scoped lang="postcss">
 .nav-dropdown-link {
-  @apply relative overflow-visible cursor-pointer;
+  @apply relative overflow-visible;
 }
 
 .nav-dropdown-link:hover .dialog {
@@ -37,10 +40,6 @@ defineProps<{
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
     lg:(px-0 py-5 font-normal text-0.9rem)
     focus:outline-none;
-}
-
-.dialog-item:hover {
-  @apply bg-blue-gray-100 dark:bg-dark-300;
 }
 
 .dialog {

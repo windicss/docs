@@ -1,4 +1,4 @@
-import type { DefaultTheme } from 'vitepress'
+import type { DefaultTheme } from '../theme/config'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/utilities': [

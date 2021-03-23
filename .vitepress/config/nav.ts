@@ -1,4 +1,4 @@
-import type { DefaultTheme } from 'vitepress'
+import type { DefaultTheme } from '../theme/config'
 
 export const nav: DefaultTheme.Config['nav'] = [
   {
@@ -40,12 +40,14 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: 'Plugin Interfaces', link: '/plugins/interfaces' },
       { text: 'Transform API', link: '/plugins/transform' },
+      { text: 'separator', link: 'separator' },
       { text: 'Aspect Ratio', link: '/plugins/official/aspect-ratio' },
       { text: 'Forms', link: '/plugins/official/forms' },
       { text: 'Filters', link: '/plugins/official/filters' },
       { text: 'Line Clamp', link: '/plugins/official/line-clamp' },
       { text: 'Scroll Snap', link: '/plugins/official/scroll-snap' },
       { text: 'Typography', link: '/plugins/official/typography' },
+      { text: 'separator', link: 'separator' },
       { text: 'Animations', link: '/plugins/community/animations' },
       { text: 'Scrollbar', link: '/plugins/community/scrollbar' },
       { text: 'Question Mark', link: '/plugins/community/question-mark' },

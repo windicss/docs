@@ -6,7 +6,7 @@
     </button>
 
     <div class="dialog">
-      <div v-for="item in item.items" :key="item.text" class="dialog-item">
+      <div v-for="item in item.items" :key="item.text">
         <SideBarNavDropdownLinkItem :item="item" />
       </div>
     </div>
@@ -48,10 +48,6 @@ function toggle() {
     text-left font-$font-family-base font-semibold text-$c-text whitespace-nowrap bg-transparent cursor-pointer
     lg:(px-0 py-5 font-normal text-0.9rem)
     focus:outline-none;
-}
-
-.dialog-item:hover {
-  @apply bg-blue-gray-100 dark:bg-dark-300;
 }
 
 .dialog {
