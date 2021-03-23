@@ -14,7 +14,7 @@ The webpack plugin aims to be a language and framework agnostic solution to impl
 | Vue 2 - Nuxt | ⚠️ Use [Nuxt.js Module](https://github.com/windicss/nuxt-windicss-module) |
 | Vue 3 - Vue CLI | ✅ [vue.config.js](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/vue3/vue.config.js) |
 | React - Next | ✅ [next.config.js](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/next/next.config.js) |
-| Svelt | ⚠️ Use [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) |
+| Svelte | ⚠️ Use [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) |
 | Angular | ❌ style-loader misconfiguration |
 
 ## Installation

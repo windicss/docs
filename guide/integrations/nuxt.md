@@ -1,5 +1,7 @@
 # Integration for Nuxt.js
 
+[nuxt-windicss-module](https://github.com/windicss/nuxt-windicss-module)
+
 ## Installation
 
 Add the package:

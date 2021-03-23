@@ -6,7 +6,7 @@
 
 # Integration for Vite
 
-Plugin Source: [vite-plugin-windicss]
+[vite-plugin-windicss]
 
 ## Features
 

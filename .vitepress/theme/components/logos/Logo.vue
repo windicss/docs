@@ -7,6 +7,8 @@ import Rollup from '/@vite-icons/logos/rollup'
 import Webpack from '/@vite-icons/logos/webpack'
 import VSCode from '/@vite-icons/logos/visual-studio-code'
 import Webstrom from '/@vite-icons/logos/webstorm'
+import Gridsome from '/@vite-icons/logos/gridsome-icon'
+import NextJs from '/@vite-icons/logos/nextjs'
 import Vite from './ViteLogo.vue'
 import Windi from './WindiLogo.vue'
 
@@ -30,6 +32,10 @@ const Logo = computed(() => {
       return Webpack
     case 'vite':
       return Vite
+    case 'nextjs':
+      return NextJs
+    case 'gridsome':
+      return Gridsome
     case 'vscode':
       return VSCode
     case 'webstorm':

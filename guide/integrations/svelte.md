@@ -2,7 +2,7 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [migration]: /guide/migration
 
-# Integration for Svelte (preprocessor)
+# Integration for Svelte
 
 <kbd>[svelte-windicss-preprocess]</kbd> provides simple integration for Windi CSS using [svelte.preprocess](https://svelte.dev/docs#svelte_preprocess) API.
 

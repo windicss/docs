@@ -41,8 +41,18 @@ Windi CSS provides first-class integrations for your favorite tools, select your
     logo: 'vue',
   },
   {
+    title: 'Gridsome',
+    link: '/guide/integrations/gridsome',
+    logo: 'gridsome',
+  },
+  {
+    title: 'Next.js',
+    link: '/guide/integrations/nextjs',
+    logo: 'nextjs',
+  },
+  {
     title: 'Svelte',
-    link: '/guide/integrations/svelte-preprocess',
+    link: '/guide/integrations/svelte',
     logo: 'svelte',
   },
 ]"/>

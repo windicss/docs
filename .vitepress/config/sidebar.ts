@@ -80,11 +80,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       children: [
         { text: 'Vite', link: '/guide/integrations/vite' },
         { text: 'Webpack', link: '/guide/integrations/webpack' },
+        { text: 'Rollup', link: '/guide/integrations/rollup' },
         { text: 'Nuxt', link: '/guide/integrations/nuxt' },
         { text: 'Vue CLI', link: '/guide/integrations/vue-cli' },
-        { text: 'SvelteKit', link: '/guide/integrations/svelte-kit' },
-        { text: 'Svelte', link: '/guide/integrations/svelte-preprocess' },
+        { text: 'Gridsome', link: '/guide/integrations/gridsome' },
+        { text: 'Next.js', link: '/guide/integrations/nextjs' },
+        { text: 'Svelte', link: '/guide/integrations/svelte' },
         { text: 'CLI', link: '/guide/integrations/cli' },
+        { text: 'VS Code', link: '/guide/editors/vscode' },
+        { text: 'WebStorm', link: '/guide/editors/webstorm' },
       ],
     },
 
