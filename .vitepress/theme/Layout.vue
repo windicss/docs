@@ -40,6 +40,7 @@ import { openSideBar, toggleSidebar } from './composables/sideBar'
 import type { DefaultTheme } from './config'
 
 const Home = defineAsyncComponent(() => import('./components/Home.vue'))
+const Playground = defineAsyncComponent(() => import('./components/play/Playground.vue'))
 
 const NoopComponent = () => null
 

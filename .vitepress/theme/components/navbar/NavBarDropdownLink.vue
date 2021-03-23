@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-dropdown-link" :class="{ open }">
+  <div class="nav-dropdown-link">
     <button class="button" :aria-label="item.ariaLabel">
       <span class="button-text">{{ item.text }}</span>
       <uil:angle-down class="w-4 h-4 text-gray-500 ml-1" />
@@ -7,7 +7,7 @@
 
     <div class="dialog">
       <div v-for="item in item.items" :key="item.text" class="dialog-item">
-        <NavDropdownLinkItem :item="item" />
+        <NavBarDropdownLinkItem :item="item" />
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@ defineProps<{
 .dialog {
   @apply
     hidden flex-col py-1.5
-    absolute top-12 left-0 min-w-36
+    absolute top-12 left-0 min-w-36 transform -translate-x-4
     bg-white dark:bg-dark-700
     rounded-md border border-blue-gray-200 dark:border-dark-300
     list-none;

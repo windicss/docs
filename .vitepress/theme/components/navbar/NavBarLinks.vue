@@ -2,13 +2,13 @@
   <nav v-if="show" class="nav-links">
     <template v-if="links">
       <div v-for="item in links" :key="item.text" class="item">
-        <NavDropdownLink v-if="item.items" :item="item" />
+        <NavBarDropdownLink v-if="item.items" :item="item" />
         <NavBarLink v-else :item="item" />
       </div>
     </template>
 
     <div v-if="localeLinks" class="item">
-      <NavDropdownLink :item="localeLinks" />
+      <NavBarDropdownLink :item="localeLinks" />
     </div>
   </nav>
 </template>
