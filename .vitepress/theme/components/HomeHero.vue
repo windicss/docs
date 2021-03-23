@@ -1,6 +1,6 @@
 <template>
   <header v-if="showHero" class="home-hero">
-    <div class="text-left max-w-40em pt-20 py-50 m-auto">
+    <div class="text-left px-2 pb-20">
       <figure v-if="$frontmatter.heroImage">
         <img
           class="block w-auto max-w-full max-h-120px -ml-2"
@@ -13,7 +13,7 @@
         <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0">
           {{ heroText }}
         </h1>
-        <p v-if="hasTagline" class="m-0 mt-1 text-xl leading-6 text-$c-text-light xs:(text-2xl)">
+        <p v-if="hasTagline" class="m-0 mt-1 text-lg leading-6 text-$c-text-light xs:(text-2xl)">
           {{ tagline }}
         </p>
         <div class="mt-8 xs:mt-12 flex space-x-6">
@@ -60,12 +60,12 @@ const hasAltAction = computed(
 <style scoped lang="postcss">
 .home-hero {
   min-height: calc(100vh - var(--header-height));
-  @apply py-10 px-4 md:px-6 flex;
+  @apply py-10 px-4 md:px-6 flex items-center justify-center;
 }
 .link-btn {
   @apply rounded-lg
-    inline-block px-4 py-2.5
-    text-lg text-white no-underline
+    inline-block px-2.5 py-2 md:(px-4 py-2.5)
+    text-base md:text-lg text-white no-underline
     bg-$c-brand border-2px border-$c-brand transition-colors
     xs:(text-xl px-5 py-2.8)
     hover:(bg-$c-brand-light border-$c-brand-light);
