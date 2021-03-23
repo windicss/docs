@@ -15,11 +15,16 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: 'Utilities',
     items: [
+      { text: 'Colors', link: '/utilities/colors' },
+      { text: 'Variants', link: '/utilities/variants' },
+      { text: 'Variables', link: '/utilities/variables' },
+
+      { text: 'separator', link: 'separator' },
+
       { text: 'Accessibility', link: '/utilities/accessibility' },
       { text: 'Backgrounds', link: '/utilities/backgrounds' },
       { text: 'Borders', link: '/utilities/borders' },
       { text: 'Box Alignment', link: '/utilities/box-alignment' },
-      { text: 'Colors', link: '/utilities/colors' },
       { text: 'Effects', link: '/utilities/effects' },
       { text: 'Flexbox', link: '/utilities/flexbox' },
       { text: 'Grid', link: '/utilities/grid' },
@@ -32,7 +37,6 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Transforms', link: '/utilities/transforms' },
       { text: 'Transitions', link: '/utilities/transitions' },
       { text: 'Typography', link: '/utilities/typography' },
-      { text: 'Variants', link: '/utilities/variants' },
     ],
   },
   {
@@ -40,14 +44,18 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: 'Plugin Interfaces', link: '/plugins/interfaces' },
       { text: 'Transform API', link: '/plugins/transform' },
+
       { text: 'separator', link: 'separator' },
+
       { text: 'Aspect Ratio', link: '/plugins/official/aspect-ratio' },
       { text: 'Forms', link: '/plugins/official/forms' },
       { text: 'Filters', link: '/plugins/official/filters' },
       { text: 'Line Clamp', link: '/plugins/official/line-clamp' },
       { text: 'Scroll Snap', link: '/plugins/official/scroll-snap' },
       { text: 'Typography', link: '/plugins/official/typography' },
+
       { text: 'separator', link: 'separator' },
+
       { text: 'Animations', link: '/plugins/community/animations' },
       { text: 'Scrollbar', link: '/plugins/community/scrollbar' },
       { text: 'Question Mark', link: '/plugins/community/question-mark' },

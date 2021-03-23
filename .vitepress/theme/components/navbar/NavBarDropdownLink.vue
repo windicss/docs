@@ -8,7 +8,7 @@
     <div class="dialog">
       <div v-for="item in item.items" :key="item.text">
         <NavBarDropdownLinkItem v-if="item.text !== 'separator'" :item="item" />
-        <div v-else class="separator px-4 py-1">
+        <div v-else class="separator py-1">
           <div class="w-full h-1px bg-blue-gray-200 dark:bg-dark-300"></div>
         </div>
       </div>
