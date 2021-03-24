@@ -4,6 +4,8 @@ Windi CSS provides first-class integrations for your favorite tools, select your
 
 ## Build Tools
 
+Build tools support are framework-agnostic, and they should works for any UI library you like.
+
 <Integrations class="mb-5" :items="[
   {
     title: 'Vite',
@@ -28,6 +30,8 @@ Windi CSS provides first-class integrations for your favorite tools, select your
 ]"/>
 
 ## Frameworks
+
+In addition of the general build tools support, we also provide integrations for the following frameworks that offers out-of-the-box experience.
 
 <Integrations class="mb-5" :items="[
   {
