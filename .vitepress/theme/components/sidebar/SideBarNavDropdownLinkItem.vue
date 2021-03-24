@@ -20,8 +20,10 @@ const { props: linkProps } = useNavLink(propsRefs.item)
 
 <style scoped lang="postcss">
 .item {
-  @apply block px-6 py-2 text-$c-text whitespace-nowrap text-0.95rem
-  md:(px-4 py-2 text-sm);
+  @apply
+    block px-6 py-2 rounded-lg
+    text-$c-text whitespace-nowrap text-0.95rem
+    md:(px-4 py-2 text-sm);
 }
 
 .item.active {
@@ -30,10 +32,10 @@ const { props: linkProps } = useNavLink(propsRefs.item)
 
 .item:hover,
 .item.active {
-  @apply bg-blue-gray-100 dark:bg-dark-300 no-underline;
+  @apply bg-blue-gray-100 dark:bg-dark-400 no-underline;
 }
 
 .item.external:hover {
-  @apply bg-blue-gray-100 dark:bg-dark-300 border-transparent;
+  @apply bg-blue-gray-100 dark:bg-dark-400 border-transparent;
 }
 </style>

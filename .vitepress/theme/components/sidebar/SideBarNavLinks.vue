@@ -31,20 +31,6 @@ const show = computed(() => links.value || repo.value)
 
 <style scoped lang="postcss">
 .nav-links {
-  padding: 0.5rem 0;
-  @apply border-b-1px border-blue-gray-200 dark:border-dark-300;
-}
-
-@screen lg {
-  .nav-links {
-    display: flex;
-    padding: 2px 0 0;
-    align-items: center;
-    border-bottom: 0;
-  }
-
-  .item + .item {
-    padding-left: 24px;
-  }
+  @apply block py-2 lg:hidden border-b-1px border-blue-gray-200 dark:border-dark-300;
 }
 </style>
