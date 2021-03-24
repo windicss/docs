@@ -2,21 +2,24 @@
   "index_name": "windicss",
   "start_urls": [
     {
-      "url": "https://windicss.netlify.app/utilities/",
+      "url": "https://windicss.org/utilities/",
       "selectors_key": "utilities",
       "tags": ["utilities"],
       "page_rank": 3
     },
     {
-      "url": "https://windicss.netlify.app/plugins/",
+      "url": "https://windicss.org/plugins/",
       "tags": ["plugins"],
       "page_rank": 2
     },
     {
-      "url": "https://windicss.netlify.app/guide/",
+      "url": "https://windicss.org/guide/",
       "tags": ["guide"],
       "page_rank": 1
     }
+  ],
+  "stop_urls": [
+    ".html$"
   ],
   "selectors": {
     "default": {
