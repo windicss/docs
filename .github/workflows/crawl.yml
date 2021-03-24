@@ -1,0 +1,21 @@
+name: crawl
+
+on:
+  push:
+    branches:
+      - main
+      - next
+
+jobs:
+  build:
+    name: crawl
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: darrenjennings/algolia-docsearch-action@master
+        with:
+          algolia_application_id: 'RYAT0G9BU3'
+          algolia_api_key: ${{secrets.ALGOLIA_API_KEY}}
+          file: '.algolia/config.json'
