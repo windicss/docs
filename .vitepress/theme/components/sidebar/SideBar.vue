@@ -1,6 +1,6 @@
 <template>
   <aside class="sidebar" :class="{ 'open': openSideBar }">
-    <div class="sticky bg-$c-bg top-0 flex items-center justify-between p-4 -mx-4 z-51">
+    <div class="sticky bg-$c-bg top-0 flex items-center justify-between p-4 pt-15px -mx-4 z-51">
       <NavBarTitle class="px-2" />
       <ToggleSideBarButton @toggle="toggleSidebar" />
     </div>
