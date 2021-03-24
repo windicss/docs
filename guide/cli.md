@@ -26,3 +26,8 @@ windicss './**/*.html' -cto windi.css
 windicss './**/*.html' -ts
 windicss './**/*.html' -cts
 ```
+- Use a config file
+```bash
+windicss './**/*.html' -to windi.css -f windi.config.js
+windicss './**/*.html' -ctsf windi.config.js
+```
