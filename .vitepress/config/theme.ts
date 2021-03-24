@@ -6,7 +6,7 @@ const themeConfig: DefaultTheme.Config = {
   algolia: {
     appId: 'RYAT0G9BU3',
     apiKey: 'c0dfcf1e50c42717f0d536ac6fd11d78',
-    indexName: 'windicss',
+    indexName: 'windicss-next',
   },
   repo: 'windicss/windicss',
   logo: '/assets/logo.svg',
