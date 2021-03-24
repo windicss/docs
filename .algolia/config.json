@@ -2,50 +2,19 @@
   "index_name": "windicss",
   "start_urls": [
     {
-      "url": "https://windicss.netlify.app/utilities/",
+      "url": "https://windicss.org/utilities/",
       "selectors_key": "utilities",
       "tags": ["utilities"],
       "page_rank": 3
     },
     {
-      "url": "https://windicss.netlify.app/guide/",
+      "url": "https://windicss.org/guide/",
       "tags": ["guide"],
       "page_rank": 1
     }
   ],
   "stop_urls": [
-    "https://windicss.netlify.app/guide/cli.html",
-    "https://windicss.netlify.app/guide/configuration.html",
-    "https://windicss.netlify.app/guide/directives.html",
-    "https://windicss.netlify.app/guide/features.html",
-    "https://windicss.netlify.app/guide/index.html",
-    "https://windicss.netlify.app/guide/introduction.html",
-    "https://windicss.netlify.app/guide/migration.html",
-    "https://windicss.netlify.app/guide/modes.html",
-    "https://windicss.netlify.app/guide/plugins.html",
-    "https://windicss.netlify.app/guide/story.html",
-    "https://windicss.netlify.app/guide/svelte.html",
-    "https://windicss.netlify.app/guide/vite.html",
-    "https://windicss.netlify.app/guide/vue.html",
-    "https://windicss.netlify.app/utilities/variants.html",
-    "https://windicss.netlify.app/utilities/accessibility.html",
-    "https://windicss.netlify.app/utilities/backgrounds.html",
-    "https://windicss.netlify.app/utilities/borders.html",
-    "https://windicss.netlify.app/utilities/box-alignment.html",
-    "https://windicss.netlify.app/utilities/colors.html",
-    "https://windicss.netlify.app/utilities/effects.html",
-    "https://windicss.netlify.app/utilities/flexbox.html",
-    "https://windicss.netlify.app/utilities/grid.html",
-    "https://windicss.netlify.app/utilities/index.html",
-    "https://windicss.netlify.app/utilities/interactivity.html",
-    "https://windicss.netlify.app/utilities/layout.html",
-    "https://windicss.netlify.app/utilities/sizing.html",
-    "https://windicss.netlify.app/utilities/spacing.html",
-    "https://windicss.netlify.app/utilities/svg.html",
-    "https://windicss.netlify.app/utilities/tables.html",
-    "https://windicss.netlify.app/utilities/transforms.html",
-    "https://windicss.netlify.app/utilities/transitions.html",
-    "https://windicss.netlify.app/utilities/typography.html"
+    ".html$"
   ],
   "selectors": {
     "default": {
