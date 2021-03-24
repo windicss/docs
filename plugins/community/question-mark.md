@@ -10,7 +10,7 @@ A plugin that provides a helpful `?` dev time utility. This plugin is modified b
 
 Install the plugin from npm:
 
-```sh
+```bash
 npm install --save-dev @windicss/plugin-question-mark
 ```
 
