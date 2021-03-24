@@ -1,6 +1,6 @@
 import { EditorView, highlightSpecialChars, drawSelection, keymap } from '@codemirror/view'
 import { EditorState, Compartment } from '@codemirror/state'
-// import { history, historyKeymap } from '@codemirror/history'
+import { history, historyKeymap } from '@codemirror/history'
 import { foldGutter, foldKeymap } from '@codemirror/fold'
 import { indentOnInput } from '@codemirror/language'
 import { lineNumbers } from '@codemirror/gutter'
@@ -23,7 +23,7 @@ const tabSize = new Compartment()
 export const basicSetup = [
   lineNumbers(),
   highlightSpecialChars(),
-  // history(),
+  history(),
   foldGutter(),
   drawSelection(),
   EditorState.allowMultipleSelections.of(true),
@@ -41,7 +41,7 @@ export const basicSetup = [
     ...closeBracketsKeymap,
     ...defaultKeymap,
     ...searchKeymap,
-    // ...historyKeymap,
+    ...historyKeymap,
     ...foldKeymap,
     ...commentKeymap,
     ...completionKeymap,
