@@ -26,16 +26,16 @@ const htmlCode = computed({
 
 <template>
   <div class="block-bg mb-2 mr-2 relative">
+    <div class="block-code">
+      <ClientOnly>
+        <CodeMirror v-model="htmlCode" class="h-full w-full pb-2" language="html" :processor="processor" />
+      </ClientOnly>
+    </div>
     <div class="block-title">
       <div class="w-full flex justify-between items-center">
         <span>Template</span>
         <ToolsDropdown />
       </div>
-    </div>
-    <div class="block-code">
-      <ClientOnly>
-        <CodeMirror v-model="htmlCode" class="h-full w-full pb-2" language="html" :processor="processor" />
-      </ClientOnly>
     </div>
   </div>
 </template>

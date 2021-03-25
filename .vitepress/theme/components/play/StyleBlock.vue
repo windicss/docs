@@ -26,16 +26,16 @@ const styleCode = computed({
 
 <template>
   <div class="block-bg mt-2 mr-2 relative">
+    <div class="block-code">
+      <ClientOnly>
+        <CodeMirror v-model="styleCode" class="h-full w-full pb-2" language="css" :processor="processor" />
+      </ClientOnly>
+    </div>
     <div class="block-title">
       <div class="w-full flex justify-between items-center">
         <span>Style</span>
         <ToolsDropdown />
       </div>
-    </div>
-    <div class="block-code">
-      <ClientOnly>
-        <CodeMirror v-model="styleCode" class="h-full w-full pb-2" language="css" :processor="processor" />
-      </ClientOnly>
     </div>
   </div>
 </template>
