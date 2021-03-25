@@ -92,5 +92,11 @@ const generatedCSS = computed(() => new StyleSheet()
 }
 .splitpanes.default-theme .splitpanes__splitter {
   @apply bg-transparent border-transparent min-w-4 min-h-4;
+  &:before, &:after {
+    @apply bg-gray-300 dark:bg-dark-300;
+  }
+  &:hover:before, &:hover:after {
+    @apply bg-gray-400 dark:bg-dark-100;
+  }
 }
 </style>
