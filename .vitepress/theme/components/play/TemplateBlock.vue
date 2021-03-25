@@ -25,7 +25,7 @@ const htmlCode = computed({
 </script>
 
 <template>
-  <div class="block-bg mb-2 mr-2 relative">
+  <div class="block-bg relative">
     <div class="block-code">
       <ClientOnly>
         <CodeMirror v-model="htmlCode" class="h-full w-full pb-2" language="html" :processor="processor" />

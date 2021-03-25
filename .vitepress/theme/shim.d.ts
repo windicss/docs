@@ -37,3 +37,11 @@ declare module '/@vite-icons/*' {
   const component: ComponentOptions
   export default component
 }
+
+declare module 'splitpanes' {
+  // eslint-disable-next-line import/no-duplicates
+  import { ComponentOptions } from 'vue'
+  const Splitpanes: ComponentOptions
+  const Pane: ComponentOptions
+  export { Splitpanes, Pane }
+}

@@ -25,7 +25,7 @@ const styleCode = computed({
 </script>
 
 <template>
-  <div class="block-bg mt-2 mr-2 relative">
+  <div class="block-bg relative">
     <div class="block-code">
       <ClientOnly>
         <CodeMirror v-model="styleCode" class="h-full w-full pb-2" language="css" :processor="processor" />

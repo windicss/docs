@@ -5,8 +5,9 @@ import Windi from 'windicss'
 import type { Config } from 'windicss/types/interfaces'
 import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
-import { Board } from 'vue-board'
+import { Splitpanes, Pane } from 'splitpanes'
 import { html, css } from '../../examples/playground'
+import 'splitpanes/dist/splitpanes.css'
 
 const styleCode = ref(css)
 
@@ -50,19 +51,25 @@ const generatedCSS = computed(() => new StyleSheet()
 
 <template>
   <div class="playground">
-    <Board class="h-full">
-      <Board vertical ratio="0.618">
-        <TemplateBlock v-model="htmlCode" :processor="processor" />
-        <StyleBlock v-model="styleCode" :processor="processor" />
-      </Board>
-      <Board>
-        <PreviewBlock>
+    <Splitpanes class="default-theme h-full w-full">
+      <Pane min-size="20" size="60">
+        <Splitpanes horizontal>
+          <Pane>
+            <TemplateBlock v-model="htmlCode" class="h-full w-full" :processor="processor" />
+          </Pane>
+          <Pane>
+            <StyleBlock v-model="styleCode" class="h-full w-full" :processor="processor" />
+          </Pane>
+        </Splitpanes>
+      </Pane>
+      <Pane min-size="20" size="40">
+        <PreviewBlock class="h-full">
           <ClientOnly>
             <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
           </ClientOnly>
         </PreviewBlock>
-      </Board>
-    </Board>
+      </Pane>
+    </Splitpanes>
   </div>
 </template>
 
@@ -72,12 +79,18 @@ const generatedCSS = computed(() => new StyleSheet()
   @apply p-4 bg-blue-gray-100 dark:bg-dark-800;
 }
 .block-bg {
-  @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500 shadow;
+  @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500;
 }
 .block-title {
   @apply px-4 pt-2 text-sm font-bold opacity-85 select-none;
 }
 .block-code {
   @apply absolute pt-2em inset-0 w-full h-full overflow-hidden rounded-b-lg;
+}
+.splitpanes.default-theme .splitpanes__pane {
+  @apply bg-transparent;
+}
+.splitpanes.default-theme .splitpanes__splitter {
+  @apply bg-transparent border-transparent min-w-4 min-h-4;
 }
 </style>
