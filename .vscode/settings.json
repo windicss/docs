@@ -5,7 +5,8 @@
     "demi",
     "docsearch",
     "hljs",
-    "prismjs"
+    "prismjs",
+    "splitpanes"
   ],
   "eslint.packageManager": "pnpm",
   "prettier.enable": false,

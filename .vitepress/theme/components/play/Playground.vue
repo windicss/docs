@@ -5,12 +5,15 @@ import Windi from 'windicss'
 import type { Config } from 'windicss/types/interfaces'
 import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { Splitpanes, Pane } from 'splitpanes'
 import { html, css } from '../../examples/playground'
 import 'splitpanes/dist/splitpanes.css'
 
-const styleCode = ref(css)
+const bps = useBreakpoints(breakpointsTailwind)
+const bpmd = bps.greater('md')
 
+const styleCode = ref(css)
 const htmlCode = ref(html)
 
 const props = defineProps({
@@ -51,8 +54,8 @@ const generatedCSS = computed(() => new StyleSheet()
 
 <template>
   <div class="playground">
-    <Splitpanes class="default-theme h-full w-full">
-      <Pane min-size="20" size="60">
+    <Splitpanes :horizontal="!bpmd" class="default-theme h-full w-full">
+      <Pane min-size="20" :size="bpmd ? 60 : 66">
         <Splitpanes horizontal>
           <Pane>
             <TemplateBlock v-model="htmlCode" class="h-full w-full" :processor="processor" />
@@ -62,7 +65,7 @@ const generatedCSS = computed(() => new StyleSheet()
           </Pane>
         </Splitpanes>
       </Pane>
-      <Pane min-size="20" size="40">
+      <Pane min-size="20" :size="bpmd ? 40 : 33">
         <PreviewBlock class="h-full">
           <ClientOnly>
             <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
@@ -75,8 +78,12 @@ const generatedCSS = computed(() => new StyleSheet()
 
 <style>
 .playground {
-  height: calc(100vh - var(--header-height));
-  @apply p-4 bg-blue-gray-100 dark:bg-dark-800;
+  @apply h-140vh p-4 bg-blue-gray-100 dark:bg-dark-800;
+}
+@screen md {
+  .playground {
+    height: calc(100vh - var(--header-height));
+  }
 }
 .block-bg {
   @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500;
