@@ -57,10 +57,10 @@ const generatedCSS = computed(() => new StyleSheet()
     <Splitpanes :horizontal="!bpmd" class="default-theme h-full w-full">
       <Pane min-size="20" :size="bpmd ? 60 : 66">
         <Splitpanes horizontal>
-          <Pane>
+          <Pane min-size="20">
             <TemplateBlock v-model="htmlCode" class="h-full w-full" :processor="processor" />
           </Pane>
-          <Pane>
+          <Pane min-size="20">
             <StyleBlock v-model="styleCode" class="h-full w-full" :processor="processor" />
           </Pane>
         </Splitpanes>
