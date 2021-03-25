@@ -16,7 +16,7 @@ dependencies:
   json5: 2.2.0
   prismjs: 1.23.0
   vue: 3.0.7
-  vue-board: 0.0.3_vue@3.0.7
+  vue-board: 0.0.4_vue@3.0.7
   vue-demi: 0.7.4_vue@3.0.7
   windicss: 2.5.4
 devDependencies:
@@ -24,10 +24,10 @@ devDependencies:
   '@docsearch/css': 1.0.0-alpha.28
   '@docsearch/js': 1.0.0-alpha.28
   '@docsearch/react': 1.0.0-alpha.28
-  '@iconify/json': 1.1.321
+  '@iconify/json': 1.1.322
   '@types/codemirror': 0.0.108
   '@types/node': 14.14.35
-  '@types/prismjs': 1.16.3
+  '@types/prismjs': 1.16.4
   algoliasearch: 4.8.6
   codemirror-theme-vars: 0.1.0
   docsearch.js: 2.6.3
@@ -39,7 +39,7 @@ devDependencies:
   typescript: 4.2.3
   vite: 2.1.2
   vite-plugin-components: 0.8.3_vite@2.1.2
-  vite-plugin-icons: 0.3.2_@iconify+json@1.1.321
+  vite-plugin-icons: 0.3.3_@iconify+json@1.1.322
   vite-plugin-restart: 0.0.1_vite@2.1.2
   vite-plugin-windicss: 0.9.11_vite@2.1.2
   vitepress: 0.12.2
@@ -699,10 +699,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-LFelJDOLZ6JHlmlAkgrvmcu4hpNPB91KYcr4f60D/exzU1eNOb4/KCVHIydGHIQFaOacIOD+Xy+B7P1z812cZg==
-  /@iconify/json/1.1.321:
+  /@iconify/json/1.1.322:
     dev: true
     resolution:
-      integrity: sha512-Z72vJVwgtQ9FrM3dQ2EWkVlRgsg0eSugLhBUpXjj6Mt45gS358HmLT45kg9x2tNwFOJ4fzcVol2fO/J5ryYP0w==
+      integrity: sha512-D4o3P8Mrrvd/Gz2qBFVNZYeEn+A/OQkdfT9eh6hz3mz49ob/nk8Q3IRUC0xvVdE4PLawqcKAiKjUyYC8tk8+lA==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -761,10 +761,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
-  /@types/prismjs/1.16.3:
+  /@types/prismjs/1.16.4:
     dev: true
     resolution:
-      integrity: sha512-7lbX0Odbg9rnzXRdYdgPQZFkjd38QHpD6tvWxbLi6VXGQbXr054doixIS+TwftHP6afffA1zxCZrIcJRS/MkYQ==
+      integrity: sha512-9B+DlSSelvKZMKkAgm1SjBV19XbPIL113GIKl18XgJV+06QvnbykeqeizZrr14b4TWf1deWLu9XZivPD8zMoHA==
   /@types/tern/0.23.3:
     dependencies:
       '@types/estree': 0.0.46
@@ -4528,9 +4528,9 @@ packages:
       vite: ^2.0.0-beta.69
     resolution:
       integrity: sha512-wqKt3DU7RzWJvE46qbZsi9E6TCaUwkOQZfRSDnRndKel72psJae02nD+qu/ObkRduqK9kdeGmAOcZw1qUkNUrg==
-  /vite-plugin-icons/0.3.2_@iconify+json@1.1.321:
+  /vite-plugin-icons/0.3.3_@iconify+json@1.1.322:
     dependencies:
-      '@iconify/json': 1.1.321
+      '@iconify/json': 1.1.322
       '@iconify/json-tools': 1.0.10
       vue-template-es2015-compiler: 1.9.1
     dev: true
@@ -4539,7 +4539,7 @@ packages:
       '@vue/compiler-sfc': ^3.0.2
       vue-template-compiler: ^2.6.12
     resolution:
-      integrity: sha512-6HDBO6aqJLaJ8lkT9FChAUtniRRzhDWbhNzJLfT7QdDcQ2kaapReksngNEA1+tNlFd5Auey4VGS2VjI3V1KkvA==
+      integrity: sha512-jYIbpb+Y3qh9eTf335o98Y10mQICSNlzrs+VL6z733J9179dC7w4j13NNQgSXEub5WRG+lb1DVURjXVeNhISeA==
   /vite-plugin-restart/0.0.1_vite@2.1.2:
     dependencies:
       chalk: 4.1.0
@@ -4610,7 +4610,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-dU4O7nG4TfI4CbGbrry1TAXlg19+xm9wlHJdvZnYYjTFRlS7zvHDWgxcP7zduUvhqXCGoGURFKjMPo8MRghVNg==
-  /vue-board/0.0.3_vue@3.0.7:
+  /vue-board/0.0.4_vue@3.0.7:
     dependencies:
       '@vueuse/core': 4.4.1_vue@3.0.7
       vue: 3.0.7
@@ -4618,7 +4618,7 @@ packages:
     peerDependencies:
       vue: '>=3'
     resolution:
-      integrity: sha512-fMV0sSe46+4VpptXWyG0uiq2o5+zgXFt5IS5CDoeKkjTeTbr+6PYUUr2fvxuPgJPil/m4o039z/0LKZNelxnOg==
+      integrity: sha512-NSkUcoFo/7/azzW8VXyDXnZNQ4+4JtKNYI09mKGUf2+nMBHYggh1rT9vAgkftWhRl7RTC+vOYiogeKbN2fyxWg==
   /vue-demi/0.7.4_vue@3.0.7:
     dependencies:
       vue: 3.0.7
@@ -4757,10 +4757,10 @@ specifiers:
   '@docsearch/css': ^1.0.0-alpha.28
   '@docsearch/js': ^1.0.0-alpha.28
   '@docsearch/react': ^1.0.0-alpha.28
-  '@iconify/json': ^1.1.321
+  '@iconify/json': ^1.1.322
   '@types/codemirror': ^0.0.108
   '@types/node': ^14.14.35
-  '@types/prismjs': ^1.16.3
+  '@types/prismjs': ^1.16.4
   '@vueuse/core': ^4.4.1
   algoliasearch: ^4.8.6
   change-case: ^4.1.2
@@ -4777,11 +4777,11 @@ specifiers:
   typescript: ^4.2.3
   vite: ^2.1.2
   vite-plugin-components: ^0.8.3
-  vite-plugin-icons: ^0.3.2
+  vite-plugin-icons: ^0.3.3
   vite-plugin-restart: ^0.0.1
   vite-plugin-windicss: ^0.9.11
   vitepress: ^0.12.2
   vue: ^3.0.7
-  vue-board: ^0.0.3
+  vue-board: ^0.0.4
   vue-demi: ^0.7.4
   windicss: ^2.5.4

@@ -51,7 +51,7 @@ const generatedCSS = computed(() => new StyleSheet()
 <template>
   <div class="playground">
     <Board class="h-full">
-      <Board vertical>
+      <Board vertical ratio="0.7">
         <TemplateBlock v-model="htmlCode" :processor="processor" />
         <StyleBlock v-model="styleCode" :processor="processor" />
       </Board>
