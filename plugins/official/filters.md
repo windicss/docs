@@ -4,6 +4,8 @@
 
 | Class | Properties |
 | :---- | :--------- |
+| `blur-none` | filter: none |
+| `blur-${key}` | filter: `blur(${value});`
 | `filter-${key}` | filter: `${value};` |
 | `backdrop-${key}` | backdrop-filter: `${value};` |
 
