@@ -1,4 +1,5 @@
 import { defineConfig } from 'windicss/helpers'
+import filterPlugin from 'windicss/plugin/filters'
 
 /* eslint quote-props: ["error", "consistent"] */
 
@@ -36,5 +37,12 @@ export default defineConfig({
         box: '0px 5px 15px 0px rgba(0, 0, 0, 0.35)',
       },
     },
+    filter: {
+      'brightness': 'brightness(0)',
+      'invert': 'invert(1)',
+    },
   },
+  plugins: [
+    filterPlugin,
+  ],
 })

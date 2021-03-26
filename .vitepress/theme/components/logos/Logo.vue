@@ -8,7 +8,7 @@ import Webpack from '/@vite-icons/logos/webpack'
 import VSCode from '/@vite-icons/logos/visual-studio-code'
 import Webstrom from '/@vite-icons/logos/webstorm'
 import Gridsome from '/@vite-icons/logos/gridsome-icon'
-import NextJs from '/@vite-icons/logos/nextjs'
+import NextJs from './NuxtJs.vue'
 import Vite from './ViteLogo.vue'
 import Windi from './WindiLogo.vue'
 
