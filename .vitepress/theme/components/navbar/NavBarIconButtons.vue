@@ -6,7 +6,6 @@ const repo = useRepo()
 
 <template>
   <div class="flex items-center border-b-0 ml-3 space-x-4 ml-4">
-    <slot />
     <NavBarIcon
       v-if="repo"
       aria-label="Github"
@@ -19,6 +18,7 @@ const repo = useRepo()
       <carbon-logo-github />
     </NavBarIcon>
     <DarkModeSwitch />
+    <slot />
     <slot name="search" />
   </div>
 </template>

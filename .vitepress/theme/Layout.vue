@@ -2,6 +2,7 @@
   <div class="theme flex" :class="pageClasses">
     <NavBar :sidebar-state="showSidebar">
       <template v-if="playground" #icons>
+        <NavDivider />
         <!-- TODO -->
         <NavBarIcon class="!hidden !md:inline-flex">
           <ion:settings-outline />
@@ -9,11 +10,10 @@
         <NavBarIcon class="!hidden !md:inline-flex">
           <carbon:open-panel-right />
         </NavBarIcon>
-        <NavDivider />
       </template>
       <template #search>
         <NavDivider />
-        <AlgoliaSearchBox :options="theme.algolia" />
+        <AlgoliaSearchBox :options="theme.algolia" :small="playground" />
       </template>
     </NavBar>
     <SideBar />
