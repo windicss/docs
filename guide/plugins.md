@@ -191,7 +191,7 @@ module.exports = {
       sm: '3',
       lg: '10',
     }
-  }
+  },
   plugins: [
     require('windicss/plugin/line-clamp'),
     // ...
