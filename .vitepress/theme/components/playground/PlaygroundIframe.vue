@@ -32,7 +32,7 @@ const frame = ref<HTMLIFrameElement | null>(null)
 
 for (const key of Object.keys(propRefs) as (keyof typeof propRefs)[]) {
   watchEffect(() => {
-    // setTimeout(resizeIframe, 100)
+    setTimeout(resizeIframe, 100)
     if (!isReady.value)
       return
     frame.value?.contentWindow?.postMessage(
