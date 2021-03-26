@@ -60,51 +60,47 @@ export default {
 
 ### Sveltekit
 
-Add <kbd>[svelte-windicss-preprocess]</kbd> to your `svelte.config.cjs`.
+Add the <kbd>[vite-plugin-windicss]</kbd> package:
 
-> For now, sveltekit has an issue of setting the preprocessor. Make sure your `snowpack.config.cjs` is consistent with our [example](https://github.com/voorjaar/svelte-windicss-preprocess/blob/v2.1.0/example/svelte-next/snowpack.config.cjs) before setting.
+```
+npm install vite-plugin-windicss --save-dev
+```
+
+Then, add the plugin to your Vite configuration in `svelte.config.cjs`:
 
 ```js
 // svelte.config.cjs
+const node = require('@sveltejs/adapter-node');
+const pkg = require('./package.json');
+
+/** @type {import('@sveltejs/kit').Config} */
 module.exports = {
-  preprocess: require("svelte-windicss-preprocess").preprocess({
-    // uncomment this, if you need a config file
-    // config: 'tailwind.config.js',
-    compile: false,
-    prefix: "windi-",
-    globalPreflight: true,
-    globalUtility: true,
-  }),
   kit: {
-    adapter: "@sveltejs/adapter-node",
-    target: "#svelte",
-  },
+    adapter: node(),
+
+    target: '#svelte',
+
+    vite: {
+      ssr: {
+        noExternal: Object.keys(pkg.dependencies || {})
+      },
+      plugins: [
+        require('vite-plugin-windicss').default()
+      ]
+    }
+  }
 };
 ```
 
-with Typescript
+And finally, import `windi.css` in your main layout:
 
-```js
-// svelte.config.cjs
-const sveltePreprocess = require('svelte-preprocess');
-module.exports = {
-  preprocess: [
-    sveltePreprocess.typescript(),
-    require('svelte-windicss-preprocess').preprocess({
-      // uncomment this, if you need a config file
-      // config: 'tailwind.config.js',
-      compile: false,
-      prefix: 'windi-',
-      globalPreflight: true,
-      globalUtility: true,
-    }),
-  ],
-  kit: {
-    adapter: '@sveltejs/adapter-node',
-    target: '#svelte'
-  }
-};
+```svelte
+// src/routes/$layout.svelte
+<script>
+  import 'virtual:windi.css'
+</script>
 
+<slot></slot>
 ```
 
 ### Sapper(rollup)
