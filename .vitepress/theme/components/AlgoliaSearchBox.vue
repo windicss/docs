@@ -5,10 +5,14 @@
 <script setup lang="ts">
 import '@docsearch/css/dist/style.css'
 import { useRoute, useRouter } from 'vitepress'
-import { defineProps, getCurrentInstance, onMounted, watch } from 'vue'
+import { defineProps, getCurrentInstance, onMounted, watch, toRef } from 'vue'
 import docsearch from '@docsearch/js'
 import type { PropType } from 'vue'
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import type { DefaultTheme } from '../config'
+
+const bps = useBreakpoints(breakpointsTailwind)
+const bplg = bps.greater('lg')
 
 const props = defineProps({
   options: {
@@ -32,13 +36,16 @@ watch(
   },
 )
 
+const small = toRef(props, 'small')
+
 onMounted(() => {
   initialize(props.options)
-  watch(() => props.small, (v) => {
-    console.log(vm)
-    v
-      ? vm?.vnode.el?.classList.add('small')
-      : vm?.vnode.el?.classList.remove('small')
+  watch([small, bplg], ([small, bplg]) => {
+    bplg
+      ? small
+        ? vm?.vnode.el?.classList.add('small')
+        : vm?.vnode.el?.classList.remove('small')
+      : vm?.vnode.el?.classList.add('small')
   }, { immediate: true })
 })
 
