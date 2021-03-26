@@ -7,11 +7,19 @@ import '@docsearch/css/dist/style.css'
 import { useRoute, useRouter } from 'vitepress'
 import { defineProps, getCurrentInstance, onMounted, watch } from 'vue'
 import docsearch from '@docsearch/js'
+import type { PropType } from 'vue'
 import type { DefaultTheme } from '../config'
 
-const props = defineProps<{
-  options: DefaultTheme.AlgoliaSearchOptions
-}>()
+const props = defineProps({
+  options: {
+    type: Object as PropType<DefaultTheme.AlgoliaSearchOptions>,
+    required: true,
+  },
+  small: {
+    type: Boolean,
+    default: false,
+  },
+})
 
 const vm = getCurrentInstance()
 const route = useRoute()
@@ -26,6 +34,12 @@ watch(
 
 onMounted(() => {
   initialize(props.options)
+  watch(() => props.small, (v) => {
+    console.log(vm)
+    v
+      ? vm?.vnode.el?.classList.add('small')
+      : vm?.vnode.el?.classList.remove('small')
+  }, { immediate: true })
 })
 
 function isSpecialClick(event: MouseEvent) {
@@ -209,11 +223,17 @@ html.dark .DocSearch {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-@screen -lg {
+.small {
+  .DocSearch-Button {
+    @apply p-9px h-auto;
+  }
   .DocSearch-Button-Key,
   .DocSearch-Button-KeySeparator,
   .DocSearch-Button-Placeholder {
       display: none;
+  }
+  .DocSearch-Search-Icon {
+    @apply h-18px w-18px;
   }
 }
 </style>
