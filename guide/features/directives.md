@@ -63,16 +63,3 @@ The `@screen` directive allows you to create media queries that reference your b
   }
 }`.trim()'
 />
-
-
-## Compatibility Chart
-
-| Directive |	Status |
-| :-------- | :----- |
-| @apply | ✅ &ensp;Supported |
-| @variants | ✅ &ensp;Supported |
-| @screen | ✅ &ensp;Supported |
-| @layer | ❗️&ensp;In development |
-| theme() | ❗️&ensp;In development |
-| @tailwind | ❌ &ensp;Not Needed |
-| @responsive | ❌ &ensp;Not Needed |

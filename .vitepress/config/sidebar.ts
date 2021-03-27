@@ -106,7 +106,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Responsive Design', link: '/guide/features/responsive-design' },
         { text: 'Dark Mode', link: '/guide/features/dark-mode' },
         { text: 'Directives', link: '/guide/features/directives' },
-        { text: 'Nesting CSS', link: '/guide/features/nesting' },
+        // { text: 'Nesting CSS', link: '/guide/features/nesting' },
       ],
     },
     {

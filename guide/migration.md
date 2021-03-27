@@ -3,10 +3,6 @@
 
 # Migrate from Tailwind CSS
 
-While Windi CSS aims to be compatible with Tailwind CSS, there are some slight differences in configuration.
-
-Some options are no longer necessary, because of its [design].
-
 ### `package.json`
 
 Some of your dependencies are no longer required, you can remove them if they were only needed for Tailwind CSS.
@@ -28,13 +24,20 @@ You can now remove the Tailwind CSS imports from your css entry.
 - @import 'tailwindcss/utilities';
 ```
 
-These are now handled automatically by Windi CSS.
+(Optional) Based on the integrations tools you are using, you might need to import the `virtual:windi.css` entry explicitly. Please check the docs of the tools for more details.
 
-### `windi.config.js`
+```js
+// main.js
+import 'virtual:windi.css'
+```
 
-Since all variants are [automatically enabled][auto], `purge` is no longer needed.
+### Configurations
 
-`colors` and `plugins` imports need to be renamed to `windicss` instead.
+Since all variants are [automatically enabled][auto], `variant` and `purge` fields are no longer needed.
+
+`colors` and `plugins` need to be imported from `windicss` instead.
+
+We are compatible with both `windi.config.js` or `tailwind.config.js`
 
 ```diff
 -const colors = require('tailwindcss/colors')
@@ -56,6 +59,10 @@ export default {
 -     cursor: ['disabled'],
 -   }
 - },
++ extract: {
++   include: ['./**/*.html'],
++ },
++ safelist: ['prose', 'prose-sm', 'm-auto'],
   darkMode: 'class',
   plugins: [typography],
   theme: {

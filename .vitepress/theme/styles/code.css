@@ -124,8 +124,11 @@ code kbd {
   padding: 2px 5px;
 }
 
+code .token.inserted.token.delete {
+  color: #d24852;
+}
 code .token.inserted.token.inserted {
-  color: var(--c-brand-light);
+  color: #339a49;
 }
 
 /* inline code */
