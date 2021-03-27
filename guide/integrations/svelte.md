@@ -213,7 +213,7 @@ Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuratio
 You can apply several utilities for the same variant by using HTML attributes.
 
 ```html
-<div sm="bg-white font-bold" hover="bg-gray-200" dark="bg-gray-900"/>
+<div w:sm="bg-white font-bold" w:hover="bg-gray-200" w:dark="bg-gray-900"/>
 ```
 
 ::: tip Mixed Variants
