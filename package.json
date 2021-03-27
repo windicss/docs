@@ -26,10 +26,10 @@
     "json5": "^2.2.0",
     "prismjs": "^1.23.0",
     "splitpanes": "^3.0.4",
-    "vue": "^3.0.8",
+    "vue": "^3.0.9",
     "vue-board": "^0.0.5",
     "vue-demi": "^0.7.4",
-    "windicss": "^2.5.6"
+    "windicss": "2.5.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.2",
@@ -53,7 +53,7 @@
     "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.4.0",
     "vite-plugin-restart": "^0.0.1",
-    "vite-plugin-windicss": "^0.10.2",
+    "vite-plugin-windicss": "^0.10.4",
     "vitepress": "^0.12.2"
   }
 }
