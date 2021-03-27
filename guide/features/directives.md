@@ -63,3 +63,40 @@ The `@screen` directive allows you to create media queries that reference your b
   }
 }`.trim()'
 />
+
+## @layer
+
+The `@layer` directive makes sure the order of each classes. Valid layers are `base`, `components`, and `utilities`.
+
+<DirectivesPlayground 
+:input='`
+@layer components {
+  .components {
+    @apply bg-red-500;
+  }
+}
+@layer utilities {
+  .utilities {
+    max-width: 768px;
+  }
+}
+@layer base {
+  base {
+    margin-left: auto;
+  }
+}
+.normal {
+  marign-right: auto; /* components by default */
+}`.trim()'
+/>
+
+## theme()
+
+The `theme()` function allows you to access your config values using dot notation.
+
+<DirectivesPlayground 
+:input='`
+.btn-blue {
+  background-color: theme("colors.blue.500");
+}`.trim()'
+/>

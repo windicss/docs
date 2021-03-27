@@ -105,6 +105,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Shortcuts', link: '/guide/features/shortcuts' },
         { text: 'Responsive Design', link: '/guide/features/responsive-design' },
         { text: 'Dark Mode', link: '/guide/features/dark-mode' },
+        { text: 'Important Prefix', link: '/guide/features/important-prefix' },
         { text: 'Directives', link: '/guide/features/directives' },
         // { text: 'Nesting CSS', link: '/guide/features/nesting' },
       ],
