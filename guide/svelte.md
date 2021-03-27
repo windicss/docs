@@ -240,7 +240,7 @@ Hit `ctrl-shift-p` or `cmd-shift-p` on mac, type svelte restart, and select `Sve
 You can apply several utilities for the same variant by using HTML attributes.
 
 ```html
-<div sm="bg-white font-bold" hover="bg-gray-200" dark="bg-gray-900"/>
+<div w:sm="bg-white font-bold" w:hover="bg-gray-200" w:dark="bg-gray-900"/>
 ```
 
 ::: tip Mixed Variants
