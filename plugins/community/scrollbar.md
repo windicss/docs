@@ -12,7 +12,7 @@ Add it to the plugins array of your Config File.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     // ...
   },

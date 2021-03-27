@@ -47,7 +47,7 @@ export default {
 
 ```js
 // svelte.config.js
-module.exports = {
+export default {
   preprocess: [
     require('svelte-windicss-preprocess').preprocess({
       config: 'windi.config.js', // windi config file path (optional)
@@ -141,7 +141,7 @@ export default {
 
 ```js
 // webpack.config.js
-module.exports = {
+export default {
   client: {
     // ...
     module: {

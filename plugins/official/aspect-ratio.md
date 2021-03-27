@@ -35,7 +35,7 @@
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     // ...
   },

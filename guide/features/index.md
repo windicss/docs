@@ -45,7 +45,7 @@ We have also added a shortcuts config to help you quickly add utilities. With th
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     /* ... */
   },
@@ -73,7 +73,7 @@ css-in-js syntax is also supported for complex utility
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     /* ... */
   },

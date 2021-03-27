@@ -30,7 +30,7 @@ Utilities for specifying the origin for an element's transformations.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       transformOrigin: {
@@ -56,7 +56,7 @@ Utilities for scaling elements with transform.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     scale: {
       half: '.5',
@@ -79,7 +79,7 @@ Utilities for rotating elements with transform.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     rotate: {
       sq: '90deg',
@@ -132,7 +132,7 @@ You can customize the global spacing scale in the theme.spacing or theme.extend.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       spacing: {
@@ -149,7 +149,7 @@ To customize the translate scale separately, use the theme.translate section of 
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       translate: {
@@ -180,7 +180,7 @@ Utilities for skewing elements with transform.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       skew: {

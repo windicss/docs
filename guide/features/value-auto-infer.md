@@ -1,4 +1,4 @@
-# Variant Auto-infer
+# Value Auto-infer
 
 Since Windi CSS will only generate the CSS utilities you use, it's no longer necessary to configure custom variables like numbers, sizes, scores, and colors. It can detect utilities automatically, and generate CSS based on the appropriate semantics.
 

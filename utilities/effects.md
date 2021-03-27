@@ -20,7 +20,7 @@ Utilities for controlling the box shadow of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     boxShadow: {
       'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -49,7 +49,7 @@ Utilities for controlling the opacity of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     opacity: {
       light: '0.25',

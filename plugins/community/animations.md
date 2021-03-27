@@ -12,7 +12,7 @@ npm install --save-dev @windicss/animations
 
 ```js
 // tailwind.config.js
-module.exports = {
+export default {
   theme: {
     // ...
   },

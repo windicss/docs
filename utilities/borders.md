@@ -15,7 +15,7 @@ Utilities for controlling the border radius of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     borderRadius: {
       none: '0',
@@ -46,7 +46,7 @@ Utilities for controlling the width of an element's borders.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     borderWidth: {
       DEFAULT: '1px',
@@ -73,7 +73,7 @@ You can customize your color palette by editing the `theme.colors` section of yo
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     borderColor: theme => ({
       ...theme('colors'),
@@ -96,7 +96,7 @@ Utilities for controlling the opacity of an element's border color.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       borderOpacity: {
@@ -144,7 +144,7 @@ The divide width scale inherits its values from the `borderWidth` scale by defau
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     borderWidth: {
       DEFAULT: '1px',
@@ -163,7 +163,7 @@ To customize only the divide width values, use the theme.divideWidth section of 
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     divideWidth: {
       DEFAULT: '1px',
@@ -192,7 +192,7 @@ Utilities for controlling the border color between elements.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     divideColor: theme => ({
       ...theme('borderColors'),
@@ -217,7 +217,7 @@ Utilities for controlling the opacity borders between elements.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       divideOpacity: {
@@ -264,7 +264,7 @@ Utilities for creating outline rings with box-shadows.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       ringWidth: {
@@ -293,7 +293,7 @@ Utilities for setting the color of outline rings.
 // windi.config.js
 const colors = require('windicss/colors')
 
-module.exports = {
+export default {
   theme: {
     ringColor: {
       white: colors.white,
@@ -315,7 +315,7 @@ Utilities for setting the opacity of outline rings.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       ringOpacity: {
@@ -340,7 +340,7 @@ Utilities for simulating an offset when adding outline rings.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       ringOffsetWidth: {
@@ -369,7 +369,7 @@ Utilities for setting the color of outline ring offsets.
 // windi.config.js
 const colors = require('windicss/colors')
 
-module.exports = {
+export default {
   theme: {
     ringOffsetColor: {
       white: colors.white,

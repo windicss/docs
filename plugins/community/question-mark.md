@@ -18,7 +18,7 @@ Then add the plugin to your `tailwind.config.js` file:
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     // ...
   },

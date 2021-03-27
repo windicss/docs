@@ -7,7 +7,7 @@ For tailwind plugins, we generally use Transform API to support them. You can im
 
 const { transform } = require('windicss/helpers')
 
-module.exports = {
+export default {
   theme: {
     // ...
   },

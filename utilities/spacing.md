@@ -46,7 +46,7 @@ Utilities for controlling an element's padding.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     padding: {
       sm: '8px',
@@ -125,7 +125,7 @@ Utilities for controlling an element's margin.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     margin: {
       sm: '8px',
@@ -169,7 +169,7 @@ Utilities for controlling the space between child elements.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     space: {
       sm: '8px',

@@ -26,7 +26,7 @@ Utilities for controlling the cursor style when hovering over an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     cursor: {
       'auto': 'auto',
@@ -67,7 +67,7 @@ Utilities for controlling an element's outline.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       outline: {
@@ -82,7 +82,7 @@ You can also provide an outline-offset value for any custom outline utilities us
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       outline: {

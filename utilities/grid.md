@@ -20,7 +20,7 @@ Utilities for specifying the columns in a grid layout.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       gridTemplateColumns: {
@@ -57,7 +57,7 @@ Utilities for controlling how elements are sized and placed across grid columns.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       gridColumn: {
@@ -94,7 +94,7 @@ Utilities for specifying the rows in a grid layout.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       gridTemplateRows: {
@@ -130,7 +130,7 @@ Utilities for controlling how elements are sized and placed across grid rows.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       gridRow: {
@@ -173,7 +173,7 @@ Utilities for controlling the size of implicitly-created grid columns.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       gridAutoColumns: {
@@ -199,7 +199,7 @@ Utilities for controlling the size of implicitly-created grid rows.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       gridAutoRows: {
@@ -239,7 +239,7 @@ You can customize the global spacing scale in the theme.spacing or theme.extend.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       spacing: {
@@ -254,7 +254,7 @@ To customize the gap scale separately, use the gap section of your Tailwind them
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       gap: {

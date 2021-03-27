@@ -17,7 +17,7 @@ Within your `gridsome.config.js` add the following.
 
 ```js
 // gridsome.config.js
-module.exports = {
+export default {
   // ...
   plugins: [
     {
@@ -88,7 +88,7 @@ export default {
 
 _ngridsome.config.js_
 ```js
-module.exports = {
+export default {
   // ...
   plugins: [
     {

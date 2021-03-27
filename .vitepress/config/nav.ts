@@ -69,15 +69,15 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Interaction Variants', link: '/plugins/community/interaction-variants' },
     ],
   },
-  {
-    text: 'Translations',
-    items: [
-      { text: 'English', link: '/plugins/aspect-ratio' },
-      { text: '中文', link: '/plugins/forms' },
-      { text: '日本語', link: '/plugins/filters' },
-      { text: 'Français', link: '/plugins/line-clamp' },
-    ],
-  },
+  // {
+  //   text: 'Translations',
+  //   items: [
+  //     { text: 'English', link: '/plugins/aspect-ratio' },
+  //     { text: '中文', link: '/plugins/forms' },
+  //     { text: '日本語', link: '/plugins/filters' },
+  //     { text: 'Français', link: '/plugins/line-clamp' },
+  //   ],
+  // },
   {
     text: 'Community',
     items: [

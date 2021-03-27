@@ -46,7 +46,7 @@ To use a container at only a certain breakpoint and up:
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     container: {
       center: true,
@@ -59,7 +59,7 @@ module.exports = {
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     container: {
       padding: '2rem',
@@ -72,7 +72,7 @@ Specify a different padding amount for each breakpoint
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     container: {
       padding: {
@@ -177,7 +177,7 @@ Utilities for controlling how a replaced element's content should be positioned 
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     objectPosition: {
       'bottom': 'bottom',
@@ -427,7 +427,7 @@ Utilities for controlling the placement of positioned elements.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     inset: {
       sm: '1rem',
@@ -467,7 +467,7 @@ Utilities for controlling the stack order of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     zIndex: {
       first: 10,

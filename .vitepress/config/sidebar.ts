@@ -100,7 +100,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'Features',
       children: [
         { text: 'Overview', link: '/guide/features/' },
-        { text: 'Variant Auto-infer', link: '/guide/features/variant-auto-infer' },
+        { text: 'Value Auto-infer', link: '/guide/features/value-auto-infer' },
         { text: 'Variant Groups', link: '/guide/features/variant-groups' },
         { text: 'Shortcuts', link: '/guide/features/shortcuts' },
         { text: 'Responsive Design', link: '/guide/features/responsive-design' },

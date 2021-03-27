@@ -10,7 +10,8 @@
 
 html:not(.dark) {
   --prism-foreground: #393a34;
-  --prism-background: #fbfbfb;
+  --prism-background: #fafafa;
+  --prism-inline-background: #f2f2f2;
   --prism-comment: #a0ada0;
   --prism-string: #b56959;
   --prism-literal: #2f8a89;
@@ -125,4 +126,10 @@ code kbd {
 
 code .token.inserted.token.inserted {
   color: var(--c-brand-light);
+}
+
+/* inline code */
+:not(pre) > code {
+  font-size: 1em;
+  vertical-align: baseline;
 }

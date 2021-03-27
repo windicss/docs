@@ -37,7 +37,7 @@ inspired by [tailwindcss-scroll-snap](https://github.com/innocenzi/tailwindcss-s
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   plugins: [
     require('windicss/plugin/scroll-snap'),
     // ...

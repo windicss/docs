@@ -36,7 +36,7 @@ Utilities for controlling how flex items both grow and shrink.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     flex: {
       1: '1 1 0%',
@@ -63,7 +63,7 @@ Utilities for controlling how flex items grow.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     flexGrow: {
       0: 0,
@@ -87,7 +87,7 @@ Utilities for controlling how flex items shrink.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     flexShrink: {
       0: 0,
@@ -121,7 +121,7 @@ Utilities for controlling the order of flex and grid items.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     order: {
       first: '-9999',

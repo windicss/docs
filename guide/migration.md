@@ -42,7 +42,7 @@ Since all variants are [automatically enabled][auto], `purge` is no longer neede
 -const typography = require('@tailwindcss/typography')
 +const typography = require('windicss/plugin/typography')
 
-module.exports = {
+export default {
 - purge: {
 -   content: [
 -     './**/*.html',

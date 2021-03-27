@@ -11,7 +11,7 @@
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   extend: {
     lineClamp: {
       sm: '3',

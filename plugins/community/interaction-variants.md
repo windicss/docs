@@ -12,7 +12,7 @@ npm install --save-dev @windicss/plugin-interaction-variants
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     backgroundColor: {
       black: 'black',

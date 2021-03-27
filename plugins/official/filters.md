@@ -13,7 +13,7 @@
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     filter: {
       none: 'none',

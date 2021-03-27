@@ -24,7 +24,7 @@
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     // ...
   },
@@ -39,7 +39,7 @@ module.exports = {
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     // ...
   },
@@ -56,7 +56,7 @@ module.exports = {
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       typography: {

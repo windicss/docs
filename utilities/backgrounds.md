@@ -35,7 +35,7 @@ Utilities for controlling an element's background color.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     backgroundColor: theme => ({
       ...theme('colors'),
@@ -57,7 +57,7 @@ Utilities for controlling the opacity of an element's background color.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       opacity: {
@@ -88,7 +88,7 @@ Utilities for controlling the position of an element's background image.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     backgroundPosition: {
       'bottom': 'bottom',
@@ -133,7 +133,7 @@ Utilities for controlling the background size of an element's background image.
 ### Customizing
 
 ```js
-module.exports = {
+export default {
   theme: {
     backgroundSize: {
       'auto': 'auto',
@@ -166,7 +166,7 @@ Utilities for controlling an element's background image.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       backgroundImage: theme => ({

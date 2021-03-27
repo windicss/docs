@@ -30,7 +30,7 @@ If you don't use a certain utility the corresponding CSS will not be generated, 
 const colors = require('windicss/colors')
 const plugin = require('windicss/plugin')
 
-module.exports = {
+export default {
   darkMode: 'class', // or 'media'
   theme: {
     screens: {

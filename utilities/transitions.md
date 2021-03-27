@@ -18,7 +18,7 @@ Utilities for controlling which CSS properties transition.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       transitionProperty: {
@@ -42,7 +42,7 @@ Utilities for controlling the duration of CSS transitions.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       transitionDuration: {
@@ -69,7 +69,7 @@ Utilities for controlling the easing of CSS transitions.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       transitionTimingFunction: {
@@ -93,7 +93,7 @@ Utilities for controlling the delay of CSS transitions.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       transitionDelay: {
@@ -121,7 +121,7 @@ Utilities for animating elements with CSS animations.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       animation: {
@@ -136,7 +136,7 @@ To add new animation @keyframes, use the keyframes section of your theme configu
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       keyframes: {

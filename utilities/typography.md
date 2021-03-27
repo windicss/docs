@@ -76,7 +76,7 @@ Utilities for controlling the font size of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     fontSize: {
       'xs': '.75rem',
@@ -100,7 +100,7 @@ You can provide a default line-height for each of your font-sizes using a tuple 
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     fontSize: {
       sm: ['14px', '20px'],
@@ -116,7 +116,7 @@ If you also want to provide a default letter-spacing value for a font size, you 
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     fontSize: {
       '2xl': ['24px', {
@@ -171,7 +171,7 @@ Utilities for controlling the font weight of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     fontWeight: {
       'hairline': 100,
@@ -225,7 +225,7 @@ Utilities for controlling the tracking (letter spacing) of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     letterSpacing: {
       tightest: '-.075em',
@@ -258,7 +258,7 @@ Utilities for controlling the leading (line height) of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       lineHeight: {
@@ -283,7 +283,7 @@ Utilities for controlling the bullet/number style of a list.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     listStyleType: {
       none: 'none',
@@ -319,7 +319,7 @@ Utilities for controlling the color of placeholder text.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     placeholderColor: {
       primary: '#3490dc',
@@ -342,7 +342,7 @@ Utilities for controlling the opacity of an element's placeholder color.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       placeholderOpacity: {
@@ -378,7 +378,7 @@ Utilities for controlling the text color of an element.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     textColor: {
       primary: '#3490dc',
@@ -399,7 +399,7 @@ Utilities for controlling the opacity of an element's text color.
 
 ```js
 // windi.config.js
-module.exports = {
+export default {
   theme: {
     extend: {
       textOpacity: {
