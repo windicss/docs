@@ -28,25 +28,25 @@ const {
 
 <template>
   <div class="playground">
-    <Splitpanes :horizontal="!bpmd" class="default-theme h-full w-full">
-      <Pane min-size="20" :size="bpmd ? 60 : 66">
-        <Splitpanes horizontal>
-          <Pane min-size="20">
-            <TemplateBlock v-model="htmlCode" class="h-full w-full" :processor="processor" />
-          </Pane>
-          <Pane min-size="20">
-            <StyleBlock v-model="styleCode" class="h-full w-full" :processor="processor" />
-          </Pane>
-        </Splitpanes>
-      </Pane>
-      <Pane min-size="20" :size="bpmd ? 40 : 33">
-        <PreviewBlock class="h-full">
-          <ClientOnly>
+    <ClientOnly>
+      <Splitpanes :horizontal="!bpmd" class="default-theme h-full w-full">
+        <Pane min-size="20" :size="bpmd ? 60 : 66">
+          <Splitpanes horizontal>
+            <Pane min-size="20">
+              <TemplateBlock v-model="htmlCode" class="h-full w-full" :processor="processor" />
+            </Pane>
+            <Pane min-size="20">
+              <StyleBlock v-model="styleCode" class="h-full w-full" :processor="processor" />
+            </Pane>
+          </Splitpanes>
+        </Pane>
+        <Pane min-size="20" :size="bpmd ? 40 : 33">
+          <PreviewBlock class="h-full">
             <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
-          </ClientOnly>
-        </PreviewBlock>
-      </Pane>
-    </Splitpanes>
+          </PreviewBlock>
+        </Pane>
+      </Splitpanes>
+    </ClientOnly>
   </div>
 </template>
 
