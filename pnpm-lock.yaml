@@ -14,12 +14,14 @@ dependencies:
   change-case: 4.1.2
   codemirror: 5.60.0
   json5: 2.2.0
+  lz-string: 1.4.4
+  mitt: 2.1.0
   prismjs: 1.23.0
   splitpanes: 3.0.4
   vue: 3.0.9
   vue-board: 0.0.5_vue@3.0.9
   vue-demi: 0.7.4_vue@3.0.9
-  windicss: 2.5.5
+  windicss: 2.5.8
 devDependencies:
   '@antfu/eslint-config': 0.6.2_eslint@7.23.0+typescript@4.2.3
   '@docsearch/css': 1.0.0-alpha.28
@@ -27,6 +29,7 @@ devDependencies:
   '@docsearch/react': 1.0.0-alpha.28
   '@iconify/json': 1.1.322
   '@types/codemirror': 0.0.108
+  '@types/lz-string': 1.3.34
   '@types/node': 14.14.37
   '@types/prismjs': 1.16.4
   algoliasearch: 4.8.6
@@ -753,6 +756,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+  /@types/lz-string/1.3.34:
+    dev: true
+    resolution:
+      integrity: sha512-j6G1e8DULJx3ONf6NdR5JiR2ZY3K3PaaqiEuKYkLQO0Czfi1AzrtjfnfCROyWGeDd5IVMKCwsgSmMip9OWijow==
   /@types/node/14.14.37:
     dev: true
     resolution:
@@ -3052,6 +3059,11 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
+  /lz-string/1.4.4:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=
   /magic-string/0.25.7:
     dependencies:
       sourcemap-codec: 1.4.8
@@ -3170,6 +3182,10 @@ packages:
   /minimist/1.2.5:
     resolution:
       integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  /mitt/2.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-ILj2TpLiysu2wkBbWjAmww7TkZb65aiQO+DkVdUTBpBXq+MHYiETENkKFMtsJZX1Lf4pe4QOrTSjIfUwN5lRdg==
   /mkdirp/0.3.0:
     deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
     dev: true
@@ -4696,13 +4712,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
-  /windicss/2.5.5:
-    dev: false
-    engines:
-      node: '>= 12'
-    hasBin: true
-    resolution:
-      integrity: sha512-tKLYY9qQoFKoxitG2B8toa9QUPAjsBOKjmFrxhDi2i0eaVOFQh+YEPElBCa7N5ma03YVIW9HPVbgVU0Z4JxZ5g==
   /windicss/2.5.7:
     dev: true
     engines:
@@ -4710,6 +4719,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-gsWZkotmw9Hr7yZy2nJAp46pmgMO1wXFFa3rfLWm57KDM31U/AucksQnwZi7zxsKM9c6O/z/61/Uvv4J096zKA==
+  /windicss/2.5.8:
+    dev: false
+    engines:
+      node: '>= 12'
+    hasBin: true
+    resolution:
+      integrity: sha512-zHkozdIqv1YTIGHBOHeFGsuZVTN5yAMz6FW5Bp8im9JZxSRZLOLKdJB0K75SL13iLHKXHrC1ukwJjjL8CohrUw==
   /word-wrap/1.2.3:
     dev: true
     engines:
@@ -4774,6 +4790,7 @@ specifiers:
   '@docsearch/react': ^1.0.0-alpha.28
   '@iconify/json': ^1.1.322
   '@types/codemirror': ^0.0.108
+  '@types/lz-string': ^1.3.34
   '@types/node': ^14.14.37
   '@types/prismjs': ^1.16.4
   '@vueuse/core': ^4.6.2
@@ -4787,6 +4804,8 @@ specifiers:
   eslint-plugin-jsonc: ^1.2.1
   eslint-plugin-markdown: ^2.0.0
   json5: ^2.2.0
+  lz-string: ^1.4.4
+  mitt: ^2.1.0
   prism-theme-vars: ^0.2.2
   prismjs: ^1.23.0
   splitpanes: ^3.0.4
@@ -4800,4 +4819,4 @@ specifiers:
   vue: ^3.0.9
   vue-board: ^0.0.5
   vue-demi: ^0.7.4
-  windicss: 2.5.5
+  windicss: 2.5.8

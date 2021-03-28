@@ -24,12 +24,14 @@
     "change-case": "^4.1.2",
     "codemirror": "^5.60.0",
     "json5": "^2.2.0",
+    "lz-string": "^1.4.4",
+    "mitt": "^2.1.0",
     "prismjs": "^1.23.0",
     "splitpanes": "^3.0.4",
     "vue": "^3.0.9",
     "vue-board": "^0.0.5",
     "vue-demi": "^0.7.4",
-    "windicss": "2.5.5"
+    "windicss": "2.5.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.2",
@@ -38,6 +40,7 @@
     "@docsearch/react": "^1.0.0-alpha.28",
     "@iconify/json": "^1.1.322",
     "@types/codemirror": "^0.0.108",
+    "@types/lz-string": "^1.3.34",
     "@types/node": "^14.14.37",
     "@types/prismjs": "^1.16.4",
     "algoliasearch": "^4.8.6",

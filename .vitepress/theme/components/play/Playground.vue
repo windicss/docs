@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { defineProps, ref } from 'vue'
+import { defineProps, ref, onMounted } from 'vue'
 import type { PropType } from 'vue'
 import type { Config } from 'windicss/types/interfaces'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { Splitpanes, Pane } from 'splitpanes'
 import { useWindiCSS } from '../../composables/useWindiCSS'
+import { getSharedCode, useEmitShare } from '../../composables/useShare'
 import { html, css } from '../../examples/playground'
 import 'splitpanes/dist/splitpanes.css'
 
@@ -24,6 +25,16 @@ const {
   processor,
   generatedCSS,
 } = useWindiCSS(htmlCode, styleCode, props.config)
+
+onMounted(() => {
+  const { html, css } = getSharedCode()
+  if (html)
+    htmlCode.value = html
+  if (css)
+    styleCode.value = css
+})
+
+useEmitShare(htmlCode, styleCode)
 </script>
 
 <template>

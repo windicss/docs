@@ -4,11 +4,12 @@
       <template v-if="playground" #icons>
         <NavDivider />
         <!-- TODO -->
-        <NavBarIcon class="!hidden !md:inline-flex">
-          <ion:settings-outline />
-        </NavBarIcon>
+        <ShareButton />
         <NavBarIcon class="!hidden !md:inline-flex">
           <carbon:open-panel-right />
+        </NavBarIcon>
+        <NavBarIcon class="!hidden !md:inline-flex">
+          <ion:settings-outline />
         </NavBarIcon>
       </template>
       <template #search>
