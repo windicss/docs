@@ -1,4 +1,4 @@
-import { Ref } from 'vue'
+import { Ref, computed, watch } from 'vue'
 import * as lzs from 'lz-string'
 import mitt from 'mitt'
 
@@ -7,10 +7,10 @@ export const SHARE_EVENT = Symbol('share')
 export const BASE_URL = 'https://next.windicss.org'
 
 export function getShareURL(html: string, css: string, site: string = BASE_URL) {
-  const url = new URL('/play', site)
+  const url = new URL('/play.html', site)
   url.searchParams.set('html', lzs.compressToEncodedURIComponent(html))
   url.searchParams.set('css', lzs.compressToEncodedURIComponent(css))
-  return url.toString()
+  return url
 }
 export function getSharedCode() {
   const url = new URL(window.location.href)
@@ -25,9 +25,13 @@ export function getSharedCode() {
 }
 
 export function useEmitShare(html: Ref<string>, css: Ref<string>) {
+  const url = computed(() => getShareURL(html.value, css.value))
+  watch(url, () => {
+    const path = `${url.value.pathname}${url.value.search}`
+    window.history.replaceState('', '', path)
+  }, { immediate: true })
   emitter.on(SHARE_EVENT, async() => {
-    const url = getShareURL(html.value, css.value)
-    await navigator.clipboard.writeText(url)
+    await navigator.clipboard.writeText(url.value.toString())
   })
 }
 export function emitShare() {
