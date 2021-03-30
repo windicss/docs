@@ -41,12 +41,11 @@ import {
   // usePageData,
   useSiteDataByRoute,
 } from 'vitepress'
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { isSideBarEmpty, getSideBarConfig } from './support/sideBar'
 import { openSideBar, toggleSidebar } from './composables/sideBar'
+import { bps } from './composables/breakpoints'
 import type { DefaultTheme } from './config'
 
-const bps = useBreakpoints(breakpointsTailwind)
 const bpxl = bps.greater('xl')
 
 const Home = defineAsyncComponent(() => import('./components/Home.vue'))

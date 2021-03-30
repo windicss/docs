@@ -19,9 +19,8 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { toggleSidebar } from '../../composables/sideBar'
-const bps = useBreakpoints(breakpointsTailwind)
+import { bps } from '../../composables/breakpoints'
 const bpmd = bps.greater('md')
 
 defineProps({

@@ -2,14 +2,13 @@
 import { defineProps, ref, onMounted } from 'vue'
 import type { PropType } from 'vue'
 import type { Config } from 'windicss/types/interfaces'
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { Splitpanes, Pane } from 'splitpanes'
 import { useWindiCSS } from '../../composables/useWindiCSS'
 import { getSharedCode, useEmitShare } from '../../composables/useShare'
+import { bps } from '../../composables/breakpoints'
 import { html, css } from '../../examples/playground'
 import 'splitpanes/dist/splitpanes.css'
 
-const bps = useBreakpoints(breakpointsTailwind)
 const bpmd = bps.greater('md')
 
 const styleCode = ref(css)

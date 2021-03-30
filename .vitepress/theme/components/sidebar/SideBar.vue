@@ -20,14 +20,13 @@
 
 <script setup lang="ts">
 import { watch } from 'vue'
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { openSideBar, toggleSidebar } from '../../composables/sideBar'
+import { bps } from '../../composables/breakpoints'
 watch(openSideBar, (v) => {
   v
     ? document.documentElement.classList.add('overflow-hidden')
     : document.documentElement.classList.remove('overflow-hidden')
 })
-const bps = useBreakpoints(breakpointsTailwind)
 const bpmd = bps.greater('md')
 </script>
 
