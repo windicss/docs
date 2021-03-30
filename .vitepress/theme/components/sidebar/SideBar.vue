@@ -2,7 +2,11 @@
   <aside class="sidebar" :class="{ 'open': openSideBar }">
     <div class="sticky bg-$c-bg top-0 flex items-center justify-between p-4 pt-15px -mx-4 z-51">
       <NavBarTitle class="px-2" />
-      <ToggleSideBarButton @toggle="toggleSidebar" />
+      <div class="flex-grow" />
+      <slot v-if="!bpmd" name="search" />
+      <ToggleSideBarButton @toggle="toggleSidebar(false)">
+        <ri:close-fill />
+      </ToggleSideBarButton>
     </div>
     <SideBarNavLinks class="nav" />
 
@@ -16,12 +20,15 @@
 
 <script setup lang="ts">
 import { watch } from 'vue'
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { openSideBar, toggleSidebar } from '../../composables/sideBar'
 watch(openSideBar, (v) => {
   v
     ? document.documentElement.classList.add('overflow-hidden')
     : document.documentElement.classList.remove('overflow-hidden')
 })
+const bps = useBreakpoints(breakpointsTailwind)
+const bpmd = bps.greater('md')
 </script>
 
 <style scoped lang="postcss">

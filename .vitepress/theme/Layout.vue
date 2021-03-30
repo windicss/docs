@@ -17,7 +17,12 @@
         <AlgoliaSearchBox :options="theme.algolia" :small="playground" />
       </template>
     </NavBar>
-    <SideBar />
+    <SideBar>
+      <template #search>
+        <NavDivider />
+        <AlgoliaSearchBox :options="theme.algolia" :small="playground" />
+      </template>
+    </SideBar>
     <div class="relative pt-$header-height min-h-screen w-full" :class="{'lg:pl-$sidebar-width': showSidebar}">
       <Home v-if="enableHome" />
       <Playground v-else-if="playground" />
