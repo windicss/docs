@@ -28,8 +28,10 @@ export function useEmitShare(html: Ref<string>, css: Ref<string>) {
   const url = computed(() => getShareURL(html.value, css.value))
   watch(url, () => {
     const path = `${url.value.pathname}${url.value.search}`
-    window.history.replaceState('', '', path)
+    if (typeof window !== 'undefined')
+      window.history.replaceState('', '', path)
   }, { immediate: true })
+
   emitter.on(SHARE_EVENT, async() => {
     await navigator.clipboard.writeText(url.value.toString())
   })
