@@ -31,6 +31,6 @@ const show = computed(() => links.value || repo.value)
 
 <style scoped lang="postcss">
 .nav-links {
-  @apply flex space-x-6 items-center;
+  @apply flex space-x-3 xl:space-x-6 items-center;
 }
 </style>

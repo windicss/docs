@@ -14,7 +14,7 @@
       </template>
       <template #search>
         <NavDivider />
-        <AlgoliaSearchBox :options="theme.algolia" :small="playground" />
+        <AlgoliaSearchBox :options="theme.algolia" :small="playground || (!bpxl && !enableHome)" />
       </template>
     </NavBar>
     <SideBar>
@@ -41,9 +41,13 @@ import {
   // usePageData,
   useSiteDataByRoute,
 } from 'vitepress'
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { isSideBarEmpty, getSideBarConfig } from './support/sideBar'
 import { openSideBar, toggleSidebar } from './composables/sideBar'
 import type { DefaultTheme } from './config'
+
+const bps = useBreakpoints(breakpointsTailwind)
+const bpxl = bps.greater('xl')
 
 const Home = defineAsyncComponent(() => import('./components/Home.vue'))
 const Playground = defineAsyncComponent(() => import('./components/play/Playground.vue'))
