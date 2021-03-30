@@ -19,7 +19,6 @@
     </NavBar>
     <SideBar>
       <template #search>
-        <NavDivider />
         <AlgoliaSearchBox :options="theme.algolia" :small="playground" />
       </template>
     </SideBar>
