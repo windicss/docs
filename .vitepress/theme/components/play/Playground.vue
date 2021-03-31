@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { defineProps, ref, onMounted } from 'vue'
+import { defineProps, ref, onMounted, computed } from 'vue'
 import type { PropType } from 'vue'
 import type { Config } from 'windicss/types/interfaces'
 import { Splitpanes, Pane } from 'splitpanes'
 import { useWindiCSS } from '../../composables/useWindiCSS'
 import { getSharedCode, useEmitShare } from '../../composables/useShare'
+import { layout } from '../../composables/playgroundLayout'
 import { bps } from '../../composables/breakpoints'
 import { html, css } from '../../examples/playground'
 import 'splitpanes/dist/splitpanes.css'
@@ -13,6 +14,8 @@ const bpmd = bps.greater('md')
 
 const styleCode = ref(css)
 const htmlCode = ref(html)
+
+const showCodePane = computed(() => layout.value.template || layout.value.style)
 
 const props = defineProps({
   config: {
@@ -40,17 +43,17 @@ useEmitShare(htmlCode, styleCode)
   <div class="playground">
     <ClientOnly>
       <Splitpanes :horizontal="!bpmd" class="default-theme h-full w-full">
-        <Pane min-size="20" :size="bpmd ? 60 : 66">
+        <Pane v-if="showCodePane" min-size="20" :size="bpmd ? 60 : 66">
           <Splitpanes horizontal>
-            <Pane min-size="20">
+            <Pane v-if="layout.template" min-size="20">
               <TemplateBlock v-model="htmlCode" class="h-full w-full" :processor="processor" />
             </Pane>
-            <Pane min-size="20">
+            <Pane v-if="layout.style" min-size="20">
               <StyleBlock v-model="styleCode" class="h-full w-full" :processor="processor" />
             </Pane>
           </Splitpanes>
         </Pane>
-        <Pane min-size="20" :size="bpmd ? 40 : 33">
+        <Pane v-if="layout.preview" min-size="20" :size="bpmd ? 40 : 33">
           <PreviewBlock class="h-full">
             <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
           </PreviewBlock>

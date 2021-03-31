@@ -5,9 +5,7 @@
         <NavDivider />
         <!-- TODO -->
         <ShareButton />
-        <NavBarIcon class="!hidden !md:inline-flex">
-          <carbon:open-panel-right />
-        </NavBarIcon>
+        <LayoutSwitch />
         <NavBarIcon class="!hidden !md:inline-flex">
           <ion:settings-outline />
         </NavBarIcon>
