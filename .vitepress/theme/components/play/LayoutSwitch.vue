@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { defineProps, onMounted, onUnmounted, ref } from 'vue'
 import { useToggle } from '@vueuse/core'
-import { toggleLayout } from '../../composables/playgroundLayout'
+// @ts-ignore
+import { layout } from '../../composables/playgroundLayout'
 
 defineProps({})
 
@@ -23,13 +24,13 @@ onUnmounted(() => {
       <carbon:open-panel-right />
     </NavBarIcon>
     <div v-if="show" class="dropdown-model">
-      <NavBarIcon @click="toggleLayout('template')">
-        <carbon:open-panel-top />
+      <NavBarIcon @click="layout = 'left'">
+        <carbon:open-panel-left />
       </NavBarIcon>
-      <NavBarIcon @click="toggleLayout('style')">
+      <NavBarIcon @click="layout = 'bottom'">
         <carbon:open-panel-bottom />
       </NavBarIcon>
-      <NavBarIcon @click="toggleLayout('preview')">
+      <NavBarIcon @click="layout = 'right'">
         <carbon:open-panel-right />
       </NavBarIcon>
     </div>
