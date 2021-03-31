@@ -24,13 +24,13 @@ onUnmounted(() => {
       <carbon:open-panel-right />
     </NavBarIcon>
     <div v-if="show" class="dropdown-model">
-      <NavBarIcon @click="layout = 'left'">
+      <NavBarIcon v-if="layout !== 'left'" @click="layout = 'left'">
         <carbon:open-panel-left />
       </NavBarIcon>
-      <NavBarIcon @click="layout = 'bottom'">
+      <NavBarIcon v-if="layout !== 'bottom'" @click="layout = 'bottom'">
         <carbon:open-panel-bottom />
       </NavBarIcon>
-      <NavBarIcon @click="layout = 'right'">
+      <NavBarIcon v-if="layout !== 'right'" @click="layout = 'right'">
         <carbon:open-panel-right />
       </NavBarIcon>
     </div>
