@@ -27,7 +27,7 @@ jobs:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-${{ matrix.node }}-pnpm-v2-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.node }}-pnpm-
+            ${{ runner.os }}-${{ matrix.node }}-pnpm-v2
       - name: Install dependencies
         run: |
           npm i -g pnpm @antfu/ni
