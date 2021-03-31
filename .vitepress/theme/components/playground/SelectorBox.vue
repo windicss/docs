@@ -119,28 +119,28 @@ function toggleAll() {
 </script>
 
 <template>
-  <div class="w-24 h-24 relative ring-4 ring-gray-400 ring-opacity-10 ring-inset rounded-xl">
+  <div class="relative w-24 h-24 ring-4 ring-gray-400 ring-opacity-10 ring-inset rounded-xl">
     <!-- Corners -->
     <template
       v-if="['all', 'corners'].includes(mode)"
     >
       <div
-        class="item rounded-tl-xl border-t-4 border-l-4"
+        class="border-t-4 border-l-4 item rounded-tl-xl"
         :class="{ active: includes('tl'), has: has('tl') }"
         @click="toggle('tl')"
       />
       <div
-        class="item rounded-tr-xl border-t-4 border-r-4 right-0"
+        class="right-0 border-t-4 border-r-4 item rounded-tr-xl"
         :class="{ active: includes('tr'), has: has('tr') }"
         @click="toggle('tr')"
       />
       <div
-        class="item rounded-bl-xl border-b-4 border-l-4 bottom-0"
+        class="bottom-0 border-b-4 border-l-4 item rounded-bl-xl"
         :class="{ active: includes('bl'), has: has('bl') }"
         @click="toggle('bl')"
       />
       <div
-        class="item rounded-br-xl border-b-4 border-r-4 right-0 bottom-0"
+        class="bottom-0 right-0 border-b-4 border-r-4 item rounded-br-xl"
         :class="{ active: includes('br'), has: has('br') }"
         @click="toggle('br')"
       />
@@ -150,33 +150,29 @@ function toggleAll() {
       v-if="['all', 'edges'].includes(mode)"
     >
       <div
-        class="item transform border-t-4 left-1/2 -translate-x-1/2"
+        class="transform -translate-x-1/2 border-t-4 item left-1/2"
         :class="{ active: includes('t'), has: has('t') }"
         @click="toggle('t')"
       />
       <div
-        class="item transform border-b-4 bottom-0 left-1/2 -translate-x-1/2"
+        class="bottom-0 transform -translate-x-1/2 border-b-4 item left-1/2"
         :class="{ active: includes('b'), has: has('b') }"
         @click="toggle('b')"
       />
       <div
-        class="item transform border-l-4 top-1/2 -translate-y-1/2"
+        class="transform -translate-y-1/2 border-l-4 item top-1/2"
         :class="{ active: includes('l'), has: has('l') }"
         @click="toggle('l')"
       />
       <div
-        class="item transform border-r-4 right-0 top-1/2 -translate-y-1/2"
+        class="right-0 transform -translate-y-1/2 border-r-4 item top-1/2"
         :class="{ active: includes('r'), has: has('r') }"
         @click="toggle('r')"
       />
     </template>
     <!-- all -->
     <div
-      class="
-        button absolute w-6 h-6 transform border-2 rounded
-        border-gray-400 border-opacity-25
-        left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2
-      "
+      class="absolute w-6 h-6 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-400 border-opacity-25 rounded  button left-1/2 top-1/2"
       @click="toggleAll()"
     />
   </div>

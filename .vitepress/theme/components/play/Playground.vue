@@ -40,7 +40,7 @@ useEmitShare(htmlCode, styleCode)
 <template>
   <div class="playground">
     <ClientOnly>
-      <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="default-theme h-full w-full">
+      <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="w-full h-full default-theme">
         <Pane v-if="layout === 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PreviewBlock class="h-full">
             <PlaygroundIframe class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
@@ -49,10 +49,10 @@ useEmitShare(htmlCode, styleCode)
         <Pane min-size="20" :size="bpmd ? 60 : 66">
           <Splitpanes :horizontal="layout !== 'bottom'">
             <Pane min-size="20">
-              <TemplateBlock v-model="htmlCode" class="h-full w-full" :processor="processor" />
+              <TemplateBlock v-model="htmlCode" class="w-full h-full" :processor="processor" />
             </Pane>
             <Pane min-size="20">
-              <StyleBlock v-model="styleCode" class="h-full w-full" :processor="processor" />
+              <StyleBlock v-model="styleCode" class="w-full h-full" :processor="processor" />
             </Pane>
           </Splitpanes>
         </Pane>
