@@ -1,10 +1,10 @@
 # Installation
 
-Windi CSS provides first-class integrations for your favorite tools, select yours and get started.
+Windi CSS provides **first-class integrations** for your favorite tools, select yours and get started.
 
 ## Build Tools
 
-Build tools support are framework-agnostic, and they should works for any UI library you like.
+Build tools support are framework-agnostic, they should works for most framework without specific configurations.
 
 <Integrations class="mb-5" :items="[
   {
@@ -78,9 +78,10 @@ In addition of the general build tools support, we also provide integrations for
     title: 'WebStorm',
     link: '/guide/editors/webstorm',
     logo: 'webstorm',
+    wip: true
   },
 ]"/>
 
 <div class="pb-5"></div>
 
-> Didn't see the framework you use? [Submit an framework request on GitHub](https://github.com/windicss/windicss/issues/new).
+> Didn't see the framework you use? [Submit a framework request on GitHub](https://github.com/windicss/windicss/issues/new).

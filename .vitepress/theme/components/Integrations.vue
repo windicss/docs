@@ -2,7 +2,7 @@
 import { defineProps } from 'vue'
 
 const props = defineProps<{
-  items: {link: string; logo: string; title: string}[]
+  items: {link: string; logo: string; title: string; wip?: boolean }[]
 }>()
 </script>
 
@@ -11,14 +11,12 @@ const props = defineProps<{
     <a
       v-for="item of props.items"
       :key="item.link"
-      class="
-        border bc rounded-lg p-4 text-$c-fg text-center relative
-        no-underline transition-all duration-500 w-30 h-30 hover:(shadow-xl) dark:hover:(bg-gray-400 bg-opacity-10)
-      "
+      class="border rounded-lg h-30 text-$c-fg text-center p-4 transition-all w-30 duration-500 bc relative no-underline hover:(shadow-xl) dark:hover:(bg-gray-400 bg-opacity-10)"
       :href="item.link"
     >
-      <Logo :name="item.logo" class="text-5xl m-auto block" />
-      <div class="absolute bottom-0 left-0 right-0 no-underline pb-3">{{ item.title }}</div>
+      <Logo :name="item.logo" class="m-auto text-5xl block" />
+      <div class="pb-3 right-0 bottom-0 left-0 absolute no-underline">{{ item.title }}</div>
+      <div v-if="item.wip" class="text-xs opacity-50 transform right-2 bottom-7 scale-90 absolute italic">WIP</div>
     </a>
   </div>
 </template>
