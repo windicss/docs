@@ -1,6 +1,6 @@
 # Integration for Nuxt.js
 
-[nuxt-windicss-module](https://github.com/windicss/nuxt-windicss-module)
+<PackageInfo name="nuxt-windicss-module" author="harlan-zw" />
 
 ## Installation
 

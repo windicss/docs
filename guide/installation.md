@@ -23,6 +23,11 @@ Build tools support are framework-agnostic, and they should works for any UI lib
     logo: 'rollup',
   },
   {
+    title: 'PostCSS',
+    link: '/guide/integrations/postcss',
+    logo: 'postcss',
+  },
+  {
     title: 'CLI',
     link: '/guide/integrations/cli',
     logo: 'cli',

@@ -4,7 +4,7 @@
 
 # Integration for Svelte
 
-<kbd>[svelte-windicss-preprocess]</kbd> provides simple integration for Windi CSS using [svelte.preprocess](https://svelte.dev/docs#svelte_preprocess) API.
+<PackageInfo name="svelte-windicss-preprocess" author="alexanderniebuhr" />
 
 ## Installation
 

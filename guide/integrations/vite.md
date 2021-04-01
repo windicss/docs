@@ -1,12 +1,11 @@
 [speed comparison]: https://twitter.com/antfu7/status/1361398324587163648
-[vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [CSS directives]: /guide/features/directives
 [classes utilities]: /guide/features/utilities
 [migration]: /guide/migration
 
-# Integration for Vite
+# Integration for [Vite](https://vitejs.dev)
 
-[vite-plugin-windicss]
+<PackageInfo name="vite-plugin-windicss" author="antfu" />
 
 ## Features
 
@@ -23,7 +22,7 @@
 
 ## Installation
 
-Add the package:
+Install the package:
 
 ```bash
 npm install vite-plugin-windicss --save-dev
@@ -63,11 +62,12 @@ Rename it to `tailwind.config.ts` and things will just work!
 
 ```ts
 // tailwind.config.ts
-import { defineConfig } from 'vite-plugin-windicss'
+import { defineConfig } from 'windcss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
 export default defineConfig({
   darkMode: 'class',
+  safelist: 'p-3 p-4 p-5',
   theme: {
     extend: {
       colors: {
@@ -105,8 +105,6 @@ Oh and don't worry about the final bundle, in production build `virtual:windi-de
 
 > ⚠️ Please use it with caution, under the hood we use [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to detect the class changes. Which means not only your manual changes but also the changes made by your scripts will be detected and included in the stylesheet. This could cause some misalignment between dev and the production build when **using dynamically constructed classes** (false-positive). We recommended adding your dynamic parts to the `safelist` or setup UI regression tests for your production build if possible.
 
-💡 Idea by @ElMassimo.
-
 ## Configuration
 
 ### Preflight (style reseting)
@@ -114,14 +112,12 @@ Oh and don't worry about the final bundle, in production build `virtual:windi-de
 Preflight is enables on demanded, if you'd like to completely disable it, you can configure it as below
 
 ```ts
-// vite.config.js
-export default {
-  plugins: [
-    WindiCSS({
-      preflight: false,
-    }),
-  ],
-}
+// windi.config.ts
+import { defineConfig } from 'vite-plugin-windicss'
+
+export default defineConfig({
+  preflight: false,
+})
 ```
 
 ### Safelist
@@ -136,34 +132,30 @@ By default, we scan your source code statically and find all the usages of the u
 For that, you will need to specify the possible combinations in the `safelist` options of `vite.config.js`.
 
 ```ts
-// vite.config.js
-export default {
-  plugins: [
-    WindiCSS({
-      safelist: 'p-1 p-2 p-3 p-4',
-    }),
-  ],
-}
+// windi.config.ts
+import { defineConfig } from 'vite-plugin-windicss'
+
+export default defineConfig({
+  safelist: 'p-1 p-2 p-3 p-4',
+})
 ```
 
 Or you can do it this way
 
 ```ts
+// windi.config.ts
+import { defineConfig } from 'vite-plugin-windicss'
+
 function range(size, startAt = 1) {
   return Array.from(Array(size).keys()).map(i => i + startAt)
 }
 
-// vite.config.js
-export default {
-  plugins: [
-    WindiCSS({
-      safelist: [
-        range(30).map(i => `p-${i}`), // p-1 to p-3
-        range(10).map(i => `mt-${i}`), // mt-1 to mt-10
-      ],
-    }),
+export default defineConfig({
+  safelist: [
+    range(30).map(i => `p-${i}`), // p-1 to p-3
+    range(10).map(i => `mt-${i}`), // mt-1 to mt-10
   ],
-}
+})
 ```
 
 ### Scanning
@@ -172,8 +164,24 @@ On server start, `vite-plugin-windicss` will scan your source code and extract t
 only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scaning for other file type of locations, you can configure it via:
 
 ```ts
+// windi.config.js
+import { defineConfig } from 'windcss/helpers'
+
+export default defineConfig({
+  extract: {
+    include: ['src/**/*.{vue,html,jsx,tsx}'],
+    exclude: ['node_modules', '.git'],
+  },
+})
+```
+
+Or in plugin options:
+
+```ts
 // vite.config.js
-export default {
+import { defineConfig } from 'vite'
+
+export default defineConfig({
   plugins: [
     WindiCSS({
       scan: {
@@ -182,7 +190,7 @@ export default {
       },
     }),
   ],
-}
+})
 ```
 
 ### More

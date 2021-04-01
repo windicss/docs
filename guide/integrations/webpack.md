@@ -1,6 +1,6 @@
-# Integration for webpack
+# Integration for Webpack
 
-Plugin Source: [windicss-webpack-plugin](https://github.com/windicss/windicss-webpack-plugin)
+<PackageInfo name="windicss-webpack-plugin" author="harlan-zw" />
 
 ## About
 

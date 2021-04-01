@@ -1,6 +1,10 @@
 # Integration for Rollup
 
-[rollup-plugin-windicss](https://github.com/windicss/vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss)
+<PackageInfo
+  name="rollup-plugin-windicss"
+  repo="vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss"
+  author="antfu"
+/>
 
 ## Installations
 

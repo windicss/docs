@@ -1,6 +1,6 @@
-# Integration for Gridsome
+# Integration for [Gridsome](https://gridsome.org/)
 
-[gridsome-plugin-windicss](https://github.com/windicss/gridsome-plugin-windicss)
+<PackageInfo name="gridsome-plugin-windicss" author="harlan-zw" />
 
 ## Install
 
@@ -24,7 +24,7 @@ export default {
       use: 'gridsome-plugin-windicss',
       options: {
         // see https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts
-      }
+      },
     },
   ],
 }
@@ -65,9 +65,9 @@ export default {
       'dist',
       '.cache',
       '*.template.html',
-      'app.html'
+      'app.html',
     ],
-    include: []
+    include: [],
   },
   transformCSS: 'pre',
   preflight: {
@@ -75,8 +75,8 @@ export default {
       // add gridsome aliases
       'g-link': 'a',
       'g-image': 'img',
-    }
-  }
+    },
+  },
 }
 ```  
 
@@ -95,7 +95,7 @@ export default {
       use: 'gridsome-plugin-windicss',
       options: {
         preflight: false,
-      }
+      },
     },
   ],
 }

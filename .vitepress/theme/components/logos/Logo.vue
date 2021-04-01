@@ -7,6 +7,7 @@ import Rollup from '/@vite-icons/logos/rollup'
 import Webpack from '/@vite-icons/logos/webpack'
 import VSCode from '/@vite-icons/logos/visual-studio-code'
 import Webstrom from '/@vite-icons/logos/webstorm'
+import PostCSS from '/@vite-icons/logos/postcss'
 import Gridsome from '/@vite-icons/logos/gridsome-icon'
 import NextJs from './NuxtJs.vue'
 import Vite from './ViteLogo.vue'
@@ -40,6 +41,8 @@ const Logo = computed(() => {
       return VSCode
     case 'webstorm':
       return Webstrom
+    case 'postcss':
+      return PostCSS
     default:
       return Windi
   }
