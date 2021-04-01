@@ -1,38 +1,54 @@
 # Responsive Design
 
+Doing [Responsive Design](https://en.wikipedia.org/wiki/Responsive_web_design) in Windi CSS is effortless. By simply add variant prefixes like `md:` or `lg:` to the utility you want, and the corresponding media query will be generated. Try it yourself using the playground below:
 
-### Mobile First
+<InlinePlayground :input="'p-1 lg:p-2'" :showCSS="true" :showPreview="false"/>
 
-| Variant | Min-Width |
-| :------ | :--- | 
-| sm | `640px` |
-| md | `768px` |
-| lg | `1024px` |
-| xl | `1280px` |
-| 2xl | `1536px` |
+When you want to apply a breakpoint variant to multiple utilities, in Windi CSS you can do that without repeating using the [Variant Groups](/guide/features/variant-groups.html) feature.
 
-### Desktop First
+<InlinePlayground :input="'p-1 lg:(p-2 m-2 text-red-400)'" :showCSS="true" :showPreview="false"/>
 
-| Variant | Max-Width | 
-| :------ | :--- |
-| -sm | `640px` |
-| -md | `768px` |
-| -lg | `1024px` | 
-| -xl | `1280px` | 
-| -2xl  | `1536px` | 
+## Custom Range
 
-### Only Screen
+By default, Windi CSS's breakpoints is designed as Mobile First. 
 
-| Variant | Min-Width | Max-Width |
-| :------ | :--- | :---------- |
-| +sm | `640px` |  `768px` |
-| +md | `768px` |  `1024px` |
-| +lg | `1024px` |  `1280px` |
-| +xl | `1280px` |  `1536px` |
-| +2xl | `1536px` | - | 
+Which means unprefixed utilities (like `p-1`) take effect on all screen sizes, while prefixed utilities (like `md:p-2`) only take effect at the **specified breakpoint and above**.
 
-You can use `+` for __Only Screen__ and `-` for __Desktop First__ in screen utilities, for example:
+We also provided the ability to have more controls over the query range by adding the `<` and `@` prefix:
 
-<InlinePlayground :input="'sm:p-1\n+sm:p-2\n-sm:p-3'" :showCSS="true" :showPreview="false"/>
+```bash
+lg  => greater or equal than this breakpoint
+<lg => smaller than this breakpoint
+@lg => exactly this breakpoint range
+```
 
-See [screen variants](/utilities/variants.html#screen-variants) for more details.
+<InlinePlayground :input="'lg:p-1\n<lg:p-2\n@lg:p-3'" :showCSS="true" :showPreview="false"/>
+
+## Breakpoints
+
+|  | Default | `<` prefixed | `@` prefixed |
+| :------ | :--- | :--- | :--- | :--- |
+| sm | (min-width: 640px) | (max-width: 639.9px) | (min-width: 640px) and <br>(max-width: 767.9px) |
+| md | (min-width: 768px) | (max-width: 767.9px) | (min-width: 768px) and <br>(max-width: 1023.9px) |
+| lg | (min-width: 1024px) | (max-width: 1023.9px) | (min-width: 1024px) and <br>(max-width: 1279.9px) |
+| xl | (min-width: 1280px) | (max-width: 1279.9px) | (min-width: 1280px) and <br>(max-width: 1535.9px) |
+| 2xl | (min-width: 1536px) | (max-width: 1535.9px) | (min-width: 1536px) |
+
+## Customization
+
+You can customize your breakpoints in your `windi.config.js`
+
+```ts
+// windi.config.js
+import { defineConfig } from 'windicss/helpers'
+
+export default defineConfig({
+  theme: {
+    screens: {
+      tablet: '640px',
+      laptop: '1024px',
+      desktop: '1280px',
+    },
+  },
+})
+```
