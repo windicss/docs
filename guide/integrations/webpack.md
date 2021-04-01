@@ -1,4 +1,6 @@
-# Integration for Webpack
+<Logo name="webpack" class="logo-float-xl"/>
+
+# Integration for [Webpack](https://webpack.js.org/)
 
 <PackageInfo name="windicss-webpack-plugin" author="harlan-zw" />
 

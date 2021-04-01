@@ -45,7 +45,7 @@ devDependencies:
   vite-plugin-components: 0.8.3_vite@2.1.3
   vite-plugin-icons: 0.4.0_@iconify+json@1.1.323
   vite-plugin-restart: 0.0.1_vite@2.1.3
-  vite-plugin-windicss: 0.11.4_vite@2.1.3
+  vite-plugin-windicss: 0.11.7_vite@2.1.3
   vitepress: 0.12.2
 lockfileVersion: 5.2
 packages:
@@ -1052,7 +1052,7 @@ packages:
       vue: '*'
     resolution:
       integrity: sha512-YWgMLvDJ51I+1waSP79Wdc1P78qmYUnLfHquNlzZCZXzR9nDx7cGXm+6HV4xEK3h8mAV38oozJOebQCoCo1DDw==
-  /@windicss/plugin-utils/0.11.4:
+  /@windicss/plugin-utils/0.11.7:
     dependencies:
       debug: 4.3.2
       fast-glob: 3.2.5
@@ -1063,7 +1063,7 @@ packages:
       windicss: 2.5.9
     dev: true
     resolution:
-      integrity: sha512-WYdz/0hdX5rgdKR+72dWOyPX1IevVGH0qPZvRi5MBgEgB1MDSy2K2lah053KzyXCYgprGpmtrPjnt0ENejsOPg==
+      integrity: sha512-1ZuP1qKXGo1YkBJPV0czLnqo0cmufEa4lmWnnHJSoq0lAN/HkMThW1/BxkTUqW4ia9jgGc5keWL9pUep2JtLsA==
   /abbrev/1.1.1:
     dev: true
     resolution:
@@ -4637,9 +4637,9 @@ packages:
       vite: ^2.0.0-beta.69
     resolution:
       integrity: sha512-PSAUOfgDZW7tKDqnDZaq2GBYUFcQ2NS9hsIyYNxt5IMRTkxd/6c3J51n1Y4f7tHvNyZ5boEv9BELudswhk4Q4w==
-  /vite-plugin-windicss/0.11.4_vite@2.1.3:
+  /vite-plugin-windicss/0.11.7_vite@2.1.3:
     dependencies:
-      '@windicss/plugin-utils': 0.11.4
+      '@windicss/plugin-utils': 0.11.7
       chalk: 4.1.0
       debug: 4.3.2
       vite: 2.1.3
@@ -4648,7 +4648,7 @@ packages:
     peerDependencies:
       vite: ^2.0.1
     resolution:
-      integrity: sha512-xGRaeXN6bR6QQceGcoIxfJCPvy+wCWR0ymHdjrYQr19LInEkL0lzvJwQkj51t5T8+56Xc7XsvSMb6HbJ1RERqA==
+      integrity: sha512-wG+/L3CdC4VruRtvRcm2d69e3L4ldXX40z0Obp+rTXycZxv9vUCdpQg5vc6hANlFZWnmvrrGQ3lB0jOXwUu+kg==
   /vite/2.1.3:
     dependencies:
       esbuild: 0.9.7
@@ -4880,7 +4880,7 @@ specifiers:
   vite-plugin-components: ^0.8.3
   vite-plugin-icons: ^0.4.0
   vite-plugin-restart: ^0.0.1
-  vite-plugin-windicss: ^0.11.4
+  vite-plugin-windicss: ^0.11.7
   vitepress: ^0.12.2
   vue: ^3.0.10
   vue-board: ^0.0.5

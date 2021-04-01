@@ -2,7 +2,9 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [migration]: /guide/migration
 
-# Integration for Svelte
+<Logo name="svelte" class="logo-float-xl"/>
+
+# Integration for [Svelte](https://svelte.dev/)
 
 <PackageInfo name="svelte-windicss-preprocess" author="alexanderniebuhr" />
 

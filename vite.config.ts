@@ -21,17 +21,7 @@ export default defineConfig({
     Icons({
       defaultStyle: 'vertical-align: middle;',
     }),
-    WindiCSS({
-      scan: {
-        dirs: ['.vitepress'],
-        include: ['index.md', 'node_modules/vue-board/**/*'],
-        exclude: ['**/examples/**/*'],
-        fileExtensions: ['vue', 'ts'],
-      },
-      safelist: [
-        'pb-5',
-      ],
-    }),
+    WindiCSS(),
     ViteRestart({
       restart: '.vitepress/config/*.*',
     }),

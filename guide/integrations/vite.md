@@ -3,6 +3,8 @@
 [classes utilities]: /guide/features/utilities
 [migration]: /guide/migration
 
+<Logo name="vite" class="logo-float-xl"/>
+
 # Integration for [Vite](https://vitejs.dev)
 
 <PackageInfo name="vite-plugin-windicss" author="antfu" />
@@ -20,7 +22,7 @@
 
 > Check out the [speed comparison] between Windi CSS and Tailwind CSS on Vite.
 
-## Installation
+## Install
 
 Install the package:
 

@@ -5,6 +5,7 @@ defineProps<{
   name: string
   repo?: string
   author?: string
+  npm?: boolean
 }>()
 
 function encode(str: string) {
@@ -17,7 +18,12 @@ function encode(str: string) {
     <a :href="`https://github.com/windicss/${repo || name}`" target="_blank" class="inline-block">
       <img :src="`https://img.shields.io/badge/a-${encode(name)}-gray?logo=github&label=`">
     </a>
-    <a :href="`https://www.npmjs.com/package/${name}`" target="_blank" class="inline-block">
+    <a
+      v-if="npm !== false"
+      :href="`https://www.npmjs.com/package/${name}`"
+      target="_blank"
+      class="inline-block"
+    >
       <img :src="`https://img.shields.io/npm/v/${name}?color=cb0200&label=%20&logo=npm`">
     </a>
     <a

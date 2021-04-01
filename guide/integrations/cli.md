@@ -1,4 +1,6 @@
-# Windi CSS Command Line Interface
+<Logo name="windi" class="logo-float-xl"/>
+
+# Windi CSS CLI
 
 > TODO: rewrite
 

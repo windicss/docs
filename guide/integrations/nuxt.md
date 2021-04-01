@@ -1,8 +1,10 @@
-# Integration for Nuxt.js
+<Logo name="nuxt" class="logo-float-xl"/>
+
+# Integration for [Nuxt.js](https://nuxtjs.org)
 
 <PackageInfo name="nuxt-windicss-module" author="harlan-zw" />
 
-## Installation
+## Install
 
 Add the package:
 

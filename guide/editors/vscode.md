@@ -1,6 +1,8 @@
+<Logo name="vscode" class="logo-float-xl"/>
+
 # Windi CSS Intellisense for VS Code
 
-[windicss-intellisense](https://github.com/windicss/windicss-intellisense)
+<PackageInfo name="windicss-intellisense" :npm="false" author="voorjaar" />
 
 Windi CSS IntelliSense enhances the Windi development experience by providing Visual Studio Code users with advanced features such as autocomplete, syntax highlighting, code folding, and building.
 

@@ -1,4 +1,6 @@
-# Integration for Rollup
+<Logo name="rollup" class="logo-float-xl"/>
+
+# Integration for [Rollup](https://rollupjs.org)
 
 <PackageInfo
   name="rollup-plugin-windicss"

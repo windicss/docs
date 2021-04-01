@@ -5,8 +5,21 @@ import filterPlugin from 'windicss/plugin/filters'
 
 export default defineConfig({
   darkMode: 'class',
+  extract: {
+    include: [
+      './index.md', 
+      './.vitepress/**/*.{vue,ts}',
+    ],
+    exclude: ['**/examples/**/*'],
+  },
+  safelist: [
+    'pb-5',
+    'pt-10',
+    'logo-xl'
+  ],
   shortcuts: {
     bc: 'border-cool-gray-200 dark:border-dark-300',
+    'logo-float-xl': 'text-6xl m-2 float-right'
   },
   theme: {
     extend: {

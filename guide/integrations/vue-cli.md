@@ -1,4 +1,6 @@
-# Integration for Vue CLI
+<Logo name="vue" class="logo-float-xl"/>
+
+# Integration for [Vue CLI](https://cli.vuejs.org)
 
 <PackageInfo name="vue-cli-plugin-windicss" author="harlan-zw" />
 

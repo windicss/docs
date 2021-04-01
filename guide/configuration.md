@@ -17,20 +17,15 @@ Windi CSS [enables][auto] all variants for all utilities by default, configurati
 
 When you input the corresponding class, such as `hover:bg-red-500`, the corresponding variant CSS will be [automatically inferred and generated][auto].
 
-## No need to clear defaults
-
-Any configuration options you provide will [extend] the default options.
-
-If you don't use a certain utility the corresponding CSS will not be generated, so there is no need to clear the defaults.
-
 ## Example Configuration
 
 ```js
 // Example `windi.config.js` file
-const colors = require('windicss/colors')
-const plugin = require('windicss/plugin')
+import { defineConfig } from 'windicss/helpers'
+import colors from 'windicss/colors'
+import plugin from 'windicss/plugin'
 
-export default {
+export default defineConfig({
   darkMode: 'class', // or 'media'
   theme: {
     screens: {
@@ -118,5 +113,5 @@ export default {
       modifiers: ['DEFAULT', 'sm', 'lg', 'red'],
     }),
   ],
-}
+})
 ```

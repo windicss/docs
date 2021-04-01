@@ -1,3 +1,5 @@
+<Logo name="gridsome" class="logo-float-xl"/>
+
 # Integration for [Gridsome](https://gridsome.org/)
 
 <PackageInfo name="gridsome-plugin-windicss" author="harlan-zw" />
