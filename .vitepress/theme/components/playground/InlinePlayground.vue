@@ -274,7 +274,7 @@ onMounted(async() => {
           v-if="showPreview"
           class="border-l bc"
         >
-          <PlaygroundIframe
+          <IframePreview
             class="w-10em"
             v-bind="iframeData"
             :height-offset="40"
