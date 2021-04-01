@@ -29,7 +29,9 @@ export default defineConfig({
   optimizeDeps: {
     include: [
       'vue',
+      'mitt',
       'json5',
+      'lz-string',
       '@vueuse/core',
       'windicss',
       'windicss/colors',
