@@ -1,14 +1,27 @@
 dependencies:
+  '@codemirror/autocomplete': 0.18.3
   '@codemirror/basic-setup': 0.18.0
+  '@codemirror/closebrackets': 0.18.0
   '@codemirror/commands': 0.18.0
+  '@codemirror/comment': 0.18.0
+  '@codemirror/fold': 0.18.0
+  '@codemirror/gutter': 0.18.0
+  '@codemirror/highlight': 0.18.3
+  '@codemirror/history': 0.18.1
   '@codemirror/lang-css': 0.18.0
   '@codemirror/lang-html': 0.18.0
   '@codemirror/lang-javascript': 0.18.0
+  '@codemirror/language': 0.18.1
   '@codemirror/legacy-modes': 0.18.0
+  '@codemirror/lint': 0.18.1
+  '@codemirror/matchbrackets': 0.18.0
+  '@codemirror/rectangular-selection': 0.18.0
+  '@codemirror/search': 0.18.2
   '@codemirror/state': 0.18.3
   '@codemirror/stream-parser': 0.18.1
   '@codemirror/text': 0.18.0
   '@codemirror/theme-one-dark': 0.18.0
+  '@codemirror/tooltip': 0.18.4
   '@codemirror/view': 0.18.3
   '@vueuse/core': 4.6.3_vue@3.0.10
   change-case: 4.1.2
@@ -409,7 +422,7 @@ packages:
       integrity: sha512-kt+EpC6qDfIaqlP+DIbIJOclYy/A1YXs9dAf/ljbi+39Bcbc073H6jKVpXEr/EoIh5anGn5xq/yRVzKl+uIc9w==
   /@codemirror/autocomplete/0.18.3:
     dependencies:
-      '@codemirror/language': 0.18.0
+      '@codemirror/language': 0.18.1
       '@codemirror/state': 0.18.3
       '@codemirror/text': 0.18.0
       '@codemirror/tooltip': 0.18.4
@@ -440,7 +453,7 @@ packages:
       integrity: sha512-3IU6gBIkVVCF+ZtKqzCmYU1GLfbA12OsPYPWWq9rSzEb5G/FrWCA51ERYJpS3CzOI7TfBFjZZYc5j0OiNIF2VQ==
   /@codemirror/closebrackets/0.18.0:
     dependencies:
-      '@codemirror/language': 0.18.0
+      '@codemirror/language': 0.18.1
       '@codemirror/rangeset': 0.18.0
       '@codemirror/state': 0.18.3
       '@codemirror/text': 0.18.0
@@ -470,7 +483,7 @@ packages:
   /@codemirror/fold/0.18.0:
     dependencies:
       '@codemirror/gutter': 0.18.0
-      '@codemirror/language': 0.18.0
+      '@codemirror/language': 0.18.1
       '@codemirror/rangeset': 0.18.0
       '@codemirror/state': 0.18.3
       '@codemirror/view': 0.18.3
@@ -487,7 +500,7 @@ packages:
       integrity: sha512-9hcKzBM5EjhWwrau5Xiv0ll/yOvkgiyLnH7DTsjFCUvuyfbS45WVEMhQ6C+HfsoRVR4TJqRVLJjaIktZqaAqnw==
   /@codemirror/highlight/0.18.3:
     dependencies:
-      '@codemirror/language': 0.18.0
+      '@codemirror/language': 0.18.1
       '@codemirror/rangeset': 0.18.0
       '@codemirror/state': 0.18.3
       '@codemirror/view': 0.18.3
@@ -548,6 +561,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gryu0Sej1vG3S3njwsJ+bhz9zLoJxZ2TahLlxpqOB3uqVGZrGDyE+GmZBnA6I3hwHvaO1O4WXKScVsKoW6HqFA==
+  /@codemirror/language/0.18.1:
+    dependencies:
+      '@codemirror/state': 0.18.3
+      '@codemirror/text': 0.18.0
+      '@codemirror/view': 0.18.3
+      lezer: 0.13.4
+      lezer-tree: 0.13.2
+    dev: false
+    resolution:
+      integrity: sha512-j/TWV8sNmzU79kk/hPLb9NqSPoH59850kQSpgY11LxOEBlKVRKgaWabgNtUCSeVCAnfisGekupk3aq2ftILqug==
   /@codemirror/legacy-modes/0.18.0:
     dependencies:
       '@codemirror/stream-parser': 0.18.1
@@ -566,7 +589,7 @@ packages:
       integrity: sha512-2Ueg/ojU56vF5thxMdS67XQzvHNcBnPKw2zgbDVmL/Z+84SMjP7EKvHV5FlbrKFNGZiwnaAKk5MZRYUwBY3f0g==
   /@codemirror/matchbrackets/0.18.0:
     dependencies:
-      '@codemirror/language': 0.18.0
+      '@codemirror/language': 0.18.1
       '@codemirror/state': 0.18.3
       '@codemirror/view': 0.18.3
       lezer-tree: 0.13.2
@@ -4840,16 +4863,29 @@ packages:
       integrity: sha1-4Se9nmb9hGvl6rSME5SIL3wOT5g=
 specifiers:
   '@antfu/eslint-config': ^0.6.2
+  '@codemirror/autocomplete': ^0.18.3
   '@codemirror/basic-setup': ^0.18.0
+  '@codemirror/closebrackets': ^0.18.0
   '@codemirror/commands': ^0.18.0
+  '@codemirror/comment': ^0.18.0
+  '@codemirror/fold': ^0.18.0
+  '@codemirror/gutter': ^0.18.0
+  '@codemirror/highlight': ^0.18.3
+  '@codemirror/history': ^0.18.1
   '@codemirror/lang-css': ^0.18.0
   '@codemirror/lang-html': ^0.18.0
   '@codemirror/lang-javascript': ^0.18.0
+  '@codemirror/language': ^0.18.1
   '@codemirror/legacy-modes': ^0.18.0
+  '@codemirror/lint': ^0.18.1
+  '@codemirror/matchbrackets': ^0.18.0
+  '@codemirror/rectangular-selection': ^0.18.0
+  '@codemirror/search': ^0.18.2
   '@codemirror/state': ^0.18.3
   '@codemirror/stream-parser': ^0.18.1
   '@codemirror/text': ^0.18.0
   '@codemirror/theme-one-dark': ^0.18.0
+  '@codemirror/tooltip': ^0.18.4
   '@codemirror/view': ^0.18.3
   '@docsearch/css': ^1.0.0-alpha.28
   '@docsearch/js': ^1.0.0-alpha.28
