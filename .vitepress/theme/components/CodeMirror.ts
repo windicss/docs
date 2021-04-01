@@ -8,7 +8,6 @@ import { css } from '@codemirror/legacy-modes/mode/css'
 import type Processor from 'windicss'
 import type { PropType } from 'vue'
 import { basicSetup, hoverPreview } from '../codemirror'
-import { isDark } from '../composables/dark'
 
 export default defineComponent({
   name: 'CodeMirror',
@@ -16,10 +15,6 @@ export default defineComponent({
     modelValue: {
       type: String,
       required: true,
-    },
-    theme: {
-      type: String,
-      default: isDark.value ? 'vs-dark' : 'vs',
     },
     language: {
       type: String,
