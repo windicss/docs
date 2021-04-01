@@ -52,7 +52,7 @@
     "eslint-plugin-markdown": "^2.0.0",
     "prism-theme-vars": "^0.2.2",
     "typescript": "^4.2.3",
-    "vite": "2.1.4",
+    "vite": "2.1.3",
     "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.4.0",
     "vite-plugin-restart": "^0.0.1",
