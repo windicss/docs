@@ -45,7 +45,7 @@ devDependencies:
   vite-plugin-components: 0.8.3_vite@2.1.4
   vite-plugin-icons: 0.4.0_@iconify+json@1.1.323
   vite-plugin-restart: 0.0.1_vite@2.1.4
-  vite-plugin-windicss: 0.11.3_vite@2.1.4
+  vite-plugin-windicss: 0.11.4_vite@2.1.4
   vitepress: 0.12.2
 lockfileVersion: 5.2
 packages:
@@ -986,7 +986,7 @@ packages:
       vue: '*'
     resolution:
       integrity: sha512-YWgMLvDJ51I+1waSP79Wdc1P78qmYUnLfHquNlzZCZXzR9nDx7cGXm+6HV4xEK3h8mAV38oozJOebQCoCo1DDw==
-  /@windicss/plugin-utils/0.11.3:
+  /@windicss/plugin-utils/0.11.4:
     dependencies:
       debug: 4.3.2
       fast-glob: 3.2.5
@@ -997,7 +997,7 @@ packages:
       windicss: 2.5.9
     dev: true
     resolution:
-      integrity: sha512-1AqBKfZK+DVW4B+iKFEseLUt5kurrb+dj/U0OnONnqRMRwu7QLtYWc017URwoZ0uLJtBIduGsK2PFxJcTAtolQ==
+      integrity: sha512-WYdz/0hdX5rgdKR+72dWOyPX1IevVGH0qPZvRi5MBgEgB1MDSy2K2lah053KzyXCYgprGpmtrPjnt0ENejsOPg==
   /abbrev/1.1.1:
     dev: true
     resolution:
@@ -1041,7 +1041,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
-  /ajv/8.0.2:
+  /ajv/8.0.3:
     dependencies:
       fast-deep-equal: 3.1.3
       json-schema-traverse: 1.0.0
@@ -1049,7 +1049,7 @@ packages:
       uri-js: 4.4.1
     dev: true
     resolution:
-      integrity: sha512-V0HGxJd0PiDF0ecHYIesTOqfd1gJguwQUOYfMfAWnRsWQEXfc5ifbUFhD3Wjc+O+y7VAqL+g07prq9gHQ/JOZQ==
+      integrity: sha512-Df6NAivu9KpZw+q8ySijAgLvr1mUA5ihkRvCLCxpdYR21ann5yIuN+PpFxmweSj7i3yjJ0x5LN5KVs0RRzskAQ==
   /algoliasearch/3.35.1:
     dependencies:
       agentkeepalive: 2.2.0
@@ -1278,7 +1278,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001205
       colorette: 1.2.2
-      electron-to-chromium: 1.3.703
+      electron-to-chromium: 1.3.704
       escalade: 3.1.1
       node-releases: 1.1.71
     dev: true
@@ -1737,10 +1737,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-OoOpBOVDUyh4dMVkt1SThoSamMk=
-  /electron-to-chromium/1.3.703:
+  /electron-to-chromium/1.3.704:
     dev: true
     resolution:
-      integrity: sha512-SVBVhNB+4zPL+rvtWLw7PZQkw/Eqj1HQZs22xtcqW36+xoifzEOEEDEpkxSMfB6RFeSIOcG00w6z5mSqLr1Y6w==
+      integrity: sha512-6cz0jvawlUe4h5AbfQWxPzb+8LzVyswGAWiGc32EJEmfj39HTQyNPkLXirc7+L4x5I6RgRkzua8Ryu5QZqc8cA==
   /emoji-regex/8.0.0:
     dev: true
     resolution:
@@ -4238,7 +4238,7 @@ packages:
       integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   /table/6.0.9:
     dependencies:
-      ajv: 8.0.2
+      ajv: 8.0.3
       is-boolean-object: 1.1.0
       is-number-object: 1.0.4
       is-string: 1.0.5
@@ -4579,9 +4579,9 @@ packages:
       vite: ^2.0.0-beta.69
     resolution:
       integrity: sha512-PSAUOfgDZW7tKDqnDZaq2GBYUFcQ2NS9hsIyYNxt5IMRTkxd/6c3J51n1Y4f7tHvNyZ5boEv9BELudswhk4Q4w==
-  /vite-plugin-windicss/0.11.3_vite@2.1.4:
+  /vite-plugin-windicss/0.11.4_vite@2.1.4:
     dependencies:
-      '@windicss/plugin-utils': 0.11.3
+      '@windicss/plugin-utils': 0.11.4
       chalk: 4.1.0
       debug: 4.3.2
       vite: 2.1.4
@@ -4590,7 +4590,7 @@ packages:
     peerDependencies:
       vite: ^2.0.1
     resolution:
-      integrity: sha512-4C8IyfT7gsxKlq+prPfJaVdftmTfT4rSsNzoMBMy+uB87zW/ucbJR4LJouSmHmV+g26rWA4OGDH+WkY4cCOs+Q==
+      integrity: sha512-xGRaeXN6bR6QQceGcoIxfJCPvy+wCWR0ymHdjrYQr19LInEkL0lzvJwQkj51t5T8+56Xc7XsvSMb6HbJ1RERqA==
   /vite/2.1.4:
     dependencies:
       esbuild: 0.9.7
@@ -4605,20 +4605,6 @@ packages:
       fsevents: 2.3.2
     resolution:
       integrity: sha512-j/p0RZQvNY/auSPfazsDfo1PHtFp8ktwXPbzI6NqplzHcR3Cn/dfQWiMxL6zp8j9IWdcJP1Zfms7mxruBhStJw==
-  /vite/2.1.5:
-    dependencies:
-      esbuild: 0.9.7
-      postcss: 8.2.9
-      resolve: 1.20.0
-      rollup: 2.44.0
-    dev: true
-    engines:
-      node: '>=12.0.0'
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
-    resolution:
-      integrity: sha512-tYU5iaYeUgQYvK/CNNz3tiJ8vYqPWfCE9IQ7K0iuzYovWw7lzty7KRYGWwV3CQPh0NKxWjOczAqiJsCL0Xb+Og==
   /vitepress/0.12.2:
     dependencies:
       '@docsearch/css': 1.0.0-alpha.28
@@ -4646,7 +4632,7 @@ packages:
       prismjs: 1.23.0
       sirv: 1.0.11
       slash: 3.0.0
-      vite: 2.1.5
+      vite: 2.1.4
       vue: 3.0.10
     dev: true
     engines:
@@ -4827,7 +4813,7 @@ specifiers:
   vite-plugin-components: ^0.8.3
   vite-plugin-icons: ^0.4.0
   vite-plugin-restart: ^0.0.1
-  vite-plugin-windicss: ^0.11.3
+  vite-plugin-windicss: ^0.11.4
   vitepress: ^0.12.2
   vue: ^3.0.10
   vue-board: ^0.0.5
