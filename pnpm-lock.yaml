@@ -41,11 +41,11 @@ devDependencies:
   eslint-plugin-markdown: 2.0.0_eslint@7.23.0
   prism-theme-vars: 0.2.2
   typescript: 4.2.3
-  vite: 2.1.5
-  vite-plugin-components: 0.8.3_vite@2.1.5
+  vite: 2.1.4
+  vite-plugin-components: 0.8.3_vite@2.1.4
   vite-plugin-icons: 0.4.0_@iconify+json@1.1.323
-  vite-plugin-restart: 0.0.1_vite@2.1.5
-  vite-plugin-windicss: 0.11.3_vite@2.1.5
+  vite-plugin-restart: 0.0.1_vite@2.1.4
+  vite-plugin-windicss: 0.11.3_vite@2.1.4
   vitepress: 0.12.2
 lockfileVersion: 5.2
 packages:
@@ -4545,13 +4545,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ASt4mBUHcTpMKD/l5Q+WJXNtshlWxOogYyGYYrg4lt/vuRjC1EFQtlAofL5VmtVNIZJzWYFJjzGWZ0Gw8pzW1w==
-  /vite-plugin-components/0.8.3_vite@2.1.5:
+  /vite-plugin-components/0.8.3_vite@2.1.4:
     dependencies:
       chokidar: 3.5.1
       debug: 4.3.2
       fast-glob: 3.2.5
       minimatch: 3.0.4
-      vite: 2.1.5
+      vite: 2.1.4
     dev: true
     peerDependencies:
       vite: ^2.0.0-beta.69
@@ -4569,28 +4569,42 @@ packages:
       vue-template-compiler: ^2.6.12
     resolution:
       integrity: sha512-IBXx2+cYEXqOMwZd+DsNYisJgWOc4uHDTs4oWz/XeiN0mIelDYDW+TmtxKt0Vl2tz6rFh6iyjOuW+KZocCRsGw==
-  /vite-plugin-restart/0.0.1_vite@2.1.5:
+  /vite-plugin-restart/0.0.1_vite@2.1.4:
     dependencies:
       chalk: 4.1.0
       micromatch: 4.0.2
-      vite: 2.1.5
+      vite: 2.1.4
     dev: true
     peerDependencies:
       vite: ^2.0.0-beta.69
     resolution:
       integrity: sha512-PSAUOfgDZW7tKDqnDZaq2GBYUFcQ2NS9hsIyYNxt5IMRTkxd/6c3J51n1Y4f7tHvNyZ5boEv9BELudswhk4Q4w==
-  /vite-plugin-windicss/0.11.3_vite@2.1.5:
+  /vite-plugin-windicss/0.11.3_vite@2.1.4:
     dependencies:
       '@windicss/plugin-utils': 0.11.3
       chalk: 4.1.0
       debug: 4.3.2
-      vite: 2.1.5
+      vite: 2.1.4
       windicss: 2.5.9
     dev: true
     peerDependencies:
       vite: ^2.0.1
     resolution:
       integrity: sha512-4C8IyfT7gsxKlq+prPfJaVdftmTfT4rSsNzoMBMy+uB87zW/ucbJR4LJouSmHmV+g26rWA4OGDH+WkY4cCOs+Q==
+  /vite/2.1.4:
+    dependencies:
+      esbuild: 0.9.7
+      postcss: 8.2.9
+      resolve: 1.20.0
+      rollup: 2.44.0
+    dev: true
+    engines:
+      node: '>=12.0.0'
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    resolution:
+      integrity: sha512-j/p0RZQvNY/auSPfazsDfo1PHtFp8ktwXPbzI6NqplzHcR3Cn/dfQWiMxL6zp8j9IWdcJP1Zfms7mxruBhStJw==
   /vite/2.1.5:
     dependencies:
       esbuild: 0.9.7
@@ -4809,7 +4823,7 @@ specifiers:
   prismjs: ^1.23.0
   splitpanes: ^3.0.4
   typescript: ^4.2.3
-  vite: ^2.1.5
+  vite: 2.1.4
   vite-plugin-components: ^0.8.3
   vite-plugin-icons: ^0.4.0
   vite-plugin-restart: ^0.0.1
