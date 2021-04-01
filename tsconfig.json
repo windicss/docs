@@ -10,7 +10,8 @@
     "strictFunctionTypes": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "types": ["vite/client"],
   },
   "include": [
     ".vitepress/**/*.ts",
