@@ -28,7 +28,7 @@ export function useEmitShare(html: Ref<string>, css: Ref<string>) {
   const url = computed(() => getShareURL(html.value, css.value))
   watch(url, () => {
     const path = `${url.value.pathname}${url.value.search}`
-    if (typeof window !== 'undefined')
+    if (typeof window !== 'undefined' && !import.meta.env.DEV)
       window.history.replaceState('', '', path)
   }, { immediate: true })
 
