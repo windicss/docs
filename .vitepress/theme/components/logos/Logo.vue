@@ -13,7 +13,7 @@ import NextJs from './NuxtJs.vue'
 import Vite from './ViteLogo.vue'
 import Windi from './WindiLogo.vue'
 
-// 'logo-float-xl'
+// @windicss-safelist: 'logo-float-xl'
 
 const props = defineProps({
   name: {
