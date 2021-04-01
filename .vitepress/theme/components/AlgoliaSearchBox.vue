@@ -112,7 +112,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
         })
       })
     },
-
+    // @ts-ignore
     hitComponent: ({
       hit,
       children,

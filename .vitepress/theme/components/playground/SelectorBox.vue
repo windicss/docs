@@ -71,13 +71,13 @@ function add(...strs: string[]) {
   }
 }
 
-const map = [
+const map: readonly [string, readonly string[]][] = [
   ['r', ['tr', 'br']],
   ['t', ['tr', 'tl']],
   ['b', ['br', 'bl']],
   ['l', ['tl', 'bl']],
   ['ALL', ['r', 't', 'b', 'l']],
-] as const
+]
 
 function normalize() {
   const c = Array.from(directions.value)
