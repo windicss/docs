@@ -5,7 +5,7 @@ defineProps<{
   name: string
   repo?: string
   author?: string
-  npm?: boolean
+  hideNpm?: boolean
 }>()
 
 function encode(str: string) {
@@ -19,7 +19,7 @@ function encode(str: string) {
       <img :src="`https://img.shields.io/badge/a-${encode(name)}-gray?logo=github&label=`">
     </a>
     <a
-      v-if="npm !== false"
+      v-if="!hideNpm"
       :href="`https://www.npmjs.com/package/${name}`"
       target="_blank"
       class="inline-block"

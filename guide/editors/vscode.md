@@ -2,7 +2,7 @@
 
 # Windi CSS Intellisense for VS Code
 
-<PackageInfo name="windicss-intellisense" :npm="false" author="voorjaar" />
+<PackageInfo name="windicss-intellisense" :hideNpm="true" author="voorjaar" />
 
 Windi CSS IntelliSense enhances the Windi development experience by providing Visual Studio Code users with advanced features such as autocomplete, syntax highlighting, code folding, and building.
 
