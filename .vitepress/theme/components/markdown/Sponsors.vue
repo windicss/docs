@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import data from '../../sponsors.json'
-const sponsors = data.filter(i => i.role !== 'ADMIN')
+const cache: any = []
+
+const donated = data.filter(i => i.totalAmountDonated !== 0).filter((i) => {
+  if (cache.includes(i.profile)) {
+    return false
+  }
+  else {
+    cache.push(i.profile)
+    return true
+  }
+})
+const sponsors = donated.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
 </script>
 
 <template>
@@ -8,7 +19,7 @@ const sponsors = data.filter(i => i.role !== 'ADMIN')
     <h2 class="border-none text-2xl">
       Sponsors
     </h2>
-    <div class="flex flex-wrap justify-center px-16">
+    <div class="flex flex-wrap justify-center px-16 mb-6">
       <a
         v-for="{ profile, image, name } of sponsors"
         :key="name"
