@@ -15,12 +15,12 @@ heroImage: /assets/logo.svg
 heroAlt: Windi CSS logo
 
 features:
-  - title: ⚡️ Speed
-    details: Windi only loads the CSS you use
-  - title: 😎 Auto-Utilities
+  - title: On-demand
+    details: Genreate CSS only for utilities you use. With instant hot reload and minimal reproduction size.
+  - title: First-class Integrations
+    details: Provides first-class integrations and best DX for the tools you love. Including Vite, Webpack, Nuxt, Svelte and more!
+  - title: Auto-utilities
     details: Infers number, sizes, and colors from your classes
-  - title: ✅ Cross-Browser Support
-    details: All utilities have cross-browser support
 footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---
 
