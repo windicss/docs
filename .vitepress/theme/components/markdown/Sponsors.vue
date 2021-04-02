@@ -1,17 +1,28 @@
 <script setup lang="ts">
-import data from '../../sponsors.json'
-const cache: any = []
+import { computed } from '@vue/runtime-core'
+import { useAxios } from '@vueuse/integrations'
 
-const donated = data.filter(i => i.totalAmountDonated !== 0).filter((i) => {
-  if (cache.includes(i.profile)) {
-    return false
-  }
-  else {
-    cache.push(i.profile)
-    return true
-  }
+const corsProxyUrl = 'https://cors.maint.workers.dev/?'
+const memberUrl = 'https://opencollective.com/windicss/members.json'
+
+const { data, finished } = useAxios<any[]>(corsProxyUrl + memberUrl)
+
+const sponsors = computed(() => {
+  const cache: any = []
+  return data.value
+    ?.filter(i => i.totalAmountDonated !== 0).filter((i) => {
+      if (cache.includes(i.profile)) {
+        return false
+      }
+      else {
+        cache.push(i.profile)
+        return true
+      }
+    })
+    .sort((a, b) => (
+      b.totalAmountDonated - a.totalAmountDonated
+    ))
 })
-const sponsors = donated.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
 </script>
 
 <template>
@@ -19,7 +30,7 @@ const sponsors = donated.sort((a, b) => b.totalAmountDonated - a.totalAmountDona
     <h2 class="border-none text-2xl">
       Sponsors
     </h2>
-    <div class="flex flex-wrap justify-center px-16 mb-6">
+    <div v-if="finished" class="flex flex-wrap justify-center px-16 mb-6">
       <a
         v-for="{ profile, image, name } of sponsors"
         :key="name"
@@ -30,8 +41,8 @@ const sponsors = donated.sort((a, b) => b.totalAmountDonated - a.totalAmountDona
         class="inline-block w-80px h-80px rounded-full overflow-hidden m-1 hover:no-underline"
       >
         <img v-if="image" :src="image" :alt="name" class="w-full h-full">
-        <div v-else class="w-full h-full bg-gray-100 dark:bg-dark-300 flex items-center p-2">
-          <span class="text-$c-text text-sm">{{ name }}</span>
+        <div v-else class="w-full h-full bg-gray-100 dark:bg-dark-300 flex items-center p-1">
+          <span class="text-$c-text text-xs">{{ name }}</span>
         </div>
       </a>
     </div>

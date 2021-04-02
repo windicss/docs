@@ -35,6 +35,8 @@
     "@codemirror/tooltip": "^0.18.4",
     "@codemirror/view": "^0.18.3",
     "@vueuse/core": "^4.6.3",
+    "@vueuse/integrations": "^4.6.3",
+    "axios": "^0.21.1",
     "change-case": "^4.1.2",
     "codemirror": "^5.60.0",
     "json5": "^2.2.0",
