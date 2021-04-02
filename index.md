@@ -24,6 +24,7 @@ features:
 footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---
 
+<Sponsors />
 
 <InlinePlayground 
   :input="`bg-gradient-to-r from-green-400 to-blue-500
@@ -49,7 +50,7 @@ dark:\(from-teal-400 to-yellow-500)`"
     }
   }
 }"
-/> 
+/>
 
 <p class="flex justify-center opacity-75 mt-12">
   <a href="https://www.netlify.com" rel="noreferrer" target="_blank">

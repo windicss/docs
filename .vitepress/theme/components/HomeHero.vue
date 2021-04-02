@@ -1,6 +1,6 @@
 <template>
   <header v-if="showHero" class="home-hero">
-    <div class="text-left px-2 pb-20">
+    <div class="text-left pb-12">
       <figure v-if="$frontmatter.heroImage">
         <img
           class="block w-auto max-w-full max-h-120px -ml-2 select-none"
@@ -60,7 +60,7 @@ const hasAltAction = computed(
 <style scoped lang="postcss">
 .home-hero {
   min-height: calc(100vh - var(--header-height));
-  @apply py-10 px-4 md:px-6 flex items-center justify-center;
+  @apply px-4 md:px-6 flex items-center justify-center;
 }
 .link-btn {
   @apply rounded-lg
