@@ -30,7 +30,7 @@ const sponsors = computed(() => {
     <h2 class="border-none text-2xl">
       Sponsors
     </h2>
-    <div v-if="finished" class="flex flex-wrap justify-center px-16 mb-6">
+    <div v-if="finished" class="flex flex-wrap justify-center px-16 mt-10 mb-6">
       <a
         v-for="{ profile, image, name } of sponsors"
         :key="name"
@@ -38,15 +38,14 @@ const sponsors = computed(() => {
         target="_blank"
         rel="noopener"
         aria-label="sponsor-img"
-        class="inline-block w-80px h-80px rounded-full overflow-hidden m-1 hover:no-underline"
+        class="inline-block w-80px h-80px rounded-full overflow-hidden m-1.5 hover:no-underline"
       >
         <img v-if="image" :src="image" :alt="name" class="w-full h-full">
-        <div v-else class="w-full h-full bg-gray-100 dark:bg-dark-300 flex items-center p-1">
+        <div v-else class="w-full h-full bg-gray-100 dark:bg-dark-400 flex items-center p-1">
           <span class="text-$c-text text-xs">{{ name }}</span>
         </div>
       </a>
     </div>
-    <br>
-    <a href="https://opencollective.com/windicss" target="_blank" rel="noopener" class="text-$c-text text-sm">Become a sponsor on Open Collective</a>
+    <a href="https://opencollective.com/windicss" target="_blank" rel="noopener" class="text-gray-500 dark:text-gray-300 text-sm">Become a sponsor on Open Collective</a>
   </div>
 </template>
