@@ -1,21 +1,13 @@
 [windi css]: https://github.com/windicss/windicss
 [tailwind css]: https://tailwindcss.com/docs
-[extend]: https://tailwindcss.com/docs/theme#extending-the-default-theme
-[auto]: /guide/features/variant-auto-infer
+[migration guide]: /guide/migration
 
 # Configuring Windi CSS
 
-> TODO: rewrite
+Configuration in [Windi CSS] is similar to what you would expect in [Tailwind CSS] but with additional enchancements and features.
 
-Configuration in [Windi CSS] is very similar to what you would expect in [Tailwind CSS].
+If you are migrating from Tailwind, check out the [migration guide] first.
 
-There are a few differences that we believe make it easier to configure:
-
-## No need to configure variants
-
-Windi CSS [enables][auto] all variants for all utilities by default, configuration for variants is no longer needed.
-
-When you input the corresponding class, such as `hover:bg-red-500`, the corresponding variant CSS will be [automatically inferred and generated][auto].
 
 ## Example Configuration
 

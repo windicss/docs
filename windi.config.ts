@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from 'windicss/helpers'
 import filterPlugin from 'windicss/plugin/filters'
 
@@ -7,19 +8,21 @@ export default defineConfig({
   darkMode: 'class',
   extract: {
     include: [
-      './index.md', 
-      './.vitepress/**/*.{vue,ts}',
+      'index.md',
+      '.vitepress/**/*.{vue,ts}',
     ],
-    exclude: ['**/examples/**/*'],
+    exclude: [
+      '**/examples/**/*',
+    ],
   },
   safelist: [
     'pb-5',
-    'pt-10',
-    'logo-xl'
+    'bc',
+    'logo-float-xl',
   ],
   shortcuts: {
-    bc: 'border-cool-gray-200 dark:border-dark-300',
-    'logo-float-xl': 'text-6xl m-2 float-right'
+    'bc': 'border-cool-gray-200 dark:border-dark-300',
+    'logo-float-xl': 'text-6xl m-2 float-right',
   },
   theme: {
     extend: {

@@ -41,7 +41,7 @@
     "mitt": "^2.1.0",
     "prismjs": "^1.23.0",
     "splitpanes": "^3.0.4",
-    "vue": "^3.0.10",
+    "vue": "^3.0.11",
     "vue-board": "^0.0.5",
     "vue-demi": "^0.7.4",
     "windicss": "2.5.9"
@@ -51,7 +51,7 @@
     "@docsearch/css": "^1.0.0-alpha.28",
     "@docsearch/js": "^1.0.0-alpha.28",
     "@docsearch/react": "^1.0.0-alpha.28",
-    "@iconify/json": "^1.1.323",
+    "@iconify/json": "^1.1.324",
     "@types/codemirror": "^0.0.108",
     "@types/lz-string": "^1.3.34",
     "@types/node": "^14.14.37",
@@ -65,11 +65,11 @@
     "eslint-plugin-markdown": "^2.0.0",
     "prism-theme-vars": "^0.2.2",
     "typescript": "^4.2.3",
-    "vite": "2.1.3",
+    "vite": "2.1.5",
     "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.4.0",
     "vite-plugin-restart": "^0.0.1",
-    "vite-plugin-windicss": "^0.11.7",
+    "vite-plugin-windicss": "^0.12.1",
     "vitepress": "^0.12.2"
   }
 }
