@@ -46,7 +46,7 @@ const viewData = computed(() => {
       <h2 class="border-none text-2xl">
         {{ item.title }}
       </h2>
-      <div v-if="finished" class="flex flex-wrap justify-center px-16 mt-10 mb-10">
+      <div v-if="finished" class="flex flex-wrap justify-center px-4 md:px-16 mt-10 mb-10">
         <a
           v-for="{ profile, image, name, MemberId } of item.data"
           :key="name"
