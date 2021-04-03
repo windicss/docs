@@ -10,7 +10,7 @@
 # Getting Started
 
 ::: tip
-We are working on a fresh new docs with major docs rewrites and some pretty cool [intreactive playgrounds](https://twitter.com/antfu7/status/1371779599084888064?s=20), stay tuned!
+We are working on a fresh new docs with major docs rewrites and some pretty cool [interactive playgrounds](https://twitter.com/antfu7/status/1371779599084888064?s=20), stay tuned!
 :::
 
 If you are interested to learn more about Windi CSS before trying it, check out the [Introduction](./introduction).
