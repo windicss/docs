@@ -16,7 +16,7 @@ import { lintKeymap } from '@codemirror/lint'
 
 import { hoverTooltip } from '@codemirror/tooltip'
 import type Processor from 'windicss'
-import { usePrismCSS } from './composables/usePrismCSS'
+import { usePrismCSS } from './usePrismCSS'
 
 const tabSize = new Compartment()
 

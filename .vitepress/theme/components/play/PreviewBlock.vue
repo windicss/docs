@@ -6,7 +6,7 @@
         <ToolsDropdown />
       </div>
     </div>
-    <div class="p-4 h-full">
+    <div class="absolute inset-0 pt-12 p-4 h-full">
       <slot />
     </div>
     <div class="absolute bottom-0 w-full">
