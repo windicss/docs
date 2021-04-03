@@ -72,7 +72,7 @@
     "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.4.0",
     "vite-plugin-restart": "^0.0.1",
-    "vite-plugin-windicss": "^0.12.1",
+    "vite-plugin-windicss": "^0.12.2",
     "vitepress": "^0.12.2",
     "windicss-analysis": "^0.1.2"
   }

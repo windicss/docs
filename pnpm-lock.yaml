@@ -60,7 +60,7 @@ devDependencies:
   vite-plugin-components: 0.8.3_vite@2.1.3
   vite-plugin-icons: 0.4.0_@iconify+json@1.1.324
   vite-plugin-restart: 0.0.1_vite@2.1.3
-  vite-plugin-windicss: 0.12.1_vite@2.1.3
+  vite-plugin-windicss: 0.12.2_vite@2.1.3
   vitepress: 0.12.2
   windicss-analysis: 0.1.2
 lockfileVersion: 5.2
@@ -1022,7 +1022,7 @@ packages:
       vue: '*'
     resolution:
       integrity: sha512-YWgMLvDJ51I+1waSP79Wdc1P78qmYUnLfHquNlzZCZXzR9nDx7cGXm+6HV4xEK3h8mAV38oozJOebQCoCo1DDw==
-  /@windicss/plugin-utils/0.12.1:
+  /@windicss/plugin-utils/0.12.2:
     dependencies:
       debug: 4.3.2
       fast-glob: 3.2.5
@@ -1033,7 +1033,7 @@ packages:
       windicss: 2.5.9
     dev: true
     resolution:
-      integrity: sha512-fNAKGG9+qno0ZnzHiYnG7L6F3Rx1uRA8EjuMKq/KxHlbCMP+vRl8HQc0xnAmjYEnCWxEf1X7lMNbfijPCRvjfQ==
+      integrity: sha512-dFKXnj/xQHjuNN8wQdL0LmMQEhLq7yjBfNnjMNDFtNVG5i/X8g43Nm0IbWKDo2l5PGOEyhHCquPRm0kh+fSS7w==
   /abbrev/1.1.1:
     dev: true
     resolution:
@@ -1077,7 +1077,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
-  /ajv/8.0.4:
+  /ajv/8.0.5:
     dependencies:
       fast-deep-equal: 3.1.3
       json-schema-traverse: 1.0.0
@@ -1085,7 +1085,7 @@ packages:
       uri-js: 4.4.1
     dev: true
     resolution:
-      integrity: sha512-v1qwknPv7rNGqtiaC4ywb3OZ3LNrEjbJL5igAe8eTbXOj8ye0XVul2pFRulwl/j3QfUKdQ/J9HZaYfQCnR7cvA==
+      integrity: sha512-RkiLa/AeJx7+9OvniQ/qeWu0w74A8DiPPBclQ6ji3ZQkv5KamO+QGpqmi7O4JIw3rHGUXZ6CoP9tsAkn3gyazg==
   /algoliasearch/3.35.1:
     dependencies:
       agentkeepalive: 2.2.0
@@ -1325,7 +1325,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001205
       colorette: 1.2.2
-      electron-to-chromium: 1.3.705
+      electron-to-chromium: 1.3.707
       escalade: 3.1.1
       node-releases: 1.1.71
     dev: true
@@ -1860,10 +1860,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
-  /electron-to-chromium/1.3.705:
+  /electron-to-chromium/1.3.707:
     dev: true
     resolution:
-      integrity: sha512-agtrL5vLSOIK89sE/YSzAgqCw76eZ60gf3J7Tid5RfLbSp5H4nWL28/dIV+H+ZhNNi1JNiaF62jffwYsAyXc0g==
+      integrity: sha512-BqddgxNPrcWnbDdJw7SzXVzPmp+oiyjVrc7tkQVaznPGSS9SKZatw6qxoP857M+HbOyyqJQwYQtsuFIMSTNSZA==
   /emoji-regex/7.0.3:
     dev: false
     optional: true
@@ -4524,7 +4524,7 @@ packages:
       integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   /table/6.0.9:
     dependencies:
-      ajv: 8.0.4
+      ajv: 8.0.5
       is-boolean-object: 1.1.0
       is-number-object: 1.0.4
       is-string: 1.0.5
@@ -4885,9 +4885,9 @@ packages:
       vite: ^2.0.0-beta.69
     resolution:
       integrity: sha512-PSAUOfgDZW7tKDqnDZaq2GBYUFcQ2NS9hsIyYNxt5IMRTkxd/6c3J51n1Y4f7tHvNyZ5boEv9BELudswhk4Q4w==
-  /vite-plugin-windicss/0.12.1_vite@2.1.3:
+  /vite-plugin-windicss/0.12.2_vite@2.1.3:
     dependencies:
-      '@windicss/plugin-utils': 0.12.1
+      '@windicss/plugin-utils': 0.12.2
       chalk: 4.1.0
       debug: 4.3.2
       vite: 2.1.3
@@ -4896,7 +4896,7 @@ packages:
     peerDependencies:
       vite: ^2.0.1
     resolution:
-      integrity: sha512-W/9Lg/yhzfcpxQ4nXJRIFq2YKpG3vyqCrQ/7lvlB5y4BD76mfq4HrMDgVizU4q3eygVWeCx23GGM2NDf7LI1Tg==
+      integrity: sha512-2sHfUAr2zhQRqqrrQYe9rHAmuE3eGwxwAdFkoxGqePeEmimYpVZFEyk9JT274t9teaZ57RQGXLKYthgRqG1Zpw==
   /vite/2.1.3:
     dependencies:
       esbuild: 0.9.7
@@ -5032,7 +5032,7 @@ packages:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   /windicss-analysis/0.1.2:
     dependencies:
-      '@windicss/plugin-utils': 0.12.1
+      '@windicss/plugin-utils': 0.12.2
       cac: 6.7.2
       connect: 3.7.0
       fast-glob: 3.2.5
@@ -5190,7 +5190,7 @@ specifiers:
   vite-plugin-components: ^0.8.3
   vite-plugin-icons: ^0.4.0
   vite-plugin-restart: ^0.0.1
-  vite-plugin-windicss: ^0.12.1
+  vite-plugin-windicss: ^0.12.2
   vitepress: ^0.12.2
   vue: ^3.0.11
   vue-board: ^0.0.5
