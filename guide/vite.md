@@ -1,6 +1,9 @@
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
 [vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [migration]: /guide/migration
+[speed comparison]: https://twitter.com/antfu7/status/1361398324587163648
+[CSS directives]: /guide/directives
+[classes utilities]: /guide/features
 
 # Using Windi CSS in Vite.js
 
