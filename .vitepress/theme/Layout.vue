@@ -6,9 +6,7 @@
         <!-- TODO -->
         <ShareButton />
         <LayoutSwitch />
-        <NavBarIcon class="!hidden !md:inline-flex">
-          <ion:settings-outline />
-        </NavBarIcon>
+        <ExportButton class="!hidden !md:inline-flex" />
       </template>
       <template #search>
         <NavDivider />

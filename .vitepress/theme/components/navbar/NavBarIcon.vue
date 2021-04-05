@@ -16,7 +16,7 @@ export default defineComponent({
 
 <style lang="postcss">
 .nav-icon-button {
-  @apply flex rounded-lg p-2
+  @apply inline-flex rounded-lg p-2
   text-$c-text text-1.05rem cursor-pointer
   focus:outline-none
   bg-blue-gray-100 hover:bg-blue-gray-200

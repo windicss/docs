@@ -79,7 +79,7 @@ useEmitShare(htmlCode, styleCode)
   @apply bg-white rounded-lg bg-opacity-90 dark:bg-dark-500;
 }
 .block-title {
-  @apply px-4 pt-2 text-sm font-bold opacity-85 select-none;
+  @apply pl-4 pr-2 pt-2 text-sm font-bold opacity-85 select-none;
 }
 .block-code {
   @apply absolute pt-2em inset-0 w-full h-full overflow-hidden rounded-b-lg;
