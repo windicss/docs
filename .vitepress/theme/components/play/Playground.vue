@@ -98,4 +98,11 @@ useEmitShare(htmlCode, styleCode)
     @apply bg-gray-400 dark:bg-dark-100;
   }
 }
+
+.preview-container,
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 </style>

@@ -11,7 +11,7 @@ const config: UserConfigFn = ({ command }) => ({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'windicss'],
       output: {
         globals: {
           vue: 'Vue',
