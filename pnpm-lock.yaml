@@ -25,6 +25,7 @@ dependencies:
   '@codemirror/view': 0.18.3
   '@vueuse/core': 4.6.3_vue@3.0.11
   '@vueuse/integrations': 4.6.3_vue@3.0.11
+  '@windicss/shared-components': link:shared-components
   axios: 0.21.1
   change-case: 4.1.2
   codemirror: 5.60.0
@@ -5188,6 +5189,7 @@ specifiers:
   '@types/prismjs': ^1.16.4
   '@vueuse/core': ^4.6.3
   '@vueuse/integrations': ^4.6.3
+  '@windicss/shared-components': workspace:^0.1.0
   algoliasearch: ^4.8.6
   axios: ^0.21.1
   change-case: ^4.1.2

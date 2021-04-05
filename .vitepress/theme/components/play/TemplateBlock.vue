@@ -2,6 +2,7 @@
 import { computed, defineProps, defineEmit } from 'vue'
 import type { PropType } from 'vue'
 import type Processor from 'windicss'
+import { Editor } from '@windicss/shared-components'
 
 const props = defineProps({
   modelValue: {

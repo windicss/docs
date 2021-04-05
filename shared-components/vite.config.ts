@@ -1,13 +1,14 @@
 import { UserConfigFn } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import ts from 'rollup-plugin-typescript2'
+import ts from '@wessberg/rollup-plugin-ts'
 
 // https://vitejs.dev/config/
 const config: UserConfigFn = ({ command }) => ({
   build: {
     lib: {
-      name: 'index',
-      entry: 'index.ts',
+      entry: 'src/index.ts',
+      name: 'main',
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['vue'],
@@ -22,9 +23,7 @@ const config: UserConfigFn = ({ command }) => ({
     vue(),
     {
       apply: 'build',
-      ...ts({
-        useTsconfigDeclarationDir: true,
-      }),
+      ...ts(),
     },
   ],
   esbuild: command === 'serve' ? undefined : false,
