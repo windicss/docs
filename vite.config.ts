@@ -9,7 +9,7 @@ export default defineConfig({
     Components({
       dirs: [
         '.vitepress/theme/components',
-        'shard-components/src/components',
+        'shared-components/src/components',
       ],
       extensions: ['vue', 'ts'],
       customLoaderMatcher: id => id.endsWith('.md'),
