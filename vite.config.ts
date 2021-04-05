@@ -34,6 +34,7 @@ export default defineConfig({
       'json5',
       'lz-string',
       '@vueuse/core',
+      '@vueuse/integrations',
       'windicss',
       'windicss/colors',
       'windicss/utils/style',
