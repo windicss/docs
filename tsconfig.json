@@ -18,6 +18,7 @@
     ".vitepress/**/*.vue",
   ],
   "exclude": [
-    "**/dist/**"
+    "**/dist/**",
+    ".shared-components"
   ]
 }
