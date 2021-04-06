@@ -1,7 +1,7 @@
 dependencies:
   '@vueuse/core': 4.7.0_vue@3.0.11
   '@vueuse/integrations': 4.7.0_vue@3.0.11
-  '@windicss/shared-components': link:shared-components
+  '@windicss/shared-components': link:.shared-components
   axios: 0.21.1
   change-case: 4.1.2
   codemirror: 5.60.0
