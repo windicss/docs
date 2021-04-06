@@ -12,6 +12,7 @@ export default defineConfig({
       '.vitepress/**/*.{vue,ts}',
     ],
     exclude: [
+      '**/*.md',
       '**/examples/**/*',
     ],
   },

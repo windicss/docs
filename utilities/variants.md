@@ -28,36 +28,35 @@ sm:bg-red-500 sm:hover:bg-green-300 dark:bg-white
 
 | Variant | Rule | Description |
 | :------ | :--- | :---------- |
-| -sm | @media (max-width: 640px) { ... } | Enable utility when the screen width is less than 640px |
-| -md | @media (max-width: 768px) { ... } | Enable utility when the screen width is less than 768px |
-| -lg | @media (max-width: 1024px) { ... } | Enable utility when the screen width is less than 1024px |
-| -xl | @media (max-width: 1280px) { ... } | Enable utility when the screen width is less than 1280px |
-| -2xl  | @media (max-width: 1536px) { ... } | Enable utility when the screen width is less than 1536px |
+| <sm | @media (max-width: 640px) { ... } | Enable utility when the screen width is less than 640px |
+| <md | @media (max-width: 768px) { ... } | Enable utility when the screen width is less than 768px |
+| <lg | @media (max-width: 1024px) { ... } | Enable utility when the screen width is less than 1024px |
+| <xl | @media (max-width: 1280px) { ... } | Enable utility when the screen width is less than 1280px |
+| <2xl  | @media (max-width: 1536px) { ... } | Enable utility when the screen width is less than 1536px |
 
 ### Only Screen
 
 | Variant | Rule | Description |
 | :------ | :--- | :---------- |
-| +sm | @media (min-width: 640px) and (max-width: 768px) { ... } | Enable utility when the screen width is greater than 640px and less than 768px |
-| +md | @media (min-width: 768px) and (max-width: 1024px) { ... } | Enable utility when the screen width is greater than 768px and less than 1024px |
-| +lg | @media (min-width: 1024px) and (max-width: 1280px) { ... } | Enable utility when the screen width is greater than 1024px and less than 1280px |
-| +xl | @media (min-width: 1280px) and (max-width: 1536px) { ... } | Enable utility when the screen width is greater than 1280px and less than 1536px |
-| +2xl | @media (min-width: 1536px) { ... } | Enable utility when the screen width is greater than 1536px |
-
+| @sm | @media (min-width: 640px) and (max-width: 768px) { ... } | Enable utility when the screen width is greater than 640px and less than 768px |
+| @md | @media (min-width: 768px) and (max-width: 1024px) { ... } | Enable utility when the screen width is greater than 768px and less than 1024px |
+| @lg | @media (min-width: 1024px) and (max-width: 1280px) { ... } | Enable utility when the screen width is greater than 1024px and less than 1280px |
+| @xl | @media (min-width: 1280px) and (max-width: 1536px) { ... } | Enable utility when the screen width is greater than 1280px and less than 1536px |
+| @2xl | @media (min-width: 1536px) { ... } | Enable utility when the screen width is greater than 1536px |
 
 ### Max-Width Breakpoints
 
 You can define custom breakpoints that use `max-width` instead, or ranges, by
 using the following configuration options:
 
-```json5
-{
-  'theme': {
-    'screens': {
-      '2xl': { 'max': '1535px' },
-      'sm': { 'min': '640px', 'max': '767px' },
-    }
-  }
+```ts
+export default {
+  theme: {
+    screens: {
+      '2xl': { max: '1535px' },
+      'sm': { min: '640px', max: '767px' },
+    },
+  },
 }
 ```
 
@@ -65,14 +64,14 @@ using the following configuration options:
 
 You can define a custom screen by providing a raw media query in the config:
 
-```json5
-{
-  'theme': {
-    'screens': {
-      'portrait': { 'raw': '(orientation: portrait)' },
-      'print': { 'raw': 'print' },
-    }
-  }
+```ts
+export default {
+  theme: {
+    screens: {
+      portrait: { raw: '(orientation: portrait)' },
+      print: { raw: 'print' },
+    },
+  },
 }
 ```
 

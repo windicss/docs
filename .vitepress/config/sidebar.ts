@@ -7,7 +7,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       children: [
         { text: 'Colors', link: '/utilities/colors' },
         { text: 'Variants', link: '/utilities/variants' },
-        { text: 'Variables', link: '/utilities/variables' },
+        // { text: 'Variables', link: '/utilities/variables' },
       ],
     },
     {

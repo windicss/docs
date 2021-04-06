@@ -6,9 +6,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: 'Getting Started', link: '/guide/' },
       { text: 'Installation', link: '/guide/installation' },
-      { text: 'Migration', link: '/guide/migration' },
-      { text: 'Configuration', link: '/guide/configuration' },
       { text: 'Features', link: '/guide/features/' },
+      { text: 'Configuration', link: '/guide/configuration' },
+      { text: 'Migration', link: '/guide/migration' },
       { text: 'Advanced', link: '/guide/advanced/api' },
     ],
   },
@@ -17,7 +17,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: 'Colors', link: '/utilities/colors' },
       { text: 'Variants', link: '/utilities/variants' },
-      { text: 'Variables', link: '/utilities/variables' },
+      // { text: 'Variables', link: '/utilities/variables' },
 
       { text: 'separator', link: 'separator' },
 
