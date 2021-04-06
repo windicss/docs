@@ -35,4 +35,4 @@ jobs:
       - name: Run test
         run: nr test --if-present
       - name: Run build
-        run: nr build
+        run: nr build-all

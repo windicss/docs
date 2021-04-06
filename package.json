@@ -7,7 +7,9 @@
     "serve": "vitepress serve",
     "crawl": "docker run --rm -it --env-file=.algolia/.env -e \"CONFIG=$(cat .algolia/config.json | jq -r tostring)\" algolia/docsearch-scraper",
     "lint": "eslint --fix --ext .js,.ts,.md,.vue ./",
-    "analysis": "windicss-analysis"
+    "analysis": "windicss-analysis",
+    "build-shared": "npm -C .shared-components run build",
+    "build-all": "npm run build && npm run build-shared"
   },
   "dependencies": {
     "@vueuse/core": "^4.7.0",
