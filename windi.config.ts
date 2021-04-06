@@ -20,6 +20,8 @@ export default defineConfig({
     'pb-5',
     'bc',
     'logo-float-xl',
+    'dark:text-white',
+    'opacity-85',
   ],
   shortcuts: {
     'bc': 'border-cool-gray-200 dark:border-dark-300',

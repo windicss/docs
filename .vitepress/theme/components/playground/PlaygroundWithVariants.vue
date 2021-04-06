@@ -16,6 +16,9 @@ const props = defineProps({
   fixed: {
     default: '',
   },
+  html: {
+    default: undefined,
+  },
 })
 
 const {
@@ -42,6 +45,6 @@ const classes = computed(() => {
   <InlinePlayground
     :input="classes"
     :fixed="fixed"
-    :show-mode="true"
+    :html="html"
   />
 </template>

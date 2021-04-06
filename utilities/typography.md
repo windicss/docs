@@ -4,23 +4,29 @@
 
 Utilities for controlling the font family of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| font-sans | font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; |
-| font-serif | font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; |
-| font-mono | font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; |
+<PlaygroundWithVariants
+  variant='sans'
+  :variants="['sans', 'serif', 'mono']"
+  prefix='font'
+  fixed='text-lg p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ### Customizing
 
-```json5
-{
-  'fontFamily': {
-    'sans': ['ui-sans-serif', 'system-ui', /* ... */],
-    'serif': ['ui-serif', 'Georgia', /* ... */],
-    'mono': ['ui-monospace', 'SFMono-Regular', /* ... */],
-    'display': ['Oswald', /* ... */],
-    'body': ['Open Sans', /* ... */],
-  }
+```js
+export default {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['ui-sans-serif', 'system-ui'],
+        serif: ['ui-serif', 'Georgia'],
+        mono: ['ui-monospace', 'SFMono-Regular'],
+        display: ['Oswald'],
+        body: ['Open Sans'],
+      },
+    },
+  },
 }
 ```
 
@@ -30,24 +36,19 @@ Font families can be specified as an array or as a simple comma-delimited string
 {
   // Array format:
   'sans': ['Helvetica', 'Arial', 'sans-serif'],
-
   // Comma-delimited format:
   'sans': 'Helvetica, Arial, sans-serif',
 }
 ```
 
-Note that Tailwind does not automatically escape font names for you. If you're using a font that contains an invalid identifier, wrap it in quotes or escape the invalid characters.
+Note that Windi CSS does not automatically escape font names for you. If you're using a font that contains an invalid identifier, wrap it in quotes or escape the invalid characters.
 
 ```json5
 {
   // Won't work:
   'sans': ['Exo 2', /* ... */],
-
   // Add quotes:
   'sans': ['"Exo 2"', /* ... */],
-
-  // ...or escape the space:
-  'sans': ['Exo\\ 2', /* ... */],
 }
 ```
 
@@ -55,22 +56,13 @@ Note that Tailwind does not automatically escape font names for you. If you're u
 
 Utilities for controlling the font size of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| text-xs | font-size: 0.75rem;<br>line-height: 1rem; |
-| text-sm | font-size: 0.875rem;<br>line-height: 1.25rem; |
-| text-base | font-size: 1rem;<br>line-height: 1.5rem; |
-| text-lg | font-size: 1.125rem;<br>line-height: 1.75rem; |
-| text-xl | font-size: 1.25rem;<br>line-height: 1.75rem; |
-| text-2xl | font-size: 1.5rem;<br>line-height: 2rem; |
-| text-3xl | font-size: 1.875rem;<br>line-height: 2.25rem; |
-| text-4xl | font-size: 2.25rem;<br>line-height: 2.5rem; |
-| text-5xl | font-size: 3rem;<br>line-height: 1; |
-| text-6xl | font-size: 3.75rem;<br>line-height: 1; |
-| text-7xl | font-size: 4.5rem;<br>line-height: 1; |
-| text-8xl | font-size: 6rem;<br>line-height: 1; |
-| text-9xl | font-size: 8rem;<br>line-height: 1; |
-| `text-${int}xl` | font-size: `${int}rem;`<br>line-height: 1; |
+<PlaygroundWithVariants
+  variant='base'
+  :variants="['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl']"
+  prefix='text'
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ### Customizing
 
@@ -154,18 +146,13 @@ Utilities for controlling the style of text.
 
 Utilities for controlling the font weight of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| font-thin | font-weight: 100; |
-| font-extralight | font-weight: 200; |
-| font-light | font-weight: 300; |
-| font-normal | font-weight: 400; |
-| font-medium | font-weight: 500; |
-| font-semibold | font-weight: 600; |
-| font-bold | font-weight: 700; |
-| font-extrabold | font-weight: 800; |
-| font-black | font-weight: 900; |
-| `font-${int}` | font-weight: `${int};` |
+<PlaygroundWithVariants
+  variant='normal'
+  :variants="['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black', '400', '600']"
+  prefix='font'
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ### Customizing
 
@@ -210,16 +197,13 @@ Utilities for controlling the variant of numbers.
 
 Utilities for controlling the tracking (letter spacing) of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| tracking-tighter | letter-spacing: -0.05em; |
-| tracking-tight | letter-spacing: -0.025em; |
-| tracking-normal | letter-spacing: 0em; |
-| tracking-wide | letter-spacing: 0.025em; |
-| tracking-wider | letter-spacing: 0.05em; |
-| tracking-widest | letter-spacing: 0.1em; |
-| `tracking-${size}` | letter-spacing: `${size};` |
-| `-tracking-${size}` | letter-spacing: `-${size};` |
+<PlaygroundWithVariants
+  variant='normal'
+  :variants="['tighter', 'tight', 'normal', 'wide', 'wider', 'widest', '0px', '2px', '0.5em']"
+  prefix='tracking'
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ### Customizing
 
@@ -244,15 +228,13 @@ export default {
 
 Utilities for controlling the leading (line height) of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| leading-none | line-height: 1; |
-| leading-tight | line-height: 1.25; |
-| leading-snug | line-height: 1.375; |
-| leading-normal | line-height: 1.5; |
-| leading-relaxed | line-height: 1.625; |
-| leading-loose | line-height: 2; |
-| `leading-${int}` | line-height: `${int/4}rem;` |
+<PlaygroundWithVariants
+  variant='normal'
+  :variants="['none', 'tight', 'snug', 'normal', 'relaxed', 'loose', '0', 1, 2, 3, 4, 5, 6]"
+  prefix='leading'
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ### Customizing
 

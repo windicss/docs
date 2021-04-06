@@ -45,6 +45,9 @@ const props = defineProps({
   fixed: {
     default: '',
   },
+  html: {
+    default: undefined,
+  },
   tab: {
     type: String as PropType<'code' | 'css' | 'config'>,
     default: 'code',
@@ -87,6 +90,7 @@ const iframeData = reactive({
   ),
   fixedCss: computed(() => fixedStyles.build()),
   classes: computed(() => `${[...acceped.value, props.fixed].filter(Boolean).join(' ')}`.trim()),
+  html: props.html,
 })
 
 function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Editor) {
@@ -220,7 +224,7 @@ onMounted(async() => {
         <carbon:camera class="inline-block" />
       </div>
     </div>
-    <div class="border bc rounded relative pb-2">
+    <div class="border bc rounded relative">
       <div
         class="grid w-full"
         style="grid-template-columns: 1fr max-content;"
