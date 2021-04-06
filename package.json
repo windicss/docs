@@ -9,7 +9,7 @@
     "lint": "eslint --fix --ext .js,.ts,.md,.vue ./",
     "analysis": "windicss-analysis",
     "build-shared": "npm -C .shared-components run build",
-    "build-all": "npm run build && npm run build-shared"
+    "build-all": "npm run build-shared && npm run build"
   },
   "dependencies": {
     "@vueuse/core": "^4.7.0",
