@@ -2,7 +2,7 @@
   "name": "@windicss/shared-components",
   "version": "0.1.0",
   "description": "windicss shared components",
-  "main": "dist/shared-components.es.js",
+  "main": "dist/shared-components.cjs.js",
   "module": "dist/shared-components.es.js",
   "types": "dist/shared-components.es.d.ts",
   "files": [

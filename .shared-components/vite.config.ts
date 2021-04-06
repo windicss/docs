@@ -8,7 +8,7 @@ const config: UserConfigFn = ({ command }) => ({
     lib: {
       entry: 'src/index.ts',
       name: 'main',
-      formats: ['es'],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['vue', 'windicss'],
