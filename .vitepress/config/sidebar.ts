@@ -93,6 +93,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Getting Started', link: '/guide/' },
         { text: 'Installation', link: '/guide/installation' },
         { text: 'Configuration', link: '/guide/configuration' },
+        { text: 'Extractions', link: '/guide/extractions' },
         { text: 'Migration from Tailwind', link: '/guide/migration' },
       ],
     },
