@@ -8,11 +8,53 @@ Configuration in [Windi CSS] is similar to what you would expect in [Tailwind CS
 
 If you are migrating from Tailwind, check out the [migration guide] first.
 
+## Config File
+
+By default, Windi CSS will search for configurations file under your project root. Here are valid names:
+
+- `windi.config.ts`
+- `windi.config.js`
+- `tailwind.config.ts`
+- `tailwind.config.js`
+
+**Native ES module and TypeScript are supported out-of-box**, powered by [sucrase](https://github.com/alangpierce/sucrase).
+
+To get typecheck for your configurations, you can import the `defineConfig` function from `windicss/helpers`. For example
+
+```ts
+// windi.config.ts
+import { defineConfig } from 'windicss/helpers'
+
+export default defineConfig({
+  /* configurations... */
+})
+```
+
+```js
+// windi.config.js
+// @ts-check - enable TS check for js file
+import { defineConfig } from 'windicss/helpers'
+
+export default defineConfig({
+  /* configurations... */
+})
+```
+
+`defineConfig` is a bypass function with type hints, which means you can also omit it if you don't need the autocompletion/typecheck.
+
+```js
+// windi.config.js
+
+export default {
+  /* configurations... */
+}
+```
+
+You can use the autocompletion from your editor to see possible configuration fields. Customization for features will be described in the corresponding pages. 
 
 ## Example Configuration
 
 ```js
-// Example `windi.config.js` file
 import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
 import plugin from 'windicss/plugin'
@@ -20,37 +62,33 @@ import plugin from 'windicss/plugin'
 export default defineConfig({
   darkMode: 'class', // or 'media'
   theme: {
-    screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
-    },
-    colors: {
-      gray: colors.coolGray,
-      blue: colors.lightBlue,
-      red: colors.rose,
-      pink: colors.fuchsia,
-    },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
     extend: {
-      spacing: {
-        128: '32rem',
-        144: '36rem',
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
       },
-      borderRadius: {
-        '4xl': '2rem',
+      colors: {
+        gray: colors.coolGray,
+        blue: colors.lightBlue,
+        red: colors.rose,
+        pink: colors.fuchsia,
       },
-    },
-  },
-  variants: {
-    extend: {
-      borderColor: ['focus-visible'],
-      opacity: ['disabled'],
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
+      extend: {
+        spacing: {
+          128: '32rem',
+          144: '36rem',
+        },
+        borderRadius: {
+          '4xl': '2rem',
+        },
+      },
     },
   },
   plugins: [
