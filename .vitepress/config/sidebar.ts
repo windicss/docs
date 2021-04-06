@@ -108,6 +108,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Dark Mode', link: '/guide/features/dark-mode' },
         { text: 'Important Prefix', link: '/guide/features/important-prefix' },
         { text: 'Directives', link: '/guide/features/directives' },
+        { text: 'Analyser', link: '/guide/features/analyser' },
         // { text: 'Nesting CSS', link: '/guide/features/nesting' },
       ],
     },

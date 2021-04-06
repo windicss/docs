@@ -47,7 +47,7 @@
     "vue": "^3.0.11",
     "vue-board": "^0.0.5",
     "vue-demi": "^0.7.4",
-    "windicss": "2.5.9"
+    "windicss": "2.5.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.2",
@@ -72,7 +72,7 @@
     "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.4.0",
     "vite-plugin-restart": "^0.0.1",
-    "vite-plugin-windicss": "^0.12.2",
+    "vite-plugin-windicss": "^0.12.5",
     "vitepress": "^0.12.2",
     "windicss-analysis": "^0.1.2"
   }

@@ -23,6 +23,6 @@ const { url, text } = useEditLink()
   @apply
     text-base font-medium
     text-$c-text-light
-    hover:(no-underline text-$c-brand);
+    hover:(no-underline text-primary);
 }
 </style>

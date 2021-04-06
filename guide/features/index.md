@@ -6,42 +6,62 @@
 
 [Windi CSS] is fully compatible with [Tailwind CSS] v2. In top of that, we have a number of additional features that boost your work further and open up much more possibility.
 
-## Variant Groups
 
-You can apply several utilities for the same variant by grouping them with parenthesis.
+### Value Auto-infer
+
+Use arbitrary value in your classes and generate coresponding styles.
 
 ```html
-<div class="bg-white font-light dark:hover:(bg-gray-800 font-medium)"/>
+<!-- sizes and positions -->
+<div class="p-5px mt-[0.3px]"></div>
+
+<!-- colors -->
+<button class="bg-hex-b2a8bb"></button>
+<button class="bg-[hsl(211.7,81.9%,69.6%)]"></button>
+
+<!-- gird template -->
+<div class="grid-cols-[auto,1fr,30px]"></div>
 ```
 
-<InlinePlayground 
-  :input="'bg-blue-200 font-light p-2\ndark:hover:(bg-gray-800 font-medium)'"
-  :showCSS="true"
-  :showMode="true"
-  :showTabs="true"
-/>
+<LearnMore to="/guide/features/value-auto-infer" />
 
-## Screen Utilities
+### Variant Groups
 
-You can use `+` for __Only Screen__ and `-` for __Desktop First__ in screen utilities, for example:
+Apply utilities for the same variant by grouping them with parenthesis.
 
-<InlinePlayground :input="'sm:p-1\n+sm:p-2\n-sm:p-3'" :showCSS="true" :showPreview="false"/>
-
-See [screen variants](https://next.windicss.org/utilities/variants.html#screen-variants) for more details.
-
-## Important Prefix
-
-You can prefix any utility classes with `!` to make them as `!important`. This could be very useful when you want to override previous styling rules for that specific property.
-
-```css
-!text-green-300
+```html
+<div class="bg-white dark:hover:(bg-gray-800 font-medium text-white)"/>
 ```
 
-<InlinePlayground :input="'text-blue-200\n!text-green-300'" :showCSS="true" :showPreview="false"/>
+```html
+<div class="bg-white dark:hover:bg-gray-800 dark:hover:font-medium dark:hover:text-white"/>
+```
 
-## Shortcuts
+<LearnMore to="/guide/features/variant-groups" />
 
-We have also added a shortcuts config to help you quickly add utilities. With this feature, you can even share inline components.
+### Responsive Design
+
+Extended responsive break points controls.
+
+```html
+<div class="p-1 md:p-2 <lg:p-3"></div>
+```
+
+<LearnMore to="/guide/features/responsive-design" />
+
+### Important Prefix
+
+Prefix any utility classes with `!` to make them as `!important`.
+
+```html
+<div class="text-red-400 !text-green-300">Green</div>
+```
+
+<LearnMore to="/guide/features/important-prefix" />
+
+### Shortcuts
+
+Create components and utilities quickly and reusable.
 
 ```js
 // windi.config.js
@@ -56,67 +76,39 @@ export default {
 }
 ```
 
-<InlinePlayground 
-  :input="'btn btn-green'" 
-  :config="{ shortcuts: {
-    btn: 'py-2 px-4 font-semibold rounded-lg shadow-md',
-    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
-  }}"
-  :showCSS="true"
-  :showMode="false"
-  :showTabs="true"
-  :showConfig="true"
-  :enableConfig="true"
-/>
+```html
+<div class="btn hover:btn-green"></div>
+```
 
-css-in-js syntax is also supported for complex utility
+<LearnMore to="/guide/features/shortcuts" />
 
-```js
-// windi.config.js
-export default {
-  theme: {
-    /* ... */
-  },
-  shortcuts: {
-    'btn': {
-      'color': 'white',
-      '@apply': 'py-2 px-4 font-semibold rounded-lg',
-      '&:hover': {
-        '@apply': 'bg-green-700',
-        'color': 'black',
-      },
-    },
-    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
-  },
+
+### Dark Mode
+
+```html
+<div class="text-black dark:text-white"></div>
+```
+
+<LearnMore to="/guide/features/dark-mode" />
+
+### Directives
+
+Tailwind-liked `@apply`, `@screen` directives are fully supported.
+
+```css
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-blue {
+  @apply bg-blue-500 hover:bg-blue-700 text-white;
+  padding-top: 1rem;
 }
 ```
 
-<InlinePlayground 
-  :input="'btn btn-green'" 
-  :config="{ shortcuts: {
-    btn: {
-      color: 'white',
-      '@apply': 'py-2 px-4 font-semibold rounded-lg',
-      '&:hover': {
-        '@apply': 'bg-green-700',
-        color: 'black',
-      },
-    },
-    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
-  }}"
-  :showCSS="false"
-  :showMode="false"
-  :showTabs="true"
-  :showConfig="true"
-  :enableConfig="true"
-/>
+<LearnMore to="/guide/features/directive" />
 
+### Visual Analyser
 
-The utility added by this configuration can also be directly wrapped with variant, such as sm:btn. The function of this feature is similar to @apply, it will merge all utilities into one style.
+We provided an visual analyser for you to have an overview of your utilities usage and design system.
 
-<!-- 
-## More States and Light/Dark theme support
-
-[Windi CSS] supports all CSS [pseudo elements and pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
-
-Also, it adds `@dark` and `@light` classes based on `prefers-color-scheme`. -->
+<LearnMore to="/guide/features/analyser" />

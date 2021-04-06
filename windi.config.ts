@@ -35,6 +35,7 @@ export default defineConfig({
         md: '720px',
       },
       colors: {
+        primary: '#48B0F1',
         bg: 'var(--c-bg)',
         dark: {
           '100': '#4A4A4A',

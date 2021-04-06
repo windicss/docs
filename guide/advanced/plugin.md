@@ -105,6 +105,7 @@ plugin(({ addBase, theme }) => {
 
 `config()`
 
+<!-- 
 ## Debug
 
 ### Using loadPlugin interface
@@ -142,4 +143,4 @@ describe('Aspect Ratio Plugin', () => {
     expect(result.styleSheet.build()).toEqual('...')
   })
 })
-```
+``` -->

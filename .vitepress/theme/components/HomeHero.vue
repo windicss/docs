@@ -71,6 +71,6 @@ const hasAltAction = computed(
     hover:(bg-$c-brand-light border-$c-brand-light);
 }
 .link-btn.alt {
-  @apply bg-transparent text-$c-brand hover:text-$c-brand-light;
+  @apply bg-transparent text-primary hover:text-primary-light;
 }
 </style>
