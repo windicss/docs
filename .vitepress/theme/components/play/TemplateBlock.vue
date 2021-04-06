@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { computed, defineProps, defineEmit, defineAsyncComponent } from 'vue'
+import { computed, defineProps, defineEmit } from 'vue'
 import type { PropType } from 'vue'
 import type Processor from 'windicss'
-
-const CodeMirror = defineAsyncComponent(() => import('../CodeMirror'))
+import { Editor } from '@windicss/shared-components'
 
 const props = defineProps({
   modelValue: {
@@ -28,7 +27,7 @@ const htmlCode = computed({
   <div class="block-bg relative">
     <div class="block-code">
       <ClientOnly>
-        <CodeMirror v-model="htmlCode" class="h-full w-full pb-2" language="html" :processor="processor" />
+        <Editor v-model="htmlCode" class="h-full w-full pb-2" language="html" :processor="processor" />
       </ClientOnly>
     </div>
     <div class="block-title">

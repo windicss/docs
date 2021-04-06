@@ -2,10 +2,12 @@
 import { defineProps, ref, onMounted } from 'vue'
 import type { PropType } from 'vue'
 import type { Config } from 'windicss/types/interfaces'
+import { IframePreview } from '@windicss/shared-components'
 import { Splitpanes, Pane } from 'splitpanes'
 import { useWindiCSS } from '../../composables/useWindiCSS'
 import { getSharedCode, useEmitShare } from '../../composables/useShare'
 import { layout } from '../../composables/playgroundLayout'
+import { isDark } from '../../composables/dark'
 import { bps } from '../../composables/breakpoints'
 import { html, css } from '../../examples/playground'
 import 'splitpanes/dist/splitpanes.css'
@@ -43,7 +45,7 @@ useEmitShare(htmlCode, styleCode)
       <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="w-full h-full default-theme">
         <Pane v-if="layout === 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PreviewBlock class="h-full">
-            <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
+            <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" :dark="isDark" />
           </PreviewBlock>
         </Pane>
         <Pane min-size="20" :size="bpmd ? 60 : 66">
@@ -58,7 +60,7 @@ useEmitShare(htmlCode, styleCode)
         </Pane>
         <Pane v-if="layout !== 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PreviewBlock class="h-full">
-            <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" />
+            <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" :dark="isDark" />
           </PreviewBlock>
         </Pane>
       </Splitpanes>
@@ -95,5 +97,12 @@ useEmitShare(htmlCode, styleCode)
   &:hover:before, &:hover:after {
     @apply bg-gray-400 dark:bg-dark-100;
   }
+}
+
+.preview-container,
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 </style>

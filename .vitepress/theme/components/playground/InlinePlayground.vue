@@ -4,6 +4,7 @@ import { syncRef } from '@vueuse/core'
 import { StyleSheet } from 'windicss/utils/style'
 import Windi from 'windicss'
 import JSON5 from 'json5'
+import { IframePreview } from '@windicss/shared-components'
 
 import type { PropType } from 'vue'
 import type CodeMirror from 'codemirror'

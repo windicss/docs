@@ -7,10 +7,10 @@ import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/legacy-modes/mode/css'
 import type Processor from 'windicss'
 import type { PropType } from 'vue'
-import { basicSetup, hoverPreview } from '../codemirror'
+import { basicSetup, hoverPreview } from '../plugin'
 
 export default defineComponent({
-  name: 'CodeMirror',
+  name: 'Editor',
   props: {
     modelValue: {
       type: String,

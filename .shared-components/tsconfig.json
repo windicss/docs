@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "esnext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -12,13 +12,10 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "types": ["vite/client"],
+    "declaration": true,
+    "declarationDir": "dist"
   },
-  "include": [
-    ".vitepress/**/*.ts",
-    ".vitepress/**/*.vue",
-  ],
   "exclude": [
-    "**/dist/**",
-    ".shared-components"
+    "**/dist/**"
   ]
 }

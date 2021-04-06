@@ -1,0 +1,59 @@
+{
+  "name": "@windicss/shared-components",
+  "version": "0.1.0",
+  "description": "windicss shared components",
+  "main": "dist/shared-components.cjs.js",
+  "module": "dist/shared-components.es.js",
+  "types": "dist/shared-components.es.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "author": "Han <me@hanlee.co>",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": ">=3",
+    "windicss": "^2.5.9"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^0.18.3",
+    "@codemirror/basic-setup": "^0.18.0",
+    "@codemirror/closebrackets": "^0.18.0",
+    "@codemirror/commands": "^0.18.0",
+    "@codemirror/comment": "^0.18.0",
+    "@codemirror/fold": "^0.18.0",
+    "@codemirror/gutter": "^0.18.0",
+    "@codemirror/highlight": "^0.18.3",
+    "@codemirror/history": "^0.18.1",
+    "@codemirror/lang-css": "^0.18.0",
+    "@codemirror/lang-html": "^0.18.0",
+    "@codemirror/lang-javascript": "^0.18.0",
+    "@codemirror/language": "^0.18.1",
+    "@codemirror/legacy-modes": "^0.18.0",
+    "@codemirror/lint": "^0.18.1",
+    "@codemirror/matchbrackets": "^0.18.0",
+    "@codemirror/rectangular-selection": "^0.18.0",
+    "@codemirror/search": "^0.18.2",
+    "@codemirror/state": "^0.18.3",
+    "@codemirror/stream-parser": "^0.18.1",
+    "@codemirror/text": "^0.18.0",
+    "@codemirror/theme-one-dark": "^0.18.0",
+    "@codemirror/tooltip": "^0.18.4",
+    "@codemirror/view": "^0.18.3",
+    "@vueuse/core": "^4.7.0",
+    "prismjs": "^1.23.0"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.16.4",
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vue/compiler-sfc": "^3.0.11",
+    "@wessberg/rollup-plugin-ts": "^1.3.11",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.3",
+    "vite": "^2.1.5",
+    "vue": "^3.0.11",
+    "windicss": "^2.5.11"
+  }
+}
