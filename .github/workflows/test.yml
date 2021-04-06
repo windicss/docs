@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-${{ matrix.node }}-pnpm-v2-
       - name: Install dependencies
         run: |
-          npm i -g pnpm @antfu/ni
+          npm i -g pnpm@5 @antfu/ni
           nci
       - name: Run test
         run: nr test --if-present
