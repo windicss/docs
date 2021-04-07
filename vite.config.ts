@@ -32,6 +32,7 @@ export default defineConfig({
       'mitt',
       'json5',
       'lz-string',
+      'splitpanes',
       '@vueuse/core',
       '@vueuse/integrations',
       'windicss',
