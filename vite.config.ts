@@ -48,6 +48,7 @@ export default defineConfig({
     ],
     exclude: [
       'vue-demi',
+      '@windicss/shared-components',
     ],
   },
 })
