@@ -1,5 +1,5 @@
 <template>
-  <div id="docsearch" class="algolia-search-box" />
+  <div :id="id" class="algolia-search-box" />
 </template>
 
 <script setup lang="ts">
@@ -17,6 +17,10 @@ const props = defineProps({
   options: {
     type: Object as PropType<DefaultTheme.AlgoliaSearchOptions>,
     required: true,
+  },
+  id: {
+    type: String,
+    default: 'docsearch',
   },
   small: {
     type: Boolean,
@@ -67,7 +71,7 @@ function getRelativePath(absoluteUrl: string) {
 function update(options: DefaultTheme.AlgoliaSearchOptions) {
   if (vm && vm.vnode.el) {
     vm.vnode.el.innerHTML
-      = '<div id="docsearch" class="algolia-search-box"></div>'
+      = `<div id="${props.id}" class="algolia-search-box"></div>`
     initialize(options)
   }
 }
@@ -77,7 +81,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
     apiKey: userOptions.apiKey,
     appId: userOptions.appId,
     indexName: userOptions.indexName,
-    container: '#docsearch',
+    container: `#${props.id}`,
 
     searchParameters: Object.assign({}, userOptions.searchParameters),
 
