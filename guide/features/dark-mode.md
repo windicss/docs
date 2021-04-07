@@ -2,7 +2,7 @@
 
 Windi CSS has out-of-box Dark Mode support.
 
-By prefixing the `dark:` variant to the utilities, they will only apply when dark mode is enabled. At the following example, the `Preview` text will be red on light mode and green on dark mode. Try play with it: 
+By prefixing the `dark:` variant to the utilities, they will only apply when dark mode is enabled. With the following example, the `Preview` text will be red on the light mode, and green on the dark mode. Try play with it: 
 
 <DarkModeSwitch />
 

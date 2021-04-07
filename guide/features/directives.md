@@ -66,7 +66,7 @@ The `@screen` directive allows you to create media queries that reference your b
 
 ## @layer
 
-The `@layer` directive makes sure the order of each classes. Valid layers are `base`, `components`, and `utilities`.
+The `@layer` directive makes sure the order of each class. Valid layers are `base`, `components`, and `utilities`.
 
 <DirectivesPlayground 
 :input='`

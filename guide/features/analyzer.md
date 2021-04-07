@@ -1,4 +1,4 @@
-# Visual Analyser
+# Visual Analyzer
 
 <PackageInfo name="windicss-analysis" author="antfu" />
 

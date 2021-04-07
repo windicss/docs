@@ -2,14 +2,13 @@
 [tailwind css]: https://tailwindcss.com/docs
 [svelte]: /guide/svelte.html#additional-features-in-svelte-⚡%EF%B8%8F
 
-# Core Features
+# Features
 
-[Windi CSS] is fully compatible with [Tailwind CSS] v2. In top of that, we have a number of additional features that boost your work further and open up much more possibility.
-
+[Windi CSS] is fully compatible with [Tailwind CSS] v2. On top of that, we have many additional features that boost your workflow further and open up much more possibilities.
 
 ### Value Auto-infer
 
-Use arbitrary value in your classes and generate coresponding styles.
+Use arbitrary values in your classes and generate corresponding styles.
 
 ```html
 <!-- sizes and positions -->
@@ -41,7 +40,7 @@ Apply utilities for the same variant by grouping them with parenthesis.
 
 ### Responsive Design
 
-Extended responsive break points controls.
+Extended responsive breakpoints control.
 
 ```html
 <div class="p-1 md:p-2 <lg:p-3"></div>
@@ -107,8 +106,8 @@ Tailwind-liked `@apply`, `@screen` directives are fully supported.
 
 <LearnMore to="/guide/features/directive" />
 
-### Visual Analyser
+### Visual Analyzer
 
-We provided an visual analyser for you to have an overview of your utilities usage and design system.
+We provided a visual analyzer for you to have an overview of your utility usage and design system.
 
-<LearnMore to="/guide/features/analyser" />
+<LearnMore to="/guide/features/analyzer" />
