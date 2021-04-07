@@ -1,4 +1,3 @@
-import { useClipboard } from '@vueuse/core'
 import { ref, watchEffect } from 'vue'
 
 import Prism from 'prismjs'
@@ -8,12 +7,6 @@ export function usePrismCSS(getStyle: () => string) {
   const plainCSS = ref('')
   const highlightedCSS = ref('')
 
-  const { copy, copied } = useClipboard({
-    read: false,
-    source: plainCSS,
-    copiedDuring: 2000,
-  })
-
   watchEffect(() => {
     const style = getStyle()
     plainCSS.value = style
@@ -21,8 +14,6 @@ export function usePrismCSS(getStyle: () => string) {
   })
 
   return {
-    copy,
-    copied,
     plainCSS,
     highlightedCSS,
   }

@@ -11,9 +11,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,
-    "types": ["vite/client"],
-    "declaration": true,
-    "declarationDir": "dist"
+    "types": ["vite/client", "node"],
   },
   "exclude": [
     "**/dist/**"
