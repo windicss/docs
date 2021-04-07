@@ -4,7 +4,7 @@
 
 [build]
   publish = ".vitepress/dist"
-  command = "npx pnpm@5 i --frozen-lockfile --store=node_modules/.pnpm-store && npm run build-all"
+  command = "npx pnpm i --frozen-lockfile --store=node_modules/.pnpm-store && npm run build-all"
 
 [[redirects]]
   from = "https://windicss.netlify.app/*"
