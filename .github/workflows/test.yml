@@ -25,9 +25,9 @@ jobs:
         id: pnpm-cache
         with:
           path: ${{ runner.os == 'windows-latest' && '%userprofile%\.pnpm-store' || '~/.pnpm-store' }}
-          key: ${{ runner.os }}-${{ matrix.node }}-pnpm-v2-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-${{ matrix.node }}-pnpm-v3-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.node }}-pnpm-v2-
+            ${{ runner.os }}-${{ matrix.node }}-pnpm-v3-
       - name: Install dependencies
         run: |
           npm i -g pnpm @antfu/ni

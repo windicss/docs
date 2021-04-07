@@ -18,9 +18,9 @@ jobs:
         id: pnpm-cache
         with:
           path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-v2-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${{ runner.os }}-pnpm-v2-
 
       - run: npm i -g pnpm
       - run: pnpm i --frozen-lockfile
