@@ -10,12 +10,12 @@
       </template>
       <template #search>
         <NavDivider />
-        <AlgoliaSearchBox :options="theme.algolia" :small="playground || (!bpxl && !enableHome)" />
+        <AlgoliaSearchBox :options="theme.algolia" :small="playground || (!bpxl && !enableHome)" class="hidden md:block" />
       </template>
     </NavBar>
     <SideBar>
       <template #search>
-        <AlgoliaSearchBox :options="theme.algolia" :small="playground" />
+        <AlgoliaSearchBox id="sidebar-search" :options="theme.algolia" class="md:hidden" />
       </template>
     </SideBar>
     <div class="relative pt-$header-height min-h-screen w-full" :class="{'lg:pl-$sidebar-width': showSidebar}">

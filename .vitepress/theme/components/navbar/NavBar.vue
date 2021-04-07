@@ -9,7 +9,7 @@
 
     <NavBarIconButtons>
       <slot name="icons" />
-      <template v-if="bpmd" #search>
+      <template #search>
         <slot name="search" />
       </template>
     </NavBarIconButtons>
@@ -20,8 +20,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import { toggleSidebar } from '../../composables/sideBar'
-import { bps } from '../../composables/breakpoints'
-const bpmd = bps.greater('md')
 
 defineProps({
   sidebarState: Boolean,
