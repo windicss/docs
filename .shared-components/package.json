@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "rimraf dist && rollup -c",
-    "prepare": "npm run build"
+    "postinstall": "npm run build"
   },
   "author": "Han <me@hanlee.co>",
   "license": "MIT",
@@ -52,7 +52,6 @@
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/node": "^14.14.37",
     "@types/prismjs": "^1.16.4",
-    "@vue/compiler-sfc": "^3.0.11",
     "esbuild-register": "^2.4.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.44.0",
