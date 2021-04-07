@@ -11,6 +11,7 @@ import { isDark } from '../../composables/dark'
 import { bps } from '../../composables/breakpoints'
 import { html, css } from '../../examples/playground'
 import 'splitpanes/dist/splitpanes.css'
+import '@windicss/shared-components/dist/index.css'
 
 const bpmd = bps.greater('md')
 
@@ -97,12 +98,5 @@ useEmitShare(htmlCode, styleCode)
   &:hover:before, &:hover:after {
     @apply bg-gray-400 dark:bg-dark-100;
   }
-}
-
-.preview-container,
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
 }
 </style>
