@@ -9,7 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "prepare": "vite build"
   },
   "author": "Han <me@hanlee.co>",
   "license": "MIT",

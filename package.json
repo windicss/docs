@@ -14,7 +14,7 @@
   "dependencies": {
     "@vueuse/core": "^4.7.0",
     "@vueuse/integrations": "^4.7.0",
-    "@windicss/shared-components": "workspace:^0.1.0",
+    "@windicss/shared-components": "workspace:*",
     "axios": "^0.21.1",
     "change-case": "^4.1.2",
     "codemirror": "^5.60.0",
