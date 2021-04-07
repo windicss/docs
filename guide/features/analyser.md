@@ -24,7 +24,7 @@ Or you can install locally to reuse the same version of your local `windicss` mo
 npm i -D windicss-analysis
 ```
 
-```jsonc
+```json5
 // package.json
 {
   "scripts": {
