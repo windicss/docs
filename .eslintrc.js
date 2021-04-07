@@ -24,7 +24,6 @@ module.exports = {
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-var-requires': 'off',
-        'jsonc/quotes': ['error', 'single'],
         'jsonc/no-dupe-keys': 'off',
       },
     },

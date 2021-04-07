@@ -35,9 +35,9 @@ Font families can be specified as an array or as a simple comma-delimited string
 ```json5
 {
   // Array format:
-  'sans': ['Helvetica', 'Arial', 'sans-serif'],
+  "sans": ["Helvetica", "Arial", "sans-serif"],
   // Comma-delimited format:
-  'sans': 'Helvetica, Arial, sans-serif',
+  "sans": "Helvetica, Arial, sans-serif",
 }
 ```
 
@@ -46,9 +46,9 @@ Note that Windi CSS does not automatically escape font names for you. If you're 
 ```json5
 {
   // Won't work:
-  'sans': ['Exo 2', /* ... */],
+  "sans": ["Exo 2", /* ... */],
   // Add quotes:
-  'sans': ['"Exo 2"', /* ... */],
+  "sans": ["\"Exo 2\"", /* ... */],
 }
 ```
 
