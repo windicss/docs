@@ -277,13 +277,9 @@ onMounted(async() => {
         </div>
         <div
           v-if="showPreview"
-          class="border-l bc"
+          class="border-l bc w-10em"
         >
-          <IframePreview
-            class="w-10em"
-            v-bind="iframeData"
-            :height-offset="40"
-          />
+          <IframePreview v-bind="iframeData" />
         </div>
       </div>
     </div>
