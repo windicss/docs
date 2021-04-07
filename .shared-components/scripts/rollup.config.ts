@@ -2,9 +2,9 @@ import fs from 'fs'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 import copy from 'rollup-plugin-copy'
-import replace from '@rollup/plugin-replace';
+import replace from '@rollup/plugin-replace'
 // @ts-ignore
-import commonjs from '@rollup/plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import { RollupOptions } from 'rollup'
 
@@ -30,7 +30,7 @@ configs.push({
   plugins: [
     replace({
       preventAssignment: true,
-      __INJECT_HTML__: JSON.stringify(html)
+      __INJECT_HTML__: JSON.stringify(html),
     }),
     nodeResolve(),
     typescript({
@@ -40,8 +40,8 @@ configs.push({
     copy({
       targets: [
         { src: 'src/index.css', dest: 'dist' },
-      ]
-    })
+      ],
+    }),
   ],
   external,
 })
