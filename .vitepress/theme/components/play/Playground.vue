@@ -11,7 +11,7 @@ import { isDark } from '../../composables/dark'
 import { bps } from '../../composables/breakpoints'
 import { html, css } from '../../examples/playground'
 import 'splitpanes/dist/splitpanes.css'
-import '@windicss/shared-components/dist/index.css'
+import '@windicss/shared-components/index.css'
 
 const bpmd = bps.greater('md')
 

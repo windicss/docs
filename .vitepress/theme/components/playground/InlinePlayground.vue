@@ -5,7 +5,7 @@ import { StyleSheet } from 'windicss/utils/style'
 import Windi from 'windicss'
 import JSON5 from 'json5'
 import { IframePreview } from '@windicss/shared-components'
-import '@windicss/shared-components/dist/index.css'
+import '@windicss/shared-components/index.css'
 
 import type { PropType } from 'vue'
 import type CodeMirror from 'codemirror'
