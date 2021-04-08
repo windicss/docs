@@ -1,4 +1,4 @@
-[auto]: /guide/features/variant-auto-inferr
+[auto]: /guide/features/value-auto-infer
 [design]: /guide/modes
 
 # Migrate from Tailwind CSS

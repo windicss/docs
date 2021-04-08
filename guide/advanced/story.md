@@ -7,13 +7,13 @@
 So far, we have implemented the following features:
 
 - support [windi.config.js](/guide/configuration)
-- support [official plugins](/guide/plugins/)
+- support [official plugins](/plugins/)
 - support plugin CSS-in-JS syntax
 - support add plugin interfaces
-- support [directives `@apply`,` @screen`,`@variants`](/guide/directives)
+- support [directives `@apply`,` @screen`,`@variants`](/guide/features/directives)
 - support preflight
 - support [all tailwind utilities](/utilities/)
-- A lot of [new features](/guide/introduction)
+- A lot of [new features](/guide/features/)
 
 ## Beginning
 

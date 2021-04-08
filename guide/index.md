@@ -4,8 +4,8 @@
 [GitHub Discussions]: https://github.com/windicss/windicss/discussions
 [autoprefixer]: https://autoprefixer.github.io/
 [utilities reference]: /utilities/
-[utilities]: /guide/utilities
-[directives]: /guide/directives
+[utilities]: /utilities/
+[directives]: /guide/features/directives
 
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
 [options]: /guide/configuration

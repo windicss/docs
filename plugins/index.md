@@ -1,6 +1,6 @@
 # Utilities
 
-- [Typography](/plugins/typography)
+- [Typography](/plugins/official/typography)
 
 
 ::: tip

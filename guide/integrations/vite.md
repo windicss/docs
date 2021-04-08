@@ -1,6 +1,6 @@
 [speed comparison]: https://twitter.com/antfu7/status/1361398324587163648
 [CSS directives]: /guide/features/directives
-[classes utilities]: /guide/features/utilities
+[classes utilities]: /utilities/
 [migration]: /guide/migration
 
 <Logo name="vite" class="logo-float-xl"/>
