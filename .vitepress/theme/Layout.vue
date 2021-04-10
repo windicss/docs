@@ -3,10 +3,7 @@
     <NavBar :sidebar-state="showSidebar">
       <template v-if="playground" #icons>
         <NavDivider />
-        <!-- TODO -->
-        <ShareButton />
-        <LayoutSwitch />
-        <ExportButton class="!hidden !md:inline-flex" />
+        <PlaygroundActionButtons />
       </template>
       <template #search>
         <NavDivider />

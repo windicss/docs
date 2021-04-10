@@ -1,9 +1,11 @@
 import { Ref, computed, watch } from 'vue'
 import * as lzs from 'lz-string'
 import mitt from 'mitt'
+import { getTemplateComponent } from '../examples/components'
 
 export const emitter = mitt()
 export const SHARE_EVENT = Symbol('share')
+export const EXPORT_EVENT = Symbol('export')
 export const BASE_URL = 'https://next.windicss.org'
 
 export function getShareURL(html: string, css: string, site: string = BASE_URL) {
@@ -24,6 +26,26 @@ export function getSharedCode() {
   }
 }
 
+function download(filename: string, textInput: string) {
+  const blob = new Blob([textInput], {
+    type: 'text/plain',
+  })
+  const url = window.URL.createObjectURL(blob)
+  const element = document.createElement('a')
+  element.setAttribute('href', url)
+  element.setAttribute('download', filename)
+  element.click()
+  window.URL.revokeObjectURL(url)
+}
+
+const filename: Record<ComponentType, string> = {
+  vue: 'windicss.vue',
+  react: 'windicss.tsx',
+  svelte: 'windicss.svelte',
+}
+
+type ComponentType = 'vue' | 'react' | 'svelte'
+
 export function useEmitShare(html: Ref<string>, css: Ref<string>) {
   const url = computed(() => getShareURL(html.value, css.value))
   watch(url, () => {
@@ -35,7 +57,17 @@ export function useEmitShare(html: Ref<string>, css: Ref<string>) {
   emitter.on(SHARE_EVENT, async() => {
     await navigator.clipboard.writeText(url.value.toString())
   })
+  emitter.on<ComponentType>(EXPORT_EVENT, async(type) => {
+    if (!type) return
+    const str = getTemplateComponent(type, html.value, css.value)
+    if (str)
+      download(filename[type], str)
+  })
 }
 export function emitShare() {
   emitter.emit(SHARE_EVENT)
+}
+
+export function emitExport(type: ComponentType) {
+  emitter.emit(EXPORT_EVENT, type)
 }

@@ -1,29 +1,18 @@
 <script setup lang="ts">
-import { defineProps, onMounted, onUnmounted, ref } from 'vue'
-import { useToggle } from '@vueuse/core'
-// @ts-ignore
+import { defineProps } from 'vue'
 import { layout } from '../../composables/playgroundLayout'
 
-defineProps({})
-
-const show = ref(false)
-
-const toggleShow = useToggle(show)
-const close = () => show.value = false
-onMounted(() => {
-  document.addEventListener('click', close)
-})
-onUnmounted(() => {
-  document.removeEventListener('click', close)
+defineProps({
+  open: Boolean,
 })
 </script>
 
 <template>
-  <div class="relative hidden md:block" @click.stop="toggleShow">
+  <div class="relative hidden md:block" @click.stop="$emit('toggle')">
     <NavBarIcon>
       <carbon:open-panel-right />
     </NavBarIcon>
-    <div v-if="show" class="dropdown-model">
+    <div v-if="open" class="dropdown-model">
       <NavBarIcon v-if="layout !== 'left'" @click="layout = 'left'">
         <carbon:open-panel-left />
       </NavBarIcon>

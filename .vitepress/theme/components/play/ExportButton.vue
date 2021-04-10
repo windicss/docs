@@ -1,45 +1,31 @@
 
 <script setup lang="ts">
-import { defineProps, onMounted, onUnmounted, ref } from 'vue'
-import { useToggle, useClipboard } from '@vueuse/core'
+import { defineProps } from 'vue'
+import { emitExport } from '../../composables/useShare'
 
-defineProps({})
-
-const show = ref(false)
-
-const toggleShow = useToggle(show)
-const close = () => show.value = false
-onMounted(() => {
-  document.addEventListener('click', close)
+defineProps({
+  open: Boolean,
 })
-onUnmounted(() => {
-  document.removeEventListener('click', close)
-})
-function copyVueComponent() {
-  const { copy } = useClipboard({
-    source: 'script setup',
-  })
-  copy()
-}
 </script>
 
 <template>
-  <div class="relative hidden md:block" @click.stop="toggleShow">
+  <div class="relative hidden md:block" @click.stop="$emit('toggle')">
     <NavBarIcon>
       <carbon:export />
     </NavBarIcon>
-    <div v-if="show" class="dropdown-model">
+    <div v-if="open" class="dropdown-model">
       <span>Components</span>
       <div class="flex space-x-2">
-        <NavBarIcon @click="copyVueComponent">
+        <NavBarIcon class="!text-2xl" @click="emitExport('vue')">
           <logos:vue />
         </NavBarIcon>
-        <NavBarIcon>
-          <logos:react />
-        </NavBarIcon>
-        <NavBarIcon>
+        <NavBarIcon class="!text-2xl" @click="emitExport('svelte')">
           <logos:svelte-icon />
         </NavBarIcon>
+        <!-- TODO -->
+        <!-- <NavBarIcon @click="emitExport('react')">
+          <logos:react />
+        </NavBarIcon> -->
       </div>
     </div>
   </div>
@@ -51,6 +37,7 @@ function copyVueComponent() {
   grid gap-2 p-1.5 px-2
   absolute top-11 -right-2
   bg-white dark:bg-dark-700
+  text-sm font-bold
   rounded-lg border border-blue-gray-200 dark:border-dark-300;
 }
 </style>
