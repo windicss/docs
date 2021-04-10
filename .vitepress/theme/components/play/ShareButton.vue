@@ -16,7 +16,7 @@ function handleShare() {
 </script>
 
 <template>
-  <NavBarIcon class="!hidden !md:inline-flex" @click="handleShare()">
+  <NavBarIcon class="!hidden !md:inline-flex" title="Copy link" alt="Copy link" @click="handleShare()">
     <bx:bx-check-circle v-if="toggle" />
     <bx:bx-clipboard v-else />
   </NavBarIcon>

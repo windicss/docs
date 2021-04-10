@@ -21,5 +21,5 @@ onUnmounted(() => {
 <template>
   <ShareButton />
   <LayoutSwitch :open="show === 'layout'" @toggle="handleToggle('layout')" />
-  <ExportButton :open="show === 'export'" class="!hidden !md:inline-flex" @toggle="handleToggle('export')" />
+  <DownloadButton :open="show === 'export'" class="!hidden !md:inline-flex" @toggle="handleToggle('export')" />
 </template>

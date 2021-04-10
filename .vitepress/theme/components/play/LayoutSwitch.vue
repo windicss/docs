@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="relative hidden md:block" @click.stop="$emit('toggle')">
-    <NavBarIcon>
+    <NavBarIcon title="Switch layout" alt="Switch layout">
       <carbon:open-panel-right />
     </NavBarIcon>
     <div v-if="open" class="dropdown-model">

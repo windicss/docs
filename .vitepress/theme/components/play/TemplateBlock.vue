@@ -33,7 +33,7 @@ const htmlCode = computed({
     <div class="block-title">
       <div class="w-full flex justify-between items-center">
         <span>Template</span>
-        <ToolsDropdown />
+        <!-- <ToolsDropdown /> -->
       </div>
     </div>
   </div>

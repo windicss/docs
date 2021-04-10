@@ -10,8 +10,8 @@ defineProps({
 
 <template>
   <div class="relative hidden md:block" @click.stop="$emit('toggle')">
-    <NavBarIcon>
-      <carbon:export />
+    <NavBarIcon title="Download component" alt="Download component">
+      <carbon:download />
     </NavBarIcon>
     <div v-if="open" class="dropdown-model">
       <span>Components</span>
