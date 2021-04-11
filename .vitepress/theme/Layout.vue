@@ -21,7 +21,7 @@
       <Page v-else />
     </div>
     <SectionsSideBar v-if="headersSidebar" />
-    <BetaTag v-if="playground" />
+    <VersionTag v-if="playground" />
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
   </div>
   <!-- <Debug /> -->
