@@ -13,7 +13,7 @@
     "prepublishOnly": "tsup",
     "build": "tsup",
     "prepare": "npm run build",
-    "release": "bumpp --commit 'chore(shared-components): release vX.X.X' --push && npm publish"
+    "release": "bumpp --commit 'chore(shared-components): release v' --push && npm publish"
   },
   "author": "Han <me@hanlee.co>",
   "license": "MIT",
