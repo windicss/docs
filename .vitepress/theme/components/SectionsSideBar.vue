@@ -4,7 +4,8 @@ import { useRoute } from 'vitepress'
 
 const route = useRoute()
 const headers = computed(() => {
-  return route.data.headers.filter(i => i.level < 3) || []
+  const headers = route.data.headers || []
+  return headers.filter(i => i.level < 3)
 })
 </script>
 
