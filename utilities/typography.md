@@ -187,17 +187,13 @@ export default {
 
 Utilities for controlling the variant of numbers.
 
-| Class | Properties |
-| :---- | :--------- |
-| normal-nums | font-variant-numeric: normal; |
-| ordinal | font-variant-numeric: ordinal; |
-| slashed-zero | font-variant-numeric: slashed-zero; |
-| lining-nums | font-variant-numeric: lining-nums; |
-| oldstyle-nums | font-variant-numeric: oldstyle-nums; |
-| proportional-nums | font-variant-numeric: proportional-nums; |
-| tabular-nums | font-variant-numeric: tabular-nums; |
-| diagonal-fractions | font-variant-numeric: diagonal-fractions; |
-| stacked-fractions | font-variant-numeric: stacked-fractions; |
+<PlaygroundWithVariants
+  variant='ordinal'
+  :variants="['normal-nums','ordinal','slashed-zero','lining-nums','oldstyle-nums','proportional-nums','tabular-nums','diagonal-fractions','stacked-fractions']"
+  prefix=''
+  fixed='p-2 dark:text-white opacity-85 text-xl'
+  html="0123456789&lt;br&gt;1/2 3/4&lt;br&gt;1st 2nd"
+/>
 
 ## Letter Spacing
 

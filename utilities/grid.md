@@ -1,20 +1,15 @@
 # Grid
 
-## Grid Template Columns
+## Grid Template Columns / Rows
 
-Utilities for specifying the columns in a grid layout.
+Utilities for specifying the columns / rows in a grid layout.
 
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| grid-cols-none | grid-template-columns: none; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `grid-cols-${int}` | grid-template-columns: `repeat(${int}, minmax(0, 1fr));` |
+<PlaygroundWithVariants
+  variant='none'
+  :variants="['none','1','2','3', '[1fr,2fr]', '[100px,1fr,min-content]']"
+  prefix='grid-cols'
+  :showPreview='false'
+/>
 
 <Customizing>
 
@@ -26,6 +21,9 @@ export default {
       gridTemplateColumns: {
         nt: 'repeat(16, minmax(0, 1fr))',
         footer: '200px minmax(900px, 1fr) 100px',
+      },
+      gridTemplateRows: {
+        layout: '200px minmax(900px, 1fr) 100px',
       },
     },
   },
@@ -71,74 +69,6 @@ export default {
       gridColumnEnd: {
         last: '20',
       },
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Grid Template Rows
-
-Utilities for specifying the rows in a grid layout.
-
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| grid-rows-none | grid-template-rows: none; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `grid-rows-${int}` | grid-template-rows: `repeat(${int}, minmax(0, 1fr))`; |
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    extend: {
-      gridTemplateRows: {
-        layout: '200px minmax(900px, 1fr) 100px',
-      },
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Grid Row Start / End
-
-Utilities for controlling how elements are sized and placed across grid rows.
-
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| row-auto | grid-row: auto; |
-| row-span-full | grid-row: 1 / -1; |
-| row-start-auto | grid-row-start: auto; |
-| row-end-auto | grid-row-end: auto; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `row-span-${int}` | grid-row: `span ${int} / span ${int};` |
-| `row-start-${int}` | grid-row-start: `${int};` |
-| `row-end-${int}` | grid-row-end: `${int};` |
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    extend: {
       gridRow: {
         'span-16': 'span 16 / span 16',
       },

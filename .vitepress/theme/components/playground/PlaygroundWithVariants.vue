@@ -11,13 +11,16 @@ const props = defineProps({
     default: () => ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '1/2', 'full'],
   },
   prefix: {
-    default: 'rounded',
+    default: '',
   },
   fixed: {
     default: '',
   },
   html: {
     default: undefined,
+  },
+  showPreview: {
+    default: true,
   },
 })
 
@@ -27,6 +30,9 @@ const {
 } = useVModels(props, emit, { passive: true })
 
 const classes = computed(() => {
+  if (!prefix.value)
+    return variant.value
+
   let strs = [prefix.value]
 
   if (variant.value)
@@ -46,5 +52,6 @@ const classes = computed(() => {
     :input="classes"
     :fixed="fixed"
     :html="html"
+    :showPreview="showPreview"
   />
 </template>
