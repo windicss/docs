@@ -11,7 +11,7 @@ Utilities for controlling the border radius of an element.
   fixed='bg-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all duration-300'
 />
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -30,6 +30,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Border Width
 
 Utilities for controlling the width of an element's borders.
@@ -42,7 +44,7 @@ Utilities for controlling the width of an element's borders.
   fixed='bg-gray-500 bg-opacity-5 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all'
 />
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -57,6 +59,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Border Color
 
 Utilities for controlling the color of an element's borders.
@@ -67,7 +71,7 @@ Utilities for controlling the color of an element's borders.
 | border-current | border-color: currentColor; |
 | `border-${color}` | --tw-border-opacity: 1;<br>border-color: `rgba(R, G, B, var(--tw-border-opacity))` |
 
-### Customizing
+<Customizing>
 
 You can customize your color palette by editing the `theme.colors` section of your `windi.config.js` file, or customize just your border colors using the theme.borderColor section.
 
@@ -86,6 +90,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Border Opacity
 
 Utilities for controlling the opacity of an element's border color.
@@ -93,6 +99,8 @@ Utilities for controlling the opacity of an element's border color.
 | Class | Properties |
 | :---- | :--------- |
 | `border-opacity-${int<=100}` | --tw-border-opacity: `${int/100};` |
+
+<Customizing>
 
 ```js
 // windi.config.js
@@ -106,6 +114,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Border Style
 
@@ -138,7 +148,7 @@ Utilities for controlling the border width between elements.
 | `divide-y-${int}` | --tw-divide-y-reverse: 0;<br>border-top-width: calc(`${int}px` * calc(1 - var(--tw-divide-y-reverse)));<br>border-bottom-width: calc(`${int}px` * var(--tw-divide-y-reverse)); |
 | `divide-x-${int}` | --tw-divide-x-reverse: 0;<br>border-right-width: calc(`${int}px` * var(--tw-divide-x-reverse));<br>border-left-width: calc(`${int}px` * calc(1 - var(--tw-divide-x-reverse))); |
 
-### Customizing
+<Customizing>
 
 The divide width scale inherits its values from the `borderWidth` scale by default, so if you'd like to customize your values for both border width and divide width together, use the `theme.borderWidth` section of your `windi.config.js` file.
 
@@ -178,6 +188,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Divide Color
 
 Utilities for controlling the border color between elements.
@@ -188,7 +200,7 @@ Utilities for controlling the border color between elements.
 | divide-current | border-color: currentColor; |
 | `divide-${color}` | --tw-divide-opacity: 1;<br>border-color: `rgba(R, G, B, var(--tw-divide-opacity));` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -204,6 +216,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Divide Opacity
 
 Utilities for controlling the opacity borders between elements.
@@ -213,7 +227,7 @@ Utilities for controlling the opacity borders between elements.
 | `border-opacity-${int<=100}` | --tw-border-opacity: `${int/100};` |
 
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -229,6 +243,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Divide Style
 
@@ -260,7 +276,7 @@ Utilities for creating outline rings with box-shadows.
 | :---- | :--------- |
 | `ring-${int}` | --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);<br>--tw-ring-shadow: `var(--tw-ring-inset) 0 0 0 calc(${int}+ var(--tw-ring-offset-width)) var(--tw-ring-color);`<br>box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -277,6 +293,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Ring Color
 
 Utilities for setting the color of outline rings.
@@ -287,7 +305,7 @@ Utilities for setting the color of outline rings.
 | ring-current | --tw-ring-color: currentColor; |
 | `ring-${color}` | --tw-ring-color: `rgba(R, G, B, var(--tw-ring-opacity));` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -303,6 +321,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Ring Opacity
 
 Utilities for setting the opacity of outline rings.
@@ -311,7 +331,7 @@ Utilities for setting the opacity of outline rings.
 | :---- | :--------- |
 | `ring-opacity-${int<=100}` | --tw-ring-opacity: `${int/100};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -328,6 +348,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Ring Offset Width
 
 Utilities for simulating an offset when adding outline rings.
@@ -336,7 +358,7 @@ Utilities for simulating an offset when adding outline rings.
 | :---- | :--------- |
 | `ring-offset-${int}` | --tw-ring-offset-width: `${int}px;` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -353,6 +375,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Ring Offset Color
 
 Utilities for setting the color of outline ring offsets.
@@ -363,7 +387,7 @@ Utilities for setting the color of outline ring offsets.
 | ring-offset-current | --tw-ring-offset-color: currentColor; |
 | `ring-offset-${color}` | --tw-ring-offset-color: `${hex};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -378,3 +402,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

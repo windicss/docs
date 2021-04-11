@@ -12,7 +12,7 @@ Utilities for controlling the font family of an element.
   html="The quick brown fox jumps over the lazy dog"
 />
 
-### Customizing
+<Customizing>
 
 ```js
 export default {
@@ -52,6 +52,8 @@ Note that Windi CSS does not automatically escape font names for you. If you're 
 }
 ```
 
+</Customizing>
+
 ## Font Size
 
 Utilities for controlling the font size of an element.
@@ -64,7 +66,7 @@ Utilities for controlling the font size of an element.
   html="The quick brown fox jumps over the lazy dog"
 />
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -104,7 +106,7 @@ export default {
 }
 ```
 
-If you also want to provide a default letter-spacing value for a font size, you can do so using a tuple of the form [fontSize, { letterSpacing, lineHeight }] in your windi.config.js file.
+If you also want to provide a default letter-spacing value for a font size, you can do so using a tuple of the form `[fontSize, { letterSpacing, lineHeight }]` in your windi.config.js file.
 
 ```js
 // windi.config.js
@@ -123,6 +125,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Font Smoothing
 
@@ -154,7 +158,7 @@ Utilities for controlling the font weight of an element.
   html="The quick brown fox jumps over the lazy dog"
 />
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -176,6 +180,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Font Variant Numeric
 
@@ -205,7 +211,7 @@ Utilities for controlling the tracking (letter spacing) of an element.
   html="The quick brown fox jumps over the lazy dog"
 />
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -224,6 +230,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Line Height
 
 Utilities for controlling the leading (line height) of an element.
@@ -236,7 +244,7 @@ Utilities for controlling the leading (line height) of an element.
   html="The quick brown fox jumps over the lazy dog"
 />
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -251,6 +259,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## List Style Type
 
 Utilities for controlling the bullet/number style of a list.
@@ -261,7 +271,7 @@ Utilities for controlling the bullet/number style of a list.
 | list-disc | list-style-type: disc; |
 | list-decimal | list-style-type: decimal; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -277,6 +287,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## List Style Position
 
@@ -297,7 +309,7 @@ Utilities for controlling the color of placeholder text.
 | placeholder-current | color: currentColor; |
 | `placeholder-${color}` | --tw-placeholder-opacity: 1;<br>color: `rgba(R, G, B, var(--tw-placeholder-opacity));` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -312,6 +324,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Placeholder Opacity
 
 Utilities for controlling the opacity of an element's placeholder color.
@@ -320,7 +334,7 @@ Utilities for controlling the opacity of an element's placeholder color.
 | :---- | :--------- |
 | `placeholder-opacity-${int<=100}` | --tw-placeholder-opacity: `${int/100};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -334,6 +348,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Text Alignment
 
@@ -356,7 +372,7 @@ Utilities for controlling the text color of an element.
 | text-current | color: currentColor; |
 | `text-${color}` | --tw-text-opacity: 1;<br>color: `rgba(R, G, B, var(--tw-text-opacity));` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -371,6 +387,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Text Opacity
 
 Utilities for controlling the opacity of an element's text color.
@@ -378,6 +396,8 @@ Utilities for controlling the opacity of an element's text color.
 | Class | Properties |
 | :---- | :--------- |
 | `text-opacity-${int<=100}` | --tw-text-opacity: `${int/100};` |
+
+<Customizing>
 
 ```js
 // windi.config.js
@@ -393,6 +413,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Text Decoration
 

@@ -22,7 +22,7 @@ Utilities for controlling the cursor style when hovering over an element.
 | cursor-move | cursor: move; |
 | cursor-not-allowed | cursor: not-allowed; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -42,6 +42,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Outline
 
@@ -63,7 +65,7 @@ Utilities for controlling an element's outline.
 | `outline-solid-${color}` | outline: `2px solid ${hex};`<br>outline-offset: 2px; |
 | `outline-dotted-${color}` | outline: `2px dotted ${hex};`<br>outline-offset: 2px; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -92,6 +94,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Pointer Events
 

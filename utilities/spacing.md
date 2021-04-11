@@ -42,7 +42,7 @@ Utilities for controlling an element's padding.
 | `pb-${size}` | padding-bottom: `${size};` |
 | `pl-${size}` | padding-left: `${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -57,6 +57,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Margin
 
@@ -121,7 +123,7 @@ Utilities for controlling an element's margin.
 | `-mb-${size}` | margin-bottom: `-${size};` |
 | `-ml-${size}` | margin-left: `-${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -136,6 +138,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Space Between
 
@@ -165,7 +169,7 @@ Utilities for controlling the space between child elements.
 | `-space-y-${float}` | --tw-space-y-reverse: 0;<br>margin-top: `calc(-${float/4}rem * calc(1 - var(--tw-space-y-reverse)));`<br>margin-bottom: `calc(-${float/4}rem * var(--tw-space-y-reverse));` |
 | `-space-y-${float}` | --tw-space-y-reverse: 0;<br>margin-top: `calc(-${float/4}rem * calc(1 - var(--tw-space-y-reverse)));`<br>margin-bottom: `calc(-${float/4}rem * var(--tw-space-y-reverse));` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -180,3 +184,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

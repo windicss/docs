@@ -40,7 +40,7 @@ To use a container at only a certain breakpoint and up:
 </div>
 ```
 
-### Customizing
+<Customizing>
 
 #### Centering by default
 
@@ -87,7 +87,7 @@ export default {
 }
 ```
 
-***
+</Customizing>
 
 ## Box Sizing
 
@@ -173,7 +173,7 @@ Utilities for controlling how a replaced element's content should be positioned 
 | object-right-top | object-position: right top; |
 | object-top | object-position: top; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -195,6 +195,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Overflow
 
@@ -423,7 +425,7 @@ Utilities for controlling the placement of positioned elements.
 | `-left-${fraction}` | left: `-${percent};` |
 | `-left-${size}` | left: `-${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -436,6 +438,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Visibility
 
@@ -463,7 +467,7 @@ Utilities for controlling the stack order of an element.
 | `z-${int}` | z-index: `${int};` |
 | `-z-${int}` | z-index: `-${int};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -476,3 +480,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

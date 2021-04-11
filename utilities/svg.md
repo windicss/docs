@@ -10,7 +10,7 @@ Utilities for styling the fill of SVG elements.
 | fill-transparent | fill: transparent; |
 | `fill-${color}` | fill: `${color};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -25,6 +25,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Stroke
 
 Utilities for styling the stroke of SVG elements.
@@ -35,7 +37,7 @@ Utilities for styling the stroke of SVG elements.
 | stroke-transparent | stroke: transparent; |
 | `stroke-${color}` | stroke: `${color};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -50,6 +52,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Stroke Width
 
 Utilities for styling the stroke width of SVG elements.
@@ -58,7 +62,7 @@ Utilities for styling the stroke width of SVG elements.
 | :---- | :--------- |
 | `stroke-${int}` | stroke-width: `${int};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -73,3 +77,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

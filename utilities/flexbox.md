@@ -32,7 +32,7 @@ Utilities for controlling how flex items both grow and shrink.
 | flex-initial | flex: 0 1 auto; |
 | flex-none | flex: none; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -50,6 +50,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Flex Grow
 
 Utilities for controlling how flex items grow.
@@ -59,7 +61,7 @@ Utilities for controlling how flex items grow.
 | flex-grow-0 | flex-grow: 0; |
 | flex-grow | flex-grow: 1; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -74,6 +76,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Flex Shrink
 
 Utilities for controlling how flex items shrink.
@@ -83,7 +87,7 @@ Utilities for controlling how flex items shrink.
 | flex-shrink-0 | flex-shrink: 0; |
 | flex-shrink | flex-shrink: 1; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -97,6 +101,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Order
 
@@ -117,7 +123,7 @@ Utilities for controlling the order of flex and grid items.
 | `order-${int}` | order: `${int};` |
 | `-order-${int}` | order: `-${int};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -132,3 +138,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

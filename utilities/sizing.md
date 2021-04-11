@@ -38,7 +38,7 @@ Utilities for setting the width of an element
 | `w-${int}xl` | width: `${(number - 3) * 8 + 48}rem;` |
 | `w-${size}` | width: `${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -52,6 +52,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Min-Width
 
@@ -91,7 +93,7 @@ Utilities for setting the minimum width of an element
 | `min-w-${int}xl` | min-width: `${(number - 3) * 8 + 48}rem;` |
 | `min-w-${size}` | min-width: `${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -104,6 +106,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Max-Width
 
@@ -143,7 +147,7 @@ Utilities for setting the maximum width of an element
 | `max-w-${int}xl` | max-width: `${(number - 3) * 8 + 48}rem;` |
 | `max-w-${size}` | max-width: `${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -157,6 +161,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Height
 
@@ -196,7 +202,7 @@ Utilities for setting the height of an element
 | `h-${int}xl` | height: `${(number - 3) * 8 + 48}rem;` |
 | `h-${size}` | height: `${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -211,6 +217,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Min-Height
 
@@ -251,7 +259,7 @@ Utilities for setting the minimum height of an element
 | `min-h-${size}` | min-height: `${size};` |
 
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -267,6 +275,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Max-Height
 
@@ -306,7 +316,7 @@ Utilities for setting the maximum height of an element
 | `max-h-${int}xl` | max-height: `${(number - 3) * 8 + 48}rem;` |
 | `max-h-${size}` | max-height: `${size};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -322,3 +332,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

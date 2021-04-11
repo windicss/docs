@@ -16,7 +16,7 @@ Utilities for specifying the columns in a grid layout.
 | :---- | :--------- |
 | `grid-cols-${int}` | grid-template-columns: `repeat(${int}, minmax(0, 1fr));` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -31,6 +31,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Grid Column Start / End
 
@@ -53,7 +55,7 @@ Utilities for controlling how elements are sized and placed across grid columns.
 | `col-start-${int}` | grid-column-start: `${int};` |
 | `col-end-${int}` | grid-column-end: `${int};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -74,6 +76,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Grid Template Rows
 
 Utilities for specifying the rows in a grid layout.
@@ -90,7 +94,7 @@ Utilities for specifying the rows in a grid layout.
 | :---- | :--------- |
 | `grid-rows-${int}` | grid-template-rows: `repeat(${int}, minmax(0, 1fr))`; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -104,6 +108,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Grid Row Start / End
 
@@ -126,7 +132,7 @@ Utilities for controlling how elements are sized and placed across grid rows.
 | `row-start-${int}` | grid-row-start: `${int};` |
 | `row-end-${int}` | grid-row-end: `${int};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -146,6 +152,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Grid Auto Flow
 
@@ -169,7 +177,7 @@ Utilities for controlling the size of implicitly-created grid columns.
 | auto-cols-max | grid-auto-columns: max-content; |
 | auto-cols-fr | grid-auto-columns: minmax(0, 1fr); |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -184,6 +192,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Grid Auto Rows
 
 Utilities for controlling the size of implicitly-created grid rows.
@@ -195,7 +205,7 @@ Utilities for controlling the size of implicitly-created grid rows.
 | auto-rows-max | grid-auto-rows: max-content; |
 | auto-rows-fr | grid-auto-rows: minmax(0, 1fr); |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -209,6 +219,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Gap
 
@@ -233,7 +245,7 @@ Utilities for controlling gutters between grid rows and columns.
 | `gap-x-${float}` | column-gap: `${float/4}rem;` |
 | `gap-y-${float}` | row-gap: `${float/4}rem;` |
 
-### Customizing
+<Customizing>
 
 You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
@@ -264,3 +276,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

@@ -31,7 +31,7 @@ Utilities for controlling an element's background color.
 | bg-current | background-color: currentColor; |
 | `bg-${color}` | --tw-bg-opacity: 1;<br>background-color: `rgba(R, G, B, var(--tw-bg-opacity));` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -47,6 +47,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Background Opacity
 
 Utilities for controlling the opacity of an element's background color.
@@ -54,6 +56,8 @@ Utilities for controlling the opacity of an element's background color.
 | Class | Properties |
 | :---- | :--------- |
 | `bg-opacity-${int<=100}` | --tw-bg-opacity: `${int/100};` |
+
+<Customizing>
 
 ```js
 // windi.config.js
@@ -67,6 +71,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Background Position
 
@@ -84,7 +90,7 @@ Utilities for controlling the position of an element's background image.
 | bg-right-top | background-position: right top; |
 | bg-top | background-position: top; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -106,6 +112,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Background Repeat
 
@@ -130,7 +138,7 @@ Utilities for controlling the background size of an element's background image.
 | bg-cover | background-size: cover; |
 | bg-contain | background-size: contain; |
 
-### Customizing
+<Customizing>
 
 ```js
 export default {
@@ -145,6 +153,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Background Image
 
@@ -162,7 +172,7 @@ Utilities for controlling an element's background image.
 | bg-gradient-to-l | background-image: linear-gradient(to left, var(--tw-gradient-stops)); |
 | bg-gradient-to-tl | background-image: linear-gradient(to top left, var(--tw-gradient-stops)); |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -177,6 +187,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Gradient Color Stops
 

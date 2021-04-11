@@ -14,7 +14,7 @@ Utilities for controlling which CSS properties transition.
 | transition-shadow | transition-property: box-shadow;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
 | transition-transform | transition-property: transform;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -30,6 +30,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Transition Duration
 
 Utilities for controlling the duration of CSS transitions.
@@ -38,7 +40,7 @@ Utilities for controlling the duration of CSS transitions.
 | :---- | :--------- |
 | `duration-${int}` | transition-duration: `${int}ms;` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -54,6 +56,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Transition Timing Function
 
 Utilities for controlling the easing of CSS transitions.
@@ -65,7 +69,7 @@ Utilities for controlling the easing of CSS transitions.
 | ease-out | transition-timing-function: cubic-bezier(0, 0, 0.2, 1); |
 | ease-in-out | transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -81,6 +85,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Transition Delay
 
 Utilities for controlling the delay of CSS transitions.
@@ -89,7 +95,7 @@ Utilities for controlling the delay of CSS transitions.
 | :---- | :--------- |
 | `delay-${int}` | transition-delay: `${int}ms;` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -105,6 +111,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Animation
 
 Utilities for animating elements with CSS animations.
@@ -117,7 +125,7 @@ Utilities for animating elements with CSS animations.
 | .animate-pulse | animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;<br><br>@keyframes pulse {<br>  0%, 100% {<br>    opacity: 1;<br>  }<br>  50% {<br>    opacity: .5;<br>  }<br>} |
 | .animate-bounce | animation: bounce 1s infinite;<br><br>@keyframes bounce {<br>  0%, 100% {<br>    transform: translateY(-25%);<br>    animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);<br>  }<br>  50% {<br>    transform: translateY(0);<br>    animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);<br>  }<br>} |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -149,3 +157,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

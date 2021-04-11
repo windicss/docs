@@ -26,7 +26,7 @@ Utilities for specifying the origin for an element's transformations.
 | origin-left | transform-origin: left; |
 | origin-top-left | transform-origin: top left; |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -42,6 +42,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Scale
 
 Utilities for scaling elements with transform.
@@ -52,7 +54,7 @@ Utilities for scaling elements with transform.
 | `scale-x-${int}` | --tw-scale-x: `${int/100};` |
 | `scale-y-${int}` | --tw-scale-y: `${int/100};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -66,6 +68,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Rotate
 
 Utilities for rotating elements with transform.
@@ -75,7 +79,7 @@ Utilities for rotating elements with transform.
 | `rotate-${float}` | --tw-rotate: `${float}deg;` |
 | `-rotate-${float}` | --tw-rotate: `-${float}deg;` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -87,6 +91,8 @@ export default {
   },
 }
 ```
+
+</Customizing>
 
 ## Translate
 
@@ -126,7 +132,7 @@ Utilities for translating elements with transform.
 | `-translate-y-${fraction}` | --tw-translate-y: `-${percent};` |
 | `-translate-y-${size}` | --tw-translate-y: `-${size};` |
 
-### Customizing
+<Customizing>
 
 You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
@@ -165,6 +171,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Skew
 
 Utilities for skewing elements with transform.
@@ -176,7 +184,7 @@ Utilities for skewing elements with transform.
 | `-skew-x-${float}` | --tw-skew-x: `-${float}deg;` |
 | `-skew-y-${float}` | --tw-skew-y: `-${float}deg;` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -190,3 +198,5 @@ export default {
   },
 }
 ```
+
+</Customizing>

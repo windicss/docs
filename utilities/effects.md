@@ -16,7 +16,7 @@ Utilities for controlling the box shadow of an element.
 | shadow-inner | --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
 | shadow-none | --tw-shadow: 0 0 #0000;<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -37,6 +37,8 @@ export default {
 }
 ```
 
+</Customizing>
+
 ## Opacity
 
 Utilities for controlling the opacity of an element.
@@ -45,7 +47,7 @@ Utilities for controlling the opacity of an element.
 | :---- | :--------- |
 | `opacity-${int<=100}` | opacity: `${int/100};` |
 
-### Customizing
+<Customizing>
 
 ```js
 // windi.config.js
@@ -58,3 +60,5 @@ export default {
   },
 }
 ```
+
+</Customizing>
