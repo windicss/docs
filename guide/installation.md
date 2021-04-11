@@ -54,11 +54,13 @@ In addition of the general build tools support, we also provide integrations for
     link: '/guide/integrations/gridsome',
     logo: 'gridsome',
   },
+  /* 
   {
     title: 'Next.js',
     link: '/guide/integrations/nextjs',
     logo: 'nextjs',
-  },
+  }, 
+  */
   {
     title: 'Svelte',
     link: '/guide/integrations/svelte',

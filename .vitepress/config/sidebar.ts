@@ -121,7 +121,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Nuxt', link: '/guide/integrations/nuxt' },
         { text: 'Vue CLI', link: '/guide/integrations/vue-cli' },
         { text: 'Gridsome', link: '/guide/integrations/gridsome' },
-        { text: 'Next.js', link: '/guide/integrations/nextjs' },
+        // { text: 'Next.js', link: '/guide/integrations/nextjs' },
         { text: 'Svelte', link: '/guide/integrations/svelte' },
         { text: 'CLI', link: '/guide/integrations/cli' },
         { text: 'PostCSS', link: '/guide/integrations/postcss' },
@@ -133,7 +133,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: 'Advanced',
       children: [
-        { text: 'API', link: '/guide/advanced/api' },
+        // { text: 'API', link: '/guide/advanced/api' },
         { text: 'Modes', link: '/guide/advanced/modes' },
         { text: 'Plugin', link: '/guide/advanced/plugin' },
         { text: 'The Story', link: '/guide/advanced/story' },

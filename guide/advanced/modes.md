@@ -57,6 +57,8 @@ When set to Interpret Mode, Windi CSS will scan the input HTML file, and then ge
 
 ## Compilation Mode
 
+> Not all the integrations plugins support Compilation Mode, please check their docs for more details. We are working on it to bring this feature as wide as possible, please stay tuned.
+
 The Compilation Mode synthesizes all the CSS attributes corresponding to the utilities defined in the class attribute, which brings us back to the traditional css writing method, and includes all the great features of tailwindcss. This mode is conducive to JavaScript Frameworks based on SFC templates like [vuejs](https://github.com/vuejs/vue) and [sveltejs](https://github.com/sveltejs/svelte). All we need is a preprocessor.
 
 ```html
