@@ -15,11 +15,12 @@
         <AlgoliaSearchBox id="sidebar-search" :options="theme.algolia" class="md:hidden" />
       </template>
     </SideBar>
-    <div class="relative pt-$header-height min-h-screen w-full" :class="{'lg:pl-$sidebar-width': showSidebar}">
+    <div class="relative pt-$header-height min-h-screen w-full" :class="[{'lg:pl-$sidebar-width': showSidebar}, { 'lg:pr-$sections-sidebar-width': headersSidebar}]">
       <Home v-if="enableHome" />
       <Playground v-else-if="playground" />
       <Page v-else />
     </div>
+    <SectionsSideBar v-if="headersSidebar" />
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
   </div>
   <!-- <Debug /> -->
@@ -63,6 +64,7 @@ const enableHome = computed(() => !!route.data.frontmatter.home)
 
 // playground
 const playground = computed(() => !!route.data.frontmatter.playground)
+const headersSidebar = computed(() => route.path.startsWith('/utilities'))
 
 // navbar
 const showNavbar = computed(() => {
@@ -111,21 +113,6 @@ const pageClasses = computed(() => {
 </script>
 
 <style lang="postcss">
-@screen lg {
-  .grid-layout {
-    display: grid;
-    grid-template-columns: 16rem minmax(100px, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0px 16px;
-  }
-}
-
-/* @screen lg {
-  .grid-layout {
-    grid-template-columns: min-content minmax(100px, 2fr) 16rem;
-  }
-} */
-
 #ads-container {
   margin: 0 auto;
 }
