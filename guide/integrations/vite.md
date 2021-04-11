@@ -12,13 +12,14 @@
 ## Features
 
 - ⚡️ **It's FAST** - 20~100x times faster than Tailwind on Vite
-- 🧩 On-demand CSS utilities
-- 📦 On-demand native elements style reseting
+- 🧩 On-demand CSS utilities (Fully compatible with Tailwind CSS v2)
+- 📦 On-demand native elements style resetting (preflight)
 - 🔥 Hot module replacement (HMR)
 - 🍃 Load configurations from `tailwind.config.js`
 - 🤝 Framework-agnostic - Vue, React, Svelte and vanilla!
 - 📄 CSS `@apply` / `@screen` directives transforms (also works for Vue SFC's `<style>`)
-- 🎳 Support Utility Groups - e.g. `bg-gray-200 hover:(bg-gray-100 text-red-300)`
+- 🎳 Support Variant Groups - e.g. `bg-gray-200 hover:(bg-gray-100 text-red-300)`
+- 😎 ["Design in Devtools"](#design-in-devtools) - if you work this way in the traditional Tailwind, no reason we can't!
 
 > Check out the [speed comparison] between Windi CSS and Tailwind CSS on Vite.
 
@@ -27,7 +28,7 @@
 Install the package:
 
 ```bash
-npm install vite-plugin-windicss --save-dev
+npm i -D vite-plugin-windicss windicss
 ```
 
 Then, install the plugin in your Vite configuration:
@@ -60,7 +61,7 @@ That's it! Starting using [classes utilities] or [CSS directives] in your app, a
 
 Enable TypeScript for your `tailwind.config.js`? Sure, why not?
 
-Rename it to `tailwind.config.ts` and things will just work!
+Rename it to `tailwind.config.ts` and things just work!
 
 ```ts
 // tailwind.config.ts
@@ -89,8 +90,6 @@ It will automatically enable Pug support for `.pug` and Vue SFC when dependency 
 
 ### "Design in DevTools"
 
-> ⚗️ Experimental
-
 It might be a common practice when you use the purge-based Tailwind where you have all the classes in your browser and you can try how things work by directly changing the classes in DevTools. While you might think this is some kind of limitation of "on-demand" where the DevTools don't know those you haven't used in your source code yet.
 
 But unfortunately, **we are here to BREAK the limitation** 😎 See the [video demo](https://twitter.com/antfu7/status/1372244287975387145).
@@ -103,7 +102,7 @@ import 'virtual:windi-devtools'
 
 It will be enabled automatically for you, have fun!
 
-Oh and don't worry about the final bundle, in production build `virtual:windi-devtools` will be an empty module and you don't have to do anything about it :)
+Oh, and don't worry about the final bundle, in production build `virtual:windi-devtools` will be an empty module and you don't have to do anything about it :)
 
 > ⚠️ Please use it with caution, under the hood we use [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to detect the class changes. Which means not only your manual changes but also the changes made by your scripts will be detected and included in the stylesheet. This could cause some misalignment between dev and the production build when **using dynamically constructed classes** (false-positive). We recommended adding your dynamic parts to the `safelist` or setup UI regression tests for your production build if possible.
 
@@ -111,7 +110,7 @@ Oh and don't worry about the final bundle, in production build `virtual:windi-de
 
 ### Preflight (style reseting)
 
-Preflight is enables on demanded, if you'd like to completely disable it, you can configure it as below
+Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
 
 ```ts
 // windi.config.ts
@@ -162,12 +161,12 @@ export default defineConfig({
 
 ### Scanning
 
-On server start, `vite-plugin-windicss` will scan your source code and extract the utilities usages. By default,
-only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scaning for other file type of locations, you can configure it via:
+On server start, `vite-plugin-windicss` will scan your source code and extract the utility usages. By default,
+only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
 
 ```ts
 // windi.config.js
-import { defineConfig } from 'windcss/helpers'
+import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
   extract: {
@@ -193,6 +192,28 @@ export default defineConfig({
     }),
   ],
 })
+```
+
+### Layers Ordering
+
+> Supported from v0.14.x
+
+By default, importing `virtual:windi.css` will import all the three layers with the order `base - components - utilities`. If you want to have better controls over the orders, you can separate them by:
+
+```diff
+- import 'virtual:windi.css'
++ import 'virtual:windi-base.css'
++ import 'virtual:windi-components.css'
++ import 'virtual:windi-utilities.css'
+```
+
+You can also make your custom css been able to be overridden by certain layers:
+
+```diff
+  import 'virtual:windi-base.css'
+  import 'virtual:windi-components.css'
++ import './my-style.css'
+  import 'virtual:windi-utilities.css'
 ```
 
 ### More

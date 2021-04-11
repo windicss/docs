@@ -13,7 +13,7 @@
 
 # Getting Started
 
-**Windi CSS** is a next generation utility-first CSS framework.
+**Windi CSS** is a next-generation utility-first CSS framework.
 
 If you are already familiar with [Tailwind CSS], think about Windi CSS as an **on-demanded** alternative to Tailwind, which provides faster load times, **fully compatible with Tailwind v2.0** and with a bunch of additional cool features.
 
@@ -23,7 +23,7 @@ A quote from the author should illustrate his motivation to create Windi CSS:
 
 > When my project became larger and there were about dozens of components, the initial compilation time reached 3s, and hot updates took more than 1s with Tailwind CSS. - [@voorjaar](https://github.com/voorjaar)
 
-By scanning your HTML and CSS and generating utilities on demand, Windi CSS is able to provide [faster load times][video comparison] and a speedy HMR in development, and does not require purging in production.
+By scanning your HTML and CSS and generating utilities on demand, Windi CSS is able to provide [faster load times][video comparison] and a speedy HMR in development and does not require purging in production.
 
 ## Basic Usage
 
@@ -48,23 +48,10 @@ You can use utility classes in your components and stylesheets as usual:
 
 **Only the utilities you use will generate the corresponding CSS.**
 
-### Directives
+## Integrations
 
-You can also use `@apply` to enabled the Windi CSS utilities for your css files.
+We provide **first-class integrations** for your favorite tools with the best developer experience on each one of them, see the [integrations guides](/guide/installation) to get started!
 
-<DirectivesPlayground 
-:input='`
-.btn {
-  @apply font-bold py-2 px-4 rounded;
-}
-.btn-blue {
-  @apply text-white bg-blue-500 hover:bg-blue-700;
-  padding-top: 1rem;
-}`.trim()'
-/>
+## Features
 
-Refer to the [directives] section for more usage details.
-
-## Core Features
-
-In addition of Tailwind CSS v2, we also have some great features that only possible for Windi CSS. Refer to the [next chapter][features] for more details.
+In addition to Tailwind CSS v2, we also have some great features that only possible for Windi CSS. Refer to the [next chapter][features] for more details.

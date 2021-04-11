@@ -4,7 +4,7 @@ Windi CSS provides **first-class integrations** for your favorite tools, select 
 
 ## Build Tools
 
-Build tools support are framework-agnostic, they should works for most framework without specific configurations.
+Supports for build tools are framework-agnostic, they work for most frameworks without specific configurations.
 
 <Integrations class="mb-5" :items="[
   {
@@ -36,7 +36,7 @@ Build tools support are framework-agnostic, they should works for most framework
 
 ## Frameworks
 
-In addition of the general build tools support, we also provide integrations for the following frameworks that offers out-of-the-box experience.
+In addition to general build tools support, we also provide integrations for the following frameworks that offer out-of-the-box experience.
 
 <Integrations class="mb-5" :items="[
   {
