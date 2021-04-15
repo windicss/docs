@@ -102,6 +102,8 @@ And finally, import `windi.css` in your main layout:
 
 <slot></slot>
 ```
+> If you want to customize tailwind config, make sure that the config file extesnions is `cjs` e.g. `tailwind.config.cjs`
+
 
 ### Sapper(rollup)
 
