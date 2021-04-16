@@ -102,7 +102,7 @@ And finally, import `windi.css` in your main layout:
 
 <slot></slot>
 ```
-> If you want to customize tailwind config, make sure that the config file extesnions is `cjs` e.g. `tailwind.config.cjs`
+> If your sveltekit config is using `.cjs` extension, and you have a tailwind config file then it needs to follow the same extension type e.g. `tailwind.config.cjs` because of `esm` support from sveltekit. 
 
 
 ### Sapper(rollup)
