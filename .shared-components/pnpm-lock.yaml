@@ -1,13 +1,13 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@codemirror/autocomplete': ^0.18.4
+  '@codemirror/autocomplete': ^0.18.5
   '@codemirror/basic-setup': ^0.18.0
   '@codemirror/closebrackets': ^0.18.0
   '@codemirror/commands': ^0.18.1
   '@codemirror/comment': ^0.18.0
   '@codemirror/fold': ^0.18.0
-  '@codemirror/gutter': ^0.18.1
+  '@codemirror/gutter': ^0.18.2
   '@codemirror/highlight': ^0.18.3
   '@codemirror/history': ^0.18.1
   '@codemirror/lang-css': ^0.18.0
@@ -39,13 +39,13 @@ dependencies:
   prismjs: 1.23.0
 
 devDependencies:
-  '@codemirror/autocomplete': 0.18.4
+  '@codemirror/autocomplete': 0.18.5
   '@codemirror/basic-setup': 0.18.0
   '@codemirror/closebrackets': 0.18.0
   '@codemirror/commands': 0.18.1
   '@codemirror/comment': 0.18.0
   '@codemirror/fold': 0.18.0
-  '@codemirror/gutter': 0.18.1
+  '@codemirror/gutter': 0.18.2
   '@codemirror/highlight': 0.18.3
   '@codemirror/history': 0.18.1
   '@codemirror/lang-css': 0.18.0
@@ -92,22 +92,21 @@ packages:
       js-tokens: 4.0.0
     dev: true
 
-  /@babel/parser/7.13.15:
-    resolution: {integrity: sha512-b9COtcAlVEQljy/9fbcMHpG+UIW9ReF+gpaxDHTlZd0c6/UU9ng8zdySAW9sRTzpvcdCHn6bUcbuYUgGzLAWVQ==}
+  /@babel/parser/7.13.16:
+    resolution: {integrity: sha512-6bAg36mCwuqLO0hbR+z7PHuqWiCeP7Dzg73OpQwsAB1Eb8HnGEz5xYBzCfbu+YjoaJsJs+qheDxVAuqbt3ILEw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
     dev: true
 
-  /@babel/types/7.13.14:
-    resolution: {integrity: sha512-A2aa3QTkWoyqsZZFl56MLUsfmh7O0gN41IPvXAE/++8ojpbz12SszD7JEGYVdn4f9Kt4amIei07swF1h4AqmmQ==}
+  /@babel/types/7.13.17:
+    resolution: {integrity: sha512-RawydLgxbOPDlTLJNtoIypwdmAy//uQIzlKt2+iBiJaRlVuI6QLUxVAyWGNfOzp8Yu4L4lLIacoCyTNtpb4wiA==}
     dependencies:
       '@babel/helper-validator-identifier': 7.12.11
-      lodash: 4.17.21
       to-fast-properties: 2.0.0
     dev: true
 
-  /@codemirror/autocomplete/0.18.4:
-    resolution: {integrity: sha512-HgfSGSI44ylJd9Dhb6jSfS7Wm/c+pIQ2IHiE+tVUl1tV0cd1ySeRt5+/r4rE/4FubmkW7n97CnepGJFStj12YA==}
+  /@codemirror/autocomplete/0.18.5:
+    resolution: {integrity: sha512-Zp/HMTwvaP4B01HQx+5Ga0xBBLAwNaAlbALip355NPRBkYX9PZheX5b/F5IUAdI6kIrF2eYz1xAOChXgYg9maw==}
     dependencies:
       '@codemirror/language': 0.18.1
       '@codemirror/state': 0.18.6
@@ -120,12 +119,12 @@ packages:
   /@codemirror/basic-setup/0.18.0:
     resolution: {integrity: sha512-3IU6gBIkVVCF+ZtKqzCmYU1GLfbA12OsPYPWWq9rSzEb5G/FrWCA51ERYJpS3CzOI7TfBFjZZYc5j0OiNIF2VQ==}
     dependencies:
-      '@codemirror/autocomplete': 0.18.4
+      '@codemirror/autocomplete': 0.18.5
       '@codemirror/closebrackets': 0.18.0
       '@codemirror/commands': 0.18.1
       '@codemirror/comment': 0.18.0
       '@codemirror/fold': 0.18.0
-      '@codemirror/gutter': 0.18.1
+      '@codemirror/gutter': 0.18.2
       '@codemirror/highlight': 0.18.3
       '@codemirror/history': 0.18.1
       '@codemirror/language': 0.18.1
@@ -169,15 +168,15 @@ packages:
   /@codemirror/fold/0.18.0:
     resolution: {integrity: sha512-qZsl85rp1Wm2ifaw1E25paDRVGr0m2vKRIoUG5mv+G2NxJx6lsuMLgU7MKIJQ+3iDHUR2is2yU8d6lOwwp5IEg==}
     dependencies:
-      '@codemirror/gutter': 0.18.1
+      '@codemirror/gutter': 0.18.2
       '@codemirror/language': 0.18.1
       '@codemirror/rangeset': 0.18.0
       '@codemirror/state': 0.18.6
       '@codemirror/view': 0.18.8
     dev: true
 
-  /@codemirror/gutter/0.18.1:
-    resolution: {integrity: sha512-OJXT3giUPtMOLKmr3hHoLekEUHjLoGFA+1fIQUw7/39t4UZJr3S/1EQGI3NEPhyCg4+NCEHZJWS33x6dz5oOiA==}
+  /@codemirror/gutter/0.18.2:
+    resolution: {integrity: sha512-mrmzt6TG9sXSKOjL5LRLv/yPbVdQqVDNSUrisq9OpIHXwZgb2pg9jYhlhw8zdgB952BmENIMr2624I13uy568Q==}
     dependencies:
       '@codemirror/rangeset': 0.18.0
       '@codemirror/state': 0.18.6
@@ -205,7 +204,7 @@ packages:
   /@codemirror/lang-css/0.18.0:
     resolution: {integrity: sha512-kkU4Ug387eJoCTDDkMbXrcPBMiJ0lFWbvDaFHIuJtrMgDXJzSQ/ehx6Ife5PUBfuLU/x1JQUBdmXhW1TJzfHug==}
     dependencies:
-      '@codemirror/autocomplete': 0.18.4
+      '@codemirror/autocomplete': 0.18.5
       '@codemirror/highlight': 0.18.3
       '@codemirror/language': 0.18.1
       '@codemirror/state': 0.18.6
@@ -215,7 +214,7 @@ packages:
   /@codemirror/lang-html/0.18.0:
     resolution: {integrity: sha512-KIY4fDV6/ZTgpVBTI2O09kefTqhfPBlaN6e7Lw1JlaYwPL4kXvfDgyWilIwwTDksiLhB8LPbpS50rh2drxpV+Q==}
     dependencies:
-      '@codemirror/autocomplete': 0.18.4
+      '@codemirror/autocomplete': 0.18.5
       '@codemirror/highlight': 0.18.3
       '@codemirror/lang-css': 0.18.0
       '@codemirror/lang-javascript': 0.18.0
@@ -228,7 +227,7 @@ packages:
   /@codemirror/lang-javascript/0.18.0:
     resolution: {integrity: sha512-4KOkwXED9v39c17pIWoy+WKrNAYaKnAR/RRF8QZIqpuYjnMwGTe7GxMKKdq7E557fGzCVr7m34Qy7Gkhr5B41g==}
     dependencies:
-      '@codemirror/autocomplete': 0.18.4
+      '@codemirror/autocomplete': 0.18.5
       '@codemirror/highlight': 0.18.3
       '@codemirror/language': 0.18.1
       '@codemirror/lint': 0.18.2
@@ -396,8 +395,8 @@ packages:
   /@vue/compiler-core/3.0.11:
     resolution: {integrity: sha512-6sFj6TBac1y2cWCvYCA8YzHJEbsVkX7zdRs/3yK/n1ilvRqcn983XvpBbnN3v4mZ1UiQycTvOiajJmOgN9EVgw==}
     dependencies:
-      '@babel/parser': 7.13.15
-      '@babel/types': 7.13.14
+      '@babel/parser': 7.13.16
+      '@babel/types': 7.13.17
       '@vue/shared': 3.0.11
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -521,8 +520,8 @@ packages:
       semver: 7.3.5
     dev: true
 
-  /cac/6.7.2:
-    resolution: {integrity: sha512-w0bH1IF9rEjdi0a6lTtlXYT+vBZEJL9oytaXXRdsD68MH6+SrZGOGsu7s2saHQvYXqwo/wBdkW75tt8wFpj+mw==}
+  /cac/6.7.3:
+    resolution: {integrity: sha512-ECVqVZh74qgSuZG9YOt2OJPI3wGcf+EwwuF/XIOYqZBD0KZYLtgPWqFPxmDPQ6joxI1nOlvVgRV6VT53Ooyocg==}
     engines: {node: '>=8'}
     dev: true
 
@@ -544,8 +543,8 @@ packages:
       supports-color: 5.5.0
     dev: true
 
-  /chalk/4.1.0:
-    resolution: {integrity: sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==}
+  /chalk/4.1.1:
+    resolution: {integrity: sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==}
     engines: {node: '>=10'}
     dependencies:
       ansi-styles: 4.3.0
@@ -704,8 +703,8 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
-  /esbuild/0.11.12:
-    resolution: {integrity: sha512-c8cso/1RwVj+fbDvLtUgSG4ZJQ0y9Zdrl6Ot/GAjyy4pdMCHaFnDMts5gqFnWRPLajWtEnI+3hlET4R9fVoZng==}
+  /esbuild/0.11.13:
+    resolution: {integrity: sha512-d5coY4dd4rVWle0WzrR8+32ukKtZroVJ/wJzOwbBEmoSFB/H3QME0l+3IAN5Sf3LtuoUSivdv1/b5rD7OykXeg==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -900,7 +899,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       ansi-escapes: 4.3.2
-      chalk: 4.1.0
+      chalk: 4.1.1
       cli-cursor: 3.1.0
       cli-width: 3.0.0
       external-editor: 3.1.0
@@ -1018,7 +1017,7 @@ packages:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
     engines: {node: '>=10'}
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.1
       is-unicode-supported: 0.1.0
     dev: true
 
@@ -1398,11 +1397,11 @@ packages:
       typescript:
         optional: true
     dependencies:
-      cac: 6.7.2
-      chalk: 4.1.0
+      cac: 6.7.3
+      chalk: 4.1.1
       chokidar: 3.5.1
       debug: 4.3.1
-      esbuild: 0.11.12
+      esbuild: 0.11.13
       execa: 5.0.0
       globby: 11.0.3
       joycon: 3.0.1

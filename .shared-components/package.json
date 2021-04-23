@@ -25,13 +25,13 @@
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
-    "@codemirror/autocomplete": "^0.18.4",
+    "@codemirror/autocomplete": "^0.18.5",
     "@codemirror/basic-setup": "^0.18.0",
     "@codemirror/closebrackets": "^0.18.0",
     "@codemirror/commands": "^0.18.1",
     "@codemirror/comment": "^0.18.0",
     "@codemirror/fold": "^0.18.0",
-    "@codemirror/gutter": "^0.18.1",
+    "@codemirror/gutter": "^0.18.2",
     "@codemirror/highlight": "^0.18.3",
     "@codemirror/history": "^0.18.1",
     "@codemirror/lang-css": "^0.18.0",

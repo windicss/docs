@@ -9,6 +9,9 @@ const config: UserConfig<DefaultTheme.Config> = {
   description: metaData.description,
   head,
   themeConfig,
+  alias: {
+    windicss: '@knightly/windicss',
+  },
 }
 
 export default config
