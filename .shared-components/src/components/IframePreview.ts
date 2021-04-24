@@ -1,7 +1,5 @@
 import { ref, toRefs, watchEffect, onMounted, defineComponent, h } from 'vue'
-
-// @ts-ignore
-const srcdoc = __INJECT_HTML__
+import srcdoc from '../srcdoc.html?raw'
 
 export default defineComponent({
   props: {
