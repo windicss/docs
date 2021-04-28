@@ -141,6 +141,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Create Your Plugin', link: '/posts/plugin' },
         { text: 'Interpret vs Compile', link: '/posts/modes' },
         { text: 'Attributify Mode', link: '/posts/attributify' },
+        { text: 'Windi Lang Draft', link: '/posts/language' },
       ],
     },
   ],
