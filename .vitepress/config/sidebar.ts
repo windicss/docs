@@ -131,12 +131,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     },
 
     {
-      text: 'Advanced',
+      text: 'Posts',
       children: [
-        // { text: 'API', link: '/guide/advanced/api' },
-        { text: 'Modes', link: '/guide/advanced/modes' },
-        { text: 'Plugin', link: '/guide/advanced/plugin' },
-        { text: 'The Story', link: '/guide/advanced/story' },
+        // { text: 'API', link: '/guide/posts/api' },
+        { text: 'Modes', link: '/guide/posts/modes' },
+        { text: 'Plugin', link: '/guide/posts/plugin' },
+        { text: 'The Story', link: '/guide/posts/story' },
+        { text: 'Attributify Mode', link: '/guide/posts/attributify' },
       ],
     },
   ],
