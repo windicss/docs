@@ -1,7 +1,5 @@
 # Colors
 
-The color palette is ported from [Tailwind v2](https://tailwindcss.com/docs/customizing-colors), all credit goes to their hard work.
-
 <ColorsPalette />
 
 ## Customization 
