@@ -4,7 +4,7 @@ Doing [Responsive Design](https://en.wikipedia.org/wiki/Responsive_web_design) i
 
 <InlinePlayground :input="'p-1 lg:p-2'" :showCSS="true" :showPreview="false"/>
 
-When you want to apply a breakpoint variant to multiple utilities, in Windi CSS you can do that without repeating yourself by using the [Variant Groups](/guide/features/variant-groups.html) feature.
+When you want to apply a breakpoint variant to multiple utilities, in Windi CSS you can do that without repeating yourself by using the [Variant Groups](/features/variant-groups.html) feature.
 
 <InlinePlayground :input="'p-1 lg:(p-2 m-2 text-red-400)'" :showCSS="true" :showPreview="false"/>
 

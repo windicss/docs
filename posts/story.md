@@ -10,10 +10,10 @@ So far, we have implemented the following features:
 - support [official plugins](/plugins/)
 - support plugin CSS-in-JS syntax
 - support add plugin interfaces
-- support [directives `@apply`,` @screen`,`@variants`](/guide/features/directives)
+- support [directives `@apply`,` @screen`,`@variants`](/features/directives)
 - support preflight
 - support [all tailwind utilities](/utilities/)
-- A lot of [new features](/guide/features/)
+- A lot of [new features](/features/)
 
 ## Beginning
 

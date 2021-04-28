@@ -6,9 +6,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: 'Getting Started', link: '/guide/' },
       { text: 'Installation', link: '/guide/installation' },
-      { text: 'Features', link: '/guide/features/' },
       { text: 'Configuration', link: '/guide/configuration' },
       { text: 'Migration', link: '/guide/migration' },
+      { text: 'Features', link: '/features/' },
     ],
   },
   {
@@ -80,16 +80,16 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: 'Posts',
     items: [
-      // { text: 'API', link: '/guide/posts/api' },
-      { text: 'The Story of WindiCSS', link: '/guide/posts/story' },
-      { text: 'Windi CSS v2.2 is here', link: '/guide/posts/v22' },
-      { text: 'From v2.2 to v2.4', link: '/guide/posts/v24' },
+      // { text: 'API', link: '/posts/api' },
+      { text: 'The Story of WindiCSS', link: '/posts/story' },
+      { text: 'WindiCSS v2.2 is here', link: '/posts/v22' },
+      { text: 'From v2.2 to v2.4', link: '/posts/v24' },
 
       { text: 'separator', link: 'separator' },
 
-      { text: 'Create Your Plugin', link: '/guide/posts/plugin' },
-      { text: 'Interpret vs Compile', link: '/guide/posts/modes' },
-      { text: 'Attributify Mode', link: '/guide/posts/attributify' },
+      { text: 'Create Your Plugin', link: '/posts/plugin' },
+      { text: 'Interpret vs Compile', link: '/posts/modes' },
+      { text: 'Attributify Mode', link: '/posts/attributify' },
     ],
   },
   {

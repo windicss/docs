@@ -1,4 +1,4 @@
-[utility groups]: /guide/features/
+[utility groups]: /features/
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [migration]: /guide/migration
 
@@ -94,7 +94,7 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
-### Rollup Sapper (prefer [SvelteKit](https://next.windicss.org/guide/integrations/svelte-kit.html) once released)
+### Rollup Sapper (prefer [SvelteKit](https://next.windicss.org/integrations/svelte-kit.html) once released)
 
 ```js
 // rollup.config.js
@@ -139,7 +139,7 @@ export default {
 }
 ```
 
-### Webpack Sapper (prefer [SvelteKit](https://next.windicss.org/guide/integrations/svelte-kit.html) once released)
+### Webpack Sapper (prefer [SvelteKit](https://next.windicss.org/integrations/svelte-kit.html) once released)
 
 ```js
 // webpack.config.js
@@ -198,7 +198,6 @@ export default {
     // ...
   },
 }
-
 ```
 
 ### Setup VS Code Extension

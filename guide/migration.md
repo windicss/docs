@@ -1,5 +1,5 @@
-[auto]: /guide/features/value-auto-infer
-[design]: /guide/modes
+[auto]: /features/value-auto-infer
+[design]: /posts/story
 
 # Migrate from Tailwind CSS
 

@@ -22,7 +22,7 @@ Use arbitrary values in your classes and generate corresponding styles.
 <div class="grid-cols-[auto,1fr,30px]"></div>
 ```
 
-<LearnMore to="/guide/features/value-auto-infer" />
+<LearnMore to="/features/value-auto-infer" />
 
 ### Variant Groups
 
@@ -36,7 +36,7 @@ Apply utilities for the same variant by grouping them with parenthesis.
 <div class="bg-white dark:hover:bg-gray-800 dark:hover:font-medium dark:hover:text-white"/>
 ```
 
-<LearnMore to="/guide/features/variant-groups" />
+<LearnMore to="/features/variant-groups" />
 
 ### Responsive Design
 
@@ -46,7 +46,7 @@ Extended responsive breakpoints control.
 <div class="p-1 md:p-2 <lg:p-3"></div>
 ```
 
-<LearnMore to="/guide/features/responsive-design" />
+<LearnMore to="/features/responsive-design" />
 
 ### Important Prefix
 
@@ -56,7 +56,7 @@ Prefix any utility classes with `!` to make them as `!important`.
 <div class="text-red-400 !text-green-300">Green</div>
 ```
 
-<LearnMore to="/guide/features/important-prefix" />
+<LearnMore to="/features/important-prefix" />
 
 ### Shortcuts
 
@@ -79,7 +79,7 @@ export default {
 <div class="btn hover:btn-green"></div>
 ```
 
-<LearnMore to="/guide/features/shortcuts" />
+<LearnMore to="/features/shortcuts" />
 
 
 ### Dark Mode
@@ -88,7 +88,7 @@ export default {
 <div class="text-black dark:text-white"></div>
 ```
 
-<LearnMore to="/guide/features/dark-mode" />
+<LearnMore to="/features/dark-mode" />
 
 ### Directives
 
@@ -104,10 +104,10 @@ Tailwind-liked `@apply`, `@screen` directives are fully supported.
 }
 ```
 
-<LearnMore to="/guide/features/directive" />
+<LearnMore to="/features/directive" />
 
 ### Visual Analyzer
 
 We provided a visual analyzer for you to have an overview of your utility usage and design system.
 
-<LearnMore to="/guide/features/analyzer" />
+<LearnMore to="/features/analyzer" />

@@ -5,11 +5,11 @@
 [autoprefixer]: https://autoprefixer.github.io/
 [utilities reference]: /utilities/
 [utilities]: /utilities/
-[directives]: /guide/features/directives
+[directives]: /features/directives
 
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
 [options]: /guide/configuration
-[features]: /guide/features/
+[features]: /features/
 
 # Getting Started
 

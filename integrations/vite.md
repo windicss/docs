@@ -1,5 +1,5 @@
 [speed comparison]: https://twitter.com/antfu7/status/1361398324587163648
-[CSS directives]: /guide/features/directives
+[CSS directives]: /features/directives
 [classes utilities]: /utilities/
 [migration]: /guide/migration
 

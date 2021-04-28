@@ -17,7 +17,7 @@ Since Windi CSS will only generate the CSS utilities you use, it enables the pos
 
 This is useful when you want to opt-out your design system and have some fine-grain controls over some specific components. Both direct `p-5px` and explicitly escaping `p-[5px]` are supported.
 
-We also provided [an visual analyser](/guide/features/analyzer) to give you an overview of all the utilities usages in your project and spot unwanted value escaping of your design system with ease. 
+We also provided [an visual analyser](/features/analyzer) to give you an overview of all the utilities usages in your project and spot unwanted value escaping of your design system with ease. 
 
 ## Numbers
 
