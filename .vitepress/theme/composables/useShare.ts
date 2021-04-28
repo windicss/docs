@@ -6,7 +6,7 @@ import { getTemplateComponent } from '../examples/components'
 export const emitter = mitt()
 export const SHARE_EVENT = Symbol('share')
 export const EXPORT_EVENT = Symbol('export')
-export const BASE_URL = 'https://next.windicss.org'
+export const BASE_URL = 'https://windicss.org'
 
 export function getShareURL(html: string, css: string, site: string = BASE_URL) {
   const url = new URL('/play.html', site)

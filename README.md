@@ -4,7 +4,7 @@
 
 This is the documentation website for [Windi CSS].
 
-https://next.windicss.org
+https://windicss.org
 
 ## Development
 

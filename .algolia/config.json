@@ -2,18 +2,18 @@
   "index_name": "windicss-next",
   "start_urls": [
     {
-      "url": "https://next.windicss.org/utilities/",
+      "url": "https://windicss.org/utilities/",
       "selectors_key": "utilities",
       "tags": ["utilities"],
       "page_rank": 3
     },
     {
-      "url": "https://next.windicss.org/plugins/",
+      "url": "https://windicss.org/plugins/",
       "tags": ["plugins"],
       "page_rank": 2
     },
     {
-      "url": "https://next.windicss.org/guide/",
+      "url": "https://windicss.org/guide/",
       "tags": ["guide"],
       "page_rank": 1
     }

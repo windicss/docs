@@ -94,7 +94,7 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
-### Rollup Sapper (prefer [SvelteKit](https://next.windicss.org/integrations/svelte-kit.html) once released)
+### Rollup Sapper (prefer [SvelteKit](https://windicss.org/integrations/svelte-kit.html) once released)
 
 ```js
 // rollup.config.js
@@ -139,7 +139,7 @@ export default {
 }
 ```
 
-### Webpack Sapper (prefer [SvelteKit](https://next.windicss.org/integrations/svelte-kit.html) once released)
+### Webpack Sapper (prefer [SvelteKit](https://windicss.org/integrations/svelte-kit.html) once released)
 
 ```js
 // webpack.config.js
