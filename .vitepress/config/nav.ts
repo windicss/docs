@@ -78,6 +78,21 @@ export const nav: DefaultTheme.Config['nav'] = [
   //   ],
   // },
   {
+    text: 'Posts',
+    items: [
+      // { text: 'API', link: '/guide/posts/api' },
+      { text: 'The Story of WindiCSS', link: '/guide/posts/story' },
+      { text: 'Windi CSS v2.2 is here', link: '/guide/posts/v22' },
+      { text: 'From v2.2 to v2.4', link: '/guide/posts/v24' },
+
+      { text: 'separator', link: 'separator' },
+
+      { text: 'Create Your Plugin', link: '/guide/posts/plugin' },
+      { text: 'Interpret vs Compile', link: '/guide/posts/modes' },
+      { text: 'Attributify Mode', link: '/guide/posts/attributify' },
+    ],
+  },
+  {
     text: 'Community',
     items: [
       { text: 'Discord', link: 'https://chat.windicss.org' },

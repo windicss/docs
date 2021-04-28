@@ -1,4 +1,4 @@
-# Modes
+# Interpret vs Compile
 
 Windi CSS has two operating modes, one is called **Interpretation Mode** and the other is called **Compilation Mode**.
 
