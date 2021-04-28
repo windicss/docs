@@ -98,6 +98,15 @@ Utilities for controlling how the browser should calculate an element's total si
 | box-border  | box-sizing: border-box;   |
 | box-content | box-sizing: content-box;  |
 
+## Box Decoration Break
+
+Utilities for controlling how element fragments should be rendered across multiple lines, columns, or pages.
+
+| Class       | Properties                |
+| :---------- | :------------------------ |
+| decoration-slice | box-decoration-break: slice;   |
+| decoration-clone | box-decoration-break: clone;  |
+
 ## Display
 
 Utilities for controlling the display box type of an element.
@@ -110,6 +119,7 @@ Utilities for controlling the display box type of an element.
 | flex	| display: flex; |
 | inline-flex	| display: inline-flex; |
 | table	| display: table; |
+| inline-table	| display: inline-table; |
 | table-caption	| display: table-caption; |
 | table-cell	| display: table-cell; |
 | table-column	| display: table-column; |
@@ -122,6 +132,7 @@ Utilities for controlling the display box type of an element.
 | grid	| display: grid; |
 | inline-grid	| display: inline-grid; |
 | contents	| display: contents; |
+| list-item	| display: list-item; |
 | hidden	| display: none; |
 
 ## Floats
@@ -144,6 +155,15 @@ Utilities for controlling the wrapping of content around an element.
 | clear-right | clear: right; |
 | clear-both | clear: both; |
 | clear-none | clear: none; |
+
+## Isolation
+
+Utilities for controlling whether an element should explicitly create a new stacking context.
+
+| Class  | Properties |
+| :----- | :--------- |
+| isolate | isolation: isolate; |
+| isolation-auto | isolation: auto; |
 
 ## Object Fit
 
