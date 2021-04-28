@@ -69,7 +69,7 @@ useEmitShare(htmlCode, styleCode)
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 .playground {
   @apply h-140vh p-4 bg-blue-gray-100 dark:bg-dark-800;
 }

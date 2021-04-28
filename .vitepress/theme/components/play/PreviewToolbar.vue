@@ -37,7 +37,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 .number-input {
   @apply appearance-none bg-transparent w-12 text-center focus:outline-none border border-gray-300 rounded dark:border-dark-300;
 }
