@@ -1,6 +1,6 @@
 [windi css]: https://github.com/windicss/windicss
 
-# Windi CSS Documentation (Working in Progress)
+# Windi CSS Documentation
 
 This is the documentation website for [Windi CSS].
 
