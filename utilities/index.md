@@ -9,7 +9,7 @@
 - [Flexbox](/utilities/flexbox)
 - [Grid](/utilities/grid)
 - [Interactivity](/utilities/interactivity)
-- [Layout](/utilities/layout)
+- [Container](/utilities/container)
 - [Sizing](/utilities/sizing)
 - [Spacing](/utilities/spacing)
 - [SVG](/utilities/svg)
