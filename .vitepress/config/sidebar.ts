@@ -11,7 +11,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
     {
-      text: 'Content',
+      text: 'Basic',
       children: [
         { text: 'Typography', link: '/utilities/typography' },
         { text: 'Backgrounds', link: '/utilities/backgrounds' },
@@ -20,9 +20,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
     {
-      text: 'Position',
+      text: 'Layout',
       children: [
-        { text: 'Layout', link: '/utilities/layout' },
+        { text: 'Container', link: '/utilities/container' },
         { text: 'Spacing', link: '/utilities/spacing' },
         { text: 'Sizing', link: '/utilities/sizing' },
         { text: 'Flexbox', link: '/utilities/flexbox' },
@@ -34,6 +34,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: 'Enhancement',
       children: [
+        { text: 'Filters', link: '/utilities/filters' },
         { text: 'Effects', link: '/utilities/effects' },
         { text: 'Transitions', link: '/utilities/transitions' },
         { text: 'Transforms', link: '/utilities/transforms' },

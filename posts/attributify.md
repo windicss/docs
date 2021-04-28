@@ -289,7 +289,7 @@ md-bg = "blue-300 dark:blue-400"
 
 #### Align
 
-> e.g. align = "start md:end"
+> align = "start md:end"
 
 | values                                                       | property      |
 | :----------------------------------------------------------- | :------------ |
@@ -309,7 +309,7 @@ md-bg = "blue-300 dark:blue-400"
 
 #### Place
 
-> e.g. place = "start md:center"
+> place = "start md:center"
 
 | values                                                       | property      |
 | :----------------------------------------------------------- | :------------ |

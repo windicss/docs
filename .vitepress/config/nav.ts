@@ -27,7 +27,7 @@ export const nav: DefaultTheme.Config['nav'] = [
 
       { text: 'separator', link: 'separator' },
 
-      { text: 'Layout', link: '/utilities/layout' },
+      { text: 'Container', link: '/utilities/container' },
       { text: 'Spacing', link: '/utilities/spacing' },
       { text: 'Sizing', link: '/utilities/sizing' },
       { text: 'Flexbox', link: '/utilities/flexbox' },
@@ -38,6 +38,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'separator', link: 'separator' },
 
       { text: 'Effects', link: '/utilities/effects' },
+      { text: 'Filters', link: '/utilities/filters' },
       { text: 'Transitions', link: '/utilities/transitions' },
       { text: 'Transforms', link: '/utilities/transforms' },
       { text: 'Interactivity', link: '/utilities/interactivity' },
