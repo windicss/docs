@@ -1,30 +1,35 @@
 <template>
   <header v-if="showHero" class="home-hero">
-    <div class="text-left pb-12 md:flex">
-      <figure v-if="$frontmatter.heroImage">
-        <img
-          class="block w-auto max-w-full max-h-120px -ml-2 select-none"
-          :src="$withBase($frontmatter.heroImage)"
-          :alt="$frontmatter.heroAlt"
-        >
-      </figure>
+    <div>
+      <div class="text-left pb-12 md:flex">
+        <figure v-if="$frontmatter.heroImage">
+          <img
+            class="block w-auto max-w-full max-h-120px -ml-2 select-none"
+            :src="$withBase($frontmatter.heroImage)"
+            :alt="$frontmatter.heroAlt"
+          >
+        </figure>
 
-      <div class="ml-2">
-        <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0">
-          {{ heroText }}
-        </h1>
-        <p v-if="hasTagline" class="m-0 mt-1 text-lg leading-6 opacity-75 xs:(text-2xl)">
-          {{ tagline }}
-        </p>
-        <div class="mt-8 flex space-x-6">
-          <a v-if="hasAction" :href="data.actionLink" class="link-btn">
-            {{ data.actionText }}
-          </a>
-          <a v-if="hasAltAction" :href="data.altActionLink" class="link-btn alt">
-            {{ data.altActionText }}
-          </a>
+        <div class="ml-2">
+          <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0">
+            {{ heroText }}
+          </h1>
+          <p v-if="hasTagline" class="m-0 mt-1 text-lg leading-6 opacity-75 xs:(text-2xl)">
+            {{ tagline }}
+          </p>
+          <div class="mt-8 flex space-x-6">
+            <a v-if="hasAction" :href="data.actionLink" class="link-btn">
+              {{ data.actionText }}
+            </a>
+            <a v-if="hasAltAction" :href="data.altActionLink" class="link-btn alt">
+              {{ data.altActionText }}
+            </a>
+          </div>
         </div>
       </div>
+      <a class="bg-primary bg-opacity-10 font-bold px-8 py-4 block rounded" href="/posts/v30.html">
+        🎉 v3.0 is now in Beta with a bunch of exciting new features!
+      </a>
     </div>
   </header>
 </template>
