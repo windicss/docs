@@ -16,6 +16,9 @@ const props = defineProps({
   fixed: {
     default: '',
   },
+  nested: {
+    default: false,
+  },
   html: {
     default: undefined,
   },
@@ -51,6 +54,7 @@ const classes = computed(() => {
   <InlinePlayground
     :input="classes"
     :fixed="fixed"
+    :nested="nested"
     :html="html"
     :showPreview="showPreview"
   />

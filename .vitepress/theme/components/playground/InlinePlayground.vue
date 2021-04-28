@@ -44,6 +44,9 @@ const props = defineProps({
   enablePreview: {
     default: true,
   },
+  nested: {
+    default: false,
+  },
   fixed: {
     default: '',
   },
@@ -91,8 +94,8 @@ const iframeData = reactive({
     .build(),
   ),
   fixedCss: computed(() => fixedStyles.build()),
-  classes: computed(() => `${[...acceped.value, props.fixed].filter(Boolean).join(' ')}`.trim()),
-  html: props.html,
+  classes: computed(() => `${[...(props.nested ? [] : acceped.value), props.fixed].filter(Boolean).join(' ')}`.trim()),
+  html: computed(() => props.nested ? `${props.html}`.replace('{class}', acceped.value.join(' ')) : props.html),
 })
 
 function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Editor) {

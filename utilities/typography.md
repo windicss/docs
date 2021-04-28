@@ -271,6 +271,19 @@ Utilities for controlling the bullet/number style of a list.
 | list-disc | list-style-type: disc; |
 | list-decimal | list-style-type: decimal; |
 
+<PlaygroundWithVariants
+  variant='none'
+  :variants="['none', 'disc', 'decimal']"
+  prefix='list'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  html="&lt;ul class='{class}'&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+&lt;/ul&gt;"
+/>
+
 <Customizing>
 
 ```js
@@ -427,12 +440,6 @@ Utilities for controlling the decoration of text.
   html="The quick brown fox jumps over the lazy dog"
 />
 
-| Class | Properties |
-| :---- | :--------- |
-| underline | text-decoration: underline; |
-| line-through | text-decoration: line-through; |
-| no-underline | text-decoration: none; |
-
 ## Text Transform
 
 Utilities for controlling the transformation of text.
@@ -454,12 +461,6 @@ Utilities for controlling text overflow in an element.
   fixed='p-2 dark:text-white opacity-85'
   html="The quick brown fox jumps over the lazy dog"
 />
-
-| Class | Properties |
-| :---- | :--------- |
-| truncate | overflow: hidden;<br>text-overflow: ellipsis;<br>white-space: nowrap; |
-| overflow-ellipsis | text-overflow: ellipsis; |
-| overflow-clip | text-overflow: clip; |
 
 ## Vertical Alignment
 
