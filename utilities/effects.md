@@ -15,6 +15,7 @@ Utilities for controlling the box shadow of an element.
 | shadow-2xl | --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
 | shadow-inner | --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
 | shadow-none | --tw-shadow: 0 0 #0000;<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
+| shadow-${color} | --tw-shadow-color: ${color}; |
 
 <Customizing>
 
@@ -32,6 +33,9 @@ export default {
       '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       'inner': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       'none': 'none',
+    },
+    boxShadowColor: {
+      gray: '#1c1c1e',
     },
   },
 }

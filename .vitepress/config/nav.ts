@@ -85,6 +85,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'The Story of WindiCSS', link: '/posts/story' },
       { text: 'WindiCSS v2.2 is here', link: '/posts/v22' },
       { text: 'From v2.2 to v2.4', link: '/posts/v24' },
+      { text: 'WindiCSS v3 now in beta', link: '/posts/v30' },
 
       { text: 'separator', link: 'separator' },
 
