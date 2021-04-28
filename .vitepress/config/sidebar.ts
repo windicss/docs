@@ -138,6 +138,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Plugin', link: '/guide/posts/plugin' },
         { text: 'The Story', link: '/guide/posts/story' },
         { text: 'Attributify Mode', link: '/guide/posts/attributify' },
+        { text: 'Windi CSS v2.2 is here', link: '/guide/posts/v22' },
+        { text: 'From v2.2 to v2.4', link: '/guide/posts/v24' },
       ],
     },
   ],
