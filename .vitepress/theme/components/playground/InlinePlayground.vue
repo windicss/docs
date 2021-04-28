@@ -273,7 +273,7 @@ onMounted(async() => {
               </div>
             </div>
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <pre class="language-css !m-0 !bg-transparent text-transparentpx-3 pb-2 overflow-auto max-h-30em"><code v-html="highlightedCSS" /></pre>
+            <pre class="language-css !m-0 !bg-transparent px-3 pb-2 overflow-auto max-h-30em"><code v-html="highlightedCSS" /></pre>
           </div>
         </div>
         <div

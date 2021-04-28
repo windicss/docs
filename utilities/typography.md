@@ -132,19 +132,23 @@ export default {
 
 Utilities for controlling the font smoothing of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| antialiased | -webkit-font-smoothing: antialiased;<br>-moz-osx-font-smoothing: grayscale; |
-| subpixel-antialiased | -webkit-font-smoothing: auto;<br>-moz-osx-font-smoothing: auto; |
+<PlaygroundWithVariants
+  variant='antialiased'
+  :variants="['antialiased', 'subpixel-antialiased']"
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ## Font Style
 
 Utilities for controlling the style of text.
 
-| Class | Properties |
-| :---- | :--------- |
-| italic | font-style: italic; |
-| not-italic | font-style: normal; |
+<PlaygroundWithVariants
+  variant='italic'
+  :variants="['italic', 'not-italic']"
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ## Font Weight
 
@@ -416,6 +420,13 @@ export default {
 
 Utilities for controlling the decoration of text.
 
+<PlaygroundWithVariants
+  variant='no-underline'
+  :variants="['underline', 'line-through', 'no-underline']"
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
+
 | Class | Properties |
 | :---- | :--------- |
 | underline | text-decoration: underline; |
@@ -426,16 +437,23 @@ Utilities for controlling the decoration of text.
 
 Utilities for controlling the transformation of text.
 
-| Class | Properties |
-| :---- | :--------- |
-| uppercase | text-transform: uppercase; |
-| lowercase | text-transform: lowercase; |
-| capitalize | text-transform: capitalize; |
-| normal-case | text-transform: none; |
+<PlaygroundWithVariants
+  variant='normal-case'
+  :variants="['uppercase', 'lowercase', 'capitalize', 'normal-case']"
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 ## Text Overflow
 
 Utilities for controlling text overflow in an element.
+
+<PlaygroundWithVariants
+  variant='truncate'
+  :variants="['truncate', 'overflow-ellipsis', 'overflow-clip']"
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
 
 | Class | Properties |
 | :---- | :--------- |
