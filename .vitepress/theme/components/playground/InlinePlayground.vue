@@ -13,6 +13,7 @@ import type { Config } from 'windicss/types/interfaces'
 
 import { useCodeMirror } from '../../composables/useCodeMirror'
 import { usePrismCSS } from '../../composables/usePrismCSS'
+import { isDark } from '../../composables/dark'
 
 const props = defineProps({
   input: {
@@ -286,7 +287,7 @@ onMounted(async() => {
           v-if="showPreview"
           class="border-l bc w-10em"
         >
-          <IframePreview v-bind="iframeData" />
+          <IframePreview v-bind="iframeData" :dark="isDark" />
         </div>
       </div>
     </div>
