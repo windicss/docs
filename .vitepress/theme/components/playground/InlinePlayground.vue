@@ -50,6 +50,9 @@ const props = defineProps({
   fixed: {
     default: '',
   },
+  appended: {
+    default: '',
+  },
   html: {
     default: undefined,
   },
@@ -81,7 +84,7 @@ const acceped = ref<string[]>([])
 
 const decorations: CodeMirror.TextMarker<CodeMirror.MarkerRange>[] = []
 const preflightStyles = processor.value.preflight('<div <p', true, true, true)
-const fixedStyles = processor.value.interpret(props.fixed).styleSheet
+const fixedStyles = processor.value.interpret(`${props.fixed} ${props.appended}`).styleSheet
 
 const style = shallowRef<StyleSheet>(new StyleSheet())
 const { highlightedCSS, copy, copied } = usePrismCSS(() => style.value.build().trim())

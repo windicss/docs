@@ -16,6 +16,9 @@ const props = defineProps({
   fixed: {
     default: '',
   },
+  appended: {
+    default: '',
+  },
   nested: {
     default: false,
   },
@@ -55,6 +58,7 @@ const classes = computed(() => {
     :input="classes"
     :fixed="fixed"
     :nested="nested"
+    :appended="appended"
     :html="html"
     :showPreview="showPreview"
   />

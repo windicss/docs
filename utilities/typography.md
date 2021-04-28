@@ -265,14 +265,8 @@ export default {
 
 Utilities for controlling the bullet/number style of a list.
 
-| Class | Properties |
-| :---- | :--------- |
-| list-none | list-style-type: none; |
-| list-disc | list-style-type: disc; |
-| list-decimal | list-style-type: decimal; |
-
 <PlaygroundWithVariants
-  variant='none'
+  variant='disc'
   :variants="['none', 'disc', 'decimal']"
   prefix='list'
   fixed='p-2 dark:text-white opacity-85'
@@ -307,20 +301,33 @@ export default {
 
 Utilities for controlling the position of bullets/numbers in lists.
 
-| Class | Properties |
-| :---- | :--------- |
-| list-inside | list-style-position: inside; |
-| list-outside | list-style-position: outside; |
+<PlaygroundWithVariants
+  variant='inside'
+  :variants="['inside', 'outside']"
+  prefix='list'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='bg-blue-200 bg-blue-300'
+  html="&lt;ul class='{class} bg-blue-300'&gt;
+  &lt;li class='bg-blue-200'&gt;One&lt;/li&gt;
+  &lt;li class='bg-blue-200'&gt;Two&lt;/li&gt;
+  &lt;li class='bg-blue-200'&gt;Three&lt;/li&gt;
+&lt;/ul&gt;"
+/>
 
 ## Placeholder Color
 
 Utilities for controlling the color of placeholder text.
 
-| Class | Properties |
-| :---- | :--------- |
-| placeholder-transparent | color: transparent; |
-| placeholder-current | color: currentColor; |
-| `placeholder-${color}` | --tw-placeholder-opacity: 1;<br>color: `rgba(R, G, B, var(--tw-placeholder-opacity));` |
+<PlaygroundWithVariants
+  variant='gray-500'
+  :variants="['transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
+  prefix='placeholder'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400'
+  html="&lt;input class='{class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Placeholder'&gt;"
+/>
 
 <Customizing>
 
@@ -343,9 +350,15 @@ export default {
 
 Utilities for controlling the opacity of an element's placeholder color.
 
-| Class | Properties |
-| :---- | :--------- |
-| `placeholder-opacity-${int<=100}` | --tw-placeholder-opacity: `${int/100};` |
+<PlaygroundWithVariants
+  variant='50'
+  :variants="['0', '5', '10', '20', '25', '30', '40', '50', '60', '70', '75', '80', '90', '95']"
+  prefix='placeholder-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400 placeholder-black'
+  html="&lt;input class='placeholder-black {class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Placeholder'&gt;"
+/>
 
 <Customizing>
 
@@ -368,22 +381,27 @@ export default {
 
 Utilities for controlling the alignment of text.
 
-| Class | Properties |
-| :---- | :--------- |
-| text-left | text-align: left; |
-| text-center | text-align: center; |
-| text-right | text-align: right; |
-| text-justify | text-align: justify; |
+<PlaygroundWithVariants
+  variant='left'
+  :variants="['left', 'center', 'right', 'justify']"
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  prefix='text'
+  html="&lt;p class='{class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+/>
 
 ## Text Color
 
 Utilities for controlling the text color of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| text-transparent | color: transparent; |
-| text-current | color: currentColor; |
-| `text-${color}` | --tw-text-opacity: 1;<br>color: `rgba(R, G, B, var(--tw-text-opacity));` |
+<PlaygroundWithVariants
+  variant='gray-500'
+  :variants="['transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
+  prefix='text'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  html="&lt;p class='{class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+/>
 
 <Customizing>
 
@@ -404,11 +422,15 @@ export default {
 
 ## Text Opacity
 
-Utilities for controlling the opacity of an element's text color.
-
-| Class | Properties |
-| :---- | :--------- |
-| `text-opacity-${int<=100}` | --tw-text-opacity: `${int/100};` |
+<PlaygroundWithVariants
+  variant='50'
+  :variants="['0', '5', '10', '20', '25', '30', '40', '50', '60', '70', '75', '80', '90', '95']"
+  prefix='text-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='text-black'
+  nested=true
+  html="&lt;p class='text-black {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+/>
 
 <Customizing>
 
@@ -434,7 +456,7 @@ export default {
 Utilities for controlling the decoration of text.
 
 <PlaygroundWithVariants
-  variant='no-underline'
+  variant='underline'
   :variants="['underline', 'line-through', 'no-underline']"
   fixed='p-2 dark:text-white opacity-85'
   html="The quick brown fox jumps over the lazy dog"
@@ -445,7 +467,7 @@ Utilities for controlling the decoration of text.
 Utilities for controlling the transformation of text.
 
 <PlaygroundWithVariants
-  variant='normal-case'
+  variant='uppercase'
   :variants="['uppercase', 'lowercase', 'capitalize', 'normal-case']"
   fixed='p-2 dark:text-white opacity-85'
   html="The quick brown fox jumps over the lazy dog"
@@ -458,41 +480,59 @@ Utilities for controlling text overflow in an element.
 <PlaygroundWithVariants
   variant='truncate'
   :variants="['truncate', 'overflow-ellipsis', 'overflow-clip']"
-  fixed='p-2 dark:text-white opacity-85'
-  html="The quick brown fox jumps over the lazy dog"
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  html="&lt;p class='{class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
 />
 
 ## Vertical Alignment
 
 Utilities for controlling the vertical alignment of an inline or table-cell box.
 
-| Class | Properties |
-| :---- | :--------- |
-| align-baseline | vertical-align: baseline; |
-| align-top | vertical-align: top; |
-| align-middle | vertical-align: middle; |
-| align-bottom | vertical-align: bottom; |
-| align-text-top | vertical-align: text-top; |
-| align-text-bottom | vertical-align: text-bottom; |
+<PlaygroundWithVariants
+  variant='baseline'
+  :variants="['baseline', 'top', 'middle', 'bottom', 'text-top', 'text-bottom']"
+  fixed='p-2 dark:text-white opacity-85'
+  prefix='align'
+  nested=true
+  appended='leading-none relative inline-block w-0 h-8 absolute top-0 border-blue-300 border-t border-b border-dashed w-full h-4 relative z-10 text-blue-500 font-medium'
+  html='&lt;div class="leading-none relative"&gt;
+    &lt;span class="w-0 h-8 inline-block {class}"&gt;
+      &lt;span class="absolute top-0 border-blue-300 border-t border-b border-dashed w-full h-8"&gt;&lt;/span&gt;
+      &lt;span class="absolute top-0 border-blue-300 border-t border-b border-dashed w-full h-4"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class="relative z-10 text-blue-500 font-medium"&gt;Hello WindiCSS&lt;/span&gt;
+  &lt;/div&gt;'
+/>
 
 ## Whitespace
 
 Utilities for controlling an element's white-space property.
 
-| Class | Properties |
-| :---- | :--------- |
-| whitespace-normal | white-space: normal; |
-| whitespace-nowrap | white-space: nowrap; |
-| whitespace-pre | white-space: pre; |
-| whitespace-pre-line | white-space: pre-line; |
-| whitespace-pre-wrap | white-space: pre-wrap; |
+<PlaygroundWithVariants
+  variant='normal'
+  :variants="['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap']"
+  fixed='p-2 dark:text-white opacity-85 overflow-scroll'
+  prefix='whitespace'
+  nested=true
+  appended='w-full'
+  html="&lt;p class='w-full {class}'&gt;First Line
+      Second Line
+      Third Line
+  Last Line&lt;/&gt;"
+/>
 
 ## Word Break
 
 Utilities for controlling word breaks in an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| break-normal | overflow-wrap: normal;<br>word-break: normal; |
-| break-words | overflow-wrap: break-word; |
-| break-all | word-break: break-all; |
+<PlaygroundWithVariants
+  variant='normal'
+  :variants="['normal', 'words', 'all']"
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  prefix='break'
+  appended='w-4/5 mx-auto bg-blue-200'
+  nested=true
+  html="&lt;div class='w-4/5 mx-auto bg-blue-200'&gt;&lt;p class='w-full {class}'&gt;The quick brown fox jumps over the lazy dog
+  abcdefghijklmnopqrstuvw&lt;/&gt;&lt;/div&gt;"
+/>
