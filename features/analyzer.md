@@ -56,9 +56,9 @@ npx windicss-analysis --html dist
 
 ## FAQ
 
-### It does not detecting my files
+### It does not detect my files
 
-You will need to configure the `extract.include` options in `windi.config.js` instead of your framework's configurations file so it can be understood by the analyzer so as other intergations support. For example
+You will need to configure the `extract.include` options in `windi.config.js` instead of your framework's configurations file so it can be understood by the analyzer so as other integrations support. For example:
 
 ```ts
 // windi.config.js
