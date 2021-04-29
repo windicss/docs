@@ -54,7 +54,7 @@ const classes = computed(() => {
 <template>
   <SelectorVariants
     v-model="variant"
-    :variants="type === 'color' ? ['transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500'] : type === 'opacity' ? ['0', '5', '10', '20', '25', '30', '40', '50', '60', '70', '75', '80', '90', '95'] : variants"
+    :variants="type === 'color' ? ['transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500'] : type === 'opacity' ? ['0', '5', '10', '20', '25', '30', '40', '50', '60', '70', '75', '80', '90', '95', '100'] : variants"
   />
   <div class="mt-4" />
   <InlinePlayground
