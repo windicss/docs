@@ -4,18 +4,15 @@
 
 Utilities for controlling the box shadow of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| * | --tw-shadow: 0 0 #0000; |
-| shadow-sm | --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow | --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow-md | --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow-lg | --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow-xl | --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow-2xl | --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow-inner | --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow-none | --tw-shadow: 0 0 #0000;<br>box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| shadow-${color} | --tw-shadow-color: ${color}; |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'sm', 'md', 'lg', 'xl', '2xl', 'inner', 'none']"
+  prefix='shadow'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='bg-teal-400 w-32 h-32 rounded-md'
+  nested=true
+  html='&lt;div class=&quot;bg-teal-400 w-32 h-32 rounded-md {class}&quot;&gt;&lt;/div&gt;'
+/>
 
 <Customizing>
 
@@ -34,6 +31,30 @@ export default {
       'inner': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       'none': 'none',
     },
+  },
+}
+```
+
+</Customizing>
+
+### Box Shadow Color
+
+<PlaygroundWithVariants
+  variant='gray-500'
+  type='color'
+  prefix='shadow'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='bg-teal-400 w-32 h-32 rounded-md shadow-2xl'
+  nested=true
+  html='&lt;div class=&quot;bg-teal-400 w-32 h-32 rounded-md shadow-2xl {class}&quot;&gt;&lt;/div&gt;'
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
     boxShadowColor: {
       gray: '#1c1c1e',
     },
@@ -47,9 +68,16 @@ export default {
 
 Utilities for controlling the opacity of an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| `opacity-${int<=100}` | opacity: `${int/100};` |
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='bg-teal-400 w-32 h-32 rounded-md'
+  nested=true
+  html='&lt;div class=&quot;bg-teal-400 w-32 h-32 rounded-md {class}&quot;&gt;&lt;/div&gt;'
+/>
+
 
 <Customizing>
 
@@ -71,21 +99,16 @@ export default {
 
 Utilities for controlling how an element should blend with the background.
 
-| Class                 | Properties                   |
-| :-------------------- | :--------------------------- |
-| mix-blend-normal      | mix-blend-mode: normal;      |
-| mix-blend-multiply    | mix-blend-mode: multiply;    |
-| mix-blend-screen      | mix-blend-mode: screen;      |
-| mix-blend-overlay     | mix-blend-mode: overlay;     |
-| mix-blend-darken      | mix-blend-mode: darken;      |
-| mix-blend-lighten     | mix-blend-mode: lighten;     |
-| mix-blend-color-dodge | mix-blend-mode: color-dodge; |
-| mix-blend-color-burn  | mix-blend-mode: color-burn;  |
-| mix-blend-hard-light  | mix-blend-mode: hard-light;  |
-| mix-blend-soft-light  | mix-blend-mode: soft-light;  |
-| mix-blend-difference  | mix-blend-mode: difference;  |
-| mix-blend-exclusion   | mix-blend-mode: exclusion;   |
-| mix-blend-hue         | mix-blend-mode: hue;         |
-| mix-blend-saturation  | mix-blend-mode: saturation;  |
-| mix-blend-color       | mix-blend-mode: color;       |
-| mix-blend-luminosity  | mix-blend-mode: luminosity;  |
+<PlaygroundWithVariants
+  variant='multiply'
+  :variants="['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity']"
+  prefix='mix-blend'
+  fixed='dark:text-white opacity-85 overflow-hidden h-screen'
+  appended='flex justify-center items-center bg-teal-300 bg-yellow-300 w-36 h-36 w-24 h-24 rounded-md'
+  nested=true
+  html='&lt;div class=&quot;flex justify-center&quot;&gt;
+    &lt;div class=&quot;flex items-center justify-center rounded-md bg-teal-300 h-24 w-36&quot;&gt;
+      &lt;div class=&quot;{class} rounded-md h-36 w-24 bg-yellow-300&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;'
+/>
