@@ -65,11 +65,12 @@ export default {
 
 Utilities for controlling the color of an element's borders.
 
-| Class | Properties |
-| :---- | :--------- |
-| border-transparent | border-color: transparent; |
-| border-current | border-color: currentColor; |
-| `border-${color}` | --tw-border-opacity: 1;<br>border-color: `rgba(R, G, B, var(--tw-border-opacity))` |
+<PlaygroundWithVariants
+  variant='gray-500'
+  type='color'
+  prefix='border'
+  fixed='bg-gray-500 bg-opacity-5 border-3 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all'
+/>
 
 <Customizing>
 
@@ -96,9 +97,12 @@ export default {
 
 Utilities for controlling the opacity of an element's border color.
 
-| Class | Properties |
-| :---- | :--------- |
-| `border-opacity-${int<=100}` | --tw-border-opacity: `${int/100};` |
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='border-opacity'
+  fixed='bg-gray-500 bg-opacity-5 border-3 border-teal-500 m-auto mt-6 mb-2 w-30 h-30 text-transparent transition-all'
+/>
 
 <Customizing>
 
@@ -132,21 +136,37 @@ Utilities for controlling the style of an element's borders.
 
 Utilities for controlling the border width between elements.
 
-### Static Utilities
+#### Divide Y
 
-| Class | Properties |
-| :---- | :--------- |
-| divide-y | --tw-divide-y-reverse: 0;<br>border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));<br>border-bottom-width: calc(1px * var(--tw-divide-y-reverse)); |
-| divide-x | --tw-divide-x-reverse: 0;<br>border-right-width: calc(1px * var(--tw-divide-x-reverse));<br>border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse))); |
-| divide-y-reverse | --tw-divide-y-reverse: 1; |
-| divide-x-reverse | --tw-divide-x-reverse: 1; |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'reverse', '2', '4', '6', '8', '10', '12', '14', '16', '18', '20']"
+  prefix='divide-y'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='w-full py-2 text-center divide-y divide-teal-500'
+  nested=true
+  html='&lt;div class=&quot;w-full divide-y divide-teal-500 {class}&quot;&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
-### Dynamic Utilities
+#### Divide X
 
-| Class | Properties |
-| :---- | :--------- |
-| `divide-y-${int}` | --tw-divide-y-reverse: 0;<br>border-top-width: calc(`${int}px` * calc(1 - var(--tw-divide-y-reverse)));<br>border-bottom-width: calc(`${int}px` * var(--tw-divide-y-reverse)); |
-| `divide-x-${int}` | --tw-divide-x-reverse: 0;<br>border-right-width: calc(`${int}px` * var(--tw-divide-x-reverse));<br>border-left-width: calc(`${int}px` * calc(1 - var(--tw-divide-x-reverse))); |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'reverse', '2', '4', '6', '8', '10', '12', '14', '16', '18', '20']"
+  prefix='divide-x'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='w-full px-4 text-center divide-x divide-teal-500 flex items-center'
+  nested=true
+  html='&lt;div class=&quot;w-full divide-x divide-teal-500 flex items-center {class}&quot;&gt;
+  &lt;div class="text-center px-4"&gt;1&lt;/div&gt;
+  &lt;div class="text-center px-4"&gt;2&lt;/div&gt;
+  &lt;div class="text-center px-4"&gt;3&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 <Customizing>
 
@@ -194,11 +214,19 @@ export default {
 
 Utilities for controlling the border color between elements.
 
-| Class | Properties |
-| :---- | :--------- |
-| divide-transparent | border-color: transparent; |
-| divide-current | border-color: currentColor; |
-| `divide-${color}` | --tw-divide-opacity: 1;<br>border-color: `rgba(R, G, B, var(--tw-divide-opacity));` |
+<PlaygroundWithVariants
+  variant='gray-500'
+  type='color'
+  prefix='divide'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='w-full py-2 text-center divide-y'
+  nested=true
+  html='&lt;div class=&quot;w-full divide-y {class}&quot;&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 <Customizing>
 
@@ -222,9 +250,19 @@ export default {
 
 Utilities for controlling the opacity borders between elements.
 
-| Class | Properties |
-| :---- | :--------- |
-| `border-opacity-${int<=100}` | --tw-border-opacity: `${int/100};` |
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='divide-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='w-full py-2 text-center divide-y divide-blue-500'
+  nested=true
+  html='&lt;div class=&quot;w-full divide-y divide-blue-500 {class}&quot;&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 
 <Customizing>
@@ -250,31 +288,35 @@ export default {
 
 Utilities for controlling the border style between elements.
 
-| Class | Properties |
-| :---- | :--------- |
-| divide-solid | border-style: solid; |
-| divide-dashed | border-style: dashed; |
-| divide-dotted | border-style: dotted; |
-| divide-double | border-style: double; |
-| divide-none | border-style: none; |
+<PlaygroundWithVariants
+  variant='dashed'
+  :variants="['solid', 'dashed', 'dotted', 'double', 'none']"
+  prefix='divide'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='w-full py-2 text-center divide-y divide-blue-500'
+  nested=true
+  html='&lt;div class=&quot;w-full divide-y divide-blue-500 {class}&quot;&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Ring Width
 
 Utilities for creating outline rings with box-shadows.
 
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| * | --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);<br>--tw-ring-offset-width: theme('ringOffsetWidth.DEFAULT', '0px');<br>--tw-ring-offset-color: theme('ringOffsetColor.DEFAULT', '#fff');<br>--tw-ring-color: `rgba(${hex2RGB(theme('ringColor.DEFAULT', '#93C5FD'))?.join(', ')}, ${theme('ringOpacity.DEFAULT', '0.5'))`;<br>--tw-ring-offset-shadow': '0 0 #0000';<br>--tw-ring-shadow: 0 0 #0000; |
-| ring | --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);<br>--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);<br>box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); |
-| ring-inset | --tw-ring-inset: inset; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `ring-${int}` | --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);<br>--tw-ring-shadow: `var(--tw-ring-inset) 0 0 0 calc(${int}+ var(--tw-ring-offset-width)) var(--tw-ring-color);`<br>box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'inset', '0', '1', '2', '4', '6', '8']"
+  prefix='ring'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-blue-500'
+  nested=true
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 {class} ring-blue-500&quot;&gt;
+    Button
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
@@ -299,11 +341,17 @@ export default {
 
 Utilities for setting the color of outline rings.
 
-| Class | Properties |
-| :---- | :--------- |
-| ring-transparent | --tw-ring-color: transparent; |
-| ring-current | --tw-ring-color: currentColor; |
-| `ring-${color}` | --tw-ring-color: `rgba(R, G, B, var(--tw-ring-opacity));` |
+<PlaygroundWithVariants
+  variant='gray-500'
+  type='color'
+  prefix='ring'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4'
+  nested=true
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 {class}&quot;&gt;
+    Button
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
@@ -327,9 +375,17 @@ export default {
 
 Utilities for setting the opacity of outline rings.
 
-| Class | Properties |
-| :---- | :--------- |
-| `ring-opacity-${int<=100}` | --tw-ring-opacity: `${int/100};` |
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='ring-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-blue-500 ring-4'
+  nested=true
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 {class}&quot;&gt;
+    Button
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
@@ -354,9 +410,18 @@ export default {
 
 Utilities for simulating an offset when adding outline rings.
 
-| Class | Properties |
-| :---- | :--------- |
-| `ring-offset-${int}` | --tw-ring-offset-width: `${int}px;` |
+<PlaygroundWithVariants
+  variant='2'
+  :variants="['0', '1', '2', '4', '6', '8', '10', '12', '14', '16', '20']"
+  prefix='ring-offset'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring ring-blue-500 ring-offset-green-400'
+  nested=true
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring ring-blue-500 {class} ring-offset-green-400&quot;&gt;
+    Button
+  &lt;/button&gt;'
+/>
+
 
 <Customizing>
 
@@ -381,11 +446,17 @@ export default {
 
 Utilities for setting the color of outline ring offsets.
 
-| Class | Properties |
-| :---- | :--------- |
-| ring-offset-transparent | --tw-ring-offset-color: transparent; |
-| ring-offset-current | --tw-ring-offset-color: currentColor; |
-| `ring-offset-${color}` | --tw-ring-offset-color: `${hex};` |
+<PlaygroundWithVariants
+  variant='gray-500'
+  type='color'
+  prefix='ring-offset'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring ring-blue-500 ring-offset-4'
+  nested=true
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring ring-blue-500 ring-offset-4 {class}&quot;&gt;
+    Button
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 

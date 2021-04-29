@@ -39,7 +39,7 @@ specifiers:
   vue: ^3.0.11
   vue-board: ^0.0.5
   vue-demi: ^0.7.5
-  windicss: ^3.0.0-beta.1
+  windicss: ^3.0.0-beta.3
   windicss-analysis: ^0.2.0
 
 dependencies:
@@ -57,7 +57,7 @@ dependencies:
   vue: 3.0.11
   vue-board: 0.0.5_vue@3.0.11
   vue-demi: 0.7.5_vue@3.0.11
-  windicss: 3.0.0-beta.1
+  windicss: 3.0.0-beta.3
 
 devDependencies:
   '@antfu/eslint-config': 0.6.4_eslint@7.25.0+typescript@4.2.4
@@ -4649,6 +4649,13 @@ packages:
     resolution: {integrity: sha512-06fFMIj+OeW76snT8MVxcHH254nk5sDcm9Z26nJpi/Veau8NkML3QQy/IT1GgyGwy//j4IBJCX5uV/2ftjBCOQ==}
     engines: {node: '>= 12'}
     hasBin: true
+    dev: true
+
+  /windicss/3.0.0-beta.3:
+    resolution: {integrity: sha512-oA7/yL2BiQalQff0e4lbLMCpVUGzMH3jdQpQecnSpkqeOrB9U74fiJWJtkkiEqvg2iQvzk+FBA9qFVAtwftUSA==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
 
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
