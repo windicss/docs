@@ -12,7 +12,6 @@
     "build-all": "npm run build-shared && npm run build"
   },
   "dependencies": {
-    "@knightly/windicss": "^3.0.0-knightly-pr265.202104270035",
     "@vueuse/core": "^4.9.0",
     "@vueuse/integrations": "^4.9.0",
     "@windicss/shared-components": "workspace:*",
@@ -26,7 +25,8 @@
     "splitpanes": "^3.0.4",
     "vue": "^3.0.11",
     "vue-board": "^0.0.5",
-    "vue-demi": "^0.7.5"
+    "vue-demi": "^0.7.5",
+    "windicss": "^3.0.0-beta.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.4",
@@ -53,7 +53,6 @@
     "vite-plugin-restart": "^0.0.2",
     "vite-plugin-windicss": "^0.16.0-beta.1",
     "vitepress": "^0.13.2",
-    "windicss": "^3.0.0-beta.1",
     "windicss-analysis": "^0.2.0"
   }
 }
