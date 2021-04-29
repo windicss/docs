@@ -104,7 +104,7 @@ Tailwind-liked `@apply`, `@screen` directives are fully supported.
 }
 ```
 
-<LearnMore to="/features/directive" />
+<LearnMore to="/features/directives" />
 
 ### Visual Analyzer
 
