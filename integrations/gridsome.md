@@ -88,7 +88,7 @@ export default {
 
 #### Disable Preflight
 
-_ngridsome.config.js_
+_gridsome.config.js_
 ```js
 export default {
   // ...
