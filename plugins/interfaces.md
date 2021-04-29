@@ -7,6 +7,8 @@ You can easily create a plugin through the interface of windicss. Windicss is bu
 ### Basic Usage
 
 ```js
+import plugin from 'windicss/plugin'
+
 plugin(({ addUtilities }) => {
   addUtilities({
     '.aspect-none': {
@@ -41,6 +43,8 @@ addDynamic('filter', ({ Utility }) => {
 ## Add Components
 
 ```js
+import plugin from 'windicss/plugin'
+
 plugin(({ addComponents }) => {
   addComponents({
     '.btn': {
@@ -64,6 +68,8 @@ plugin(({ addComponents }) => {
 ### Modify Selectors
 
 ```js
+import plugin from 'windicss/plugin'
+
 plugin(addVariant('pointer-group-hover', ({ modifySelectors }) => {
   return modifySelectors(({ className }) => {
     return `.no-touch .group:hover .${className}`
@@ -74,6 +80,8 @@ plugin(addVariant('pointer-group-hover', ({ modifySelectors }) => {
 ## Add Base Styles
 
 ```js
+import plugin from 'windicss/plugin'
+
 plugin(({ addBase, theme }) => {
   addBase({
     h1: { fontSize: theme('fontSize.2xl') },
