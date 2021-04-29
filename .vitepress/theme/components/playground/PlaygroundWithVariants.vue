@@ -60,6 +60,6 @@ const classes = computed(() => {
     :nested="nested"
     :appended="appended"
     :html="html"
-    :showPreview="showPreview"
+    :show-preview="showPreview"
   />
 </template>
