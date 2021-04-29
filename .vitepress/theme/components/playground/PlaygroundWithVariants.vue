@@ -45,7 +45,7 @@ const classes = computed(() => {
   let strs = [prefix.value]
 
   if (variant.value)
-    strs = strs.map(i => `${i}-${variant.value}`)
+    strs = variant.value.startsWith('-') ? strs.map(i => `-${i}${variant.value}`) : strs.map(i => `${i}-${variant.value}`)
 
   return strs.join(' ')
 })

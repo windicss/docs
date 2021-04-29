@@ -4,27 +4,31 @@
 
 Utilities for controlling transform behaviour.
 
-| Class | Properties |
-| :---- | :--------- |
-| transform | --tw-translate-x: 0;<br>--tw-translate-y: 0;<br>--tw-rotate: 0;<br>--tw-skew-x: 0;<br>--tw-skew-y: 0;<br>--tw-scale-x: 1;<br>--tw-scale-y: 1;<br>transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); |
-| transform-gpu | --tw-translate-x: 0;<br>--tw-translate-y: 0;<br>--tw-rotate: 0;<br>--tw-skew-x: 0;<br>--tw-skew-y: 0;<br>--tw-scale-x: 1;<br>--tw-scale-y: 1;<br>transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); |
-| transform-none | transform: none; |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'gpu', 'none']"
+  prefix='transform'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='!rotate-180 w-24 h-24'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 {class} !rotate-180"&gt;'
+/>
 
 ## Transform Origin
 
 Utilities for specifying the origin for an element's transformations.
 
-| Class | Properties |
-| :---- | :--------- |
-| origin-center | transform-origin: center; |
-| origin-top | transform-origin: top; |
-| origin-top-right | transform-origin: top right; |
-| origin-right | transform-origin: right; |
-| origin-bottom-right | transform-origin: bottom right; |
-| origin-bottom | transform-origin: bottom; |
-| origin-bottom-left | transform-origin: bottom left; |
-| origin-left | transform-origin: left; |
-| origin-top-left | transform-origin: top left; |
+<PlaygroundWithVariants
+  variant='center'
+  :variants="['center', 'top', 'top-right', 'right', 'bottom-right', 'bottom', 'bottom-left', 'left', 'top-left']"
+  prefix='origin'
+  fixed='p-2 dark:text-white opacity-85 w-full h-screen'
+  nested=true
+  appended='mx-auto transform rotate-90 w-16 h-16 bg-teal-300 rounded-full'
+  html='&lt;div class="mx-auto w-16 h-16 bg-teal-300 rounded-full"&gt;
+      &lt;img class="h-16 w-16 {class} transform rotate-90" src="/assets/logo.svg"&gt;
+    &lt;/div&gt;'
+/>
 
 <Customizing>
 
@@ -48,11 +52,39 @@ export default {
 
 Utilities for scaling elements with transform.
 
-| Class | Properties |
-| :---- | :--------- |
-| `scale-${int}` | --tw-scale-x: `${int/100};`<br>--tw-scale-y: `${int/100};` |
-| `scale-x-${int}` | --tw-scale-x: `${int/100};` |
-| `scale-y-${int}` | --tw-scale-y: `${int/100};` |
+<PlaygroundWithVariants
+  variant='90'
+  :variants="['0', '25', '50', '75', '90', '95', '100', '105', '110', '125', '150']"
+  prefix='scale'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
+
+#### Scale X
+
+<PlaygroundWithVariants
+  variant='90'
+  :variants="['0', '25', '50', '75', '90', '95', '100', '105', '110', '125', '150']"
+  prefix='scale-x'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
+
+#### Scale Y
+
+<PlaygroundWithVariants
+  variant='90'
+  :variants="['0', '25', '50', '75', '90', '95', '100', '105', '110', '125', '150']"
+  prefix='scale-y'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -74,10 +106,15 @@ export default {
 
 Utilities for rotating elements with transform.
 
-| Class | Properties |
-| :---- | :--------- |
-| `rotate-${float}` | --tw-rotate: `${float}deg;` |
-| `-rotate-${float}` | --tw-rotate: `-${float}deg;` |
+<PlaygroundWithVariants
+  variant='90'
+  :variants="['0', '6', '12', '45', '72.5', '90', '180', '-180', '-90', '-72.5', '-45', '-12', '-6']"
+  prefix='rotate'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -98,39 +135,29 @@ export default {
 
 Utilities for translating elements with transform.
 
-### Static Utilities
+#### Translate X
 
-| Class | Properties |
-| :---- | :--------- |
-| translate-x-0 | --tw-translate-x: 0px; |
-| translate-x-px | --tw-translate-x: 1px; |
-| translate-x-full | --tw-translate-x: 100%; |
-| translate-y-0 | --tw-translate-y: 0px; |
-| translate-y-px | --tw-translate-y: 1px; |
-| translate-y-full | --tw-translate-y: 100%; |
-| -translate-x-0 | --tw-translate-x: 0px; |
-| -translate-x-px | --tw-translate-x: -1px; |
-| -translate-x-full | --tw-translate-x: -100%; |
-| -translate-y-0 | --tw-translate-y: 0px; |
-| -translate-y-px | --tw-translate-y: -1px; |
-| -translate-y-full | --tw-translate-y: -100%; |
+<PlaygroundWithVariants
+  variant='0'
+  :variants="['0', 'px', 'full', '6', '12', '7.5', '1/2', '2/3', '3/4', '3/5', '3.5rem', '42px', '6em', '-px', '-full', '-6', '-12', '-7.5', '-1/2', '-2/3', '-3/4', '-3/5', '-3.5rem', '-42px']"
+  prefix='translate-x'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
 
-### Dynamic Utilities
+#### Translate Y
 
-| Class | Properties |
-| :---- | :--------- |
-| `translate-x-${number}` | --tw-translate-x: `${number/4}rem;` |
-| `translate-x-${fraction}` | --tw-translate-x: `${percent};` |
-| `translate-x-${size}` | --tw-translate-x: `${size};` |
-| `translate-y-${number}` | --tw-translate-y: `${number/4}rem;` |
-| `translate-y-${fraction}` | --tw-translate-y: `${percent};` |
-| `translate-y-${size}` | --tw-translate-y: `${size};` |
-| `-translate-x-${number}` | --tw-translate-x: `-${number/4}rem;` |
-| `-translate-x-${fraction}` | --tw-translate-x: `-${percent};` |
-| `-translate-x-${size}` | --tw-translate-x: `-${size};` |
-| `-translate-y-${number}` | --tw-translate-y: `-${number/4}rem;` |
-| `-translate-y-${fraction}` | --tw-translate-y: `-${percent};` |
-| `-translate-y-${size}` | --tw-translate-y: `-${size};` |
+<PlaygroundWithVariants
+  variant='0'
+  :variants="['0', 'px', 'full', '6', '12', '7.5', '1/2', '2/3', '3/4', '3/5', '3.5rem', '42px', '6em', '-px', '-full', '-6', '-12', '-7.5', '-1/2', '-2/3', '-3/4', '-3/5', '-3.5rem', '-42px']"
+  prefix='translate-y'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -177,12 +204,29 @@ export default {
 
 Utilities for skewing elements with transform.
 
-| Class | Properties |
-| :---- | :--------- |
-| `skew-x-${float}` | --tw-skew-x: `${float}deg;` |
-| `skew-y-${float}` | --tw-skew-y: `${float}deg;` |
-| `-skew-x-${float}` | --tw-skew-x: `-${float}deg;` |
-| `-skew-y-${float}` | --tw-skew-y: `-${float}deg;` |
+#### Skew X
+
+<PlaygroundWithVariants
+  variant='45'
+  :variants="['0', '6', '12', '45', '72.5', '90', '180', '-180', '-90', '-72.5', '-45', '-12', '-6']"
+  prefix='skew-x'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
+
+#### Skew Y
+
+<PlaygroundWithVariants
+  variant='45'
+  :variants="['0', '6', '12', '45', '72.5', '90', '180', '-180', '-90', '-72.5', '-45', '-12', '-6']"
+  prefix='skew-y'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 transform'
+  html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
+/>
 
 <Customizing>
 
