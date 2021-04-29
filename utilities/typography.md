@@ -321,7 +321,7 @@ Utilities for controlling the color of placeholder text.
 
 <PlaygroundWithVariants
   variant='gray-500'
-  :variants="['transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
+  type='color'
   prefix='placeholder'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
@@ -352,7 +352,7 @@ Utilities for controlling the opacity of an element's placeholder color.
 
 <PlaygroundWithVariants
   variant='50'
-  :variants="['0', '5', '10', '20', '25', '30', '40', '50', '60', '70', '75', '80', '90', '95']"
+  type='opacity'
   prefix='placeholder-opacity'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
@@ -396,7 +396,7 @@ Utilities for controlling the text color of an element.
 
 <PlaygroundWithVariants
   variant='gray-500'
-  :variants="['transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
+  type='color'
   prefix='text'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
@@ -424,7 +424,7 @@ export default {
 
 <PlaygroundWithVariants
   variant='50'
-  :variants="['0', '5', '10', '20', '25', '30', '40', '50', '60', '70', '75', '80', '90', '95']"
+  type='opacity'
   prefix='text-opacity'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   appended='text-black'

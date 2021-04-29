@@ -25,11 +25,15 @@ Utilities for controlling the bounding box of an element's background.
 
 Utilities for controlling an element's background color.
 
-| Class | Properties |
-| :---- | :--------- |
-| bg-transparent | background-color: transparent; |
-| bg-current | background-color: currentColor; |
-| `bg-${color}` | --tw-bg-opacity: 1;<br>background-color: `rgba(R, G, B, var(--tw-bg-opacity));` |
+<PlaygroundWithVariants
+  variant='gray-500'
+  type='color'
+  prefix='bg'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='p-2 rounded-md'
+  html="&lt;div class='{class} p-2 rounded-md'&gt;&lt;p&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;&lt;/div&gt;"
+/>
 
 <Customizing>
 
