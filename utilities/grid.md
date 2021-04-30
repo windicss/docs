@@ -1,17 +1,24 @@
 # Grid
 
-## Display Grid
+## Grid
 
-Utilities for controlling the display grid type of an element.
+Use `grid` to create a grid container.
 
 | Class | Properties |
 | :---- | :--------- |
 | grid	| display: grid; |
+
+## Inline Grid
+
+Use `inline-grid` to create an inline grid container.
+
+| Class | Properties |
+| :---- | :--------- |
 | inline-grid	| display: inline-grid; |
 
-## Grid Template Columns / Rows
+## Grid Template Columns
 
-Utilities for specifying the columns / rows in a grid layout.
+Utilities for specifying the columns in a grid layout.
 
 <PlaygroundWithVariants
   variant='none'
@@ -31,6 +38,31 @@ export default {
         nt: 'repeat(16, minmax(0, 1fr))',
         footer: '200px minmax(900px, 1fr) 100px',
       },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Grid Template Rows
+
+Utilities for specifying the rows in a grid layout.
+
+<PlaygroundWithVariants
+  variant='none'
+  :variants="['none','1','2','3', '[1fr,2fr]', '[100px,1fr,min-content]']"
+  prefix='grid-rows'
+  :showPreview='false'
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
       gridTemplateRows: {
         layout: '200px minmax(900px, 1fr) 100px',
       },
@@ -41,26 +73,15 @@ export default {
 
 </Customizing>
 
-## Grid Column Start / End
+## Grid Column Span
 
-Utilities for controlling how elements are sized and placed across grid columns.
-
-### Static Utilities
+Utilities for controlling how elements are sized across grid columns.
 
 | Class | Properties |
 | :---- | :--------- |
 | col-auto | grid-column: auto; |
 | col-span-full | grid-column: 1 / -1; |
-| col-start-auto | grid-column-start: auto; |
-| col-end-auto | grid-column-end: auto; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
 | `col-span-${int}` | grid-column: `span ${int} / span ${int};` |
-| `col-start-${int}` | grid-column-start: `${int};` |
-| `col-end-${int}` | grid-column-end: `${int};` |
 
 <Customizing>
 
@@ -72,18 +93,138 @@ export default {
       gridColumn: {
         'span-16': 'span 16 / span 16',
       },
-      gridColumnStart: {
-        first: '1',
-      },
-      gridColumnEnd: {
-        last: '20',
-      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Grid Row Span
+
+Utilities for controlling how elements are sized across grid rows.
+
+| Class | Properties |
+| :---- | :--------- |
+| row-auto | grid-row: auto; |
+| row-span-full | grid-row: 1 / -1; |
+| `row-span-${int}` | grid-row: `span ${int} / span ${int};` |
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
       gridRow: {
         'span-16': 'span 16 / span 16',
       },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Grid Column Start
+
+Utilities for controlling how elements are placed across grid columns.
+
+| Class | Properties |
+| :---- | :--------- |
+| col-start-auto | grid-column-start: auto; |
+| `col-start-${int}` | grid-column-start: `${int};` |
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      gridColumnStart: {
+        first: '1',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+
+## Grid Column End
+
+Utilities for controlling how elements are placed across grid columns.
+
+| Class | Properties |
+| :---- | :--------- |
+| col-end-auto | grid-column-end: auto; |
+| `col-end-${int}` | grid-column-end: `${int};` |
+
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      gridColumnEnd: {
+        last: '20',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Grid Row Start
+
+Utilities for controlling how elements are placed across grid rows.
+
+| Class | Properties |
+| :---- | :--------- |
+| row-start-auto | grid-row-start: auto; |
+| `row-start-${int}` | grid-row-start: `${int};` |
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
       gridRowStart: {
         first: '1',
       },
+    },
+  },
+}
+```
+
+</Customizing>
+
+
+## Grid Row End
+
+Utilities for controlling how elements are placed across grid rows.
+
+| Class | Properties |
+| :---- | :--------- |
+| row-end-auto | grid-row-end: auto; |
+| `row-end-${int}` | grid-row-end: `${int};` |
+
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
       gridRowEnd: {
         last: '20',
       },

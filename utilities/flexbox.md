@@ -1,12 +1,19 @@
 # Flexbox
 
-## Display Flex
+## Flex
 
-Utilities for controlling the display flex box type of an element.
+Use `flex` to create a block-level flex container.
 
 | Class | Properties |
 | :---- | :--------- |
 | flex	| display: flex; |
+
+## Inline Flex
+
+Use `inline-flex` to create an inline flex container.
+
+| Class | Properties |
+| :---- | :--------- |
 | inline-flex	| display: inline-flex; |
 
 ## Flex Direction
