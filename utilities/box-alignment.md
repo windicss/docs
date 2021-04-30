@@ -1,5 +1,42 @@
 # Box Alignment
 
+## Order
+
+Utilities for controlling the order of flex and grid items.
+
+### Static Utilities
+
+| Class | Properties |
+| :---- | :--------- |
+| order-first | order: -9999; |
+| order-last | order: 9999; |
+| order-none | order: 0; |
+
+### Dynamic Utilities
+
+| Class | Properties |
+| :---- | :--------- |
+| `order-${int}` | order: `${int};` |
+| `-order-${int}` | order: `-${int};` |
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    order: {
+      first: '-9999',
+      last: '9999',
+      none: '0',
+      normal: '0',
+    },
+  },
+}
+```
+
+</Customizing>
+
 ## Justify Content
 
 Utilities for controlling how flex and grid items are positioned along a container's main axis.

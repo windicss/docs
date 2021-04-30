@@ -1,5 +1,14 @@
 # Flexbox
 
+## Display Flex
+
+Utilities for controlling the display flex box type of an element.
+
+| Class | Properties |
+| :---- | :--------- |
+| flex	| display: flex; |
+| inline-flex	| display: inline-flex; |
+
 ## Flex Direction
 
 Utilities for controlling the direction of flex items.
@@ -97,43 +106,6 @@ export default {
       0: 0,
       DEFAULT: 2,
       1: 1,
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Order
-
-Utilities for controlling the order of flex and grid items.
-
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| order-first | order: -9999; |
-| order-last | order: 9999; |
-| order-none | order: 0; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `order-${int}` | order: `${int};` |
-| `-order-${int}` | order: `-${int};` |
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    order: {
-      first: '-9999',
-      last: '9999',
-      none: '0',
-      normal: '0',
     },
   },
 }

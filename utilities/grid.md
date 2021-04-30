@@ -1,5 +1,14 @@
 # Grid
 
+## Display Grid
+
+Utilities for controlling the display grid type of an element.
+
+| Class | Properties |
+| :---- | :--------- |
+| grid	| display: grid; |
+| inline-grid	| display: inline-grid; |
+
 ## Grid Template Columns / Rows
 
 Utilities for specifying the columns / rows in a grid layout.
