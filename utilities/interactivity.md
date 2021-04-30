@@ -167,7 +167,6 @@ Utilities for controlling how an element can be resized.
   html='&lt;textarea class=&quot;{class} focus:outline-none border rounded-md m-0 w-30 h-30 bg-blue-300&quot;&gt;&lt;/textarea&gt;'
 />
 
-
 ## User Select
 
 Utilities for controlling whether the user can select text in an element.
@@ -179,4 +178,58 @@ Utilities for controlling whether the user can select text in an element.
   fixed='p-2 dark:text-white opacity-85'
   html="The quick brown fox jumps over the lazy dog"
 />
+
+## Box Sizing
+
+Utilities for controlling how the browser should calculate an element's total size.
+
+| Class       | Properties                |
+| :---------- | :------------------------ |
+| box-border  | box-sizing: border-box;   |
+| box-content | box-sizing: content-box;  |
+
+## Box Decoration Break
+
+Utilities for controlling how element fragments should be rendered across multiple lines, columns, or pages.
+
+| Class       | Properties                |
+| :---------- | :------------------------ |
+| decoration-slice | box-decoration-break: slice;   |
+| decoration-clone | box-decoration-break: clone;  |
+
+## Overflow
+
+Utilities for controlling how an element handles content that is too large for the container.
+
+| Class | Properties |
+| :---- | :--------- |
+| overflow-auto | overflow: auto; |
+| overflow-hidden | overflow: hidden; |
+| overflow-visible | overflow: visible; |
+| overflow-scroll | overflow: scroll; |
+| overflow-x-auto | overflow-x: auto; |
+| overflow-y-auto | overflow-y: auto; |
+| overflow-x-hidden | overflow-x: hidden; |
+| overflow-y-hidden | overflow-y: hidden; |
+| overflow-x-visible | overflow-x: visible; |
+| overflow-y-visible | overflow-y: visible; |
+| overflow-x-scroll | overflow-x: scroll; |
+| overflow-y-scroll | overflow-y: scroll; |
+
+## Overscroll Behavior
+
+Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area.
+
+| Class | Properties |
+| :---- | :--------- |
+| overscroll-auto | overscroll-behavior: auto; |
+| overscroll-contain | overscroll-behavior: contain; |
+| overscroll-none | overscroll-behavior: none; |
+| overscroll-y-auto | overscroll-behavior-y: auto; |
+| overscroll-y-contain | overscroll-behavior-y: contain; |
+| overscroll-y-none | overscroll-behavior-y: none; |
+| overscroll-x-auto | overscroll-behavior-x: auto; |
+| overscroll-x-contain | overscroll-behavior-x: contain; |
+| overscroll-x-none | overscroll-behavior-x: none; |
+
 

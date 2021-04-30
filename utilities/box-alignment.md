@@ -1,6 +1,6 @@
 # Box Alignment
 
-## Order
+## Item Order
 
 Utilities for controlling the order of flex and grid items.
 
