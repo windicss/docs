@@ -4,32 +4,27 @@
 
 Utilities for enabling and disabling filters on an element.
 
-| Class | Properties |
-| :---- | :--------- |
-| filter | filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow); |
-| filter-none	 | filter: none; |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'none']"
+  prefix='filter'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='!hue-rotate-30 w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 {class} !hue-rotate-30"&gt;'
+/>
 
 ### Blur
 
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| blur | --tw-blur: blur(8px); |
-| blur-0 | --tw-blur: blur(0); |
-| blur-sm | --tw-blur: blur(4px); |
-| blur-md | --tw-blur: blur(12px); |
-| blur-lg | --tw-blur: blur(16px); |
-| blur-xl | --tw-blur: blur(24px); |
-| blur-2xl | --tw-blur: blur(40px); |
-| blur-3xl | --tw-blur: blur(64px); |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `blur-${int}` | --tw-blur: `blur(${int}px);` |
-| `blur-${size}` | --tw-blur: `blur(${size});` |
+<PlaygroundWithVariants
+  variant='sm'
+  :variants="['', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '0', '1', '2', '3', '9', '12', '24px', '2rem']"
+  prefix='blur'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -50,9 +45,15 @@ export default {
 
 ### Brightness
 
-| Class | Properties |
-| :---- | :--------- |
-| `brightness-${int}` | --tw-brightness: `brightness(${int/100});` |
+<PlaygroundWithVariants
+  variant='100'
+  :variants="['0', '50', '75', '90', '95', '100', '105', '110', '115', '125', '150', '175', '200', '251']"
+  prefix='brightness'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -73,9 +74,15 @@ export default {
 
 ### Contrast
 
-| Class | Properties |
-| :---- | :--------- |
-| `contrast-${int}` | --tw-contrast: `contrast(${int/100});` |
+<PlaygroundWithVariants
+  variant='100'
+  :variants="['0', '50', '75', '90', '95', '100', '105', '110', '115', '125', '150', '175', '200', '251']"
+  prefix='contrast'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -96,15 +103,15 @@ export default {
 
 ### Drop Shadow
 
-| Class | Properties |
-| :---- | :--------- |
-| drop-shadow | --tw-drop-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06)); |
-| drop-shadow-sm | --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05)); |
-| drop-shadow-md | --tw-drop-shadow: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06)); |
-| drop-shadow-lg | --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1)); |
-| drop-shadow-xl | --tw-drop-shadow: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08)); |
-| drop-shadow-2xl |--tw-drop-shadow: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15)); |
-| drop-shadow-none | --tw-drop-shadow: drop-shadow(0 0 #0000); |
+<PlaygroundWithVariants
+  variant='md'
+  :variants="['', 'sm', 'md', 'lg', 'xl', '2xl', 'none']"
+  prefix='drop-shadow'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -124,11 +131,15 @@ export default {
 
 ### Grayscale
 
-| Class | Properties |
-| :---- | :--------- |
-| grayscale | --tw-grayscale: grayscale(1); |
-| grayscale-0 | --tw-grayscale: grayscale(0); |
-| `grayscale-${int}` | --tw-grayscale: `grayscale(${int/100});` |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
+  prefix='grayscale'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -148,10 +159,15 @@ export default {
 
 ### Hue Rotate
 
-| Class | Properties |
-| :---- | :--------- |
-| `hue-rotate-${int<=180>}` | --tw-hue-rotate: `hue-rotate(${int}deg)`; |
-| `-hue-rotate-${int<=180>}` | --tw-hue-rotate: `hue-rotate(-${int}deg)`; |
+<PlaygroundWithVariants
+  variant='45'
+  :variants="['0', '15', '30', '45', '60', '90', '120', '180', '-120', '-90', '-60', '-45', '-30', '-15']"
+  prefix='hue-rotate'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='w-24 h-24 filter'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -172,12 +188,15 @@ export default {
 
 ### Invert
 
-| Class | Properties |
-| :---- | :--------- |
-| invert | --tw-invert: invert(1); |
-| invert-0 | --tw-invert: invert(0); |
-| `invert-${int}` | --tw-invert: `invert(${int/100})`; |
-
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
+  prefix='invert'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -197,9 +216,15 @@ export default {
 
 ### Saturate
 
-| Class | Properties |
-| :---- | :--------- |
-| `saturate-${int}` | --tw-saturate: `saturate(${int/100});` |
+<PlaygroundWithVariants
+  variant='0'
+  :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
+  prefix='saturate'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
@@ -220,11 +245,15 @@ export default {
 
 ### Sepia
 
-| Class | Properties |
-| :---- | :--------- |
-| sepia | --tw-sepia: sepia(1); |
-| sepia-0 | --tw-sepia: sepia(0); |
-| `sepia-${int}` | --tw-sepia: `sepia(${int/100})`; |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
+  prefix='sepia'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='filter w-24 h-24'
+  html='&lt;img src="/assets/logo.png" class="w-24 h-24 filter {class}"&gt;'
+/>
 
 <Customizing>
 
