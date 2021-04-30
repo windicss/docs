@@ -4,15 +4,17 @@
 
 Utilities for controlling which CSS properties transition.
 
-| Class | Properties |
-| :---- | :--------- |
-| transition-none | transition-property: none; |
-| transition-all | transition-property: all;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
-| transition | transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
-| transition-colors | transition-property: background-color, border-color, color, fill, stroke;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
-| transition-opacity | transition-property: opacity;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
-| transition-shadow | transition-property: box-shadow;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
-| transition-transform | transition-property: transform;<br>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br>transition-duration: 150ms; |
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'all', 'colors', 'opacity', 'shadow', 'transform', 'none']"
+  prefix='transition'
+  fixed='p-2 dark:text-white opacity-85 h-screen flex flex-col justify-center'
+  nested=true
+  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:bg-indigo-400 hover:ring-indigo-500 hover:scale-110 hover:-translate-y-1 !duration-300 hover:shadow-xl hover:opacity-80 shadow-indigo-500'
+  html='&lt;button tabindex="-1"; class="{class} !duration-300 focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer hover:bg-indigo-400 hover:ring-indigo-500 transform hover:scale-110 hover:-translate-y-1 hover:shadow-xl hover:opacity-80 shadow-indigo-500"&gt;
+    Hover me
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
@@ -36,9 +38,17 @@ export default {
 
 Utilities for controlling the duration of CSS transitions.
 
-| Class | Properties |
-| :---- | :--------- |
-| `duration-${int}` | transition-duration: `${int}ms;` |
+<PlaygroundWithVariants
+  variant='150'
+  :variants="['0', '50', '75', '100', '150', '200', '300', '400', '500', '600', '700', '1000']"
+  prefix='duration'
+  fixed='p-2 dark:text-white opacity-85 h-screen flex flex-col justify-center'
+  nested=true
+  appended='transition focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1'
+  html='&lt;button tabindex="-1"; class="transition {class} focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1"&gt;
+    Hover me
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
@@ -62,12 +72,17 @@ export default {
 
 Utilities for controlling the easing of CSS transitions.
 
-| Class | Properties |
-| :---- | :--------- |
-| ease-linear | transition-timing-function: linear; |
-| ease-in | transition-timing-function: cubic-bezier(0.4, 0, 1, 1); |
-| ease-out | transition-timing-function: cubic-bezier(0, 0, 0.2, 1); |
-| ease-in-out | transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); |
+<PlaygroundWithVariants
+  variant='linear'
+  :variants="['linear', 'in', 'out', 'in-out']"
+  prefix='ease'
+  fixed='p-2 dark:text-white opacity-85 h-screen flex flex-col justify-center'
+  nested=true
+  appended='transition focus:outline-none ease-in-out w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1 duration-600'
+  html='&lt;button tabindex="-1"; class="transition ease-in-out {class} duration-600 focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1"&gt;
+    Hover me
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
@@ -91,9 +106,17 @@ export default {
 
 Utilities for controlling the delay of CSS transitions.
 
-| Class | Properties |
-| :---- | :--------- |
-| `delay-${int}` | transition-delay: `${int}ms;` |
+<PlaygroundWithVariants
+  variant='150'
+  :variants="['0', '50', '75', '100', '150', '200', '300', '400', '500', '600', '700', '1000']"
+  prefix='delay'
+  fixed='p-2 dark:text-white opacity-85 h-screen flex flex-col justify-center'
+  nested=true
+  appended='transition ease-in-out focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1'
+  html='&lt;button tabindex="-1"; class="transition {class} ease-in-out focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1"&gt;
+    Hover me
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
@@ -117,13 +140,17 @@ export default {
 
 Utilities for animating elements with CSS animations.
 
-| Class | Properties |
-| :---- | :--------- |
-| .animate-none | animation: none; |
-| .animate-spin | animation: spin 1s linear infinite;<br><br>@keyframes spin {<br>  from {<br>    transform: rotate(0deg);<br>  }<br>  to {<br>    transform: rotate(360deg);<br>  }<br>} |
-| .animate-ping | animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;<br><br>@keyframes ping {<br>  75%, 100% {<br>    transform: scale(2);<br>    opacity: 0;<br>  }<br>} |
-| .animate-pulse | animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;<br><br>@keyframes pulse {<br>  0%, 100% {<br>    opacity: 1;<br>  }<br>  50% {<br>    opacity: .5;<br>  }<br>} |
-| .animate-bounce | animation: bounce 1s infinite;<br><br>@keyframes bounce {<br>  0%, 100% {<br>    transform: translateY(-25%);<br>    animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);<br>  }<br>  50% {<br>    transform: translateY(0);<br>    animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);<br>  }<br>} |
+<PlaygroundWithVariants
+  variant='bounce'
+  :variants="['none', 'spin', 'ping', 'pulse', 'bounce']"
+  prefix='animate'
+  fixed='p-2 dark:text-white opacity-85 h-screen flex flex-col justify-center'
+  nested=true
+  appended='transition ease-in-out focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1'
+  html='&lt;button tabindex="-1"; class="transition {class} ease-in-out focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1"&gt;
+    Click me
+  &lt;/button&gt;'
+/>
 
 <Customizing>
 
