@@ -37,7 +37,7 @@ Utilities for controlling how flex items wrap.
 | flex-wrap-reverse | flex-wrap: wrap-reverse; |
 | flex-nowrap | flex-wrap: nowrap; |
 
-## Flex
+## Flex Stretch
 
 Utilities for controlling how flex items both grow and shrink.
 
