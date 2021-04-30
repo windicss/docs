@@ -234,45 +234,62 @@ Utilities for controlling whether the user can select text in an element.
 
 Utilities for controlling how an element handles content that is too large for the container.
 
-| Class | Properties |
-| :---- | :--------- |
-| overflow-auto | overflow: auto; |
-| overflow-hidden | overflow: hidden; |
-| overflow-visible | overflow: visible; |
-| overflow-scroll | overflow: scroll; |
-| overflow-x-auto | overflow-x: auto; |
-| overflow-y-auto | overflow-y: auto; |
-| overflow-x-hidden | overflow-x: hidden; |
-| overflow-y-hidden | overflow-y: hidden; |
-| overflow-x-visible | overflow-x: visible; |
-| overflow-y-visible | overflow-y: visible; |
-| overflow-x-scroll | overflow-x: scroll; |
-| overflow-y-scroll | overflow-y: scroll; |
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'hidden', 'visible', 'scroll', 'x-auto', 'x-hidden', 'x-visible', 'x-scroll', 'y-auto', 'y-hidden', 'y-visible', 'y-scroll']"
+  prefix='overflow'
+  fixed='dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='bg-blue-100 p-2 rounded-md text-xs'
+  html='&lt;div class="bg-blue-100 p-2 rounded-md text-xs {class}"&gt;
+The value of Pi is
+          3.1415926535897932384626433832795029. The value of e is
+          2.7182818284590452353602874713526625.
+        Michaelmas term lately over, and the Lord Chancellor sitting in Lincolns Inn Hall. Implacable November weather. As much mud in the streets as if the waters had but newly retired from the face of the earth.
+&lt;/div&gt;'
+/>
 
 ## Overscroll Behavior
 
 Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area.
 
-| Class | Properties |
-| :---- | :--------- |
-| overscroll-auto | overscroll-behavior: auto; |
-| overscroll-contain | overscroll-behavior: contain; |
-| overscroll-none | overscroll-behavior: none; |
-| overscroll-y-auto | overscroll-behavior-y: auto; |
-| overscroll-y-contain | overscroll-behavior-y: contain; |
-| overscroll-y-none | overscroll-behavior-y: none; |
-| overscroll-x-auto | overscroll-behavior-x: auto; |
-| overscroll-x-contain | overscroll-behavior-x: contain; |
-| overscroll-x-none | overscroll-behavior-x: none; |
+- Use `auto` to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of the primary scroll area.
+
+- Use `none` to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent "bounce" effects when scrolling past the end of the container.
+
+- Use `contain` to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve "bounce" effects when scrolling past the end of the container in operating systems that support it.
+
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'none', 'contain', 'x-auto', 'x-none', 'x-contain', 'y-auto', 'y-none', 'y-contain']"
+  prefix='overscroll'
+  fixed='dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='bg-blue-100 p-2 rounded-md text-xs overflow-auto'
+  html='&lt;div class="bg-blue-100 p-2 rounded-md text-xs overflow-auto {class}"&gt;
+The value of Pi is
+          3.1415926535897932384626433832795029. The value of e is
+          2.7182818284590452353602874713526625.
+        Michaelmas term lately over, and the Lord Chancellor sitting in Lincolns Inn Hall. Implacable November weather. As much mud in the streets as if the waters had but newly retired from the face of the earth.
+&lt;/div&gt;'
+/>
 
 ## Box Decoration Break
 
 Utilities for controlling how element fragments should be rendered across multiple lines, columns, or pages.
 
-| Class       | Properties                |
-| :---------- | :------------------------ |
-| decoration-slice | box-decoration-break: slice;   |
-| decoration-clone | box-decoration-break: clone;  |
+<PlaygroundWithVariants
+  variant='slice'
+  :variants="['slice', 'clone']"
+  prefix='decoration'
+  fixed='dark:text-white opacity-85 overflow-hidden p-2 h-screen'
+  nested=true
+  appended='text-5xl font-extrabold bg-gradient-to-r from-green-400 to-blue-500 rounded-16px px-4 text-sm text-white'
+  html="
+&lt;div&gt;
+  &lt;span class=&quot;{class} bg-gradient-to-r px-4 from-green-400 to-blue-500 text-sm text-white rounded-16px&quot;&gt;The&lt;br&gt;quick&lt;br&gt;brown fox&lt;br&gt;over the lazy dog&lt;/span&gt;
+&lt;/div&gt;"
+/>
 
 ## Screen Readers Access
 
