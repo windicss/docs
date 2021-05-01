@@ -4,20 +4,28 @@
 
 Utilities for controlling the order of flex and grid items.
 
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| order-first | order: -9999; |
-| order-last | order: 9999; |
-| order-none | order: 0; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `order-${int}` | order: `${int};` |
-| `-order-${int}` | order: `-${int};` |
+<PlaygroundWithVariants
+  variant='5'
+  :variants="['first', 'last', 'none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8', '-9', '-10', '-11', '-12', '-13', '-14', '-6666']"
+  prefix='order'
+  nested=true
+  fixed='!block'
+  appended='order-1 order-2 order-3 order-4 order-5 order-6 order-7 order-8 order-9 order-10 order-11 rounded-md grid bg-teal-500 bg-yellow-400 bg-teal-100 p-2 w-6 h-6 gap-2 grid-cols-3 text-xs text-white text-center flex flex-col justify-center'
+  html='&lt;div class="grid gap-2 grid-cols-3 bg-teal-100 rounded-md p-2 text-xs text-white text-center"&gt;
+&lt;div class="order-1 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;1&lt;/div&gt;
+&lt;div class="order-2 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;2&lt;/div&gt;
+&lt;div class="order-3 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;3&lt;/div&gt;
+&lt;div class="order-4 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;4&lt;/div&gt;
+&lt;div class="order-5 {class} rounded-md bg-yellow-400 w-6 h-6 flex flex-col justify-center"&gt;5&lt;/div&gt;
+&lt;div class="order-5 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;6&lt;/div&gt;
+&lt;div class="order-6 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;7&lt;/div&gt;
+&lt;div class="order-7 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;8&lt;/div&gt;
+&lt;div class="order-8 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;9&lt;/div&gt;
+&lt;div class="order-9 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;10&lt;/div&gt;
+&lt;div class="order-10 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;11&lt;/div&gt;
+&lt;div class="order-11 rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;12&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 <Customizing>
 
@@ -41,113 +49,185 @@ export default {
 
 Utilities for controlling how flex and grid items are positioned along a container's main axis.
 
-| Class | Properties |
-| :---- | :--------- |
-| justify-start | justify-content: flex-start; |
-| justify-end | justify-content: flex-end; |
-| justify-center | justify-content: center; |
-| justify-between | justify-content: space-between; |
-| justify-around | justify-content: space-around; |
-| justify-evenly | justify-content: space-evenly; |
+<PlaygroundWithVariants
+  variant='start'
+  :variants="['start', 'end', 'center', 'between', 'around', 'evenly']"
+  prefix='justify'
+  nested=true
+  fixed='!block pt-20'
+  appended='flex rounded-md bg-teal-500 bg-teal-100 p-2 space-x-2 w-6 h-6'
+  html='&lt;div class="flex {class} bg-teal-100 rounded-md p-2 space-x-2"&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 h-6"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 h-6"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 h-6"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Justify Items
 
 Utilities for controlling how grid items are aligned along their inline axis.
 
-| Class | Properties |
-| :---- | :--------- |
-| justify-items-auto | justify-items: auto; |
-| justify-items-start | justify-items: start; |
-| justify-items-end | justify-items: end; |
-| justify-items-center | justify-items: center; |
-| justify-items-stretch | justify-items: stretch; |
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'start', 'end', 'center', 'stretch']"
+  prefix='justify-items'
+  nested=true
+  fixed='!block'
+  appended='grid rounded-md bg-teal-500 bg-teal-100 p-2 min-w-6 h-6 gap-2 grid-cols-2 text-xs text-white text-center flex flex-col justify-center'
+  html='&lt;div class="grid {class} gap-2 grid-cols-2 bg-teal-100 rounded-md p-2 text-xs text-white text-center"&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;1&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;2&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;3&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;4&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;5&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;6&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;7&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;8&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Justify Self
 
 Utilities for controlling how an individual grid item is aligned along its inline axis.
 
-| Class | Properties |
-| :---- | :--------- |
-| justify-self-auto | justify-self: auto; |
-| justify-self-start | justify-self: start; |
-| justify-self-end | justify-self: end; |
-| justify-self-center | justify-self: center; |
-| justify-self-stretch | justify-self: stretch; |
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'start', 'end', 'center', 'stretch']"
+  prefix='justify-self'
+  nested=true
+  fixed='!block'
+  appended='grid rounded-md bg-teal-500 bg-yellow-400 bg-teal-100 p-2 min-w-6 h-6 gap-2 grid-cols-2 text-xs text-white text-center flex flex-col justify-center'
+  html='&lt;div class="grid gap-2 grid-cols-2 bg-teal-100 rounded-md p-2 text-xs text-white text-center"&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;1&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;2&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;3&lt;/div&gt;
+&lt;div class="{class} bg-yellow-400 rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;4&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;5&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;6&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;7&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;8&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Align Content
 
 Utilities for controlling how rows are positioned in multi-row flex and grid containers.
 
-| Class | Properties |
-| :---- | :--------- |
-| content-center | align-content: center; |
-| content-start | align-content: flex-start; |
-| content-end | align-content: flex-end; |
-| content-between | align-content: space-between; |
-| content-around | align-content: space-around; |
-| content-evenly | align-content: space-evenly; |
+<PlaygroundWithVariants
+  variant='center'
+  :variants="['center', 'start', 'end', 'between', 'around', 'evenly']"
+  prefix='content'
+  nested=true
+  fixed='!block'
+  appended='grid rounded-md bg-teal-500 bg-teal-100 p-2 min-w-6 h-6 gap-2 grid-cols-2 text-xs text-white text-center flex flex-col justify-center h-48'
+  html='&lt;div class="grid {class} gap-2 grid-cols-2 bg-teal-100 rounded-md p-2 text-xs text-white text-center h-48"&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;1&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;2&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;3&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;4&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;5&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;6&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Align Items
 
 Utilities for controlling how flex and grid items are positioned along a container's cross axis.
 
-| Class | Properties |
-| :---- | :--------- |
-| items-start | align-items: flex-start; |
-| items-end | align-items: flex-end; |
-| items-center | align-items: center; |
-| items-baseline | align-items: baseline; |
-| items-stretch | align-items: stretch; |
+<PlaygroundWithVariants
+  variant='start'
+  :variants="['start', 'end', 'center', 'baseline', 'stretch']"
+  prefix='items'
+  nested=true
+  fixed='!block pt-10'
+  appended='flex justify-center rounded-md bg-teal-500 bg-teal-100 p-2 space-x-2 w-6 min-h-6 h-32'
+  html='&lt;div class="flex {class} justify-center bg-teal-100 rounded-md p-2 space-x-2 h-32"&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 min-h-6"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 min-h-6"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 min-h-6"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Align Self
 
 Utilities for controlling how an individual flex or grid item is positioned along its container's cross axis.
 
-| Class | Properties |
-| :---- | :--------- |
-| self-auto | align-self: auto; |
-| self-start | align-self: flex-start; |
-| self-end | align-self: flex-end; |
-| self-center | align-self: center; |
-| self-stretch | align-self: stretch; |
+<PlaygroundWithVariants
+  variant='center'
+  :variants="['auto', 'start', 'end', 'center', 'stretch']"
+  prefix='self'
+  nested=true
+  fixed='!block pt-10'
+  appended='flex justify-center rounded-md bg-teal-500 bg-yellow-400 bg-teal-100 p-2 space-x-2 w-6 min-h-6 h-32'
+  html='&lt;div class="flex justify-center bg-teal-100 rounded-md p-2 space-x-2 h-32"&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 min-h-6"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-yellow-400 w-6 min-h-6"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 w-6 min-h-6"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Place Content
 
 Utilities for controlling how content is justified and aligned at the same time.
 
-| Class | Properties |
-| :---- | :--------- |
-| place-content-center | place-content: center; |
-| place-content-start | place-content: start; |
-| place-content-end | place-content: end; |
-| place-content-between | place-content: space-between; |
-| place-content-around | place-content: space-around; |
-| place-content-evenly | place-content: space-evenly; |
-| place-content-stretch | place-content: stretch; |
+<PlaygroundWithVariants
+  variant='center'
+  :variants="['center', 'start', 'end', 'between', 'around', 'evenly', 'stretch']"
+  prefix='place-content'
+  nested=true
+  fixed='!block'
+  appended='grid rounded-md bg-teal-500 bg-teal-100 p-2 h-6 gap-2 grid-cols-2 text-xs text-white text-center flex flex-col justify-center h-38'
+  html='&lt;div class="grid {class} gap-2 grid-cols-2 bg-teal-100 rounded-md p-2 text-xs text-white text-center h-38"&gt;
+&lt;div class="rounded-md bg-teal-500 h-6 flex flex-col justify-center"&gt;1&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 h-6 flex flex-col justify-center"&gt;2&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 h-6 flex flex-col justify-center"&gt;3&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 h-6 flex flex-col justify-center"&gt;4&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 h-6 flex flex-col justify-center"&gt;5&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 h-6 flex flex-col justify-center"&gt;6&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Place Items
 
 Utilities for controlling how items are justified and aligned at the same time.
 
-| Class | Properties |
-| :---- | :--------- |
-| place-items-auto | place-items: auto; |
-| place-items-start | place-items: start; |
-| place-items-end | place-items: end; |
-| place-items-center | place-items: center; |
-| place-items-stretch | place-items: stretch; |
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'start', 'end', 'center', 'stretch']"
+  prefix='place-items'
+  nested=true
+  fixed='!block'
+  appended='grid rounded-md bg-teal-500 bg-teal-100 p-2 min-w-6 h-6 gap-2 grid-cols-2 text-xs text-white text-center flex flex-col justify-center h-38'
+  html='&lt;div class="grid {class} gap-2 grid-cols-2 bg-teal-100 rounded-md p-2 text-xs text-white text-center h-38"&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;1&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;2&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;3&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;4&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;5&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;6&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Place Self
 
 Utilities for controlling how an individual item is justified and aligned at the same time.
 
-| Class | Properties |
-| :---- | :--------- |
-| place-self-auto | place-self: auto; |
-| place-self-start | place-self: start; |
-| place-self-end | place-self: end; |
-| place-self-center | place-self: center; |
-| place-self-stretch | place-self: stretch; |
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'start', 'end', 'center', 'stretch']"
+  prefix='place-self'
+  nested=true
+  fixed='!block'
+  appended='grid rounded-md bg-teal-500 bg-yellow-400 bg-teal-100 p-2 min-w-6 h-6 gap-2 grid-cols-2 text-xs text-white text-center flex flex-col justify-center h-38'
+  html='&lt;div class="grid gap-2 grid-cols-2 bg-teal-100 rounded-md p-2 text-xs text-white text-center h-38"&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;1&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;2&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-yellow-400 min-w-6 h-6 flex flex-col justify-center"&gt;3&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;4&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;5&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 min-w-6 h-6 flex flex-col justify-center"&gt;6&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Position
 
