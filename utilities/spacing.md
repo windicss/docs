@@ -10,9 +10,9 @@ Utilities for controlling an element's padding.
   prefix='p'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class}"&gt;padding&lt;/div&gt;
+&lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -44,9 +44,9 @@ Utilities for controlling an element's vertical padding.
   prefix='py'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  appended='inline-flex items-center rounded bg-teal-500 flex-shrink-0 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class}"&gt;padding&lt;/div&gt;
+&lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -60,9 +60,9 @@ Utilities for controlling an element's horizontal padding.
   prefix='px'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  appended='inline-flex items-center rounded bg-teal-500 flex-shrink-0 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class}"&gt;padding&lt;/div&gt;
+&lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -76,9 +76,9 @@ Utilities for controlling an element's top padding.
   prefix='pt'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  appended='inline-flex items-center rounded flex-shrink-0 bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class}"&gt;padding&lt;/div&gt;
+&lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -92,9 +92,9 @@ Utilities for controlling an element's left padding.
   prefix='pl'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  appended='inline-flex items-center rounded flex-shrink-0 bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class}"&gt;padding&lt;/div&gt;
+&lt;p class="rounded bg-green-400 flex-shrink-0 {class}"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -108,9 +108,9 @@ Utilities for controlling an element's bottom padding.
   prefix='pb'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  appended='inline-flex items-center flex-shrink-0 rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class}"&gt;padding&lt;/div&gt;
+&lt;p class="rounded bg-green-400 flex-shrink-0 {class}"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -124,9 +124,9 @@ Utilities for controlling an element's right padding.
   prefix='pr'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  appended='inline-flex items-center flex-shrink-0 rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class}"&gt;padding&lt;/div&gt;
+&lt;p class="rounded flex-shrink-0 bg-green-400 {class}"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -140,9 +140,9 @@ Utilities for controlling an element's margin.
   prefix='m'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2'
+  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} p-2"&gt;margin&lt;/div&gt;
+&lt;p class="rounded bg-green-400 {class} p-2 flex-shrink-0"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -174,9 +174,9 @@ Utilities for controlling an element's vertical margin.
   prefix='my'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2'
+  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} p-2"&gt;margin&lt;/div&gt;
+&lt;p class="rounded bg-green-400 {class} p-2 flex-shrink-0"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -190,9 +190,9 @@ Utilities for controlling an element's horizontal margin.
   prefix='mx'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2'
+  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} p-2"&gt;margin&lt;/div&gt;
+&lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -206,9 +206,9 @@ Utilities for controlling an element's top margin.
   prefix='mt'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2'
+  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} p-2"&gt;margin&lt;/div&gt;
+&lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -222,9 +222,9 @@ Utilities for controlling an element's left margin.
   prefix='ml'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2'
+  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} p-2"&gt;margin&lt;/div&gt;
+&lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -238,9 +238,9 @@ Utilities for controlling an element's bottom margin.
   prefix='mb'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2'
+  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} p-2"&gt;margin&lt;/div&gt;
+&lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
@@ -254,9 +254,9 @@ Utilities for controlling an element's right margin.
   prefix='mr'
   nested=true
   fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2'
+  appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} p-2"&gt;margin&lt;/div&gt;
+&lt;p class="rounded bg-green-400 {class} p-2 flex-shrink-0"&gt;{class}&lt;/p&gt;
 &lt;/div&gt;'
 />
 
