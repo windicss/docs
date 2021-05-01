@@ -224,6 +224,6 @@ Utilities for controlling how the browser should calculate an element's total si
   fixed='!block text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-32 h-32 bg-green-400 text-center flex flex-col justify-center m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} w-32 h-32 flex-shrink-0 p-2 text-center flex flex-col justify-center"&gt;{class}&lt;/div&gt;
+&lt;div class="rounded bg-green-400 {class} w-32 h-32 flex-shrink-0 p-2 text-center flex flex-col justify-center"&gt;w-32 x h-32&lt;/div&gt;
 &lt;/div&gt;'
 />
