@@ -233,13 +233,22 @@ Utilities for controlling how an individual item is justified and aligned at the
 
 Utilities for controlling how an element is positioned in the DOM.
 
-| Class | Properties |
-| :---- | :--------- |
-| static | position: static; |
-| fixed | position: fixed; |
-| absolute | position: absolute; |
-| relative | position: relative; |
-| sticky | position: sticky; |
+<PlaygroundWithVariants
+  variant='static'
+  :variants="['static', 'fixed', 'absolute', 'relative', 'sticky']"
+  nested=true
+  fixed='!block relative text-xs'
+  appended='rounded-md clear-both bg-teal-500 bg-teal-100 w-8 h-8 mr-2 bg-red-400 bg-green-400 bg-blue-400 inline-block top-0 left-0'
+  html='&lt;p&gt;In this demo you can control the &lt;code&gt;position&lt;/code&gt; property for the green box.&lt;/p&gt;
+&lt;div class="inline-block rounded-md w-8 h-8 bg-red-400 mr-2"&gt;&lt;/div&gt;
+&lt;div class="inline-block {class} top-0 left-0 rounded-md bg-green-400 w-8 h-8 mr-2"&gt;&lt;/div&gt;
+&lt;div class="inline-block rounded-md w-8 h-8 bg-blue-400"&gt;&lt;/div&gt;
+&lt;p class="clear-both"&gt;To see the effect of &lt;code&gt;sticky&lt;/code&gt; positioning, select the &lt;code&gt;position: sticky&lt;/code&gt; option and scroll this container.&lt;/p&gt;
+&lt;p&gt;The element will scroll along with its container, until it is at the top of the container (or reaches the offset specified in &lt;code&gt;top&lt;/code&gt;), and will then stop scrolling, so it stays visible.&lt;/p&gt;
+&lt;p&gt;The rest of this text is only supplied to make sure the container overflows, so as to enable you to scroll it and see the effect.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy lies a small unregarded yellow sun. Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a pretty neat idea.&lt;/p&gt; '
+/>
 
 ## Top / Right / Bottom / Left
 
@@ -247,179 +256,15 @@ Utilities for controlling the placement of positioned elements.
 
 ### Inset
 
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| inset-0 | top: 0px;<br>right: 0px;<br>bottom: 0px;<br>left: 0px; |
-| inset-auto | top: auto;<br>right: auto;<br>bottom: auto;<br>left: auto; |
-| inset-px | top: 1px;<br>right: 1px;<br>bottom: 1px;<br>left: 1px; |
-| inset-full | top: 100%;<br>right: 100%;<br>bottom: 100%;<br>left: 100%; |
-| -inset-0 | top: 0px;<br>right: 0px;<br>bottom: 0px;<br>left: 0px; |
-| -inset-px | top: -1px;<br>right: -1px;<br>bottom: -1px;<br>left: -1px; |
-| -inset-full | top: -100%;<br>right: -100%;<br>bottom: -100%;<br>left: -100%; |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `inset-${float}` | top: `${float/4}rem;`<br>right: `${float/4}rem;`<br>bottom: `${float/4}rem;`<br>left: `${float/4}rem;` |
-| `inset-${fraction}` | top: `${percent};`<br>right: `${percent};`<br>bottom: `${percent};`<br>left: `${percent};` |
-| `inset-${size}` | top: `${size};`<br>right: `${size};`<br>bottom: `${size};`<br>left: `${size};` |
-| `-inset-${float}` | top: `-${float/4}rem;`<br>right: `-${float/4}rem;`<br>bottom: `-${float/4}rem;`<br>left: `-${float/4}rem;` |
-| `-inset-${fraction}` | top: `-${percent};`<br>right: `-${percent};`<br>bottom: `-${percent};`<br>left: `-${percent};` |
-| `-inset-${size}` | top: `-${size};`<br>right: `-${size};`<br>bottom: `-${size};`<br>left: `-${size};` |
-
-### Inset Y
-
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| inset-y-0 | top: 0px;<br>bottom: 0px; |
-| inset-y-auto | top: auto;<br>bottom: auto; |
-| inset-y-px | top: 1px;<br>bottom: 1px; |
-| inset-y-full | top: 100%;<br>bottom: 100%; |
-| -inset-y-0 | top: 0px;<br>bottom: 0px; |
-| -inset-y-px | top: -1px;<br>bottom: -1px; |
-| -inset-y-full | top: -100%;<br>bottom: -100%; |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `inset-y-${float}` | top: `${float/4}rem;`<br>bottom: `${float/4}rem;` |
-| `inset-y-${fraction}` | top: `${percent};`<br>bottom: `${percent};` |
-| `inset-y-${size}` | top: `${size};`<br>bottom: `${size};` |
-| `-inset-y-${float}` | top: `-${float/4}rem;`<br>bottom: `-${float/4}rem;` |
-| `-inset-y-${fraction}` | top: `-${percent};`<br>bottom: `-${percent};` |
-| `-inset-y-${size}` | top: `-${size};`<br>bottom: `-${size};` |
-
-
-### Inset X
-
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| inset-x-0 | right: 0px;<br>left: 0px; |
-| inset-x-auto | right: auto;<br>left: auto; |
-| inset-x-px | right: 1px;<br>left: 1px; |
-| inset-x-full | right: 100%;<br>left: 100%; |
-| -inset-x-0 | right: 0px;<br>left: 0px; |
-| -inset-x-px | right: -1px;<br>left: -1px; |
-| -inset-x-full | right: -100%;<br>left: -100%; |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `inset-x-${float}` | right: `${float/4}rem;`<br>left: `${float/4}rem;` |
-| `inset-x-${fraction}` | right: `${percent};`<br>left: `${percent};` |
-| `inset-x-${size}` | right: `${size};`<br>left: `${size};` |
-| `-inset-x-${float}` | right: `-${float/4}rem;`<br>left: `-${float/4}rem;` |
-| `-inset-x-${fraction}` | right: `-${percent};`<br>left: `-${percent};` |
-| `-inset-x-${size}` | right: `-${size};`<br>left: `-${size};` |
-
-### Top
-
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| top-0 | top: 0px; |
-| top-auto | top: auto; |
-| top-px | top: 1px; |
-| top-full | top: 100%; |
-| -top-0 | top: 0px; |
-| -top-px | top: -1px; |
-| -top-full | top: -100%; |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `top-${float}` | top: `${float/4}rem;` |
-| `top-${fraction}` | top: `${percent};` |
-| `top-${size}` | top: `${size};` |
-| `-top-${float}` | top: `-${float/4}rem;` |
-| `-top-${fraction}` | top: `-${percent};` |
-| `-top-${size}` | top: `-${size};` |
-
-### Right
-
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| right-0 | right: 0px; |
-| right-auto | right: auto; |
-| right-px | right: 1px; |
-| right-full | right: 100%; |
-| -right-0 | right: 0px; |
-| -right-px | right: -1px; |
-| -right-full | right: -100%; |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `right-${float}` | right: `${float/4}rem;` |
-| `right-${fraction}` | right: `${percent};` |
-| `right-${size}` | right: `${size};` |
-| `-right-${float}` | right: `-${float/4}rem;` |
-| `-right-${fraction}` | right: `-${percent};` |
-| `-right-${size}` | right: `-${size};` |
-
-### Bottom
-
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| bottom-0 | bottom: 0px; |
-| bottom-auto | bottom: auto; |
-| bottom-px | bottom: 1px; |
-| bottom-full | bottom: 100%; |
-| -bottom-0 | bottom: 0px; |
-| -bottom-px | bottom: -1px; |
-| -bottom-full | bottom: -100%; |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `bottom-${float}` | bottom: `${float/4}rem;` |
-| `bottom-${fraction}` | bottom: `${percent};` |
-| `bottom-${size}` | bottom: `${size};` |
-| `-bottom-${float}` | bottom: `-${float/4}rem;` |
-| `-bottom-${fraction}` | bottom: `-${percent};` |
-| `-bottom-${size}` | bottom: `-${size};` |
-
-### Left
-
-#### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| left-0 | left: 0px; |
-| left-auto | left: auto; |
-| left-px | left: 1px; |
-| left-full | left: 100%; |
-| -left-0 | left: 0px; |
-| -left-px | left: -1px; |
-| -left-full | left: -100%; |
-
-#### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `left-${float}` | left: `${float/4}rem;` |
-| `left-${fraction}` | left: `${percent};` |
-| `left-${size}` | left: `${size};` |
-| `-left-${float}` | left: `-${float/4}rem;` |
-| `-left-${fraction}` | left: `-${percent};` |
-| `-left-${size}` | left: `-${size};` |
+<PlaygroundWithVariants
+  variant='4'
+  :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
+  prefix='inset'
+  nested=true
+  fixed='!block relative text-xs text-white w-screen h-screen'
+  appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
+  html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
+/>
 
 <Customizing>
 
@@ -437,63 +282,157 @@ export default {
 
 </Customizing>
 
+### Inset Y
+
+<PlaygroundWithVariants
+  variant='4'
+  :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
+  prefix='inset-y'
+  nested=true
+  fixed='!block relative text-xs text-white w-screen h-screen'
+  appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
+  html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
+/>
+
+### Inset X
+
+<PlaygroundWithVariants
+  variant='4'
+  :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
+  prefix='inset-x'
+  nested=true
+  fixed='!block relative text-xs text-white w-screen h-screen'
+  appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
+  html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
+/>
+
+
+### Top
+
+<PlaygroundWithVariants
+  variant='4'
+  :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
+  prefix='top'
+  nested=true
+  fixed='!block relative text-xs text-white w-screen h-screen'
+  appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
+  html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
+/>
+
+
+### Right
+
+<PlaygroundWithVariants
+  variant='4'
+  :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
+  prefix='right'
+  nested=true
+  fixed='!block relative text-xs text-white w-screen h-screen'
+  appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
+  html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
+/>
+
+### Bottom
+
+<PlaygroundWithVariants
+  variant='4'
+  :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
+  prefix='bottom'
+  nested=true
+  fixed='!block relative text-xs text-white w-screen h-screen'
+  appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
+  html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
+/>
+
+### Left
+
+<PlaygroundWithVariants
+  variant='4'
+  :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
+  prefix='left'
+  nested=true
+  fixed='!block relative text-xs text-white'
+  appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
+  html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
+/>
+
 ## Floats
 
 Utilities for controlling the wrapping of content around an element.
 
-| Class  | Properties |
-| :----- | :--------- |
-| float-right | float: right; |
-| float-left | float: left; |
-| float-none | float: none; |
+<PlaygroundWithVariants
+  variant='left'
+  :variants="['right', 'left', 'none']"
+  prefix='float'
+  nested=true
+  fixed='!block text-xs'
+  appended='bg-blue-300 rounded-md p-3 text-white'
+  html='&lt;div class="{class} bg-blue-300 rounded-md p-3 text-white"&gt;Float me&lt;/div&gt;
+As much mud in the streets as if the waters had but newly retired from the face of the earth, and it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.'
+/>
 
 ## Clear
 
 Utilities for controlling the wrapping of content around an element.
 
-| Class  | Properties |
-| :----- | :--------- |
-| clear-left | clear: left; |
-| clear-right | clear: right; |
-| clear-both | clear: both; |
-| clear-none | clear: none; |
+<PlaygroundWithVariants
+  variant='left'
+  :variants="['right', 'left', 'both', 'none']"
+  prefix='clear'
+  nested=true
+  fixed='!block text-xs'
+  appended='bg-blue-300 rounded-md p-3 text-white float-left float-right h-24'
+  html='&lt;div class="float-left bg-blue-300 rounded-md p-3 text-white"&gt;Left&lt;/div&gt;
+  &lt;div class="float-right bg-blue-300 rounded-md p-3 text-white h-24"&gt;Right&lt;/div&gt;
+&lt;div class="{class}"&gt;
+As much mud in the streets as if the waters had but newly retired from the face of the earth, and it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+&lt;/div&gt;'
+/>
 
 ## Isolation
 
-Utilities for controlling whether an element should explicitly create a new stacking context.
+Utilities for controlling whether an element should explicitly create a new stacking context. These utilities are especially helpful when used in conjunction with [mix-blend-mode](/utilities/effects#mix-blend-mode) and [z-index](#z-index).
 
-| Class  | Properties |
-| :----- | :--------- |
-| isolate | isolation: isolate; |
-| isolation-auto | isolation: auto; |
+<PlaygroundWithVariants
+  variant='isolate'
+  :variants="['isolate', 'isolation-auto']"
+  fixed='dark:text-white opacity-85 overflow-hidden h-screen'
+  appended='w-32 h-32 bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black'
+  nested=true
+  html='&lt;div class="w-32 h-32 bg-green-400"&gt;
+  &lt;div class="{class}"&gt;
+    &lt;div class="bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black"&gt;auto&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Object Fit
 
 Utilities for controlling how a replaced element's content should be resized.
 
-| Class | Properties |
-| :---- | :--------- |
-| object-contain | object-fit: contain; |
-| object-cover | object-fit: cover; |
-| object-fill | object-fit: fill; |
-| object-none | object-fit: none; |
-| object-scale-down | object-fit: scale-down; |
+<PlaygroundWithVariants
+  variant='cover'
+  :variants="['contain', 'cover', 'fill', 'none', 'scale-down']"
+  prefix='object'
+  appended='p-2 w-36 h-42 bg-gray-100'
+  nested=true
+  html='&lt;img src="/assets/bg-shop.jpg" class="{class} w-36 h-42 bg-gray-100"&gt;
+  &lt;/img&gt;'
+/>
 
 ## Object Position
 
 Utilities for controlling how a replaced element's content should be positioned within its container.
 
-| Class | Properties |
-| :---- | :--------- |
-| object-bottom | object-position: bottom; |
-| object-center | object-position: center; |
-| object-left | object-position: left; |
-| object-left-bottom | object-position: left bottom; |
-| object-left-top | object-position: left top; |
-| object-right | object-position: right; |
-| object-right-bottom | object-position: right bottom; |
-| object-right-top | object-position: right top; |
-| object-top | object-position: top; |
+<PlaygroundWithVariants
+  variant='bottom'
+  :variants="['bottom', 'center', 'left', 'left-bottom', 'left-top', 'right', 'right-bottom', 'right-top', 'top']"
+  prefix='object'
+  appended='object-none w-36 h-42'
+  nested=true
+  html='&lt;img src="/assets/bg-shop.jpg" class="{class} w-36 h-42 object-none"&gt;
+  &lt;/img&gt;'
+/>
 
 <Customizing>
 
@@ -524,18 +463,21 @@ export default {
 
 Utilities for controlling the stack order of an element.
 
-### Static Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| z-auto | z-index: auto; |
-
-### Dynamic Utilities
-
-| Class | Properties |
-| :---- | :--------- |
-| `z-${int}` | z-index: `${int};` |
-| `-z-${int}` | z-index: `-${int};` |
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', '0', '1', '2', '3', '4', '5', '10', '20', '30', '40', '50', '60', '-1', '-2', '-3', '-5']"
+  fixed='relative text-xs text-white text-center'
+  prefix='z'
+  appended='z-50 flex flex-col justify-center absolute bg-opacity-80 rounded shadow w-8 h-8 w-36 h-36 bg-green-400 bg-blue-400 bg-red-400  z-30 z-10 z-auto top-0 left-0 top-4 left-4 top-8 top-16 top-20 top-24 left-8 ring'
+  nested=true
+  html='&lt;div class="flex flex-col justify-center ring rounded shadow-lg bg-opacity-80 absolute {class} w-36 h-36 bg-green-400 top-0 left-0"&gt;Change my z-index&lt;/div&gt;
+  &lt;div class="ring rounded shadow-lg bg-opacity-80 absolute w-8 h-8 z-50 top-0 left-0 bg-blue-400"&gt;z-50&lt;/div&gt;
+  &lt;div class="ring rounded shadow-lg bg-opacity-80 absolute w-8 h-8 z-30 top-4 left-4 bg-blue-400"&gt;z-30&lt;/div&gt;
+  &lt;div class="ring rounded shadow-lg bg-opacity-80 absolute w-8 h-8 z-10 top-8 left-8 bg-blue-400"&gt;z-10&lt;/div&gt;
+  &lt;div class="ring rounded shadow-lg bg-opacity-80 absolute w-8 h-8 z-auto top-16 left-0 bg-red-400"&gt;z-auto&lt;/div&gt;
+  &lt;div class="ring rounded shadow-lg bg-opacity-80 absolute w-8 h-8 z-auto top-20 left-4 bg-red-400"&gt;z-auto&lt;/div&gt;
+  &lt;div class="ring rounded shadow-lg bg-opacity-80 absolute w-8 h-8 z-auto top-24 left-8 bg-red-400"&gt;z-auto&lt;/div&gt;'
+/>
 
 <Customizing>
 
@@ -545,7 +487,7 @@ export default {
   theme: {
     zIndex: {
       first: 10,
-      seconde: 20,
+      second: 20,
     },
   },
 }
