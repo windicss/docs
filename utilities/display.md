@@ -60,7 +60,13 @@ Turns off the `display` of an element so that it has no effect on layout (the do
 
 Utilities for controlling the visibility of an element. The `visibility` CSS property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a `<table>`.
 
-| Class | Properties |
-| :---- | :--------- |
-| visible | visibility: visible; |
-| invisible | visibility: hidden; |
+<PlaygroundWithVariants
+  variant='visible'
+  :variants="['visible', 'invisible']"
+  fixed='p-2 dark:text-white opacity-85 w-full h-screen flex items-center space-x-2'
+  nested=true
+  appended='rounded-md bg-teal-500 w-10 h-10'
+  html='&lt;div class="rounded-md bg-teal-500 w-10 h-10"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-teal-500 w-10 h-10"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-teal-500 w-10 h-10"&gt;&lt;/div&gt;'
+/>
