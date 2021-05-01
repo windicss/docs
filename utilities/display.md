@@ -4,25 +4,51 @@
 
 The `block` utility generates a block element box, generating line breaks both before and after the element when in the normal flow.
 
-| Class | Properties |
-| :---- | :--------- |
-| block	| display: block; |
+<PlaygroundWithVariants
+  variant='block'
+  :variants="[]"
+  nested=true
+  fixed='!block space-y-2 pt-6 pl-12'
+  appended='rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400'
+  html='
+&lt;div class="{class} rounded-md bg-red-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-green-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-blue-400 w-8 h-8"&gt;&lt;/div&gt;'
+/>
 
 ## Inline Block
 
 The `inline-block` utility generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
 
-| Class | Properties |
-| :---- | :--------- |
-| inline-block | display: inline-block; |
+<PlaygroundWithVariants
+  variant='inline-block'
+  :variants="[]"
+  nested=true
+  fixed='!block space-x-1 pt-12 pl-4 text-xs'
+  appended='rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 text-gray-500'
+  html='
+&lt;div class="{class} rounded-md bg-red-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-green-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-blue-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;span class="text-gray-500"&gt;...&lt;/span&gt;'
+/>
 
 ## Inline
 
-The `inline` utility generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space
+The `inline` utility generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-| Class | Properties |
-| :---- | :--------- |
-| inline	| display: inline; |
+<PlaygroundWithVariants
+  variant='inline'
+  :variants="['inline', 'inline-block']"
+  nested=true
+  fixed='!block space-x-1 pt-12 pl-2 text-xs text-white'
+  appended='rounded-md bg-teal-500 bg-teal-100 py-2 px-3 bg-red-400 bg-green-400 bg-blue-400 text-gray-500'
+  html='
+&lt;div class="{class} rounded-md bg-red-400 py-2 px-3"&gt;1&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-green-400 py-2 px-3"&gt;2&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-blue-400 py-2 px-3"&gt;3&lt;/div&gt;
+&lt;span class="text-gray-500"&gt;...&lt;/span&gt;'
+/>
 
 ## Flow Root
 
@@ -32,29 +58,60 @@ The `flow-root` utility generates a block element box that establishes a new [bl
 | :---- | :--------- |
 | flow-root	| display: flow-root; |
 
+<PlaygroundWithVariants
+  variant='flow-root'
+  :variants="[]"
+  nested=true
+  fixed='!block space-y-2 pt-2'
+  appended='rounded-md bg-teal-500 bg-teal-100 w-8 h-8 m-1 bg-red-400 bg-green-400 bg-blue-400 bg-teal-100'
+  html='
+&lt;div class="{class} bg-teal-100 rounded-md"&gt;
+  &lt;div class="m-1 rounded-md bg-red-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="{class} bg-teal-100 rounded-md"&gt;
+  &lt;div class="m-1 rounded-md bg-green-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="{class} bg-teal-100 rounded-md"&gt;
+  &lt;div class="m-1 rounded-md bg-blue-400 w-8 h-8"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
+
 ## Contents
 
 The `contents` utilities don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes.
 
-| Class | Properties |
-| :---- | :--------- |
-| contents	| display: contents; |
-
-## List Item
-
-The `list-item` utility generates a `::marker` pseudo-element with the content specified by its `list-style` properties (for example a bullet point) together with a principal box of the specified type for its own contents.
-
-| Class | Properties |
-| :---- | :--------- |
-| list-item	| display: list-item; |
+<PlaygroundWithVariants
+  variant='contents'
+  :variants="['block', 'contents']"
+  nested=true
+  fixed='!block pt-10'
+  appended='flex items-center rounded-md flex-1 bg-teal-500 bg-teal-100 h-6 bg-red-400 bg-yellow-400 bg-green-400 bg-blue-400 bg-indigo-100 w-10 m-1 p-1'
+  html='&lt;div class="flex items-center bg-teal-100 rounded-md p-1"&gt;
+&lt;div class="flex-1 rounded-md bg-red-400 h-6 m-1"&gt;&lt;/div&gt;
+&lt;div class="rounded-md w-10 bg-indigo-100 {class}"&gt;
+  &lt;div class="flex-1 rounded-md bg-yellow-400 h-6 m-1"&gt;&lt;/div&gt;
+  &lt;div class="flex-1 rounded-md bg-green-400 h-6 m-1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex-1 rounded-md bg-blue-400 h-6 m-1"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Hidden
 
 Turns off the `display` of an element so that it has no effect on layout (the document is rendered as though the element did not exist). All descendant elements also have their display turned off. To have an element take up the space that it would normally take, but without actually rendering anything, use the [visibility](#visibility) property instead.
 
-| Class | Properties |
-| :---- | :--------- |
-| hidden	| display: none; |
+<PlaygroundWithVariants
+  variant='hidden'
+  :variants="['block', 'hidden']"
+  nested=true
+  fixed='!block pt-20'
+  appended='flex items-center rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  html='&lt;div class="flex items-center bg-teal-100 rounded-md p-1"&gt;
+&lt;div class="rounded-md bg-red-400 w-8 h-8 m-1"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-green-400 w-8 h-8 m-1"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-blue-400 w-8 h-8 m-1"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
 
 ## Visibility
 
@@ -63,10 +120,29 @@ Utilities for controlling the visibility of an element. The `visibility` CSS pro
 <PlaygroundWithVariants
   variant='visible'
   :variants="['visible', 'invisible']"
-  fixed='p-2 dark:text-white opacity-85 w-full h-screen flex items-center space-x-2'
   nested=true
-  appended='rounded-md bg-teal-500 w-10 h-10'
-  html='&lt;div class="rounded-md bg-teal-500 w-10 h-10"&gt;&lt;/div&gt;
-&lt;div class="{class} rounded-md bg-teal-500 w-10 h-10"&gt;&lt;/div&gt;
-&lt;div class="rounded-md bg-teal-500 w-10 h-10"&gt;&lt;/div&gt;'
+  fixed='!block pt-20'
+  appended='flex items-center rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
+  html='&lt;div class="flex items-center bg-teal-100 rounded-md p-1"&gt;
+&lt;div class="rounded-md bg-red-400 w-8 h-8 m-1"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-green-400 w-8 h-8 m-1"&gt;&lt;/div&gt;
+&lt;div class="rounded-md bg-blue-400 w-8 h-8 m-1"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
+
+## List Item
+
+The `list-item` utility generates a `::marker` pseudo-element with the content specified by its [list-style](/utilities/typography.html#list-style-type) properties (for example a bullet point) together with a principal box of the specified type for its own contents.
+
+<PlaygroundWithVariants
+  variant='list-item'
+  :variants="['block', 'list-item']"
+  fixed='py-4 px-8 dark:text-white opacity-85'
+  nested=true
+  appended='list-decimal'
+  html="&lt;div class='list-decimal'&gt;
+  &lt;div class='{class}'&gt;One&lt;/div&gt;
+  &lt;div class='{class}'&gt;Two&lt;/div&gt;
+  &lt;div class='{class}'&gt;Three&lt;/div&gt;
+&lt;/div&gt;"
 />
