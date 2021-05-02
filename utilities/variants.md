@@ -149,8 +149,10 @@ For example, you could then use `print:hidden` to hide elements when styling for
 | :------ | :--- | :---------- |
 | svg | `.${utility} svg { ... }` | Targets svg nodes. |
 | all | `.${utility} * { ... }` | Targets all nodes. |
-| all-child | `.${utility} > * { ... }` | Targets all child nodes. |
-| sibling | `.${utility} ~ * { ... }` | Targets sibling nodes . |
+| children | `.${utility} > * { ... }` | Targets children nodes. |
+| siblings | `.${utility} ~ * { ... }` | Targets siblings nodes . |
+| sibling | `.${utility} + * { ... }` | Targets first sibling node. |
+
 
 ### Media Query
 
