@@ -1,5 +1,6 @@
 [utility groups]: /features/
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
+[vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [migration]: /guide/migration
 
 <Logo name="svelte" class="logo-float-xl"/>
