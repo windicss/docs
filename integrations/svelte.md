@@ -71,7 +71,7 @@ export default {
 ### Vite Svelte
 
 ::: tip Vite
-For Vite Setups, we do suggest to use <kbd>[vite-plugin-windicss]</kbd>. However, if you need any special features or your setup requires windicss to run as a preprocessor, you can setup it
+For Vite setups, we do suggest to use [Vite plugin](/integrations/vite). However, if you need any special features or your setup requires windicss to run as a preprocessor, you can setup it as below.
 :::
 
 ```sh
