@@ -18,6 +18,12 @@ npm i -D svelte-windicss-preprocess
 
 > If migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
 
+### Setup VS Code Extension
+
+If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your condfig.
+
+Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
+
 ## Configuration
 
 Add <kbd>[svelte-windicss-preprocess]</kbd> to your bundler configuration.
@@ -63,6 +69,10 @@ export default {
 
 ### Vite Svelte
 
+::: tip Vite
+For Vite Setups, we do suggest to use <kbd>[vite-plugin-windicss]</kbd>. However, if you need any special features or your setup requires windicss to run as a preprocessor, you can setup it
+:::
+
 ```bash
 # vite project installation & setup
 npm init @vitejs/app --template svelte vite-svelte-windicss-app
@@ -94,122 +104,12 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
-### Rollup Sapper (prefer [SvelteKit](https://windicss.org/integrations/svelte-kit.html) once released)
-
-```js
-// rollup.config.js
-export default {
-  client: {
-    // ...
-    plugins: [
-      // ...
-      svelte({
-        // ...
-        preprocess: [
-          require('svelte-windicss-preprocess').preprocess({
-            config: 'windi.config.js', // windi config file path (optional)
-            compile: true, // false: interpretation mode; true: compilation mode (optional)
-            prefix: 'windi-', // set compilation mode style prefix
-            safeList: ['bg-gray-600', 'text-white'], // (optional)
-          }),
-        ],
-      }),
-      // ...
-    ],
-  },
-
-  server: {
-    // ...
-    plugins: [
-      // ...
-      svelte({
-        // ...
-        preprocess: [
-          require('svelte-windicss-preprocess').preprocess({
-            config: 'windi.config.js', // windi config file path (optional)
-            compile: true, // false: interpretation mode; true: compilation mode (optional)
-            prefix: 'windi-', // set compilation mode style prefix
-            safeList: ['bg-gray-600', 'text-white'], // (optional)
-          }),
-        ],
-      }),
-      // ...
-    ],
-  },
-}
-```
-
-### Webpack Sapper (prefer [SvelteKit](https://windicss.org/integrations/svelte-kit.html) once released)
-
-```js
-// webpack.config.js
-export default {
-  client: {
-    // ...
-    module: {
-      rules: [
-        {
-          test: /\.(svelte|html)$/,
-          use: {
-            loader: 'svelte-loader',
-            options: {
-              // ...
-              preprocess: [
-                require('svelte-windicss-preprocess').preprocess({
-                  config: 'windi.config.js', // windi config file path (optional)
-                  compile: true, // false: interpretation mode; true: compilation mode (optional)
-                  prefix: 'windi-', // set compilation mode style prefix
-                  safeList: ['bg-gray-600', 'text-white'], // (optional)
-                }),
-              ],
-            },
-          },
-        },
-        // ...
-      ],
-    },
-    // ...
-  },
-
-  server: {
-    // ...
-    module: {
-      rules: [
-        {
-          test: /\.(svelte|html)$/,
-          use: {
-            loader: 'svelte-loader',
-            options: {
-              // ...
-              preprocess: [
-                require('svelte-windicss-preprocess').preprocess({
-                  config: 'windi.config.js', // windi config file path (optional)
-                  compile: true, // false: interpretation mode; true: compilation mode (optional)
-                  prefix: 'windi-', // set compilation mode style prefix
-                  safeList: ['bg-gray-600', 'text-white'], // (optional)
-                }),
-              ],
-            },
-          },
-        },
-      // ...
-      ],
-    },
-    // ...
-  },
-}
-```
-
-### Setup VS Code Extension
-
-If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your condfig.
-Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
-
 ## Additional Features in Svelte  ⚡️
 
 <kbd>[svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess)</kbd> also supports the following features:
 
 ### Variant Attributes
+> gets replaced with **v4** release of svelte-windicss-preprocess
 
 You can apply several utilities for the same variant by using HTML attributes.
 
