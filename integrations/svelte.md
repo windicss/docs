@@ -73,14 +73,14 @@ export default {
 For Vite Setups, we do suggest to use <kbd>[vite-plugin-windicss]</kbd>. However, if you need any special features or your setup requires windicss to run as a preprocessor, you can setup it
 :::
 
-```bash
+```sh
 # vite project installation & setup
 npm init @vitejs/app --template svelte vite-svelte-windicss-app
 cd vite-svelte-windicss-app
 npm i -D svelte-windicss-preprocess
 ```
 
-```ts
+```js
 // vite.config.js
 export default defineConfig(({ command, mode }) => {
   const production = mode === 'production'
