@@ -65,7 +65,7 @@ Rename it to `tailwind.config.ts` and things just work!
 
 ```ts
 // tailwind.config.ts
-import { defineConfig } from 'windcss/helpers'
+import { defineConfig } from 'windicss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
 export default defineConfig({
