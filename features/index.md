@@ -18,7 +18,7 @@ Use arbitrary values in your classes and generate corresponding styles.
 <button class="bg-hex-b2a8bb"></button>
 <button class="bg-[hsl(211.7,81.9%,69.6%)]"></button>
 
-<!-- gird template -->
+<!-- grid template -->
 <div class="grid-cols-[auto,1fr,30px]"></div>
 ```
 
