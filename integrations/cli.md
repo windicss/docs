@@ -30,3 +30,7 @@ windicss './**/*.html' -cto windi.css
 windicss './**/*.html' -ts
 windicss './**/*.html' -cts
 ```
+- Watch mode
+```bash
+nodemon -e html -x windicss './**/*.html' -cto windi.css
+```
