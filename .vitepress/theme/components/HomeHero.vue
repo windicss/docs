@@ -1,23 +1,24 @@
 <template>
   <header v-if="showHero" class="home-hero">
     <div>
-      <div class="text-left pb-12 md:flex">
+      <div class="pb-12 space-y-2">
         <figure v-if="$frontmatter.heroImage">
           <img
-            class="block w-auto max-w-full max-h-120px -ml-2 select-none"
+            class="block w-auto max-w-full max-h-120px mx-auto select-none"
             :src="$withBase($frontmatter.heroImage)"
             :alt="$frontmatter.heroAlt"
           >
         </figure>
 
-        <div class="ml-2">
+        <div class="text-center">
           <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0">
             {{ heroText }}
           </h1>
           <p v-if="hasTagline" class="m-0 mt-1 text-lg leading-6 opacity-75 xs:(text-2xl)">
             {{ tagline }}
           </p>
-          <div class="mt-8 flex space-x-6">
+
+          <div class="mt-8 flex justify-center space-x-6">
             <a v-if="hasAction" :href="data.actionLink" class="link-btn">
               {{ data.actionText }}
             </a>
