@@ -170,7 +170,7 @@ Utilities for controlling the background size of an element's background image.
   variant='auto'
   :variants="['auto', 'cover', 'contain']"
   prefix='bg'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  fixed='dark:text-white opacity-85 overflow-hidden'
   nested=true
   appended='w-full h-36 bg-no-repeat bg-center'
   html="&lt;div class=&quot;w-full h-36 {class} bg-no-repeat bg-center&quot; style=&quot;background-image:url(&#39;/assets/bg-blue.svg&#39;);&quot;&gt;
@@ -194,6 +194,22 @@ export default {
 ```
 
 </Customizing>
+
+## Background Origin
+
+Utilities for controlling the background origin of an element's background image.
+
+<PlaygroundWithVariants
+  variant='border'
+  :variants="['border', 'padding', 'content']"
+  prefix='bg-origin'
+  fixed='dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='p-6 rounded-md border-4 border-blue-400 border-dashed font-extrabold text-white flex justify-center items-center bg-no-repeat'
+  html='&lt;div class="{class} bg-no-repeat p-6 rounded-md border-4 border-blue-400 border-dashed font-extrabold text-white flex justify-center items-center" style="background-image: url(/assets/bg-shop.jpg);"&gt;
+      &lt;span&gt;Hello World&lt;/span&gt;
+    &lt;/div&gt;'
+/>
 
 ## Background Image
 

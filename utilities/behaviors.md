@@ -79,7 +79,7 @@ Utilities for controlling the cursor style when hovering over an element.
 
 <PlaygroundWithVariants
   variant='pointer'
-  :variants="['auto', 'default', 'pointer', 'wait', 'text', 'move', 'not-allowed']"
+  :variants="['auto', 'default', 'pointer', 'wait', 'text', 'move', 'help', 'not-allowed']"
   prefix='cursor'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-blue-500 ring-4 ring-opacity-50'
