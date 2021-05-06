@@ -2,14 +2,14 @@
   <div class="nav-dropdown-link" :class="{ open }" @mouseenter="open = true" @mouseleave="open = false">
     <button class="button" :aria-label="item.ariaLabel">
       <span class="button-text">{{ item.text }}</span>
-      <uil:angle-down class="w-4 h-4 text-gray-500 ml-1" />
+      <uil:angle-down class="h-4 ml-1 text-gray-500 w-4" />
     </button>
 
     <div class="dialog">
       <div v-for="item in item.items" :key="item.text">
         <NavBarDropdownLinkItem v-if="item.text !== 'separator'" :item="item" />
-        <div v-else class="separator py-1">
-          <div class="w-full h-1px bg-blue-gray-200 dark:bg-dark-300"></div>
+        <div v-else class="py-1 separator">
+          <div class="bg-blue-gray-200 h-1px w-full dark:bg-dark-300"></div>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@ watch(
 
 .dialog {
   @apply
-    hidden flex-col py-1.5
+    hidden flex-col overflow-y-auto py-1.5 max-h-[90vh]
     absolute top-12 left-0 min-w-36 transform -translate-x-4
     bg-white dark:bg-dark-700
     rounded-md border border-blue-gray-200 dark:border-dark-300
