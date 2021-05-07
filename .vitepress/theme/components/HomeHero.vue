@@ -1,23 +1,24 @@
 <template>
   <header v-if="showHero" class="home-hero">
     <div>
-      <div class="text-left pb-12 md:flex">
+      <div class="space-y-2 pb-12">
         <figure v-if="$frontmatter.heroImage">
           <img
-            class="block w-auto max-w-full max-h-120px -ml-2 select-none"
+            class="mx-auto max-w-full w-auto max-h-120px block select-none"
             :src="$withBase($frontmatter.heroImage)"
             :alt="$frontmatter.heroAlt"
           >
         </figure>
 
-        <div class="ml-2">
+        <div class="text-center">
           <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0">
             {{ heroText }}
           </h1>
-          <p v-if="hasTagline" class="m-0 mt-1 text-lg leading-6 opacity-75 xs:(text-2xl)">
+          <p v-if="hasTagline" class="m-0 mt-1 text-lg opacity-75 leading-6 xs:(text-2xl)">
             {{ tagline }}
           </p>
-          <div class="mt-8 flex space-x-6">
+
+          <div class="flex space-x-4 mt-8 justify-center">
             <a v-if="hasAction" :href="data.actionLink" class="link-btn">
               {{ data.actionText }}
             </a>
@@ -27,7 +28,7 @@
           </div>
         </div>
       </div>
-      <a class="bg-primary bg-opacity-10 font-bold px-8 py-4 block rounded" href="/posts/v30.html">
+      <a class="bg-primary rounded font-bold bg-opacity-10 text-center py-4 px-8 block" href="/posts/v30.html">
         🎉 v3.0 is now in Beta with a bunch of exciting new features!
       </a>
     </div>
@@ -69,7 +70,7 @@ const hasAltAction = computed(
 }
 .link-btn {
   @apply rounded-lg
-    inline-block px-2.5 py-2 md:(px-4 py-2.5)
+    inline-block px-4 py-2
     text-base md:text-lg text-white no-underline
     bg-$c-brand border-2px border-$c-brand transition-colors
     xs:(text-xl px-5 py-2.8)
