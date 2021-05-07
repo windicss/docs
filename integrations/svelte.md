@@ -29,28 +29,6 @@ Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuratio
 
 Add <kbd>[svelte-windicss-preprocess]</kbd> to your bundler configuration.
 
-### Svelte Kit (As of 1.0.0-next.100)
-You should only need to install the vite plugin, not the svelte-preprocess plugin - (`npm i -D vite-plugin-windicss`). Then add the plugin to your svelte config. Don't forget to add `import "virtual:windi.css"` to the top of your $layout.svelte!
-
-```
-//svelte.config.js
-import preprocess from 'svelte-preprocess'
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	preprocess: preprocess(),
-	kit: {
-		target: '#svelte',
-		vite: () => ({
-				plugins: [
-				WindiCSS.default()
-			],
-		})
-	}
-};
-export default config;
-```
-
 ### Vanilla Svelte
 
 ```js
@@ -72,6 +50,40 @@ export default {
   ],
   // ...
 }
+```
+
+### Svelte Kit (As of 1.0.0-next.100)
+Svelte Kit uses vite as a bundler, therefore we suggest to use our vite plugin (no need to install `svelte-windicc-preprocess`).
+Install plugin: `npm i -D vite-plugin-windicss`
+Add the plugin to your svelte config:
+```
+//svelte.config.js
+import preprocess from 'svelte-preprocess'
+import WindiCSS from 'vite-plugin-windicss'
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	preprocess: preprocess(),
+	kit: {
+		target: '#svelte',
+		vite: () => ({
+				plugins: [
+				WindiCSS.default()
+			],
+		})
+	}
+};
+export default config;
+```
+Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
+```
+//$layout.svelte
+<script>
+	import "virtual:windi.css"
+	//if you want to enable windi devtools
+	import { browser } from "$app/env";
+	if (browser) import("virtual:windi-devtools")
+	...rest of $layout.svelte
 ```
 
 ### Snowpack Svelte
