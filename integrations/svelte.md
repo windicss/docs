@@ -83,12 +83,12 @@ Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
 ```html
 <!-- $layout.svelte -->
 <script>
-	import "virtual:windi.css"
+  import "virtual:windi.css"
 
-	// if you want to enable windi devtools
-	import { browser } from "$app/env";
-	if (browser) import("virtual:windi-devtools")
-	// ...
+  // if you want to enable windi devtools
+  import { browser } from "$app/env";
+  if (browser) import("virtual:windi-devtools")
+  // ...
 </script>
 <!-- ...rest of $layout.svelte -->
 ```
