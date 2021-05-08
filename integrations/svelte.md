@@ -52,40 +52,45 @@ export default {
 }
 ```
 
-### Svelte Kit (as of 1.0.0-next.100)
-Svelte Kit uses vite as a bundler, therefore we suggest to use our vite plugin (no need to install `svelte-windicc-preprocess`).
+### SvelteKit (as of 1.0.0-next.100)
+
+SvelteKit uses vite as a bundler, therefore we suggest to use our vite plugin (no need to install `svelte-windicss-preprocess`).
 
 Install plugin with `npm i -D vite-plugin-windicss` and adapt the svelte config:
-```
-//svelte.config.js
+
+```js
+// svelte.config.js
 import preprocess from 'svelte-preprocess'
 import WindiCSS from 'vite-plugin-windicss'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: preprocess(),
-	kit: {
-		target: '#svelte',
-		vite: () => ({
-				plugins: [
-				WindiCSS.default()
-			],
-		})
-	}
-};
-export default config;
+  preprocess: preprocess(),
+  kit: {
+    target: '#svelte',
+    vite: () => ({
+      plugins: [
+        WindiCSS.default(),
+      ],
+    }),
+  },
+}
+export default config
 ```
+
 Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
-```
-//$layout.svelte
+
+```html
+<!-- $layout.svelte -->
 <script>
 	import "virtual:windi.css"
-	//if you want to enable windi devtools
+
+	// if you want to enable windi devtools
 	import { browser } from "$app/env";
 	if (browser) import("virtual:windi-devtools")
-	...
+	// ...
 </script>
-...rest of $layout.svelte
+<!-- ...rest of $layout.svelte -->
 ```
 
 ### Snowpack Svelte
