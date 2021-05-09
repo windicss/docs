@@ -433,6 +433,78 @@ Utilities for controlling whether table borders should collapse or be separated.
 &lt;/div&gt;'
 />
 
+## Table Caption Side
+
+The `caption` utility puts the content of a table's `<caption>` on the specified side. The values are relative to the writing-mode of the table.
+
+<PlaygroundWithVariants
+  variant='top'
+  :variants="['top', 'bottom']"
+  prefix='caption'
+  fixed='dark:text-white opacity-85'
+  nested=true
+  appended='table table-caption text-center table-header-group table-row table-cell table-row-group table-footer-group text-xs border border-emerald-500 bg-emerald-200 p-1 py-2 text-emerald-600 font-medium font-bold'
+  html='&lt;div class="table {class} text-xs"&gt;
+    &lt;div class="table-caption text-center text-emerald-600 py-2 font-bold"&gt;Council budget&lt;/div&gt;
+    &lt;div class="table-header-group bg-emerald-200"&gt;
+        &lt;div class="table-row"&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600 font-medium"&gt;Items&lt;/div&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600 font-medium" scope="col"&gt;Expenditure&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="table-row-group"&gt;
+        &lt;div class="table-row"&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600"&gt;Donuts&lt;/div&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600"&gt;3,000&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="table-row"&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600"&gt;Stationery&lt;/div&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600"&gt;18,000&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="table-footer-group"&gt;
+        &lt;div class="table-row"&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600"&gt;Totals&lt;/div&gt;
+            &lt;div class="table-cell border border-emerald-500 p-1 text-emerald-600"&gt;21,000&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;'
+/>
+
+## Table Empty Cells
+
+The `empty-cells` utility sets whether borders and backgrounds appear around `<table>`cells that have no visible content. A good use case for empty-cells could be a situation where you may not know whether a table will or will not contain empty data points and you decide to hide them. 
+
+<PlaygroundWithVariants
+  variant='visible'
+  :variants="['visible', 'hidden']"
+  prefix='empty-cells'
+  fixed='dark:text-white opacity-85 text-xs'
+  nested=true
+  appended='border-separate text-emerald-600 border border-emerald-500 p-1 font-medium font-bold py-2 text-center'
+  html='&lt;table class="border-separate text-emerald-600 {class}"&gt;
+  &lt;caption class="text-center py-2 font-bold"&gt;Client Info&lt;/caption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th class="border border-emerald-500 p-1 font-medium"&gt;Client Name&lt;/th&gt;
+    	&lt;th class="border border-emerald-500 p-1 font-medium"&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    	&lt;td class="border border-emerald-500 p-1"&gt;&lt;/td&gt;
+    	&lt;td class="border border-emerald-500 p-1"&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="border border-emerald-500 p-1"&gt;Louise Q.&lt;/td&gt;
+      &lt;td class="border border-emerald-500 p-1"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="border border-emerald-500 p-1"&gt;Owen B.&lt;/td&gt;
+      &lt;td class="border border-emerald-500 p-1"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;'
+/>
+
 ## Example Of Table Utilities
 
 Use above utilities to create elements that behave like their respective table elements.
