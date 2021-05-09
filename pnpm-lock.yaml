@@ -39,7 +39,7 @@ specifiers:
   vue: ^3.0.11
   vue-board: ^0.0.5
   vue-demi: ^0.7.5
-  windicss: ^3.0.0-beta.8
+  windicss: ^3.0.0-beta.9
   windicss-analysis: ^0.2.0
 
 dependencies:
@@ -57,7 +57,7 @@ dependencies:
   vue: 3.0.11
   vue-board: 0.0.5_vue@3.0.11
   vue-demi: 0.7.5_vue@3.0.11
-  windicss: 3.0.0-beta.8
+  windicss: 3.0.0-beta.9
 
 devDependencies:
   '@antfu/eslint-config': 0.6.4_eslint@7.25.0+typescript@4.2.4
@@ -4669,8 +4669,8 @@ packages:
     hasBin: true
     dev: true
 
-  /windicss/3.0.0-beta.8:
-    resolution: {integrity: sha512-I3fDjdqw9e6eYupEnb0brWwoGCxa1dEqykV14X5Zi2hhCQfpBUMs5SdIFR54lQGAoahQq4xx/JRAF1QJkJUv5Q==}
+  /windicss/3.0.0-beta.9:
+    resolution: {integrity: sha512-sL5Cx9RwFnD7NOWCsdcr4a8NFdWA6bD8L7Np1qF6U8chM04mTm4JyhjupbnP+YfRSU75ZEazgIEFa0Dx1p5QbA==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: false
