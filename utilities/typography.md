@@ -352,68 +352,6 @@ export default {
 
 </Customizing>
 
-## Text Opacity
-
-Utilities for controlling the opacity of an element's text color.
-
-<PlaygroundWithVariants
-  variant='50'
-  type='opacity'
-  prefix='text-opacity'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='text-black'
-  nested=true
-  html="&lt;p class='text-black {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
-/>
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    extend: {
-      textOpacity: {
-        10: '0.1',
-        20: '0.2',
-        95: '0.95',
-      },
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Text Shadow
-
-Utilities for controlling the shadow of a text element.
-
-<PlaygroundWithVariants
-  variant='lg'
-  :variants="['', 'sm', 'md', 'lg', 'xl', 'none']"
-  prefix='text-shadow'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  html='The quick brown fox jumps over the lazy dog'
-/>
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    textShadow: {
-      'DEFAULT': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)', // If a DEFAULT shadow is provided, it will be used for the non-suffixed shadow utility.
-      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
-    },
-  },
-}
-```
-
-</Customizing>
-
 ## Text Decoration
 
 Utilities for controlling the decoration of text.
@@ -553,6 +491,161 @@ export default {
 
 </Customizing>
 
+## Text Indent
+
+Utilities for controlling the indentation of text.
+
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '1.8rem', '2em', '1/2', '-xs', '-1em']"
+  prefix='indent'
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      textIndent: {
+        '4xl': '5rem',
+        '5xl': '6rem',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Text Opacity
+
+Utilities for controlling the opacity of an element's text color.
+
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='text-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='text-black'
+  nested=true
+  html="&lt;p class='text-black {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      textOpacity: {
+        10: '0.1',
+        20: '0.2',
+        95: '0.95',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Text Shadow
+
+Utilities for controlling the shadow of a text element.
+
+<PlaygroundWithVariants
+  variant='lg'
+  :variants="['', 'sm', 'md', 'lg', 'xl', 'none']"
+  prefix='text-shadow'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  html='The quick brown fox jumps over the lazy dog'
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    textShadow: {
+      'DEFAULT': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)', // If a DEFAULT shadow is provided, it will be used for the non-suffixed shadow utility.
+      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Text Stroke
+
+Utilities for controlling the stroke of a text element.
+
+### Text Stroke Width
+
+Utilities for controlling the width of text stroke.
+
+<PlaygroundWithVariants
+  variant='md'
+  :variants="['', 'none', 'sm', 'md', 'lg', '0', '1', '2', '3', '4', '5', '6', '7', '8', '0.1rem', '3px', '0.3em']"
+  prefix='text-stroke'
+  fixed='p-2 text-transparent opacity-85 overflow-hidden text-stroke-teal-500 text-4xl'
+  html="Hello World"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      textStrokeWidth: {
+        'xl': '6',
+        '2xl': '8',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+### Text Stroke Color
+
+Utilities for controlling the color of text stroke.
+
+<PlaygroundWithVariants
+  variant='blue-500'
+  type='color'
+  prefix='text-stroke'
+  fixed='p-2 text-transparent opacity-85 overflow-hidden text-4xl text-stroke'
+  html="Hello World"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    textStrokeColor: {
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    },
+  },
+}
+```
+
+</Customizing>
+
 ## Text Transform
 
 Utilities for controlling the transformation of text.
@@ -626,4 +719,28 @@ Utilities for controlling word breaks in an element.
   nested=true
   html="&lt;div class='w-4/5 mx-auto bg-blue-200'&gt;&lt;p class='w-full {class}'&gt;The quick brown fox jumps over the lazy dog
   abcdefghijklmnopqrstuvw&lt;/&gt;&lt;/div&gt;"
+/>
+
+## Writing Mode
+
+The `writing-mode` utility sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (html element for HTML documents).
+
+<PlaygroundWithVariants
+  variant='vertical-right'
+  :variants="['normal', 'vertical-right', 'vertical-left']"
+  prefix='write'
+  fixed='p-2 dark:text-white opacity-85 w-full'
+  html="The quick brown fox jumps over the lazy dog"
+/>
+
+## Writing Orientation
+
+The `writing-orientation` utility sets the orientation of the text characters in a line. It only affects text in vertical mode (when `writing-mode` is not `horizontal-tb`). It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers.
+
+<PlaygroundWithVariants
+  variant='mixed'
+  :variants="['mixed', 'upright', 'sideways']"
+  prefix='write-orient'
+  fixed='p-2 dark:text-white opacity-85 write-vertical-right w-full'
+  html="The quick brown fox jumps over the lazy dog"
 />
