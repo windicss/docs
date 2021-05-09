@@ -74,7 +74,7 @@ export default {
 For Vite setups, we do suggest to use [Vite plugin](/integrations/vite). However, if you need any special features or your setup requires windicss to run as a preprocessor, you can setup it as below.
 :::
 
-```sh
+```bash
 # vite project installation & setup
 npm init @vitejs/app --template svelte vite-svelte-windicss-app
 cd vite-svelte-windicss-app

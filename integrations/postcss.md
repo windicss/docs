@@ -4,7 +4,7 @@
 
 <PackageInfo name="postcss-windicss" author="antfu" />
 
-> 🧪 Expiremental.
+> 🧪 Experimental.
 
 > ⚠️ Using this package is **discouraged** as there are some limitations of PostCSS's API. Use our [first-class integrations](https://windicss.org/guide/installation.html) for each dedicated framework/build tool to get **the best develop experience and performance**. This plugin should be your last option to integrate Windi CSS.
 

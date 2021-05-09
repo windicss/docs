@@ -484,6 +484,8 @@ export default {
 
 ## Text Opacity
 
+Utilities for controlling the opacity of an element's text color.
+
 <PlaygroundWithVariants
   variant='50'
   type='opacity'
@@ -523,6 +525,78 @@ Utilities for controlling the decoration of text.
   fixed='p-2 dark:text-white opacity-85'
   html="The quick brown fox jumps over the lazy dog"
 />
+
+## Text Decoration Color
+
+Utilities for controlling the color of text decoration.
+
+<PlaygroundWithVariants
+  variant='green-500'
+  type='color'
+  prefix='underline'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden underline underline-2'
+  html="The quick brown fox jumps over the lazy dog"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    textDecorationColor: {
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Text Decoration Opacity
+
+Utilities for controlling the opacity of an element's decoration color.
+
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='underline-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='text-black underline underline-teal-600 underline-2'
+  nested=true
+  html="&lt;p class='text-black underline underline-2 underline-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      textOpacity: {
+        10: '0.1',
+        20: '0.2',
+        95: '0.95',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Text Decoration Length
+
+Utilities for controlling the length of text decoration.
+
+
+## Text Decoration Offset
+
+Utilities for controlling the offset of text decoration.
+
 
 ## Text Transform
 
