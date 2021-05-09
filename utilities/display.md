@@ -130,6 +130,23 @@ Utilities for controlling the visibility of an element. The `visibility` CSS pro
 &lt;/div&gt;'
 />
 
+## Backface Visibility
+
+The `backface` utility sets whether the back face of an element is visible when turned towards the user.
+
+<PlaygroundWithVariants
+  variant='hidden'
+  :variants="['visible', 'hidden']"
+  prefix='backface'
+  nested=true
+  fixed='!block'
+  appended='w-34 h-42 transform hover:rotate-y-180 rotate-y-180 relative preserve-3d transition-all duration-500 absolute z-1 z-2 rounded-lg'
+  html='&lt;div class="transform hover:rotate-y-180 relative preserve-3d transition-all duration-500"&gt;
+    &lt;img src="/assets/card-front.jpg" class="rounded-lg w-34 h-42 absolute {class} z-1" alt="Card Front" /&gt;            
+    &lt;img src="/assets/card-back.jpg" class="rounded-lg w-34 h-42 absolute {class} z-2 transform rotate-y-180" alt="Card Back" /&gt;
+&lt;/div&gt;'
+/>
+
 ## List Item
 
 The `list-item` utility generates a `::marker` pseudo-element with the content specified by its [list-style](/utilities/typography.html#list-style-type) properties (for example a bullet point) together with a principal box of the specified type for its own contents.

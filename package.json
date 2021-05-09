@@ -26,7 +26,7 @@
     "vue": "^3.0.11",
     "vue-board": "^0.0.5",
     "vue-demi": "^0.7.5",
-    "windicss": "^3.0.0-beta.7"
+    "windicss": "^3.0.0-beta.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.4",
