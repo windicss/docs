@@ -267,7 +267,7 @@ Utilities for controlling the bullet/number style of a list.
 
 <PlaygroundWithVariants
   variant='disc'
-  :variants="['none', 'disc', 'decimal']"
+  :variants="['none', 'disc', 'circle', 'square', 'decimal', 'zero-decimal', 'greek', 'roman', 'upper-roman', 'alpha', 'upper-alpha']"
   prefix='list'
   fixed='p-2 dark:text-white opacity-85'
   nested=true
@@ -515,6 +515,35 @@ export default {
 
 </Customizing>
 
+## Text Shadow
+
+Utilities for controlling the shadow of a text element.
+
+<PlaygroundWithVariants
+  variant='lg'
+  :variants="['', 'sm', 'md', 'lg', 'xl', 'none']"
+  prefix='text-shadow'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  html='The quick brown fox jumps over the lazy dog'
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    textShadow: {
+      'DEFAULT': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)', // If a DEFAULT shadow is provided, it will be used for the non-suffixed shadow utility.
+      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+    },
+  },
+}
+```
+
+</Customizing>
+
 ## Text Decoration
 
 Utilities for controlling the decoration of text.
@@ -576,7 +605,7 @@ Utilities for controlling the opacity of an element's decoration color.
 export default {
   theme: {
     extend: {
-      textOpacity: {
+      textDecorationOpacity: {
         10: '0.1',
         20: '0.2',
         95: '0.95',
@@ -592,11 +621,63 @@ export default {
 
 Utilities for controlling the length of text decoration.
 
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', '0', '1', '2', '3', '4', '5', '6', '7', '8', '0.1rem', '3px', '0.3em']"
+  prefix='underline'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='text-black underline underline-teal-600'
+  nested=true
+  html="&lt;p class='text-black underline underline-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      textDecorationLength: {
+        sm: '1px',
+        md: '2px',
+        lg: '4px',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
 
 ## Text Decoration Offset
 
 Utilities for controlling the offset of text decoration.
 
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', '1', '2', '3', '4', '5', '6', '7', '8', '0.6rem', '8.5px', '0.5em']"
+  prefix='underline-offset'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden underline underline-2'
+  html="The quick brown fox jumps over the lazy dog"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    textDecorationOffset: {
+      sm: '1px',
+      md: '2px',
+      lg: '4px',
+    },
+  },
+}
+```
+
+</Customizing>
 
 ## Text Transform
 
@@ -641,6 +722,20 @@ Utilities for controlling the vertical alignment of an inline or table-cell box.
   &lt;/div&gt;'
 />
 
+## Hyphens
+
+The hyphens utilities specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
+
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['none', 'manual', 'auto']"
+  prefix='hyphens'
+  fixed='dark:text-white opacity-85 overflow-hidden'
+  appended='border border-blue-300 border-dashed p-2'
+  nested=true
+  html="&lt;p class='{class} border p-2 border-blue-300 border-dashed'&gt;An extra&shy;ordinarily long English word!&lt;/&gt;"
+/>
+
 ## Whitespace
 
 Utilities for controlling an element's white-space property.
@@ -672,3 +767,38 @@ Utilities for controlling word breaks in an element.
   html="&lt;div class='w-4/5 mx-auto bg-blue-200'&gt;&lt;p class='w-full {class}'&gt;The quick brown fox jumps over the lazy dog
   abcdefghijklmnopqrstuvw&lt;/&gt;&lt;/div&gt;"
 />
+
+
+## Tab Size
+
+The tab-size utilities are used to customize the width of tab characters (U+0009).
+
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', '0', '2', '4', '8', '7.5px', '2rem']"
+  fixed='dark:text-white opacity-85 overflow-scroll font-mono text-xs'
+  prefix='tab'
+  nested=true
+  appended='w-full whitespace-pre-wrap'
+  html="&lt;p class='w-full whitespace-pre-wrap {class}'&gt;without tab
+	with 1 tab
+		with 2 tabs
+  &lt;/&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    tabSize: {
+      sm: '2',
+      md: '4',
+      lg: '8',
+    },
+  },
+}
+```
+
+</Customizing>
