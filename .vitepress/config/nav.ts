@@ -93,6 +93,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Interpret vs Compile', link: '/posts/modes' },
       { text: 'Attributify Mode', link: '/posts/attributify' },
       { text: 'Windi Lang Draft', link: '/posts/language' },
+      { text: 'Utilities added in v3.0', link: '/posts/v30-utilities' },
     ],
   },
   {
