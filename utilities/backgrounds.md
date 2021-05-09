@@ -243,9 +243,9 @@ export default {
 
 </Customizing>
 
-## Gradient Color Stops
+## Background Gradient
 
-Utilities for controlling the color stops in background gradients.
+Utilities for controlling background gradients.
 
 ### Gradient From
 

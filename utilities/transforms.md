@@ -1,6 +1,6 @@
 # Transforms
 
-## Transform
+## Transform Type
 
 Utilities for controlling transform behaviour.
 
@@ -48,7 +48,7 @@ export default {
 
 </Customizing>
 
-## Scale
+## Transform Scale
 
 Utilities for scaling elements with transform.
 
@@ -102,7 +102,7 @@ export default {
 
 </Customizing>
 
-## Rotate
+## Transform Rotate
 
 Utilities for rotating elements with transform.
 
@@ -131,11 +131,11 @@ export default {
 
 </Customizing>
 
-## Translate
+## Transform Translate
 
 Utilities for translating elements with transform.
 
-#### Translate X
+### Translate X
 
 <PlaygroundWithVariants
   variant='0'
@@ -147,7 +147,7 @@ Utilities for translating elements with transform.
   html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
 />
 
-#### Translate Y
+### Translate Y
 
 <PlaygroundWithVariants
   variant='0'
@@ -200,11 +200,11 @@ export default {
 
 </Customizing>
 
-## Skew
+## Transform Skew
 
 Utilities for skewing elements with transform.
 
-#### Skew X
+### Skew X
 
 <PlaygroundWithVariants
   variant='45'
@@ -216,7 +216,7 @@ Utilities for skewing elements with transform.
   html='&lt;img src="/assets/logo.svg" class="w-24 h-24 transform {class}"&gt;'
 />
 
-#### Skew Y
+### Skew Y
 
 <PlaygroundWithVariants
   variant='45'

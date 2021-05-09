@@ -14,7 +14,7 @@ Utilities for enabling and disabling filters on an element.
   html='&lt;img src="/assets/logo.png" class="w-24 h-24 {class} !hue-rotate-30"&gt;'
 />
 
-### Blur
+## Filter Blur
 
 <PlaygroundWithVariants
   variant='sm'
@@ -43,7 +43,7 @@ export default {
 
 </Customizing>
 
-### Brightness
+## Filter Brightness
 
 <PlaygroundWithVariants
   variant='100'
@@ -72,7 +72,7 @@ export default {
 
 </Customizing>
 
-### Contrast
+## Filter Contrast
 
 <PlaygroundWithVariants
   variant='100'
@@ -101,7 +101,7 @@ export default {
 
 </Customizing>
 
-### Drop Shadow
+## Filter Drop Shadow
 
 <PlaygroundWithVariants
   variant='md'
@@ -129,7 +129,7 @@ export default {
 
 </Customizing>
 
-### Grayscale
+## Filter Grayscale
 
 <PlaygroundWithVariants
   variant=''
@@ -157,7 +157,7 @@ export default {
 
 </Customizing>
 
-### Hue Rotate
+## Filter Hue Rotate
 
 <PlaygroundWithVariants
   variant='45'
@@ -186,7 +186,7 @@ export default {
 
 </Customizing>
 
-### Invert
+## Filter Invert
 
 <PlaygroundWithVariants
   variant=''
@@ -214,7 +214,7 @@ export default {
 
 </Customizing>
 
-### Saturate
+## Filter Saturate
 
 <PlaygroundWithVariants
   variant='0'
@@ -243,7 +243,7 @@ export default {
 
 </Customizing>
 
-### Sepia
+## Filter Sepia
 
 <PlaygroundWithVariants
   variant=''
@@ -292,7 +292,7 @@ Utilities for enabling and disabling backdrop filters on an element.
 
 
 
-### Backdrop Blur
+## Backdrop Blur
 
 <PlaygroundWithVariants
   variant='sm'
@@ -326,7 +326,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Brightness
+## Backdrop Brightness
 
 <PlaygroundWithVariants
   variant='100'
@@ -360,7 +360,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Contrast
+## Backdrop Contrast
 
 <PlaygroundWithVariants
   variant='100'
@@ -394,7 +394,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Grayscale
+## Backdrop Grayscale
 
 <PlaygroundWithVariants
   variant=''
@@ -427,7 +427,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Hue Rotate
+## Backdrop Hue Rotate
 
 <PlaygroundWithVariants
   variant='45'
@@ -461,7 +461,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Invert
+## Backdrop Invert
 
 <PlaygroundWithVariants
   variant=''
@@ -494,7 +494,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Opacity
+## Backdrop Opacity
 
 <PlaygroundWithVariants
   variant='50'
@@ -528,7 +528,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Saturate
+## Backdrop Saturate
 
 <PlaygroundWithVariants
   variant='0'
@@ -562,7 +562,7 @@ export default {
 
 </Customizing>
 
-### Backdrop Sepia
+## Backdrop Sepia
 
 <PlaygroundWithVariants
   variant=''

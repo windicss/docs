@@ -199,6 +199,20 @@ Utilities for controlling the variant of numbers.
   html="0123456789&lt;br&gt;1/2 3/4&lt;br&gt;1st 2nd"
 />
 
+## Hyphens
+
+The hyphens utilities specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
+
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['none', 'manual', 'auto']"
+  prefix='hyphens'
+  fixed='dark:text-white opacity-85 overflow-hidden'
+  appended='border border-blue-300 border-dashed p-2'
+  nested=true
+  html="&lt;p class='{class} border p-2 border-blue-300 border-dashed'&gt;An extra&shy;ordinarily long English word!&lt;/&gt;"
+/>
+
 ## Letter Spacing
 
 Utilities for controlling the tracking (letter spacing) of an element.
@@ -261,21 +275,21 @@ export default {
 
 </Customizing>
 
-## List Style Type
+## Tab Size
 
-Utilities for controlling the bullet/number style of a list.
+The tab-size utilities are used to customize the width of tab characters (U+0009).
 
 <PlaygroundWithVariants
-  variant='disc'
-  :variants="['none', 'disc', 'circle', 'square', 'decimal', 'zero-decimal', 'greek', 'roman', 'upper-roman', 'alpha', 'upper-alpha']"
-  prefix='list'
-  fixed='p-2 dark:text-white opacity-85'
+  variant=''
+  :variants="['', '0', '2', '4', '8', '7.5px', '2rem']"
+  fixed='dark:text-white opacity-85 overflow-scroll font-mono text-xs'
+  prefix='tab'
   nested=true
-  html="&lt;ul class='{class}'&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-&lt;/ul&gt;"
+  appended='w-full whitespace-pre-wrap'
+  html="&lt;p class='w-full whitespace-pre-wrap {class}'&gt;without tab
+	with 1 tab
+		with 2 tabs
+  &lt;/&gt;"
 />
 
 <Customizing>
@@ -284,154 +298,10 @@ Utilities for controlling the bullet/number style of a list.
 // windi.config.js
 export default {
   theme: {
-    listStyleType: {
-      none: 'none',
-      disc: 'disc',
-      decimal: 'decimal',
-      square: 'square',
-      roman: 'upper-roman',
-    },
-  },
-}
-```
-
-</Customizing>
-
-## List Style Position
-
-Utilities for controlling the position of bullets/numbers in lists.
-
-<PlaygroundWithVariants
-  variant='inside'
-  :variants="['inside', 'outside']"
-  prefix='list'
-  fixed='p-2 dark:text-white opacity-85'
-  nested=true
-  appended='bg-blue-200 bg-blue-300'
-  html="&lt;ul class='{class} bg-blue-300'&gt;
-  &lt;li class='bg-blue-200'&gt;One&lt;/li&gt;
-  &lt;li class='bg-blue-200'&gt;Two&lt;/li&gt;
-  &lt;li class='bg-blue-200'&gt;Three&lt;/li&gt;
-&lt;/ul&gt;"
-/>
-
-## Placeholder Color
-
-Utilities for controlling the color of placeholder text.
-
-<PlaygroundWithVariants
-  variant='gray-500'
-  type='color'
-  prefix='placeholder'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400'
-  html="&lt;input class='{class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Placeholder'&gt;"
-/>
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    placeholderColor: {
-      primary: '#3490dc',
-      secondary: '#ffed4a',
-      danger: '#e3342f',
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Placeholder Opacity
-
-Utilities for controlling the opacity of an element's placeholder color.
-
-<PlaygroundWithVariants
-  variant='50'
-  type='opacity'
-  prefix='placeholder-opacity'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400 placeholder-black'
-  html="&lt;input class='placeholder-black {class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Placeholder'&gt;"
-/>
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    extend: {
-      placeholderOpacity: {
-        light: '0.1',
-      },
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Caret Color
-
-Utilities for controlling the color of insertion text.
-
-<PlaygroundWithVariants
-  variant='gray-500'
-  type='color'
-  prefix='caret'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400'
-  html="&lt;input class='{class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Focus Me'&gt;"
-/>
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    caretColor: {
-      primary: '#3490dc',
-      secondary: '#ffed4a',
-      danger: '#e3342f',
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Caret Opacity
-
-Utilities for controlling the opacity of an element's caret color.
-
-<PlaygroundWithVariants
-  variant='50'
-  type='opacity'
-  prefix='caret-opacity'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400 caret-blue-500'
-  html="&lt;input class='caret-blue-500 {class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Focus Me'&gt;"
-/>
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    extend: {
-      caretOpacity: {
-        light: '0.1',
-      },
+    tabSize: {
+      sm: '2',
+      md: '4',
+      lg: '8',
     },
   },
 }
@@ -548,6 +418,10 @@ export default {
 
 Utilities for controlling the decoration of text.
 
+### Text Decoration Type
+
+Utilities for controlling the type of text decoration.
+
 <PlaygroundWithVariants
   variant='underline'
   :variants="['underline', 'line-through', 'no-underline']"
@@ -555,7 +429,7 @@ Utilities for controlling the decoration of text.
   html="The quick brown fox jumps over the lazy dog"
 />
 
-## Text Decoration Color
+### Text Decoration Color
 
 Utilities for controlling the color of text decoration.
 
@@ -584,7 +458,7 @@ export default {
 
 </Customizing>
 
-## Text Decoration Opacity
+### Text Decoration Opacity
 
 Utilities for controlling the opacity of an element's decoration color.
 
@@ -617,7 +491,7 @@ export default {
 
 </Customizing>
 
-## Text Decoration Length
+### Text Decoration Length
 
 Utilities for controlling the length of text decoration.
 
@@ -650,7 +524,7 @@ export default {
 
 </Customizing>
 
-## Text Decoration Offset
+### Text Decoration Offset
 
 Utilities for controlling the offset of text decoration.
 
@@ -722,20 +596,6 @@ Utilities for controlling the vertical alignment of an inline or table-cell box.
   &lt;/div&gt;'
 />
 
-## Hyphens
-
-The hyphens utilities specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
-
-<PlaygroundWithVariants
-  variant='auto'
-  :variants="['none', 'manual', 'auto']"
-  prefix='hyphens'
-  fixed='dark:text-white opacity-85 overflow-hidden'
-  appended='border border-blue-300 border-dashed p-2'
-  nested=true
-  html="&lt;p class='{class} border p-2 border-blue-300 border-dashed'&gt;An extra&shy;ordinarily long English word!&lt;/&gt;"
-/>
-
 ## Whitespace
 
 Utilities for controlling an element's white-space property.
@@ -767,38 +627,3 @@ Utilities for controlling word breaks in an element.
   html="&lt;div class='w-4/5 mx-auto bg-blue-200'&gt;&lt;p class='w-full {class}'&gt;The quick brown fox jumps over the lazy dog
   abcdefghijklmnopqrstuvw&lt;/&gt;&lt;/div&gt;"
 />
-
-
-## Tab Size
-
-The tab-size utilities are used to customize the width of tab characters (U+0009).
-
-<PlaygroundWithVariants
-  variant=''
-  :variants="['', '0', '2', '4', '8', '7.5px', '2rem']"
-  fixed='dark:text-white opacity-85 overflow-scroll font-mono text-xs'
-  prefix='tab'
-  nested=true
-  appended='w-full whitespace-pre-wrap'
-  html="&lt;p class='w-full whitespace-pre-wrap {class}'&gt;without tab
-	with 1 tab
-		with 2 tabs
-  &lt;/&gt;"
-/>
-
-<Customizing>
-
-```js
-// windi.config.js
-export default {
-  theme: {
-    tabSize: {
-      sm: '2',
-      md: '4',
-      lg: '8',
-    },
-  },
-}
-```
-
-</Customizing>

@@ -73,6 +73,85 @@ Utilities for suppressing native form control styling.
 &lt;/select&gt;'
 />
 
+## Box Decoration Break
+
+Utilities for controlling how element fragments should be rendered across multiple lines, columns, or pages.
+
+<PlaygroundWithVariants
+  variant='slice'
+  :variants="['slice', 'clone']"
+  prefix='decoration'
+  fixed='dark:text-white opacity-85 overflow-hidden p-2 h-screen'
+  nested=true
+  appended='text-5xl font-extrabold bg-gradient-to-r from-green-400 to-blue-500 rounded-16px px-4 text-sm text-white'
+  html="
+&lt;div&gt;
+  &lt;span class=&quot;{class} bg-gradient-to-r px-4 from-green-400 to-blue-500 text-sm text-white rounded-16px&quot;&gt;The&lt;br&gt;quick&lt;br&gt;brown fox&lt;br&gt;over the lazy dog&lt;/span&gt;
+&lt;/div&gt;"
+/>
+
+## Caret Color
+
+Utilities for controlling the color of insertion text.
+
+<PlaygroundWithVariants
+  variant='gray-500'
+  type='color'
+  prefix='caret'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400'
+  html="&lt;input class='{class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Focus Me'&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    caretColor: {
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Caret Opacity
+
+Utilities for controlling the opacity of an element's caret color.
+
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='caret-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400 caret-blue-500'
+  html="&lt;input class='caret-blue-500 {class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Focus Me'&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      caretOpacity: {
+        light: '0.1',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
 ## Cursor
 
 Utilities for controlling the cursor style when hovering over an element.
@@ -111,6 +190,60 @@ export default {
 ```
 
 </Customizing>
+
+## List Style Type
+
+Utilities for controlling the bullet/number style of a list.
+
+<PlaygroundWithVariants
+  variant='disc'
+  :variants="['none', 'disc', 'circle', 'square', 'decimal', 'zero-decimal', 'greek', 'roman', 'upper-roman', 'alpha', 'upper-alpha']"
+  prefix='list'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  html="&lt;ul class='{class}'&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+&lt;/ul&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
+    },
+  },
+}
+```
+
+</Customizing>
+
+## List Style Position
+
+Utilities for controlling the position of bullets/numbers in lists.
+
+<PlaygroundWithVariants
+  variant='inside'
+  :variants="['inside', 'outside']"
+  prefix='list'
+  fixed='p-2 dark:text-white opacity-85'
+  nested=true
+  appended='bg-blue-200 bg-blue-300'
+  html="&lt;ul class='{class} bg-blue-300'&gt;
+  &lt;li class='bg-blue-200'&gt;One&lt;/li&gt;
+  &lt;li class='bg-blue-200'&gt;Two&lt;/li&gt;
+  &lt;li class='bg-blue-200'&gt;Three&lt;/li&gt;
+&lt;/ul&gt;"
+/>
 
 ## Outline
 
@@ -188,48 +321,6 @@ export default {
 
 </Customizing>
 
-## Pointer Events
-
-Utilities for controlling whether an element responds to pointer events.
-
-<PlaygroundWithVariants
-  variant='none'
-  :variants="['none', 'auto']"
-  prefix='pointer-events'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='underline text-blue-500'
-  nested=true
-  html='&lt;a href="/" class="underline text-blue-500 {class}"&gt;
-    Click this link to return to the homepage
-  &lt;/a&gt;'
-/>
-
-## Resize
-
-Utilities for controlling how an element can be resized.
-
-<PlaygroundWithVariants
-  variant=''
-  :variants="['', 'y', 'x', 'none']"
-  prefix='resize'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='focus:outline-none border rounded-md m-0 w-30 h-30 bg-blue-300'
-  nested=true
-  html='&lt;textarea class=&quot;{class} focus:outline-none border rounded-md m-0 w-30 h-30 bg-blue-300&quot;&gt;&lt;/textarea&gt;'
-/>
-
-## User Select
-
-Utilities for controlling whether the user can select text in an element.
-
-<PlaygroundWithVariants
-  variant='none'
-  :variants="['none', 'text', 'all', 'auto']"
-  prefix='select'
-  fixed='p-2 dark:text-white opacity-85'
-  html="The quick brown fox jumps over the lazy dog"
-/>
-
 ## Overflow
 
 Utilities for controlling how an element handles content that is too large for the container.
@@ -274,21 +365,108 @@ The value of Pi is
 &lt;/div&gt;'
 />
 
-## Box Decoration Break
+## Placeholder Color
 
-Utilities for controlling how element fragments should be rendered across multiple lines, columns, or pages.
+Utilities for controlling the color of placeholder text.
 
 <PlaygroundWithVariants
-  variant='slice'
-  :variants="['slice', 'clone']"
-  prefix='decoration'
-  fixed='dark:text-white opacity-85 overflow-hidden p-2 h-screen'
+  variant='gray-500'
+  type='color'
+  prefix='placeholder'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='text-5xl font-extrabold bg-gradient-to-r from-green-400 to-blue-500 rounded-16px px-4 text-sm text-white'
-  html="
-&lt;div&gt;
-  &lt;span class=&quot;{class} bg-gradient-to-r px-4 from-green-400 to-blue-500 text-sm text-white rounded-16px&quot;&gt;The&lt;br&gt;quick&lt;br&gt;brown fox&lt;br&gt;over the lazy dog&lt;/span&gt;
-&lt;/div&gt;"
+  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400'
+  html="&lt;input class='{class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Placeholder'&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    placeholderColor: {
+      primary: '#3490dc',
+      secondary: '#ffed4a',
+      danger: '#e3342f',
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Placeholder Opacity
+
+Utilities for controlling the opacity of an element's placeholder color.
+
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='placeholder-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='bg-gray-100 py-2 rounded px-4 w-full border border-gray-400 placeholder-black'
+  html="&lt;input class='placeholder-black {class} bg-gray-100 border border-gray-400 py-2 rounded px-4 w-full' placeholder='Placeholder'&gt;"
+/>
+
+<Customizing>
+
+```js
+// windi.config.js
+export default {
+  theme: {
+    extend: {
+      placeholderOpacity: {
+        light: '0.1',
+      },
+    },
+  },
+}
+```
+
+</Customizing>
+
+## Pointer Events
+
+Utilities for controlling whether an element responds to pointer events.
+
+<PlaygroundWithVariants
+  variant='none'
+  :variants="['none', 'auto']"
+  prefix='pointer-events'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='underline text-blue-500'
+  nested=true
+  html='&lt;a href="/" class="underline text-blue-500 {class}"&gt;
+    Click this link to return to the homepage
+  &lt;/a&gt;'
+/>
+
+## Resize
+
+Utilities for controlling how an element can be resized.
+
+<PlaygroundWithVariants
+  variant=''
+  :variants="['', 'y', 'x', 'none']"
+  prefix='resize'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='focus:outline-none border rounded-md m-0 w-30 h-30 bg-blue-300'
+  nested=true
+  html='&lt;textarea class=&quot;{class} focus:outline-none border rounded-md m-0 w-30 h-30 bg-blue-300&quot;&gt;&lt;/textarea&gt;'
+/>
+
+## User Select
+
+Utilities for controlling whether the user can select text in an element.
+
+<PlaygroundWithVariants
+  variant='none'
+  :variants="['none', 'text', 'all', 'auto']"
+  prefix='select'
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
 />
 
 ## Screen Readers Access
