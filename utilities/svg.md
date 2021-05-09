@@ -1,12 +1,12 @@
 # SVG
 
-## Fill
+## Fill Color
 
 Utilities for styling the fill of SVG elements.
 
 <PlaygroundWithVariants
   variant='current'
-  type='color'
+  :variants="['none', 'transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
   prefix='fill'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
@@ -30,13 +30,13 @@ export default {
 
 </Customizing>
 
-## Stroke
+## Stroke Color
 
 Utilities for styling the stroke of SVG elements.
 
 <PlaygroundWithVariants
   variant='current'
-  type='color'
+  :variants="['none', 'transparent', 'current', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
   prefix='stroke'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
@@ -60,6 +60,74 @@ export default {
 ```
 
 </Customizing>
+
+## Stroke DashArray
+
+The `stroke-dash` utility is a presentation utility defining the pattern of dashes and gaps used to paint the outline of the shape;
+
+<PlaygroundWithVariants
+  variant='2'
+  :variants="['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '100' ]"
+  prefix='stroke-dash'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='stroke-blue-600 fill-transparent stroke-6'
+  html='&lt;svg class="fill-transparent stroke-6 stroke-blue-600 {class}" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;circle cx="60" cy="60" r="50"&gt;&lt;/circle&gt;
+  &lt;/svg&gt;'
+/>
+
+## Stroke DashOffset
+
+The `stroke-offset` utility is a presentation utility defining an offset on the rendering of the associated dash array.
+
+<PlaygroundWithVariants
+  variant='2'
+  :variants="['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '50', '60', '70', '80', '90', '100']"
+  prefix='stroke-offset'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='stroke-blue-600 fill-transparent stroke-6 stroke-dash-50'
+  html='&lt;svg class="fill-transparent stroke-6 stroke-blue-600 stroke-dash-50 {class}" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;circle cx="60" cy="60" r="50"&gt;&lt;/circle&gt;
+  &lt;/svg&gt;'
+/>
+
+## Stroke LineCap
+
+The `stroke-cap` utility is a presentation utility defining the shape to be used at the end of open subpaths when they are stroked.
+
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'square', 'round']"
+  prefix='stroke-cap'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='stroke-blue-600'
+  html='&lt;svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"&gt;
+     &lt;g&gt;
+        &lt;path class="stroke-blue-600 {class}" id="svg_arcs" d="M46.39845375127366,241.5329820183668 L194.23880503787478,39.2996083282315 C194.93585864152854,40.62325596571734 152.99423462673445,215.53287338109538 289.2000307318228,267.53302990999157" opacity="1" stroke-width="30" fill="#fff"&gt;&lt;/path&gt;
+     &lt;/g&gt;
+    &lt;/svg&gt;'
+/>
+
+## Stroke LineJoin
+
+The `stroke-join` utility is a presentation utility defining the shape to be used at the corners of paths when they are stroked.
+
+<PlaygroundWithVariants
+  variant='auto'
+  :variants="['auto', 'bevel', 'round']"
+  prefix='stroke-join'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  nested=true
+  appended='stroke-blue-600'
+  html='&lt;svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"&gt;
+     &lt;g&gt;
+        &lt;path class="stroke-blue-600 {class}" id="svg_arcs" d="M46.39845375127366,241.5329820183668 L194.23880503787478,39.2996083282315 C194.93585864152854,40.62325596571734 152.99423462673445,215.53287338109538 289.2000307318228,267.53302990999157" opacity="1" stroke-width="30" fill="#fff"&gt;&lt;/path&gt;
+     &lt;/g&gt;
+    &lt;/svg&gt;'
+/>
 
 ## Stroke Width
 
