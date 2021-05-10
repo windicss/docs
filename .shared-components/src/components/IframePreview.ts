@@ -35,6 +35,7 @@ export default defineComponent({
         container.value?.removeChild(sandbox)
 
       sandbox = document.createElement('iframe')
+      sandbox.setAttribute('title', 'Windi CSS Playground')
       sandbox.setAttribute('sandbox', [
         'allow-forms',
         'allow-modals',
