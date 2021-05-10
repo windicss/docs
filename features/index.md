@@ -105,9 +105,3 @@ Tailwind-liked `@apply`, `@screen` directives are fully supported.
 ```
 
 <LearnMore to="/features/directives" />
-
-### Visual Analyzer
-
-We provided a visual analyzer for you to have an overview of your utility usage and design system.
-
-<LearnMore to="/features/analyzer" />

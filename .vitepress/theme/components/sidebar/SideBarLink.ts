@@ -3,6 +3,7 @@ import { useRoute, useSiteData } from 'vitepress'
 import { Header } from '../../types/shared'
 import { DefaultTheme } from '../../config'
 import { joinUrl, isActive } from '../../utils'
+import Logo from '../logos/Logo.vue'
 
 interface HeaderWithChildren extends Header {
   children?: Header[]
@@ -14,21 +15,32 @@ export const SideBarLink: FunctionalComponent<{
   const route = useRoute()
   const site = useSiteData()
 
-  const headers = route.data.headers
+  const headers = route.data?.headers
   const text = props.item.text
+  const logo = props.item.logo
   const link = resolveLink(site.value.base, props.item.link)
   const children = (props.item as DefaultTheme.SideBarGroup).children
   const active = isActive(route, props.item.link)
   const childItems = createChildren(active, children, headers)
 
+  const linkChildren = []
+  if (logo) {
+    linkChildren.push(
+      h(Logo, {
+        name: logo,
+        class: 'inline-block ml-2',
+      }),
+    )
+  }
   return h('li', { class: 'sidebar-link' }, [
     h(
       link ? 'a' : 'p',
       {
-        class: { 'sidebar-link-item': true, active },
+        class: { 'sidebar-link-item': true, active, 'flex': !!logo, 'items-center': !!logo },
         href: link,
       },
       text,
+      linkChildren,
     ),
     childItems,
   ])

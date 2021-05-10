@@ -7,6 +7,16 @@ const repo = useRepo()
 <template>
   <div class="flex items-center border-b-0 ml-3 space-x-4 ml-4">
     <NavBarIcon
+        aria-label="Discord"
+        tag="a"
+        href="https://chat.windicss.org/"
+        rel="noreferrer"
+        target="_blank"
+        class="!hidden !md:block"
+    >
+      <carbon-logo-discord />
+    </NavBarIcon>
+    <NavBarIcon
       v-if="repo"
       aria-label="Github"
       tag="a"

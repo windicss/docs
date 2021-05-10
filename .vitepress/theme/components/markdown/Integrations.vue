@@ -11,7 +11,7 @@ const props = defineProps<{
     <a
       v-for="item of props.items"
       :key="item.link"
-      class="border rounded-lg h-30 text-$c-fg text-center p-4 transition-all w-30 duration-500 bc relative no-underline hover:(shadow-xl) dark:hover:(bg-gray-400 bg-opacity-10)"
+      class="border rounded-lg h-30 text-$c-fg text-center p-4 transition-all w-30 duration-300 bc relative no-underline hover:(shadow-xl) dark:hover:(bg-gray-400 bg-opacity-10)"
       :href="item.link"
     >
       <Logo :name="item.logo" class="m-auto text-5xl block" />

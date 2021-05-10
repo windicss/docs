@@ -58,7 +58,15 @@ const viewData = computed(() => {
           :class="{'w-280px': item.title === 'Special Sponsor' }"
         >
           <logos:nuxt v-if="MemberId === 180034" class="w-full h-full" />
-          <img v-else-if="image" :src="image" :alt="name" class="w-full h-full rounded-full">
+          <img
+            v-else-if="image"
+            :src="image"
+            :alt="name"
+            class="w-full h-full rounded-full"
+            width="80"
+            height="80"
+            loading="lazy"
+          >
           <div v-else class="w-full h-full bg-gray-100 dark:bg-dark-400 flex items-center p-1 rounded-full">
             <span class="text-$c-text text-xs">{{ name }}</span>
           </div>

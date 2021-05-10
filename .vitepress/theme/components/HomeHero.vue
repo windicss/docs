@@ -1,5 +1,5 @@
 <template>
-  <header v-if="showHero" class="home-hero">
+  <header v-if="showHero" class="home-hero bg-brand-50 dark:bg-brand-900">
     <div>
       <div class="space-y-2 pb-12">
         <figure v-if="$frontmatter.heroImage">
@@ -7,15 +7,17 @@
             class="mx-auto max-w-full w-auto max-h-120px block select-none"
             :src="$withBase($frontmatter.heroImage)"
             :alt="$frontmatter.heroAlt"
+            height="120"
+            width="120"
           >
         </figure>
 
         <div class="text-center">
-          <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0">
+          <h1 v-if="hasHeroText" id="main-title" class="text-3xl leading-10 xs:(text-5xl leading-16) mt-0 mb-4">
             {{ heroText }}
           </h1>
-          <p v-if="hasTagline" class="m-0 mt-1 text-lg opacity-75 leading-6 xs:(text-2xl)">
-            {{ tagline }}
+          <p class="m-0 mt-1 text-lg opacity-75 leading-6 xs:(text-2xl)">
+            🍃 Next generation utility-first CSS framework.
           </p>
 
           <div class="flex space-x-4 mt-8 justify-center">
@@ -28,7 +30,7 @@
           </div>
         </div>
       </div>
-      <a class="bg-primary rounded font-bold bg-opacity-10 text-center py-4 px-8 block" href="/posts/v30.html">
+      <a class="bg-brand-100 border-2 border-brand-200 text-brand-500 rounded-lg font-bold shadow-sm text-center py-4 px-8 block transition hover:(text-white bg-brand-300 no-underline shadow-xl) " href="/posts/v30.html">
         🎉 v3.0 is now in Beta with a bunch of exciting new features!
       </a>
     </div>
@@ -72,11 +74,11 @@ const hasAltAction = computed(
   @apply rounded-lg
     inline-block px-4 py-2
     text-base md:text-lg text-white no-underline
-    bg-$c-brand border-2px border-$c-brand transition-colors
+    bg-brand-500 border-2px border-brand-500 transition-colors
     xs:(text-xl px-5 py-2.8)
-    hover:(bg-$c-brand-light border-$c-brand-light);
+    hover:(bg-brand-700 border-brand-700);
 }
 .link-btn.alt {
-  @apply bg-transparent text-primary hover:text-primary-light;
+  @apply bg-transparent text-brand-500 hover:(border-brand-700 text-brand-700);
 }
 </style>

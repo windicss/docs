@@ -8,7 +8,7 @@ export function useNextAndPrevLinks() {
   const page = usePageData()
 
   const path = computed(() => {
-    return removeExtension(ensureStartingSlash(page.value.relativePath))
+    return removeExtension(ensureStartingSlash(page.value?.relativePath))
   })
 
   const candidates = computed(() => {

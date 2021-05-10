@@ -16,7 +16,7 @@ heroAlt: Windi CSS logo
 
 features:
   - title: On-demand
-    details: Genreate CSS only for utilities you use. With instant hot reload and minimal reproduction size.
+    details: Generate CSS only for utilities you use. With instant hot reload and minimal reproduction size.
   - title: First-class Integrations
     details: Provides first-class integrations and best DX for the tools you love. Including Vite, Webpack, Nuxt, Svelte and more!
   - title: Auto-utilities

@@ -61,16 +61,18 @@ const theme = computed(() => siteData.value.themeConfig)
 // const page = usePageData()
 
 // home
-const enableHome = computed(() => !!route.data.frontmatter.home)
+const enableHome = computed(() => !!route.data?.frontmatter?.home)
 
 // playground
-const playground = computed(() => !!route.data.frontmatter.playground)
+const playground = computed(() => !!route.data?.frontmatter?.playground)
 const headersSidebar = computed(() => route.path.startsWith('/utilities'))
 
 // navbar
 const showNavbar = computed(() => {
   const { themeConfig } = siteRouteData.value
-  const { frontmatter } = route.data
+  if (!route?.data?.frontmatter)
+    return true
+  const frontmatter = route.data.frontmatter
   if (frontmatter.navbar === false || themeConfig.navbar === false)
     return false
 
@@ -83,7 +85,10 @@ const showNavbar = computed(() => {
 })
 
 const showSidebar = computed(() => {
-  const { frontmatter } = route.data
+  if (!route?.data?.frontmatter)
+    return false
+
+  const frontmatter = route.data.frontmatter
 
   if (frontmatter.home || frontmatter.playground || frontmatter.sidebar === false)
     return false

@@ -6,7 +6,9 @@
   >
     <img
       v-if="$themeConfig.logo"
-      class="mr-3 align-bottom h-30px"
+      class="mr-2 align-bottom h-30px"
+      height="30"
+      width="30"
       :src="$withBase($themeConfig.logo)"
       alt="Logo"
     >

@@ -1,7 +1,5 @@
-import { resolve } from 'path'
 import { defineConfig } from 'windicss/helpers'
 import filterPlugin from 'windicss/plugin/filters'
-
 /* eslint quote-props: ["error", "consistent"] */
 
 export default defineConfig({
@@ -38,7 +36,19 @@ export default defineConfig({
         md: '720px',
       },
       colors: {
-        primary: '#48B0F1',
+        primary: '#3892ff',
+        brand: {
+          '50': '#f3f8f9',
+          '100': '#ecf7fe',
+          '200': '#afe0f5',
+          '300': '#7cc1e5',
+          '400': '#48b0f1',
+          '500': '#3892ff',
+          '600': '#2d63a7',
+          '700': '#264a85',
+          '800': '#1b325f',
+          '900': '#090d15',
+        },
         bg: 'var(--c-bg)',
         dark: {
           '100': '#4A4A4A',

@@ -105,6 +105,12 @@ export namespace DefaultTheme {
   export interface SideBarLink {
     text: string
     link: string
+    /**
+     * Provide a logo to render inside the text link.
+     *
+     * See components/Logo.vue
+     */
+    logo?: string
   }
 
   export interface SideBarGroup {
