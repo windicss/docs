@@ -29,7 +29,7 @@ export interface PageData {
   title: string
   description: string
   headers: Header[]
-  frontmatter?: Record<string, any>
+  frontmatter: Record<string, any>
   lastUpdated: number
 }
 

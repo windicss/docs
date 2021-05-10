@@ -9,7 +9,7 @@ export function useEditLink() {
   const page = usePageData()
 
   const url = computed(() => {
-    const showEditLink = isNullish(page.value?.frontmatter?.editLink)
+    const showEditLink = isNullish(page.value.frontmatter.editLink)
       ? site.value.themeConfig.editLinks
       : page.value.frontmatter.editLink
 
@@ -20,7 +20,7 @@ export function useEditLink() {
       docsRepo = repo,
     } = site.value.themeConfig
 
-    const relativePath = page.value?.relativePath
+    const { relativePath } = page.value
 
     if (!showEditLink || !relativePath || !repo)
       return null
