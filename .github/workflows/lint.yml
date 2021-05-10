@@ -27,5 +27,4 @@ jobs:
 
       - uses: reviewdog/action-eslint@v1
         with:
-          reporter: eslint-check
           eslint_flags: '--ext .js,.ts,.md,.vue ./'
