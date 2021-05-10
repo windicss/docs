@@ -61,10 +61,10 @@ const theme = computed(() => siteData.value.themeConfig)
 // const page = usePageData()
 
 // home
-const enableHome = computed(() => !!route.data?.frontmatter?.home)
+const enableHome = computed(() => !!route.data.frontmatter?.home)
 
 // playground
-const playground = computed(() => !!route.data?.frontmatter?.playground)
+const playground = computed(() => !!route.data.frontmatter?.playground)
 const headersSidebar = computed(() => route.path.startsWith('/utilities'))
 
 // navbar

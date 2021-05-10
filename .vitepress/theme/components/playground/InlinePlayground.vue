@@ -317,10 +317,10 @@ onMounted(async() => {
 }
 </style>
 
-<style lang="scss" scoped>
-.inline-playground {
-  @apply mt-8 mb-8;
-  @media (min-width: 1600px) {
+<style scoped>
+@media (min-width: 1600px) {
+  .inline-playground {
+    @apply mt-8 mb-8;
     width: 150%;
     margin-left: -25%;
   }

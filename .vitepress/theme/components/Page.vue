@@ -19,7 +19,7 @@ import PageFooter from './PageFooter.vue'
 import NextAndPrevLinks from './NextAndPrevLinks.vue'
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .content {
   padding-bottom: 1.5rem;
 }

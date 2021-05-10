@@ -15,7 +15,7 @@ export const SideBarLink: FunctionalComponent<{
   const route = useRoute()
   const site = useSiteData()
 
-  const headers = route.data?.headers
+  const headers = route.data.headers
   const text = props.item.text
   const logo = props.item.logo
   const link = resolveLink(site.value.base, props.item.link)
