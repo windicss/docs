@@ -8,7 +8,8 @@
 --c-bg-semi: rgba(255,255,255,0.8);
 --c-bg-secondary: #f3f5f7;
 
---c-scrollbar: theme('colors.gray.200');
+--c-scrollbar: theme('colors.gray.100');
+--c-scrollbar-thumb: theme('colors.gray.300');
 
 --c-white: #ffffff;
 --c-black: #000000;
@@ -20,7 +21,7 @@
 --c-text-light-2: #476582;
 --c-text-light-3: #90a4b7;
 
---c-brand: #2d63a7;
+--c-brand: theme('colors.brand.700');
 --c-brand-active: #0e8fc9;
 --c-brand-dark: #0e8fc9;
 --c-brand-light: #25b3f5;
@@ -69,13 +70,14 @@
 }
 
 html.dark {
---c-bg: #090d15;
+--c-bg: theme('colors.brand.900');
 --c-bg-semi: rgba(17,17,17,0.8);
 --c-bg-secondary: #222;
 
---c-brand: #48b0f1;
+--c-brand: theme('colors.brand.400');
 
---c-scrollbar: #333;
+--c-scrollbar: theme('colors.gray.800');
+--c-scrollbar-thumb: theme('colors.gray.600');
 
 --c-text: #f5f7fa;
 --c-text-light: #ffffff;
