@@ -285,7 +285,7 @@ onMounted(async() => {
         </div>
         <div
           v-if="showPreview"
-          class="border-l bc w-10em"
+          class="border-l bc xl:w-20em lg:w-12em"
         >
           <IframePreview v-bind="iframeData" :dark="isDark" />
         </div>
@@ -319,7 +319,7 @@ onMounted(async() => {
 
 <style lang="scss" scoped>
 .inline-playground {
-  @apply mt-5 mb-5;
+  @apply mt-8 mb-8;
   @media (min-width: 1600px) {
     width: 150%;
     margin-left: -25%;

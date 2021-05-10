@@ -1,17 +1,17 @@
 <template>
-<main class="px-4 md:px-8 pb-16 pt-1 container !max-w-780px mx-auto">
-  <slot name="top" />
+  <main class="px-4 md:px-8 pb-16 pt-1 container !max-w-780px mx-auto">
+    <slot name="top" />
 
-  <div class="content">
-    <Content />
-  </div>
+    <div class="content">
+      <Content />
+    </div>
 
-  <PageFooter />
+    <PageFooter />
 
-  <NextAndPrevLinks />
+    <NextAndPrevLinks />
 
-  <slot name="bottom" />
-</main>
+    <slot name="bottom" />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -22,13 +22,6 @@ import NextAndPrevLinks from './NextAndPrevLinks.vue'
 <style scoped lang="scss">
 .content {
   padding-bottom: 1.5rem;
-  ::v-deep(img) {
-    @apply mt-5 mb-5;
-    @media (min-width: 1600px) {
-      max-width: 150%;
-      margin-left: -25%;
-    }
-  }
 }
 
 /* Utility classes should not wrap */

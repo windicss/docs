@@ -148,7 +148,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Rollup', link: '/integrations/rollup', logo: 'rollup' },
         { text: 'Nuxt', link: '/integrations/nuxt', logo: 'nuxt' },
         { text: 'Vue CLI', link: '/integrations/vue-cli', logo: 'vue' },
-        { text: 'Gridsome', link: '/integrations/gridsome', logo: 'gridsome', },
+        { text: 'Gridsome', link: '/integrations/gridsome', logo: 'gridsome' },
         // { text: 'Next.js', link: '/integrations/nextjs' },
         { text: 'Svelte', link: '/integrations/svelte', logo: 'svelte' },
         { text: 'CLI', link: '/integrations/cli', logo: 'windi' },
