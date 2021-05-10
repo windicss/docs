@@ -1,14 +1,23 @@
 *::-webkit-scrollbar {
-  @apply bg-gray-100 w-6px h-6px;
+  transition: background .2s ease-in-out;
+  @apply bg-transparent w-6px h-6px;
 }
 
 *::-webkit-scrollbar-thumb {
   transition: background .2s ease-in-out;
-  @apply bg-gray-300 rounded-full;
+  @apply bg-transparent rounded-full;
 }
 
 *::-webkit-scrollbar-corner {
   @apply bg-transparent;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  @apply bg-$c-scrollbar-thumb;
+}
+
+*:hover::-webkit-scrollbar {
+  @apply bg-$c-scrollbar;
 }
 
 html {
