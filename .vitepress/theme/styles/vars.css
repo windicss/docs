@@ -70,7 +70,7 @@
 }
 
 html.dark {
---c-bg: theme('colors.brand.900');
+--c-bg: #171717;
 --c-bg-semi: rgba(17,17,17,0.8);
 --c-bg-secondary: #222;
 
