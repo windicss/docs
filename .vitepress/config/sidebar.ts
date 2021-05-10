@@ -135,12 +135,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
     {
-      text: 'Tools',
-      children: [
-        { text: 'Visual Analyzer', link: '/tools/analyzer' },
-      ],
-    },
-    {
       text: 'Integrations',
       children: [
         { text: 'Vite', link: '/integrations/vite', logo: 'vite' },
@@ -155,6 +149,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'PostCSS', link: '/integrations/postcss', logo: 'postcss' },
         { text: 'VS Code', link: '/editors/vscode', logo: 'vscode' },
         { text: 'WebStorm', link: '/editors/webstorm', logo: 'webstorm' },
+      ],
+    },
+    {
+      text: 'Tools',
+      children: [
+        { text: 'Visual Analyzer', link: '/tools/analyzer' },
       ],
     },
   ],
