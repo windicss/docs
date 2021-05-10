@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <a class="bg-brand-100 border-2 border-brand-200 text-brand-600 rounded-lg font-bold shadow-sm text-center py-4 px-8 block transition hover:(text-white bg-brand-300 no-underline shadow-xl) " href="/posts/v30.html">
+      <a class="bg-brand-100 border-2 border-brand-200 text-brand-600 rounded-lg font-semibold shadow-sm text-center py-4 px-8 block transition hover:(bg-brand-200 no-underline shadow-xl) " href="/posts/v30.html">
         🎉 v3.0 is now in Beta with a bunch of exciting new features!
       </a>
     </div>
@@ -76,7 +76,7 @@ const hasAltAction = computed(
     text-base md:text-lg text-white no-underline
     bg-brand-600 border-2px border-brand-600 transition-colors
     xs:(text-xl px-5 py-2.8)
-    hover:(bg-brand-700 border-brand-700);
+    hover:(bg-brand-700 border-brand-700 shadow);
 }
 .link-btn.alt {
   @apply bg-transparent text-brand-600 hover:(border-brand-700 text-brand-700);
