@@ -285,7 +285,7 @@ onMounted(async() => {
         </div>
         <div
           v-if="showPreview"
-          class="border-l bc xl:w-20em lg:w-12em"
+          class="border-l bc w-10em"
         >
           <IframePreview v-bind="iframeData" :dark="isDark" />
         </div>
