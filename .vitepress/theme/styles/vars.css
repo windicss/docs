@@ -20,7 +20,7 @@
 --c-text-light-2: #476582;
 --c-text-light-3: #90a4b7;
 
---c-brand: #3892ff;
+--c-brand: #2d63a7;
 --c-brand-active: #0e8fc9;
 --c-brand-dark: #0e8fc9;
 --c-brand-light: #25b3f5;
@@ -72,6 +72,8 @@ html.dark {
 --c-bg: #090d15;
 --c-bg-semi: rgba(17,17,17,0.8);
 --c-bg-secondary: #222;
+
+--c-brand: #48b0f1;
 
 --c-scrollbar: #333;
 

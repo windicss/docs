@@ -1,5 +1,5 @@
 <template>
-  <header v-if="showHero" class="home-hero bg-brand-50 dark:(bg-brand-900)">
+  <header v-if="showHero" class="home-hero bg-brand-50 dark:(bg-brand-850)">
     <div>
       <div class="space-y-2 pb-12">
         <figure v-if="$frontmatter.heroImage">
@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <a class="bg-brand-100 border-2 border-brand-200 text-brand-600 rounded-lg font-semibold shadow-sm text-center py-4 px-8 block transition hover:(bg-brand-200 no-underline shadow-xl) " href="/posts/v30.html">
+      <a class="bg-brand-100 border-2 border-brand-200 text-brand-600 rounded-lg font-semibold shadow-sm text-center py-4 px-8 block transition hover:(bg-brand-200 no-underline shadow-xl) dark:(bg-brand-700 border-brand-800 text-brand-200) dark:hover:(bg-brand-600)" href="/posts/v30.html">
         🎉 v3.0 is now in Beta with a bunch of exciting new features!
       </a>
     </div>
@@ -74,11 +74,16 @@ const hasAltAction = computed(
   @apply rounded-lg
     inline-block px-4 py-2
     text-base md:text-lg text-white no-underline
-    bg-brand-600 border-2px border-brand-600 transition-colors
+    bg-brand-500 border-2px border-brand-500 transition-colors
     xs:(text-xl px-5 py-2.8)
-    hover:(bg-brand-700 border-brand-700 shadow);
+    hover:(bg-brand-700 border-brand-700 shadow)
+    dark:(bg-brand-500 border-brand-500)
+    dark:hover:(bg-brand-400 border-brand-400)
+  ;
 }
 .link-btn.alt {
-  @apply bg-transparent text-brand-600 hover:(border-brand-700 text-brand-700);
+  @apply bg-transparent text-brand-500 hover:(border-brand-700 text-brand-700)
+    dark:(text-brand-500 border-brand-500)
+    !dark:hover:(text-brand-400 border-brand-400 bg-transparent);
 }
 </style>
