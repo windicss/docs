@@ -1,5 +1,5 @@
 <template>
-  <header v-if="showHero" class="home-hero bg-gradient-to-b from-brand-50 via-brand-100 to-brand-200 dark:bg-brand-900">
+  <header v-if="showHero" class="home-hero bg-gradient-to-b from-brand-50 via-brand-100 to-brand-200 dark:(from-brand-800 via-brand-800 to-brand-900)">
     <div>
       <div class="space-y-2 pb-12">
         <figure v-if="$frontmatter.heroImage">
