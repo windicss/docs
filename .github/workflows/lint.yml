@@ -1,4 +1,4 @@
-name: lint
+name: reviewdog
 
 on: [push, pull_request]
 
@@ -25,5 +25,7 @@ jobs:
       - run: npm i -g pnpm
       - run: pnpm i --frozen-lockfile
 
-      - name: Lint
-        run: pnpm lint
+      - uses: reviewdog/action-eslint@v1
+        with:
+          reporter: eslint-check
+          eslint_flags: '--ext .js,.ts,.md,.vue ./'
