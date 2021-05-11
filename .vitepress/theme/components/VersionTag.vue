@@ -6,8 +6,8 @@ defineProps({})
 </script>
 
 <template>
-  <div class="fixed bottom-10 right-0">
-    <div class="px-3 py-0.5 bg-dark-300 rounded-l text-lg font-medium text-red-400 shadow-lg">
+  <div class="fixed right-0 bottom-10">
+    <div class="px-2 py-0.5 bg-gray-100 dark:bg-dark-300 rounded-l font-medium text-red-400 shadow-lg">
       v.0.1.0-beta
     </div>
   </div>
