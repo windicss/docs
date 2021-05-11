@@ -32,8 +32,8 @@ watch(openSideBar, (v) => {
 
 .sidebar {
   @apply
-    relative h-screen overflow-y-auto bg-$c-bg
-    fixed lg:left-0 -lg:right-0 top-0 z-50
+    fixed h-screen overflow-y-auto bg-$c-bg
+    lg:left-0 -lg:right-0 top-0 z-50
     border-r-1px border-$c-divider
     px-4 pb-4 w-full md:w-$sidebar-width
     transition-transform duration-250
