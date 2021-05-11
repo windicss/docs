@@ -54,8 +54,8 @@ const viewData = computed(() => {
           target="_blank"
           rel="noopener"
           aria-label="sponsor-img"
-          class="inline-block w-80px h-80px overflow-hidden m-1.5 hover:no-underline"
-          :class="{'w-280px': item.title === 'Special Sponsor' }"
+          class="inline-block w-60px h-60px md:(w-80px h-80px) overflow-hidden m-1.5 hover:no-underline"
+          :class="{'!w-280px': item.title === 'Special Sponsor' }"
         >
           <logos:nuxt v-if="MemberId === 180034" class="w-full h-full" />
           <img v-else-if="image" :src="image" :alt="name" class="w-full h-full rounded-full">
