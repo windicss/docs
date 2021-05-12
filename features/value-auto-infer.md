@@ -51,7 +51,7 @@ w-{fraction} -> width: {fraction -> precent};
 ```css
 text-{color} -> color: rgba(...);
 
-border-hex-{hex} -> background-color: rgba(...);
+border-hex-{hex} -> border-color: rgba(...);
 ```
 
 <InlinePlayground 
