@@ -38,8 +38,8 @@ export const nav: DefaultTheme.Config['nav'] = [
 
       { text: 'separator', link: 'separator' },
 
-      { text: 'Effects', link: '/utilities/effects' },
       { text: 'Filters', link: '/utilities/filters' },
+      { text: 'Effects', link: '/utilities/effects' },
       { text: 'Behaviors', link: '/utilities/behaviors' },
       { text: 'Transitions', link: '/utilities/transitions' },
       { text: 'Transforms', link: '/utilities/transforms' },
