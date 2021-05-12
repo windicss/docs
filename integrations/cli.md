@@ -28,9 +28,9 @@ By default, it will use interpretation mode to generate a single css file.
 
 Usage:
   windicss [filenames]
-  windicss [filenames] -c -m
-  windicss [filenames] -c -s -m
-  windicss [filenames] [-c | -i] [-a] [-b | -s] [-m] [-p <prefix:string>] [-o <path:string>] [--args arguments]
+  windicss [filenames] -c -m -w
+  windicss [filenames] -c -s -m -w
+  windicss [filenames] [-c | -i] [-a] [-b | -s] [-m] [-w] [-p <prefix:string>] [-o <path:string>] [--args arguments]
 
 Options:
   -h, --help            Print this help message and exit.
@@ -45,6 +45,7 @@ Options:
   -s, --separate        Generate a separate css file for each input file.
 
   -m, --minify          Generate minimized css file.
+  -w, --watch           Enable watch mode.
   -p, --prefix PREFIX   Set the css class name prefix, only valid in compilation mode. The default prefix is 'windi-'.
   -o, --output PATH     Set output css file path.
   -f, --config PATH     Set config file path.
@@ -103,4 +104,10 @@ windicss './test.html' --attributify --compile --preflight --output windi.css
 
 ```bash
 windicss './**/*.html' -to windi.css --config windi.config.js
+```
+
+6. watch mode
+
+```bash
+windicss './**/*.html' -to windi.css --watch
 ```
