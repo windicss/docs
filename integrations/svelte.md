@@ -10,19 +10,53 @@
 
 <PackageInfo name="svelte-windicss-preprocess" author="alexanderniebuhr" />
 
+
+
+Our Svelte integration uses the Svelte Preprocessor API, therefore runs before compilation step. This brings some limitations for dynamic changed classes.
+
 ## Setup
 
-> If migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
+Config parameters
+
+
+### Setup VS Code Extension
+
+If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your config.
+
+Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
+
 
 ### Svelte
 
 ```sh
 npx degit sveltejs/template svelte-project
-```
-```sh
 npm i -D svelte-windicss-preprocess
 ```
+```diff
+- ./public/global.css
+```
+```diff
+  <!DOCTYPE html>
+  <html lang="en">
 
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+
+    <title>Svelte app</title>
+
+    <link rel='icon' type='image/png' href='/favicon.png'>
+-   <link rel='stylesheet' href='/global.css'>
+    <link rel='stylesheet' href='/build/bundle.css'>
+
+    <script defer src='/build/bundle.js'></script>
+  </head>
+
+  <body>
+  </body>
+
+  </html>
+```
 ```diff
   import svelte from 'rollup-plugin-svelte';
   import commonjs from '@rollup/plugin-commonjs';
@@ -106,31 +140,6 @@ npm i -D svelte-windicss-preprocess
   };
 ```
 ```diff
-- ./public/global.css
-```
-```diff
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width,initial-scale=1'>
-
-    <title>Svelte app</title>
-
-    <link rel='icon' type='image/png' href='/favicon.png'>
--   <link rel='stylesheet' href='/global.css'>
-    <link rel='stylesheet' href='/build/bundle.css'>
-
-    <script defer src='/build/bundle.js'></script>
-  </head>
-
-  <body>
-  </body>
-
-  </html>
-```
-```diff
   <script>
     export let name;
   </script>
@@ -165,67 +174,39 @@ npm i -D svelte-windicss-preprocess
 - </style>
 ```
 
-### SvelteKit (as of 1.0.0-next.100)
+### Sveltekit
 
-SvelteKit uses vite as a bundler, therefore we suggest to use our vite plugin (no need to install `svelte-windicss-preprocess`).
+> Sveltekit uses vite as an bundler, so there is an alternative integration guide using our first party [vite] integration
 
-Install plugin with `npm i -D vite-plugin-windicss` and adapt the svelte config:
-
-```js
-// svelte.config.js
-import preprocess from 'svelte-preprocess'
-import WindiCSS from 'vite-plugin-windicss'
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  preprocess: preprocess(),
-  kit: {
-    target: '#svelte',
-    vite: () => ({
-      plugins: [
-        WindiCSS.default(),
-      ],
-    }),
-  },
-}
-export default config
+```sh
+npm init svelte@next sveltekit-project
+npm i -D svelte-windicss-preprocess
 ```
+```diff
+  // svelte.config.js
++ import { windi } from "svelte-windicss-preprocess";
+  /** @type {import('@sveltejs/kit').Config} */
+  const config = {
++	preprocess: [
++		windi({})
++	],
+    kit: {
+      // hydrate the <div id="svelte"> element in src/app.html
+      target: '#svelte'
+    }
+  };
 
-Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
-
-```html
-<!-- $layout.svelte -->
-<script>
-  import "virtual:windi.css"
-
-  // if you want to enable windi devtools
-  import { browser } from "$app/env";
-  if (browser) import("virtual:windi-devtools")
-  // ...
-</script>
-<!-- ...rest of $layout.svelte -->
+export default config;
 ```
+```diff
++ <!-- src/routes/__layout.svelte -->
++ <nav>
++   <a href=".">Home</a>
++   <a href="about">About</a>
++   <a href="settings">Settings</a>
++ </nav>
 
-### Setup VS Code Extension
-
-If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your config.
-
-Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
-
-## Additional Features in Svelte  ⚡️
-
-<kbd>[svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess)</kbd> also supports the following features:
-
-### Variant Attributes
-> gets replaced with **v4** release of svelte-windicss-preprocess
-
-You can apply several utilities for the same variant by using HTML attributes.
-
-```html
-<div w:sm="bg-white font-bold" w:hover="bg-gray-200" w:dark="bg-gray-900"/>
++ <slot></slot>
++ <style windi:preflights:global windi:safelist:gobal>
++ </style>
 ```
-
-::: tip Mixed Variants
-Variants, such as `sm:hover`, are not supported inside attributes. Use [utility groups] instead.
-:::
-
