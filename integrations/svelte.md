@@ -2,7 +2,7 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [vite]: /integrations/vite
-[vite sveltekit guide]: /integrations/vite#sveltekit-as-of-1-0-0-next-100
+[vite svelteKit guide]: /integrations/vite#sveltekit-as-of-1-0-0-next-100
 [migration]: /guide/migration
 
 <Logo name="svelte" class="logo-float-xl"/>
@@ -41,7 +41,7 @@ Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuratio
 
 ## Setup Guides
 
-Here are two guides for Svelte and Sveltekit using the template provided by them.
+Here are two guides for Svelte and SvelteKit using their starter template.
 
 ### Svelte
 
@@ -202,7 +202,7 @@ update `App.svelte`
 
 ### Sveltekit
 
-> Sveltekit uses [vite] as an bundler, there is an suggested alternative integration using our [vite sveltekit guide]
+> If you are using [vite] as an bundler, check out [vite svelteKit guide]
 
 get started template and install package from npm
 ```sh
