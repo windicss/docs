@@ -252,7 +252,7 @@ Utilities for controlling the leading (line height) of an element.
 
 <PlaygroundWithVariants
   variant='normal'
-  :variants="['none', 'tight', 'snug', 'normal', 'relaxed', 'loose', '0', 1, 2, 3, 4, 5, 6]"
+  :variants="['none', 'tight', 'snug', 'normal', 'relaxed', 'loose', '0', '1', '2', '3', '4', '5', '6']"
   prefix='leading'
   fixed='p-2 dark:text-white opacity-85'
   html="The quick brown fox jumps over the lazy dog"
