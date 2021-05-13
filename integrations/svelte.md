@@ -1,6 +1,7 @@
 [utility groups]: /features/
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
+[vite]: /integrations/vite
 [migration]: /guide/migration
 
 <Logo name="svelte" class="logo-float-xl"/>
@@ -9,47 +10,159 @@
 
 <PackageInfo name="svelte-windicss-preprocess" author="alexanderniebuhr" />
 
-## Installation
-
-Add the package:
-
-```bash
-npm i -D svelte-windicss-preprocess
-```
+## Setup
 
 > If migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
 
-### Setup VS Code Extension
+### Svelte
 
-If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your condfig.
+```sh
+npx degit sveltejs/template svelte-project
+```
+```sh
+npm i -D svelte-windicss-preprocess
+```
 
-Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
+```diff
+  import svelte from 'rollup-plugin-svelte';
+  import commonjs from '@rollup/plugin-commonjs';
+  import resolve from '@rollup/plugin-node-resolve';
+  import livereload from 'rollup-plugin-livereload';
+  import { terser } from 'rollup-plugin-terser';
+  import css from 'rollup-plugin-css-only';
++ import { windi } from 'svelte-windicss-preprocess';
 
-## Configuration
+  const production = !process.env.ROLLUP_WATCH;
 
-Add <kbd>[svelte-windicss-preprocess]</kbd> to your bundler configuration.
+  function serve() {
+    let server;
 
-### Vanilla Svelte
+    function toExit() {
+      if (server) server.kill(0);
+    }
 
-```js
-// rollup.config.js
-export default {
-  // ...
-  plugins: [
-    svelte({
-      // ...
-      preprocess: [
-        require('svelte-windicss-preprocess').preprocess({
-          config: 'windi.config.js', // windi config file path (optional)
-          compile: true, // false: interpretation mode; true: compilation mode (optional)
-          prefix: 'windi-', // set compilation mode style prefix
-          safeList: ['bg-gray-600', 'text-white'], // (optional)
-        }),
-      ],
-    }),
-  ],
-  // ...
-}
+    return {
+      writeBundle() {
+        if (server) return;
+        server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+          stdio: ['ignore', 'inherit', 'inherit'],
+          shell: true
+        });
+
+        process.on('SIGTERM', toExit);
+        process.on('exit', toExit);
+      }
+    };
+  }
+
+  export default {
+    input: 'src/main.js',
+    output: {
+      sourcemap: true,
+      format: 'iife',
+      name: 'app',
+      file: 'public/build/bundle.js'
+    },
+    plugins: [
+      svelte({
++       preprocess: [
++         windi({}),
++       ],
+        compilerOptions: {
+          // enable run-time checks when not in production
+          dev: !production
+        }
+      }),
+      // we'll extract any component CSS out into
+      // a separate file - better for performance
+      css({ output: 'bundle.css' }),
+
+      // If you have external dependencies installed from
+      // npm, you'll most likely need these plugins. In
+      // some cases you'll need additional configuration -
+      // consult the documentation for details:
+      // https://github.com/rollup/plugins/tree/master/packages/commonjs
+      resolve({
+        browser: true,
+        dedupe: ['svelte']
+      }),
+      commonjs(),
+
+      // In dev mode, call `npm run start` once
+      // the bundle has been generated
+      !production && serve(),
+
+      // Watch the `public` directory and refresh the
+      // browser on changes when not in production
+      !production && livereload('public'),
+
+      // If we're building for production (npm run build
+      // instead of npm run dev), minify
+      production && terser()
+    ],
+    watch: {
+      clearScreen: false
+    }
+  };
+```
+```diff
+- ./public/global.css
+```
+```diff
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+
+    <title>Svelte app</title>
+
+    <link rel='icon' type='image/png' href='/favicon.png'>
+-   <link rel='stylesheet' href='/global.css'>
+    <link rel='stylesheet' href='/build/bundle.css'>
+
+    <script defer src='/build/bundle.js'></script>
+  </head>
+
+  <body>
+  </body>
+
+  </html>
+```
+```diff
+  <script>
+    export let name;
+  </script>
+
+  <main>
+    <h1>Hello {name}!</h1>
+    <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  </main>
+
++ <style windi:preflights:global windi:safelist:global>
++ </style>
+- <style>
+-   main {
+-     text-align: center;
+-     padding: 1em;
+-     max-width: 240px;
+-     margin: 0 auto;
+-   }
+-
+-   h1 {
+-     color: #ff3e00;
+-     text-transform: uppercase;
+-     font-size: 4em;
+-     font-weight: 100;
+-   }
+-
+-   @media (min-width: 640px) {
+-    main {
+-       max-width: none;
+-     }
+-   }
+- </style>
 ```
 
 ### SvelteKit (as of 1.0.0-next.100)
@@ -93,58 +206,11 @@ Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
 <!-- ...rest of $layout.svelte -->
 ```
 
-### Snowpack Svelte
+### Setup VS Code Extension
 
-```js
-// svelte.config.js
-export default {
-  preprocess: [
-    require('svelte-windicss-preprocess').preprocess({
-      config: 'windi.config.js', // windi config file path (optional)
-      compile: true, // false: interpretation mode; true: compilation mode (optional)
-      prefix: 'windi-', // set compilation mode style prefix
-      safeList: ['bg-gray-600', 'text-white'], // (optional)
-    }),
-  ],
-}
-```
+If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your config.
 
-### Vite Svelte
-
-::: tip Vite
-For Vite setups, we do suggest to use [Vite plugin](/integrations/vite). However, if you need any special features or your setup requires windicss to run as a preprocessor, you can setup it as below.
-:::
-
-```bash
-# vite project installation & setup
-npm init @vitejs/app --template svelte vite-svelte-windicss-app
-cd vite-svelte-windicss-app
-npm i -D svelte-windicss-preprocess
-```
-
-```js
-// vite.config.js
-export default defineConfig(({ command, mode }) => {
-  const production = mode === 'production'
-  return {
-    plugins: [
-      svelte({
-        preprocess: [
-          require('svelte-windicss-preprocess').preprocess({
-            compile: false, // false: interpretation mode; true: compilation mode (optional)
-            prefix: 'windi-', // set compilation mode style prefix
-            mode: production ? 'prod' : 'dev',
-            // config: "windi.config.js", // (optional)
-            // safeList: ['bg-gray-600', 'text-white'], // (optional)
-          }),
-        ],
-        emitCss: true,
-        hot: !production,
-      }),
-    ],
-  }
-})
-```
+Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
 
 ## Additional Features in Svelte  ⚡️
 
@@ -162,3 +228,4 @@ You can apply several utilities for the same variant by using HTML attributes.
 ::: tip Mixed Variants
 Variants, such as `sm:hover`, are not supported inside attributes. Use [utility groups] instead.
 :::
+
