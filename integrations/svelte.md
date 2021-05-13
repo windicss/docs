@@ -56,7 +56,7 @@ remove not needed global css file to prevent style breaks
 - ./public/global.css
 ```
 
-remove styleheet link in `index.html`
+remove stylesheet link in `index.html`
 ```diff
   <!DOCTYPE html>
   <html lang="en">
@@ -200,7 +200,7 @@ update `App.svelte`
 - </style>
 ```
 
-### Sveltekit
+### SvelteKit
 
 > If you are using [Vite] as an bundler, check out [Vite SvelteKit guide]
 
