@@ -214,9 +214,9 @@ add [svelte-windicss-preprocess] config to `svelte.config.js`
 + import { windi } from "svelte-windicss-preprocess";
   /** @type {import('@sveltejs/kit').Config} */
   const config = {
-+	preprocess: [
-+		windi({})
-+	],
++   preprocess: [
++     windi({})
++   ],
     kit: {
       // hydrate the <div id="svelte"> element in src/app.html
       target: '#svelte'
