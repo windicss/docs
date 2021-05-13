@@ -33,14 +33,13 @@ windi({
 })
 ```
 
-
 ### Setup VS Code Extension
 
 If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your config.
 
 Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
 
-## Example Setup Guides
+## Setup Guides
 
 Here are two guides for Svelte and Sveltekit using the template provided by them.
 
