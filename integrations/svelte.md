@@ -16,7 +16,21 @@ Our Svelte integration uses the Svelte Preprocessor API, therefore runs before c
 
 ## Setup
 
-Config parameters
+### Options
+
+```js
+import { windi } from 'svelte-windicss-preprocess'
+// ...
+windi({
+  silent?: boolean, // default: false
+  mode?: 'development' | 'production', // default: process.env.NODE_ENV
+  configPath?: string, // no default
+  disableFormat?: boolean, // default: false
+  useDevTools?: {
+    enabled?: boolean //default: false
+  },
+})
+```
 
 
 ### Setup VS Code Extension
@@ -25,7 +39,7 @@ If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items
 
 Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
 
-
+## Examples
 ### Svelte
 
 ```sh
