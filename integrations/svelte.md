@@ -28,7 +28,7 @@ windi({
   configPath?: string, // no default
   disableFormat?: boolean, // default: false
   useDevTools?: {
-    enabled?: boolean //default: false
+    enabled?: boolean, // default: false
   },
 })
 ```
