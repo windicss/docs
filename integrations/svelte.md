@@ -2,7 +2,7 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [vite]: /integrations/vite
-[vite sveltekit guide]: integrations/vite#sveltekit-as-of-1-0-0-next-100
+[vite sveltekit guide]: /integrations/vite#sveltekit-as-of-1-0-0-next-100
 [migration]: /guide/migration
 
 <Logo name="svelte" class="logo-float-xl"/>
