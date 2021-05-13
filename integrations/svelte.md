@@ -14,7 +14,7 @@
 
 Our Svelte integration uses the Svelte Preprocessor API, therefore runs before compilation step. This brings some limitations for dynamic changed classes.
 
-## Setup
+## Documentation
 
 ### Options
 
@@ -39,16 +39,24 @@ If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items
 
 Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
 
-## Examples
+## Example Setup Guides
+
+Here are two guides for Svelte and Sveltekit using the template provided by them.
+
 ### Svelte
 
+get started template and install package from npm
 ```sh
 npx degit sveltejs/template svelte-project
 npm i -D svelte-windicss-preprocess
 ```
+
+remove not needed global css file to prevent style breaks
 ```diff
 - ./public/global.css
 ```
+
+remove styleheet link in `index.html`
 ```diff
   <!DOCTYPE html>
   <html lang="en">
@@ -71,6 +79,8 @@ npm i -D svelte-windicss-preprocess
 
   </html>
 ```
+
+add [svelte-windicss-preprocess] config to `rollup.config.js`
 ```diff
   import svelte from 'rollup-plugin-svelte';
   import commonjs from '@rollup/plugin-commonjs';
@@ -153,6 +163,8 @@ npm i -D svelte-windicss-preprocess
     }
   };
 ```
+
+update `App.svelte`
 ```diff
   <script>
     export let name;
@@ -190,14 +202,15 @@ npm i -D svelte-windicss-preprocess
 
 ### Sveltekit
 
-> Sveltekit uses vite as an bundler, so there is an alternative integration guide using our first party [vite] integration
+> Sveltekit uses [vite] as an bundler, there is an suggested alternative integration using our first party [vite] integration
 
+get started template and install package from npm
 ```sh
 npm init svelte@next sveltekit-project
 npm i -D svelte-windicss-preprocess
 ```
+add [svelte-windicss-preprocess] config to `svelte.config.js`
 ```diff
-  // svelte.config.js
 + import { windi } from "svelte-windicss-preprocess";
   /** @type {import('@sveltejs/kit').Config} */
   const config = {
@@ -212,8 +225,11 @@ npm i -D svelte-windicss-preprocess
 
 export default config;
 ```
+add layout file
 ```diff
-+ <!-- src/routes/__layout.svelte -->
++ ./src/routes/__layout.svelte
+```
+```diff
 + <nav>
 +   <a href=".">Home</a>
 +   <a href="about">About</a>
