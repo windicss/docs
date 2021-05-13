@@ -27,6 +27,7 @@ export function getTemplateComponent(type: string, html: string, css: string) {
         .replace('{{ HTML }}', html)
         .replace('{{ CSS }}', css)
     default:
+      // eslint-disable-next-line no-console
       console.error('Components template not found')
   }
 }
