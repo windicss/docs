@@ -2,7 +2,7 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [vite]: /integrations/vite
-[vite svelteKit guide]: /integrations/vite#sveltekit-as-of-1-0-0-next-100
+[Vite SvelteKit guide]: /integrations/vite#sveltekit-as-of-1-0-0-next-100
 [migration]: /guide/migration
 
 <Logo name="svelte" class="logo-float-xl"/>
@@ -202,7 +202,7 @@ update `App.svelte`
 
 ### Sveltekit
 
-> If you are using [vite] as an bundler, check out [vite svelteKit guide]
+> If you are using [Vite] as an bundler, check out [Vite SvelteKit guide]
 
 get started template and install package from npm
 ```sh
