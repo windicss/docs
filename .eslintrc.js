@@ -7,6 +7,7 @@ module.exports = {
   extends: ['@antfu/eslint-config', 'plugin:jsonc/recommended-with-json5'],
   plugins: ['markdown'],
   rules: {
+    'no-tabs': ['error'],
     'no-unused-vars': 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
