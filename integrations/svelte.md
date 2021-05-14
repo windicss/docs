@@ -11,8 +11,6 @@
 
 <PackageInfo name="svelte-windicss-preprocess" author="alexanderniebuhr" />
 
-
-
 Our Svelte integration uses the Svelte Preprocessor API, therefore runs before compilation step. This brings some limitations for dynamic changed classes.
 
 ## Documentation
@@ -42,6 +40,7 @@ Non scoped styles will be handled in svelte according to their docs with `:globa
 
 Svelte nature is to scope CSS style and remove unused styles, this can lead to issues if you add preflights into the layout wrapper and want that styles to be available on all other `.svelte` files as well. On the other hand, if you compile to custom-elements you cannot use `:global()` styles.
 To allow the user to decide where to put the preflights as well deciding if they should be global or scoped, we have following syntax:
+
 ```html
 <!-- Layout.svelte -->
 <script>
@@ -88,7 +87,8 @@ By default, all inline used classes of Windi CSS will be scoped with native svel
 However, using a utility based CSS framework there is not much need to make sure classes do not override, since e.g. `bg-gray-600` will always have the same CSS code behind it, regardless which `.svelte` file it is used.
 You might want to safe more file size and using Windi CSS classes not scoped, but might want to choose this file by file.
 
-To make all Windi CSS classes in one `.svelte` global, with help of `:global()` you can modify / add the following style tag
+To make all Windi CSS classes in one `.svelte` global, with help of `:global()` you can modify / add the following style tag.
+
 ```html
 <style windi:global>
 </style>
@@ -126,32 +126,37 @@ You can combine any of this attributes, so full style tag can look like:
   </style>
 ```
 
-
-
 ### VS Code Extension
 Using special CSS tag syntax as well as the attributes above, will break the CSS diagnostics of VS Code. Please make sure to disable them.
 If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode), add this setting to your VS Code configuration file.
-```
-"svelte.plugin.css.diagnostics.enable": false
+
+```json
+{
+  "svelte.plugin.css.diagnostics.enable": false
+}
 ```
 
 ## Setup Guides
+
 Here are two guides for Svelte and SvelteKit using their starter template.
 
 ### Svelte
 
 get started template and install package from NPM
-```sh
+
+```bash
 npx degit sveltejs/template svelte-project
 npm i -D svelte-windicss-preprocess
 ```
 
 remove not needed global CSS files to prevent style breaks
+
 ```diff
 - ./public/global.css
 ```
 
 remove stylesheet link in `index.html`
+
 ```diff
   <!DOCTYPE html>
   <html lang="en">
@@ -176,6 +181,7 @@ remove stylesheet link in `index.html`
 ```
 
 add [svelte-windicss-preprocess] config to `rollup.config.js`
+
 ```diff
   import svelte from 'rollup-plugin-svelte';
   import commonjs from '@rollup/plugin-commonjs';
@@ -260,6 +266,7 @@ add [svelte-windicss-preprocess] config to `rollup.config.js`
 ```
 
 update `App.svelte`
+
 ```diff
   <script>
     export let name;
@@ -300,11 +307,14 @@ update `App.svelte`
 > If you are using [Vite] as an bundler, check out [Vite SvelteKit guide]
 
 get started template and install package from npm
-```sh
+
+```bash
 npm init svelte@next sveltekit-project
 npm i -D svelte-windicss-preprocess
 ```
+
 add [svelte-windicss-preprocess] config to `svelte.config.js`
+
 ```diff
 + import { windi } from "svelte-windicss-preprocess";
   /** @type {import('@sveltejs/kit').Config} */
@@ -320,10 +330,13 @@ add [svelte-windicss-preprocess] config to `svelte.config.js`
 
 export default config;
 ```
+
 add layout file
+
 ```diff
 + ./src/routes/__layout.svelte
 ```
+
 ```diff
 + <nav>
 +   <a href=".">Home</a>
