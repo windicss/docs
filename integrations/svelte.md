@@ -33,25 +33,120 @@ windi({
 })
 ```
 
-### Setup VS Code Extension
+### Custom pre-processing information
 
-If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) you need to adapt your config.
+With v4 we introduced a new feature set of custom attributes for svelte style tags, to make integration regardless the setup easy and straight forward.
+Non scoped styles will be handled in svelte according to their docs with `:global()` for classes and `-global-` for keyframes.
 
-Add `"svelte.plugin.css.diagnostics.enable": false` to your VS Code configuration file.
+### Preflights
+
+Svelte nature is to scope CSS style and remove unused styles, this can lead to issues if you add preflights into the layout wrapper and want that styles to be available on all other `.svelte` files as well. On the other hand, if you compile to custom-elements you cannot use `:global()` styles.
+To allow the user to decide where to put the preflights as well deciding if they should be global or scoped, we have following syntax:
+```html
+<!-- Layout.svelte -->
+<script>
+</script>
+
+<slot />
+
+<!-- use this for scoped preflights -->
+<style windi:preflights>
+</style>
+
+<!-- use this for global preflights -->
+<style windi:preflights:global>
+</style>
+```
+
+### Safe list
+
+Sometimes you want to have dynamic classes based on some logic in script tags. Since [svelte-windicss-preprocess] runs before the svelte compile step, there is no way it could know this dynamic values. There are many approaches to this, either use windi at runtime or using a bundler setup instead this preprocessor one, or if you know all possible classes in the beginning add them to a safe list.
+
+Similar to preflights, this safe list need to be available anywhere you want it, and also scoped and global.
+
+```html
+<!-- Layout.svelte -->
+<script>
+  let shade = 100;
+</script>
+
+<div class="bg-red-{shade}">
+  I am dynamic!
+</div>
+
+<!-- use this for scoped safelist classes -->
+<style windi:safelist>
+</style>
+
+<!-- use this for global safelist classes -->
+<style windi:safelist:global>
+</style>
+```
+### Windi CSS classes
+
+By default, all inline used classes of Windi CSS will be scoped with native svelte logic. This has its advantages (you can find many discussions online).
+However, using a utility based CSS framework there is not much need to make sure classes do not override, since e.g. `bg-gray-600` will always have the same CSS code behind it, regardless which `.svelte` file it is used.
+You might want to safe more file size and using Windi CSS classes not scoped, but might want to choose this file by file.
+
+To make all Windi CSS classes in one `.svelte` global, with help of `:global()` you can modify / add the following style tag
+```html
+<style windi:global>
+</style>
+```
+
+### Custom styles
+
+You may have the need in your project to define custom CSS classes, and want to decide seperate to Windi CSS if they are scoped or global. You can with the following syntax:
+
+```html
+  <!-- all styles with :global() -->
+  <style global>
+    .btn {
+      background: green;
+    }
+  </style>
+
+  <!-- selective or all scoped -->
+  <style>
+    :global(.btn) {
+      background: green;
+    }
+    .btnTwo {
+      background: red;
+    }
+  </style>
+```
+
+You can combine any of this attributes, so full style tag can look like:
+```html
+  <style global windi:global windi:preflights:global windi:safelist:global>
+    .custom{
+      background: black;
+    }
+  </style>
+```
+
+
+
+### VS Code Extension
+Using special CSS tag syntax as well as the attributes above, will break the CSS diagnostics of VS Code. Please make sure to disable them.
+If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode), add this setting to your VS Code configuration file.
+```
+"svelte.plugin.css.diagnostics.enable": false
+```
 
 ## Setup Guides
-
 Here are two guides for Svelte and SvelteKit using their starter template.
 
 ### Svelte
 
-get started template and install package from npm
+get started template and install package from NPM
 ```sh
 npx degit sveltejs/template svelte-project
 npm i -D svelte-windicss-preprocess
 ```
 
-remove not needed global css file to prevent style breaks
+remove not needed global CSS files to prevent style breaks
 ```diff
 - ./public/global.css
 ```
