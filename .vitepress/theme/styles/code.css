@@ -133,6 +133,6 @@ code .token.inserted.token.inserted {
 
 /* inline code */
 :not(pre) > code {
-  font-size: 1em;
+  font-size: 0.9em;
   vertical-align: baseline;
 }
