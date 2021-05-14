@@ -39,7 +39,7 @@ specifiers:
   vue: ^3.0.11
   vue-board: ^0.0.5
   vue-demi: ^0.9.0
-  windicss: ^3.0.3
+  windicss: ^3.0.4
   windicss-analysis: ^0.2.0
 
 dependencies:
@@ -57,7 +57,7 @@ dependencies:
   vue: 3.0.11
   vue-board: 0.0.5_vue@3.0.11
   vue-demi: 0.9.0_vue@3.0.11
-  windicss: 3.0.3
+  windicss: 3.0.4
 
 devDependencies:
   '@antfu/eslint-config': 0.6.5_eslint@7.26.0+typescript@4.2.4
@@ -849,7 +849,7 @@ packages:
       jiti: 1.9.2
       magic-string: 0.25.7
       micromatch: 4.0.4
-      windicss: 3.0.3
+      windicss: 3.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4531,7 +4531,7 @@ packages:
       chalk: 4.1.1
       debug: 4.3.2
       vite: 2.3.2
-      windicss: 3.0.3
+      windicss: 3.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4689,8 +4689,8 @@ packages:
     hasBin: true
     dev: true
 
-  /windicss/3.0.3:
-    resolution: {integrity: sha512-CwwANEK0DmvBZMuenKPuY516ZEWmumfoXdyhYdfNb1LFmubVaNYz0UBW2TDA3LLKbHUW5ltpYy6eG8WLfJIhMA==}
+  /windicss/3.0.4:
+    resolution: {integrity: sha512-sB0SQxEOOmGn0+ZzWBNpsZg0D36nmBvAk8uuxuVyYiQMzISbI+2Jv6R7dWi5qQqIncs9DUHleJmqNk+z98EG8Q==}
     engines: {node: '>= 12'}
     hasBin: true
 
