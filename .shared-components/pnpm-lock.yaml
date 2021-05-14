@@ -25,7 +25,7 @@ specifiers:
   '@codemirror/theme-one-dark': ^0.18.0
   '@codemirror/tooltip': ^0.18.4
   '@codemirror/view': ^0.18.12
-  '@types/node': ^14.14.44
+  '@types/node': ^14.14.45
   '@types/prismjs': ^1.16.5
   bumpp: ^6.0.6
   prismjs: ^1.23.0
@@ -63,7 +63,7 @@ devDependencies:
   '@codemirror/theme-one-dark': 0.18.0
   '@codemirror/tooltip': 0.18.4
   '@codemirror/view': 0.18.12
-  '@types/node': 14.14.44
+  '@types/node': 14.14.45
   '@types/prismjs': 1.16.5
   bumpp: 6.0.6
   tslib: 2.2.0
@@ -92,14 +92,14 @@ packages:
       js-tokens: 4.0.0
     dev: true
 
-  /@babel/parser/7.14.1:
-    resolution: {integrity: sha512-muUGEKu8E/ftMTPlNp+mc6zL3E9zKWmF5sDHZ5MSsoTP9Wyz64AhEf9kD08xYJ7w6Hdcu8H550ircnPyWSIF0Q==}
+  /@babel/parser/7.14.2:
+    resolution: {integrity: sha512-IoVDIHpsgE/fu7eXBeRWt8zLbDrSvD7H1gpomOkPpBoEN8KCruCqSDdqo8dddwQQrui30KSvQBaMUOJiuFu6QQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
     dev: true
 
-  /@babel/types/7.14.1:
-    resolution: {integrity: sha512-S13Qe85fzLs3gYRUnrpyeIrBJIMYv33qSTg1qoBwiG6nPKwUWAD9odSzWhEedpwOIzSEI6gbdQIWEMiCI42iBA==}
+  /@babel/types/7.14.2:
+    resolution: {integrity: sha512-SdjAG/3DikRHpUOjxZgnkbR11xUlyDMUFJdvnIgZEE16mqmY0BINMmc4//JMJglEmn6i7sq6p+mGrFWyZ98EEw==}
     dependencies:
       '@babel/helper-validator-identifier': 7.14.0
       to-fast-properties: 2.0.0
@@ -380,8 +380,8 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@types/node/14.14.44:
-    resolution: {integrity: sha512-+gaugz6Oce6ZInfI/tK4Pq5wIIkJMEJUu92RB3Eu93mtj4wjjjz9EB5mLp5s1pSsLXdC/CPut/xF20ZzAQJbTA==}
+  /@types/node/14.14.45:
+    resolution: {integrity: sha512-DssMqTV9UnnoxDWu959sDLZzfvqCF0qDNRjaWeYSui9xkFe61kKo4l1TWNTQONpuXEm+gLMRvdlzvNHBamzmEw==}
     dev: true
 
   /@types/parse-json/4.0.0:
@@ -395,8 +395,8 @@ packages:
   /@vue/compiler-core/3.0.11:
     resolution: {integrity: sha512-6sFj6TBac1y2cWCvYCA8YzHJEbsVkX7zdRs/3yK/n1ilvRqcn983XvpBbnN3v4mZ1UiQycTvOiajJmOgN9EVgw==}
     dependencies:
-      '@babel/parser': 7.14.1
-      '@babel/types': 7.14.1
+      '@babel/parser': 7.14.2
+      '@babel/types': 7.14.2
       '@vue/shared': 3.0.11
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -703,8 +703,8 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
-  /esbuild/0.11.20:
-    resolution: {integrity: sha512-QOZrVpN/Yz74xfat0H6euSgn3RnwLevY1mJTEXneukz1ln9qB+ieaerRMzSeETpz/UJWsBMzRVR/andBht5WKw==}
+  /esbuild/0.11.21:
+    resolution: {integrity: sha512-FqpYdJqiTeLDbj3vqxc/fG8UmHIEvQrDaUxSw1oJf4giLd/tnMDUUlXellCjOab7qGKQ5hUFD5eQgmO+tkZeow==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -1401,7 +1401,7 @@ packages:
       chalk: 4.1.1
       chokidar: 3.5.1
       debug: 4.3.1
-      esbuild: 0.11.20
+      esbuild: 0.11.21
       execa: 5.0.0
       globby: 11.0.3
       joycon: 3.0.1
