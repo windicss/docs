@@ -367,6 +367,18 @@ Utilities for controlling the type of text decoration.
   html="The quick brown fox jumps over the lazy dog"
 />
 
+### Text Decoration Style
+
+Utilities for controlling the style of text decoration.
+
+<PlaygroundWithVariants
+  variant='solid'
+  prefix='underline'
+  :variants="['solid', 'double', 'dotted', 'dashed']"
+  fixed='p-2 dark:text-white opacity-85 underline'
+  html="The quick brown fox jumps over the lazy dog"
+/>
+
 ### Text Decoration Color
 
 Utilities for controlling the color of text decoration.
