@@ -128,7 +128,7 @@ export default defineConfig({
       addComponents(buttons)
     }),
     plugin(({ addDynamic, variants }) => {
-      addDynamic('skew', ({ Utility, theme }) => {
+      addDynamic('skew', ({ Utility, Style }) => {
         return Utility.handler
           .handleStatic(theme('skew'))
           .handleNumber(0, 360, 'int', number => `skewY(-${number}deg)`)
