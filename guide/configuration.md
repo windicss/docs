@@ -130,7 +130,7 @@ export default defineConfig({
     plugin(({ addDynamic, variants }) => {
       addDynamic('skew', ({ Utility, Style }) => {
         return Utility.handler
-          .handleStatic(theme('skew'))
+          .handleStatic(Style('skew'))
           .handleNumber(0, 360, 'int', number => `skewY(-${number}deg)`)
           .createProperty('transform')
       }, variants('skew'))

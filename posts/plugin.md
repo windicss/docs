@@ -31,9 +31,9 @@ plugin(({ addUtilities }) => {
 ### Basic Usage
 
 ```js
-addDynamic('filter', ({ Utility }) => {
+addDynamic('filter', ({ Utility, Style }) => {
   return Utility.handler
-    .handleStatic(theme('filter'))
+    .handleStatic(Style('filter'))
     .createProperty(['-webkit-filter', 'filter'])
 })
 ```
