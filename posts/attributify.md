@@ -46,14 +46,35 @@ md-bg = "blue-300 dark:blue-400"
 | blue-500, gray-700, ...                                      | color               |
 | opacity-40, ... opacity-90                                   | opacity             |
 | underline, line-through, no-underline                        | text-decoration     |
+| underline-green-500, underline-opacity-50, underline-auto, underline-2, underline-offset-auto | text-decoration |
+| tab, tab-0, tab-2, tab-4                                     | tab-size            |
+| indent, indent-xs, indent-sm, indent-md                      | text-indent         |
 | uppercase, lowercase, capitalize, normal-case                | text-transform      |
+| stroke, stroke-none, stroke-sm, ...                          | text-stroke-width   |
+| stroke-transparent, stroke-blue-500, stroke-gray-500, ...    | text-stroke-color   |
+| shadow, shadow-sm, shadow-md, shadow-lg, ...                 | text-stroke-shadow  |
 | truncate, overflow-ellipsis, overflow-clip                   | text-overflow       |
-| space-normal, space-nowrap, space-pre, space-pre-line, space-pre-wrap | white-space         |
+| space-normal, space-nowrap, space-pre, space-pre-line, space-pre-wrap | white-space|
 | break-normal, break-words, break-all                         | word-break          |
+| write-normal, write-vertical-right, write-vertical-left      | writing-mode        |
+| write-orient-mixed, write-orient-upright, write-orient-sideways| writing-orientation |
+| hyphens-none, hyphens-manual, hyphens-auto                   | hyphens             |
 | placeholder-blue-500, placeholder-gray-700, ...              | placeholder-color   |
 | placeholder-opacity-50, placeholder-opacity-90, ...          | placeholder-opacity |
 
 > You can also use `placeholder = "blue-500 opacity-50"`, but usually it conflicts with the placeholder attribute of input element, so it is better to put it in text, and it's also makes sense.
+
+#### Underline
+
+> underline = "~ green-500 opacity-50 2 offset-2"
+
+| values              | property            |
+| :------------------ | :------------------ |
+| ~ line-through none | text-decoration     |
+| green-500, current ...     | text-decoration-color |
+| opacity-50, opacity-60 ... | text-decoration-opacity |
+| auto, 0, 1, 2, 3, 4 ...  | text-decoration-thickness |
+| offset-auto, offset-1, offset-2, ...  | text-decoration-offset |
 
 #### List
 
@@ -79,6 +100,7 @@ md-bg = "blue-300 dark:blue-400"
 | repeat, no-repeat, repeat-x, ...               | background-repeat     |
 | auto, cover, contain                           | background-size       |
 | clip-border, clip-padding, clip-content, ...   | background-clip       |
+| origin-border, origin-padding, origin-content  | background-origin     |
 | blend-normal, blend-overlay, blend-draken, ... | background-blend-mode |
 | none                                           | background-image      |
 
@@ -131,15 +153,19 @@ md-bg = "blue-300 dark:blue-400"
 | offset-4, ...          | ring-offset-width |
 | offset-gray-200, ...   | ring-offset-color |
 
-#### Svg
+#### Icon
 
-> svg = "fill-gray-200 stroke-blue-400 stroke-2"
+> icon = "fill-gray-200 stroke-blue-400 stroke-2"
 
 | values                               | property     |
 | :----------------------------------- | :----------- |
 | fill-current, fill-gray-200, ...     | fill         |
 | stroke-current, stroke-gray-400, ... | stroke       |
 | stroke-2, stroke-4, ...              | stroke-width |
+| stroke-dash-2 , stroke-dash-4, ...   | stroke-dasharray |
+| stroke-offset-2, stroke-offset-4, ...| stroke-dashoffset |
+| stroke-cap-auto , stroke-cap-square..| stroke-line-cap |
+| stroke-join-auto, stroke-join-auto...| stroke-line-join |
 
 > You can also use `stroke = "2 gray-400"` or `fill=gray-200`, but usually it conflicts with the fill/stroke attribute of svg element, so it is better to put it in svg.
 
@@ -278,6 +304,8 @@ md-bg = "blue-300 dark:blue-400"
 | :----------------------------------------------------------- | :----------- |
 | ~, inline, caption, cell, column, column-group, footer-group, header-group, row-group, row | display      |
 | auto, fixed                                                  | table-layout |
+| caption-top, caption-bottom                                  | caption-side |
+| empty-cells-visible, empty-cells-hidden                      | empty-cells  |
 
 ### Order
 
@@ -325,10 +353,11 @@ md-bg = "blue-300 dark:blue-400"
 | :----------------------------------------------------------- | :--------- |
 | inline, flow-root, contents, list-item, hidden, block, inline-block | display    |
 | visible, invisible                                           | visibility |
+| backface-visible, backface-hidden                   | backface-visibility |
 
 #### Position
 
-> position = "fixed top-0 left-4"
+> pos = "fixed top-0 left-4"
 
 | values                                                  | property              |
 | :------------------------------------------------------ | :-------------------- |
@@ -337,6 +366,7 @@ md-bg = "blue-300 dark:blue-400"
 | top-0, left-0, bottom-0, right-0, ...                   | top/right/bottom/left |
 | float-right, float-left, float-none                     | float                 |
 | clear-left, clear-right, clear-both, clear-none         | clear                 |
+| isolate, isolation-auto                                 | isolation             |
 
 #### Box
 
@@ -346,6 +376,15 @@ md-bg = "blue-300 dark:blue-400"
 | :--------------------------------- | :------------------- |
 | decoration-slice, decoration-clone | box-decoration-break |
 | border, content                    | box-sizing           |
+
+#### Caret
+
+> caret = "gray-500 opacity-50"
+
+| values                             | property             |
+| :--------------------------------- | :------------------- |
+| gray-500 transparent ...           | caret-color          |
+| opacity-0, opacity-50, ...         | caret-opacity        |
 
 #### Isolation
 
@@ -479,10 +518,15 @@ md-bg = "blue-300 dark:blue-400"
 | values                                                       | property                |
 | :----------------------------------------------------------- | :---------------------- |
 | ~, gpu, none                                                 | transform               |
+| preserve-flat, preserve-3d                                   | transform-style         |
+| perspect-lg, perspect-none, ...                              | prespective             |
+| perspect-origin-center, perspect-origin-top                  | perspective-origin      |
 | origin-center, origin-top, origin-top-right, ...             | transform-origin        |
 | scale-0, scale-50, scale-75, ...                             | scale                   |
+| scale-x-60, scale-y-30, scale-z-45                           | scale-x/y/z             |
 | roate-50, -rotate-50, ...                                    | rotate                  |
-| translate-x-2, -translate-x-4, translate-y-40, -translate-y-40, ... | translate-x/translate-y |
+| rotate-x-30, rotate-y-45, rotate-z-90                        | rotate-x/y/z            |
+| translate-x-2, -translate-x-4, translate-y-40, -translate-y-40, translate-z-12 | translate-x/y/z |
 | skew-x-2, -skew-x-4, skew-y-2, -skew-y-2                     | skew-x/skew-y           |
 
 ---
