@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, defineProps, defineEmit } from 'vue'
+import { Editor } from '@windicss/shared-components'
 import type { PropType } from 'vue'
 import type Processor from 'windicss'
-import { Editor } from '@windicss/shared-components'
 
 const props = defineProps({
   modelValue: {

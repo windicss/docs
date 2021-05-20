@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { defineProps, ref, onMounted } from 'vue'
-import type { PropType } from 'vue'
-import type { Config } from 'windicss/types/interfaces'
 import { IframePreview } from '@windicss/shared-components'
 import { Splitpanes, Pane } from 'splitpanes'
 import { useWindiCSS } from '../../composables/useWindiCSS'
@@ -10,6 +8,8 @@ import { layout } from '../../composables/playgroundLayout'
 import { isDark } from '../../composables/dark'
 import { bps } from '../../composables/breakpoints'
 import { html, css } from '../../examples/playground'
+import type { Config } from 'windicss/types/interfaces'
+import type { PropType } from 'vue'
 import 'splitpanes/dist/splitpanes.css'
 import '@windicss/shared-components/index.css'
 

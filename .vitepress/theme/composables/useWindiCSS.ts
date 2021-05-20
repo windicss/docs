@@ -1,8 +1,8 @@
 import { computed, Ref } from 'vue'
 import Windi from 'windicss'
-import type { Config } from 'windicss/types/interfaces'
 import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
+import type { Config } from 'windicss/types/interfaces'
 
 export function useWindiCSS(htmlCode: Ref<string>, styleCode: Ref<string>, config: Config | undefined) {
   const processor = computed(() => new Windi(config))

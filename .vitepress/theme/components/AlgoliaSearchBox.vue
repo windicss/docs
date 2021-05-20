@@ -7,9 +7,9 @@ import '@docsearch/css/dist/style.css'
 import { useRoute, useRouter } from 'vitepress'
 import { defineProps, getCurrentInstance, onMounted, watch, toRef } from 'vue'
 import docsearch from '@docsearch/js'
+import { bps } from '../composables/breakpoints'
 import type { PropType } from 'vue'
 import type { DefaultTheme } from '../config'
-import { bps } from '../composables/breakpoints'
 
 const bplg = bps.greater('lg')
 

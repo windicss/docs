@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { triggerRef, defineProps, defineEmit } from 'vue'
-import type { PropType } from 'vue'
 import { useVModel } from '@vueuse/core'
+import type { PropType } from 'vue'
 
 const emit = defineEmit()
 const props = defineProps({

@@ -174,9 +174,9 @@ module.exports = {
         primary: '#1c1c1e',
       },
       // ...
-    }
-  }
-};
+    },
+  },
+}
 ```
 
 #### Dev mode
@@ -207,14 +207,14 @@ module.exports = {
     extractors: [
       {
         extractor: (content) => {
-          return { classes: content.match(/(?<=class:)[!@\w-]+/g) ?? [] };
+          return { classes: content.match(/(?<=class:)[!@\w-]+/g) ?? [] }
         },
         extensions: ['svelte'],
       },
     ],
   },
   // ...
-};
+}
 ```
 
 #### Style block
