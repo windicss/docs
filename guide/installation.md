@@ -84,6 +84,16 @@ In addition to general build tools support, we also provide integrations for the
   },
 ]"/>
 
+## API
+
+<Integrations class="mb-5" :items="[
+  {
+    title: 'JavaScript',
+    link: '/integrations/javascript',
+    logo: 'javascript',
+  },
+]"/>
+
 <div class="pb-5"></div>
 
 > Didn't see the framework you use? [Submit a framework request on GitHub](https://github.com/windicss/windicss/issues/new).
