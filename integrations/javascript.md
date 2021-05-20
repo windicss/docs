@@ -69,8 +69,6 @@ export function generateStyles(html) {
   // Generate preflight based on the html we input
   const preflightSheet = processor.preflight(html);
 
-  console.log(preflightSheet);
-
   const PREFIX = "windi-";
   const outputCSS = [];
   let outputHTML = "";
