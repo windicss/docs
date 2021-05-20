@@ -32,11 +32,6 @@ Supports for build tools are framework-agnostic, they work for most frameworks w
     link: '/integrations/cli',
     logo: 'cli',
   },
-    {
-    title: 'Javascript',
-    link: '/integrations/javascript',
-    logo: 'javascript',
-  },
 ]"/>
 
 ## Frameworks
@@ -86,6 +81,16 @@ In addition to general build tools support, we also provide integrations for the
     link: '/editors/webstorm',
     logo: 'webstorm',
     wip: true
+  },
+]"/>
+
+## API
+
+<Integrations class="mb-5" :items="[
+  {
+    title: 'JavaScript',
+    link: '/integrations/javascript',
+    logo: 'javascript',
   },
 ]"/>
 

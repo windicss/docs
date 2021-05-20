@@ -9,7 +9,7 @@ import VSCode from '/@vite-icons/logos/visual-studio-code'
 import Webstrom from '/@vite-icons/logos/webstorm'
 import PostCSS from '/@vite-icons/logos/postcss'
 import Gridsome from '/@vite-icons/logos/gridsome-icon'
-import Javascript from '/@vite-icons/logos/javascript'
+import JavaScript from '/@vite-icons/logos/javascript'
 import NextJs from './NuxtJs.vue'
 import Vite from './ViteLogo.vue'
 import Windi from './WindiLogo.vue'
@@ -47,7 +47,7 @@ const Logo = computed(() => {
     case 'postcss':
       return PostCSS
     case 'javascript':
-      return Javascript
+      return JavaScript
     default:
       return Windi
   }

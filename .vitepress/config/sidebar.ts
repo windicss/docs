@@ -148,7 +148,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         // { text: 'Next.js', link: '/integrations/nextjs' },
         { text: 'Svelte', link: '/integrations/svelte' },
         { text: 'CLI', link: '/integrations/cli' },
-        { text: 'Javascript', link: '/integrations/javascript' },
+        { text: 'JavaScript API', link: '/integrations/javascript' },
         { text: 'PostCSS', link: '/integrations/postcss' },
         { text: 'VS Code', link: '/editors/vscode' },
         { text: 'WebStorm', link: '/editors/webstorm' },
