@@ -32,6 +32,11 @@ Supports for build tools are framework-agnostic, they work for most frameworks w
     link: '/integrations/cli',
     logo: 'cli',
   },
+    {
+    title: 'Javascript',
+    link: '/integrations/javascript',
+    logo: 'javascript',
+  },
 ]"/>
 
 ## Frameworks
