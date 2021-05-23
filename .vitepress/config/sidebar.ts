@@ -83,6 +83,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'From v2.2 to v2.4', link: '/posts/v24' },
         { text: 'WindiCSS v3 now in beta', link: '/posts/v30' },
         { text: 'Recent changes (v30-v35)', link: '/posts/v30-5' },
+        { text: 'What\'s new in extension?', link: '/posts/extension-updates' },
       ],
     },
     {
