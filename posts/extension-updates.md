@@ -34,6 +34,10 @@
 
 ![Hover Group Class](https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/hover-group-attr.png)
 
+## Support Diagnostic
+
+![Diagnostic](https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/diagnostic.png)
+
 ## Better Dynamic Utility Support
 
 ![Dynamic Float](https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/dynamic-float.png)
