@@ -41,9 +41,9 @@ import WindiCSS from 'windicss-webpack-plugin'
 export default {
   // ...
   plugins: [
-    new WindiCSS
+    new WindiCSS(),
   ],
-};
+}
 ```
 
 Within an entry point file or something only loaded once, add the import of `windi.css`. 
@@ -171,7 +171,7 @@ export default {
       },
     }),
   ],
-};
+}
 ```
 
 ## Configuration
