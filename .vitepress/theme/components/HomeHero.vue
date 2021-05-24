@@ -29,7 +29,7 @@
         </div>
       </div>
       <a class="bg-primary rounded font-bold bg-opacity-10 text-center py-4 px-8 block" href="/posts/v30.html">
-        🎉 v3.0 is now in Beta with a bunch of exciting new features!
+        🎉 v3.0 is now out with a bunch of exciting new features!
       </a>
     </div>
   </header>
