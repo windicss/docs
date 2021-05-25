@@ -5,9 +5,9 @@ import { StreamLanguage } from '@codemirror/stream-parser'
 import { javascript } from '@codemirror/lang-javascript'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/legacy-modes/mode/css'
+import { basicSetup, hoverPreview } from '../plugin'
 import type Processor from 'windicss'
 import type { PropType } from 'vue'
-import { basicSetup, hoverPreview } from '../plugin'
 
 export default defineComponent({
   name: 'Editor',

@@ -7,12 +7,12 @@ import JSON5 from 'json5'
 import { IframePreview } from '@windicss/shared-components'
 import '@windicss/shared-components/index.css'
 
-import type { PropType } from 'vue'
-import type CodeMirror from 'codemirror'
-import type { Config } from 'windicss/types/interfaces'
 import { useCodeMirror } from '../../composables/useCodeMirror'
 import { usePrismCSS } from '../../composables/usePrismCSS'
 import { isDark } from '../../composables/dark'
+import type { PropType } from 'vue'
+import type CodeMirror from 'codemirror'
+import type { Config } from 'windicss/types/interfaces'
 
 const props = defineProps({
   input: {

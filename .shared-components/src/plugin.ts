@@ -15,8 +15,8 @@ import { classHighlightStyle } from '@codemirror/highlight'
 import { lintKeymap } from '@codemirror/lint'
 
 import { hoverTooltip } from '@codemirror/tooltip'
-import type Processor from 'windicss'
 import { usePrismCSS } from './usePrismCSS'
+import type Processor from 'windicss'
 
 const tabSize = new Compartment()
 

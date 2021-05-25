@@ -1,6 +1,6 @@
-import type { DefaultTheme } from '../theme/config'
 import { sidebar } from './sidebar'
 import { nav } from './nav'
+import type { DefaultTheme } from '../theme/config'
 
 const themeConfig: DefaultTheme.Config = {
   algolia: {
