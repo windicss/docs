@@ -228,8 +228,8 @@ If you are concerned about naming confliction, you can add custom prefix to attr
 // windi.config.ts
 export default {
   attributify: {
-    prefix: 'w:'
-  }
+    prefix: 'w:',
+  },
 }
 ```
 
