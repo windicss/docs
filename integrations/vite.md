@@ -194,6 +194,72 @@ export default defineConfig({
 })
 ```
 
+
+### [Attributify Mode](https://windicss.org/posts/v30.html#attributify-mode)
+
+Enabled it by 
+
+```ts
+// windi.config.ts
+export default {
+  attributify: true,
+}
+```
+
+And use them as you would like:
+
+```html
+<button 
+  bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+  text="sm white"
+  font="mono light"
+  p="y-2 x-4"
+  border="2 rounded blue-200"
+>
+  Button
+</button>
+```
+
+#### Prefix
+
+If you are concerned about naming confliction, you can add custom prefix to attributify mode by:
+
+```ts
+// windi.config.ts
+export default {
+  attributify: {
+    prefix: 'w:'
+  }
+}
+```
+
+```html
+<button 
+  w:bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+  w:text="sm white"
+  w:font="mono light"
+  w:p="y-2 x-4"
+  w:border="2 rounded blue-200"
+>
+  Button
+</button>
+```
+
+### [Alias Config](https://windicss.org/posts/v30.html#alias-config)
+
+```ts
+// windi.config.ts
+export default {
+  alias: {
+    'hstack': 'flex items-center',
+    'vstack': 'flex flex-col',
+    'icon': 'w-6 h-6 fill-current',
+    'app': 'text-red',
+    'app-border': 'border-gray-200 dark:border-dark-300',
+  },
+}
+```
+
 ### Layers Ordering
 
 > Supported from v0.14.x
