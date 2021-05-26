@@ -60,12 +60,12 @@ import 'windi.css'
 
 ### TypeScript
 
-Enable TypeScript for your `tailwind.config.js`? Sure, why not?
+Enable TypeScript for your `windicss.config.js`? Sure, why not?
 
-Rename it to `tailwind.config.ts` and things just work!
+Rename it to `windicss.config.ts` and things just work!
 
 ```ts
-// tailwind.config.ts
+// windicss.config.ts
 import { defineConfig } from 'windicss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
