@@ -1,14 +1,25 @@
+import { dirname, resolve } from 'path'
 import { defineConfig } from 'vite'
 import Components from 'vite-plugin-components'
 import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 import WindiCSS from 'vite-plugin-windicss'
 import ViteRestart from 'vite-plugin-restart'
+import { sync } from 'resolve'
+
+export function resolveImportPath(importName: string) {
+  return sync(importName, {
+    preserveSymlinks: false,
+  })
+}
+
+const themeRoot = dirname(resolveImportPath('@windicss/vitepress-theme/package.json'))
 
 export default defineConfig({
   plugins: [
     Components({
       dirs: [
         '.vitepress/theme/components',
+        `${themeRoot}/components`,
       ],
       extensions: ['vue', 'ts'],
       customLoaderMatcher: id => id.endsWith('.md'),
@@ -21,7 +32,11 @@ export default defineConfig({
     Icons({
       defaultStyle: 'vertical-align: middle;',
     }),
-    WindiCSS(),
+    WindiCSS({
+      configFiles: [
+        resolve(themeRoot, 'windi.config.ts'),
+      ],
+    }),
     ViteRestart({
       restart: '.vitepress/config/*.*',
     }),
@@ -41,13 +56,11 @@ export default defineConfig({
       'windicss/utils/parser',
       'prismjs',
       'prismjs/components/prism-css',
-      'change-case',
       'codemirror',
       'codemirror/mode/css/css',
       'codemirror/mode/javascript/javascript',
     ],
     exclude: [
-      'vue-demi',
       '@windicss/shared-components',
     ],
   },

@@ -1,6 +1,6 @@
 import { sidebar } from './sidebar'
 import { nav } from './nav'
-import type { DefaultTheme } from '../theme/config'
+import type { DefaultTheme } from '@windicss/vitepress-theme/config'
 
 const themeConfig: DefaultTheme.Config = {
   algolia: {
