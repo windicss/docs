@@ -166,7 +166,7 @@ and /* this is multi line comment */
 ```css
 @var color = 'blue';
 @var color = "blue";
-@var borderValue = `${borderWidth} solid ${borderDark};` /* template string */
+@var borderValue = `${borderWidth} solid ${borderDark}`; /* template string */
 ```
 
 ### **sizes**
