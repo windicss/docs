@@ -94,8 +94,7 @@ export default {
 
 ### Scanning
 
-On server start, `vite-plugin-windicss` will scan your source code and extract the utilities usages. By default,
-only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scaning for other file type of locations, you can configure it via:
+On server start, `vite-plugin-windicss` will scan your source code and extract the utilities usages. By default, only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scaning for other file type of locations, you can configure it via:
 
 ```ts
 // vite.config.js
