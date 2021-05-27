@@ -5,6 +5,7 @@ import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 import WindiCSS from 'vite-plugin-windicss'
 import ViteRestart from 'vite-plugin-restart'
 import { sync } from 'resolve'
+import { ensurePrefix, slash } from '@antfu/utils'
 
 export function resolveImportPath(importName: string) {
   return sync(importName, {
@@ -12,9 +13,18 @@ export function resolveImportPath(importName: string) {
   })
 }
 
+export function toAtFS(path: string) {
+  return `/@fs${ensurePrefix('/', slash(path))}`
+}
+
 const themeRoot = dirname(resolveImportPath('@windicss/vitepress-theme/package.json'))
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@windicss/vitepress-theme/': `${toAtFS(themeRoot)}/`,
+    },
+  },
   plugins: [
     Components({
       dirs: [
