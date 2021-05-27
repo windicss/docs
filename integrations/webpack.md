@@ -140,8 +140,7 @@ export default defineConfig({
 
 ### Scanning
 
-On server start, `windicss-webpack-plugin` will scan your source code and extract the utility usages. By default,
-only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
+On server start, `windicss-webpack-plugin` will scan your source code and extract the utility usages. By default, only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
 
 ```ts
 // windi.config.js
