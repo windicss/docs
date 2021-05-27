@@ -5,8 +5,6 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "serve": "vitepress serve",
-    "shared:build": "npm -C .shared-components run build",
-    "build-all": "npm run shared:build && npm run build",
     "crawl": "docker run --rm -it --env-file=.algolia/.env -e \"CONFIG=$(cat .algolia/config.json | jq -r tostring)\" algolia/docsearch-scraper",
     "lint": "eslint --ext .js,.ts,.md,.vue ./",
     "lint:fix": "eslint --fix --ext .js,.ts,.md,.vue ./",

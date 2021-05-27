@@ -41,7 +41,7 @@ jobs:
         run: nr test --if-present
 
       - name: Build
-        run: nr build-all
+        run: nr build
 
   lint:
     runs-on: ubuntu-latest
