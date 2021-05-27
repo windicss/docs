@@ -66,7 +66,7 @@ windicss --init <project> --compile  // windicss --init hello_world --compile
 
 The `[filenames]` parameter can include filepaths and glob patterns(powerd by [node-glob](https://github.com/isaacs/node-glob)).
 
-```base
+```sh
 windicss './hello.html' './world.html'
 windicss './**/*.html'
 windicss './src/**/*.html'
