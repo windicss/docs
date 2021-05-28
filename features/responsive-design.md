@@ -27,7 +27,7 @@ lg  => greater or equal than this breakpoint
 ## Breakpoints
 
 |  | Default | `<` prefixed | `@` prefixed |
-| :------ | :--- | :--- | :--- | :--- |
+| :------ | :--- | :--- | :--- |
 | sm | (min-width: 640px) | (max-width: 639.9px) | (min-width: 640px) and <br>(max-width: 767.9px) |
 | md | (min-width: 768px) | (max-width: 767.9px) | (min-width: 768px) and <br>(max-width: 1023.9px) |
 | lg | (min-width: 1024px) | (max-width: 1023.9px) | (min-width: 1024px) and <br>(max-width: 1279.9px) |
