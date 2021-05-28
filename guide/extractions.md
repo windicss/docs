@@ -60,7 +60,7 @@ If you want to enable scaning for other file type of locations, you can configur
 
 ```ts
 // windi.config.js
-import { defineConfig } from 'windcss/helpers'
+import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
   extract: {
@@ -85,7 +85,7 @@ To completely disable it, you can change the configurations as below
 
 ```ts
 // windi.config.js
-import { defineConfig } from 'windcss/helpers'
+import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
   preflight: false,
@@ -96,7 +96,7 @@ Or explicitly enables with safelisting
 
 ```ts
 // windi.config.js
-import { defineConfig } from 'windcss/helpers'
+import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
   preflight: {
