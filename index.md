@@ -22,6 +22,9 @@ features:
   - title: Auto-utilities
     details: Infers number, sizes, and colors from your classes
 footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
+
+newsTitle: 🎉 v3.0 is now out with a bunch of exciting new features!
+newsLink: /posts/v30.html
 ---
 
 <Sponsors />
