@@ -92,7 +92,7 @@ export default {
 
 ### Directives
 
-Tailwind-liked `@apply`, `@screen` directives are fully supported.
+Tailwind-like `@apply`, `@screen` directives are fully supported.
 
 ```css
 .btn {
