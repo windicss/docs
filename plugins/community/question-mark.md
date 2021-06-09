@@ -14,7 +14,7 @@ Install the plugin from npm:
 npm install --save-dev @windicss/plugin-question-mark
 ```
 
-Then add the plugin to your `tailwind.config.js` file:
+Then add the plugin to your `windi.config.js` file:
 
 ```js
 // windi.config.js
