@@ -101,7 +101,7 @@ Will generate only the following classes
 ## Defaults
 
 The default configuration is the following.
-And it will generate alle the patterns with the default color of [heropatterns.com](https://www.heropatterns.com/)
+And it will generate all the patterns with the default color of [heropatterns.com](https://www.heropatterns.com/)
 
 ```js
 config = {
