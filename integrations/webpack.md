@@ -173,6 +173,28 @@ export default {
 }
 ```
 
+### Layers Ordering
+
+> Supported from v1.1.x
+
+By default, importing `windi.css` or `virtual:windi.css` will import all the three layers with the order `base - components - utilities`. If you want to have better controls over the orders, you can separate them by:
+
+```diff
+- import 'virtual:windi.css'
++ import 'virtual:windi-base.css'
++ import 'virtual:windi-components.css'
++ import 'virtual:windi-utilities.css'
+```
+
+You can also make your custom css be able to be overridden by certain layers:
+
+```diff
+  import 'virtual:windi-base.css'
+  import 'virtual:windi-components.css'
++ import './my-style.css'
+  import 'virtual:windi-utilities.css'
+```
+
 ## Configuration
 
 See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts) for configuration reference.
