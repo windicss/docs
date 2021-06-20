@@ -39,8 +39,8 @@ That's all.
 
 Preflight is enables on demanded, if you'd like to completely disable it, you can configure it as below
 
-```ts
-// vite.config.js
+```js
+// rollup.config.js
 export default {
   plugins: [
     WindiCSS({
@@ -61,8 +61,8 @@ By default, we scan your source code statically and find all the usages of the u
 
 For that, you will need to specify the possible combinations in the `safelist` options of `vite.config.js`.
 
-```ts
-// vite.config.js
+```js
+// rollup.config.js
 export default {
   plugins: [
     WindiCSS({
@@ -74,12 +74,12 @@ export default {
 
 Or you can do it this way
 
-```ts
+```js
 function range(size, startAt = 1) {
   return Array.from(Array(size).keys()).map(i => i + startAt)
 }
 
-// vite.config.js
+// rollup.config.js
 export default {
   plugins: [
     WindiCSS({
@@ -96,8 +96,8 @@ export default {
 
 On server start, `vite-plugin-windicss` will scan your source code and extract the utilities usages. By default, only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scaning for other file type of locations, you can configure it via:
 
-```ts
-// vite.config.js
+```js
+// rollup.config.js
 export default {
   plugins: [
     WindiCSS({
