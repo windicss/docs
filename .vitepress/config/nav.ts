@@ -1,4 +1,4 @@
-import type { DefaultTheme } from '@windicss/vitepress-theme/config'
+import type { DefaultTheme } from '../theme/config'
 
 export const nav: DefaultTheme.Config['nav'] = [
   {

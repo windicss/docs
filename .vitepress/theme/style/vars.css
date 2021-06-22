@@ -1,0 +1,4 @@
+:root {
+  --header-height: 4.5rem;
+  --full-header: calc(100vh - var(--header-height));
+}

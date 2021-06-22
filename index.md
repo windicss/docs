@@ -29,7 +29,7 @@ newsLink: /posts/v30.html
 
 <Sponsors />
 
-<InlinePlayground 
+<!-- <InlinePlayground 
   :input="`bg-gradient-to-r from-green-400 to-blue-500
 m-4 px-4 py-3 text-white text-center italic rounded cursor-default 
 transition-all duration-400
@@ -53,7 +53,7 @@ dark:\(from-teal-400 to-yellow-500)`"
     }
   }
 }"
-/>
+/> -->
 
 <p class="flex justify-center opacity-75 mt-12">
   <a href="https://www.netlify.com" rel="noreferrer" target="_blank">

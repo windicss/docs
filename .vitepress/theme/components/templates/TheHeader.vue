@@ -1,0 +1,39 @@
+<script setup lang="ts">
+import { useData } from 'vitepress'
+import { useRepo } from '@/logics/repo'
+const { theme } = useData()
+const repo = useRepo()
+</script>
+
+<template>
+  <header class="d-header">
+    <div class="flex flex-none h-full container max-w-screen-2xl mx-auto md:px-6">
+      <div class="flex items-center">
+        <AppLogo />
+      </div>
+      <div class="flex items-center flex-1 ml-22">
+        <AlgoliaSearchBox :options="theme.algolia" />
+      </div>
+      <div class="flex items-center flex-1">
+        <DropdownMenu />
+      </div>
+      <div class="flex items-center space-x-3 pl-6">
+        <IconButton :href="repo?.link">
+          <carbon-logo-github />
+        </IconButton>
+        <ToggleDark />
+      </div>
+    </div>
+  </header>
+</template>
+
+<style scoped lang="postcss">
+.d-header {
+  @apply
+    fixed top-0 inset-x-0 z-50
+    bg-white dark:bg-dark-800
+    flex items-center
+    border-b border-gray-100 dark:border-dark-200;
+  height: var(--header-height);
+}
+</style>

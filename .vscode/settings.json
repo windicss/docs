@@ -19,5 +19,8 @@
   },
   "files.associations": {
     "*.css": "postcss"
-  }
+  },
+  "eslint.workingDirectories": [
+		{ "directory": ".vitepress" }
+	]
 }

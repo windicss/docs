@@ -1,5 +1,5 @@
 import { UserConfig } from 'vitepress'
-import { DefaultTheme } from '@windicss/vitepress-theme/config'
+import { DefaultTheme } from '../theme/config'
 import { metaData } from './constants'
 import head from './head'
 import themeConfig from './theme'

@@ -1,0 +1,15 @@
+<script setup lang="ts">
+import { useSideBar } from '@/logics/sideBar'
+import { computed } from '@vue/runtime-core'
+
+const items = useSideBar()
+const hasItem = computed(() => items.value.length > 0)
+</script>
+
+<template>
+  <ul v-if="hasItem" class="py-4 pl-4 lg:pt-10">
+    <template v-for="item of items" :key="item.text">
+      <SidebarLink :item="item" :max-depth="2" />
+    </template>
+  </ul>
+</template>
