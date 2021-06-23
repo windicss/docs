@@ -1,6 +1,9 @@
 <template>
-  <footer class="flex justify-between items-center py-8">
-    <EditLink />
-    <LastUpdated />
+  <footer>
+    <div class="flex justify-between items-center py-8">
+      <EditLink />
+      <LastUpdated />
+    </div>
+    <NextAndPrevLinks />
   </footer>
 </template>

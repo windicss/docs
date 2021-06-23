@@ -17,7 +17,7 @@ const heroText = computed(() => frontmatter.value.heroText || site.value.title)
 </script>
 
 <template>
-  <header v-if="showHero" class="home-hero">
+  <header v-if="showHero" class="flex items-center justify-center h-$full-header md:px-6">
     <div>
       <div class="space-y-2 mb-12 md:mb-14">
         <figure v-if="frontmatter.heroImage">
@@ -50,10 +50,3 @@ const heroText = computed(() => frontmatter.value.heroText || site.value.title)
     </div>
   </header>
 </template>
-
-<style scoped lang="postcss">
-.home-hero {
-  height: calc(100vh - var(--header-height));
-  @apply md:px-6 flex items-center justify-center;
-}
-</style>

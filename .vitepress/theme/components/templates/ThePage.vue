@@ -15,7 +15,6 @@ defineProps({})
         <Content />
       </div>
       <PageFooter />
-      <NextAndPrevLinks />
     </ContentLayout>
     <TheRightSidebar />
   </AppLayout>
