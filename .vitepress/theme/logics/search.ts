@@ -3,10 +3,11 @@ import { useRoute, useRouter, useData } from 'vitepress'
 import { getCurrentInstance } from 'vue'
 
 import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
+import type { DefaultTheme } from '@/config'
 
 export function useSearchBox(props: Readonly<{
-  options: DefaultTheme.AlgoliaSearchOptions;
-  multilang?: boolean | undefined;
+  options: DefaultTheme.AlgoliaSearchOptions
+  multilang?: boolean | undefined
 }>) {
   const vm = getCurrentInstance()
   const route = useRoute()

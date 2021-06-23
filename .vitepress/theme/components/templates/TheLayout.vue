@@ -6,16 +6,15 @@ import ThePage from './ThePage.vue'
 
 const { frontmatter } = useData()
 
-const ThePlay = defineAsyncComponent(async () => await import('./ThePlay.vue'))
+const ThePlay = defineAsyncComponent(async() => await import('./ThePlay.vue'))
 
 const page = computed(() => {
-  if (frontmatter.value.home) {
+  if (frontmatter.value.home)
     return TheHome
-  } else if (frontmatter.value.playground) {
+  else if (frontmatter.value.playground)
     return ThePlay
-  } else { 
+  else
     return ThePage
-  }
 })
 
 </script>
