@@ -63,7 +63,11 @@ html.dark {
 }
 
 :not(pre) > code {
-  @apply !text-violet-400 !font-normal !text-base;
+  @apply !text-violet-400 !font-normal !text-0.95rem;
+}
+
+.prose table code {
+  @apply !text-violet-400 !font-normal !text-sm;
 }
 
 a.header-anchor {
