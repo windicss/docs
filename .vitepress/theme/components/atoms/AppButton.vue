@@ -20,20 +20,15 @@ const props = defineProps({
 
 const linkClass = computed(() => ([
   `
-  inline-flex
-  items-center
-  justify-center
-  px-3
-  py-2
-  hover:bg-primary-600
-  ring-primary focus:ring-3 ring-opacity-50
-  border border-transparent
-  text-base
-  font-medium
-  rounded-md
-  shadow-sm
-  text-white
+  inline-flex items-center justify-center
+  px-3 py-2
+  border border-transparent rounded-md
   bg-primary
+  hover:bg-primary-600
+  shadow-sm
+  text-base text-white font-medium
+  transition duration-50
+  ring-primary focus:ring-3 ring-opacity-50
   `, {
     'bg-transparent border border-primary text-primary hover:text-gray-100': props.outline,
     'text-sm underline': props.inline,

@@ -39,8 +39,9 @@ const active = computed(() => isActive(route, props.item.link))
 const link = resolveLink(site.value.base, props.item.link)
 
 const style = computed(() => ([
+  'transition duration-200',
   props.header
-    ? 'font-bold py-2 transition duration-200'
+    ? 'font-bold py-2'
     : props.table
       ? `inline-flex
       items-center
@@ -52,10 +53,8 @@ const style = computed(() => ([
       items-center
       justify-between
       pl-3 py-1
-      transition
-      duration-200
-      border-l border-gray-100
-      dark:border-gray-800
+      border-l border-gray-200
+      dark:border-cool-gray-800
       text-sm text-gray-700
       dark:text-gray-400
       hover:(text-primary dark:text-primary)`,

@@ -11,7 +11,7 @@ const { props: linkProps } = useNavLink(propsRefs.item, props.dropdown)
 </script>
 
 <template>
-  <a class="p-2 inline-flex items-center font-medium" v-bind="linkProps">
+  <a class="p-2 inline-flex items-center font-medium transition duration-50" v-bind="linkProps">
     {{ item.text }}
   </a>
 </template>
