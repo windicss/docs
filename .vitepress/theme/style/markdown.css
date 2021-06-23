@@ -128,3 +128,11 @@ h6:focus .header-anchor {
 .prose blockquote p:first-of-type::after {
   content: none;
 }
+
+.prose tbody tr {
+  @apply border-b-gray-200 dark:border-b-dark-300;
+}
+
+.prose thead {
+  @apply border-b-gray-300 dark:border-b-dark-100;
+}

@@ -58,6 +58,9 @@ export default defineConfig({
             pre: { color: 'inherit', fontSize: '.9rem' },
             thead: { color: 'inherit' },
             blockquote: { color: 'inherit' },
+            table: {
+              borderCollapse: 'collapse',
+            },
           },
         },
       },
