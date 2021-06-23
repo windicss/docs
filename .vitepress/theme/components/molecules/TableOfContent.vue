@@ -3,7 +3,7 @@ import { useRoute } from 'vitepress'
 
 import type { Header } from '@/types'
 import type { DefaultTheme } from '@/config'
-import { computed } from '@vue/runtime-core'
+import { computed } from 'vue'
 
 interface HeaderWithChildren extends Header {
   children?: Header[]

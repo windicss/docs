@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSideBar } from '@/logics/sideBar'
-import { computed } from '@vue/runtime-core'
+import { computed } from 'vue'
 
 const items = useSideBar()
 const hasItem = computed(() => items.value.length > 0)
