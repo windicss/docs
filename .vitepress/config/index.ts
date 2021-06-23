@@ -9,6 +9,7 @@ const config: UserConfig<DefaultTheme.Config> = {
   description: metaData.description,
   head,
   themeConfig,
+  srcExclude: ['README.md'],
 }
 
 export default config
