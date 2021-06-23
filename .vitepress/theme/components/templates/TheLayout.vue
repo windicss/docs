@@ -8,6 +8,7 @@ const { frontmatter } = useData()
 <template>
   <div class="relative antialiased">
     <TheHome v-if="frontmatter.home" />
+    <ThePlay v-else-if="frontmatter.playground" />
     <ThePage v-else />
   </div>
 </template>

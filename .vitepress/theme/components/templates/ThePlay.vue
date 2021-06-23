@@ -6,14 +6,10 @@ defineProps({})
 </script>
 
 <template>
-  <TheHeader />
+  <ThePlayHeader />
   <AppLayout class="content">
-    <TheSidebar class="lg:hidden" />
-    <ContentLayout class="!pt-0">
-      <HomeHero />
-      <div class="prose min-w-0">
-        <Content />
-      </div>
+    <ContentLayout>
+      <Playground />
     </ContentLayout>
   </AppLayout>
   <HomeFooter />

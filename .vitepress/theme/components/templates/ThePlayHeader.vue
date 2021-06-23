@@ -1,0 +1,32 @@
+<script setup lang="ts">
+import { useRepo } from '@/logics/repo'
+const repo = useRepo()
+</script>
+
+<template>
+  <header class="d-header">
+    <div class="flex flex-none h-full container !max-w-screen-2xl mx-auto px-2 md:px-6">
+      <div class="flex items-center flex-1">
+        <AppLogo />
+      </div>
+      <div class="flex items-center lg:space-x-3 lg:pl-3 xl:pl-6">
+        <PlaygroundActionButtons />
+        <IconButton class="hidden lg:inline-flex" :href="repo?.link">
+          <carbon-logo-github />
+        </IconButton>
+        <ToggleDark />
+      </div>
+    </div>
+  </header>
+</template>
+
+<style scoped lang="postcss">
+.d-header {
+  @apply
+    fixed top-0 inset-x-0 z-50
+    bg-light-100 dark:bg-dark-800
+    flex items-center
+    border-b border-gray-200 dark:border-dark-200;
+  height: var(--header-height);
+}
+</style>
