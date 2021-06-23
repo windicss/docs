@@ -27,15 +27,15 @@ onUnmounted(() => {
     <div v-if="show" class="dropdown-model">
       <span>Components</span>
       <div class="flex space-x-2">
-        <NavBarIcon>
+        <IconButton>
           <logos:vue />
-        </NavBarIcon>
-        <NavBarIcon>
+        </IconButton>
+        <IconButton>
           <logos:react />
-        </NavBarIcon>
-        <NavBarIcon>
+        </IconButton>
+        <IconButton>
           <logos:svelte-icon />
-        </NavBarIcon>
+        </IconButton>
       </div>
     </div>
   </div>

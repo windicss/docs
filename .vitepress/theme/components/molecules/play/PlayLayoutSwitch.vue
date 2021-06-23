@@ -9,19 +9,19 @@ defineProps({
 
 <template>
   <div class="relative hidden md:block" @click.stop="$emit('toggle')">
-    <NavBarIcon title="Switch layout" alt="Switch layout">
+    <IconButton title="Switch layout" alt="Switch layout">
       <carbon:open-panel-right />
-    </NavBarIcon>
+    </IconButton>
     <div v-if="open" class="dropdown-model">
-      <NavBarIcon v-if="layout !== 'left'" @click="layout = 'left'">
+      <IconButton v-if="layout !== 'left'" @click="layout = 'left'">
         <carbon:open-panel-left />
-      </NavBarIcon>
-      <NavBarIcon v-if="layout !== 'bottom'" @click="layout = 'bottom'">
+      </IconButton>
+      <IconButton v-if="layout !== 'bottom'" @click="layout = 'bottom'">
         <carbon:open-panel-bottom />
-      </NavBarIcon>
-      <NavBarIcon v-if="layout !== 'right'" @click="layout = 'right'">
+      </IconButton>
+      <IconButton v-if="layout !== 'right'" @click="layout = 'right'">
         <carbon:open-panel-right />
-      </NavBarIcon>
+      </IconButton>
     </div>
   </div>
 </template>

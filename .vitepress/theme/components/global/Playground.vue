@@ -45,24 +45,24 @@ useEmitShare(htmlCode, styleCode)
     <ClientOnly>
       <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="w-full h-full default-theme">
         <Pane v-if="layout === 'left'" min-size="20" :size="bpmd ? 40 : 33">
-          <PreviewBlock class="h-full">
+          <PlayPreviewBlock class="h-full">
             <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" :dark="isDark" />
-          </PreviewBlock>
+          </PlayPreviewBlock>
         </Pane>
         <Pane min-size="20" :size="bpmd ? 60 : 66">
           <Splitpanes :horizontal="layout !== 'bottom'">
             <Pane min-size="20">
-              <TemplateBlock v-model="htmlCode" class="w-full h-full" :processor="processor" />
+              <PlayTemplateBlock v-model="htmlCode" class="w-full h-full" :processor="processor" />
             </Pane>
             <Pane min-size="20">
-              <StyleBlock v-model="styleCode" class="w-full h-full" :processor="processor" />
+              <PlayStyleBlock v-model="styleCode" class="w-full h-full" :processor="processor" />
             </Pane>
           </Splitpanes>
         </Pane>
         <Pane v-if="layout !== 'left'" min-size="20" :size="bpmd ? 40 : 33">
-          <PreviewBlock class="h-full">
+          <PlayPreviewBlock class="h-full">
             <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" :dark="isDark" />
-          </PreviewBlock>
+          </PlayPreviewBlock>
         </Pane>
       </Splitpanes>
     </ClientOnly>

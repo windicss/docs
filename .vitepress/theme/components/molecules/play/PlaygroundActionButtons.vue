@@ -19,7 +19,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <ShareButton />
-  <LayoutSwitch :open="show === 'layout'" @toggle="handleToggle('layout')" />
-  <DownloadButton :open="show === 'export'" class="!hidden !md:inline-flex" @toggle="handleToggle('export')" />
+  <div class="inline-flex space-x-2 mr-3">
+    <PlayShareButton />
+    <PlayDivide />
+    <PlayLayoutSwitch :open="show === 'layout'" @toggle="handleToggle('layout')" />
+    <PlayDivide />
+    <PlayDownloadButton :open="show === 'export'" class="!hidden !md:inline-flex" @toggle="handleToggle('export')" />
+  </div>
 </template>

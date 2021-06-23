@@ -10,7 +10,7 @@ export const css = `.box {
     px-4 py-1 text-sm text-purple-600 font-semibold
     rounded-full border border-purple-200 dark:border-purple-800
     hover:(text-white bg-purple-600 border-transparent)
-    focus:(outline-none ring-2 ring-purple-600 ring-offset-2);
+    focus:outline-none focus:ring-2 ring-purple-600 ring-opacity-40;
 }
 `
 

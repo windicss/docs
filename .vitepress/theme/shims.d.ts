@@ -6,3 +6,11 @@ declare module '@docsearch/js' {
   }
   export default function docsearch(props: DocSearchProps): void
 }
+
+declare module 'splitpanes' {
+  // eslint-disable-next-line import/no-duplicates
+  import { ComponentOptions } from 'vue'
+  const Splitpanes: ComponentOptions
+  const Pane: ComponentOptions
+  export { Splitpanes, Pane }
+}

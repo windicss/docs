@@ -5,11 +5,14 @@ const repo = useRepo()
 
 <template>
   <header class="d-header">
-    <div class="flex flex-none h-full container !max-w-screen-2xl mx-auto px-2 md:px-6">
+    <div class="flex flex-none h-full w-full px-3 md:px-6">
       <div class="flex items-center flex-1">
         <AppLogo />
+        <span class="hidden md:block text-sm ml-2 mt-1 text-cool-gray-400 dark:text-cool-gray-500">
+          play v1.0.0
+        </span>
       </div>
-      <div class="flex items-center lg:space-x-3 lg:pl-3 xl:pl-6">
+      <div class="flex items-center md:space-x-3">
         <PlaygroundActionButtons />
         <IconButton class="hidden lg:inline-flex" :href="repo?.link">
           <carbon-logo-github />

@@ -10,18 +10,18 @@ defineProps({
 
 <template>
   <div class="relative hidden md:block" @click.stop="$emit('toggle')">
-    <NavBarIcon title="Download component" alt="Download component">
+    <IconButton title="Download component" alt="Download component">
       <carbon:download />
-    </NavBarIcon>
+    </IconButton>
     <div v-if="open" class="dropdown-model">
       <span>Components</span>
       <div class="flex space-x-2">
-        <NavBarIcon class="!text-2xl" @click="emitExport('vue')">
+        <IconButton class="!text-2xl" @click="emitExport('vue')">
           <logos:vue />
-        </NavBarIcon>
-        <NavBarIcon class="!text-2xl" @click="emitExport('svelte')">
+        </IconButton>
+        <IconButton class="!text-2xl" @click="emitExport('svelte')">
           <logos:svelte-icon />
-        </NavBarIcon>
+        </IconButton>
         <!-- TODO -->
         <!-- <NavBarIcon @click="emitExport('react')">
           <logos:react />

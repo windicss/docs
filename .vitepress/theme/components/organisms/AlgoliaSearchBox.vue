@@ -153,6 +153,7 @@ function initialize(userOptions: any) {
   --docsearch-hit-color: theme('colors.cool-gray.800');
   --docsearch-hit-background: rgba(125,125,125,0.1);
   --docsearch-hit-shadow: none;
+  --docsearch-hit-height: 3.5rem;
 
   --docsearch-primary-color: theme('colors.primary.600');
   --docsearch-highlight-color: var(--docsearch-primary-color);
@@ -162,7 +163,7 @@ function initialize(userOptions: any) {
   --docsearch-searchbox-background: transparent;
   --docsearch-searchbox-focus-background: transparent;
   --docsearch-searchbox-shadow: none;
-  --docsearch-searchbox-height: 3.25rem;
+  --docsearch-searchbox-height: 3.5rem;
 
   --docsearch-text-color: theme('colors.cool-gray.600');
   --docsearch-muted-color: theme('colors.cool-gray.400');

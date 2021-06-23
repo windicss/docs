@@ -5,6 +5,7 @@ import 'virtual:windi.css'
 import './style/vars.css'
 import './style/all.css'
 import './style/markdown.css'
+import './style/codemirror-prism-vars.css'
 
 import Layout from './Layout.vue'
 
