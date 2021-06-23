@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es2017",
+    "target": "esnext",
     "module": "esnext",
     "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
     "moduleResolution": "node",

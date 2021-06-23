@@ -6,15 +6,7 @@ defineProps({})
 </script>
 
 <template>
-  <nav
-    class="
-        flex flex-col
-        justify-between
-        lg:justify-start
-        overflow-y-auto
-        h-$full-header
-      "
-  >
+  <nav>
     <SidebarLinks />
   </nav>
 </template>

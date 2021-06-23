@@ -7,26 +7,31 @@ defineProps({})
 
 <template>
   <TheHeader />
-  <div class="content">
+  <AppLayout class="content">
     <TheSidebar />
-    <div class="grid py-12 px-4">
+    <ContentLayout>
       <HomeHero />
       <div class="prose min-w-0">
         <Content />
       </div>
       <PageFooter />
       <NextAndPrevLinks />
-    </div>
+    </ContentLayout>
     <TheRightSidebar />
-  </div>
+  </AppLayout>
 </template>
 
 <style scoped lang="postcss">
 .content {
   display: grid;
-  grid-template-columns: 250px 1fr 250px;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 0px 12px;
-  @apply container !max-w-screen-2xl px-6 mx-auto pt-$header-height;
+}
+
+@screen lg {
+  .content {
+    grid-template-columns: 250px 1fr 250px;
+  }
 }
 </style>

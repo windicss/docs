@@ -4,9 +4,10 @@ import type { DefaultTheme } from '@/config'
 import { useNavLink } from '@/logics/navLink'
 const props = defineProps<{
   item: DefaultTheme.NavItemWithLink
+  dropdown?: boolean
 }>()
 const propsRefs = toRefs(props)
-const { props: linkProps } = useNavLink(propsRefs.item)
+const { props: linkProps } = useNavLink(propsRefs.item, props.dropdown)
 </script>
 
 <template>

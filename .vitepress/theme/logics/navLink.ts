@@ -4,7 +4,7 @@ import { useRoute, withBase } from 'vitepress'
 import { isExternal as isExternalCheck } from '../utils'
 import type { DefaultTheme } from '../config'
 
-export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
+export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>, isDropdown = false) {
   const route = useRoute()
 
   const isExternal = isExternalCheck(item.value.link)
@@ -23,7 +23,8 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
 
     return {
       'class': {
-        'bg-gray-200 dark:bg-dark-400': active,
+        'bg-gray-200 dark:bg-dark-400': active && isDropdown,
+        'text-primary': active && !isDropdown,
         isExternal,
       },
       'href': isExternal ? item.value.link : withBase(item.value.link),

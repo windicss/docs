@@ -1,4 +1,6 @@
-// types shared between server and client
+import type { Ref } from 'vue'
+
+export type MaybeRef<T> = T | Ref<T>
 
 export type HeadConfig =
   | [string, Record<string, string>]

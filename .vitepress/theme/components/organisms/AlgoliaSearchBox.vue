@@ -10,11 +10,14 @@ import type { DefaultTheme } from '@/config'
 const props = defineProps<{
   options: DefaultTheme.AlgoliaSearchOptions
   multilang?: boolean
+  id?: string
 }>()
 
 const vm = getCurrentInstance()
 const route = useRoute()
 const router = useRouter()
+
+const searchId = props.id || 'docsearch'
 
 watch(
   () => props.options,
@@ -45,7 +48,7 @@ function getRelativePath(absoluteUrl: string) {
 function update(options: any) {
   if (vm && vm.vnode.el) {
     vm.vnode.el.innerHTML
-      = '<div class="algolia-search-box" id="docsearch"></div>'
+      = `<div class="algolia-search-box" id="${searchId}"></div>`
     initialize(options)
   }
 }
@@ -58,7 +61,7 @@ function initialize(userOptions: any) {
   const facetFilters = props.multilang ? [`language:${lang.value}`] : []
   docsearch(
     Object.assign({}, userOptions, {
-      container: '#docsearch',
+      container: `#${searchId}`,
       searchParameters: Object.assign({}, userOptions.searchParameters, {
         // pass a custom lang facetFilter to allow multiple language search
         // https://github.com/algolia/docsearch-configs/pull/3942
@@ -130,7 +133,7 @@ function initialize(userOptions: any) {
 </script>
 
 <template>
-  <div id="docsearch" class="algolia-search-box" />
+  <div :id="searchId" class="algolia-search-box" />
 </template>
 
 <style lang="postcss">
@@ -147,7 +150,7 @@ function initialize(userOptions: any) {
   --docsearch-footer-background: transparent;
   --docsearch-footer-shadow: rgba(125,125,125,0.1);
 
-  --docsearch-hit-color: theme('colors.cool-gray-800');
+  --docsearch-hit-color: theme('colors.cool-gray.800');
   --docsearch-hit-background: rgba(125,125,125,0.1);
   --docsearch-hit-shadow: none;
 
@@ -174,6 +177,8 @@ html.dark {
   --docsearch-modal-background: theme('colors.dark.800');
   --docsearch-modal-shadow: none;
 
+  --docsearch-hit-color: theme('colors.cool-gray.200');
+
   /* --docsearch-searchbox-background: theme('colors.dark.400');
   --docsearch-searchbox-focus-background: theme('colors.dark.300'); */
   --docsearch-searchbox-background: transparent;
@@ -196,7 +201,7 @@ html.dark {
   @apply mr-2;
 }
 .DocSearch-Button-Placeholder {
-  @apply pl-3 font-normal pr-12;
+  @apply pl-3 font-normal pr-0 xl:pr-12;
 }
 
 .DocSearch-Button:hover .DocSearch-Button-Key {
@@ -215,7 +220,7 @@ html.dark {
   @apply border-t dark:border-dark-300;
 }
 .DocSearch-Search-Icon {
-  @apply h-18px w-18px lg:(h-20px w-20px);
+  @apply h-20px w-20px stroke-2;
 }
 .DocSearch-Button:hover .DocSearch-Search-Icon {
   @apply text-$docsearch-text-color;
@@ -227,5 +232,19 @@ html.dark {
 .DocSearch-StartScreen {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+@screen -lg {
+  .DocSearch-Button-Key,
+  .DocSearch-Button-KeySeparator,
+  .DocSearch-Button-Placeholder {
+    display:none
+  }
+}
+
+@screen -xl {
+  .DocSearch-Button-Key {
+    display:none
+  }
 }
 </style>

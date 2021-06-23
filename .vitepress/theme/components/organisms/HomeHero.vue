@@ -19,7 +19,7 @@ const heroText = computed(() => frontmatter.value.heroText || site.value.title)
 <template>
   <header v-if="showHero" class="home-hero">
     <div>
-      <div class="space-y-2 mb-14">
+      <div class="space-y-2 mb-12 md:mb-14">
         <figure v-if="frontmatter.heroImage">
           <img
             class="mx-auto max-w-full w-auto max-h-120px block select-none"
@@ -32,7 +32,7 @@ const heroText = computed(() => frontmatter.value.heroText || site.value.title)
           <h1 v-if="heroText" id="main-title" class="text-3xl leading-10 font-semibold sm:(text-5xl leading-16)">
             {{ heroText }}
           </h1>
-          <p v-if="frontmatter.tagline || site.description" class="m-0 mt-1 text-lg opacity-75 leading-6 sm:(text-xl)">
+          <p v-if="frontmatter.tagline || site.description" class="m-0 mt-1 text-lg opacity-75 leading-6 px-4 sm:(text-xl)">
             {{ frontmatter.tagline || site.description }}
           </p>
 
@@ -46,9 +46,7 @@ const heroText = computed(() => frontmatter.value.heroText || site.value.title)
           </div>
         </div>
       </div>
-      <a v-if="frontmatter.newsLink && frontmatter.newsTitle" class="bg-primary rounded font-bold bg-opacity-10 text-center text-primary py-4 px-8 block" :href="frontmatter.newsLink">
-        {{ frontmatter.newsTitle }}
-      </a>
+      <HomeNews />
     </div>
   </header>
 </template>
@@ -56,6 +54,6 @@ const heroText = computed(() => frontmatter.value.heroText || site.value.title)
 <style scoped lang="postcss">
 .home-hero {
   height: calc(100vh - var(--header-height));
-  @apply px-4 md:px-6 flex items-center justify-center;
+  @apply md:px-6 flex items-center justify-center;
 }
 </style>

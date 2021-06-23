@@ -8,8 +8,8 @@ const { site, theme, localePath } = useData()
     class="
       inline-flex
       items-center
-      text-2xl
-      font-bold
+      text-xl lg:text-2xl
+      font-semibold
     "
     :href="localePath"
     :aria-label="`${site.title}, back to home`"
@@ -18,8 +18,8 @@ const { site, theme, localePath } = useData()
       v-if="theme.logo"
       class="
         inline-flex
-        mr-3
-        h-10
+        mr-1 lg:mr-3
+        h-8 lg:h-10
       "
       :src="withBase(theme.logo)"
       alt="Logo"

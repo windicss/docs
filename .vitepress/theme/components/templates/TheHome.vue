@@ -7,14 +7,15 @@ defineProps({})
 
 <template>
   <TheHeader />
-  <div class="content">
-    <div class="grid">
+  <AppLayout class="content">
+    <TheSidebar class="lg:hidden" />
+    <ContentLayout>
       <HomeHero />
-      <div class="prose py-12 min-w-0 px-4">
+      <div class="prose min-w-0">
         <Content />
       </div>
-    </div>
-  </div>
+    </ContentLayout>
+  </AppLayout>
   <HomeFooter />
 </template>
 
@@ -24,6 +25,5 @@ defineProps({})
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 0px 12px;
-  @apply container !max-w-screen-2xl px-6 mx-auto pt-$header-height;
 }
 </style>

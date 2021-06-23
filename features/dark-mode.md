@@ -4,7 +4,7 @@ Windi CSS has out-of-box Dark Mode support.
 
 By prefixing the `dark:` variant to the utilities, they will only apply when dark mode is enabled. With the following example, the `Preview` text will be red on the light mode, and green on the dark mode. Try play with it: 
 
-<DarkModeSwitch />
+<ToggleDark />
 
 <InlinePlayground :input="'text-red-400 dark:text-green-400'" :showCSS="true" :showPreview="true"/>
 

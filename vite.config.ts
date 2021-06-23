@@ -11,6 +11,15 @@ export default defineConfig({
       '@/': `${resolve(__dirname, '.vitepress/theme')}/`,
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          windicss: ['windicss'],
+        },
+      },
+    },
+  },
   plugins: [
     Components({
       dirs: [

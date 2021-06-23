@@ -8,7 +8,7 @@ const { url, text } = useEditLink()
   <div>
     <a
       v-if="url"
-      class="text-sm text-gray-400 hover:text-primary"
+      class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary"
       :href="url"
       target="_blank"
       rel="noopener noreferrer"

@@ -14,9 +14,7 @@
     "@docsearch/css": "1.0.0-alpha.28",
     "@docsearch/js": "1.0.0-alpha.28",
     "@vueuse/core": "^5.0.3",
-    "@vueuse/integrations": "^5.0.3",
     "@windicss/shared-components": "^0.1.3",
-    "axios": "^0.21.1",
     "codemirror": "^5.62.0",
     "codemirror-theme-vars": "^0.1.1",
     "json5": "^2.2.0",
@@ -26,7 +24,6 @@
     "prismjs": "^1.23.0",
     "splitpanes": "^3.0.4",
     "vue": "^3.1.1",
-    "vue-board": "^0.0.5",
     "windicss": "^3.1.3"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
 
 html:not(.dark) {
   --prism-foreground: #393a34;
-  --prism-background: #fbfbfb;
+  --prism-background: theme('colors.cool-gray.50');
   --prism-comment: #a0ada0;
   --prism-string: #b56959;
   --prism-literal: #2f8a89;
@@ -33,7 +33,7 @@ html:not(.dark) {
 
 html.dark {
   --prism-foreground: #d4cfbf;
-  --prism-background: #151515;
+  --prism-background: theme('colors.dark.500');
   --prism-comment: #758575;
   --prism-string: #d48372;
   --prism-literal: #429988;
@@ -77,6 +77,12 @@ a.header-anchor {
   border: 0 !important;
 }
 
+@screen -md {
+  a.header-anchor {
+    @apply hidden;
+  }
+}
+
 a.header-anchor:hover,
 a.header-anchor:focus {
   text-decoration: none;
@@ -104,6 +110,7 @@ h6:focus .header-anchor {
   padding: 0.6rem 1.2rem;
   opacity: 0.8;
   margin-left: 1rem;
+  @apply ml-1 lg:ml-4 mr-2 lg:mr-6;
 }
 
 .prose blockquote > :first-child {
