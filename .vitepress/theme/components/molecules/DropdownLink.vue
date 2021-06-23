@@ -34,6 +34,7 @@ function toggle() {
     </button>
 
     <ul
+      v-if="open"
       class="
         absolute top-10 right-0 z-50
         p-2 min-w-40
@@ -41,9 +42,6 @@ function toggle() {
         bg-light-100 dark:bg-dark-800
         border-gray-100 dark:border-dark-300
       "
-      :class="[
-        open ? 'block' : 'hidden'
-      ]"
     >
       <li v-for="item in item.items" :key="item.text">
         <div v-if="item.text === 'separator'" class="border-b border-gray-200 dark:border-dark-300 my-1 mx-3"></div>
