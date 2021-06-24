@@ -210,8 +210,8 @@ const WindiCSS = require('windicss-webpack-plugin')
 module.exports = {
   // ...
   webpackFinal: (config) => {
-    config.plugins.push(new WindiCSS());
-    return config;
+    config.plugins.push(new WindiCSS())
+    return config
   },
 }
 ```
