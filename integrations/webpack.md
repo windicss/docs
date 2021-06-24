@@ -17,6 +17,7 @@ You should use this plugin if you're using webpack and your framework is **not**
 | <Logo name="gridsome" class="inline"/> Gridsome | [✅ Plugin](/integrations/gridsome.html) |
 | <Logo name="svelte" class="inline"/> Svelte | [✅ Plugin](/integrations/svelte.html) |
 | Umi.js | [✅ Config Example](https://github.com/windicss/windicss-webpack-plugin/tree/master/example/umijs) |
+| Storybook | [✅ Config Example](#storybook) |
 | Next.js - webpack 4 | ✅ [Config Example](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/next/next.config.js) |
 | Next.js - webpack 5 | ❌ HMR not supported (help needed) |
 | Angular | ❌ Not supported (help needed) |
@@ -46,10 +47,9 @@ export default {
 }
 ```
 
-Within an entry point file or something only loaded once, add the import of `windi.css`. 
+Note: See [examples](#code-examples) if your webpack configuration doesn't look like this.
 
-:warn: For this, to work you need to be using a [style-loader](https://webpack.js.org/loaders/style-loader/#modules) with
-modules off.
+Within an entry point file or something only loaded once, add the import of `windi.css`. 
 
 ```ts
 // main.js
@@ -200,5 +200,30 @@ You can also make your custom css be able to be overridden by certain layers:
 See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts) for configuration reference.
 
 ## Examples
+
+### Storybook
+
+```js
+// .storybook/main.js
+const WindiCSS = require('windicss-webpack-plugin')
+
+module.exports = {
+  // ...
+  webpackFinal: (config) => {
+    config.plugins.push(new WindiCSS());
+    return config;
+  },
+}
+```
+
+```js
+// .storybook/preview.js
+
+import 'windi.css'
+```
+
+Note: CSS pre-processors will not work with `@apply`, use plain css.
+
+### Code Examples
 
 See [examples](https://github.com/windicss/windicss-webpack-plugin/tree/master/example) for sample projects.
