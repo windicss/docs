@@ -6,7 +6,7 @@
 
 [Windi CSS] is fully compatible with [Tailwind CSS] v2. On top of that, we have many additional features that boost your workflow further and open up much more possibilities.
 
-### Value Auto-infer
+## Value Auto-infer
 
 Use arbitrary values in your classes and generate corresponding styles.
 
@@ -24,7 +24,7 @@ Use arbitrary values in your classes and generate corresponding styles.
 
 <LearnMore to="/features/value-auto-infer" />
 
-### Variant Groups
+## Variant Groups
 
 Apply utilities for the same variant by grouping them with parenthesis.
 
@@ -38,7 +38,7 @@ Apply utilities for the same variant by grouping them with parenthesis.
 
 <LearnMore to="/features/variant-groups" />
 
-### Responsive Design
+## Responsive Design
 
 Extended responsive breakpoints control.
 
@@ -48,7 +48,7 @@ Extended responsive breakpoints control.
 
 <LearnMore to="/features/responsive-design" />
 
-### Important Prefix
+## Important Prefix
 
 Prefix any utility classes with `!` to make them as `!important`.
 
@@ -58,7 +58,7 @@ Prefix any utility classes with `!` to make them as `!important`.
 
 <LearnMore to="/features/important-prefix" />
 
-### Shortcuts
+## Shortcuts
 
 Create components and utilities quickly and reusable.
 
@@ -81,7 +81,7 @@ export default {
 <LearnMore to="/features/shortcuts" />
 
 
-### Dark Mode
+## Dark Mode
 
 ```html
 <div class="text-black dark:text-white"></div>
@@ -89,7 +89,7 @@ export default {
 
 <LearnMore to="/features/dark-mode" />
 
-### Directives
+## Directives
 
 Tailwind-like `@apply`, `@screen` directives are fully supported.
 
@@ -105,7 +105,7 @@ Tailwind-like `@apply`, `@screen` directives are fully supported.
 
 <LearnMore to="/features/directives" />
 
-### Visual Analyzer
+## Visual Analyzer
 
 We provided a visual analyzer for you to have an overview of your utility usage and design system.
 
