@@ -1,6 +1,6 @@
-## Typography
+# Typography
 
-### Utilities
+## Utilities
 
 | Class       | Body font size  |
 | :---------- | :-------------- |
@@ -20,7 +20,7 @@
 | `prose-purple` | `purple.600` |
 | `prose-pink`   | `pink.600`   |
 
-### Basic Usage
+## Basic Usage
 
 ```js windi.config.js
 export default {
@@ -34,7 +34,7 @@ export default {
 }
 ```
 
-### Disabling size modifiers
+## Disabling size modifiers
 
 ```js windi.config.js
 export default {
@@ -50,7 +50,7 @@ export default {
 }
 ```
 
-### Customization
+## Customization
 
 ```js windi.config.js
 export default {

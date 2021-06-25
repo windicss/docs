@@ -1,9 +1,9 @@
-## Scroll Snap
+# Scroll Snap
 
 inspired by [tailwindcss-scroll-snap](https://github.com/innocenzi/tailwindcss-scroll-snap)
 
 
-### Utilities
+## Utilities
 
 | Class                         | Properties                                                                                         | Description                                                                  |
 | :---------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
@@ -33,7 +33,7 @@ inspired by [tailwindcss-scroll-snap](https://github.com/innocenzi/tailwindcss-s
 | `scrollbar-hide`              | scrollbar-width: none<br>::-webkit-scrollbar: {<br>&nbsp;&nbsp;display: none<br>}                  | visual hide scrollbar                                                        |
 
 
-### Usage
+## Usage
 
 ```js windi.config.js
 export default {

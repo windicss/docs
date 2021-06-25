@@ -1,6 +1,6 @@
-## Filters
+# Filters
 
-### Utilities
+## Utilities
 
 | Class             | Properties                   |
 | :---------------- | :--------------------------- |
@@ -9,7 +9,7 @@
 | `filter-${key}`   | filter: `${value};`          |
 | `backdrop-${key}` | backdrop-filter: `${value};` |
 
-### Usage
+## Usage
 
 ```js windi.config.js
 export default {
