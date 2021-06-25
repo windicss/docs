@@ -24,11 +24,11 @@ watch(openSideBar, (v) => {
           fixed top-0 left-0
           w-auto h-full
           overflow-auto pointer-events-auto
-          transform lg:transform-none transition-transform duration-200 ease-linear
+          transform -translate-x-full lg:transform-none transition-transform duration-200 ease-linear
           min-w-62
           lg:(h-$full-header sticky top-$header-height)
         "
-        :class="{ '-translate-x-full': !openSideBar }"
+        :class="{ '-translate-x-0': openSideBar }"
       >
         <div class="w-auto h-full overflow-auto bg-light-100 dark:bg-dark-800 lg:bg-transparent">
           <SidebarHeader @close="openSideBar = false" />
