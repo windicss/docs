@@ -19,8 +19,7 @@ Utilities for setting the width of an element
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -53,8 +52,7 @@ Utilities for setting the minimum width of an element
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     minWidth: {
@@ -86,8 +84,7 @@ Utilities for setting the maximum width of an element
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     maxWidth: {
@@ -120,8 +117,7 @@ Utilities for setting the height of an element
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     height: {
@@ -155,8 +151,7 @@ Utilities for setting the minimum height of an element
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     minHeight: {
@@ -191,8 +186,7 @@ Utilities for setting the maximum height of an element
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     maxHeight: {

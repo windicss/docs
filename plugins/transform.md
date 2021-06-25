@@ -2,9 +2,7 @@
 
 For tailwind plugins, we generally use Transform API to support them. You can import them to your config like below:
 
-```js
-// windi.config.js
-
+```js windi.config.js
 const { transform } = require('windicss/helpers')
 
 export default {

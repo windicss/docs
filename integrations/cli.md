@@ -164,8 +164,7 @@ windicss './**/*.html' -to windi.css --config windi.config.js
 
 Give an example
 
-```js
-// windi.config.js
+```js windi.config.js
 module.exports = {
   // ...
   theme: {
@@ -199,8 +198,7 @@ windicss './**/*.html' -to windi.css --dev --fuzzy
 
 You can also configure `extractors` for specific file types
 
-```js
-// windi.config.js
+```js windi.config.js
 module.exports = {
   // ...
   extract: {

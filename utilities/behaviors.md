@@ -18,8 +18,7 @@ Utilities for animating elements with CSS animations.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -33,8 +32,7 @@ export default {
 
 To add new animation @keyframes, use the keyframes section of your theme configuration:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -106,8 +104,7 @@ Utilities for controlling the color of insertion text.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     caretColor: {
@@ -137,8 +134,7 @@ Utilities for controlling the opacity of an element's caret color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -170,8 +166,7 @@ Utilities for controlling the cursor style when hovering over an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     cursor: {
@@ -224,8 +219,7 @@ Utilities for controlling the bullet/number style of a list.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     listStyleType: {
@@ -305,8 +299,7 @@ Utilities for controlling an element's outline.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -320,8 +313,7 @@ export default {
 
 You can also provide an outline-offset value for any custom outline utilities using a tuple of the form [outline, outlineOffset]:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -395,8 +387,7 @@ Utilities for controlling the color of placeholder text.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     placeholderColor: {
@@ -426,8 +417,7 @@ Utilities for controlling the opacity of an element's placeholder color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -487,10 +477,10 @@ Utilities for controlling whether the user can select text in an element.
 
 Utilities for improving accessibility with screen readers.
 
-| Class | Properties |
-| :---- | :--------- |
-| sr-only | position: absolute;<br>width: 1px;<br>height: 1px;<br>padding: 0;<br>margin: -1px;<br>overflow: hidden;<br>clip: rect(0, 0, 0, 0);<br>white-space: nowrap;<br>border-width: 0; |
-| not-sr-only | position: static;<br>width: auto;<br>height: auto;<br>padding: 0;<br>margin: 0;<br>overflow: visible;<br>clip: auto;<br>white-space: normal; |
+| Class       | Properties                                                                                                                                                                     |
+| :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sr-only     | position: absolute;<br>width: 1px;<br>height: 1px;<br>padding: 0;<br>margin: -1px;<br>overflow: hidden;<br>clip: rect(0, 0, 0, 0);<br>white-space: nowrap;<br>border-width: 0; |
+| not-sr-only | position: static;<br>width: auto;<br>height: auto;<br>padding: 0;<br>margin: 0;<br>overflow: visible;<br>clip: auto;<br>white-space: normal;                                   |
 
 ### Usage
 

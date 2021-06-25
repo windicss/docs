@@ -93,8 +93,7 @@ Utilities for controlling how flex items both grow and shrink.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     flex: {
@@ -131,8 +130,7 @@ Utilities for controlling how flex items grow.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     flexGrow: {
@@ -169,8 +167,7 @@ Utilities for controlling how flex items shrink.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     flexShrink: {

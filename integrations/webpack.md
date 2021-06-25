@@ -10,16 +10,16 @@ Windi CSS Webpack Plugin is a language and framework agnostic way to implement W
 
 You should use this plugin if you're using webpack and your framework is **not** below.
 
-| Language / Framework |   Example |
-| :-------- | :----- |
-| <Logo name="vue" class="inline"/> Vue CLI | [✅ Plugin](/integrations/vue-cli.html) |
-| <Logo name="nuxt" class="inline"/> Nuxt.js | [✅ Plugin](/integrations/nuxt.html) |
-| <Logo name="gridsome" class="inline"/> Gridsome | [✅ Plugin](/integrations/gridsome.html) |
-| <Logo name="svelte" class="inline"/> Svelte | [✅ Plugin](/integrations/svelte.html) |
-| Umi.js | [✅ Config Example](https://github.com/windicss/windicss-webpack-plugin/tree/master/example/umijs) |
-| Next.js - webpack 4 | ✅ [Config Example](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/next/next.config.js) |
-| Next.js - webpack 5 | ❌ HMR not supported (help needed) |
-| Angular | ❌ Not supported (help needed) |
+| Language / Framework                            | Example                                                                                                         |
+| :---------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| <Logo name="vue" class="inline"/> Vue CLI       | [✅ Plugin](/integrations/vue-cli.html)                                                                          |
+| <Logo name="nuxt" class="inline"/> Nuxt.js      | [✅ Plugin](/integrations/nuxt.html)                                                                             |
+| <Logo name="gridsome" class="inline"/> Gridsome | [✅ Plugin](/integrations/gridsome.html)                                                                         |
+| <Logo name="svelte" class="inline"/> Svelte     | [✅ Plugin](/integrations/svelte.html)                                                                           |
+| Umi.js                                          | [✅ Config Example](https://github.com/windicss/windicss-webpack-plugin/tree/master/example/umijs)               |
+| Next.js - webpack 4                             | ✅ [Config Example](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/next/next.config.js) |
+| Next.js - webpack 5                             | ❌ HMR not supported (help needed)                                                                               |
+| Angular                                         | ❌ Not supported (help needed)                                                                                   |
 
 ## Install
 
@@ -142,8 +142,7 @@ export default defineConfig({
 
 On server start, `windicss-webpack-plugin` will scan your source code and extract the utility usages. By default, only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({

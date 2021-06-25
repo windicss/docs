@@ -18,8 +18,7 @@ Utilities for controlling which CSS properties transition.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -52,8 +51,7 @@ Utilities for controlling the duration of CSS transitions.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -86,8 +84,7 @@ Utilities for controlling the easing of CSS transitions.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -120,8 +117,7 @@ Utilities for controlling the delay of CSS transitions.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {

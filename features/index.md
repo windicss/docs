@@ -62,8 +62,7 @@ Prefix any utility classes with `!` to make them as `!important`.
 
 Create components and utilities quickly and reusable.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     /* ... */

@@ -61,8 +61,7 @@ Utilities for controlling an element's background color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backgroundColor: theme => ({
@@ -93,8 +92,7 @@ Utilities for controlling the opacity of an element's background color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -124,8 +122,7 @@ Utilities for controlling the position of an element's background image.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backgroundPosition: {
@@ -227,8 +224,7 @@ Utilities for controlling an element's background image.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {

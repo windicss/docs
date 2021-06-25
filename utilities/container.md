@@ -5,7 +5,7 @@
 A component for fixing an element's width to the current breakpoint.
 
 | Class     | Breakpoint     | Properties         |
-| :----     | :------------- | :----------------- |
+| :-------- | :------------- | :----------------- |
 | container | *None*         | width: 100%;       |
 |           | sm *(640px)*   | max-width: 640px;  |
 |           | md *(768px)*   | max-width: 768px;  |
@@ -44,8 +44,7 @@ To use a container at only a certain breakpoint and up:
 
 #### Centering by default
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     container: {
@@ -57,8 +56,7 @@ export default {
 
 #### Horizontal padding
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     container: {
@@ -70,8 +68,7 @@ export default {
 
 Specify a different padding amount for each breakpoint
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     container: {

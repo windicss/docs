@@ -24,8 +24,7 @@ When you have to use dynamic concatenations, like:
 
 For that, you will need to specify the possible combinations in the `safelist` options of `windi.config.js`.
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -35,8 +34,7 @@ export default defineConfig({
 
 Or to be more fixable:
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 function range(size, startAt = 1) {
@@ -58,8 +56,7 @@ By default, it will scan for files under `src/` with extensions `vue, html, mdx,
 
 If you want to enable scaning for other file type of locations, you can configure it via:
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -83,8 +80,7 @@ Preflight (style reseting) is also enables on-demanded along with the scanning.
 
 To completely disable it, you can change the configurations as below
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -94,8 +90,7 @@ export default defineConfig({
 
 Or explicitly enables with safelisting
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({

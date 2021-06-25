@@ -10,8 +10,7 @@ npm install --save-dev @windicss/plugin-interaction-variants
 
 ## Usage
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backgroundColor: {

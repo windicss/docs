@@ -24,8 +24,7 @@ Or you can install locally to reuse the same version of your local `windicss` mo
 npm i -D windicss-analysis
 ```
 
-```json5
-// package.json
+```json5 package.json
 {
   "scripts": {
     "analysis": "windicss-analysis"
@@ -60,8 +59,7 @@ npx windicss-analysis --html dist
 
 You will need to configure the `extract.include` options in `windi.config.js` instead of your framework's configurations file so it can be understood by the analyzer so as other integrations support. For example:
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
 

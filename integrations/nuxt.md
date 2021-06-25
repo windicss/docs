@@ -97,8 +97,7 @@ export default defineConfig({
 On server start, `nuxt-windicss` will scan your source code and extract the utility usages. By default,
 only files within your root with extensions `vue, html, md, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({

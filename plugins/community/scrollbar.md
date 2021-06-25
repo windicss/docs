@@ -10,8 +10,7 @@ npm install --save-dev @windicss/plugin-scrollbar
 
 Add it to the plugins array of your Config File.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     // ...

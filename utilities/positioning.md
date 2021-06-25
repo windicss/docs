@@ -29,8 +29,7 @@ Utilities for controlling the order of flex and grid items.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     order: {
@@ -268,8 +267,7 @@ Utilities for controlling the placement of positioned elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     inset: {
@@ -436,8 +434,7 @@ Utilities for controlling how a replaced element's content should be positioned 
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     objectPosition: {
@@ -481,8 +478,7 @@ Utilities for controlling the stack order of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     zIndex: {

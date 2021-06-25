@@ -16,8 +16,7 @@ npm install --save-dev @windicss/plugin-question-mark
 
 Then add the plugin to your `windi.config.js` file:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     // ...

@@ -3,18 +3,18 @@
 
 # Migrate from Tailwind CSS
 
-### `package.json`
+## Package 
 
 Some of your dependencies are no longer required, you can remove them if they were only needed for Tailwind CSS.
 
-```diff
+```diff package.json
 - "tailwindcss": "*",
 - "postcss": "*",
 - "autoprefixer": "*",
 + "windicss": "*"
 ```
 
-### Base Styles
+## Base Styles
 
 You can now remove the Tailwind CSS imports from your css entry.
 
@@ -26,12 +26,11 @@ You can now remove the Tailwind CSS imports from your css entry.
 
 (Optional) Based on the integrations tools you are using, you might need to import the `virtual:windi.css` entry explicitly. Please check the docs of the tools for more details.
 
-```js
-// main.js
+```js main.js
 import 'virtual:windi.css'
 ```
 
-### Configurations
+## Configurations
 
 Since all variants are [automatically enabled][auto], `variant` and `purge` fields are no longer needed.
 
@@ -39,7 +38,7 @@ Since all variants are [automatically enabled][auto], `variant` and `purge` fiel
 
 We are compatible with both `windi.config.js` or `tailwind.config.js`
 
-```diff
+```diff windi.config.js
 -const colors = require('tailwindcss/colors')
 +const colors = require('windicss/colors')
 -const typography = require('@tailwindcss/typography')
@@ -75,7 +74,7 @@ export default {
 }
 ```
 
-### Cleanup (optional)
+## Cleanup (optional)
 
 The following files can be removed if you don't use their other features.
 

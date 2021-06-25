@@ -4,8 +4,7 @@
 
 ## Customization 
 
-```ts
-// windi.config.js
+```ts windi.config.js
 export default {
   theme: {
     colors: {

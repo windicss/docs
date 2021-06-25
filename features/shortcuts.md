@@ -4,8 +4,7 @@ It's quite common when you work on same set of utilities for multiple times. We 
 
 By simply adding the `shortcuts` field to your configurations:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     /* ... */
@@ -32,8 +31,7 @@ export default {
 
 CSS-in-JS syntax is also supported for complex utility
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     /* ... */

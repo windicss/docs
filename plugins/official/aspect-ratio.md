@@ -2,11 +2,11 @@
 
 ### Utilities
 
-| Class | Properties |
-| :---- | :--------- |
-| `aspect-none` | position: 'static';<br>paddingBottom: '0';<br>'> *': {<br>&emsp;position: 'static';<br>&emsp;height: 'auto';<br>&emsp;width: 'auto';<br>&emsp;top: 'auto';<br>&emsp;right: 'auto';<br>&emsp;bottom: 'auto';<br>&emsp;left: 'auto';<br>} |
-| `aspect-w-${float}` | --tw-aspect-w: `${float};` |
-| `aspect-h-${float}` | --tw-aspect-h: `${float};` |
+| Class                | Properties                                                                                                                                                                                                                               |
+| :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `aspect-none`        | position: 'static';<br>paddingBottom: '0';<br>'> *': {<br>&emsp;position: 'static';<br>&emsp;height: 'auto';<br>&emsp;width: 'auto';<br>&emsp;top: 'auto';<br>&emsp;right: 'auto';<br>&emsp;bottom: 'auto';<br>&emsp;left: 'auto';<br>}  |
+| `aspect-w-${float}`  | --tw-aspect-w: `${float};`                                                                                                                                                                                                               |
+| `aspect-h-${float}`  | --tw-aspect-h: `${float};`                                                                                                                                                                                                               |
 | `aspect-${fraction}` | position: 'relative';<br>paddingBottom: `${percent};`<br>'> *': {<br>&emsp;position: 'absolute';<br>&emsp;height: '100%';<br>&emsp;width: '100%';<br>&emsp;top: '0';<br>&emsp;right: '0';<br>&emsp;bottom: '0';<br>&emsp;left: '0';<br>} |
 
 
@@ -33,8 +33,7 @@
 
 ### Usage
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     // ...

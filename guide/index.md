@@ -21,7 +21,7 @@ If you are already familiar with [Tailwind CSS], think about Windi CSS as an **o
 
 A quote from the author should illustrate his motivation to create Windi CSS:
 
-> When my project became larger and there were about dozens of components, the initial compilation time reached 3s, and hot updates took more than 1s with Tailwind CSS. - [@voorjaar](https://github.com/voorjaar)
+> When my project became larger and there were about dozens of components, the initial compilation time reached 3s, and hot updates took more than 1s with Tailwind CSS. <br> - [@voorjaar](https://github.com/voorjaar)
 
 By scanning your HTML and CSS and generating utilities on demand, Windi CSS is able to provide [faster load times][video comparison] and a speedy HMR in development and does not require purging in production.
 

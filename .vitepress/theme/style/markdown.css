@@ -144,3 +144,11 @@ h6:focus .header-anchor {
 .prose thead {
   @apply border-b-gray-300 dark:border-b-dark-100;
 }
+
+div[class*='language-'][class*='with-filename'] {
+  @apply relative pt-6;
+}
+
+div[class*='language-'] .code-block-filename {
+  @apply absolute top-0 left-0 p-1 text-xs bg-gray-200 dark:bg-dark-300 rounded-br;
+}

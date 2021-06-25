@@ -108,8 +108,7 @@ Utilities for controlling how an element should blend with the background.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     boxShadowColor: {
@@ -185,8 +184,7 @@ Utilities for controlling the color of insertion text.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     caretColor: {
@@ -216,8 +214,7 @@ Utilities for controlling the opacity of an element's caret color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -264,8 +261,7 @@ Utilities for controlling the bullet/number style of a list.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     listStyleType: {
@@ -382,8 +378,7 @@ The tab-size utilities are used to customize the width of tab characters (U+0009
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     tabSize: {
@@ -426,8 +421,7 @@ Utilities for controlling the color of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textDecorationColor: {
@@ -457,8 +451,7 @@ Utilities for controlling the opacity of an element's decoration color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -490,8 +483,7 @@ Utilities for controlling the length of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -521,8 +513,7 @@ Utilities for controlling the offset of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textDecorationOffset: {
@@ -550,8 +541,7 @@ Utilities for controlling the indentation of text.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -584,8 +574,7 @@ Utilities for controlling the width of text stroke.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -614,8 +603,7 @@ Utilities for controlling the color of text stroke.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textStrokeColor: {
@@ -643,8 +631,7 @@ Utilities for controlling the shadow of a text element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textShadow: {
@@ -859,8 +846,7 @@ The transform-style utility sets whether children of an element are positioned i
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     scale: {
@@ -898,8 +884,7 @@ export default {
 
 You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -915,8 +900,7 @@ export default {
 
 To customize the translate scale separately, use the theme.translate section of your windi.config.js file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -960,8 +944,7 @@ The `perspect` utility determines the distance between the z=0 plane and the use
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -1002,8 +985,7 @@ The `perspect-origin` utility determines the position at which the viewer is loo
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -1046,8 +1028,7 @@ Utilities for enabling and disabling filters on an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     blur: {
@@ -1075,8 +1056,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     brightness: {
@@ -1104,8 +1084,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     contrast: {
@@ -1133,8 +1112,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     dropShadow: {
@@ -1161,8 +1139,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     grayscale: {
@@ -1189,8 +1166,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     hueRotate: {
@@ -1218,8 +1194,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     invert: {
@@ -1246,8 +1221,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     saturate: {
@@ -1275,8 +1249,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     sepia: {
@@ -1329,8 +1302,7 @@ Utilities for enabling and disabling backdrop filters on an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropBlur: {
@@ -1363,8 +1335,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropBrightness: {
@@ -1397,8 +1368,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropContrast: {
@@ -1431,8 +1401,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropGrayscale: {
@@ -1464,8 +1433,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropHueRotate: {
@@ -1498,8 +1466,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropInvert: {
@@ -1532,8 +1499,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropOpacity: {
@@ -1565,8 +1531,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropSaturate: {
@@ -1599,8 +1564,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropSepia: {

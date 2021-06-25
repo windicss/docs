@@ -16,8 +16,7 @@ Utilities for controlling the box shadow of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     boxShadow: {
@@ -51,8 +50,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     boxShadowColor: {
@@ -81,8 +79,7 @@ Utilities for controlling the opacity of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     opacity: {

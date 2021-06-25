@@ -81,8 +81,7 @@ Utilities for specifying the columns in a grid layout.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -126,8 +125,7 @@ Utilities for specifying the rows in a grid layout.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -170,8 +168,7 @@ Utilities for specifying the column size of an element in a grid layout.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -214,8 +211,7 @@ Utilities for specifying the row size of an element in a grid layout.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -258,8 +254,7 @@ Utilities to make an element start at the nth grid line. These utilities should 
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -304,8 +299,7 @@ Utilities to make an element end at the nth grid line. These utilities should be
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -348,8 +342,7 @@ Utilities to make an element start at the nth grid line. These utilities should 
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -394,8 +387,7 @@ Utilities to make an element end at the nth grid line. These utilities should be
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -458,8 +450,7 @@ Utilities for controlling the size of implicitly-created grid columns.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -498,8 +489,7 @@ Utilities for controlling the size of implicitly-created grid rows.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -544,8 +534,7 @@ Utilities for controlling gutters between grid rows and columns.
 
 You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -559,8 +548,7 @@ export default {
 
 To customize the gap scale separately, use the gap section of your Tailwind theme config.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {

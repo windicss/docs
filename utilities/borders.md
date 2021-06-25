@@ -13,8 +13,7 @@ Utilities for controlling the border radius of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     borderRadius: {
@@ -46,8 +45,7 @@ Utilities for controlling the width of an element's borders.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     borderWidth: {
@@ -76,8 +74,7 @@ Utilities for controlling the color of an element's borders.
 
 You can customize your color palette by editing the `theme.colors` section of your `windi.config.js` file, or customize just your border colors using the theme.borderColor section.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     borderColor: theme => ({
@@ -106,8 +103,7 @@ Utilities for controlling the opacity of an element's border color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -172,8 +168,7 @@ Utilities for controlling the border width between elements.
 
 The divide width scale inherits its values from the `borderWidth` scale by default, so if you'd like to customize your values for both border width and divide width together, use the `theme.borderWidth` section of your `windi.config.js` file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     borderWidth: {
@@ -191,8 +186,7 @@ export default {
 
 To customize only the divide width values, use the theme.divideWidth section of your windi.config.js file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     divideWidth: {
@@ -230,8 +224,7 @@ Utilities for controlling the border color between elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     divideColor: theme => ({
@@ -267,8 +260,7 @@ Utilities for controlling the opacity borders between elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -320,8 +312,7 @@ Utilities for creating outline rings with box-shadows.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -355,8 +346,7 @@ Utilities for setting the color of outline rings.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 const colors = require('windicss/colors')
 
 export default {
@@ -389,8 +379,7 @@ Utilities for setting the opacity of outline rings.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -425,8 +414,7 @@ Utilities for simulating an offset when adding outline rings.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -460,8 +448,7 @@ Utilities for setting the color of outline ring offsets.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 const colors = require('windicss/colors')
 
 export default {

@@ -55,8 +55,7 @@ Utilities for specifying the origin for an element's transformations.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -87,8 +86,7 @@ Utilities for rotating elements with transform.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     rotate: {
@@ -206,8 +204,7 @@ Utilities for scaling elements with transform.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     scale: {
@@ -250,8 +247,7 @@ Utilities for skewing elements with transform.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -318,8 +314,7 @@ Utilities for translating elements with transform.
 
 You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -335,8 +330,7 @@ export default {
 
 To customize the translate scale separately, use the theme.translate section of your windi.config.js file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -380,8 +374,7 @@ The `perspect` utility determines the distance between the z=0 plane and the use
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -422,8 +415,7 @@ The `perspect-origin` utility determines the position at which the viewer is loo
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {

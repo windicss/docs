@@ -18,8 +18,7 @@ Utilities for controlling an element's padding.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     padding: {
@@ -148,8 +147,7 @@ Utilities for controlling an element's margin.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     margin: {
@@ -280,8 +278,7 @@ Utilities for controlling the space between vertical align child elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     space: {
@@ -334,8 +331,7 @@ Utilities for controlling the space between horizontal align child elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     space: {
