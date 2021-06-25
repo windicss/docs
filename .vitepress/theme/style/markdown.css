@@ -57,19 +57,6 @@ html.dark {
   --prism-selection-background: #444444;
 }
 
-.prose pre {
-  background-color: transparent;
-  margin: 0;
-}
-
-:not(pre) > code {
-  @apply text-violet-500 !dark:text-violet-400 !font-normal !text-0.95rem;
-}
-
-.prose table code {
-  @apply !text-violet-400 !font-normal !text-sm;
-}
-
 a.header-anchor {
   float: left;
   margin-top: .1em;
@@ -105,6 +92,23 @@ h5:focus .header-anchor,
 h6:hover .header-anchor,
 h6:focus .header-anchor {
   opacity: 0.5;
+}
+
+.prose pre {
+  background-color: transparent;
+  margin: 0;
+}
+
+:not(pre) > code {
+  @apply text-violet-500 !dark:text-violet-400 !font-normal !text-0.95rem;
+}
+
+.prose table code {
+  @apply !text-violet-400 !font-normal !text-sm;
+}
+
+.prose a:hover {
+  @apply underline;
 }
 
 .prose blockquote {
