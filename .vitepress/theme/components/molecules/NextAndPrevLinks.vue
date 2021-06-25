@@ -1,6 +1,6 @@
 <template>
   <div v-if="hasLinks">
-    <div class="flex border-t dark:border-dark-300 pt-6 justify-between">
+    <div class="flex border-t border-$windi-bc pt-6 justify-between">
       <div class="max-w-1/2">
         <a v-if="prev" class="nav-link" :href="withBase(prev.link)">
           <carbon-arrow-left class="mr-3" />

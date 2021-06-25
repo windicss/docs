@@ -9,13 +9,11 @@ export default defineConfig({
   },
   safelist: [
     'pb-5',
-    'bc',
     'logo-float-xl',
     'dark:text-white',
     'opacity-85',
   ],
   shortcuts: {
-    'bc': 'border-cool-gray-200 dark:border-dark-300',
     'logo-float-xl': 'text-6xl m-2 mr-6 float-right',
   },
   theme: {

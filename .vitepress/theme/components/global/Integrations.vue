@@ -18,8 +18,8 @@ const props = defineProps<{
         h-30 w-30 p-4
         text-$c-fg text-center
         transition-all duration-500
-        bc
-        hover:(shadow-xl)
+        border-$windi-bc
+        hover:(shadow-lg)
         dark:hover:(bg-gray-400 bg-opacity-10)
       "
       :href="item.link"

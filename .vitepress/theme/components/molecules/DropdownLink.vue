@@ -39,13 +39,13 @@ function toggle() {
         absolute top-10 right-0 z-50
         p-2 min-w-40
         rounded-md border
-        bg-light-100 dark:bg-dark-800
-        border-gray-100 dark:border-dark-300
+        bg-$windi-bg
+        border-gray-100 dark:border-dark-400
       "
     >
       <li v-for="item in item.items" :key="item.text">
-        <div v-if="item.text === 'separator'" class="border-b border-gray-200 dark:border-dark-300 my-1 mx-3"></div>
-        <NavLink v-else :item="item" class="whitespace-nowrap font-base hover:bg-gray-100  dark:hover:bg-dark-300 rounded w-full text-sm" dropdown />
+        <div v-if="item.text === 'separator'" class="border-b border-$windi-bc my-1 mx-3"></div>
+        <NavLink v-else :item="item" class="whitespace-nowrap font-base hover:(text-primary bg-$windi-hover-bg) rounded w-full text-sm" dropdown />
       </li>
     </ul>
   </div>

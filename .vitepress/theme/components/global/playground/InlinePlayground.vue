@@ -232,7 +232,7 @@ onMounted(async() => {
         <carbon:camera class="inline-block" />
       </div>
     </div>
-    <div class="border bc rounded relative">
+    <div class="border border-$windi-bc rounded relative">
       <div
         class="grid w-full"
         style="grid-template-columns: 1fr max-content;"
@@ -247,7 +247,7 @@ onMounted(async() => {
               class="bg-transparent outline-none"
             />
           </div>
-          <div v-show="showConfig" class="border-t bc">
+          <div v-show="showConfig" class="border-t border-$windi-bc">
             <div class="ml-1 p-2 pb-0 text-sm opacity-50 flex">
               <span>Config</span>
             </div>
@@ -263,7 +263,7 @@ onMounted(async() => {
           </div>
           <div
             v-show="showCSS"
-            class="text-sm border-t bc"
+            class="text-sm border-t border-$windi-bc"
           >
             <div class="ml-1 p-2 text-sm opacity-50 flex">
               <span>CSS</span>
@@ -286,7 +286,7 @@ onMounted(async() => {
         </div>
         <div
           v-if="showPreview"
-          class="border-l bc w-10em"
+          class="border-l border-$windi-bc w-10em"
         >
           <IframePreview v-bind="iframeData" :dark="isDark" />
         </div>
@@ -298,7 +298,7 @@ onMounted(async() => {
 <style lang="postcss">
 .inline-playground .tabs .tab {
   @apply px-3 py-1 mx-1 cursor-pointer bg-gray-50 dark:bg-true-gray-800 text-gray-400 opacity-75
-    border-t border-l border-r rounded-tr rounded-tl bc;
+    border-t border-l border-r rounded-tr rounded-tl border-$windi-bc;
 }
 .inline-playground .tabs .tab.active {
   @apply text-blue-500 bg-bg opacity-100;

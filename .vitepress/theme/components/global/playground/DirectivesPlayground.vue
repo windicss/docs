@@ -30,7 +30,7 @@ onMounted(async() => {
 </script>
 
 <template>
-  <div class="border bc rounded relative directives-playground">
+  <div class="border border-$windi-bc rounded relative directives-playground">
     <div
       class="grid w-full"
       style="grid-template-columns: 1fr max-content;"
@@ -46,7 +46,7 @@ onMounted(async() => {
           />
         </div>
         <div
-          class="text-sm border-t bc"
+          class="text-sm border-t border-$windi-bc"
         >
           <div class="ml-1 p-2 text-sm opacity-50 flex">
             <span>Generated CSS</span>

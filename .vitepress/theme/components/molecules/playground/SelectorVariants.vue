@@ -47,7 +47,7 @@ watch(() => props.modelValue, v => variant.value = v)
 .item {
   height: max-content;
   @apply px-2 py-0.5 inline-block rounded font-mono
-         border bc border-opacity-50 dark:border-opacity-50
+         border border-$windi-bc border-opacity-50 dark:border-opacity-50
          text-sm cursor-pointer select-none;
 }
 .item.active {

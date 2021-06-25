@@ -23,7 +23,7 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>, isDropdown =
 
     return {
       'class': {
-        'bg-gray-200 dark:bg-dark-400': active && isDropdown,
+        'bg-$windi-hover-bg': active && isDropdown,
         'text-primary': active && !isDropdown,
         isExternal,
       },

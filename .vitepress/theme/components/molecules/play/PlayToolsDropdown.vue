@@ -47,6 +47,6 @@ onUnmounted(() => {
   grid gap-2 p-1.5 px-2
   absolute top-8 right-0
   bg-white dark:bg-dark-700
-  rounded-lg border border-blue-gray-200 dark:border-dark-300;
+  rounded-lg border border-$windi-bc;
 }
 </style>

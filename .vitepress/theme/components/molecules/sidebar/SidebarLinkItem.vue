@@ -47,14 +47,14 @@ const style = computed(() => ([
       items-center
       justify-between py-2.2 px-3 w-full rounded-md font-medium text-sm text-gray-700
       dark:text-gray-400
-      hover:(text-primary dark:text-primary bg-gray-50 dark:bg-dark-500)`
+      hover:(text-primary dark:text-primary bg-$windi-hover-bg)`
       : `relative
       inline-flex
       items-center
       justify-between
       pl-3 py-1
-      border-l border-gray-200
-      dark:border-cool-gray-800
+      border-l border-gray-100
+      dark:border-dark-400
       text-sm text-gray-700
       dark:text-gray-400
       hover:(text-primary dark:text-primary)`,

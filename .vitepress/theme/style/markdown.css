@@ -11,7 +11,7 @@
 
 html:not(.dark) {
   --prism-foreground: #393a34;
-  --prism-background: theme('colors.cool-gray.50');
+  --prism-background: theme('colors.light.300');
   --prism-comment: #a0ada0;
   --prism-string: #b56959;
   --prism-literal: #2f8a89;
@@ -63,7 +63,7 @@ html.dark {
 }
 
 :not(pre) > code {
-  @apply !text-violet-400 !font-normal !text-0.95rem;
+  @apply text-violet-500 !dark:text-violet-400 !font-normal !text-0.95rem;
 }
 
 .prose table code {

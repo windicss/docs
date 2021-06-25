@@ -32,6 +32,6 @@ defineProps({
   grid gap-2 p-1.5
   absolute top-11 -left-2
   bg-white dark:bg-dark-700
-  rounded-lg border border-blue-gray-200 dark:border-dark-300;
+  rounded-lg border border-$windi-bc;
 }
 </style>

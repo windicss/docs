@@ -38,6 +38,6 @@ defineProps({
   absolute top-11 -right-2
   bg-white dark:bg-dark-700
   text-sm font-bold
-  rounded-lg border border-blue-gray-200 dark:border-dark-300;
+  rounded-lg border border-$windi-bc;
 }
 </style>
