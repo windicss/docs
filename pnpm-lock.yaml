@@ -19,7 +19,6 @@ specifiers:
   codemirror-theme-vars: ^0.1.1
   esbuild-register: ^2.6.0
   eslint: ^7.29.0
-  eslint-plugin-jsonc: ^1.3.1
   eslint-plugin-markdown: ^2.2.0
   json5: ^2.2.0
   lz-string: ^1.4.4
@@ -68,7 +67,6 @@ devDependencies:
   '@vitejs/plugin-vue': 1.2.3
   esbuild-register: 2.6.0
   eslint: 7.29.0
-  eslint-plugin-jsonc: 1.3.1_eslint@7.29.0
   eslint-plugin-markdown: 2.2.0_eslint@7.29.0
   resolve: 1.20.0
   typescript: 4.3.4

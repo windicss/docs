@@ -1,4 +1,4 @@
-import type { DefaultTheme } from '../theme/config'
+import type { DefaultTheme } from '@/config'
 
 export const nav: DefaultTheme.Config['nav'] = [
   {

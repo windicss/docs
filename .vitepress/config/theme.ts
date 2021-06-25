@@ -1,4 +1,4 @@
-import type { DefaultTheme } from '../theme/config'
+import type { DefaultTheme } from '@/config'
 import { sidebar } from './sidebar'
 import { nav } from './nav'
 

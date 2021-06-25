@@ -38,6 +38,7 @@ function getRepoText(url: string, text?: string): string {
   if (!hosts)
     return 'Source'
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const platform = platforms.find(([_p, re]) => re.test(hosts[0]))
 
   if (platform && platform[0])
