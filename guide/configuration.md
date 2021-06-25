@@ -21,8 +21,7 @@ By default, Windi CSS will search for configurations file under your project roo
 
 To get typecheck for your configurations, you can import the `defineConfig` function from `windicss/helpers`. For example
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -51,7 +50,7 @@ You can use the autocompletion from your editor to see possible configuration fi
 
 ## Example Configuration
 
-```js
+```js windi.config.js
 import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
 import plugin from 'windicss/plugin'

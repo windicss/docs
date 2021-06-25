@@ -64,8 +64,7 @@ Enable TypeScript for your `windi.config.js`? Sure, why not?
 
 Rename it to `windi.config.ts` and things just work!
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
@@ -91,8 +90,7 @@ export default defineConfig({
 
 Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -111,8 +109,7 @@ By default, we scan your source code statically and find all the usages of the u
 
 For that, you will need to specify the possible combinations in the `safelist` options of `webpack.config.js`.
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -122,8 +119,7 @@ export default defineConfig({
 
 Or you can do it this way
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 function range(size, startAt = 1) {

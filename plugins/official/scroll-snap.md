@@ -46,8 +46,7 @@ export default {
 
 with TypeScript:
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import scrollSnapPlugin from 'windicss/plugin/scroll-snap'
 
 export default defineConfig({

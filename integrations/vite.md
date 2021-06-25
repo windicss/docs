@@ -112,8 +112,7 @@ Oh, and don't worry about the final bundle, in production build `virtual:windi-d
 
 Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
 
 export default defineConfig({
@@ -132,8 +131,7 @@ By default, we scan your source code statically and find all the usages of the u
 
 For that, you will need to specify the possible combinations in the `safelist` options of `vite.config.js`.
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
 
 export default defineConfig({
@@ -143,8 +141,7 @@ export default defineConfig({
 
 Or you can do it this way
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
 
 function range(size, startAt = 1) {
@@ -198,8 +195,7 @@ export default defineConfig({
 
 Enabled it by 
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 export default {
   attributify: true,
 }
@@ -223,8 +219,7 @@ And use them as you would like:
 
 If you are concerned about naming confliction, you can add custom prefix to attributify mode by:
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 export default {
   attributify: {
     prefix: 'w:',
@@ -246,8 +241,7 @@ export default {
 
 ### [Alias Config](https://windicss.org/posts/v30.html#alias-config)
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 export default {
   alias: {
     'hstack': 'flex items-center',
