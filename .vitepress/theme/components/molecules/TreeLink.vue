@@ -34,9 +34,7 @@ function toggle() {
     <transition name="collapse">
       <ul
         v-if="open"
-        class="
-        pl-4
-      "
+        class="px-4"
       >
         <li v-for="item in item.items" :key="item.text">
           <div v-if="item.text === 'separator'" class="border-b border-$windi-bc my-1 mx-3"></div>
