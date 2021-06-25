@@ -6,6 +6,9 @@ export default defineConfig({
     include: [
       '.vitepress/theme/**/*.{ts,vue}',
     ],
+    exclude: [
+      '@docsearch/css',
+    ],
   },
   safelist: [
     'pb-5',
