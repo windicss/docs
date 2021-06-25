@@ -49,3 +49,6 @@ wiki/
 
 # Algolia
 .algolia.env
+
+# vite-plugin-components
+components.d.ts
