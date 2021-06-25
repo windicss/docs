@@ -1,6 +1,6 @@
 [Windi CSS]: https://github.com/windicss/windicss
 
-# The Story: by @voorjaar
+# The Story <span class="text-base text-gray-500">by [@voorjaar](https://github.com/voorjaar)</span>
 
 > After two months of development, I am very happy to tell you that Windi CSS has now entered the stable version stage. From now on, there will be no destructive improvements added, please rest assured to use.
 
@@ -31,7 +31,7 @@ I have never read the source code of Tailwind CSS, at least not carefully. I jus
 
 I can roughly talk about the principle of windicss, which is actually a very simple parsing principle. You can even understand it as a simple programming language. Suppose you enter a className, such as `bg-green-300`, Windi CSS will first match `bg-green-300` in the static dictionary. If it exists, it will return the corresponding css, and if it does not exist, continue dynamic matching. First, Windi CSS will extract `bg` as the key to match whether the key is included in the dynamic utility. If it does, input the entire className to see if css will be generated. If not, the className will be ignored and return. Dynamic utilities use completely different processing methods to Tailwind, that is, unrestricted build. Windicss will be based on your input. First of all, see if it is the static value specified in the configuration. If not, it will guess what type it is based on regular expressions, then generate the corresponding css.
 
-As for how to deal with base styles, we have done some processing on css in advance, so that it can be quickly filtered through html tags, so we can generate a minimized preflight every time. For the base styles added by third-party plugins, we obviously can’t do this, because it will burden developers, so we use css-chosen to purge styles for the base styles of third-party plugins. Because it is fast and small, real-time purge can be achieved.
+As for how to deal with base styles, we have done some processing on css in advance, so that it can be quickly filtered through html tags, so we can generate a minimized preflight every time. For the base styles added by third-party plugins, we obviously can't do this, because it will burden developers, so we use css-chosen to purge styles for the base styles of third-party plugins. Because it is fast and small, real-time purge can be achieved.
 
 Of course, there are more detailed questions, you need to read our source code.
 
