@@ -46,10 +46,9 @@ export default {
 }
 ```
 
-Within an entry point file or something only loaded once, add the import of `windi.css`. 
+Note: See [examples](#code-examples) if your webpack configuration doesn't look like this.
 
-:warn: For this, to work you need to be using a [style-loader](https://webpack.js.org/loaders/style-loader/#modules) with
-modules off.
+Within an entry point file or something only loaded once, add the import of `windi.css`. 
 
 ```ts
 // main.js
@@ -107,7 +106,7 @@ By default, we scan your source code statically and find all the usages of the u
 <div className={`p-${size}`}>
 ```
 
-For that, you will need to specify the possible combinations in the `safelist` options of `webpack.config.js`.
+For that, you will need to specify the possible combinations in the `safelist` options of `windi.config.ts`.
 
 ```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
@@ -195,5 +194,30 @@ You can also make your custom css be able to be overridden by certain layers:
 See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts) for configuration reference.
 
 ## Examples
+
+### Storybook
+
+```js
+// .storybook/main.js
+const WindiCSS = require('windicss-webpack-plugin')
+
+module.exports = {
+  // ...
+  webpackFinal: (config) => {
+    config.plugins.push(new WindiCSS())
+    return config
+  },
+}
+```
+
+```js
+// .storybook/preview.js
+
+import 'windi.css'
+```
+
+Note: CSS pre-processors will not work with `@apply`, use plain css.
+
+### Code Examples
 
 See [examples](https://github.com/windicss/windicss-webpack-plugin/tree/master/example) for sample projects.
