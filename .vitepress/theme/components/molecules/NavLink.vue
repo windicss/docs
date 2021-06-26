@@ -12,7 +12,7 @@ const { props: linkProps } = useNavLink(propsRefs.item, props.dropdown)
 
 <template>
   <a
-    class="p-2 inline-flex items-center font-medium transition duration-50"
+    class="p-2 inline-flex items-center transition duration-50"
     :class="{ 'whitespace-nowrap font-base hover:(text-primary bg-$windi-hover-bg) rounded w-full text-sm': dropdown }"
     v-bind="linkProps"
   >

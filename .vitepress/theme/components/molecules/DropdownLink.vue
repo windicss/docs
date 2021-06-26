@@ -27,7 +27,7 @@ function toggle() {
 
 <template>
   <div class="relative inline-flex items-center" @mouseenter="open = true" @mouseleave="open = false">
-    <button class="p-2 inline-flex items-center font-medium" :aria-label="item.ariaLabel" @click="toggle">
+    <button class="p-2 inline-flex items-center" :aria-label="item.ariaLabel" @click="toggle">
       {{ item.text }}
       <uil:angle-down class="ml-2 transition-transform duration-50 transform" :class="{'rotate-180': open}" />
     </button>

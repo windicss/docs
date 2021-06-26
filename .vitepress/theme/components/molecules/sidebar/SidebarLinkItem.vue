@@ -39,13 +39,14 @@ const active = computed(() => isActive(route, props.item.link))
 const link = resolveLink(site.value.base, props.item.link)
 
 const style = computed(() => ([
-  'transition duration-200',
+  'transition duration-100',
   props.header
     ? 'font-bold py-2'
     : props.table
       ? `inline-flex
       items-center
-      justify-between py-2 px-3 w-full rounded-md font-medium text-sm text-gray-700
+      justify-between py-2 px-3 w-full rounded-md
+      text-sm text-gray-700
       dark:text-gray-400
       hover:(text-primary dark:text-primary bg-$windi-hover-bg)`
       : `relative
