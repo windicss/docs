@@ -10,7 +10,6 @@ import { isDark } from '@/logics/dark'
 import { bps } from '@/logics/breakpoints'
 import { html, css } from '@/data/playground'
 import 'splitpanes/dist/splitpanes.css'
-import '@windicss/shared-components/index.css'
 
 const bpmd = bps.greater('md')
 
