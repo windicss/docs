@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { defineProps, ref, onMounted } from 'vue'
-import { IframePreview } from '@windicss/shared-components'
 import { Splitpanes, Pane } from 'splitpanes'
 import type { PropType } from 'vue'
 import type { Config } from 'windicss/types/interfaces'
@@ -29,6 +28,8 @@ const {
   generatedCSS,
 } = useWindiCSS(htmlCode, styleCode, props.config)
 
+const fixedStyle = processor.value.interpret('p-6').styleSheet.build()
+
 onMounted(() => {
   const { html, css } = getSharedCode()
   if (html)
@@ -46,7 +47,14 @@ useEmitShare(htmlCode, styleCode)
       <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="w-full h-full default-theme">
         <Pane v-if="layout === 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PlayPreviewBlock class="h-full">
-            <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" :dark="isDark" />
+            <preview-box
+              class="w-full h-full"
+              classes="p-6"
+              :fixed-css="fixedStyle"
+              :html="htmlCode"
+              :css="generatedCSS"
+              :dark="isDark"
+            />
           </PlayPreviewBlock>
         </Pane>
         <Pane min-size="20" :size="bpmd ? 60 : 66">
@@ -61,7 +69,14 @@ useEmitShare(htmlCode, styleCode)
         </Pane>
         <Pane v-if="layout !== 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PlayPreviewBlock class="h-full">
-            <IframePreview class="w-full h-full" :html="htmlCode" :css="generatedCSS" :dark="isDark" />
+            <preview-box
+              class="w-full h-full"
+              classes="p-6"
+              :fixed-css="fixedStyle"
+              :html="htmlCode"
+              :css="generatedCSS"
+              :dark="isDark"
+            />
           </PlayPreviewBlock>
         </Pane>
       </Splitpanes>

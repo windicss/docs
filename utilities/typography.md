@@ -528,7 +528,7 @@ Utilities for controlling the opacity of an element's text color.
   variant='50'
   type='opacity'
   prefix='text-opacity'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  fixed='p-2 opacity-85 overflow-hidden'
   appended='text-black'
   nested=true
   html="&lt;p class='text-black {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"

@@ -1,6 +1,7 @@
 :root {
   --header-height: 4rem;
   --full-header: calc(100vh - var(--header-height));
+  --font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 @screen md {

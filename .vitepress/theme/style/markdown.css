@@ -7,6 +7,8 @@
   --prism-block-padding-x: 0;
   --prism-block-padding-y: 0;
   --prism-font-size: 1em;
+  --prism-font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --prism-font-size: 0.9rem;
 }
 
 html:not(.dark) {
@@ -95,8 +97,7 @@ h6:focus .header-anchor {
 }
 
 .prose pre {
-  background-color: transparent;
-  margin: 0;
+  @apply bg-transparent m-0 px-4.5 py-3.5;
 }
 
 :not(pre) > code {

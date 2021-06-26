@@ -16,6 +16,13 @@ const config: UserConfig<DefaultTheme.Config> = {
       md.use(mdRenderFilename)
     },
   },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: tag => tag === 'preview-box',
+      },
+    },
+  },
 }
 
 export default config

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent } from 'vue'
+import { computed, defineAsyncComponent, onMounted } from 'vue'
 import { useData } from 'vitepress'
 import TheHome from './TheHome.vue'
 import ThePage from './ThePage.vue'
@@ -15,6 +15,11 @@ const page = computed(() => {
     return ThePlay
   else
     return ThePage
+})
+
+onMounted(async() => {
+  // @ts-expect-error
+  await import('@/web-components/PreviewBox.ts')
 })
 
 </script>

@@ -9,9 +9,9 @@ Utilities for controlling the box shadow of an element.
   :variants="['', 'sm', 'md', 'lg', 'xl', '2xl', 'inner', 'none']"
   prefix='shadow'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='bg-teal-400 w-32 h-32 rounded-md'
+  appended='bg-teal-400 w-full h-32 rounded-md'
   nested=true
-  html='&lt;div class=&quot;bg-teal-400 w-32 h-32 rounded-md {class}&quot;&gt;&lt;/div&gt;'
+  html='&lt;div class=&quot;bg-teal-400 w-full h-32 rounded-md {class}&quot;&gt;&lt;/div&gt;'
 />
 
 <Customizing>
@@ -43,9 +43,9 @@ export default {
   type='color'
   prefix='shadow'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='bg-teal-400 w-32 h-32 rounded-md shadow-2xl'
+  appended='bg-teal-400 w-full h-32 rounded-md shadow-2xl'
   nested=true
-  html='&lt;div class=&quot;bg-teal-400 w-32 h-32 rounded-md shadow-2xl {class}&quot;&gt;&lt;/div&gt;'
+  html='&lt;div class=&quot;bg-teal-400 w-full h-32 rounded-md shadow-2xl {class}&quot;&gt;&lt;/div&gt;'
 />
 
 <Customizing>
@@ -71,9 +71,9 @@ Utilities for controlling the opacity of an element.
   type='opacity'
   prefix='opacity'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='bg-teal-400 w-32 h-32 rounded-md'
+  appended='bg-teal-400 w-full h-32 rounded-md'
   nested=true
-  html='&lt;div class=&quot;bg-teal-400 w-32 h-32 rounded-md {class}&quot;&gt;&lt;/div&gt;'
+  html='&lt;div class=&quot;bg-teal-400 w-full h-32 rounded-md {class}&quot;&gt;&lt;/div&gt;'
 />
 
 
@@ -100,7 +100,7 @@ Utilities for controlling how an element should blend with the background.
   variant='multiply'
   :variants="['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity']"
   prefix='mix-blend'
-  fixed='dark:text-white opacity-85 overflow-hidden h-screen'
+  fixed='dark:text-white opacity-85 overflow-hidden h-full'
   appended='flex justify-center items-center bg-teal-300 bg-yellow-300 w-36 h-36 w-24 h-24 rounded-md'
   nested=true
   html='&lt;div class=&quot;flex justify-center&quot;&gt;

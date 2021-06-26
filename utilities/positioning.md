@@ -53,7 +53,7 @@ Utilities for controlling how flex and grid items are positioned along a contain
   :variants="['start', 'end', 'center', 'between', 'around', 'evenly']"
   prefix='justify'
   nested=true
-  fixed='!block pt-20'
+  fixed='pt-20'
   appended='flex rounded-md bg-teal-500 bg-teal-100 p-2 space-x-2 w-6 h-6'
   html='&lt;div class="flex {class} bg-teal-100 rounded-md p-2 space-x-2"&gt;
 &lt;div class="rounded-md bg-teal-500 w-6 h-6"&gt;&lt;/div&gt;
@@ -138,7 +138,7 @@ Utilities for controlling how flex and grid items are positioned along a contain
   :variants="['start', 'end', 'center', 'baseline', 'stretch']"
   prefix='items'
   nested=true
-  fixed='!block pt-10'
+  fixed='pt-10'
   appended='flex justify-center rounded-md bg-teal-500 bg-teal-100 p-2 space-x-2 w-6 min-h-6 h-32'
   html='&lt;div class="flex {class} justify-center bg-teal-100 rounded-md p-2 space-x-2 h-32"&gt;
 &lt;div class="rounded-md bg-teal-500 w-6 min-h-6"&gt;&lt;/div&gt;
@@ -156,7 +156,7 @@ Utilities for controlling how an individual flex or grid item is positioned alon
   :variants="['auto', 'start', 'end', 'center', 'stretch']"
   prefix='self'
   nested=true
-  fixed='!block pt-10'
+  fixed='pt-10'
   appended='flex justify-center rounded-md bg-teal-500 bg-yellow-400 bg-teal-100 p-2 space-x-2 w-6 min-h-6 h-32'
   html='&lt;div class="flex justify-center bg-teal-100 rounded-md p-2 space-x-2 h-32"&gt;
 &lt;div class="rounded-md bg-teal-500 w-6 min-h-6"&gt;&lt;/div&gt;
@@ -236,7 +236,7 @@ Utilities for controlling how an element is positioned in the DOM.
   variant='static'
   :variants="['static', 'fixed', 'absolute', 'relative', 'sticky']"
   nested=true
-  fixed='!block relative text-xs'
+  fixed='relative text-xs'
   appended='rounded-md clear-both bg-teal-500 bg-teal-100 w-8 h-8 mr-2 bg-red-400 bg-green-400 bg-blue-400 inline-block top-0 left-0'
   html='&lt;p&gt;In this demo you can control the &lt;code&gt;position&lt;/code&gt; property for the green box.&lt;/p&gt;
 &lt;div class="inline-block rounded-md w-8 h-8 bg-red-400 mr-2"&gt;&lt;/div&gt;
@@ -260,7 +260,7 @@ Utilities for controlling the placement of positioned elements.
   :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
   prefix='inset'
   nested=true
-  fixed='!block relative text-xs text-white w-screen h-screen'
+  fixed='relative text-xs text-white w-screen h-full'
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
@@ -287,7 +287,7 @@ export default {
   :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
   prefix='inset-y'
   nested=true
-  fixed='!block relative text-xs text-white w-screen h-screen'
+  fixed='relative text-xs text-white w-screen h-full'
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
@@ -299,7 +299,7 @@ export default {
   :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
   prefix='inset-x'
   nested=true
-  fixed='!block relative text-xs text-white w-screen h-screen'
+  fixed='relative text-xs text-white w-screen h-full'
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
@@ -312,7 +312,7 @@ export default {
   :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
   prefix='top'
   nested=true
-  fixed='!block relative text-xs text-white w-screen h-screen'
+  fixed='relative text-xs text-white w-screen h-full'
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
@@ -325,7 +325,7 @@ export default {
   :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
   prefix='right'
   nested=true
-  fixed='!block relative text-xs text-white w-screen h-screen'
+  fixed='relative text-xs text-white w-screen h-full'
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
@@ -337,7 +337,7 @@ export default {
   :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
   prefix='bottom'
   nested=true
-  fixed='!block relative text-xs text-white w-screen h-screen'
+  fixed='relative text-xs text-white w-screen h-full'
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
@@ -349,7 +349,7 @@ export default {
   :variants="['0', 'px', 'auto', 'full', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1/3', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-1/3', '-1.5rem', '-32px', '-full']"
   prefix='left'
   nested=true
-  fixed='!block relative text-xs text-white'
+  fixed='relative text-xs text-white'
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
@@ -363,7 +363,7 @@ Utilities for controlling the wrapping of content around an element.
   :variants="['right', 'left', 'none']"
   prefix='float'
   nested=true
-  fixed='!block text-xs'
+  fixed='text-xs'
   appended='bg-blue-300 rounded-md p-3 text-white'
   html='&lt;div class="{class} bg-blue-300 rounded-md p-3 text-white"&gt;Float me&lt;/div&gt;
 As much mud in the streets as if the waters had but newly retired from the face of the earth, and it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.'
@@ -378,7 +378,7 @@ Utilities for controlling the wrapping of content around an element.
   :variants="['right', 'left', 'both', 'none']"
   prefix='clear'
   nested=true
-  fixed='!block text-xs'
+  fixed='text-xs'
   appended='bg-blue-300 rounded-md p-3 text-white float-left float-right h-24'
   html='&lt;div class="float-left bg-blue-300 rounded-md p-3 text-white"&gt;Left&lt;/div&gt;
   &lt;div class="float-right bg-blue-300 rounded-md p-3 text-white h-24"&gt;Right&lt;/div&gt;
@@ -394,10 +394,10 @@ Utilities for controlling whether an element should explicitly create a new stac
 <PlaygroundWithVariants
   variant='isolate'
   :variants="['isolate', 'isolation-auto']"
-  fixed='dark:text-white opacity-85 overflow-hidden h-screen'
-  appended='w-32 h-32 bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black'
+  fixed='dark:text-white opacity-85 overflow-hidden h-full'
+  appended='w-full h-32 bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black'
   nested=true
-  html='&lt;div class="w-32 h-32 bg-green-400"&gt;
+  html='&lt;div class="w-full h-32 bg-green-400"&gt;
   &lt;div class="{class}"&gt;
     &lt;div class="bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black"&gt;auto&lt;/div&gt;
   &lt;/div&gt;

@@ -10,7 +10,7 @@ Utilities for setting the width of an element
     '0', '1', '1.5', '2', '4', '8', '10', '12', '14', '18', '20', '24', '1/2', '1/3', '3/5', '11/12', '4rem', '60px']"
   prefix='w'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 h-auto bg-green-400 m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} h-auto flex-shrink-0 p-2"&gt;{class}&lt;/p&gt;
@@ -43,7 +43,7 @@ Utilities for setting the minimum width of an element
     '0', '1', '1.5', '2', '4', '8', '10', '12', '14', '18', '20', '24', '1/2', '1/3', '3/5', '11/12', '4rem', '60px']"
   prefix='min-w'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 h-auto bg-green-400 m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} h-auto flex-shrink-0 p-2"&gt;{class}&lt;/p&gt;
@@ -75,7 +75,7 @@ Utilities for setting the maximum width of an element
     '0', '1', '1.5', '2', '4', '8', '10', '12', '14', '18', '20', '24', '1/2', '1/3', '3/5', '11/12', '4rem', '60px']"
   prefix='max-w'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 h-auto bg-green-400 m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} h-auto flex-shrink-0 p-2"&gt;{class}&lt;/p&gt;
@@ -108,7 +108,7 @@ Utilities for setting the height of an element
     '0', '1', '1.5', '2', '4', '8', '10', '12', '14', '18', '20', '24', '1/2', '1/3', '3/5', '11/12', '4rem', '60px']"
   prefix='h'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-auto bg-green-400 m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} w-auto flex-shrink-0 p-2"&gt;{class}&lt;/p&gt;
@@ -142,7 +142,7 @@ Utilities for setting the minimum height of an element
     '0', '1', '1.5', '2', '4', '8', '10', '12', '14', '18', '20', '24', '1/2', '1/3', '3/5', '11/12', '4rem', '60px']"
   prefix='min-h'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-auto bg-green-400 m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} w-auto flex-shrink-0 p-2"&gt;{class}&lt;/p&gt;
@@ -177,7 +177,7 @@ Utilities for setting the maximum height of an element
     '0', '1', '1.5', '2', '4', '8', '10', '12', '14', '18', '20', '24', '1/2', '1/3', '3/5', '11/12', '4rem', '60px']"
   prefix='max-h'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-auto bg-green-400 m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} w-auto flex-shrink-0 p-2"&gt;{class}&lt;/p&gt;
@@ -215,9 +215,9 @@ Utilities for controlling how the browser should calculate an element's total si
   :variants="['border', 'content']"
   prefix='box'
   nested=true
-  fixed='!block text-white text-xs'
-  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-32 h-32 bg-green-400 text-center flex flex-col justify-center m-1 p-2'
+  fixed='text-white text-xs'
+  appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-full h-32 bg-green-400 text-center flex flex-col justify-center m-1 p-2'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
-&lt;div class="rounded bg-green-400 {class} w-32 h-32 flex-shrink-0 p-2 text-center flex flex-col justify-center"&gt;w-32 x h-32&lt;/div&gt;
+&lt;div class="rounded bg-green-400 {class} w-full h-32 flex-shrink-0 p-2 text-center flex flex-col justify-center"&gt;w-full x h-32&lt;/div&gt;
 &lt;/div&gt;'
 />

@@ -4,8 +4,6 @@ import { syncRef } from '@vueuse/core'
 import { StyleSheet } from 'windicss/utils/style'
 import Windi from 'windicss'
 import JSON5 from 'json5'
-import { IframePreview } from '@windicss/shared-components'
-import '@windicss/shared-components/index.css'
 
 import type { PropType } from 'vue'
 import type CodeMirror from 'codemirror'
@@ -279,16 +277,14 @@ onMounted(async() => {
               </div>
             </div>
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <div class="language-css !bg-transparent max-h-30em">
-              <pre><code v-html="highlightedCSS" /></pre>
-            </div>
+            <pre class="language-css !bg-transparent max-h-30em !px-4 !py-4" v-html="highlightedCSS" />
           </div>
         </div>
         <div
           v-if="showPreview"
-          class="border-l border-$windi-bc w-10em"
+          class="border-l border-$windi-bc w-10em p-3"
         >
-          <IframePreview v-bind="iframeData" :dark="isDark" />
+          <preview-box v-bind="iframeData" :dark="isDark" />
         </div>
       </div>
     </div>

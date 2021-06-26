@@ -8,10 +8,10 @@ Utilities for animating elements with CSS animations.
   variant='bounce'
   :variants="['none', 'spin', 'ping', 'pulse', 'bounce']"
   prefix='animate'
-  fixed='p-2 dark:text-white opacity-85 h-screen flex flex-col justify-center'
+  fixed='p-2 dark:text-white opacity-85 h-full flex flex-col justify-center'
   nested=true
-  appended='transition ease-in-out focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1'
-  html='&lt;button tabindex="-1"; class="transition {class} ease-in-out focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1"&gt;
+  appended='transition ease-in-out focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1'
+  html='&lt;button tabindex="-1"; class="transition {class} ease-in-out focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 cursor-pointer transform hover:scale-110 hover:-translate-y-1"&gt;
     Click me
   &lt;/button&gt;'
 />
@@ -57,7 +57,7 @@ Utilities for suppressing native form control styling.
   variant='none'
   :variants="['none']"
   prefix='appearance'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden flex flex-col justify-center space-y-5 h-screen bg-blue-100 rounded-md'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden flex flex-col justify-center space-y-5 h-full bg-blue-100 rounded-md'
   appended='w-12'
   nested=true
   html='
@@ -79,7 +79,7 @@ Utilities for controlling how element fragments should be rendered across multip
   variant='slice'
   :variants="['slice', 'clone']"
   prefix='decoration'
-  fixed='dark:text-white opacity-85 overflow-hidden p-2 h-screen'
+  fixed='dark:text-white opacity-85 overflow-hidden p-2 h-full'
   nested=true
   appended='text-5xl font-extrabold bg-gradient-to-r from-green-400 to-blue-500 rounded-16px px-4 text-sm text-white'
   html="
@@ -157,9 +157,9 @@ Utilities for controlling the cursor style when hovering over an element.
   :variants="['auto', 'default', 'pointer', 'wait', 'text', 'move', 'help', 'not-allowed']"
   prefix='cursor'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-blue-500 ring-4 ring-opacity-50'
+  appended='focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400 ring-blue-500 ring-4 ring-opacity-50'
   nested=true
-  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 {class}&quot;&gt;
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400 ring-4 ring-blue-500 ring-opacity-50 {class}&quot;&gt;
     Hover me
   &lt;/button&gt;'
 />
@@ -195,9 +195,9 @@ The `image-render` utility defines how the browser should render an image if it 
   :variants="['auto', 'pixel', 'edge']"
   prefix='image-render'
   fixed='p-2 dark:text-white opacity-85'
-  appended='w-32 h-32'
+  appended='w-full h-32'
   nested=true
-  html="&lt;img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAACdJREFUCB1j9Pf3/88ABMmMjCCKgQlMIhGMu3btAquY9mMDWBhDBQAutwfDrUlKzQAAAABJRU5ErkJggg==' class='{class} w-32 h-32'&gt;"
+  html="&lt;img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAACdJREFUCB1j9Pf3/88ABMmMjCCKgQlMIhGMu3btAquY9mMDWBhDBQAutwfDrUlKzQAAAABJRU5ErkJggg==' class='{class} w-full h-32'&gt;"
 />
 
 ## List Style Type
@@ -262,9 +262,9 @@ Utilities for controlling an element's outline.
   :variants="['none', 'white', 'black', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
   prefix='outline'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400'
+  appended='focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400'
   nested=true
-  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 {class}&quot;&gt;
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400 {class}&quot;&gt;
     Button
   &lt;/button&gt;'
 />
@@ -276,9 +276,9 @@ Utilities for controlling an element's outline.
   :variants="['none', 'white', 'black', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
   prefix='outline-solid'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400'
+  appended='focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400'
   nested=true
-  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 {class}&quot;&gt;
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400 {class}&quot;&gt;
     Button
   &lt;/button&gt;'
 />
@@ -290,9 +290,9 @@ Utilities for controlling an element's outline.
   :variants="['none', 'white', 'black', 'gray-500', 'red-500', 'yellow-500', 'blue-500', 'green-500']"
   prefix='outline-dotted'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400'
+  appended='focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400'
   nested=true
-  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-32 py-3 rounded font-bold text-white bg-blue-400 {class}&quot;&gt;
+  html='&lt;button tabindex=&quot;-1&quot; class=&quot;focus:outline-none w-full py-3 rounded font-bold text-white bg-blue-400 {class}&quot;&gt;
     Button
   &lt;/button&gt;'
 />
@@ -337,8 +337,8 @@ Utilities for controlling how an element handles content that is too large for t
   prefix='overflow'
   fixed='dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='bg-blue-100 p-2 rounded-md text-xs'
-  html='&lt;div class="bg-blue-100 p-2 rounded-md text-xs {class}"&gt;
+  appended='bg-blue-100 dark:bg-blue-400 p-2 rounded-md text-xs'
+  html='&lt;div class="bg-blue-100 dark:bg-blue-400 p-2 rounded-md text-xs {class}"&gt;
 The value of Pi is
           3.1415926535897932384626433832795029. The value of e is
           2.7182818284590452353602874713526625.
@@ -362,8 +362,8 @@ Utilities for controlling how the browser behaves when reaching the boundary of 
   prefix='overscroll'
   fixed='dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='bg-blue-100 p-2 rounded-md text-xs overflow-auto'
-  html='&lt;div class="bg-blue-100 p-2 rounded-md text-xs overflow-auto {class}"&gt;
+  appended='bg-blue-100 dark:bg-blue-400 p-2 rounded-md text-xs overflow-auto'
+  html='&lt;div class="bg-blue-100 dark:bg-blue-400 p-2 rounded-md text-xs overflow-auto {class}"&gt;
 The value of Pi is
           3.1415926535897932384626433832795029. The value of e is
           2.7182818284590452353602874713526625.
