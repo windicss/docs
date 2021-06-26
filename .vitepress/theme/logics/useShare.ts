@@ -3,10 +3,24 @@ import * as lzs from 'lz-string'
 import mitt from 'mitt'
 import { getTemplateComponent } from '../data/components'
 
-export const emitter = mitt()
 export const SHARE_EVENT = Symbol('share')
 export const EXPORT_EVENT = Symbol('export')
 export const BASE_URL = 'https://windicss.org'
+
+type ComponentType = 'vue' | 'react' | 'svelte'
+
+const filename: Record<ComponentType, string> = {
+  vue: 'windicss.vue',
+  react: 'windicss.tsx',
+  svelte: 'windicss.svelte',
+}
+
+type Events = {
+  [SHARE_EVENT]: void
+  [EXPORT_EVENT]: ComponentType
+}
+
+export const emitter = mitt<Events>()
 
 export function getShareURL(html: string, css: string, site: string = BASE_URL) {
   const url = new URL('/play.html', site)
@@ -38,14 +52,6 @@ function download(filename: string, textInput: string) {
   window.URL.revokeObjectURL(url)
 }
 
-type ComponentType = 'vue' | 'react' | 'svelte'
-
-const filename: Record<ComponentType, string> = {
-  vue: 'windicss.vue',
-  react: 'windicss.tsx',
-  svelte: 'windicss.svelte',
-}
-
 export function useEmitShare(html: Ref<string>, css: Ref<string>) {
   const url = computed(() => getShareURL(html.value, css.value))
   watch(url, () => {
@@ -57,7 +63,7 @@ export function useEmitShare(html: Ref<string>, css: Ref<string>) {
   emitter.on(SHARE_EVENT, async() => {
     await navigator.clipboard.writeText(url.value.toString())
   })
-  emitter.on<ComponentType>(EXPORT_EVENT, async(type) => {
+  emitter.on(EXPORT_EVENT, async(type) => {
     if (!type) return
     const str = getTemplateComponent(type, html.value, css.value)
     if (str)
