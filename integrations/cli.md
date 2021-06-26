@@ -71,7 +71,6 @@ windicss './hello.html' './world.html'
 windicss './**/*.html'
 windicss './src/**/*.html'
 windicss './hello.html' './world.html', './src/**/*.svelte'
-...
 ```
 
 ### Compile CSS File
@@ -85,7 +84,6 @@ windicss './**/*.html'
 windicss './**/*.html' -to windi.css
 windicss './test.html' -to windi.css
 windicss './test.html' --preflight --output windi.css
-
 ```
 
 #### Minimize build
