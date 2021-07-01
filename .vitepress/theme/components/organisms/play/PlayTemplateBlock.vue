@@ -27,11 +27,11 @@ const htmlCode = computed({
   <div class="block-bg relative">
     <div class="block-code">
       <ClientOnly>
-        <Editor v-model="htmlCode" class="h-full w-full pb-2" language="html" :processor="processor" />
+        <Editor v-model="htmlCode" class="h-full w-full" language="html" :processor="processor" />
       </ClientOnly>
     </div>
     <div class="block-title">
-      <div class="w-full flex justify-between items-center">
+      <div class="flex w-full justify-between items-center">
         <span>Template</span>
         <!-- <PlayToolsDropdown /> -->
       </div>

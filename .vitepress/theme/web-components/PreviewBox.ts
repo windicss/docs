@@ -1,29 +1,36 @@
 const template = document.createElement('template')
+
 template.innerHTML = `
   <style>
-    /** scrollbar style **/
     *::-webkit-scrollbar {
-      background: transparent;
-      width: 6px;
-      height: 6px;
+      background-color: transparent;
+      height: 12px;
+      width: 12px;
     }
-
     *::-webkit-scrollbar-thumb {
       transition: background .2s ease-in-out;
-      background: transparent;
+      border: 3px solid transparent;
+      -webkit-background-clip: content-box;
+      background-clip: content-box;
+      --tw-bg-opacity: 1;
+      background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
       border-radius: 9999px;
     }
-
+    .dark *::-webkit-scrollbar-thumb {
+      --tw-bg-opacity: 1;
+      background-color: rgba(50, 50, 50, var(--tw-bg-opacity));
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+    }
+    .dark *::-webkit-scrollbar-thumb:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgba(60, 60, 60, var(--tw-bg-opacity));
+    }
     *::-webkit-scrollbar-corner {
-      background: transparent;
-    }
-
-    *:hover::-webkit-scrollbar-thumb {
-      background-color: #e4e4e7;
-    }
-    .dark *:hover::-webkit-scrollbar-thumb {
-      background-color: #333;
-    }
+      background-color: transparent;
+    }  
 
     :host {
       width: 100%;
