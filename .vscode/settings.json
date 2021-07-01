@@ -22,5 +22,6 @@
   },
   "eslint.workingDirectories": [
 		{ "directory": ".vitepress" }
-	]
+	],
+  "windicss.sortOnSave": false
 }

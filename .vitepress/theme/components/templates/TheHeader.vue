@@ -35,7 +35,7 @@ const repo = useRepo()
 .d-header {
   @apply
     fixed top-0 inset-x-0 z-50
-    bg-light-100 dark:bg-dark-800
+    bg-$windi-bg
     flex items-center
     border-b border-$windi-bc;
   height: var(--header-height);

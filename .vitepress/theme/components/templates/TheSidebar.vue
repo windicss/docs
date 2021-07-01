@@ -30,7 +30,9 @@ watch(openSideBar, (v) => {
         "
         :class="{ '-translate-x-0': openSideBar }"
       >
-        <div class="w-auto h-full overflow-auto bg-light-100 dark:bg-dark-800 lg:bg-transparent">
+        <div
+          class="w-auto h-full overflow-auto bg-$windi-bg lg:bg-transparent"
+        >
           <SidebarHeader @close="openSideBar = false" />
           <div class="sticky top-$header-height h-$full-header overflow-auto">
             <TreeMenu />
