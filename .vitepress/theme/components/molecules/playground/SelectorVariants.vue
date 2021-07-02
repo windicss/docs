@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, defineProps, defineEmit, watch, toRef } from 'vue'
+import { ref, defineProps, defineEmits, watch, toRef } from 'vue'
 
 const props = defineProps({
   modelValue: {
@@ -10,7 +10,7 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmit()
+const emit = defineEmits(['update:modelValue'])
 
 const variant = ref(props.modelValue)
 const variants = toRef(props, 'variants')

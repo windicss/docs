@@ -1,17 +1,31 @@
 import docsearch from '@docsearch/js'
 import { useRoute, useRouter, useData } from 'vitepress'
-import { getCurrentInstance } from 'vue'
+import { getCurrentInstance, onMounted, watch } from 'vue'
 
 import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
 import type { DefaultTheme } from '@/config'
 
 export function useSearchBox(props: Readonly<{
   options: DefaultTheme.AlgoliaSearchOptions
-  multilang?: boolean | undefined
+  multilang?: boolean
+  id?: string
 }>) {
   const vm = getCurrentInstance()
   const route = useRoute()
   const router = useRouter()
+
+  const searchId = props.id || 'docsearch'
+
+  watch(
+    () => props.options,
+    (value) => {
+      update(value)
+    },
+  )
+
+  onMounted(() => {
+    initialize(props.options)
+  })
 
   function isSpecialClick(event: MouseEvent) {
     return (
@@ -31,7 +45,7 @@ export function useSearchBox(props: Readonly<{
   function update(options: any) {
     if (vm && vm.vnode.el) {
       vm.vnode.el.innerHTML
-        = '<div class="algolia-search-box" id="docsearch"></div>'
+        = `<div class="algolia-search-box" id="${searchId}"></div>`
       initialize(options)
     }
   }
@@ -115,6 +129,7 @@ export function useSearchBox(props: Readonly<{
   }
 
   return {
+    searchId,
     initialize,
     update,
   }

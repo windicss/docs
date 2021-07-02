@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { defineEmit, defineProps } from 'vue'
+import { defineEmits } from 'vue'
 import { useRepo } from '@/logics/repo'
 
-defineProps({})
-
-defineEmit(['close'])
+defineEmits(['close'])
 
 const repo = useRepo()
 

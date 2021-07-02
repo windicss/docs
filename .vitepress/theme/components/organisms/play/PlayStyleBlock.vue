@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps, defineEmit } from 'vue'
+import { computed, defineProps, defineEmits } from 'vue'
 import { Editor } from '@windicss/shared-components'
 import type { PropType } from 'vue'
 import type Processor from 'windicss'
@@ -15,7 +15,7 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmit(['update:modelValue'])
+const emit = defineEmits(['update:modelValue'])
 
 const styleCode = computed({
   get: () => props.modelValue,

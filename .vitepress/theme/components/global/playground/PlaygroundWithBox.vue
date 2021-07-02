@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { computed, defineProps, defineEmit } from 'vue'
+import { computed, defineProps, defineEmits } from 'vue'
 import { useVModels } from '@vueuse/core'
 
-const emit = defineEmit()
+const emit = defineEmits([])
 const props = defineProps({
   directions: {
     default: () => ['ALL'],

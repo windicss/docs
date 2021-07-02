@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
 import { emitShare } from '@/logics/useShare'
 
-defineProps({})
 const toggle = ref(false)
 
 const { start } = useTimeoutFn(() => toggle.value = false, 4000)

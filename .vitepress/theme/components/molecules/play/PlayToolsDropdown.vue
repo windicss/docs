@@ -1,11 +1,9 @@
 
 <script setup lang="ts">
-import { defineProps, onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { useToggle } from '@vueuse/core'
 // @ts-ignore
 import { layout } from '@/logics/playgroundLayout'
-
-defineProps({})
 
 const show = ref(false)
 

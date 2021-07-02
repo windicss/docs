@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { triggerRef, defineProps, defineEmit } from 'vue'
+import { triggerRef, defineProps, defineEmits } from 'vue'
 import { useVModel } from '@vueuse/core'
 import type { PropType } from 'vue'
 
-const emit = defineEmit()
+const emit = defineEmits([])
 const props = defineProps({
   modelValue: {
     type: Array as PropType<string[]>,

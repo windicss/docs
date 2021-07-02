@@ -1,10 +1,3 @@
-<script setup lang="ts">
-import { defineProps } from 'vue'
-
-defineProps({})
-
-</script>
-
 <template>
   <div class="relative flex flex-col items-center justify-center h-60vh">
     <h1 class="!m-0 w-full text-center !text-9xl !md:text-12xl !text-transparent text-stroke-sm text-stroke-primary-300 dark:text-stroke-primary-700">

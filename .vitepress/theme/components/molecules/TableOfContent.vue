@@ -52,11 +52,11 @@ const hasHeaders = computed(() => headers.value && headers.value?.length > 0)
           text: 'Table of Content',
         }"
         class="px-2"
-        header
+        :header="true"
       />
       <ul class="mb-2">
         <li v-for="child in headers" :key="child.text">
-          <SidebarLinkItem :item="child" table />
+          <SidebarLinkItem :item="child" :table="true" />
         </li>
       </ul>
     </li>

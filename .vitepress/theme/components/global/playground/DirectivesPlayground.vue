@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, defineProps, onMounted, defineEmit } from 'vue'
+import { ref, defineProps, onMounted, defineEmits } from 'vue'
 import Windi from 'windicss'
 import { CSSParser } from 'windicss/utils/parser'
 import { useVModel } from '@vueuse/core'
@@ -7,7 +7,7 @@ import { useVModel } from '@vueuse/core'
 import { useCodeMirror } from '@/logics/useCodeMirror'
 import { usePrismCSS } from '@/logics/usePrismCSS'
 
-const emit = defineEmit()
+const emit = defineEmits([])
 const props = defineProps({
   input: {
     type: String,

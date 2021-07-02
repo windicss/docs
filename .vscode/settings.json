@@ -11,7 +11,6 @@
   "eslint.packageManager": "pnpm",
   "prettier.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "volar.style.defaultLanguage": "postcss",
   "volar.tsPlugin": true,
   "volar.tsPluginStatus": false,
   "editor.codeActionsOnSave": {
