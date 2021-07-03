@@ -1,33 +1,28 @@
 <script setup lang="ts">
-import { defineProps, ref, onMounted } from 'vue'
+import { defineProps, ref, onMounted, computed } from 'vue'
+import { IframePreview } from '@windicss/shared-components'
 import { Splitpanes, Pane } from 'splitpanes'
-import type { PropType } from 'vue'
-import type { Config } from 'windicss/types/interfaces'
 import { useWindiCSS } from '@/logics/useWindiCSS'
 import { getSharedCode, useEmitShare } from '@/logics/useShare'
 import { layout } from '@/logics/playgroundLayout'
 import { isDark } from '@/logics/dark'
 import { bps } from '@/logics/breakpoints'
 import { html, css } from '@/data/playground'
+
+import type { Config } from 'windicss/types/interfaces'
+
 import 'splitpanes/dist/splitpanes.css'
+import '@windicss/shared-components/index.css'
+// @windi whitelist: text-sm border p-2 rounded !bg-dark-300
+
+const regexClassGroup = /([!\w+-<@][\w+:_/-]*?\w):\(([!\w\s:/\\,%#\[\].$-]*?)\)/gm
 
 const bpmd = bps.greater('md')
 
 const styleCode = ref(css)
 const htmlCode = ref(html)
 
-const props = defineProps({
-  config: {
-    type: Object as PropType<Config>,
-  },
-})
-
-const {
-  processor,
-  generatedCSS,
-} = useWindiCSS(htmlCode, styleCode, props.config)
-
-const fixedStyle = processor.value.interpret('p-6').styleSheet.build()
+const props = defineProps<{ config: Config }>()
 
 onMounted(() => {
   const { html, css } = getSharedCode()
@@ -38,6 +33,18 @@ onMounted(() => {
 })
 
 useEmitShare(htmlCode, styleCode)
+
+// replace group variant
+const finalHTML = computed(() => {
+  return htmlCode.value.replace(regexClassGroup, (full: string, a: string, b: string) => {
+    return b.split(/\s/g).map(i => `${a}:${i}`).join(' ')
+  })
+})
+
+const {
+  processor,
+  generatedCSS,
+} = useWindiCSS(finalHTML, styleCode, props.config)
 </script>
 
 <template>
@@ -46,14 +53,7 @@ useEmitShare(htmlCode, styleCode)
       <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="w-full h-full default-theme">
         <Pane v-if="layout === 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PlayPreviewBlock class="h-full">
-            <preview-box
-              class="w-full h-full"
-              classes="p-6"
-              :fixed-css="fixedStyle"
-              :html="htmlCode"
-              :css="generatedCSS"
-              :dark="isDark"
-            />
+            <IframePreview class="w-full h-full" :html="finalHTML" :css="generatedCSS" :dark="isDark" />
           </PlayPreviewBlock>
         </Pane>
         <Pane min-size="20" :size="bpmd ? 60 : 66">
@@ -68,14 +68,7 @@ useEmitShare(htmlCode, styleCode)
         </Pane>
         <Pane v-if="layout !== 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PlayPreviewBlock class="h-full">
-            <preview-box
-              class="w-full h-full"
-              classes="p-6"
-              :fixed-css="fixedStyle"
-              :html="htmlCode"
-              :css="generatedCSS"
-              :dark="isDark"
-            />
+            <IframePreview class="w-full h-full" :html="finalHTML" :css="generatedCSS" :dark="isDark" />
           </PlayPreviewBlock>
         </Pane>
       </Splitpanes>
@@ -85,6 +78,8 @@ useEmitShare(htmlCode, styleCode)
 
 <style lang="postcss">
 .playground {
+  --c-bg: var(--windi-bg);
+  --c-scrollbar: var(--windi-bc);
   @apply h-140vh p-4 bg-blue-gray-100 dark:bg-dark-800;
 }
 @screen md {
