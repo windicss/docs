@@ -49,7 +49,7 @@ If you were previously using `vue-cli-plugin-tailwind`, please consult the [docu
 yarn remove vue-cli-plugin-tailwind
 ```
 
-## Configuration
+## Options
 
 - Default:
 
