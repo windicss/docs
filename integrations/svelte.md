@@ -17,18 +17,19 @@ Our Svelte integration uses the Svelte Preprocessor API, therefore runs before c
 
 ### Options
 
-```js
-import { windi } from 'svelte-windicss-preprocess'
-// ...
-windi({
-  silent?: boolean, // default: false
-  mode?: 'development' | 'production', // default: process.env.NODE_ENV
-  configPath?: string, // no default
-  disableFormat?: boolean, // default: false
-  useDevTools?: {
-    enabled?: boolean, // default: false
-  },
-})
+```ts
+interface Options {
+  silent?: boolean
+  mode?: 'development' | 'production'
+  configPath?: string
+  disableFormat?: boolean
+  devTools?: {
+    enabled: boolean
+    completions?: boolean
+  }
+  safeList?: string
+  preflights?: boolean
+}
 ```
 
 ### Custom pre-processing information
@@ -96,7 +97,7 @@ To make all Windi CSS classes in one `.svelte` global, with help of `:global()` 
 
 ### Custom styles
 
-You may have the need in your project to define custom CSS classes, and want to decide seperate to Windi CSS if they are scoped or global. You can with the following syntax:
+You may have the need in your project to define custom CSS classes, and want to decide separate to Windi CSS if they are scoped or global. You can with the following syntax:
 
 ```html
   <!-- all styles with :global() -->
