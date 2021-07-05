@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { useSearchBox } from '@/logics/search'
 
 import type { DefaultTheme } from '@/config'

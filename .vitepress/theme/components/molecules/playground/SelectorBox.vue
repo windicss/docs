@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { triggerRef, defineProps, defineEmits } from 'vue'
+import { triggerRef } from 'vue'
 import { useVModel } from '@vueuse/core'
 import type { PropType } from 'vue'
 

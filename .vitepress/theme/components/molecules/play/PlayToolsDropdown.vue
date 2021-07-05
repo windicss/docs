@@ -18,7 +18,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative hidden md:block" @click.stop="toggleShow">
+  <div class="relative hidden md:block" @click.stop="toggleShow()">
     <button class="focus:outline-none">
       <uil:angle-down class="bg-blue-gray-100 hover:bg-blue-gray-200 rounded w-6 h-6 text-gray-700 dark:bg-dark-300 dark:text-gray-100 dark:hover:bg-dark-800" />
     </button>

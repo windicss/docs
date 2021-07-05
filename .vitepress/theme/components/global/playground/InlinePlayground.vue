@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shallowRef, ref, watchEffect, defineProps, onMounted, computed, toRef, reactive } from 'vue'
+import { shallowRef, ref, watchEffect, onMounted, computed, toRef, reactive } from 'vue'
 import { syncRef } from '@vueuse/core'
 import { StyleSheet } from 'windicss/utils/style'
 import Windi from 'windicss'
@@ -297,7 +297,7 @@ onMounted(async() => {
     border-t border-l border-r rounded-tr rounded-tl border-$windi-bc;
 }
 .inline-playground .tabs .tab.active {
-  @apply text-blue-500 bg-bg opacity-100;
+  @apply text-blue-500 bg-$windi-bg opacity-100;
 }
 .inline-playground .CodeMirror {
   @apply px-3 py-2 h-auto bg-transparent font-mono text-sm;

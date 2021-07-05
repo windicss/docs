@@ -3,7 +3,7 @@ import { isDark, toggleDark } from '@/logics/dark'
 </script>
 
 <template>
-  <IconButton @click="toggleDark">
+  <IconButton @click="toggleDark()">
     <bx:bx-moon v-show="isDark" />
     <ion-ios-sunny v-show="!isDark" />
   </IconButton>

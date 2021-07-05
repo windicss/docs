@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-import type { PropType } from 'vue'
-
 defineProps({
-  to: {
-    type: [String, Object] as PropType<string | object | null>,
-    default: null,
-  },
   href: {
     type: String,
     default: '',

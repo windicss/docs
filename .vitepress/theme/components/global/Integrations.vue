@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
-const props = defineProps<{
+defineProps<{
   items: {link: string; logo: string; title: string; wip?: boolean }[]
 }>()
 </script>
@@ -9,7 +7,7 @@ const props = defineProps<{
 <template>
   <div class="flex flex-wrap gap-5">
     <a
-      v-for="item of props.items"
+      v-for="item of items"
       :key="item.link"
       class="
         relative

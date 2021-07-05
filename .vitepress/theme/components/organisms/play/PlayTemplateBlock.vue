@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps, defineEmits } from 'vue'
+import { computed } from 'vue'
 import { Editor } from '@windicss/shared-components'
 import type { PropType } from 'vue'
 import type Processor from 'windicss'

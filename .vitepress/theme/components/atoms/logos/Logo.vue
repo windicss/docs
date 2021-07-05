@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import Nuxt from 'virtual:vite-icons/logos/nuxt-icon'
 import Vue from 'virtual:vite-icons/logos/vue'
 import Svelte from 'virtual:vite-icons/logos/svelte-icon'

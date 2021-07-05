@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, toRefs } from 'vue'
+import { toRefs } from 'vue'
 import type { DefaultTheme } from '@/config'
 import { useNavLink } from '@/logics/navLink'
 const props = defineProps<{

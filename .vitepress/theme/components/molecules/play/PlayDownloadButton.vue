@@ -1,6 +1,5 @@
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { emitExport } from '@/logics/useShare'
 
 defineProps({

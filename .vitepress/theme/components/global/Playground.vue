@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { IframePreview } from '@windicss/shared-components'
 import { Splitpanes, Pane } from 'splitpanes'
 import { useWindiCSS } from '@/logics/useWindiCSS'
@@ -22,7 +22,7 @@ const bpmd = bps.greater('md')
 const styleCode = ref(css)
 const htmlCode = ref(html)
 
-const props = defineProps<{ config: Config }>()
+const props = defineProps<{ config?: Config }>()
 
 onMounted(() => {
   const { html, css } = getSharedCode()

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineEmits } from 'vue'
 import { useRepo } from '@/logics/repo'
 
 defineEmits(['close'])
