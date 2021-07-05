@@ -239,3 +239,9 @@ Useful for making runtime style changes.
 Modify the Windi CSS options before they are passed to the webpack plugin.
 
 Useful for adding runtime directories to the scan path.
+
+`windicss:utils`
+- Arguments: Windi CSS utils
+
+Exposes the Windi CSS utils as an object. Use this to implement your own custom utilities without
+creating duplicate util instances.
