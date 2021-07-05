@@ -15,8 +15,7 @@ yarn add nuxt-windicss -D
 
 Within your `nuxt.config.js` add the following.
 
-```js
-// nuxt.config.js
+```js nuxt.config.js
 export default {
   buildModules: [
     'nuxt-windicss',
@@ -107,8 +106,7 @@ export default defineConfig({
 
 Or in nuxt config:
 
-```ts
-// nuxt.config.js
+```js nuxt.config.js
 export default {
   // ...
   windicss: {
@@ -126,7 +124,8 @@ export default {
 ### Other Options
 
 These are the default options for the nuxt module.
-```js
+
+```js nuxt.config.js
 export default {
   // ...
   windicss: {
@@ -169,8 +168,7 @@ the scanning for most users.
 
 To opt-in to this scanning you will need to set the scan options yourself.
 
-````js
-// nuxt.config.js
+````js nuxt.config.js
 export default {
   // ...
   hooks: {
@@ -195,7 +193,7 @@ export default {
 If you need to load in a CSS file from a node_module folder and have the @apply's transformed,
 then you will need to use the `extraTransformTargets` option.
 
-```js
+```js nuxt.config.js
 export default {
   // ...
   hooks: {

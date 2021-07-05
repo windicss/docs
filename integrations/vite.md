@@ -33,8 +33,7 @@ npm i -D vite-plugin-windicss windicss
 
 Then, install the plugin in your Vite configuration:
 
-```ts
-// vite.config.js
+```ts vite.config.js
 import WindiCSS from 'vite-plugin-windicss'
 
 export default {
@@ -46,8 +45,7 @@ export default {
 
 And finally, import `virtual:windi.css` in your Vite entries:
 
-```js
-// main.js
+```js main.js
 import 'virtual:windi.css'
 ```
 
@@ -63,8 +61,7 @@ Enable TypeScript for your `tailwind.config.js`? Sure, why not?
 
 Rename it to `tailwind.config.ts` and things just work!
 
-```ts
-// tailwind.config.ts
+```ts tailwind.config.ts
 import { defineConfig } from 'windicss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
@@ -174,8 +171,7 @@ export default defineConfig({
 
 Or in plugin options:
 
-```ts
-// vite.config.js
+```ts vite.config.js
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -297,8 +293,7 @@ See [examples](https://github.com/windicss/vite-plugin-windicss/blob/main/exampl
 
 Install plugin with `npm i -D vite-plugin-windicss` and adapt the svelte config:
 
-```js
-// svelte.config.js
+```js svelte.config.js
 import preprocess from 'svelte-preprocess'
 import WindiCSS from 'vite-plugin-windicss'
 
@@ -319,8 +314,7 @@ export default config
 
 Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
 
-```html
-<!-- $layout.svelte -->
+```html $layout.svelte
 <script>
   import "virtual:windi.css"
 

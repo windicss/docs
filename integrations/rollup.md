@@ -14,8 +14,7 @@
 npm i rollup-plugin-windicss -D # yarn add rollup-plugin-windicss -D
 ```
 
-```ts
-// rollup.config.js
+```js rollup.config.js
 import WindiCSS from 'rollup-plugin-windicss'
 
 export default {
@@ -39,8 +38,7 @@ That's all.
 
 Preflight is enables on demanded, if you'd like to completely disable it, you can configure it as below
 
-```js
-// rollup.config.js
+```js rollup.config.js
 export default {
   plugins: [
     WindiCSS({
@@ -61,8 +59,7 @@ By default, we scan your source code statically and find all the usages of the u
 
 For that, you will need to specify the possible combinations in the `safelist` options of `vite.config.js`.
 
-```js
-// rollup.config.js
+```js rollup.config.js
 export default {
   plugins: [
     WindiCSS({
@@ -96,8 +93,7 @@ export default {
 
 On server start, `vite-plugin-windicss` will scan your source code and extract the utilities usages. By default, only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scaning for other file type of locations, you can configure it via:
 
-```js
-// rollup.config.js
+```js rollup.config.js
 export default {
   plugins: [
     WindiCSS({

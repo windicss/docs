@@ -18,8 +18,7 @@ npm i -D postcss-windicss
 
 Create `postcss.config.js` under your project root
 
-```js
-// postcss.config.js
+```js postcss.config.js
 module.exports = {
   plugins: {
     'postcss-windicss': { /* ... */ },
