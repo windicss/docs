@@ -4,25 +4,42 @@
 
 <PackageInfo name="windicss-webpack-plugin" author="harlan-zw" />
 
-## Should I use this?
+## Choosing the right plugin
 
-Windi CSS Webpack Plugin is a language and framework agnostic way to implement Windi CSS.
+Windi CSS Webpack Plugin is a language and framework agnostic way to implement Windi CSS in webpack apps.
 
-You should use this plugin if you're using webpack and your framework is **not** below.
+### First Class Framework Support
 
-| Language / Framework |   Example |
+If it's below, please use the plugin specifically built for your framework.
+
+| Framework |   |
 | :-------- | :----- |
-| <Logo name="vue" class="inline"/> Vue CLI | [✅ Plugin](/integrations/vue-cli.html) |
-| <Logo name="nuxt" class="inline"/> Nuxt.js | [✅ Plugin](/integrations/nuxt.html) |
-| <Logo name="gridsome" class="inline"/> Gridsome | [✅ Plugin](/integrations/gridsome.html) |
-| <Logo name="svelte" class="inline"/> Svelte | [✅ Plugin](/integrations/svelte.html) |
-| Umi.js | [✅ Config Example](https://github.com/windicss/windicss-webpack-plugin/tree/master/example/umijs) |
-| Storybook | [✅ Config Example](#storybook) |
-| Next.js - webpack 4 | ✅ [Config Example](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/next/next.config.js) |
-| Next.js - webpack 5 | ❌ HMR not supported (help needed) |
-| Angular | ❌ Not supported (help needed) |
+| <Logo name="nuxt" class="inline"/> Nuxt.js | [nuxt-windicss](/integrations/nuxt.html) |
+| <Logo name="svelte" class="inline"/> Svelte | [svelte-windicss-preprocess](/integrations/svelte.html) |
+| <Logo name="vue" class="inline"/> Vue CLI | [vue-cli-plugin-windicss](/integrations/vue-cli.html) |
+| <Logo name="gridsome" class="inline"/> Gridsome | [gridsome-plugin-windicss](/integrations/gridsome.html) |
+
+
+### Second Class Framework Support
+
+Frameworks that have been successfully setup and documented to work with Windi.
+
+| Framework |    |
+| :-------- | :----- |
+| Next.js | [Install](#next-js) - [Example](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/next/) |
+| CRACO | [Install](#create-react-app-craco) - [Example](https://github.com/windicss/windicss-webpack-plugin/blob/master/example/craco/)|
+| Storybook | [Install](#storybook) - [Example](https://github.com/windicss/windicss-webpack-plugin/tree/master/example/vue3-storybook) |
+| Umi.js | [Example](https://github.com/windicss/windicss-webpack-plugin/tree/master/example/umijs) |
+
+### Non Supported Frameworks
+
+Frameworks which have been tested with this package and did not work.
+
+- ❌ Angular
 
 ## Install
+
+If you are proceeding setup with a custom webpack build, then please report any issues you find.
 
 ```bash
 yarn add windicss-webpack-plugin -D 
@@ -31,9 +48,9 @@ yarn add windicss-webpack-plugin -D
 
 If you were previously using Tailwind, please see the [migration guide](/guide/migration.html).
 
-### Add the plugin
+### Configure webpack
 
-You will need to add the plugin to your webpack configuration. If you have access to modify the webpack.config.js directly, then you can do the following.
+You will need to add the plugin to your webpack configuration. If you have access to modify the `webpack.config.js` directly, then you can do the following.
 
 ```js
 // webpack.config.js
@@ -47,41 +64,55 @@ export default {
 }
 ```
 
-Note: See [examples](#code-examples) if your webpack configuration doesn't look like this.
 
-Within an entry point file or something only loaded once, add the import of `windi.css`. 
+#### Non ES Modules Install
+
+For webpack configurations which don't support the es module import syntax, you can try the following.
+
+```js
+// webpack.config.js
+const WindiCSS = require('windicss-webpack-plugin').default
+
+export default {
+  // ...
+  plugins: [
+    new WindiCSS(),
+  ],
+}
+```
+
+### Include the virtual module
+
+Within an entry point file or something only loaded once, add the import of `windi.css`.
 
 ```ts
 // main.js
 import 'windi.css'
+// require('windi.css')
 ```
 
-## Supports
+### Windi Config
 
-### TypeScript
+Add a file called `windi.config.ts` to your project root if you don't have it already.
 
-Enable TypeScript for your `windi.config.js`? Sure, why not?
+#### Scanning
 
-Rename it to `windi.config.ts` and things just work!
+If you have issues when you start Windi that your classes aren't being picked up, you may need
+to modify the scanning.
+
+On server start, Windi will scan your code and extract the utility usages. By default, only files under `src/` with extensions `"html", "vue", "md", "mdx", "pug", "jsx", "tsx", "svelte", "ts", "js", "css", "postcss"` will be included.
 
 ```ts
 // windi.config.ts
 import { defineConfig } from 'windicss/helpers'
-import formsPlugin from 'windicss/plugin/forms'
 
 export default defineConfig({
-  darkMode: 'class',
-  safelist: 'p-3 p-4 p-5',
-  theme: {
-    extend: {
-      colors: {
-        teal: {
-          100: '#096',
-        },
-      },
+    extract: {
+        // A common use case is scanning files from the root directory 
+        include: ['**/*.{vue,html,jsx,tsx}'],
+        // if you are excluding files, make sure you always include node_modules and .git
+        exclude: ['node_modules', '.git', 'dist'],
     },
-  },
-  plugins: [formsPlugin],
 })
 ```
 
@@ -96,7 +127,7 @@ Preflight is enabled on-demanded. If you'd like to completely disable it, you ca
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-  preflight: false,
+    preflight: false,
 })
 ```
 
@@ -116,7 +147,7 @@ For that, you will need to specify the possible combinations in the `safelist` o
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-  safelist: 'p-1 p-2 p-3 p-4',
+    safelist: 'p-1 p-2 p-3 p-4',
 })
 ```
 
@@ -127,55 +158,19 @@ Or you can do it this way
 import { defineConfig } from 'windicss/helpers'
 
 function range(size, startAt = 1) {
-  return Array.from(Array(size).keys()).map(i => i + startAt)
+    return Array.from(Array(size).keys()).map(i => i + startAt)
 }
 
 export default defineConfig({
-  safelist: [
-    range(30).map(i => `p-${i}`), // p-1 to p-3
-    range(10).map(i => `mt-${i}`), // mt-1 to mt-10
-  ],
+    safelist: [
+        range(30).map(i => `p-${i}`), // p-1 to p-3
+        range(10).map(i => `mt-${i}`), // mt-1 to mt-10
+    ],
 })
 ```
 
-### Scanning
-
-On server start, `windicss-webpack-plugin` will scan your source code and extract the utility usages. By default, only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
-
-```ts
-// windi.config.js
-import { defineConfig } from 'windicss/helpers'
-
-export default defineConfig({
-  extract: {
-    include: ['src/**/*.{vue,html,jsx,tsx}'],
-    exclude: ['node_modules', '.git'],
-  },
-})
-```
-
-Or in plugin options:
-
-```ts
-// webpack.config.js
-import WindiCSS from 'windicss-webpack-plugin'
-
-export default {
-  // ...
-  plugins: [
-    new WindiCSS({
-      scan: {
-        dirs: ['.'], // all files in the cwd
-        fileExtensions: ['vue', 'js', 'ts'], // also enabled scanning for js/ts
-      },
-    }),
-  ],
-}
-```
 
 ### Layers Ordering
-
-> Supported from v1.1.x
 
 By default, importing `windi.css` or `virtual:windi.css` will import all the three layers with the order `base - components - utilities`. If you want to have better controls over the orders, you can separate them by:
 
@@ -195,37 +190,90 @@ You can also make your custom css be able to be overridden by certain layers:
   import 'virtual:windi-utilities.css'
 ```
 
-## Configuration
+### Full Configuration
 
-See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts) for configuration reference.
+See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts) for full configuration details.
 
-## Examples
+## Install Examples
 
-### Non ES Modules
+### Next.js
 
-For webpack configurations which don't support the es module import syntax, you can try the following.
-
+**next.config.js**
 ```js
-// webpack.config.js
 const WindiCSS = require('windicss-webpack-plugin').default
 
-export default {
+module.exports = {
   // ...
-  plugins: [
-    new WindiCSS(),
-  ],
+  webpack(config) {
+    config.plugins.push(new WindiCSS())
+    return config
+  },
 }
 ```
 
-```ts
-// main.js
-require('windi.css')
+**pages/_app.js**
+```js
+import 'windi.css'
 ```
+
+**windi.config.ts**
+```ts
+import { defineConfig } from 'windicss/helpers'
+
+export default defineConfig({
+  extract: {
+    include: ['**/*.{jsx,css}'],
+    exclude: ['node_modules', '.git', '.next'],
+  },
+})
+```
+
+Note: JSX usage is experimental. Please report any issues you find.
+
+
+### Create React App - CRACO
+
+**craco.config.js**
+```js
+const WindiCSS = require('windicss-webpack-plugin').default
+
+module.exports = {
+  // ...
+  webpack: {
+    plugins: {
+      add: [
+        new WindiCSS({
+          virtualModulePath: 'src'
+        })
+      ],
+    },
+  },
+}
+```
+
+**src/index.js**
+```js
+import './virtual:windi.css'
+```
+
+**windi.config.ts**
+```ts
+import { defineConfig } from 'windicss/helpers'
+
+export default defineConfig({
+    extract: {
+        include: ['**/*.{jsx,js,css,html}'],
+        exclude: ['node_modules', '.git', '.next'],
+    },
+})
+```
+
+Note: JSX usage is experimental. Please report any issues you find.
 
 ### Storybook
 
+**.storybook/main.js**
 ```js
-// .storybook/main.js
 const WindiCSS = require('windicss-webpack-plugin').default
 
 module.exports = {
@@ -237,13 +285,12 @@ module.exports = {
 }
 ```
 
+**.storybook/preview.js**
 ```js
-// .storybook/preview.js
-
 import 'windi.css'
 ```
 
-Note: CSS pre-processors will not work with `@apply`, use plain css.
+Warning: CSS pre-processors (like SCSS, LESS) will not work with `@apply`, use plain css.
 
 ### Code Examples
 
