@@ -15,10 +15,7 @@ export const mdRenderFilename = (md: MarkdownIt) => {
     const rawCode = fence(...args)
 
     const finalCode = filename
-      ? rawCode.replace(/<div class="language-(\w+)">/, `<div class="language-$1 with-filename">
-        <div class="code-block-filename">
-          ${filename}
-        </div>`)
+      ? rawCode.replace(/<div class="language-(\w+)">/, `<div class="language-$1 with-filename"><div class="code-block-filename">${filename}</div>`)
       : rawCode
 
     return finalCode
