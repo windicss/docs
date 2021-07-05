@@ -201,11 +201,32 @@ See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/pack
 
 ## Examples
 
+### Non ES Modules
+
+For webpack configurations which don't support the es module import syntax, you can try the following.
+
+```js
+// webpack.config.js
+const WindiCSS = require('windicss-webpack-plugin').default
+
+export default {
+  // ...
+  plugins: [
+    new WindiCSS(),
+  ],
+}
+```
+
+```ts
+// main.js
+require('windi.css')
+```
+
 ### Storybook
 
 ```js
 // .storybook/main.js
-const WindiCSS = require('windicss-webpack-plugin')
+const WindiCSS = require('windicss-webpack-plugin').default
 
 module.exports = {
   // ...
