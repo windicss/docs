@@ -203,7 +203,7 @@ See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/pack
 
 ### Non ES Modules
 
-For webpack configurations which don't support imports, you can try the following.
+For webpack configurations which don't support the es module import syntax, you can try the following.
 
 ```js
 // webpack.config.js
