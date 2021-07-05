@@ -107,12 +107,12 @@ On server start, Windi will scan your code and extract the utility usages. By de
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-    extract: {
-        // A common use case is scanning files from the root directory 
-        include: ['**/*.{vue,html,jsx,tsx}'],
-        // if you are excluding files, make sure you always include node_modules and .git
-        exclude: ['node_modules', '.git', 'dist'],
-    },
+  extract: {
+    // A common use case is scanning files from the root directory
+    include: ['**/*.{vue,html,jsx,tsx}'],
+    // if you are excluding files, make sure you always include node_modules and .git
+    exclude: ['node_modules', '.git', 'dist'],
+  },
 })
 ```
 
@@ -127,7 +127,7 @@ Preflight is enabled on-demanded. If you'd like to completely disable it, you ca
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-    preflight: false,
+  preflight: false,
 })
 ```
 
@@ -147,7 +147,7 @@ For that, you will need to specify the possible combinations in the `safelist` o
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-    safelist: 'p-1 p-2 p-3 p-4',
+  safelist: 'p-1 p-2 p-3 p-4',
 })
 ```
 
@@ -158,14 +158,14 @@ Or you can do it this way
 import { defineConfig } from 'windicss/helpers'
 
 function range(size, startAt = 1) {
-    return Array.from(Array(size).keys()).map(i => i + startAt)
+  return Array.from(Array(size).keys()).map(i => i + startAt)
 }
 
 export default defineConfig({
-    safelist: [
-        range(30).map(i => `p-${i}`), // p-1 to p-3
-        range(10).map(i => `mt-${i}`), // mt-1 to mt-10
-    ],
+  safelist: [
+    range(30).map(i => `p-${i}`), // p-1 to p-3
+    range(10).map(i => `mt-${i}`), // mt-1 to mt-10
+  ],
 })
 ```
 
@@ -243,8 +243,8 @@ module.exports = {
     plugins: {
       add: [
         new WindiCSS({
-          virtualModulePath: 'src'
-        })
+          virtualModulePath: 'src',
+        }),
       ],
     },
   },
@@ -261,10 +261,10 @@ import './virtual:windi.css'
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-    extract: {
-        include: ['**/*.{jsx,js,css,html}'],
-        exclude: ['node_modules', '.git', '.next'],
-    },
+  extract: {
+    include: ['**/*.{jsx,js,css,html}'],
+    exclude: ['node_modules', '.git', '.next'],
+  },
 })
 ```
 
