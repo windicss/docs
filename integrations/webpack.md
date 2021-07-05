@@ -270,6 +270,27 @@ export default defineConfig({
 
 Note: JSX usage is experimental. Please report any issues you find.
 
+### Non ES Modules
+
+For webpack configurations which don't support the es module import syntax, you can try the following.
+
+```js
+// webpack.config.js
+const WindiCSS = require('windicss-webpack-plugin').default
+
+export default {
+  // ...
+  plugins: [
+    new WindiCSS(),
+  ],
+}
+```
+
+```ts
+// main.js
+require('windi.css')
+```
+
 ### Storybook
 
 **.storybook/main.js**
