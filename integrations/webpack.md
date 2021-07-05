@@ -244,8 +244,7 @@ module.exports = {
 import './virtual:windi.css'
 ```
 
-**windi.config.ts**
-```ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
