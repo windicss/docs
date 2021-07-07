@@ -86,7 +86,7 @@ The `@layer` directive makes sure the order of each class. Valid layers are `bas
   }
 }
 .normal {
-  marign-right: auto; /* components by default */
+  margin-right: auto; /* components by default */
 }`.trim()'
 />
 
