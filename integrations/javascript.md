@@ -32,7 +32,7 @@ export function generateStyles(html) {
   const htmlClasses = new HTMLParser(html)
     .parseClasses()
     .map(i => i.result)
-    .join('')
+    .join(' ')
 
   // Generate preflight based on the html we input
   const preflightSheet = processor.preflight(html)
