@@ -1,6 +1,6 @@
 # Extractions
 
-Windi CSS relying on **statical scanning and extractions** to your source files and find your utilities usages and generate them for you on-demand. Similar to [Tailwind's Purge limitation](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html), you will need to use statical full names of utilities for Windi CSS to detect and generate correctly. For example:
+Windi CSS relies on **static scanning and extractions** on your source files to find your utility usages and generate the equivalent CSS on-demand. Similar to [Tailwind's Purge limitation](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html), you will need to use the static full names of utilities for Windi CSS to detect them correctly. For instance,
 
 String concatenations CANNOT be extracted statically:
 
