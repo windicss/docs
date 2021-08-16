@@ -1,4 +1,5 @@
 [tailwind css]: https://tailwindcss.com/docs
+[tailwind css v2]: https://blog.tailwindcss.com/tailwindcss-v2
 [discussions]: https://github.com/windicss/windicss/discussions
 [GitHub Issues]: https://github.com/windicss/windicss/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
 [GitHub Discussions]: https://github.com/windicss/windicss/discussions
@@ -54,4 +55,4 @@ We provide **first-class integrations** for your favorite tools with the best de
 
 ## Features
 
-Windi CSS offers some great features in addition to everything that's included in Tailwind CSS v2. Refer to the [next chapter][features] for more details.
+Windi CSS offers some great features in addition to everything that's included in [Tailwind CSS v2][tailwind css v2]. Refer to the [next chapter][features] for more details.
