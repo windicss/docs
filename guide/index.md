@@ -54,4 +54,4 @@ We provide **first-class integrations** for your favorite tools with the best de
 
 ## Features
 
-In addition to Tailwind CSS v2, we also have some great features that only possible for Windi CSS. Refer to the [next chapter][features] for more details.
+Windi CSS offers some great features in addition to everything that's included in Tailwind CSS v2. Refer to the [next chapter][features] for more details.
