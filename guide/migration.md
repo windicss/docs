@@ -5,7 +5,7 @@
 
 ### `package.json`
 
-Some of your dependencies are no longer required, you can remove them if they were only needed for Tailwind CSS.
+Some of your dependencies are no longer required. You can remove them if they were needed only for Tailwind CSS.
 
 ```diff
 - "tailwindcss": "*",
@@ -24,7 +24,7 @@ You can now remove the Tailwind CSS imports from your css entry.
 - @import 'tailwindcss/utilities';
 ```
 
-(Optional) Based on the integrations tools you are using, you might need to import the `virtual:windi.css` entry explicitly. Please check the docs of the tools for more details.
+(Optional) Based on the integration tools you are using, you might need to import the `virtual:windi.css` entry explicitly. Please check the docs of the tools for more details.
 
 ```js
 // main.js
@@ -37,7 +37,7 @@ Since all variants are [automatically enabled][auto], `variant` and `purge` fiel
 
 `colors` and `plugins` need to be imported from `windicss` instead.
 
-We are compatible with both `windi.config.js` or `tailwind.config.js`
+We are compatible with both `windi.config.js` and `tailwind.config.js`.
 
 ```diff
 -const colors = require('tailwindcss/colors')

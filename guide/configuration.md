@@ -4,13 +4,13 @@
 
 # Configuring Windi CSS
 
-Configuration in [Windi CSS] is similar to what you would expect in [Tailwind CSS] but with additional enchancements and features.
+Configuration in [Windi CSS] is similar to what you would expect in [Tailwind CSS] but with additional enhancements and features.
 
 If you are migrating from Tailwind, check out the [migration guide] first.
 
 ## Config File
 
-By default, Windi CSS will search for configurations file under your project root. Here are valid names:
+By default, Windi CSS will search for the configuration file under your project's root. Valid filenames are:
 
 - `windi.config.ts`
 - `windi.config.js`
@@ -19,7 +19,7 @@ By default, Windi CSS will search for configurations file under your project roo
 
 **Native ES module and TypeScript are supported out-of-box**, powered by [sucrase](https://github.com/alangpierce/sucrase).
 
-To get typecheck for your configurations, you can import the `defineConfig` function from `windicss/helpers`. For example
+To get typecheck for your configurations, you can import the `defineConfig` function from `windicss/helpers`:
 
 ```ts
 // windi.config.ts
