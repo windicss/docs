@@ -11,7 +11,7 @@ Since Windi CSS will only generate the CSS utilities you use, it enables the pos
 <button class="bg-[#b2a8bb]"></button>
 <button class="bg-[hsl(211.7,81.9%,69.6%)]"></button>
 
-<!-- gird template -->
+<!-- grid template -->
 <div class="grid-cols-[auto,1fr,30px]"></div>
 ```
 
