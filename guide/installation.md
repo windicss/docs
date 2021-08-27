@@ -1,10 +1,10 @@
 # Installation
 
-Windi CSS provides **first-class integrations** for your favorite tools, select yours and get started.
+Windi CSS provides **first-class integrations** for your favorite tools. Select yours and get started.
 
 ## Build Tools
 
-Supports for build tools are framework-agnostic, they work for most frameworks without specific configurations.
+Support for build-tools are framework-agnostic. They work for most frameworks without specific configurations.
 
 <Integrations class="mb-5" :items="[
   {
@@ -36,7 +36,7 @@ Supports for build tools are framework-agnostic, they work for most frameworks w
 
 ## Frameworks
 
-In addition to general build tools support, we also provide integrations for the following frameworks that offer out-of-the-box experience.
+In addition to general build-tools support, we also provide integrations for the following frameworks that offer out-of-the-box experience.
 
 <Integrations class="mb-5" :items="[
   {

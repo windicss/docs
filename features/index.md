@@ -80,7 +80,6 @@ export default {
 
 <LearnMore to="/features/shortcuts" />
 
-
 ## Dark Mode
 
 ```html
@@ -88,6 +87,14 @@ export default {
 ```
 
 <LearnMore to="/features/dark-mode" />
+
+## RTL
+
+```html
+<div class="text-green-400 rtl:(text-red-400 text-right)"></div>
+```
+
+<LearnMore to="/features/rtl" />
 
 ## Directives
 

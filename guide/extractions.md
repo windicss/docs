@@ -1,14 +1,14 @@
 # Extractions
 
-Windi CSS relying on **statical scanning and extractions** to your source files and find your utilities usages and generate them for you on-demand. Similar to [Tailwind's Purge limitation](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html), you will need to use statical full names of utilities for Windi CSS to detect and generate correctly. For example:
+Windi CSS relies on **static scanning and extractions** on your source files to find your utility usages and generate the equivalent CSS on-demand. Similar to [Tailwind's Purge limitation](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html), you will need to use the static full names of utilities for Windi CSS to detect them correctly. For instance,
 
-String concatenations can NOT be extracted statically
+String concatenations CANNOT be extracted statically:
 
 ```html
 <div class="text-${ active ? 'green' : 'orange' }-400"></div>
 ```
 
-Use the full names of utilities instead
+Use the full names of utilities instead:
 
 ```html
 <div class="${ active ? 'text-green-400' : 'text-orange-400' }"></div>
@@ -16,13 +16,13 @@ Use the full names of utilities instead
 
 ## Safelist
 
-When you have to use dynamic concatenations, like:
+Sometimes you'll have to use dynamic concatenations:
 
 ```html
 <div class="p-${size}"></div>
 ```
 
-For that, you will need to specify the possible combinations in the `safelist` options of `windi.config.js`.
+For that, you will need to specify the possible combinations in the `safelist` option of `windi.config.js`.
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -51,10 +51,10 @@ export default defineConfig({
 
 ## Scanning
 
-On dev server/build process started, Windi CSS will scan your source code and extract the utilities usages. 
-By default, it will scan for files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx`.
+When the dev-server/build process starts, Windi CSS will scan your source code and extract utility usages. 
+By default, it will scan files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx`.
 
-If you want to enable scaning for other file type of locations, you can configure it via:
+If you want to enable/disable scanning for other file-types or locations, you can configure it using `include` and `exclude` options:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -76,9 +76,9 @@ export default defineConfig({
 
 ### Preflight
 
-Preflight (style reseting) is also enables on-demanded along with the scanning.
+Preflight (style resetting) is also enabled on-demand with scanning.
 
-To completely disable it, you can change the configurations as below
+You can disable it completely in the configuration:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -88,7 +88,7 @@ export default defineConfig({
 })
 ```
 
-Or explicitly enables with safelisting
+Or explicitly enable it with safelisting:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'

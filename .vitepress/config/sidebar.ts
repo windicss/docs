@@ -132,6 +132,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Shortcuts', link: '/features/shortcuts' },
         { text: 'Responsive Design', link: '/features/responsive-design' },
         { text: 'Dark Mode', link: '/features/dark-mode' },
+        { text: 'RTL', link: '/features/rtl' },
         { text: 'Important Prefix', link: '/features/important-prefix' },
         { text: 'Directives', link: '/features/directives' },
         { text: 'Visual Analyzer', link: '/features/analyzer' },
