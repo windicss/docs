@@ -30,9 +30,9 @@ onMounted(() => {
     htmlCode.value = html
   if (css)
     styleCode.value = css
-})
 
-useEmitShare(htmlCode, styleCode)
+  useEmitShare(htmlCode, styleCode)
+})
 
 // replace group variant
 const finalHTML = computed(() => {
