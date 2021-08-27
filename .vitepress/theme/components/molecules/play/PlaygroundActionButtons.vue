@@ -3,11 +3,12 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const show = ref<'export' | 'layout' | null>(null)
 
-const handleToggle = (v: 'export' | 'layout') => {
-  if (!show.value || show.value !== v)
-    show.value = v
-  else
-    show.value = null
+function handleToggle(e: Event, v: 'export' | 'layout') {
+    console.log(show.value);
+    if (!show.value || show.value !== v)
+      show.value = v
+    else
+      show.value = null
 }
 const close = () => show.value = null
 onMounted(() => {
@@ -22,8 +23,8 @@ onUnmounted(() => {
   <div class="inline-flex space-x-2 mr-3">
     <PlayShareButton />
     <PlayDivide />
-    <PlayLayoutSwitch :open="show === 'layout'" @toggle="handleToggle('layout')" />
+    <PlayLayoutSwitch :open="show === 'layout'" @click="handleToggle($event, 'layout')" />
     <PlayDivide />
-    <PlayDownloadButton :open="show === 'export'" class="!hidden !md:inline-flex" @toggle="handleToggle('export')" />
+    <PlayDownloadButton :open="show === 'export'" class="!hidden !md:inline-flex" @click="handleToggle($event, 'export')" />
   </div>
 </template>
