@@ -16,6 +16,7 @@ specifiers:
   '@vue/compiler-sfc': ^3.2.6
   '@vueuse/core': ^6.0.0
   '@windicss/shared-components': ^0.1.5
+  axios: ^0.21.1
   codemirror: ^5.62.3
   codemirror-theme-vars: ^0.1.1
   esbuild-register: ^3.0.0
@@ -68,6 +69,7 @@ devDependencies:
   '@types/resolve': 1.20.1
   '@vitejs/plugin-vue': 1.6.0_@vue+compiler-sfc@3.2.6
   '@vue/compiler-sfc': 3.2.6
+  axios: 0.21.1
   esbuild-register: 3.0.0
   eslint: 7.32.0
   eslint-plugin-markdown: 2.2.0_eslint@7.32.0
@@ -1144,6 +1146,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /axios/0.21.1:
+    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+    dependencies:
+      follow-redirects: 1.14.2
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
   /babel-walk/3.0.0-canary-5:
     resolution: {integrity: sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw==}
     engines: {node: '>= 10.0.0'}
@@ -2152,6 +2162,16 @@ packages:
 
   /flatted/3.2.2:
     resolution: {integrity: sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==}
+    dev: true
+
+  /follow-redirects/1.14.2:
+    resolution: {integrity: sha512-yLR6WaE2lbF0x4K2qE2p9PEXKLDjUjnR/xmjS3wHAYxtlsI9MLLBJUZirAHKzUZDGLxje7w/cXR49WOUo4rbsA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: true
 
   /fs-extra/10.0.0:

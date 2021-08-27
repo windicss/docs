@@ -1,39 +1,31 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useFetch } from '@vueuse/core'
+import sponsors from 'virtual:sponsor'
 
-const corsProxyUrl = 'https://cors.maint.workers.dev/?'
-const memberUrl = 'https://opencollective.com/windicss/members.json'
+const cache: any = []
+const base = sponsors
+  .filter((i: any) => i.totalAmountDonated !== 0)
+  .filter((i: any) => {
+    if (cache.includes(i.profile)) {
+      return false
+    } else {
+      cache.push(i.profile)
+      return true
+    }
+  })
+  .sort((a: any, b: any) => (
+    b.totalAmountDonated - a.totalAmountDonated
+  ))
 
-const { data, isFinished } = useFetch<any[]>(corsProxyUrl + memberUrl).json().get()
-
-const base = computed(() => {
-  const cache: any = []
-  return data.value
-    ? data.value
-      .filter((i: any) => i.totalAmountDonated !== 0)
-      .filter((i: any) => {
-        if (cache.includes(i.profile)) {
-          return false
-        } else {
-          cache.push(i.profile)
-          return true
-        }
-      })
-      .sort((a: any, b: any) => (
-        b.totalAmountDonated - a.totalAmountDonated
-      ))
-    : []
-})
 const viewData = computed(() => {
   return [
     {
       title: 'Special Sponsor',
-      data: base.value.filter((i: any) => i.totalAmountDonated >= 1000),
+      data: base.filter((i: any) => i.totalAmountDonated >= 1000),
     },
     {
       title: 'Sponsors',
-      data: base.value.filter((i: any) => i.totalAmountDonated < 1000),
+      data: base.filter((i: any) => i.totalAmountDonated < 1000),
     },
   ]
 })
@@ -45,7 +37,7 @@ const viewData = computed(() => {
       <h2 class="border-none text-2xl">
         {{ item.title }}
       </h2>
-      <div v-if="isFinished" class="flex flex-wrap justify-center px-4 md:px-16 mt-10 mb-10">
+      <div class="flex flex-wrap justify-center px-4 md:px-16 mt-10 mb-10">
         <a
           v-for="{ profile, image, name, MemberId } of item.data"
           :key="name"

@@ -14,3 +14,8 @@ declare module 'splitpanes' {
   const Pane: ComponentOptions
   export { Splitpanes, Pane }
 }
+
+declare module 'virtual:sponsor' {
+  const sponsors: Record<string, any>
+  export default sponsors
+}

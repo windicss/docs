@@ -38,6 +38,7 @@
     "@types/resolve": "^1.20.1",
     "@vitejs/plugin-vue": "^1.6.0",
     "@vue/compiler-sfc": "^3.2.6",
+    "axios": "^0.21.1",
     "esbuild-register": "^3.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-markdown": "^2.2.0",
