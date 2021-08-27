@@ -33,8 +33,7 @@ npm i -D vite-plugin-windicss windicss
 
 Then, install the plugin in your Vite configuration:
 
-```ts
-// vite.config.js
+```ts vite.config.js
 import WindiCSS from 'vite-plugin-windicss'
 
 export default {
@@ -46,8 +45,7 @@ export default {
 
 And finally, import `virtual:windi.css` in your Vite entries:
 
-```js
-// main.js
+```js main.js
 import 'virtual:windi.css'
 ```
 
@@ -63,8 +61,7 @@ Enable TypeScript for your `tailwind.config.js`? Sure, why not?
 
 Rename it to `tailwind.config.ts` and things just work!
 
-```ts
-// tailwind.config.ts
+```ts tailwind.config.ts
 import { defineConfig } from 'windicss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
@@ -112,8 +109,7 @@ Oh, and don't worry about the final bundle, in production build `virtual:windi-d
 
 Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
 
 export default defineConfig({
@@ -132,8 +128,7 @@ By default, we scan your source code statically and find all the usages of the u
 
 For that, you will need to specify the possible combinations in the `safelist` options of `vite.config.js`.
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
 
 export default defineConfig({
@@ -143,8 +138,7 @@ export default defineConfig({
 
 Or you can do it this way
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
 
 function range(size, startAt = 1) {
@@ -164,8 +158,7 @@ export default defineConfig({
 On server start, `vite-plugin-windicss` will scan your source code and extract the utility usages. By default,
 only files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -178,8 +171,7 @@ export default defineConfig({
 
 Or in plugin options:
 
-```ts
-// vite.config.js
+```ts vite.config.js
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -199,8 +191,7 @@ export default defineConfig({
 
 Enabled it by 
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 export default {
   attributify: true,
 }
@@ -224,8 +215,7 @@ And use them as you would like:
 
 If you are concerned about naming confliction, you can add custom prefix to attributify mode by:
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 export default {
   attributify: {
     prefix: 'w:',
@@ -247,8 +237,7 @@ export default {
 
 ### [Alias Config](https://windicss.org/posts/v30.html#alias-config)
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 export default {
   alias: {
     'hstack': 'flex items-center',
@@ -304,8 +293,7 @@ See [examples](https://github.com/windicss/vite-plugin-windicss/blob/main/exampl
 
 Install plugin with `npm i -D vite-plugin-windicss` and adapt the svelte config:
 
-```js
-// svelte.config.js
+```js svelte.config.js
 import preprocess from 'svelte-preprocess'
 import WindiCSS from 'vite-plugin-windicss'
 
@@ -326,8 +314,7 @@ export default config
 
 Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
 
-```html
-<!-- $layout.svelte -->
+```html $layout.svelte
 <script>
   import "virtual:windi.css"
 

@@ -17,8 +17,7 @@ yarn add gridsome-plugin-windicss -D
 
 Within your `gridsome.config.js` add the following.
 
-```js
-// gridsome.config.js
+```js gridsome.config.js
 export default {
   // ...
   plugins: [

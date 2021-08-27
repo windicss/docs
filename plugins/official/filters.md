@@ -1,18 +1,17 @@
-## Filters
+# Filters
 
-### Utilities
+## Utilities
 
-| Class | Properties |
-| :---- | :--------- |
-| `blur-none` | filter: none |
-| `blur-${key}` | filter: `blur(${value});`
-| `filter-${key}` | filter: `${value};` |
+| Class             | Properties                   |
+| :---------------- | :--------------------------- |
+| `blur-none`       | filter: none                 |
+| `blur-${key}`     | filter: `blur(${value});`    |
+| `filter-${key}`   | filter: `${value};`          |
 | `backdrop-${key}` | backdrop-filter: `${value};` |
 
-### Usage
+## Usage
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     filter: {

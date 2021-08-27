@@ -1,6 +1,6 @@
-## Forms
+# Forms
 
-### Base Styles
+## Base Styles
 
 - `input[type='text']`
 - `input[type='password']`
@@ -20,10 +20,9 @@
 - `select[multiple]`
 - `textarea`
 
-### Usage
+## Usage
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     // ...

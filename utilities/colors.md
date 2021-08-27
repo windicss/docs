@@ -4,8 +4,7 @@
 
 ## Customization 
 
-```ts
-// windi.config.js
+```ts windi.config.js
 export default {
   theme: {
     colors: {
@@ -19,10 +18,9 @@ export default {
 
 All the colors from the palette are enabled by default. If you want to set alias or reuse some colors from the palette, you can import them from `windicss/colors` module.
 
-```ts
+```ts windi.config.js
 import colors from 'windicss/colors'
 
-// windi.config.js
 export default {
   theme: {
     colors: {

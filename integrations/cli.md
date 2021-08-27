@@ -71,7 +71,6 @@ windicss './hello.html' './world.html'
 windicss './**/*.html'
 windicss './src/**/*.html'
 windicss './hello.html' './world.html', './src/**/*.svelte'
-...
 ```
 
 ### Compile CSS File
@@ -85,7 +84,6 @@ windicss './**/*.html'
 windicss './**/*.html' -to windi.css
 windicss './test.html' -to windi.css
 windicss './test.html' --preflight --output windi.css
-
 ```
 
 #### Minimize build
@@ -164,8 +162,7 @@ windicss './**/*.html' -to windi.css --config windi.config.js
 
 Give an example
 
-```js
-// windi.config.js
+```js windi.config.js
 module.exports = {
   // ...
   theme: {
@@ -199,8 +196,7 @@ windicss './**/*.html' -to windi.css --dev --fuzzy
 
 You can also configure `extractors` for specific file types
 
-```js
-// windi.config.js
+```js windi.config.js
 module.exports = {
   // ...
   extract: {

@@ -1,0 +1,40 @@
+body {
+  font-family: var(--font-family);
+  text-rendering: optimizeLegibility;
+  color: var(--windi-text);
+  background-color: var(--windi-bg);
+}
+
+html {
+  font-size: 16px;
+  overflow-y: overlay;
+}
+
+
+button {
+  @apply focus:outline-none;
+}
+
+// vue transition
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.collapse-enter-active,
+.collapse-leave-active {
+  transition:max-height 0.3s ease-out;
+  height:auto;
+  max-height:300px;
+  overflow: hidden;
+}
+
+.collapse-enter-from,
+.collapse-leave-to {
+  max-height:0;
+}

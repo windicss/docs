@@ -1,5 +1,4 @@
-.git/
-node_modules/
-!.vitepress
-!.shared-components
+.git
+node_modules
+!/.vitepress
 **/dist

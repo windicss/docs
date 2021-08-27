@@ -4,7 +4,7 @@ Windi CSS has out-of-box Dark Mode support.
 
 By prefixing the `dark:` variant to the utilities, they will only apply when dark mode is enabled. With the following example, the `Preview` text will be red on the light mode, and green on the dark mode. Try play with it: 
 
-<DarkModeSwitch />
+<ToggleDark />
 
 <InlinePlayground :input="'text-red-400 dark:text-green-400'" :showCSS="true" :showPreview="true"/>
 
@@ -14,8 +14,7 @@ We have two modes for enabling dark mode, [class mode](#class-mode) and [media q
 
 Class mode gives you better controls over when should the dark mode enables.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   darkMode: 'class',
   // ...
@@ -62,8 +61,7 @@ else
 
 In media query mode, it uses the built-in `@media (prefers-color-scheme: dark)` query from the browser that always matches with the users' system preference. 
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   darkMode: 'media',
   // ...

@@ -149,8 +149,7 @@ export function generateStyles(html) {
 
       // append current value to accumulator value
       acc[attrKey] = [...attrKeyValue, ...attrValue]
-    }
-    else {
+    } else {
       // else add atrribute value array to accumulator
       acc[attrKey] = attrValue
     }

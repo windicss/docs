@@ -1,14 +1,14 @@
-## Typography
+# Typography
 
-### Utilities
+## Utilities
 
-| Class       |  Body font size |
+| Class       | Body font size  |
 | :---------- | :-------------- |
 | `prose-sm`  | 0.875rem (14px) |
-| `prose`     |     1rem (16px) |
+| `prose`     | 1rem (16px)     |
 | `prose-lg`  | 1.125rem (18px) |
-| `prose-xl`  |  1.25rem (20px) |
-| `prose-2xl` |   1.5rem (24px) |
+| `prose-xl`  | 1.25rem (20px)  |
+| `prose-2xl` | 1.5rem (24px)   |
 
 | Class          | Link color   |
 | :------------- | :----------- |
@@ -20,10 +20,9 @@
 | `prose-purple` | `purple.600` |
 | `prose-pink`   | `pink.600`   |
 
-### Basic Usage
+## Basic Usage
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     // ...
@@ -35,10 +34,9 @@ export default {
 }
 ```
 
-### Disabling size modifiers
+## Disabling size modifiers
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     // ...
@@ -52,10 +50,9 @@ export default {
 }
 ```
 
-### Customization
+## Customization
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {

@@ -8,11 +8,11 @@ Utilities for controlling how a background image behaves when scrolling.
   variant='fixed'
   :variants="['fixed', 'local', 'scroll']"
   prefix='bg'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden flex'
   nested=true
-  appended='w-full h-48 overflow-y-scroll h-screen bg-center bg-no-repeat'
-  html='&lt;div class="{class} w-full h-screen overflow-y-scroll bg-no-repeat bg-center" style="background-image:url(&#39;/assets/bg-blue.svg&#39;);"
-&gt;&lt;p&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;&lt;/div&gt;'
+  appended='w-full h-full overflow-y-scroll bg-center bg-no-repeat'
+  html='&lt;div class="{class} w-full h-full overflow-y-scroll bg-no-repeat bg-center" style="background-image:url(&#39;/assets/bg-blue.svg&#39;);"
+&gt;&lt;p&gt;The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.&lt;/p&gt;&lt;/div&gt;'
 />
 
 ## Background Clip
@@ -25,8 +25,8 @@ Utilities for controlling the bounding box of an element's background.
   prefix='bg-clip'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='p-6 rounded-md bg-blue-300 border-4 border-blue-400 border-dashed font-extrabold text-white flex justify-center items-center py-2'
-  html="&lt;div class=&quot;{class} p-6 rounded-md bg-blue-300 border-4 border-blue-400 border-dashed font-extrabold text-white flex justify-center items-center&quot;&gt;
+  appended='p-6 bg-cover rounded-md bg-blue-300 border-4 border-blue-400 border-dashed font-extrabold text-white flex justify-center items-center py-2'
+  html="&lt;div class=&quot;{class} p-6 bg-cover rounded-md bg-blue-300 border-4 border-blue-400 border-dashed font-extrabold text-white flex justify-center items-center&quot;&gt;
       &lt;span class=&quot;py-2&quot;&gt;Hello World&lt;/span&gt;
     &lt;/div&gt;"
 />
@@ -61,8 +61,7 @@ Utilities for controlling an element's background color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backgroundColor: theme => ({
@@ -93,8 +92,7 @@ Utilities for controlling the opacity of an element's background color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -116,16 +114,15 @@ Utilities for controlling the position of an element's background image.
   variant='bottom'
   :variants="['bottom', 'center', 'left', 'left-bottom', 'left-top', 'right', 'right-bottom', 'right-top', 'top']"
   prefix='bg'
-  fixed='h-screen dark:text-white opacity-85 flex flex-col justify-center pb-4'
+  fixed='dark:text-white opacity-85'
   nested=true
-  appended='mx-auto bg-blue-300 rounded-md w-36 h-36 bg-no-repeat'
-  html='&lt;div class=&quot;mx-auto {class} bg-blue-300 rounded-md w-36 h-36 bg-no-repeat&quot; style=&quot;background-image:url(&#39;/assets/bg-square.svg&#39;);&quot;&gt;&lt;/div&gt;'
+  appended='mx-auto bg-blue-300 rounded-md w-full bg-no-repeat'
+  html='&lt;div class=&quot;mx-auto {class} bg-blue-300 rounded-md w-full bg-no-repeat&quot; style=&quot;background-image:url(&#39;/assets/bg-square.svg&#39;);aspect-ratio: 1 / 1;&quot;&gt;&lt;/div&gt;'
 />
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backgroundPosition: {
@@ -155,10 +152,10 @@ Utilities for controlling the repetition of an element's background image.
   variant='repeat'
   :variants="['repeat', 'no-repeat', 'repeat-x', 'repeat-y', 'repeat-round', 'repeat-space']"
   prefix='bg'
-  fixed='h-screen dark:text-white opacity-85 flex flex-col justify-center pb-4'
+  fixed='h-full dark:text-white opacity-85'
   nested=true
-  appended='mx-auto w-full h-36 bg-blue-300 rounded-md'
-  html='&lt;div class=&quot;mx-auto w-full h-36 bg-blue-300 rounded-md {class}&quot; style=&quot;background-image:url(&#39;/assets/bg-square.svg&#39;);&quot;&gt;
+  appended='mx-auto w-full bg-blue-300 rounded-md'
+  html='&lt;div class=&quot;mx-auto w-full bg-blue-300 rounded-md {class}&quot; style=&quot;background-image:url(&#39;/assets/bg-square.svg&#39;);aspect-ratio: 1 / 1;&quot;&gt;
   &lt;/div&gt;'
 />
 
@@ -172,8 +169,8 @@ Utilities for controlling the background size of an element's background image.
   prefix='bg'
   fixed='dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='w-full h-36 bg-no-repeat bg-center'
-  html="&lt;div class=&quot;w-full h-36 {class} bg-no-repeat bg-center&quot; style=&quot;background-image:url(&#39;/assets/bg-blue.svg&#39;);&quot;&gt;
+  appended='w-full h-full bg-no-repeat bg-center'
+  html="&lt;div class=&quot;w-full h-full {class} bg-no-repeat bg-center&quot; style=&quot;background-image:url(&#39;/assets/bg-blue.svg&#39;);&quot;&gt;
   &lt;/div&gt;"
 />
 
@@ -221,14 +218,13 @@ Utilities for controlling an element's background image.
   prefix='bg'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='h-36 w-36 rounded-md from-green-400 to-blue-500'
-  html="&lt;div class=&quot;h-36 w-36 rounded-md {class} from-green-400 to-blue-500&quot;&gt;&lt;/div&gt;"
+  appended='h-full w-full rounded-md from-green-400 to-blue-500'
+  html="&lt;div class=&quot;h-full w-full rounded-md {class} from-green-400 to-blue-500&quot;&gt;&lt;/div&gt;"
 />
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -255,8 +251,8 @@ Utilities for controlling background gradients.
   prefix='from'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='h-36 w-36 rounded-md bg-gradient-to-r to-blue-500'
-  html="&lt;div class=&quot;h-36 w-36 rounded-md bg-gradient-to-r {class} to-blue-500&quot;&gt;&lt;/div&gt;"
+  appended='h-full w-full rounded-md bg-gradient-to-r to-blue-500'
+  html="&lt;div class=&quot;h-full w-full rounded-md bg-gradient-to-r {class} to-blue-500&quot;&gt;&lt;/div&gt;"
 />
 
 ### Gradient Via
@@ -267,8 +263,8 @@ Utilities for controlling background gradients.
   prefix='via'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='h-36 w-36 rounded-md bg-gradient-to-r from-red-500 to-blue-500'
-  html="&lt;div class=&quot;h-36 w-36 rounded-md bg-gradient-to-r from-red-500 {class} to-blue-500&quot;&gt;&lt;/div&gt;"
+  appended='h-full w-full rounded-md bg-gradient-to-r from-red-500 to-blue-500'
+  html="&lt;div class=&quot;h-full w-full rounded-md bg-gradient-to-r from-red-500 {class} to-blue-500&quot;&gt;&lt;/div&gt;"
 />
 
 ### Gradient To
@@ -279,8 +275,8 @@ Utilities for controlling background gradients.
   prefix='to'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='h-36 w-36 rounded-md bg-gradient-to-r from-green-500'
-  html="&lt;div class=&quot;h-36 w-36 rounded-md bg-gradient-to-r from-green-500 {class}&quot;&gt;&lt;/div&gt;"
+  appended='h-full w-full rounded-md bg-gradient-to-r from-green-500'
+  html="&lt;div class=&quot;h-full w-full rounded-md bg-gradient-to-r from-green-500 {class}&quot;&gt;&lt;/div&gt;"
 />
 
 ## Background Blend Mode
@@ -293,7 +289,7 @@ Utilities for controlling how an element's background image should blend with it
   prefix='bg-blend'
   fixed='dark:text-white opacity-85 overflow-hidden'
   nested=true
-  appended='w-full h-36 bg-no-repeat bg-contain bg-center bg-green-300 rounded-md'
-  html="&lt;div class=&quot;w-full h-36 bg-no-repeat bg-green-300 rounded-md bg-contain bg-center {class}&quot; style=&quot;background-image:url(&#39;/assets/bg-blue.svg&#39;);&quot;&gt;
+  appended='w-full h-full bg-no-repeat bg-contain bg-center bg-green-300 rounded-md'
+  html="&lt;div class=&quot;w-full h-full bg-no-repeat bg-green-300 rounded-md bg-contain bg-center {class}&quot; style=&quot;background-image:url(&#39;/assets/bg-blue.svg&#39;);&quot;&gt;
   &lt;/div&gt;"
 />

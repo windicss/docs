@@ -22,10 +22,10 @@ The transform-style utility sets whether children of an element are positioned i
   variant='3d'
   :variants="['flat', '3d']"
   prefix='preserve'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -45,7 +45,7 @@ Utilities for specifying the origin for an element's transformations.
   variant='center'
   :variants="['center', 'top', 'top-right', 'right', 'bottom-right', 'bottom', 'bottom-left', 'left', 'top-left']"
   prefix='origin'
-  fixed='p-2 dark:text-white opacity-85 w-full h-screen'
+  fixed='p-2 dark:text-white opacity-85 w-full h-full'
   nested=true
   appended='mx-auto transform rotate-90 w-16 h-16 bg-teal-300 rounded-full'
   html='&lt;div class="mx-auto w-16 h-16 bg-teal-300 rounded-full"&gt;
@@ -55,8 +55,7 @@ Utilities for specifying the origin for an element's transformations.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -87,8 +86,7 @@ Utilities for rotating elements with transform.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     rotate: {
@@ -130,10 +128,10 @@ export default {
   variant='12'
   :variants="['0', '6', '12', '30', '45', '72.5', '90', '180', '-180', '-90', '-72.5', '-45', '-12', '-6']"
   prefix='rotate-z'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d transform {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -189,10 +187,10 @@ Utilities for scaling elements with transform.
   variant='90'
   :variants="['0', '25', '50', '75', '90', '95', '100', '105', '110', '125', '150']"
   prefix='scale-z'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d transform {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -206,8 +204,7 @@ Utilities for scaling elements with transform.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     scale: {
@@ -250,8 +247,7 @@ Utilities for skewing elements with transform.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -299,10 +295,10 @@ Utilities for translating elements with transform.
   variant='0'
   :variants="['0', 'px', 'full', '6', '12', '7.5', '1/2', '2/3', '3/4', '3/5', '3.5rem', '42px', '6em', '-px', '-full', '-6', '-12', '-7.5', '-1/2', '-2/3', '-3/4', '-3/5', '-3.5rem', '-42px']"
   prefix='translate-z'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d transform {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -318,8 +314,7 @@ Utilities for translating elements with transform.
 
 You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -335,8 +330,7 @@ export default {
 
 To customize the translate scale separately, use the theme.translate section of your windi.config.js file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -363,10 +357,10 @@ The `perspect` utility determines the distance between the z=0 plane and the use
   variant='lg'
   :variants="['none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '100', '200', '300', '400', '500', '600', '700', '800px', '23rem']"
   prefix='perspect'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center {class} perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center {class} perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -380,8 +374,7 @@ The `perspect` utility determines the distance between the z=0 plane and the use
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -405,10 +398,10 @@ The `perspect-origin` utility determines the position at which the viewer is loo
    variant='center'
   :variants="['center', 'top', 'top-right', 'right', 'bottom-right', 'bottom', 'bottom-left', 'left', 'top-left', '[150%]', '[-150%]', '[150%_150%]']"
   prefix='perspect-origin'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 {class}"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 {class}"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -422,8 +415,7 @@ The `perspect-origin` utility determines the position at which the viewer is loo
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {

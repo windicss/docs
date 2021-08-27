@@ -18,8 +18,7 @@ npm i -D postcss-windicss
 
 Create `postcss.config.js` under your project root
 
-```js
-// postcss.config.js
+```js postcss.config.js
 module.exports = {
   plugins: {
     'postcss-windicss': { /* ... */ },
@@ -36,8 +35,7 @@ Add `@windicss` to your main css entry:
 
 Create `windi.config.js` / `windi.config.ts` under your project root with this configurations
 
-```js
-// windi.config.js
+```js windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({

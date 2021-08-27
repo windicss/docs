@@ -66,10 +66,10 @@ Utilities for controlling whether an element should explicitly create a new stac
 <PlaygroundWithVariants
   variant='isolate'
   :variants="['isolate', 'isolation-auto']"
-  fixed='dark:text-white opacity-85 overflow-hidden h-screen'
-  appended='w-32 h-32 bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black'
+  fixed='dark:text-white opacity-85 overflow-hidden h-full'
+  appended='w-full h-32 bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black'
   nested=true
-  html='&lt;div class="w-32 h-32 bg-green-400"&gt;
+  html='&lt;div class="w-full h-32 bg-green-400"&gt;
   &lt;div class="{class}"&gt;
     &lt;div class="bg-green-400 w-16 h-16 mix-blend-difference border-2 border-black"&gt;auto&lt;/div&gt;
   &lt;/div&gt;
@@ -84,7 +84,7 @@ Utilities for controlling how an element should blend with the background.
   variant='multiply'
   :variants="['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity']"
   prefix='mix-blend'
-  fixed='dark:text-white opacity-85 overflow-hidden h-screen'
+  fixed='dark:text-white opacity-85 overflow-hidden h-full'
   appended='flex justify-center items-center bg-teal-300 bg-yellow-300 w-36 h-36 w-24 h-24 rounded-md'
   nested=true
   html='&lt;div class=&quot;flex justify-center&quot;&gt;
@@ -101,15 +101,14 @@ Utilities for controlling how an element should blend with the background.
   type='color'
   prefix='shadow'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='bg-teal-400 w-32 h-32 rounded-md shadow-2xl'
+  appended='bg-teal-400 w-full h-32 rounded-md shadow-2xl'
   nested=true
-  html='&lt;div class=&quot;bg-teal-400 w-32 h-32 rounded-md shadow-2xl {class}&quot;&gt;&lt;/div&gt;'
+  html='&lt;div class=&quot;bg-teal-400 w-full h-32 rounded-md shadow-2xl {class}&quot;&gt;&lt;/div&gt;'
 />
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     boxShadowColor: {
@@ -160,7 +159,7 @@ Utilities for controlling how element fragments should be rendered across multip
   variant='slice'
   :variants="['slice', 'clone']"
   prefix='decoration'
-  fixed='dark:text-white opacity-85 overflow-hidden p-2 h-screen'
+  fixed='dark:text-white opacity-85 overflow-hidden p-2 h-full'
   nested=true
   appended='text-5xl font-extrabold bg-gradient-to-r from-green-400 to-blue-500 rounded-16px px-4 text-sm text-white'
   html="
@@ -185,8 +184,7 @@ Utilities for controlling the color of insertion text.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     caretColor: {
@@ -216,8 +214,7 @@ Utilities for controlling the opacity of an element's caret color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -240,9 +237,9 @@ The `image-render` utility defines how the browser should render an image if it 
   :variants="['auto', 'pixel', 'edge']"
   prefix='image-render'
   fixed='p-2 dark:text-white opacity-85'
-  appended='w-32 h-32'
+  appended='w-full h-32'
   nested=true
-  html="&lt;img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAACdJREFUCB1j9Pf3/88ABMmMjCCKgQlMIhGMu3btAquY9mMDWBhDBQAutwfDrUlKzQAAAABJRU5ErkJggg==' class='{class} w-32 h-32'&gt;"
+  html="&lt;img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAACdJREFUCB1j9Pf3/88ABMmMjCCKgQlMIhGMu3btAquY9mMDWBhDBQAutwfDrUlKzQAAAABJRU5ErkJggg==' class='{class} w-full h-32'&gt;"
 />
 
 ## List Style Type
@@ -264,8 +261,7 @@ Utilities for controlling the bullet/number style of a list.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     listStyleType: {
@@ -382,8 +378,7 @@ The tab-size utilities are used to customize the width of tab characters (U+0009
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     tabSize: {
@@ -426,8 +421,7 @@ Utilities for controlling the color of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textDecorationColor: {
@@ -457,8 +451,7 @@ Utilities for controlling the opacity of an element's decoration color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -490,8 +483,7 @@ Utilities for controlling the length of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -521,8 +513,7 @@ Utilities for controlling the offset of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textDecorationOffset: {
@@ -550,8 +541,7 @@ Utilities for controlling the indentation of text.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -584,8 +574,7 @@ Utilities for controlling the width of text stroke.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -614,8 +603,7 @@ Utilities for controlling the color of text stroke.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textStrokeColor: {
@@ -643,8 +631,7 @@ Utilities for controlling the shadow of a text element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textShadow: {
@@ -776,10 +763,10 @@ The transform-style utility sets whether children of an element are positioned i
   variant='3d'
   :variants="['flat', '3d']"
   prefix='preserve'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -821,10 +808,10 @@ The transform-style utility sets whether children of an element are positioned i
   variant='12'
   :variants="['0', '6', '12', '30', '45', '72.5', '90', '180', '-180', '-90', '-72.5', '-45', '-12', '-6']"
   prefix='rotate-z'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d transform {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -842,10 +829,10 @@ The transform-style utility sets whether children of an element are positioned i
   variant='90'
   :variants="['0', '25', '50', '75', '90', '95', '100', '105', '110', '125', '150']"
   prefix='scale-z'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d transform {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -859,8 +846,7 @@ The transform-style utility sets whether children of an element are positioned i
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     scale: {
@@ -879,10 +865,10 @@ export default {
   variant='0'
   :variants="['0', 'px', 'full', '6', '12', '7.5', '1/2', '2/3', '3/4', '3/5', '3.5rem', '42px', '6em', '-px', '-full', '-6', '-12', '-7.5', '-1/2', '-2/3', '-3/4', '-3/5', '-3.5rem', '-42px']"
   prefix='translate-z'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d transform {class}"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -898,8 +884,7 @@ export default {
 
 You can customize the global spacing scale in the theme.spacing or theme.extend.spacing sections of your windi.config.js file:
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -915,8 +900,7 @@ export default {
 
 To customize the translate scale separately, use the theme.translate section of your windi.config.js file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -943,10 +927,10 @@ The `perspect` utility determines the distance between the z=0 plane and the use
   variant='lg'
   :variants="['none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '100', '200', '300', '400', '500', '600', '700', '800px', '23rem']"
   prefix='perspect'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center {class} perspect-origin-[150%_150%]"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 perspect-origin-[150%_150%] absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center {class} perspect-origin-[150%_150%]"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -960,8 +944,7 @@ The `perspect` utility determines the distance between the z=0 plane and the use
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -985,10 +968,10 @@ The `perspect-origin` utility determines the position at which the viewer is loo
    variant='center'
   :variants="['center', 'top', 'top-right', 'right', 'bottom-right', 'bottom', 'bottom-left', 'left', 'top-left', '[150%]', '[-150%]', '[150%_150%]']"
   prefix='perspect-origin'
-  fixed='!block pl-6 pt-6'
+  fixed='pl-6 pt-6'
   nested=true
-  appended='w-32 h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
-  html='&lt;div class="w-32 h-32 text-white text-4xl text-center perspect-650 {class}"&gt;
+  appended='w-full h-32 text-white text-4xl text-center w-full h-full backface-visible preserve-3d perspect-650 absolute flex items-center justify-center w-24 h-24 transform translate-z-12 rotate-y-180 rotate-y-90 -rotate-y-90 rotate-x-90 -rotate-x-90 bg-opacity-30 bg-opacity-70 bg-black bg-green-500 bg-red-500 bg-blue-500 bg-yellow-500 bg-pink-500'
+  html='&lt;div class="w-full h-32 text-white text-4xl text-center perspect-650 {class}"&gt;
   &lt;div class="w-full h-full backface-visible preserve-3d"&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-black bg-opacity-30 transform translate-z-12"&gt;1&lt;/div&gt;
     &lt;div class="absolute flex items-center justify-center w-24 h-24 bg-green-500 bg-opacity-70 transform rotate-y-180 translate-z-12"&gt;2&lt;/div&gt;
@@ -1002,8 +985,7 @@ The `perspect-origin` utility determines the position at which the viewer is loo
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -1046,8 +1028,7 @@ Utilities for enabling and disabling filters on an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     blur: {
@@ -1075,8 +1056,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     brightness: {
@@ -1104,8 +1084,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     contrast: {
@@ -1133,8 +1112,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     dropShadow: {
@@ -1161,8 +1139,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     grayscale: {
@@ -1189,8 +1166,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     hueRotate: {
@@ -1218,8 +1194,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     invert: {
@@ -1246,8 +1221,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     saturate: {
@@ -1275,8 +1249,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     sepia: {
@@ -1297,11 +1270,11 @@ Utilities for enabling and disabling backdrop filters on an element.
   variant=''
   :variants="['', 'none']"
   prefix='backdrop-filter'
-  fixed='dark:text-white opacity-85 h-screen overflow-hidden'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover !backdrop-blur-md rounded-md text-sm bg-white bg-opacity-30 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  fixed='dark:text-white opacity-85 h-full overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover !backdrop-blur-md rounded-md text-sm bg-white bg-opacity-30 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="{class} !backdrop-blur-md rounded-md text-sm bg-white bg-opacity-30 text-center p-4"&gt;
       &lt;p&gt;backdrop-blur&lt;/p&gt;
     &lt;/div&gt;
@@ -1317,10 +1290,10 @@ Utilities for enabling and disabling backdrop filters on an element.
   :variants="['', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '0', '1', '2', '3', '9', '12', '24px', '2rem']"
   prefix='backdrop-blur'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-30 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-30 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-30 text-center p-4"&gt;
       &lt;p&gt;backdrop-blur&lt;/p&gt;
     &lt;/div&gt;
@@ -1329,8 +1302,7 @@ Utilities for enabling and disabling backdrop filters on an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropBlur: {
@@ -1351,10 +1323,10 @@ export default {
   :variants="['0', '50', '75', '90', '95', '100', '105', '110', '115', '125', '150', '175', '200', '251']"
   prefix='backdrop-brightness'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-50 text-center p-4"&gt;
       &lt;p&gt;backdrop-brightness&lt;/p&gt;
     &lt;/div&gt;
@@ -1363,8 +1335,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropBrightness: {
@@ -1385,10 +1356,10 @@ export default {
   :variants="['0', '50', '75', '90', '95', '100', '105', '110', '115', '125', '150', '175', '200', '251']"
   prefix='backdrop-contrast'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-50 text-center p-4"&gt;
       &lt;p&gt;backdrop-contrast&lt;/p&gt;
     &lt;/div&gt;
@@ -1397,8 +1368,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropContrast: {
@@ -1419,10 +1389,10 @@ export default {
   :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
   prefix='backdrop-grayscale'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-50 text-center p-4"&gt;
       &lt;p&gt;backdrop-grayscale&lt;/p&gt;
     &lt;/div&gt;
@@ -1431,8 +1401,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropGrayscale: {
@@ -1452,10 +1421,10 @@ export default {
   :variants="['0', '15', '30', '45', '60', '90', '120', '180', '-120', '-90', '-60', '-45', '-30', '-15']"
   prefix='backdrop-hue-rotate'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-50 text-center p-4"&gt;
       &lt;p&gt;backdrop-hue-rotate&lt;/p&gt;
     &lt;/div&gt;
@@ -1464,8 +1433,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropHueRotate: {
@@ -1486,10 +1454,10 @@ export default {
   :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
   prefix='backdrop-invert'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-50 text-center p-4"&gt;
       &lt;p&gt;backdrop-invert&lt;/p&gt;
     &lt;/div&gt;
@@ -1498,8 +1466,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropInvert: {
@@ -1519,10 +1486,10 @@ export default {
   type='opacity'
   prefix='backdrop-opacity'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm text-center p-2 p-4 flex flex-col justify-center overflow-hidden border-2'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm text-center p-2 p-4 flex flex-col justify-center overflow-hidden border-2'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm text-center p-4 border-2"&gt;
       &lt;p&gt;backdrop-opacity&lt;/p&gt;
     &lt;/div&gt;
@@ -1532,8 +1499,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropOpacity: {
@@ -1553,10 +1519,10 @@ export default {
   :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
   prefix='backdrop-saturate'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-50 text-center p-4"&gt;
       &lt;p&gt;backdrop-saturate&lt;/p&gt;
     &lt;/div&gt;
@@ -1565,8 +1531,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropSaturate: {
@@ -1587,10 +1552,10 @@ export default {
   :variants="['', '0', '5', '10', '20', '25', '30', '40' ,'50', '60', '70', '75', '80', '90', '95', '100']"
   prefix='backdrop-sepia'
   fixed='dark:text-white opacity-85'
-  appended='w-screen h-screen bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
+  appended='w-screen h-full bg-no-repeat bg-center bg-cover backdrop-filter rounded-md text-sm bg-white bg-opacity-50 text-center p-2 p-4 flex flex-col justify-center overflow-hidden'
   nested=true
   html='
-  &lt;div class="p-2 w-screen h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
+  &lt;div class="p-2 w-screen h-full bg-no-repeat bg-center bg-cover flex flex-col justify-center overflow-hidden" style="background-image: url(/assets/bg-shop.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));"&gt;
     &lt;div class="backdrop-filter {class} rounded-md text-sm bg-white bg-opacity-50 text-center p-4"&gt;
       &lt;p&gt;backdrop-sepia&lt;/p&gt;
     &lt;/div&gt;
@@ -1599,8 +1564,7 @@ export default {
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     backdropSepia: {

@@ -38,8 +38,7 @@ lg  => greater or equal than this breakpoint
 
 You can customize your breakpoints in your `windi.config.js`
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({

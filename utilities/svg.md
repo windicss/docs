@@ -15,8 +15,7 @@ Utilities for styling the fill of SVG elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     fill: theme => ({
@@ -46,8 +45,7 @@ Utilities for styling the stroke of SVG elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     stroke: theme => ({
@@ -145,8 +143,7 @@ Utilities for styling the stroke width of SVG elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {

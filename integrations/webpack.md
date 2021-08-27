@@ -52,8 +52,7 @@ If you were previously using Tailwind, please see the [migration guide](/guide/m
 
 You will need to add the plugin to your webpack configuration. If you have access to modify the `webpack.config.js` directly, then you can do the following.
 
-```js
-// webpack.config.js
+```js webpack.config.js
 import WindiCSS from 'windicss-webpack-plugin'
 
 export default {
@@ -69,8 +68,7 @@ export default {
 
 For webpack configurations which don't support the es module import syntax, you can try the following.
 
-```js
-// webpack.config.js
+```js webpack.config.js
 const WindiCSS = require('windicss-webpack-plugin').default
 
 export default {
@@ -85,8 +83,7 @@ export default {
 
 Within an entry point file or something only loaded once, add the import of `windi.css`.
 
-```ts
-// main.js
+```ts main.js
 import 'windi.css'
 // require('windi.css')
 ```
@@ -102,8 +99,7 @@ to modify the scanning.
 
 On server start, Windi will scan your code and extract the utility usages. By default, only files under `src/` with extensions `"html", "vue", "md", "mdx", "pug", "jsx", "tsx", "svelte", "ts", "js", "css", "postcss"` will be included.
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -122,8 +118,7 @@ export default defineConfig({
 
 Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -142,8 +137,7 @@ By default, we scan your source code statically and find all the usages of the u
 
 For that, you will need to specify the possible combinations in the `safelist` options of `windi.config.ts`.
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -153,8 +147,7 @@ export default defineConfig({
 
 Or you can do it this way
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 function range(size, startAt = 1) {
@@ -198,8 +191,7 @@ See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/pack
 
 ### Next.js
 
-**next.config.js**
-```js
+```js next.config.js
 const WindiCSS = require('windicss-webpack-plugin').default
 
 module.exports = {
@@ -211,13 +203,11 @@ module.exports = {
 }
 ```
 
-**pages/_app.js**
-```js
+```js pages/_app.js
 import 'windi.css'
 ```
 
-**windi.config.ts**
-```ts
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -233,8 +223,7 @@ Note: JSX usage is experimental. Please report any issues you find.
 
 ### Create React App - CRACO
 
-**craco.config.js**
-```js
+```js craco.config.js
 const WindiCSS = require('windicss-webpack-plugin').default
 
 module.exports = {
@@ -251,13 +240,11 @@ module.exports = {
 }
 ```
 
-**src/index.js**
-```js
+```js src/index.js
 import './virtual:windi.css'
 ```
 
-**windi.config.ts**
-```ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -274,8 +261,7 @@ Note: JSX usage is experimental. Please report any issues you find.
 
 For webpack configurations which don't support the es module import syntax, you can try the following.
 
-```js
-// webpack.config.js
+```js webpack.config.js
 const WindiCSS = require('windicss-webpack-plugin').default
 
 export default {
@@ -293,8 +279,7 @@ require('windi.css')
 
 ### Storybook
 
-**.storybook/main.js**
-```js
+```js .storybook/main.js
 const WindiCSS = require('windicss-webpack-plugin').default
 
 module.exports = {
@@ -306,8 +291,7 @@ module.exports = {
 }
 ```
 
-**.storybook/preview.js**
-```js
+```js .storybook/preview.js
 import 'windi.css'
 ```
 

@@ -8,7 +8,7 @@ The `block` utility generates a block element box, generating line breaks both b
   variant='block'
   :variants="[]"
   nested=true
-  fixed='!block space-y-2 pt-6 pl-12'
+  fixed='space-y-2 pt-6 pl-12'
   appended='rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400'
   html='
 &lt;div class="{class} rounded-md bg-red-400 w-8 h-8"&gt;&lt;/div&gt;
@@ -24,7 +24,7 @@ The `inline-block` utility generates a block element box that will be flowed wit
   variant='inline-block'
   :variants="[]"
   nested=true
-  fixed='!block space-x-1 pt-12 pl-4 text-xs'
+  fixed='space-x-1 pt-12 pl-4 text-xs'
   appended='rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 text-gray-500'
   html='
 &lt;div class="{class} rounded-md bg-red-400 w-8 h-8"&gt;&lt;/div&gt;
@@ -41,7 +41,7 @@ The `inline` utility generates one or more inline element boxes that do not gene
   variant='inline'
   :variants="['inline', 'inline-block']"
   nested=true
-  fixed='!block space-x-1 pt-12 pl-2 text-xs text-white'
+  fixed='space-x-1 pt-12 pl-2 text-xs text-white'
   appended='rounded-md bg-teal-500 bg-teal-100 py-2 px-3 bg-red-400 bg-green-400 bg-blue-400 text-gray-500'
   html='
 &lt;div class="{class} rounded-md bg-red-400 py-2 px-3"&gt;1&lt;/div&gt;
@@ -54,15 +54,15 @@ The `inline` utility generates one or more inline element boxes that do not gene
 
 The `flow-root` utility generates a block element box that establishes a new [block formatting context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context), defining where the formatting root lies.
 
-| Class | Properties |
-| :---- | :--------- |
-| flow-root	| display: flow-root; |
+| Class     | Properties          |
+| :-------- | :------------------ |
+| flow-root | display: flow-root; |
 
 <PlaygroundWithVariants
   variant='flow-root'
   :variants="[]"
   nested=true
-  fixed='!block space-y-2 pt-2'
+  fixed='space-y-2 pt-2'
   appended='rounded-md bg-teal-500 bg-teal-100 w-8 h-8 m-1 bg-red-400 bg-green-400 bg-blue-400 bg-teal-100'
   html='
 &lt;div class="{class} bg-teal-100 rounded-md"&gt;
@@ -84,7 +84,7 @@ The `contents` utilities don't produce a specific box by themselves. They are re
   variant='contents'
   :variants="['block', 'contents']"
   nested=true
-  fixed='!block pt-10'
+  fixed='pt-10'
   appended='flex items-center rounded-md flex-1 bg-teal-500 bg-teal-100 h-6 bg-red-400 bg-yellow-400 bg-green-400 bg-blue-400 bg-indigo-100 w-10 m-1 p-1'
   html='&lt;div class="flex items-center bg-teal-100 rounded-md p-1"&gt;
 &lt;div class="flex-1 rounded-md bg-red-400 h-6 m-1"&gt;&lt;/div&gt;
@@ -104,7 +104,7 @@ Turns off the `display` of an element so that it has no effect on layout (the do
   variant='hidden'
   :variants="['block', 'hidden']"
   nested=true
-  fixed='!block pt-20'
+  fixed='pt-20'
   appended='flex items-center rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="flex items-center bg-teal-100 rounded-md p-1"&gt;
 &lt;div class="rounded-md bg-red-400 w-8 h-8 m-1"&gt;&lt;/div&gt;
@@ -121,7 +121,7 @@ Utilities for controlling the visibility of an element. The `visibility` CSS pro
   variant='visible'
   :variants="['visible', 'invisible']"
   nested=true
-  fixed='!block pt-20'
+  fixed='pt-20'
   appended='flex items-center rounded-md bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="flex items-center bg-teal-100 rounded-md p-1"&gt;
 &lt;div class="rounded-md bg-red-400 w-8 h-8 m-1"&gt;&lt;/div&gt;

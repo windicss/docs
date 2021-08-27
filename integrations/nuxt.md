@@ -15,8 +15,7 @@ yarn add nuxt-windicss -D
 
 Within your `nuxt.config.js` add the following.
 
-```js
-// nuxt.config.js
+```js nuxt.config.js
 export default {
   buildModules: [
     'nuxt-windicss',
@@ -45,8 +44,7 @@ Follow the [migration guide](https://windicss.org/guide/migration.html) for othe
 
 Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -65,8 +63,7 @@ By default, we scan your source code statically and find all the usages of the u
 
 For that, you will need to specify the possible combinations in the `safelist` options of `webpack.config.js`.
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -76,8 +73,7 @@ export default defineConfig({
 
 Or you can do it this way
 
-```ts
-// windi.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 function range(size, startAt = 1) {
@@ -97,8 +93,7 @@ export default defineConfig({
 On server start, `nuxt-windicss` will scan your source code and extract the utility usages. By default,
 only files within your root with extensions `vue, html, md, mdx, pug, jsx, tsx` will be included. If you want to enable scanning for other file types of locations, you can configure it via:
 
-```ts
-// windi.config.js
+```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
@@ -111,8 +106,7 @@ export default defineConfig({
 
 Or in nuxt config:
 
-```ts
-// nuxt.config.js
+```js nuxt.config.js
 export default {
   // ...
   windicss: {
@@ -130,7 +124,8 @@ export default {
 ### Other Options
 
 These are the default options for the nuxt module.
-```js
+
+```js nuxt.config.js
 export default {
   // ...
   windicss: {
@@ -173,8 +168,7 @@ the scanning for most users.
 
 To opt-in to this scanning you will need to set the scan options yourself.
 
-````js
-// nuxt.config.js
+````js nuxt.config.js
 export default {
   // ...
   hooks: {
@@ -199,7 +193,7 @@ export default {
 If you need to load in a CSS file from a node_module folder and have the @apply's transformed,
 then you will need to use the `extraTransformTargets` option.
 
-```js
+```js nuxt.config.js
 export default {
   // ...
   hooks: {

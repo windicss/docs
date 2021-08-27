@@ -9,7 +9,7 @@ Utilities for controlling an element's padding.
   :variants="['0', 'px', '0.5', '1', '2', '4', '8', '10', '12', '14', '16', '20', '24', '48', '1.5rem', '32px']"
   prefix='p'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 bg-teal-100 flex-shrink-0 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
@@ -18,8 +18,7 @@ Utilities for controlling an element's padding.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     padding: {
@@ -43,7 +42,7 @@ Utilities for controlling an element's vertical padding.
   :variants="['0', 'px', '0.5', '1', '2', '4', '8', '10', '12', '14', '16', '20', '24', '48', '1.5rem', '32px']"
   prefix='py'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 flex-shrink-0 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
@@ -59,7 +58,7 @@ Utilities for controlling an element's horizontal padding.
   :variants="['0', 'px', '0.5', '1', '2', '4', '8', '10', '12', '14', '16', '20', '24', '48', '1.5rem', '32px']"
   prefix='px'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-500 flex-shrink-0 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
@@ -75,7 +74,7 @@ Utilities for controlling an element's top padding.
   :variants="['0', 'px', '0.5', '1', '2', '4', '8', '10', '12', '14', '16', '20', '24', '48', '1.5rem', '32px']"
   prefix='pt'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded flex-shrink-0 bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} flex-shrink-0"&gt;{class}&lt;/p&gt;
@@ -91,7 +90,7 @@ Utilities for controlling an element's left padding.
   :variants="['0', 'px', '0.5', '1', '2', '4', '8', '10', '12', '14', '16', '20', '24', '48', '1.5rem', '32px']"
   prefix='pl'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded flex-shrink-0 bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 flex-shrink-0 {class}"&gt;{class}&lt;/p&gt;
@@ -107,7 +106,7 @@ Utilities for controlling an element's bottom padding.
   :variants="['0', 'px', '0.5', '1', '2', '4', '8', '10', '12', '14', '16', '20', '24', '48', '1.5rem', '32px']"
   prefix='pb'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center flex-shrink-0 rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 flex-shrink-0 {class}"&gt;{class}&lt;/p&gt;
@@ -123,7 +122,7 @@ Utilities for controlling an element's right padding.
   :variants="['0', 'px', '0.5', '1', '2', '4', '8', '10', '12', '14', '16', '20', '24', '48', '1.5rem', '32px']"
   prefix='pr'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center flex-shrink-0 rounded bg-teal-500 bg-teal-100 w-8 h-8 bg-red-400 bg-green-400 bg-blue-400 m-1 p-1'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded flex-shrink-0 bg-green-400 {class}"&gt;{class}&lt;/p&gt;
@@ -139,7 +138,7 @@ Utilities for controlling an element's margin.
   :variants="['0', 'px', 'auto', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-14', '-16', '-20', '-24', '-48', '-1.5rem', '-32px']"
   prefix='m'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} p-2 flex-shrink-0"&gt;{class}&lt;/p&gt;
@@ -148,8 +147,7 @@ Utilities for controlling an element's margin.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     margin: {
@@ -173,7 +171,7 @@ Utilities for controlling an element's vertical margin.
   :variants="['0', 'px', 'auto', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-14', '-16', '-20', '-24', '-48', '-1.5rem', '-32px']"
   prefix='my'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} p-2 flex-shrink-0"&gt;{class}&lt;/p&gt;
@@ -189,7 +187,7 @@ Utilities for controlling an element's horizontal margin.
   :variants="['0', 'px', 'auto', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-14', '-16', '-20', '-24', '-48', '-1.5rem', '-32px']"
   prefix='mx'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
@@ -205,7 +203,7 @@ Utilities for controlling an element's top margin.
   :variants="['0', 'px', 'auto', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-14', '-16', '-20', '-24', '-48', '-1.5rem', '-32px']"
   prefix='mt'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
@@ -221,7 +219,7 @@ Utilities for controlling an element's left margin.
   :variants="['0', 'px', 'auto', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-14', '-16', '-20', '-24', '-48', '-1.5rem', '-32px']"
   prefix='ml'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
@@ -237,7 +235,7 @@ Utilities for controlling an element's bottom margin.
   :variants="['0', 'px', 'auto', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-14', '-16', '-20', '-24', '-48', '-1.5rem', '-32px']"
   prefix='mb'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 flex-shrink-0 {class} p-2"&gt;{class}&lt;/p&gt;
@@ -253,7 +251,7 @@ Utilities for controlling an element's right margin.
   :variants="['0', 'px', 'auto', '0.5', '1', '2', '4', '8', '12', '14', '16', '20', '24', '48', '1.5rem', '32px', '-px', '-0.5', '-2', '-4', '-8', '-12', '-14', '-16', '-20', '-24', '-48', '-1.5rem', '-32px']"
   prefix='mr'
   nested=true
-  fixed='!block text-white text-xs'
+  fixed='text-white text-xs'
   appended='inline-flex items-center rounded bg-teal-100 bg-green-400 p-2 flex-shrink-0'
   html='&lt;div class="inline-flex items-center bg-teal-100 rounded"&gt;
 &lt;p class="rounded bg-green-400 {class} p-2 flex-shrink-0"&gt;{class}&lt;/p&gt;
@@ -280,8 +278,7 @@ Utilities for controlling the space between vertical align child elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     space: {
@@ -334,8 +331,7 @@ Utilities for controlling the space between horizontal align child elements.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     space: {

@@ -1,0 +1,159 @@
+/* https://github.com/antfu/prism-theme-vars */
+@import 'prism-theme-vars/base.css';
+@import 'codemirror-theme-vars/base.css';
+@import 'prism-theme-vars/to-codemirror.css';
+
+:root {
+  --prism-block-padding-x: 0;
+  --prism-block-padding-y: 0;
+  --prism-font-size: 1em;
+  --prism-font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --prism-font-size: 0.9rem;
+}
+
+html:not(.dark) {
+  --prism-foreground: #393a34;
+  --prism-background: theme('colors.light.300');
+  --prism-comment: #a0ada0;
+  --prism-string: #b56959;
+  --prism-literal: #2f8a89;
+  --prism-number: #296aa3;
+  --prism-keyword: #1c6b48;
+  --prism-function: #6c7834;
+  --prism-boolean: #1c6b48;
+  --prism-constant: #a65e2b;
+  --prism-deleted: #a14f55;
+  --prism-class: #2993a3;
+  --prism-builtin: #ab5959;
+  --prism-property: #b58451;
+  --prism-namespace: #b05a78;
+  --prism-punctuation: #8e8f8b;
+  --prism-decorator: #bd8f8f;
+  --prism-regex: #ab5e3f;
+  --prism-json-property: #698c96;
+}
+
+html.dark {
+  --prism-foreground: #d4cfbf;
+  --prism-background: theme('colors.dark.500');
+  --prism-comment: #758575;
+  --prism-string: #d48372;
+  --prism-literal: #429988;
+  --prism-keyword: #4d9375;
+  --prism-boolean: #1c6b48;
+  --prism-number: #6394bf;
+  --prism-variable: #c2b36e;
+  --prism-function: #a1b567;
+  --prism-deleted: #a14f55;
+  --prism-class: #54b1bf;
+  --prism-builtin: #e0a569;
+  --prism-property: #dd8e6e;
+  --prism-namespace: #db889a;
+  --prism-punctuation: #858585;
+  --prism-decorator: #bd8f8f;
+  --prism-regex: #ab5e3f;
+  --prism-json-property: #6b8b9e;
+  --prism-line-number: #888888;
+  --prism-line-number-gutter: #eeeeee;
+  --prism-line-highlight-background: #444444;
+  --prism-selection-background: #444444;
+}
+
+a.header-anchor {
+  float: left;
+  margin-top: .1em;
+  margin-left: -1.2em;
+  padding-right: .50em;
+  font-size: .85em;
+  opacity: 0;
+  text-decoration: none;
+  border: 0 !important;
+}
+
+@screen -md {
+  a.header-anchor {
+    @apply hidden;
+  }
+}
+
+a.header-anchor:hover,
+a.header-anchor:focus {
+  text-decoration: none;
+}
+
+h1:hover .header-anchor,
+h1:focus .header-anchor,
+h2:hover .header-anchor,
+h2:focus .header-anchor,
+h3:hover .header-anchor,
+h3:focus .header-anchor,
+h4:hover .header-anchor,
+h4:focus .header-anchor,
+h5:hover .header-anchor,
+h5:focus .header-anchor,
+h6:hover .header-anchor,
+h6:focus .header-anchor {
+  opacity: 0.5;
+}
+
+.prose pre {
+  @apply bg-transparent m-0 px-4.5 py-3.5;
+}
+
+:not(pre) > code {
+  @apply text-violet-500 !dark:text-violet-400 !font-normal !text-0.95rem;
+}
+
+.prose table code {
+  @apply !text-violet-400 !font-normal !text-sm;
+}
+
+.prose a:hover {
+  @apply underline;
+}
+
+.prose blockquote {
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  opacity: 0.8;
+  margin-left: 1rem;
+  @apply ml-1 lg:ml-4 mr-2 lg:mr-6;
+}
+
+.prose blockquote > :first-child {
+  margin-top: 0;
+}
+.prose blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+
+.prose blockquote p:first-of-type::before {
+  content: none;
+}
+
+.prose blockquote p:first-of-type::after {
+  content: none;
+}
+
+.prose tbody tr {
+  @apply border-b-gray-200 dark:border-b-dark-300;
+}
+
+.prose thead {
+  @apply border-b-gray-300 dark:border-b-dark-100;
+}
+
+div[class*='language-'][class*='with-filename'] {
+  @apply relative pt-6;
+}
+
+div[class*='language-'] .code-block-filename {
+  @apply absolute top-0 left-0 py-1 px-2 text-xs text-cool-gray-500 dark:text-cool-gray-400 bg-gray-200 dark:bg-dark-300 rounded-br;
+}
+
+div[class*='language-'] {
+  @apply shadow-sm shadow-gray-500;
+}

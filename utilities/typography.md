@@ -68,8 +68,7 @@ Utilities for controlling the font size of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     fontSize: {
@@ -92,8 +91,7 @@ export default {
 
 You can provide a default line-height for each of your font-sizes using a tuple of the form [fontSize, lineHeight] in your windi.config.js file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     fontSize: {
@@ -108,8 +106,7 @@ export default {
 
 If you also want to provide a default letter-spacing value for a font size, you can do so using a tuple of the form `[fontSize, { letterSpacing, lineHeight }]` in your windi.config.js file.
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     fontSize: {
@@ -164,8 +161,7 @@ Utilities for controlling the font weight of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     fontWeight: {
@@ -227,8 +223,7 @@ Utilities for controlling the tracking (letter spacing) of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     letterSpacing: {
@@ -260,8 +255,7 @@ Utilities for controlling the leading (line height) of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -294,8 +288,7 @@ The tab-size utilities are used to customize the width of tab characters (U+0009
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     tabSize: {
@@ -337,8 +330,7 @@ Utilities for controlling the text color of an element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textColor: {
@@ -393,8 +385,7 @@ Utilities for controlling the color of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textDecorationColor: {
@@ -424,8 +415,7 @@ Utilities for controlling the opacity of an element's decoration color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -457,8 +447,7 @@ Utilities for controlling the length of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -488,8 +477,7 @@ Utilities for controlling the offset of text decoration.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textDecorationOffset: {
@@ -517,8 +505,7 @@ Utilities for controlling the indentation of text.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -541,7 +528,7 @@ Utilities for controlling the opacity of an element's text color.
   variant='50'
   type='opacity'
   prefix='text-opacity'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  fixed='p-2 opacity-85 overflow-hidden'
   appended='text-black'
   nested=true
   html="&lt;p class='text-black {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
@@ -549,8 +536,7 @@ Utilities for controlling the opacity of an element's text color.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -580,8 +566,7 @@ Utilities for controlling the shadow of a text element.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textShadow: {
@@ -613,8 +598,7 @@ Utilities for controlling the width of text stroke.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     extend: {
@@ -643,8 +627,7 @@ Utilities for controlling the color of text stroke.
 
 <Customizing>
 
-```js
-// windi.config.js
+```js windi.config.js
 export default {
   theme: {
     textStrokeColor: {
