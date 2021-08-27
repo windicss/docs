@@ -21,10 +21,11 @@ footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 <Sponsors />
 
 <InlinePlayground 
-  :input="`bg-gradient-to-r from-green-400 to-blue-500 px-4 py-2 text-white text-center italic rounded cursor-default !h-auto !w-auto !relative
-transition-all duration-400
-hover:rounded-2xl
-dark:\(from-teal-400 to-yellow-500)`"
+  :input="`bg-gradient-to-r from-green-400 to-blue-500 px-4 py-2
+    text-white text-center italic rounded cursor-default
+    transition-all duration-400
+    hover:rounded-2xl
+    dark:\(from-teal-400 to-yellow-500)`"
   :showCSS="true"
   :showMode="true"
   :showTabs="true"
