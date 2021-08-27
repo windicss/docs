@@ -1,7 +1,9 @@
-import { Ref, computed, watch } from 'vue'
+import { computed, watch } from 'vue'
 import * as lzs from 'lz-string'
 import mitt from 'mitt'
 import { getTemplateComponent } from '../data/components'
+
+import type { Ref } from 'vue'
 
 export const SHARE_EVENT = Symbol('share')
 export const EXPORT_EVENT = Symbol('export')

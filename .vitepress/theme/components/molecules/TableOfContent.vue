@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from 'vitepress'
 
+import { computed } from 'vue'
 import type { Header } from '@/types'
 import type { DefaultTheme } from '@/config'
-import { computed } from 'vue'
 
 interface HeaderWithChildren extends Header {
   children?: Header[]

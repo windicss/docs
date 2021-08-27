@@ -1,5 +1,5 @@
 declare module '@docsearch/js' {
-  import { DocSearchProps as DocSearchComponentProps } from '@docsearch/react'
+  import type { DocSearchProps as DocSearchComponentProps } from '@docsearch/react'
   interface DocSearchProps extends DocSearchComponentProps {
     container: string | HTMLElement
     environment?: typeof window
@@ -9,7 +9,7 @@ declare module '@docsearch/js' {
 
 declare module 'splitpanes' {
   // eslint-disable-next-line import/no-duplicates
-  import { ComponentOptions } from 'vue'
+  import type { ComponentOptions } from 'vue'
   const Splitpanes: ComponentOptions
   const Pane: ComponentOptions
   export { Splitpanes, Pane }

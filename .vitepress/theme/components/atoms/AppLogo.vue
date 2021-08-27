@@ -23,7 +23,7 @@ const { site, theme, localePath } = useData()
       "
       :src="withBase(theme.logo)"
       alt="Logo"
-    />
+    >
     {{ site.title }}
   </a>
 </template>

@@ -1,8 +1,9 @@
-
-import { computed, Ref } from 'vue'
+import { computed } from 'vue'
 import { useRoute, withBase } from 'vitepress'
 import { isExternal as isExternalCheck } from '../utils'
+
 import type { DefaultTheme } from '../config'
+import type { Ref } from 'vue'
 
 export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>, isDropdown = false) {
   const route = useRoute()
@@ -15,8 +16,7 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>, isDropdown =
     let active = false
     if (item.value.activeMatch) {
       active = new RegExp(item.value.activeMatch).test(routePath)
-    }
-    else {
+    } else {
       const itemPath = normalizePath(withBase(item.value.link))
       active = itemPath === routePath
     }

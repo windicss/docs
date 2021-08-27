@@ -39,8 +39,7 @@ function toggle(str: string) {
 
   if (directions.value.includes(str)) {
     remove(str)
-  }
-  else {
+  } else {
     expand()
     if (has(str))
       remove(str)

@@ -164,9 +164,8 @@ function interpret(cm: CodeMirror.Editor) {
 
           start = end + 1
         })
-      }
-      // group failed
-      else {
+      } else {
+        // group failed
         mark(start, start + full.length, false, cm)
       }
     })

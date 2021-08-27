@@ -86,8 +86,8 @@ and process it as you need.
 You can also have type support for it via:
 
 ```ts
-import type { AnalysisReport } from 'windicss-analysis'
 import rawReport from './report.json'
+import type { AnalysisReport } from 'windicss-analysis'
 
 const report = rawReport as AnalysisReport
 ```

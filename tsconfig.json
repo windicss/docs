@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
     "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
@@ -13,7 +12,7 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "paths": {
-      "@/*": [".vitepress/theme/*"]
+      "@/*": ["./.vitepress/theme/*"]
     }
   },
   "include": [
@@ -21,8 +20,5 @@
     ".vitepress/**/*.d.ts",
     ".vitepress/**/*.vue",
     "components.d.ts"
-  ],
-  "exclude": [
-    "dist"
   ]
 }

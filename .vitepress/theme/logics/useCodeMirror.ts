@@ -1,6 +1,8 @@
-import { Ref, watch, WritableComputedRef } from 'vue'
+import { watch } from 'vue'
 import type CodeMirror from 'codemirror'
 import 'codemirror/lib/codemirror.css'
+
+import type { Ref, WritableComputedRef } from 'vue'
 
 export async function useCodeMirror(
   textarea: Ref<HTMLTextAreaElement | null>,

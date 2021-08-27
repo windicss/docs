@@ -15,9 +15,9 @@ defineProps({
     rel="noopener"
     class="inline-flex text-xl p-2"
   >
-    <slot></slot>
+    <slot />
   </a>
   <button v-else class="inline-flex text-xl p-2">
-    <slot></slot>
+    <slot />
   </button>
 </template>

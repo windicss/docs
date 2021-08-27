@@ -41,8 +41,7 @@ export function useActiveSidebarLinks() {
     if (rootLi && rootLi !== activeLink.parentElement) {
       rootActiveLink = rootLi.querySelector('a')
       rootActiveLink && rootActiveLink.classList.add('active')
-    }
-    else {
+    } else {
       rootActiveLink = null
     }
   }
@@ -123,8 +122,7 @@ function throttleAndDebounce(fn: () => void, delay: number): () => void {
       setTimeout(() => {
         called = false
       }, delay)
-    }
-    else {
+    } else {
       timeout = setTimeout(fn, delay)
     }
   }

@@ -1,7 +1,9 @@
-import { computed, Ref } from 'vue'
+import { computed } from 'vue'
 import Windi from 'windicss'
 import { StyleSheet } from 'windicss/utils/style'
 import { CSSParser, HTMLParser } from 'windicss/utils/parser'
+
+import type { Ref } from 'vue'
 import type { Config } from 'windicss/types/interfaces'
 
 export function useWindiCSS(htmlCode: Ref<string>, styleCode: Ref<string>, config: Config | undefined) {

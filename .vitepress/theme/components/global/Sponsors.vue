@@ -15,8 +15,7 @@ const base = computed(() => {
       .filter((i: any) => {
         if (cache.includes(i.profile)) {
           return false
-        }
-        else {
+        } else {
           cache.push(i.profile)
           return true
         }

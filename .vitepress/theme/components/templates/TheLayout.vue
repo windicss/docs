@@ -27,7 +27,7 @@ onMounted(async() => {
 <template>
   <div class="relative antialiased">
     <keep-alive>
-      <component :is="page"></component>
+      <component :is="page" />
     </keep-alive>
   </div>
 </template>

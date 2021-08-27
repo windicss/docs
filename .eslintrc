@@ -1,8 +1,5 @@
 {
-  "extends": ["@antfu", "plugin:markdown/recommended"],
-  "rules": {
-    "no-tabs": ["error"]
-  },
+  "extends": ["@hannoeru", "plugin:markdown/recommended"],
   "overrides": [
     {
       "files": ["**/*.md/**"],

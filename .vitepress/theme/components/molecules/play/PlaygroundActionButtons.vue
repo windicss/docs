@@ -4,11 +4,10 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const show = ref<'export' | 'layout' | null>(null)
 
 function handleToggle(e: Event, v: 'export' | 'layout') {
-    console.log(show.value);
-    if (!show.value || show.value !== v)
-      show.value = v
-    else
-      show.value = null
+  if (!show.value || show.value !== v)
+    show.value = v
+  else
+    show.value = null
 }
 const close = () => show.value = null
 onMounted(() => {
