@@ -312,9 +312,9 @@ const config = {
 export default config
 ```
 
-Add `import "virtual:windi.css"` to the top of your $layout.svelte file:
+Add `import "virtual:windi.css"` to the top of your __layout.svelte file:
 
-```html $layout.svelte
+```html __layout.svelte
 <script>
   import "virtual:windi.css"
 
