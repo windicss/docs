@@ -12,8 +12,8 @@ altActionLink: /features/
 heroImage: /assets/logo.svg
 heroAlt: Windi CSS logo
 
-newsTitle: 🎉 v3.0 is now out with a bunch of exciting new features!
-newsLink: /posts/v30.html
+newsTitle: 👉 Check out new features in Windi CSS v3.1
+newsLink: /posts/v31.html
 
 footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 ---

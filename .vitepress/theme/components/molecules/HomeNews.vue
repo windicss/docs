@@ -6,7 +6,7 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <div class="px-4">
+  <div class="px-4 flex justify-center">
     <a
       v-if="frontmatter.newsLink && frontmatter.newsTitle"
       class="
