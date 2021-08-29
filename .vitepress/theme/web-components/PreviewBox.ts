@@ -74,7 +74,7 @@ class Play extends HTMLElement {
 
     this.setContent({
       css: this.getAttribute('css') || '',
-      html: this.getAttribute('html') || '<div>Preview<div/>',
+      html: this.getAttribute('html') || '<div>Preview</div>',
       classes: this.getAttribute('classes') || '',
       fixedCss: this.getAttribute('fixed-css') || '',
     })
@@ -140,7 +140,7 @@ class Play extends HTMLElement {
     if (html)
       this.container.innerHTML = html
     if (classes && this.container.children[0])
-      this.container.children[0].className = classes
+      this.container.children[0].setAttribute('class', classes)
   }
 }
 
