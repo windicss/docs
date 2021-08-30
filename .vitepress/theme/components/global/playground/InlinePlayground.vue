@@ -52,7 +52,7 @@ const props = defineProps({
     default: '',
   },
   html: {
-    default: undefined,
+    type: String,
   },
   tab: {
     type: String as PropType<'code' | 'css' | 'config'>,
@@ -87,6 +87,13 @@ const fixedStyles = processor.value.interpret(`${props.fixed} ${props.appended}`
 const style = shallowRef<StyleSheet>(new StyleSheet())
 const { highlightedCSS, copy, copied } = usePrismCSS(() => style.value.build().trim())
 
+const html = computed(() => {
+  if (!props.html?.startsWith('<'))
+    return `<div>${props.html}</div>`
+  else
+    return props.html
+})
+
 const iframeData = reactive({
   css: computed(() => new StyleSheet()
     .extend(preflightStyles)
@@ -96,7 +103,7 @@ const iframeData = reactive({
   ),
   fixedCss: computed(() => fixedStyles.build()),
   classes: computed(() => `${[...(props.nested ? [] : acceped.value), props.fixed].filter(Boolean).join(' ')}`.trim()),
-  html: computed(() => props.nested ? `${props.html}`.replace(/\{class\}/g, acceped.value.join(' ')) : props.html),
+  html: computed(() => props.nested ? `${html.value}`.replace(/\{class\}/g, acceped.value.join(' ')) : html.value),
 })
 
 function mark(start: number, end: number, matched: boolean, cm: CodeMirror.Editor) {
