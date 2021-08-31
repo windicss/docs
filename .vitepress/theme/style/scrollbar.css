@@ -3,6 +3,10 @@
   @apply bg-transparent w-12px h-12px;
 }
 
+* {
+  scrollbar-width: thin;
+}
+
 *::-webkit-scrollbar-thumb {
   transition: background .2s ease-in-out;
   border: 3px solid transparent;
