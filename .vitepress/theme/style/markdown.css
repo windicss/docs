@@ -96,6 +96,10 @@ h6:focus .header-anchor {
   opacity: 0.5;
 }
 
+.prose a {
+  word-wrap: break-word;
+}
+
 .prose pre {
   @apply bg-transparent m-0 px-4.5 py-3.5;
 }
