@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { ref, watch, toRef } from 'vue'
 
-const props = defineProps({
-  modelValue: {
-    default: '',
-  },
-  variants: {
-    default: () => ['sm', '', 'lg', 'xl', '2xl', '3xl'],
-  },
+const props = withDefaults(defineProps<{
+  modelValue: string
+  variants: string[]
+}>(), {
+  modelValue: '',
+  variants: () => ['sm', '', 'lg', 'xl', '2xl', '3xl'],
 })
 
 const emit = defineEmits(['update:modelValue'])

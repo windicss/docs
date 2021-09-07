@@ -2,8 +2,8 @@ import docsearch from '@docsearch/js'
 import { useRoute, useRouter, useData } from 'vitepress'
 import { getCurrentInstance, onMounted, watch } from 'vue'
 
-import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
 import type { DefaultTheme } from '@/config'
+import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
 
 export function useSearchBox(props: Readonly<{
   options: DefaultTheme.AlgoliaSearchOptions

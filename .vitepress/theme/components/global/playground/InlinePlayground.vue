@@ -8,67 +8,34 @@ import JSON5 from 'json5'
 import { useCodeMirror } from '@/logics/useCodeMirror'
 import { usePrismCSS } from '@/logics/usePrismCSS'
 import { isDark } from '@/logics/dark'
-import type { PropType } from 'vue'
+
 import type CodeMirror from 'codemirror'
 import type { Config } from 'windicss/types/interfaces'
 
-const props = defineProps({
-  input: {
-    type: String,
-    // eslint-disable-next-line no-useless-escape
-    default: 'px-1.2em py-2 bg-hex-0ea5e9 text-white rounded\nhover:\(shadow bg-opacity-85)',
-  },
-  showPreview: {
-    default: true,
-  },
-  showMode: {
-    default: false,
-  },
-  showTabs: {
-    default: false,
-  },
-  showCSS: {
-    default: true,
-  },
-  showCopy: {
-    default: true,
-  },
-  showConfig: {
-    default: false,
-  },
-  enableConfig: {
-    default: false,
-  },
-  enablePreview: {
-    default: true,
-  },
-  nested: {
-    default: false,
-  },
-  fixed: {
-    default: '',
-  },
-  appended: {
-    default: '',
-  },
-  html: {
-    type: String,
-  },
-  tab: {
-    type: String as PropType<'code' | 'css' | 'config'>,
-    default: 'code',
-  },
-  mode: {
-    type: String as PropType<'interpret' | 'compile'>,
-    default: 'interpret',
-  },
-  config: {
-    type: Object as PropType<Config>,
-    default: () => {},
-  },
+const props = withDefaults(defineProps<{
+  input?: string
+  showPreview?: boolean
+  showMode?: boolean
+  showTabs?: boolean
+  showCSS?: boolean
+  showCopy?: boolean
+  showConfig?: boolean
+  enableConfig?: boolean
+  enablePreview?: boolean
+  nested?: boolean
+  fixed?: string
+  appended?: string
+  html?: string
+  tab?: 'code' | 'css' | 'config'
+  mode?: 'interpret' | 'compile'
+  config?: Config
+}>(), {
+  input: 'px-1.2em py-2 bg-hex-0ea5e9 text-white rounded\nhover:\(shadow bg-opacity-85)',
+  tab: 'code',
+  mode: 'interpret',
 })
 
-const config = ref(props.config)
+const config = ref(props.config || {})
 const processor = computed(() => new Windi(config.value))
 
 const textareaInput = ref<HTMLTextAreaElement | null>(null)

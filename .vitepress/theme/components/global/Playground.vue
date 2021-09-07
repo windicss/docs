@@ -2,13 +2,14 @@
 import { ref, onMounted, computed } from 'vue'
 import { IframePreview } from '@windicss/shared-components'
 import { Splitpanes, Pane } from 'splitpanes'
-import type { Config } from 'windicss/types/interfaces'
 import { useWindiCSS } from '@/logics/useWindiCSS'
 import { getSharedCode, useEmitShare } from '@/logics/useShare'
 import { layout } from '@/logics/playgroundLayout'
 import { isDark } from '@/logics/dark'
 import { bps } from '@/logics/breakpoints'
 import { html, css } from '@/data/playground'
+
+import type { Config } from 'windicss/types/interfaces'
 
 import 'splitpanes/dist/splitpanes.css'
 import '@windicss/shared-components/index.css'

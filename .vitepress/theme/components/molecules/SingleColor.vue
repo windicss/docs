@@ -2,10 +2,10 @@
 import { computed } from 'vue'
 import colors from 'windicss/colors'
 
-const props = defineProps({
-  color: {
-    default: '',
-  },
+const props = withDefaults(defineProps<{
+  color: string
+}>(), {
+  color: '',
 })
 
 function camelize(str: string) {

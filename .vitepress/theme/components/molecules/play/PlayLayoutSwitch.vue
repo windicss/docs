@@ -4,6 +4,9 @@ import { layout } from '@/logics/playgroundLayout'
 defineProps({
   open: Boolean,
 })
+defineEmits<{
+  (e: 'toggle', value: void): void
+}>()
 </script>
 
 <template>

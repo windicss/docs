@@ -2,8 +2,8 @@
 import { ref, watch } from 'vue'
 import { useRoute } from 'vitepress'
 
-import type { PropType } from 'vue'
 import type { DefaultTheme } from '@/config'
+import type { PropType } from 'vue'
 
 defineProps({
   item: {
@@ -42,9 +42,9 @@ function toggle() {
         border-gray-100 dark:border-dark-400
       "
     >
-      <li v-for="item in item.items" :key="item.text">
-        <div v-if="item.text === 'separator'" class="border-b border-$windi-bc my-1 mx-3" />
-        <NavLink v-else :item="item" :dropdown="true" />
+      <li v-for="nav in item.items" :key="nav.text">
+        <div v-if="nav.text === 'separator'" class="border-b border-$windi-bc my-1 mx-3" />
+        <NavLink v-else :item="nav" :dropdown="true" />
       </li>
     </ul>
   </div>

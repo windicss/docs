@@ -5,6 +5,9 @@ import { emitExport } from '@/logics/useShare'
 defineProps({
   open: Boolean,
 })
+defineEmits<{
+  (e: 'toggle', value: void): void
+}>()
 </script>
 
 <template>

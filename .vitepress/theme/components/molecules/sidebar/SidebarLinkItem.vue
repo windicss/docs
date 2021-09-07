@@ -2,9 +2,10 @@
 import { computed } from 'vue'
 import { useRoute, useData } from 'vitepress'
 
-import type { PropType } from 'vue'
-import type { DefaultTheme } from '@/config'
 import { joinUrl, isActive } from '@/utils'
+
+import type { DefaultTheme } from '@/config'
+import type { PropType } from 'vue'
 
 const props = defineProps({
   item: {

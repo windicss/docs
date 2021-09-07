@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { DefaultTheme } from '@/config'
+import type { PropType } from 'vue'
 
 const props = defineProps({
   item: {

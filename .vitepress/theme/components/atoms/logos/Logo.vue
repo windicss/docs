@@ -16,10 +16,10 @@ import Windi from './WindiLogo.vue'
 
 // @windicss-safelist: 'logo-float-xl'
 
-const props = defineProps({
-  name: {
-    default: '',
-  },
+const props = withDefaults(defineProps<{
+  name?: string
+}>(), {
+  name: '',
 })
 
 const Logo = computed(() => {

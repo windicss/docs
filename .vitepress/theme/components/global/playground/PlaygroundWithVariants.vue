@@ -3,34 +3,25 @@ import { computed } from 'vue'
 import { useVModels } from '@vueuse/core'
 
 const emit = defineEmits([])
-const props = defineProps({
-  variant: {
-    default: '',
-  },
-  variants: {
-    default: () => ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '1/2', 'full'],
-  },
-  type: {
-    default: undefined,
-  },
-  prefix: {
-    default: '',
-  },
-  fixed: {
-    default: '',
-  },
-  appended: {
-    default: '',
-  },
-  nested: {
-    default: false,
-  },
-  html: {
-    default: undefined,
-  },
-  showPreview: {
-    default: true,
-  },
+
+const props = withDefaults(defineProps<{
+  variant?: string
+  variants?: string[]
+  type?: string
+  prefix?: string
+  fixed?: string
+  appended?: string
+  nested?: boolean
+  html?: string
+  showPreview?: boolean
+}>(), {
+  variant: '',
+  variants: () => ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', '1/2', 'full'],
+  prefix: '',
+  fixed: '',
+  appended: '',
+  nested: false,
+  showPreview: true,
 })
 
 const {

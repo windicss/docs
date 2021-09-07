@@ -1,9 +1,9 @@
 import { UserConfig } from 'vitepress'
+import { DefaultTheme } from '@/config'
 import { metaData } from './constants'
 import { mdRenderFilename } from './markdown'
 import head from './head'
 import themeConfig from './theme'
-import { DefaultTheme } from '@/config'
 
 const config: UserConfig<DefaultTheme.Config> = {
   title: 'Windi CSS',

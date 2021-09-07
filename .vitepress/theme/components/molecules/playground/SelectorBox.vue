@@ -1,20 +1,16 @@
 <script setup lang="ts">
 import { triggerRef } from 'vue'
 import { useVModel } from '@vueuse/core'
-import type { PropType } from 'vue'
 
 const emit = defineEmits([])
-const props = defineProps({
-  modelValue: {
-    type: Array as PropType<string[]>,
-    default: () => [],
-  },
-  normalize: {
-    default: false,
-  },
-  mode: {
-    default: 'all',
-  },
+const props = withDefaults(defineProps<{
+  modelValue?: string[]
+  normalize?: false
+  mode?: string
+}>(), {
+  modelValue: () => [],
+  normalize: false,
+  mode: 'all',
 })
 
 const directions = useVModel(props, 'modelValue', emit, { passive: true })

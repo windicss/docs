@@ -1,9 +1,9 @@
 import { computed, ref } from 'vue'
 import { useRoute, useData } from 'vitepress'
-import { useActiveSidebarLinks } from './activeSidebarLink'
 import { Header } from '@/types'
 import { getSideBarConfig } from '@/utils'
 import { DefaultTheme } from '@/config'
+import { useActiveSidebarLinks } from './activeSidebarLink'
 
 export const openSideBar = ref(false)
 
