@@ -5,12 +5,12 @@ import { StyleSheet } from 'windicss/utils/style'
 import Windi from 'windicss'
 import JSON5 from 'json5'
 
-import type { PropType } from 'vue'
-import type CodeMirror from 'codemirror'
-import type { Config } from 'windicss/types/interfaces'
 import { useCodeMirror } from '@/logics/useCodeMirror'
 import { usePrismCSS } from '@/logics/usePrismCSS'
 import { isDark } from '@/logics/dark'
+import type { PropType } from 'vue'
+import type CodeMirror from 'codemirror'
+import type { Config } from 'windicss/types/interfaces'
 
 const props = defineProps({
   input: {
@@ -88,7 +88,7 @@ const style = shallowRef<StyleSheet>(new StyleSheet())
 const { highlightedCSS, copy, copied } = usePrismCSS(() => style.value.build().trim())
 
 const html = computed(() => {
-  if (!props.html?.startsWith('<'))
+  if (props.html && !props.html?.startsWith('<'))
     return `<div>${props.html}</div>`
   else
     return props.html
