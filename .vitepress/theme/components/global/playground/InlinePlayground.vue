@@ -31,6 +31,17 @@ const props = withDefaults(defineProps<{
   config?: Config
 }>(), {
   input: 'px-1.2em py-2 bg-hex-0ea5e9 text-white rounded\nhover:\(shadow bg-opacity-85)',
+  showPreview: true,
+  showMode: false,
+  showTabs: false,
+  showCSS: true,
+  showCopy: true,
+  showConfig: false,
+  enableConfig: false,
+  enablePreview: true,
+  nested: false,
+  fixed: '',
+  appended: '',
   tab: 'code',
   mode: 'interpret',
 })
@@ -255,7 +266,7 @@ onMounted(async() => {
         </div>
         <div
           v-if="showPreview"
-          class="border-l border-$windi-bc w-10em p-3"
+          class="border-l border-$windi-bc w-10em p-3 min-h-40"
         >
           <preview-box v-bind="iframeData" :dark="isDark" />
         </div>
