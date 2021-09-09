@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NextJs from 'virtual:vite-icons/logos/nextjs'
+import NextJs from '~icons/logos/nextjs'
 </script>
 
 <template>

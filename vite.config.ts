@@ -1,7 +1,8 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
-import Components from 'vite-plugin-components'
-import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
+import Components from 'unplugin-vue-components/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import WindiCSS from 'vite-plugin-windicss'
 import ViteRestart from 'vite-plugin-restart'
 import axios from 'axios'
@@ -29,13 +30,13 @@ export default defineConfig({
         '.vitepress/theme/components',
       ],
       extensions: ['vue', 'ts'],
-      customLoaderMatcher: id => id.endsWith('.md'),
-      customComponentResolvers: [
-        ViteIconsResolver({
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: [
+        IconsResolver({
           componentPrefix: '',
         }),
       ],
-      globalComponentsDeclaration: true,
+      dts: true,
     }),
     Icons(),
     WindiCSS(),
