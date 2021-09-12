@@ -19,7 +19,7 @@ So far, we have implemented the following features:
 
 So, now I think I should talk about why I am doing this project.
 
-It is always a pleasant experience to use Tailwind to develop the front-end. I tried other front-end frameworks, but when I met Tailwind, I never changed it. Componentization is the most attractive part for me. You know, you can easily implement an html component and share it with others.
+It is always a pleasant experience to use Tailwind to develop the front-end. I tried other front-end frameworks, but when I met Tailwind, I never looked back. Componentization is the most attractive part for me. You know, you can easily implement an html component and share it with others.
 
 But when I used sapper and Tailwind together, the problem appeared, first of all, the problem of speed. When my project became larger and there were about dozens of components, the initial compilation speed reached 3s, and the hot update speed was more than 1s. It was a very unpleasant experience. When you make a change and realize the delay, I believe you will become crazy just like me.
 
@@ -37,7 +37,7 @@ Of course, there are more detailed questions, you need to read our source code.
 
 ## Future
 
-I never thought about replacing Tailwind CSS. In addition to my personal interest, the development of this project is also a personal need. tailwindcss can almost be regarded as a giant now, he has  more than 3,000 commits and more than 100 contributors. But when such an achievement is achieved, changing the track is not an easy thing to do. tailwindcss uses libraries like lodash and postcss, I think this will not change. Switch to typescript? Not sure, I think they should still like their workflow.
+I never thought about replacing Tailwind CSS. In addition to my personal interest, the development of this project is also a personal need. Tailwind CSS can almost be regarded as a giant now as it has more than 3,000 commits with 100+ contributors. But when such an achievement is achieved, changing the track is not an easy thing to do. Tailwind CSS uses libraries like lodash and postcss and I think this will not change. Switch to typescript? Not sure, I think they should still like their workflow.
 
 In any case, I would like to thank the developers who developed Tailwind for such a good front-end tool. But I also hope that when you encounter a speed bottleneck, or want to experience some new features, give Windi CSS a try.
 
