@@ -61,7 +61,6 @@ You will need to configure the `extract.include` options in `windi.config.js` in
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
-import colors from 'windicss/colors'
 
 export default defineConfig({
   extract: {
