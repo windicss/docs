@@ -32,7 +32,7 @@ export default defineConfig({
 })
 ```
 
-Or to be more fixable:
+Or to be more flexible:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
