@@ -7,7 +7,7 @@ const props = defineProps<{
   dropdown?: boolean
 }>()
 const propsRefs = toRefs(props)
-const { props: linkProps } = useNavLink(propsRefs.item, props.dropdown)
+const { props: linkProps } = useNavLink(propsRefs.item, props.dropdown) as any
 </script>
 
 <template>
