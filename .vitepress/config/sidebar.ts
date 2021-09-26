@@ -135,6 +135,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'RTL', link: '/features/rtl' },
         { text: 'Important Prefix', link: '/features/important-prefix' },
         { text: 'Directives', link: '/features/directives' },
+        { text: 'Attributify Mode', link: '/features/attributify' },
         { text: 'Visual Analyzer', link: '/features/analyzer' },
         // { text: 'Nesting CSS', link: '/features/nesting' },
       ],
