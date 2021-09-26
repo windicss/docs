@@ -24,7 +24,7 @@ vue add windicss
 
 ## Configuration
 
-You can change the behaviour of the plugin by modifying the options in `./vue.config.js`.
+You can change the behavior of the plugin by modifying the options in `./vue.config.js`.
 
 ```js vue.config.js
 module.exports = {
