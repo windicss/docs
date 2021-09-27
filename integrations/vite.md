@@ -126,7 +126,7 @@ By default, we scan your source code statically and find all the usages of the u
 <div className={`p-${size}`}>
 ```
 
-For that, you will need to specify the possible combinations in the `safelist` options of `vite.config.js`.
+For that, you will need to specify the possible combinations in the `safelist` options of `windi.config.ts`.
 
 ```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
