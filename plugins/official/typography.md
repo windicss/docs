@@ -34,6 +34,15 @@ export default {
 }
 ```
 
+No you can use the `prose` utility class (or one of the variants) on the wrapping element to style the HTML elements contained:
+
+```html
+<article class="prose">
+  <h1>Styled heading!</h1>
+  <blockquote>Very useful for styling markdown content!</blockquote>
+</article>
+```
+
 ## Disabling size modifiers
 
 ```js windi.config.js
