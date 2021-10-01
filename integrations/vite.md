@@ -289,24 +289,23 @@ See [examples](https://github.com/windicss/vite-plugin-windicss/blob/main/exampl
 
 ---
 
-## SvelteKit (as of 1.0.0-next.100)
+## SvelteKit (as of 1.0.0-next.102)
 
 Install plugin with `npm i -D vite-plugin-windicss` and adapt the svelte config:
 
 ```js svelte.config.js
-import preprocess from 'svelte-preprocess'
 import WindiCSS from 'vite-plugin-windicss'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: preprocess(),
   kit: {
+    // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
-    vite: () => ({
+    vite: {
       plugins: [
-        WindiCSS.default(),
+        WindiCSS(),
       ],
-    }),
+    },
   },
 }
 export default config
@@ -323,5 +322,5 @@ Add `import "virtual:windi.css"` to the top of your __layout.svelte file:
   if (browser) import("virtual:windi-devtools")
   // ...
 </script>
-<!-- ...rest of $layout.svelte -->
+<!-- ...rest of __layout.svelte -->
 ```
