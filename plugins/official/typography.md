@@ -34,7 +34,7 @@ export default {
 }
 ```
 
-No you can use the `prose` utility class (or one of the variants) on the wrapping element to style the HTML elements contained:
+Now you can use the `prose` utility class (or one of the variants) on the wrapping element to style the HTML elements contained:
 
 ```html
 <article class="prose">
