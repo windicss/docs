@@ -304,7 +304,7 @@ const config = {
     target: '#svelte',
     vite: () => ({
       plugins: [
-        WindiCSS.default(),
+        WindiCSS(),
       ],
     }),
   },
