@@ -5,7 +5,7 @@ Add [Animate CSS](https://github.com/animate-css/animate.css) as [Windi CSS](htt
 ## Installation
 
 ```bash
-npm install --save-dev @windicss/animations
+npm install --save-dev @windicss/plugin-animations
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ export default {
   },
   plugins: [
     // Other plugins
-    require('@windicss/animations')({
+    require('@windicss/plugin-animations')({
       settings: {
         animatedSpeed: 1000,
         heartBeatSpeed: 1000,
