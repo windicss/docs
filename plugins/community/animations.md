@@ -10,7 +10,7 @@ npm install --save-dev @windicss/plugin-animations
 
 ## Usage
 
-```js tailwind.config.js
+```js windi.config.js
 export default {
   theme: {
     // ...
