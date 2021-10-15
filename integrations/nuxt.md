@@ -2,7 +2,7 @@
 
 # Integration for [Nuxt.js](https://nuxtjs.org)
 
-<PackageInfo name="nuxt-windicss-module" author="harlan-zw" />
+<PackageInfo name="nuxt-windicss" author="harlan-zw" />
 
 ## Install
 
@@ -21,6 +21,18 @@ export default {
     'nuxt-windicss',
   ],
 }
+```
+
+### Nuxt 3
+
+```js nuxt.config.js
+import { defineNuxtConfig } from 'nuxt3'
+
+export default defineNuxtConfig({
+  buildModules: [
+    'nuxt-windicss',
+  ],
+})
 ```
 
 ## Migrating from tailwind
