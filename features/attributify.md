@@ -10,11 +10,11 @@ With this feature, you can write windi classes in html attributes.
 Attributify is opt-in by default, start by enabling it in your windi config.
 
 ```ts windi.config.ts
-import { defineConfig } from 'windicss/helpers';
+import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-   attributify: true,
-});
+  attributify: true,
+})
 ```
 
 And use them as you would like:
