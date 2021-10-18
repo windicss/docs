@@ -1,5 +1,7 @@
 # Attributify Mode
 
+> See [attributify](/features/attributify.md) for setup instructions.
+
 ## Syntax
 
 ```html
