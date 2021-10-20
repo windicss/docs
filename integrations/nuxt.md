@@ -66,7 +66,7 @@ export default defineConfig({
 
 ### Safelist
 
-By default, we scan your source code statically and find all the usages of the utilities then generated corresponding CSS on-demand. However, there is some limitation that utilities that decided in the runtime can not be matched efficiently, for example
+By default, we scan your source code statically and find all the usages of the utilities then generate corresponding CSS on-demand. However, there is some limitation that utilities that decided in the runtime can not be matched efficiently, for example
 
 ```vue
 <!-- will not be detected -->
