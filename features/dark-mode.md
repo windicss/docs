@@ -8,7 +8,7 @@ By prefixing the `dark:` variant to the utilities, they will only apply when dar
 
 <InlinePlayground :input="'text-red-400 dark:text-green-400'" :showCSS="true" :showPreview="true"/>
 
-We have two modes for enabling dark mode, [class mode](#class-mode) and [media query mode](#media-query-mode). By default, `class` mode is enable by default.
+We have two modes for enabling dark mode, [class mode](#class-mode) and [media query mode](#media-query-mode). By default, `class` mode is enabled.
 
 ## Class mode
 
