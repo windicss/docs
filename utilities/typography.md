@@ -408,7 +408,7 @@ Utilities for controlling the opacity of an element's decoration color.
   type='opacity'
   prefix='underline-opacity'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='text-black underline underline-teal-600 underline-2'
+  appended='underline underline-teal-600 underline-2'
   nested=true
   html="&lt;p class='text-black underline underline-2 underline-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
 />
@@ -440,7 +440,7 @@ Utilities for controlling the length of text decoration.
   :variants="['auto', '0', '1', '2', '3', '4', '5', '6', '7', '8', '0.1rem', '3px', '0.3em']"
   prefix='underline'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='text-black underline underline-teal-600'
+  appended='underline underline-teal-600'
   nested=true
   html="&lt;p class='text-black underline underline-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
 />
