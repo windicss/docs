@@ -53,12 +53,12 @@ If you were previously using Tailwind, please see the [migration guide](/guide/m
 You will need to add the plugin to your webpack configuration. If you have access to modify the `webpack.config.js` directly, then you can do the following.
 
 ```js webpack.config.js
-import WindiCSS from 'windicss-webpack-plugin'
+import WindiCSSWebpackPlugin from 'windicss-webpack-plugin'
 
 export default {
   // ...
   plugins: [
-    new WindiCSS(),
+    new WindiCSSWebpackPlugin(),
   ],
 }
 ```
@@ -69,24 +69,30 @@ export default {
 For webpack configurations which don't support the es module import syntax, you can try the following.
 
 ```js webpack.config.js
-const WindiCSS = require('windicss-webpack-plugin').default
+const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
 export default {
   // ...
   plugins: [
-    new WindiCSS(),
+    new WindiCSSWebpackPlugin(),
   ],
 }
 ```
 
 ### Include the virtual module
 
-Within an entry point file or something only loaded once, add the import of `windi.css`.
+Within an entry point file or something only loaded once, add the import.
 
+ESM
 ```ts main.js
 import 'windi.css'
-// require('windi.css')
 ```
+
+CJS
+```ts main.js
+require('windi.css')
+```
+
 
 ### Windi Config
 
@@ -192,12 +198,12 @@ See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/pack
 ### Next.js
 
 ```js next.config.js
-const WindiCSS = require('windicss-webpack-plugin').default
+const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
 module.exports = {
   // ...
   webpack(config) {
-    config.plugins.push(new WindiCSS())
+    config.plugins.push(new WindiCSSWebpackPlugin())
     return config
   },
 }
@@ -224,14 +230,14 @@ Note: JSX usage is experimental. Please report any issues you find.
 ### Create React App - CRACO
 
 ```js craco.config.js
-const WindiCSS = require('windicss-webpack-plugin').default
+const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
 module.exports = {
   // ...
   webpack: {
     plugins: {
       add: [
-        new WindiCSS({
+        new WindiCSSWebpackPlugin({
           virtualModulePath: 'src',
         }),
       ],
@@ -241,7 +247,7 @@ module.exports = {
 ```
 
 ```js src/index.js
-import './virtual:windi.css'
+import './windi.css'
 ```
 
 ```ts windi.config.ts
@@ -262,12 +268,12 @@ Note: JSX usage is experimental. Please report any issues you find.
 For webpack configurations which don't support the es module import syntax, you can try the following.
 
 ```js webpack.config.js
-const WindiCSS = require('windicss-webpack-plugin').default
+const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
 export default {
   // ...
   plugins: [
-    new WindiCSS(),
+    new WindiCSSWebpackPlugin(),
   ],
 }
 ```
@@ -280,12 +286,12 @@ require('windi.css')
 ### Storybook
 
 ```js .storybook/main.js
-const WindiCSS = require('windicss-webpack-plugin').default
+const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
 module.exports = {
   // ...
   webpackFinal: (config) => {
-    config.plugins.push(new WindiCSS())
+    config.plugins.push(new WindiCSSWebpackPlugin())
     return config
   },
 }
