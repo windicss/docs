@@ -2,7 +2,7 @@
 [svelte-windicss-preprocess]: https://github.com/windicss/svelte-windicss-preprocess
 [vite-plugin-windicss]: https://github.com/windicss/vite-plugin-windicss
 [vite]: /integrations/vite
-[Vite SvelteKit guide]: /integrations/vite#sveltekit-as-of-1-0-0-next-100
+[Vite SvelteKit guide]: /integrations/vite#sveltekit-as-of-1-0-0-next-102
 [migration]: /guide/migration
 
 <Logo name="svelte" class="logo-float-xl"/>
@@ -13,129 +13,7 @@
 
 Our Svelte integration uses the Svelte Preprocessor API, therefore runs before compilation step. This brings some limitations for dynamic changed classes.
 
-## Documentation
-
-### Options
-
-```ts
-interface Options {
-  silent?: boolean
-  mode?: 'development' | 'production'
-  configPath?: string
-  disableFormat?: boolean
-  devTools?: {
-    enabled: boolean
-    completions?: boolean
-  }
-  safeList?: string
-  preflights?: boolean
-}
-```
-
-### Custom pre-processing information
-
-With v4 we introduced a new feature set of custom attributes for svelte style tags, to make integration regardless the setup easy and straight forward.
-Non scoped styles will be handled in svelte according to their docs with `:global()` for classes and `-global-` for keyframes.
-
-### Preflights
-
-Svelte nature is to scope CSS style and remove unused styles, this can lead to issues if you add preflights into the layout wrapper and want that styles to be available on all other `.svelte` files as well. On the other hand, if you compile to custom-elements you cannot use `:global()` styles.
-To allow the user to decide where to put the preflights as well deciding if they should be global or scoped, we have following syntax:
-
-```html
-<!-- Layout.svelte -->
-<script>
-</script>
-
-<slot />
-
-<!-- use this for scoped preflights -->
-<style windi:preflights>
-</style>
-
-<!-- use this for global preflights -->
-<style windi:preflights:global>
-</style>
-```
-
-### Safe list
-
-Sometimes you want to have dynamic classes based on some logic in script tags. Since [svelte-windicss-preprocess] runs before the svelte compile step, there is no way it could know this dynamic values. There are many approaches to this, either use windi at runtime or using a bundler setup instead this preprocessor one, or if you know all possible classes in the beginning add them to a safe list.
-
-Similar to preflights, this safe list need to be available anywhere you want it, and also scoped and global.
-
-```html
-<!-- Layout.svelte -->
-<script>
-  let shade = 100;
-</script>
-
-<div class="bg-red-{shade}">
-  I am dynamic!
-</div>
-
-<!-- use this for scoped safelist classes -->
-<style windi:safelist>
-</style>
-
-<!-- use this for global safelist classes -->
-<style windi:safelist:global>
-</style>
-```
-### Windi CSS classes
-
-By default, all inline used classes of Windi CSS will be scoped with native svelte logic. This has its advantages (you can find many discussions online).
-However, using a utility based CSS framework there is not much need to make sure classes do not override, since e.g. `bg-gray-600` will always have the same CSS code behind it, regardless which `.svelte` file it is used.
-You might want to safe more file size and using Windi CSS classes not scoped, but might want to choose this file by file.
-
-To make all Windi CSS classes in one `.svelte` global, with help of `:global()` you can modify / add the following style tag.
-
-```html
-<style windi:global>
-</style>
-```
-
-### Custom styles
-
-You may have the need in your project to define custom CSS classes, and want to decide separate to Windi CSS if they are scoped or global. You can with the following syntax:
-
-```html
-  <!-- all styles with :global() -->
-  <style global>
-    .btn {
-      background: green;
-    }
-  </style>
-
-  <!-- selective or all scoped -->
-  <style>
-    :global(.btn) {
-      background: green;
-    }
-    .btnTwo {
-      background: red;
-    }
-  </style>
-```
-
-You can combine any of this attributes, so full style tag can look like:
-```html
-  <style global windi:global windi:preflights:global windi:safelist:global>
-    .custom{
-      background: black;
-    }
-  </style>
-```
-
-### VS Code Extension
-Using special CSS tag syntax as well as the attributes above, will break the CSS diagnostics of VS Code. Please make sure to disable them.
-If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode), add this setting to your VS Code configuration file.
-
-```json
-{
-  "svelte.plugin.css.diagnostics.enable": false
-}
-```
+> If you are using SvelteKit, you can also check out the [Vite SvelteKit guide].
 
 ## Setup Guides
 
@@ -143,10 +21,9 @@ Here are two guides for Svelte and SvelteKit using their starter template.
 
 ### Svelte
 
-get started template and install package from NPM
+Install the Svelte WindiCSS Preprocessor plugin from NPM
 
 ```bash
-npx degit sveltejs/template svelte-project
 npm i -D svelte-windicss-preprocess
 ```
 
@@ -305,12 +182,9 @@ update `App.svelte`
 
 ### SvelteKit
 
-> If you are using [Vite] as an bundler, check out [Vite SvelteKit guide]
-
-get started template and install package from npm
+Install the Svelte WindiCSS Preprocessor plugin from NPM
 
 ```bash
-npm init svelte@next sveltekit-project
 npm i -D svelte-windicss-preprocess
 ```
 
@@ -348,4 +222,128 @@ add layout file
 + <slot></slot>
 + <style windi:preflights:global windi:safelist:global>
 + </style>
+```
+
+## Documentation
+
+### Options
+
+```ts
+interface Options {
+  silent?: boolean
+  mode?: 'development' | 'production'
+  configPath?: string
+  disableFormat?: boolean
+  devTools?: {
+    enabled: boolean
+    completions?: boolean
+  }
+  safeList?: string
+  preflights?: boolean
+}
+```
+
+### Custom pre-processing information
+
+With v4 we introduced a new feature set of custom attributes for svelte style tags, to make integration regardless the setup easy and straight forward.
+Non scoped styles will be handled in svelte according to their docs with `:global()` for classes and `-global-` for keyframes.
+
+### Preflights
+
+Svelte nature is to scope CSS style and remove unused styles, this can lead to issues if you add preflights into the layout wrapper and want that styles to be available on all other `.svelte` files as well. On the other hand, if you compile to custom-elements you cannot use `:global()` styles.
+To allow the user to decide where to put the preflights as well deciding if they should be global or scoped, we have following syntax:
+
+```html
+<!-- Layout.svelte -->
+<script>
+</script>
+
+<slot />
+
+<!-- use this for scoped preflights -->
+<style windi:preflights>
+</style>
+
+<!-- use this for global preflights -->
+<style windi:preflights:global>
+</style>
+```
+
+### Safe list
+
+Sometimes you want to have dynamic classes based on some logic in script tags. Since [svelte-windicss-preprocess] runs before the svelte compile step, there is no way it could know this dynamic values. There are many approaches to this, either use windi at runtime or using a bundler setup instead this preprocessor one, or if you know all possible classes in the beginning add them to a safe list.
+
+Similar to preflights, this safe list need to be available anywhere you want it, and also scoped and global.
+
+```html
+<!-- Layout.svelte -->
+<script>
+  let shade = 100;
+</script>
+
+<div class="bg-red-{shade}">
+  I am dynamic!
+</div>
+
+<!-- use this for scoped safelist classes -->
+<style windi:safelist>
+</style>
+
+<!-- use this for global safelist classes -->
+<style windi:safelist:global>
+</style>
+```
+### Windi CSS classes
+
+By default, all inline used classes of Windi CSS will be scoped with native svelte logic. This has its advantages (you can find many discussions online).
+However, using a utility based CSS framework there is not much need to make sure classes do not override, since e.g. `bg-gray-600` will always have the same CSS code behind it, regardless which `.svelte` file it is used.
+You might want to safe more file size and using Windi CSS classes not scoped, but might want to choose this file by file.
+
+To make all Windi CSS classes in one `.svelte` global, with help of `:global()` you can modify / add the following style tag.
+
+```html
+<style windi:global>
+</style>
+```
+
+### Custom styles
+
+You may have the need in your project to define custom CSS classes, and want to decide separate to Windi CSS if they are scoped or global. You can with the following syntax:
+
+```html
+  <!-- all styles with :global() -->
+  <style global>
+    .btn {
+      background: green;
+    }
+  </style>
+
+  <!-- selective or all scoped -->
+  <style>
+    :global(.btn) {
+      background: green;
+    }
+    .btnTwo {
+      background: red;
+    }
+  </style>
+```
+
+You can combine any of this attributes, so full style tag can look like:
+```html
+  <style global windi:global windi:preflights:global windi:safelist:global>
+    .custom{
+      background: black;
+    }
+  </style>
+```
+
+### VS Code Extension
+Using special CSS tag syntax as well as the attributes above, will break the CSS diagnostics of VS Code. Please make sure to disable them.
+If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode), add this setting to your VS Code configuration file.
+
+```json
+{
+  "svelte.plugin.css.diagnostics.enable": false
+}
 ```
