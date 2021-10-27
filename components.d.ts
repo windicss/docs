@@ -75,7 +75,7 @@ declare module 'vue' {
     SidebarNav: typeof import('./.vitepress/theme/components/molecules/sidebar/SidebarNav.vue')['default']
     SingleColor: typeof import('./.vitepress/theme/components/molecules/SingleColor.vue')['default']
     Sponsors: typeof import('./.vitepress/theme/components/global/Sponsors.vue')['default']
-    TableOfContent: typeof import('./.vitepress/theme/components/molecules/TableOfContent.vue')['default']
+    TableOfContents: typeof import('./.vitepress/theme/components/molecules/TableOfContents.vue')['default']
     TheHeader: typeof import('./.vitepress/theme/components/templates/TheHeader.vue')['default']
     TheHome: typeof import('./.vitepress/theme/components/templates/TheHome.vue')['default']
     TheLayout: typeof import('./.vitepress/theme/components/templates/TheLayout.vue')['default']
