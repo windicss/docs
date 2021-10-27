@@ -12,7 +12,6 @@
   "eslint.packageManager": "pnpm",
   "prettier.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "volar.takeOverBuiltinTsExtension": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": false
   },

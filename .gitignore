@@ -49,3 +49,5 @@ wiki/
 
 # Algolia
 .algolia.env
+
+.netlify/functions-serve

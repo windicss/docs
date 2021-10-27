@@ -1,31 +1,26 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import sponsors from 'virtual:sponsor'
+import { ref, computed, onServerPrefetch, onMounted } from 'vue'
+import axios from 'axios'
 
-const cache: any = []
-const base = sponsors
-  .filter((i: any) => i.totalAmountDonated !== 0)
-  .filter((i: any) => {
-    if (cache.includes(i.profile)) {
-      return false
-    } else {
-      cache.push(i.profile)
-      return true
-    }
-  })
-  .sort((a: any, b: any) => (
-    b.totalAmountDonated - a.totalAmountDonated
-  ))
+const sponsors = ref([])
+
+const fetchSponsor = async() => {
+  const res = await axios.get('.netlify/functions/sponsor')
+  sponsors.value = res.data
+}
+
+onServerPrefetch(() => fetchSponsor())
+onMounted(() => fetchSponsor())
 
 const viewData = computed(() => {
   return [
     {
       title: 'Special Sponsor',
-      data: base.filter((i: any) => i.totalAmountDonated >= 1000),
+      data: sponsors.value.filter((i: any) => i.totalAmountDonated >= 1000),
     },
     {
       title: 'Sponsors',
-      data: base.filter((i: any) => i.totalAmountDonated < 1000),
+      data: sponsors.value.filter((i: any) => i.totalAmountDonated < 1000),
     },
   ]
 })
