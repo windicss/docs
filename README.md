@@ -10,5 +10,8 @@ https://windicss.org
 
 ```bash
 pnpm i
+// run only dev server
 pnpm dev
+// run dev server with functions
+pnpm functions
 ```

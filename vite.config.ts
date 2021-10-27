@@ -24,6 +24,13 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/.netlify': {
+        target: 'http://localhost:8888',
+      },
+    },
+  },
   plugins: [
     Components({
       dirs: [
@@ -56,4 +63,18 @@ export default defineConfig({
       },
     },
   ],
+  optimizeDeps: {
+    include: [
+      'axios',
+      '@vueuse/core',
+      'windicss/utils/style',
+      'windicss',
+      'json5',
+      'prismjs',
+      'prismjs/components/prism-css',
+      'codemirror',
+      'codemirror/mode/javascript/javascript',
+      'codemirror/mode/css/css',
+    ],
+  },
 })
