@@ -49,7 +49,7 @@ const hasHeaders = computed(() => headers.value && headers.value?.length > 0)
     <li>
       <SidebarLinkItem
         :item="{
-          text: 'Table of Content',
+          text: 'Table of Contents',
         }"
         class="px-2"
         :header="true"
