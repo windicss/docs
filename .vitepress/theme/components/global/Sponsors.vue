@@ -5,7 +5,7 @@ import axios from 'axios'
 const sponsors = ref([])
 
 const fetchSponsor = async() => {
-  const res = await axios.get('.netlify/functions/sponsor')
+  const res = await axios.get('https://windicss.org/.netlify/functions/sponsor')
   sponsors.value = res.data
 }
 
