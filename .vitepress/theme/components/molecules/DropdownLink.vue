@@ -36,6 +36,7 @@ function toggle() {
       v-if="open"
       class="
         absolute top-10 right-0 z-50
+        max-h-[60vh] overflow-y-auto
         p-2 min-w-40
         rounded-md border
         bg-$windi-bg
