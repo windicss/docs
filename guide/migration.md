@@ -3,9 +3,9 @@
 
 # Migrate from Tailwind CSS
 
-## Package 
+## Packages 
 
-Some of your dependencies are no longer required. You can remove them if they were needed only for Tailwind CSS.
+Some of your dependencies are no longer required. You can remove them from your `package.json` if they were only needed for Tailwind CSS.
 
 ```diff package.json
 - "tailwindcss": "*",
@@ -16,7 +16,7 @@ Some of your dependencies are no longer required. You can remove them if they we
 
 ## Base Styles
 
-You can now remove the Tailwind CSS imports from your css entry.
+You can now remove the Tailwind CSS imports from your CSS entry.
 
 ```diff
 - @import 'tailwindcss/base';
