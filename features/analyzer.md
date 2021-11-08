@@ -2,13 +2,13 @@
 
 <PackageInfo name="windicss-analysis" author="antfu" />
 
-An visual analyser tool for [Windi CSS](https://github.com/windicss/windicss). Browse your utilities usages, have an overview of your design system, identify "bad practices", and more!
+A visual analyser tool for [Windi CSS](https://github.com/windicss/windicss). Browse your utility usages, get an overview of your design system, identify "bad practices", and more!
 
 <img src="https://user-images.githubusercontent.com/11247099/113150805-0c43f880-9267-11eb-85a6-ec1a2f1eed37.png" />
 
 ## Get Started
 
-Run the following command under your project root
+Run the following command in your project root
 
 ```bash
 npx windicss-analysis
@@ -18,7 +18,7 @@ The analysis report will be available at http://localhost:8113/
 
 ### NPM
 
-Or you can install locally to reuse the same version of your local `windicss` module
+Or you can install it locally to use the same version as your local `windicss` module
 
 ```bash
 npm i -D windicss-analysis
@@ -43,11 +43,10 @@ From v0.8.0 of [Windi CSS Intellisense](https://github.com/windicss/windicss-int
 
 ### Online Preview
 
-You can have a preview the analysing report of the analyser itself
-
+You can preview the report of the analyser itself at 
 [analysis-demo.windicss.org](http://analysis-demo.windicss.org)
 
-You can genreate your own report and host it statically by running the following command
+You can generate your own report and host it statically by running the following command:
 
 ```bash
 npx windicss-analysis --html dist
@@ -57,7 +56,7 @@ npx windicss-analysis --html dist
 
 ### It does not detect my files
 
-You will need to configure the `extract.include` options in `windi.config.js` instead of your framework's configurations file so it can be understood by the analyzer so as other integrations support. For example:
+You will need to explicitly configure the `extract.include` option in `windi.config.js` instead of your framework's configuration file so it can be understood by the analyzer. For example:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -74,7 +73,7 @@ export default defineConfig({
 
 ### Can I use the report for other tools?
 
-Yes. You can get the raw json file via the CLI
+Yes. You can get the raw JSON file via the CLI
 
 ```bash
 npx windicss-analysis --json report.json
@@ -91,9 +90,9 @@ import type { AnalysisReport } from 'windicss-analysis'
 const report = rawReport as AnalysisReport
 ```
 
-### Programmatic Use?
+### Can I use Windi CSS programmatically?
 
-Yes. Just like a normal Node package:
+Yes, just like a normal Node package:
 
 ```ts
 import { startServer } from 'windicss-analysis'
@@ -101,4 +100,4 @@ import { startServer } from 'windicss-analysis'
 startServer({ /* ... */ })
 ```
 
-Check out the type decrations for more APIs avaliable.
+Check out the type declarations to see avaliable APIs.
