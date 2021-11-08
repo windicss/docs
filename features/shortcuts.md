@@ -1,8 +1,8 @@
 # Shortcuts
 
-It's quite common when you work on same set of utilities for multiple times. We provided this "shortcuts" feature allowing you to give the combinations of utilities names you can you use them everywhere inside your app without needing to duplicate yourself.
+It's quite common to get repetitive when you work on similar utility sets. We provide this "shortcuts" feature allowing you to give the combinations of utility names which you can reuse everywhere inside your app without needing to repeat yourself.
 
-By simply adding the `shortcuts` field to your configurations:
+Simply add the `shortcuts` field to your configuration:
 
 ```js windi.config.js
 export default {
@@ -29,7 +29,7 @@ export default {
   :enableConfig="true"
 />
 
-CSS-in-JS syntax is also supported for complex utility
+CSS-in-JS syntax is also supported for complex utilities:
 
 ```js windi.config.js
 export default {
@@ -71,4 +71,4 @@ export default {
 />
 
 
-The utility added by this configuration can also be directly wrapped with variant, such as sm:btn. The function of this feature is similar to the @apply directive, it will merge all utilities into one style.
+The utility added by this configuration can also be directly wrapped in variants, such as sm:btn. The purpose of this feature is similar to the `@apply` directive, it will merge all utilities into one style.
