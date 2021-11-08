@@ -1,6 +1,6 @@
 # Value Auto-infer
 
-Since Windi CSS will only generate the CSS utilities you use, it enables the possibility to use arbitrary value in your classes and generate coresponding styles based on the appropriate semantics.
+Since Windi CSS will only generate the CSS utilities you use, it enables you to use arbitrary values in your classes and generate corresponding styles based on the appropriate semantics.
 
 ```html
 <!-- sizes and positions -->
@@ -15,9 +15,9 @@ Since Windi CSS will only generate the CSS utilities you use, it enables the pos
 <div class="grid-cols-[auto,1fr,30px]"></div>
 ```
 
-This is useful when you want to opt-out your design system and have some fine-grain controls over some specific components. Both direct `p-5px` and explicitly escaping `p-[5px]` are supported.
+This is useful when you want to opt-out of your design system and have some fine-grain controls over some specific components. Both direct `p-5px` and explicitly escaping `p-[5px]` are supported.
 
-We also provided [an visual analyser](/features/analyzer) to give you an overview of all the utilities usages in your project and spot unwanted value escaping of your design system with ease. 
+We also provided [an visual analyser](/features/analyzer) to give you an overview of all the utility usages in your project and to spot unwanted value escaping of your design system with ease. 
 
 ## Numbers
 
@@ -40,7 +40,7 @@ p-{size} -> padding: {size};
 ## Fractions
 
 ```less
-w-{fraction} -> width: {fraction -> precent};
+w-{fraction} -> width: {fraction -> percent};
 ```
 
 <InlinePlayground :input="'w-9/12'" :showCSS="true" :showPreview="false"/>
@@ -63,7 +63,7 @@ border-hex-{hex} -> border-color: rgba(...);
 
 ## Variables
 
-You can even pass variable names, which is very useful in combination with css variables.
+You can even pass variable names, which is very useful in combination with CSS variables.
 
 ```css
 bg-${variableName}
