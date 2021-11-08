@@ -4,7 +4,7 @@
 
 # Features
 
-[Windi CSS] is fully compatible with [Tailwind CSS] v2. On top of that, we have many additional features that boost your workflow further and open up much more possibilities.
+[Windi CSS] is fully compatible with [Tailwind CSS] v2. On top of that, we have many additional features that boost your workflow further and open up many more possibilities.
 
 ## Value Auto-infer
 
@@ -26,7 +26,7 @@ Use arbitrary values in your classes and generate corresponding styles.
 
 ## Variant Groups
 
-Apply utilities for the same variant by grouping them with parenthesis.
+Apply utilities tp the same variant by grouping them with parentheses.
 
 ```html
 <div class="bg-white dark:hover:(bg-gray-800 font-medium text-white)"/>
@@ -40,7 +40,7 @@ Apply utilities for the same variant by grouping them with parenthesis.
 
 ## Responsive Design
 
-Extended responsive breakpoints control.
+Extended responsive breakpoint control.
 
 ```html
 <div class="p-1 md:p-2 <lg:p-3"></div>
@@ -50,7 +50,7 @@ Extended responsive breakpoints control.
 
 ## Important Prefix
 
-Prefix any utility classes with `!` to make them as `!important`.
+Prefix any utility classes with `!` to set them as `!important`.
 
 ```html
 <div class="text-red-400 !text-green-300">Green</div>
@@ -60,7 +60,7 @@ Prefix any utility classes with `!` to make them as `!important`.
 
 ## Shortcuts
 
-Create components and utilities quickly and reusable.
+Quickly combine utilities to create reusable components.
 
 ```js windi.config.js
 export default {
