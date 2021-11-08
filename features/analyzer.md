@@ -100,4 +100,4 @@ import { startServer } from 'windicss-analysis'
 startServer({ /* ... */ })
 ```
 
-Check out the type declarations to see avaliable APIs.
+Check out the type declarations to see available APIs.
