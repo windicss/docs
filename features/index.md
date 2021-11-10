@@ -26,7 +26,7 @@ Use arbitrary values in your classes and generate corresponding styles.
 
 ## Variant Groups
 
-Apply utilities tp the same variant by grouping them with parentheses.
+Apply utilities to the same variant by grouping them with parentheses.
 
 ```html
 <div class="bg-white dark:hover:(bg-gray-800 font-medium text-white)"/>
