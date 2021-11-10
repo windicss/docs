@@ -1,6 +1,6 @@
 # Responsive Design
 
-Doing [Responsive Design](https://en.wikipedia.org/wiki/Responsive_web_design) in Windi CSS is effortless. By simply adding variant prefixes like `md:` or `lg:` to the utility you want to use. The corresponding media query will be generated automatically. Try it yourself using the playground below:
+Doing [Responsive Design](https://en.wikipedia.org/wiki/Responsive_web_design) in Windi CSS is effortless. By simply adding variant prefixes like `md:` or `lg:` to the utility you want to use, the corresponding media query will be generated automatically. Try it yourself using the playground below:
 
 <InlinePlayground :input="'p-1 lg:p-2'" :showCSS="true" :showPreview="false"/>
 
@@ -10,11 +10,11 @@ When you want to apply a breakpoint variant to multiple utilities, in Windi CSS 
 
 ## Custom Range
 
-By default, Windi CSS's breakpoints is designed as Mobile First. 
+By default, Windi CSS's breakpoints are designed as Mobile First. 
 
 This means unprefixed utilities (like `p-1`) take effect on all screen sizes, while prefixed utilities (like `md:p-2`) only take effect at the **specified breakpoint and above**.
 
-We also provided the ability to have more controls over the query range by adding the `<` and `@` prefix:
+We also provided the ability to have more control over the query range by adding the `<` and `@` prefixes:
 
 ```bash
 lg  => greater or equal than this breakpoint

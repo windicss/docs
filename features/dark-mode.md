@@ -2,7 +2,7 @@
 
 Windi CSS has out-of-box Dark Mode support.
 
-By prefixing the `dark:` variant to the utilities, they will only apply when dark mode is enabled. With the following example, the `Preview` text will be red on the light mode, and green on the dark mode. Try play with it: 
+By prefixing the `dark:` variant to utilities, they will only apply when dark mode is enabled. With the following example, the `Preview` text will be red on the light mode, and green on the dark mode. Try to play with it: 
 
 <ToggleDark />
 
@@ -12,7 +12,7 @@ We have two modes for enabling dark mode, [class mode](#class-mode) and [media q
 
 ## Class mode
 
-Class mode gives you better controls over when should the dark mode enables.
+Class mode gives you better control over when dark mode should enable.
 
 ```js windi.config.js
 export default {
@@ -21,7 +21,7 @@ export default {
 }
 ```
 
-It detects parent element's `class="dark"`, and normally you can apply it on the `html` element to make it affects globally.
+It detects the parent element's `class="dark"`, and usually you can apply it on the `html` element to make it work globally.
 
 ```html
 <html>
@@ -37,7 +37,7 @@ It detects parent element's `class="dark"`, and normally you can apply it on the
 </html>
 ```
 
-You can use the following snippet to make the color scheme matches with users' system preference, or write your own logic to manage it.
+You can use the following snippet to make the color scheme match with the user's system preference, or write your own logic to manage it.
 
 ```js
 if (window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -59,7 +59,7 @@ else
 
 ## Media query mode 
 
-In media query mode, it uses the built-in `@media (prefers-color-scheme: dark)` query from the browser that always matches with the users' system preference. 
+In media query mode, it uses the built-in `@media (prefers-color-scheme: dark)` query from the browser that always matches with the user's system preference. 
 
 ```js windi.config.js
 export default {

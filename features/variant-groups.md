@@ -1,6 +1,6 @@
 # Variant Groups
 
-Apply utilities for the same variant by grouping them with parenthesis.
+Apply utilities for the same variant by grouping them with a parenthesis.
 
 ```html
 <div class="hover:(bg-gray-400 font-medium) bg-white font-light"/>

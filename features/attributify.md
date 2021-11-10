@@ -51,7 +51,7 @@ md-bg = "blue-300 dark:blue-400"
 
 ## Prefix
 
-If you are concerned about naming confliction, you can add custom prefix to attributify mode by:
+If you are concerned about naming conflicts, you can add a custom prefix to the `attributify` mode by:
 
 ```js windi.config.js
 export default {
@@ -95,7 +95,7 @@ You actually have two **programming paradigms** to choose from:
    dark=...
    ```
 
-> And of course, you can also **mix them**, but I personally **don't recommend**. Just choosing one and stick to it. You will find your code becomes clearer.
+> And of course, you can also **mix them**, but I personally **don't recommend**. Just choose one and stick to it. You will find your code becomes clearer.
 
 ## Utilities
 
