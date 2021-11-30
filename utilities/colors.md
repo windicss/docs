@@ -23,8 +23,10 @@ import colors from 'windicss/colors'
 
 export default {
   theme: {
-    colors: {
-      grey: colors.gray,
+    extend: {
+      colors: {
+        grey: colors.gray,
+      },
     },
   },
 }
