@@ -461,17 +461,24 @@ Utilities for controlling how an element can be resized.
   html='&lt;textarea class=&quot;{class} focus:outline-none border rounded-md m-0 w-30 h-30 bg-blue-300&quot;&gt;&lt;/textarea&gt;'
 />
 
-## User Select
+## Scroll Behavior
 
-Utilities for controlling whether the user can select text in an element.
+Utilities for controlling the scroll behavior of an element.
 
-<PlaygroundWithVariants
-  variant='none'
-  :variants="['none', 'text', 'all', 'auto']"
-  prefix='select'
-  fixed='p-2 dark:text-white opacity-85'
-  html="The quick brown fox jumps over the lazy dog"
-/>
+| Class         | Properties               |
+| :------------ | :----------------------- |
+| scroll-auto   | scroll-behavior: auto;   |
+| scroll-smooth | scroll-behavior: smooth; |
+
+### Usage
+
+Use the `scroll-smooth` utilities to enable smooth scrolling within an element.
+
+```html
+<html class="scroll-smooth">
+  <!-- ... -->
+</html>
+```
 
 ## Screen Readers Access
 
@@ -493,7 +500,8 @@ Use sr-only to hide an element visually without hiding it from screen readers:
 </a>
 ```
 
-Use not-sr-only to undo sr-only, making an element visible to sighted users as well as screen readers. This can be useful when you want to visually hide something on small screens but show it on larger screens for example:
+Use not-sr-only to undo sr-only, making an element visible to sighted users as well as screen readers. This can be 
+useful when you want to visually hide something on small screens but show it on larger screens for example:
 
 ```html
 <a href="#">
@@ -502,7 +510,8 @@ Use not-sr-only to undo sr-only, making an element visible to sighted users as w
 </a>
 ```
 
-By default, responsive and focus variants are generated for these utilities. You can use focus:not-sr-only to make an element visually hidden by default but visible when the user tabs to it — useful for "skip to content" links:
+By default, responsive and focus variants are generated for these utilities. You can use focus:not-sr-only to make an 
+element visually hidden by default but visible when the user tabs to it — useful for "skip to content" links:
 
 ```html
 <a href="#" class="sr-only focus:not-sr-only">
@@ -510,3 +519,62 @@ By default, responsive and focus variants are generated for these utilities. You
 </a>
 ```
 
+## Touch Action
+
+Utilities for controlling how an element can be scrolled and zoomed on touchscreens.
+
+| Class             | Properties                  |
+| :---------------- | :-------------------------- |
+| touch-auto        | touch-action: auto;         |
+| touch-none        | touch-action: none;         |
+| touch-pan-x       | touch-action: pan-x;        |
+| touch-pan-left    | touch-action: pan-left;     |
+| touch-pan-right   | touch-action: pan-right;    |
+| touch-pan-y       | touch-action: pan-y;        |
+| touch-pan-up      | touch-action: pan-up;       |
+| touch-pan-down    | touch-action: pan-down;     |
+| touch-pinch-zoom  | touch-action: pinch-zoom;   |
+| touch-manipulation| touch-action: manipulation; |
+
+### Usage
+
+Use the `touch-{action}` utilities to control how an element can be scrolled (panned) and zoomed (pinched) on `
+touchscreens.
+
+```html
+<div class="w-full h-48 overflow-auto touch-auto ...">
+  <!-- ... -->
+</div>
+<div class="w-full h-48 overflow-auto touch-none ...">
+  <!-- ... -->
+</div>
+<div class="w-full h-48 overflow-auto touch-pan-x ...">
+  <!-- ... -->
+</div>
+<div class="w-full h-48 overflow-auto touch-pan-y ...">
+  <!-- ... -->
+</div>
+```
+
+## User Select
+
+Utilities for controlling whether the user can select text in an element.
+
+<PlaygroundWithVariants
+  variant='none'
+  :variants="['none', 'text', 'all', 'auto']"
+  prefix='select'
+  fixed='p-2 dark:text-white opacity-85'
+  html="The quick brown fox jumps over the lazy dog"
+/>
+
+## Will Change
+
+Utilities for optimizing upcoming animations of elements that are expected to change.
+
+| Class                 | Properties                    |
+| :-------------------- | :---------------------------- |
+| will-change-auto      | will-change: auto;            |
+| will-change-scroll    | will-change: scroll-position; |
+| will-change-contents  | will-change: contents;        |
+| will-change-transform | will-change: transform;       |
