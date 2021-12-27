@@ -28,6 +28,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'separator', link: 'separator' },
 
       { text: 'Container', link: '/utilities/container' },
+      { text: 'Columns', link: '/utilities/columns' },
       { text: 'Spacing', link: '/utilities/spacing' },
       { text: 'Sizing', link: '/utilities/sizing' },
       { text: 'Display', link: '/utilities/display' },
