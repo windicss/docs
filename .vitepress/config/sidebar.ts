@@ -23,6 +23,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'Layout',
       children: [
         { text: 'Container', link: '/utilities/container' },
+        { text: 'Columns', link: '/utilities/columns' },
         { text: 'Spacing', link: '/utilities/spacing' },
         { text: 'Sizing', link: '/utilities/sizing' },
         { text: 'Display', link: '/utilities/display' },

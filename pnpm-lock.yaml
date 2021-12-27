@@ -42,14 +42,14 @@ specifiers:
   vitepress: ^0.19.1
   vue: ^3.2.19
   vue-tsc: ^0.3.0
-  windicss: ^3.1.7
+  windicss: ^3.4.0
   windicss-analysis: ^0.3.4
 
 dependencies:
   '@docsearch/css': 1.0.0-alpha.28
   '@docsearch/js': 1.0.0-alpha.28
   '@vueuse/core': 6.5.3_vue@3.2.19
-  '@windicss/shared-components': 0.1.5_vue@3.2.19+windicss@3.1.7
+  '@windicss/shared-components': 0.1.5_vue@3.2.19+windicss@3.4.0
   codemirror: 5.63.0
   codemirror-theme-vars: 0.1.1
   json5: 2.2.0
@@ -59,7 +59,7 @@ dependencies:
   prismjs: 1.25.0
   splitpanes: 3.0.6
   vue: 3.2.19
-  windicss: 3.1.7
+  windicss: 3.4.0
 
 devDependencies:
   '@antfu/utils': 0.3.0
@@ -285,7 +285,7 @@ packages:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/compat-data': 7.15.0
-      '@babel/core': 7.15.5
+      '@babel/core': 7.15.5_supports-color@8.1.1
       '@babel/helper-validator-option': 7.14.5
       browserslist: 4.17.1
       semver: 6.3.0
@@ -3452,7 +3452,7 @@ packages:
       debug: 4.3.2
       jiti: 1.12.3
       tsup: 5.2.0_typescript@4.4.3
-      windicss: 3.1.7
+      windicss: 3.4.0
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -3468,14 +3468,14 @@ packages:
       fast-glob: 3.2.7
       magic-string: 0.25.7
       micromatch: 4.0.4
-      windicss: 3.1.7
+      windicss: 3.4.0
     transitivePeerDependencies:
       - supports-color
       - ts-node
       - typescript
     dev: true
 
-  /@windicss/shared-components/0.1.5_vue@3.2.19+windicss@3.1.7:
+  /@windicss/shared-components/0.1.5_vue@3.2.19+windicss@3.4.0:
     resolution: {integrity: sha512-kGssHnd7r51IJpTXb+4PWE3YPfchVx6VBzULovgITh0CHRxogJr8xXF0yvEMzOfmeWtb6V21utfygkUZGZ2mDA==}
     peerDependencies:
       vue: '>=3'
@@ -3483,7 +3483,7 @@ packages:
     dependencies:
       prismjs: 1.25.0
       vue: 3.2.19
-      windicss: 3.1.7
+      windicss: 3.4.0
     dev: false
 
   /abbrev/1.1.1:
@@ -3911,7 +3911,7 @@ packages:
   /axios/0.21.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.14.4
+      follow-redirects: 1.14.4_debug@4.3.2
     transitivePeerDependencies:
       - debug
     dev: true
@@ -6386,7 +6386,7 @@ packages:
       from2: 2.3.0
     dev: true
 
-  /follow-redirects/1.14.4:
+  /follow-redirects/1.14.4_debug@4.3.2:
     resolution: {integrity: sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==}
     engines: {node: '>=4.0'}
     peerDependencies:
@@ -6394,6 +6394,8 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+    dependencies:
+      debug: 4.3.2
     dev: true
 
   /for-in/1.0.2:
@@ -7040,7 +7042,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.14.4
+      follow-redirects: 1.14.4_debug@4.3.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -11583,7 +11585,7 @@ packages:
       chalk: 4.1.2
       debug: 4.3.2
       vite: 2.5.10
-      windicss: 3.1.7
+      windicss: 3.4.0
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -11890,8 +11892,8 @@ packages:
       - typescript
     dev: true
 
-  /windicss/3.1.7:
-    resolution: {integrity: sha512-Q/HQ9j+r2R0fdt85zAjccdo11kHWzQmpkuwIUQIO6PSypyDmBTfN14aAy4szLrpgo2woyuHM7Y+kir4IG4qnKQ==}
+  /windicss/3.4.0:
+    resolution: {integrity: sha512-X+9Y1/FPxX253Xo4Hk/qfVuvoAxgKx686Z6yHxmBFMH7wRCPdRO42na9k/yEnrW6EqCFJP/GcMIHn3QENaE42g==}
     engines: {node: '>= 12'}
     hasBin: true
 

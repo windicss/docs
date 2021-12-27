@@ -354,20 +354,8 @@ Utilities for controlling the type of text decoration.
 
 <PlaygroundWithVariants
   variant='underline'
-  :variants="['underline', 'line-through', 'no-underline']"
+  :variants="['underline', 'overline', 'line-through', 'no-underline']"
   fixed='p-2 dark:text-white opacity-85'
-  html="The quick brown fox jumps over the lazy dog"
-/>
-
-### Text Decoration Style
-
-Utilities for controlling the style of text decoration.
-
-<PlaygroundWithVariants
-  variant='solid'
-  prefix='underline'
-  :variants="['solid', 'double', 'dotted', 'dashed']"
-  fixed='p-2 dark:text-white opacity-85 underline'
   html="The quick brown fox jumps over the lazy dog"
 />
 
@@ -378,8 +366,8 @@ Utilities for controlling the color of text decoration.
 <PlaygroundWithVariants
   variant='green-500'
   type='color'
-  prefix='underline'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden underline underline-2'
+  prefix='decoration'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden underline decoration-2'
   html="The quick brown fox jumps over the lazy dog"
 />
 
@@ -399,50 +387,30 @@ export default {
 
 </Customizing>
 
-### Text Decoration Opacity
+### Text Decoration Style
 
-Utilities for controlling the opacity of an element's decoration color.
+Utilities for controlling the style of text decoration.
 
 <PlaygroundWithVariants
-  variant='50'
-  type='opacity'
-  prefix='underline-opacity'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='underline underline-teal-600 underline-2'
-  nested=true
-  html="&lt;p class='text-black underline underline-2 underline-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+  variant='solid'
+  prefix='decoration'
+  :variants="['solid', 'double', 'dotted', 'dashed', 'wavy']"
+  fixed='p-2 dark:text-white opacity-85 underline'
+  html="The quick brown fox jumps over the lazy dog"
 />
 
-<Customizing>
+### Text Decoration Thickness
 
-```js windi.config.js
-export default {
-  theme: {
-    extend: {
-      textDecorationOpacity: {
-        10: '0.1',
-        20: '0.2',
-        95: '0.95',
-      },
-    },
-  },
-}
-```
-
-</Customizing>
-
-### Text Decoration Length
-
-Utilities for controlling the length of text decoration.
+Utilities for controlling the thickness of text decorations.
 
 <PlaygroundWithVariants
   variant='auto'
-  :variants="['auto', '0', '1', '2', '3', '4', '5', '6', '7', '8', '0.1rem', '3px', '0.3em']"
-  prefix='underline'
+  :variants="['auto', 'from-font', '0', '1', '2', '3', '4', '5', '6', '7', '8', '0.1rem', '3px', '0.3em']"
+  prefix='decoration'
   fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  appended='underline underline-teal-600'
+  appended='underline decoration-teal-600'
   nested=true
-  html="&lt;p class='text-black underline underline-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+  html="&lt;p class='text-black underline decoration-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
 />
 
 <Customizing>
@@ -484,6 +452,39 @@ export default {
       sm: '1px',
       md: '2px',
       lg: '4px',
+    },
+  },
+}
+```
+
+</Customizing>
+
+### Text Decoration Opacity
+
+Utilities for controlling the opacity of an element's decoration color. This is a fallback of 
+[Text Decoration Color](#text-decoration-color) beginning with WindiCSS v3.4.0. 
+
+<PlaygroundWithVariants
+  variant='50'
+  type='opacity'
+  prefix='underline-opacity'
+  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
+  appended='underline underline-teal-600 underline-2'
+  nested=true
+  html="&lt;p class='text-black underline underline-2 underline-teal-600 {class}'&gt;The quick brown fox jumps over the lazy dog&lt;/&gt;"
+/>
+
+<Customizing>
+
+```js windi.config.js
+export default {
+  theme: {
+    extend: {
+      textDecorationOpacity: {
+        10: '0.1',
+        20: '0.2',
+        95: '0.95',
+      },
     },
   },
 }

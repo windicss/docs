@@ -17,6 +17,29 @@ Use `flex` to create a block-level flex container.
 &lt;/div&gt;'
 />
 
+## Flex Basis
+
+Utilities for controlling the initial size of flex items.
+
+<PlaygroundWithVariants
+  variant='8'
+  :variants="[
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '14', '16', '20', '24', '28', '32', '36', '40',
+    '44', '48', '52', '56', '60', '64', '72', '80', '96', 'auto', 'px', '0.5', '1.5', '2.5', '3.5', '1/2', '1/3', '2/3',
+    '1/4', '2/4', '3/4', '1/5', '2/5', '3/5', '4/5', '1/6', '2/6', '3/6', '4/6', '5/6', '1/12', '2/12', '3/12', '4/12',
+    '5/12', '6/12', '7/12', '8/12', '9/12', '10/12', '11/12', 'full'
+  ]"
+  prefix="basis"
+  nested=true
+  fixed='pt-20'
+  appended='rounded-md bg-teal-500 bg-teal-100 p-2 flex flex-row space-x-2 w-6 h-6'
+  html='&lt;div class="bg-teal-100 rounded-md p-2 flex flex-row space-x-2"&gt;
+&lt;div class="{class} rounded-md bg-teal-500 w-6 h-6"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-teal-500 w-6 h-6"&gt;&lt;/div&gt;
+&lt;div class="{class} rounded-md bg-teal-500 w-6 h-6"&gt;&lt;/div&gt;
+&lt;/div&gt;'
+/>
+
 ## Inline Flex
 
 Use `inline-flex` to create an inline flex container.
