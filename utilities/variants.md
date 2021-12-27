@@ -183,3 +183,10 @@ For example, you could then use `print:hidden` to hide elements when styling for
 | :------ | :--- | :---------- |
 | .dark | `.dark .{utility} { ... }` | Enable utility base on application dark mode |
 | .light | `.light .{utility} { ... }` | Enable utility base on application light mode |
+
+## Orientation Variants
+
+| Variant   | Rule                                      | Description                                                |
+| :-------- | :---------------------------------------- | :--------------------------------------------------------- |
+| portrait  | `@media (orientation: portrait) { ... }`  | Enable utility when the device is in portrait orientation  |
+| landscape | `@media (orientation: landscape) { ... }` | Enable utility when the device is in landscape orientation |
