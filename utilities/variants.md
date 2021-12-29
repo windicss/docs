@@ -125,13 +125,15 @@ For example, you could then use `print:hidden` to hide elements when styling for
 
 ### Pseudo Elements
 
-| Variant | Rule | Description |
-| :------ | :--- | :---------- |
-| before | `.{utility}::before { ... }` | Targets the before pseudo-element. |
-| after | `.{utility}::after { ... }` | Targets the after pseudo-element. |
-| first-letter | `.{utility}::first-letter { ... }` | Targets the first-letter pseudo-element. |
-| first-line | `.{utility}::first-line { ... }` | Targets the first-line pseudo-element. |
-| selection | `.{utility}::selection { ... }` | Targets the selection pseudo-element. |
+| Variant                     | Rule                                      | Description                                                 |
+| :-------------------------- | :---------------------------------------- | :---------------------------------------------------------- |
+| before                      | `.{utility}::before { ... }`              | Targets the before pseudo-element.                          |
+| after                       | `.{utility}::after { ... }`               | Targets the after pseudo-element.                           |
+| file / file-selector-button | `.{utility}::file-selector-button`        | Targets the file-selector-button pseudo-element.            |
+| first-letter                | `.{utility}::first-letter { ... }`        | Targets the first-letter pseudo-element.                    |
+| first-line                  | `.{utility}::first-line { ... }`          | Targets the first-line pseudo-element.                      |
+| marker                      | `.{utility} *::marker, {utility}::marker` | Targets the marker pseudo-element. Can be used inheritable. |
+| selection                   | `.{utility}::selection { ... }`           | Targets the selection pseudo-element.                       |
 
 ### Parent Selectors
 

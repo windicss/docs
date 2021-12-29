@@ -34,6 +34,22 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
     {
+      text: 'Interactivity',
+      children: [
+        { text: 'Accent Color', link: '/utilities/interactivity/accent-color' },
+        { text: 'Appearance', link: '/utilities/interactivity/appearence' },
+        { text: 'Cursor', link: '/utilities/interactivity/cursor' },
+        { text: 'Caret', link: '/utilities/interactivity/caret' },
+        { text: 'Pointer Events', link: '/utilities/interactivity/pointer-events' },
+        { text: 'Resize', link: '/utilities/interactivity/resize' },
+        { text: 'Scroll Behavior', link: '/utilities/interactivity/scroll-behavior' },
+        // { text: 'Scroll Snap', link: '/utilities/interactivity/scroll-snap' },
+        { text: 'Touch Action', link: '/utilities/interactivity/touch-action' },
+        { text: 'User Select', link: '/utilities/interactivity/user-select' },
+        { text: 'Will Change', link: '/utilities/interactivity/will-change' },
+      ],
+    },
+    {
       text: 'Enhancement',
       children: [
         { text: 'Filters', link: '/utilities/filters' },
