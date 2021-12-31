@@ -1,5 +1,10 @@
 {
   "extends": ["@hannoeru", "plugin:markdown/recommended"],
+  "settings": {
+    "import/ignore": [
+      "windicss"
+    ]
+  },
   "overrides": [
     {
       "files": ["**/*.md/**"],
