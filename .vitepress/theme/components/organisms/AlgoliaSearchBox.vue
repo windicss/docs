@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { DefaultTheme } from '@/config'
 import { useSearchBox } from '@/logics/search'
+import type { DefaultTheme } from '@/config'
 
 import '@docsearch/css/dist/style.css'
 

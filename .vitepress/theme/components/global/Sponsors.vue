@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onServerPrefetch, onMounted } from 'vue'
+import { computed, onMounted, onServerPrefetch, ref } from 'vue'
 import axios from 'axios'
 
 const sponsors = ref([])

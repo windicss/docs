@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute, useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 
-import { joinUrl, isActive } from '@/utils'
+import { isActive, joinUrl } from '@/utils'
 
 import type { DefaultTheme } from '@/config'
 import type { PropType } from 'vue'

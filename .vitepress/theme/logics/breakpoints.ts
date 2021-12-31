@@ -1,3 +1,3 @@
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 
 export const bps = useBreakpoints(breakpointsTailwind)

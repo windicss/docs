@@ -1,4 +1,4 @@
-import MarkdownIt from 'markdown-it'
+import type MarkdownIt from 'markdown-it'
 
 export const mdRenderFilename = (md: MarkdownIt) => {
   const fence = md.renderer.rules.fence!

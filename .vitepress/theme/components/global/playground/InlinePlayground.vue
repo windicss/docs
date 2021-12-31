@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shallowRef, ref, watchEffect, onMounted, computed, toRef, reactive } from 'vue'
+import { computed, onMounted, reactive, ref, shallowRef, toRef, watchEffect } from 'vue'
 import { syncRef } from '@vueuse/core'
 import { StyleSheet } from 'windicss/utils/style'
 import Windi from 'windicss'

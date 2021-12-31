@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { IframePreview } from '@windicss/shared-components'
-import { Splitpanes, Pane } from 'splitpanes'
+import { Pane, Splitpanes } from 'splitpanes'
 import { useWindiCSS } from '@/logics/useWindiCSS'
 import { getSharedCode, useEmitShare } from '@/logics/useShare'
 import { layout } from '@/logics/playgroundLayout'
 import { isDark } from '@/logics/dark'
 import { bps } from '@/logics/breakpoints'
-import { html, css } from '@/data/playground'
+import { css, html } from '@/data/playground'
 
 import type { Config } from 'windicss/types/interfaces'
 

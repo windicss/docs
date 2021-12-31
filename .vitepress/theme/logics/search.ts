@@ -1,5 +1,5 @@
 import docsearch from '@docsearch/js'
-import { useRoute, useRouter, useData } from 'vitepress'
+import { useData, useRoute, useRouter } from 'vitepress'
 import { getCurrentInstance, onMounted, watch } from 'vue'
 
 import type { DefaultTheme } from '@/config'

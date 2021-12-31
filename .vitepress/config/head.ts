@@ -1,5 +1,5 @@
-import { HeadConfig } from 'vitepress'
 import { metaData } from './constants'
+import type { HeadConfig } from 'vitepress'
 
 const head: HeadConfig[] = [
   ['meta', { name: 'author', content: 'Windi CSS Team' }],

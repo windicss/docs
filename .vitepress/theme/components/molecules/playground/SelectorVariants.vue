@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, toRef } from 'vue'
+import { ref, toRef, watch } from 'vue'
 
 const props = withDefaults(defineProps<{
   modelValue: string
