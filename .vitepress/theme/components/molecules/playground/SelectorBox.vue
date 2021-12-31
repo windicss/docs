@@ -185,9 +185,9 @@ function toggleAll() {
   ;
 }
 .item.active {
-  @apply border-light-blue-500 border-opacity-100;
+  @apply border-sky-500 border-opacity-100;
 }
 .item.has:not(.active) {
-  @apply border-light-blue-400 border-opacity-70;
+  @apply border-sky-400 border-opacity-70;
 }
 </style>

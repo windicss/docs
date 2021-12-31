@@ -12,7 +12,7 @@ const colors = [
   'emerald',
   'teal',
   'cyan',
-  'light-blue',
+  'sky',
   'blue',
   'indigo',
   'purple',
