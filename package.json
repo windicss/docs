@@ -7,8 +7,8 @@
     "build": "vue-tsc --noEmit && vitepress build",
     "serve": "vitepress serve",
     "crawl": "docker run --rm -it --env-file=.algolia/.env -e \"CONFIG=$(cat .algolia/config.json | jq -r tostring)\" algolia/docsearch-scraper",
-    "lint": "eslint --ext .js,.ts,.md,.vue ./",
-    "lint:fix": "eslint --fix --ext .js,.ts,.md,.vue ./",
+    "lint": "eslint . --ext .js,.ts,.md,.vue,.json",
+    "lint:fix": "pnpm lint --fix",
     "analysis": "windicss-analysis"
   },
   "dependencies": {
