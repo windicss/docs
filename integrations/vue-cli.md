@@ -1,3 +1,6 @@
+[CSS directives]: /features/directives
+[classes utilities]: /utilities/
+
 <Logo name="vue" class="logo-float-xl"/>
 
 # Integration for [Vue CLI](https://cli.vuejs.org)
@@ -12,19 +15,17 @@
 - 📄 CSS `@apply` / `@screen` directives transforms
 - 🎳 Support Utility Groups - e.g. `bg-gray-200 hover:(bg-gray-100 text-red-300)`
 
-## Setup
+## Install
 
 Install using Vue CLI. (Vue CLI 4+ is recommended)
 
-```bash
+```
 vue add windicss
 ```
 
 :warning: This module is a pre-release, please report any [issues](https://github.com/windicss/vue-cli-plugin-windicss/issues) you find.
 
-## Configuration
-
-You can change the behavior of the plugin by modifying the options in `./vue.config.js`.
+Then, add the configuartion
 
 ```js vue.config.js
 module.exports = {
@@ -36,10 +37,13 @@ module.exports = {
 }
 ```
 
-If you have a `tailwind.config.js`, please rename it to `windi.config.js` or `windi.config.ts`.
+And finally, import `windi.css` in your entry
 
-See [here](https://windicss.netlify.app/guide/configuration.html) for configuration details.
+```js main.js
+import 'windi.css'
+```
 
+That's it! Starting using [classes utilities] or [CSS directives] in your app, and enjoy the speed! ⚡️
 
 ## Migrating
 
