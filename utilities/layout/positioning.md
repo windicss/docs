@@ -389,7 +389,7 @@ As much mud in the streets as if the waters had but newly retired from the face 
 
 ## Isolation
 
-Utilities for controlling whether an element should explicitly create a new stacking context. These utilities are especially helpful when used in conjunction with [mix-blend-mode](/utilities/effects#mix-blend-mode) and [z-index](#z-index).
+Utilities for controlling whether an element should explicitly create a new stacking context. These utilities are especially helpful when used in conjunction with [mix-blend-mode](/utilities/effects/mix-blend-mode) and [z-index](#z-index).
 
 <PlaygroundWithVariants
   variant='isolate'

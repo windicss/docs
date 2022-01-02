@@ -1,7 +1,5 @@
 # Scroll Snap
 
-inspired by [tailwindcss-scroll-snap](https://github.com/innocenzi/tailwindcss-scroll-snap)
-
 ## Scroll Snap Align
 
 | Class                         | Properties                                                                                         | Description                                                                  |
@@ -38,33 +36,8 @@ inspired by [tailwindcss-scroll-snap](https://github.com/innocenzi/tailwindcss-s
 | Class                         | Properties                                                                                         | Description                                                                  |
 | :---------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
 | __Margin__                    |                                                                                                    |                                                                              |
-| `snap-m${direction}-${value}` | scroll-snap-margin`${direction}`: `${value}`                                                       | same [Margin Utilities](/utilities/layout/spacing.html#margin)                      |
+| `snap-m${direction}-${value}` | scroll-snap-margin`${direction}`: `${value}`                                                       | same [Margin Utilities](/utilities/layout/spacing#margin)                      |
 | __Padding__                   |                                                                                                    |                                                                              |
-| `snap-p${direction}-${value}` | scroll-snap-padding`${direction}`: `${value}`                                                      | same [Padding Utilities](/utilities/layout/spacing.html#padding)                    |
+| `snap-p${direction}-${value}` | scroll-snap-padding`${direction}`: `${value}`                                                      | same [Padding Utilities](/utilities/layout/spacing#padding)                    |
 | __Other__                     |                                                                                                    |                                                                              |
 | `scrollbar-hide`              | scrollbar-width: none<br>::-webkit-scrollbar: {<br>&nbsp;&nbsp;display: none<br>}                  | visual hide scrollbar                                                        |
-
-
-## Usage
-
-```js windi.config.js
-export default {
-  plugins: [
-    require('windicss/plugin/scroll-snap'),
-    // ...
-  ],
-}
-```
-
-with TypeScript:
-
-```ts windi.config.ts
-import scrollSnapPlugin from 'windicss/plugin/scroll-snap'
-
-export default defineConfig({
-  plugins: [
-    scrollSnapPlugin,
-    // ...
-  ],
-})
-```

@@ -1,4 +1,4 @@
-# Transitions and Animations
+# Transitions
 
 ## Transition Property
 

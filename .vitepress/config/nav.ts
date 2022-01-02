@@ -14,36 +14,91 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: 'Utilities',
     items: [
-      { text: 'Colors', link: '/utilities/colors' },
-      { text: 'Variants', link: '/utilities/variants' },
+      // General
+      { text: 'Colors', link: '/utilities/general/colors' },
+      { text: 'Typography', link: '/utilities/general/typography' },
+      { text: 'SVG', link: '/utilities/general/svg' },
+      { text: 'Variants', link: '/utilities/general/variants' },
       // { text: 'Variables', link: '/utilities/variables' },
 
-      { text: 'separator', link: 'separator' },
+      { text: 'Accessibility', link: 'separator' },
 
-      { text: 'Typography', link: '/utilities/typography' },
-      { text: 'Backgrounds', link: '/utilities/backgrounds' },
-      { text: 'Borders', link: '/utilities/borders' },
-      { text: 'SVG', link: '/utilities/svg' },
+      // Accessibility
+      { text: 'Screen Readers', link: '/utilities/accessibility/screen-readers' },
 
-      { text: 'separator', link: 'separator' },
+      { text: 'Animations', link: 'separator' },
 
-      { text: 'Container', link: '/utilities/container' },
-      { text: 'Columns', link: '/utilities/columns' },
-      { text: 'Spacing', link: '/utilities/spacing' },
-      { text: 'Sizing', link: '/utilities/sizing' },
-      { text: 'Display', link: '/utilities/display' },
-      { text: 'Flexbox', link: '/utilities/flexbox' },
-      { text: 'Grid', link: '/utilities/grid' },
-      { text: 'Tables', link: '/utilities/tables' },
-      { text: 'Positioning', link: '/utilities/positioning' },
+      // Animations
+      { text: 'Animation', link: '/utilities/animations/animation' },
+      { text: 'Transforms', link: '/utilities/animations/transforms' },
+      { text: 'Transitions', link: '/utilities/animations/transitions' },
 
-      { text: 'separator', link: 'separator' },
+      { text: 'Backgrounds', link: 'separator' },
 
-      { text: 'Filters', link: '/utilities/filters' },
-      { text: 'Effects', link: '/utilities/effects' },
-      { text: 'Behaviors', link: '/utilities/behaviors' },
-      { text: 'Transitions', link: '/utilities/transitions' },
-      { text: 'Transforms', link: '/utilities/transforms' },
+      // Backrounds
+      { text: 'Background', link: '/utilities/backgrounds/background' },
+      { text: 'Gradients', link: '/utilities/backgrounds/gradients' },
+      { text: 'Background Blend Mode', link: '/utilities/backgrounds/background-blend-mode' },
+
+      { text: 'Behaviors', link: 'separator' },
+
+      // Behaviors
+      { text: 'Box Decoration Break', link: '/utilities/behaviors/box-decoration-break' },
+      { text: 'Image Rendering', link: '/utilities/behaviors/image-rendering' },
+      { text: 'Listings', link: '/utilities/behaviors/listings' },
+      { text: 'Overflow', link: '/utilities/behaviors/overflow' },
+      { text: 'Overscroll Behavior', link: '/utilities/behaviors/overscroll-behavior' },
+      { text: 'Placeholder', link: '/utilities/behaviors/placeholder' },
+
+      { text: 'Borders', link: 'separator' },
+
+      // Borders
+      { text: 'Border', link: '/utilities/borders/border' },
+      { text: 'Divider', link: '/utilities/borders/divider' },
+      { text: 'Outline', link: '/utilities/borders/outline' },
+      { text: 'Ring', link: '/utilities/borders/ring' },
+
+      { text: 'Effects', link: 'separator' },
+
+      // Effects
+      { text: 'Box Shadow', link: '/utilities/effects/box-shadow' },
+      { text: 'Opacity', link: '/utilities/effects/opacity' },
+      { text: 'Mix Blend Mode', link: '/utilities/effects/mix-blend-mode' },
+
+      { text: 'Filters', link: 'separator' },
+
+      // Filters
+      { text: 'Filter', link: '/utilities/filters/filter' },
+      { text: 'Backdrop Filter', link: '/utilities/filters/backdrop-filter' },
+
+      { text: 'Interactivity', link: 'separator' },
+
+      // Interactivity
+      { text: 'Accent Color', link: '/utilities/interactivity/accent-color' },
+      { text: 'Appearance', link: '/utilities/interactivity/appearence' },
+      { text: 'Cursor', link: '/utilities/interactivity/cursor' },
+      { text: 'Caret', link: '/utilities/interactivity/caret' },
+      { text: 'Pointer Events', link: '/utilities/interactivity/pointer-events' },
+      { text: 'Resize', link: '/utilities/interactivity/resize' },
+      { text: 'Scroll Behavior', link: '/utilities/interactivity/scroll-behavior' },
+      // { text: 'Scroll Snap', link: '/utilities/interactivity/scroll-snap' },
+      { text: 'Touch Action', link: '/utilities/interactivity/touch-action' },
+      { text: 'User Select', link: '/utilities/interactivity/user-select' },
+      { text: 'Will Change', link: '/utilities/interactivity/will-change' },
+
+      { text: 'Layout', link: 'separator' },
+
+      // Layout
+      // { text: 'Aspect Ratio', link: '/utilities/layout/aspect-ratio' },
+      { text: 'Columns', link: '/utilities/layout/columns' },
+      { text: 'Container', link: '/utilities/layout/container' },
+      { text: 'Display', link: '/utilities/layout/display' },
+      { text: 'Flexbox', link: '/utilities/layout/flexbox' },
+      { text: 'Grid', link: '/utilities/layout/grid' },
+      { text: 'Positioning', link: '/utilities/layout/positioning' },
+      { text: 'Sizing', link: '/utilities/layout/sizing' },
+      { text: 'Spacing', link: '/utilities/layout/spacing' },
+      { text: 'Tables', link: '/utilities/layout/tables' },
     ],
   },
   {
@@ -52,7 +107,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Plugin Interfaces', link: '/plugins/interfaces' },
       { text: 'Transform API', link: '/plugins/transform' },
 
-      { text: 'separator', link: 'separator' },
+      { text: 'Official', link: 'separator' },
 
       { text: 'Aspect Ratio', link: '/plugins/official/aspect-ratio' },
       { text: 'Forms', link: '/plugins/official/forms' },
@@ -61,7 +116,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Scroll Snap', link: '/plugins/official/scroll-snap' },
       { text: 'Typography', link: '/plugins/official/typography' },
 
-      { text: 'separator', link: 'separator' },
+      { text: 'Community', link: 'separator' },
 
       { text: 'Animations', link: '/plugins/community/animations' },
       { text: 'Scrollbar', link: '/plugins/community/scrollbar' },
