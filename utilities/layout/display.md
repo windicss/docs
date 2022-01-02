@@ -159,7 +159,7 @@ The `backface` utility sets whether the back face of an element is visible when 
 ## List Item
 
 The `list-item` utility generates a `::marker` pseudo-element with the content specified by its
-[list-style](/utilities/typography.html#list-style-type) properties (for example a bullet point) together with a
+[list-style](/utilities/general/typography#list-style-type) properties (for example a bullet point) together with a
 principal box of the specified type for its own contents.
 
 <PlaygroundWithVariants

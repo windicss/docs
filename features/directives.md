@@ -30,7 +30,7 @@ If you'd like to `@apply` an existing class and make it `!important`, simply add
 
 ## @variants
 
-You can generate [screen variants, state variants, theme variants](/utilities/variants) of your own utilities by wrapping their definitions in the `@variants` directive.
+You can generate [screen variants, state variants, theme variants](/utilities/general/variants) of your own utilities by wrapping their definitions in the `@variants` directive.
 
 <DirectivesPlayground 
 :input='`

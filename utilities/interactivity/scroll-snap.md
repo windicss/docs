@@ -36,8 +36,8 @@
 | Class                         | Properties                                                                                         | Description                                                                  |
 | :---------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
 | __Margin__                    |                                                                                                    |                                                                              |
-| `snap-m${direction}-${value}` | scroll-snap-margin`${direction}`: `${value}`                                                       | same [Margin Utilities](/utilities/spacing.html#margin)                      |
+| `snap-m${direction}-${value}` | scroll-snap-margin`${direction}`: `${value}`                                                       | same [Margin Utilities](/utilities/layout/spacing#margin)                      |
 | __Padding__                   |                                                                                                    |                                                                              |
-| `snap-p${direction}-${value}` | scroll-snap-padding`${direction}`: `${value}`                                                      | same [Padding Utilities](/utilities/spacing.html#padding)                    |
+| `snap-p${direction}-${value}` | scroll-snap-padding`${direction}`: `${value}`                                                      | same [Padding Utilities](/utilities/layout/spacing#padding)                    |
 | __Other__                     |                                                                                                    |                                                                              |
 | `scrollbar-hide`              | scrollbar-width: none<br>::-webkit-scrollbar: {<br>&nbsp;&nbsp;display: none<br>}                  | visual hide scrollbar                                                        |
