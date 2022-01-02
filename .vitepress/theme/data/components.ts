@@ -18,16 +18,16 @@ const svelte = `
 
 export function getTemplateComponent(type: string, html: string, css: string) {
   switch (type) {
-    case 'vue':
-      return vue
-        .replace('{{ HTML }}', html)
-        .replace('{{ CSS }}', css)
-    case 'svelte':
-      return svelte
-        .replace('{{ HTML }}', html)
-        .replace('{{ CSS }}', css)
-    default:
+  case 'vue':
+    return vue
+      .replace('{{ HTML }}', html)
+      .replace('{{ CSS }}', css)
+  case 'svelte':
+    return svelte
+      .replace('{{ HTML }}', html)
+      .replace('{{ CSS }}', css)
+  default:
     // eslint-disable-next-line no-console
-      console.error('Components template not found')
+    console.error('Components template not found')
   }
 }
