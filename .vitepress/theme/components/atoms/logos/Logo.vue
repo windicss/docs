@@ -24,32 +24,32 @@ const props = withDefaults(defineProps<{
 
 const Logo = computed(() => {
   switch (props.name.toString()) {
-  case 'nuxt':
-    return Nuxt
-  case 'vue':
-    return Vue
-  case 'svelte':
-    return Svelte
-  case 'rollup':
-    return Rollup
-  case 'webpack':
-    return Webpack
-  case 'vite':
-    return Vite
-  case 'nextjs':
-    return NextJs
-  case 'gridsome':
-    return Gridsome
-  case 'vscode':
-    return VSCode
-  case 'webstorm':
-    return Webstrom
-  case 'postcss':
-    return PostCSS
-  case 'javascript':
-    return JavaScript
-  default:
-    return Windi
+    case 'nuxt':
+      return Nuxt
+    case 'vue':
+      return Vue
+    case 'svelte':
+      return Svelte
+    case 'rollup':
+      return Rollup
+    case 'webpack':
+      return Webpack
+    case 'vite':
+      return Vite
+    case 'nextjs':
+      return NextJs
+    case 'gridsome':
+      return Gridsome
+    case 'vscode':
+      return VSCode
+    case 'webstorm':
+      return Webstrom
+    case 'postcss':
+      return PostCSS
+    case 'javascript':
+      return JavaScript
+    default:
+      return Windi
   }
 })
 </script>
