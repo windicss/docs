@@ -1,4 +1,4 @@
-# Backgrounds
+# Background
 
 ## Background Attachment
 
@@ -206,90 +206,4 @@ Utilities for controlling the background origin of an element's background image
   html='&lt;div class="{class} bg-no-repeat p-6 rounded-md border-4 border-blue-400 border-dashed font-extrabold text-white flex justify-center items-center" style="background-image: url(/assets/bg-shop.jpg);"&gt;
       &lt;span&gt;Hello World&lt;/span&gt;
     &lt;/div&gt;'
-/>
-
-## Background Image
-
-Utilities for controlling an element's background image.
-
-<PlaygroundWithVariants
-  variant='gradient-to-r'
-  :variants="['none', 'gradient-to-t', 'gradient-to-tr', 'gradient-to-r', 'gradient-to-br', 'gradient-to-b', 'gradient-to-bl', 'gradient-to-l', 'gradient-to-tl']"
-  prefix='bg'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='h-full w-full rounded-md from-green-400 to-blue-500'
-  html="&lt;div class=&quot;h-full w-full rounded-md {class} from-green-400 to-blue-500&quot;&gt;&lt;/div&gt;"
-/>
-
-<Customizing>
-
-```js windi.config.js
-export default {
-  theme: {
-    extend: {
-      backgroundImage: theme => ({
-        'hero-pattern': 'url(\'/img/hero-pattern.svg\')',
-        'footer-texture': 'url(\'/img/footer-texture.png\')',
-      }),
-    },
-  },
-}
-```
-
-</Customizing>
-
-## Background Gradient
-
-Utilities for controlling background gradients.
-
-### Gradient From
-
-<PlaygroundWithVariants
-  variant='green-500'
-  type='color'
-  prefix='from'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='h-full w-full rounded-md bg-gradient-to-r to-blue-500'
-  html="&lt;div class=&quot;h-full w-full rounded-md bg-gradient-to-r {class} to-blue-500&quot;&gt;&lt;/div&gt;"
-/>
-
-### Gradient Via
-
-<PlaygroundWithVariants
-  variant='gray-500'
-  type='color'
-  prefix='via'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='h-full w-full rounded-md bg-gradient-to-r from-red-500 to-blue-500'
-  html="&lt;div class=&quot;h-full w-full rounded-md bg-gradient-to-r from-red-500 {class} to-blue-500&quot;&gt;&lt;/div&gt;"
-/>
-
-### Gradient To
-
-<PlaygroundWithVariants
-  variant='yellow-500'
-  type='color'
-  prefix='to'
-  fixed='p-2 dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='h-full w-full rounded-md bg-gradient-to-r from-green-500'
-  html="&lt;div class=&quot;h-full w-full rounded-md bg-gradient-to-r from-green-500 {class}&quot;&gt;&lt;/div&gt;"
-/>
-
-## Background Blend Mode
-
-Utilities for controlling how an element's background image should blend with its background color.
-
-<PlaygroundWithVariants
-  variant='normal'
-  :variants="['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity']"
-  prefix='bg-blend'
-  fixed='dark:text-white opacity-85 overflow-hidden'
-  nested=true
-  appended='w-full h-full bg-no-repeat bg-contain bg-center bg-green-300 rounded-md'
-  html="&lt;div class=&quot;w-full h-full bg-no-repeat bg-green-300 rounded-md bg-contain bg-center {class}&quot; style=&quot;background-image:url(&#39;/assets/bg-blue.svg&#39;);&quot;&gt;
-  &lt;/div&gt;"
 />
