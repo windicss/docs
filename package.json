@@ -8,7 +8,7 @@
     "serve": "vitepress serve --port 4000",
     "crawl": "docker run --rm -it --env-file=.algolia/.env -e \"CONFIG=$(cat .algolia/config.json | jq -r tostring)\" algolia/docsearch-scraper",
     "lint": "eslint . --ext .js,.ts,.md,.vue,.json",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "pnpm lint -- --fix",
     "analysis": "windicss-analysis"
   },
   "dependencies": {
