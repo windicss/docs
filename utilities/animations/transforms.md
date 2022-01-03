@@ -2,7 +2,7 @@
 
 ## Transform Type
 
-Utilities for controlling transform behaviour.
+Utilities for controlling transform behavior.
 
 <PlaygroundWithVariants
   variant=''

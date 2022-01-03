@@ -53,7 +53,7 @@
 ## Interactivity
 
 - [Accent Color](/utilities/interactivity/accent-color)
-- [Appearance](/utilities/interactivity/appearence)
+- [Appearance](/utilities/interactivity/appearance)
 - [Cursor](/utilities/interactivity/cursor)
 - [Caret](/utilities/interactivity/caret)
 - [Pointer Events](/utilities/interactivity/pointer-events)
