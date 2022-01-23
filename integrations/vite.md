@@ -237,6 +237,12 @@ export default {
 
 ### [Alias Config](https://windicss.org/posts/v30.html#alias-config)
 
+Be aware, alias entries need to be prefixed with * when used, eg:
+```html
+<div class="*hstack">
+```
+See [this release post](https://windicss.org/posts/v30.html#alias-config) for the difference between shortcuts and alias.
+
 ```ts windi.config.ts
 export default {
   alias: {
