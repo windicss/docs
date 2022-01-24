@@ -235,7 +235,7 @@ export default {
 </button>
 ```
 
-### [Alias Config](https://windicss.org/posts/v30.html#alias-config)
+### Alias Config
 
 Be aware, alias entries need to be prefixed with * when used, eg:
 ```html
