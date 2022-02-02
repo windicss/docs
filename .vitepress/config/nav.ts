@@ -2,13 +2,42 @@ import type { DefaultTheme } from '@/config'
 
 export const nav: DefaultTheme.Config['nav'] = [
   {
-    text: 'Guide',
+    text: 'Overview',
     items: [
       { text: 'Getting Started', link: '/guide/' },
       { text: 'Installation', link: '/guide/installation' },
       { text: 'Configuration', link: '/guide/configuration' },
+      { text: 'Extractions', link: '/guide/extractions' },
       { text: 'Migration', link: '/guide/migration' },
-      { text: 'Features', link: '/features/' },
+
+      { text: 'Features', link: 'separator' },
+
+      { text: 'Overview', link: '/features/' },
+      { text: 'Value Auto-infer', link: '/features/value-auto-infer' },
+      { text: 'Variant Groups', link: '/features/variant-groups' },
+      { text: 'Shortcuts', link: '/features/shortcuts' },
+      { text: 'Responsive Design', link: '/features/responsive-design' },
+      { text: 'Dark Mode', link: '/features/dark-mode' },
+      { text: 'RTL', link: '/features/rtl' },
+      { text: 'Important Prefix', link: '/features/important-prefix' },
+      { text: 'Directives', link: '/features/directives' },
+      { text: 'Attributify Mode', link: '/features/attributify' },
+      { text: 'Visual Analyzer', link: '/features/analyzer' },
+
+      { text: 'Integrations', link: 'separator' },
+
+      { text: 'Vite', link: '/integrations/vite' },
+      { text: 'Webpack', link: '/integrations/webpack' },
+      { text: 'Rollup', link: '/integrations/rollup' },
+      { text: 'Nuxt', link: '/integrations/nuxt' },
+      { text: 'Vue CLI', link: '/integrations/vue-cli' },
+      { text: 'Gridsome', link: '/integrations/gridsome' },
+      { text: 'Svelte', link: '/integrations/svelte' },
+      { text: 'PostCSS', link: '/integrations/postcss' },
+      { text: 'CLI', link: '/integrations/cli' },
+      { text: 'JavaScript API', link: '/integrations/javascript' },
+      { text: 'VS Code', link: '/editors/vscode' },
+      { text: 'WebStorm', link: '/editors/webstorm' },
     ],
   },
   {
@@ -145,6 +174,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Recent changes (v30-v35)', link: '/posts/v30-5' },
       { text: 'What\'s new in extension?', link: '/posts/extension-updates' },
       { text: 'New Features In v3.1', link: '/posts/v31' },
+      { text: 'New Features In v3.4', link: '/posts/v34' },
 
       { text: 'separator', link: 'separator' },
 

@@ -143,6 +143,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Recent changes (v30-v35)', link: '/posts/v30-5' },
         { text: 'What\'s new in extension?', link: '/posts/extension-updates' },
         { text: 'New Features In v3.1', link: '/posts/v31' },
+        { text: 'New Features In v3.4', link: '/posts/v34' },
       ],
     },
     {
