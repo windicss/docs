@@ -95,7 +95,7 @@ You actually have two **programming paradigms** to choose from:
    dark=...
    ```
 
-> And of course, you can also **mix them**, but I personally **don't recommend**. Just choose one and stick to it. You will find your code becomes clearer.
+> And of course, you can also **mix them**, but it isn't recommended, as this reduces code clarity.
 
 ## Utilities
 
