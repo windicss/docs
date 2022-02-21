@@ -104,7 +104,7 @@ export const nav: DefaultTheme.Config['nav'] = [
 
       // Interactivity
       { text: 'Accent Color', link: '/utilities/interactivity/accent-color' },
-      { text: 'Appearance', link: '/utilities/interactivity/appearence' },
+      { text: 'Appearance', link: '/utilities/interactivity/appearance' },
       { text: 'Cursor', link: '/utilities/interactivity/cursor' },
       { text: 'Caret', link: '/utilities/interactivity/caret' },
       { text: 'Pointer Events', link: '/utilities/interactivity/pointer-events' },
