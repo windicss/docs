@@ -70,5 +70,4 @@ export default {
   :enableConfig="true"
 />
 
-
 The utility added by this configuration can also be directly wrapped in variants, such as sm:btn. The purpose of this feature is similar to the `@apply` directive, it will merge all utilities into one style.

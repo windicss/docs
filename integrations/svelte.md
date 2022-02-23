@@ -293,6 +293,7 @@ Similar to preflights, this safe list need to be available anywhere you want it,
 <style windi:safelist:global>
 </style>
 ```
+
 ### Windi CSS classes
 
 By default, all inline used classes of Windi CSS will be scoped with native svelte logic. This has its advantages (you can find many discussions online).
@@ -330,6 +331,7 @@ You may have the need in your project to define custom CSS classes, and want to 
 ```
 
 You can combine any of this attributes, so full style tag can look like:
+
 ```html
   <style global windi:global windi:preflights:global windi:safelist:global>
     .custom{
@@ -339,6 +341,7 @@ You can combine any of this attributes, so full style tag can look like:
 ```
 
 ### VS Code Extension
+
 Using special CSS tag syntax as well as the attributes above, will break the CSS diagnostics of VS Code. Please make sure to disable them.
 If you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode), add this setting to your VS Code configuration file.
 

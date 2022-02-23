@@ -103,7 +103,7 @@ md-bg = "blue-300 dark:blue-400"
 | auto, cover, contain                           | background-size       |
 | clip-border, clip-padding, clip-content, ...   | background-clip       |
 | origin-border, origin-padding, origin-content  | background-origin     |
-| blend-normal, blend-overlay, blend-draken, ... | background-blend-mode |
+| blend-normal, blend-overlay, blend-darken, ... | background-blend-mode |
 | none                                           | background-image      |
 
 #### Gradient
@@ -372,7 +372,7 @@ md-bg = "blue-300 dark:blue-400"
 
 #### Box
 
-> box = "decoratin-slice content"
+> box = "decoration-slice content"
 
 | values                             | property             |
 | :--------------------------------- | :------------------- |
@@ -472,7 +472,7 @@ md-bg = "blue-300 dark:blue-400"
 | contrast-0, contrast-50, contrast-75, ...                    | contrast    |
 | drop-shadow-sm, drop-shadow, drop-shadow-md, ...             | drop-shadow |
 | grayscale-0, grayscale                                       | grayscale   |
-| -hue-roate-180, -hue-rotate-90, ..., hue-rotate-90, hue-rotate-180 | hue-rotate  |
+| -hue-rotate-180, -hue-rotate-90, ..., hue-rotate-90, hue-rotate-180 | hue-rotate  |
 | invert-0, invert                                             | invert      |
 | saturate-0, saturate-50, saturate-100, ...                   | saturate    |
 | sepia-0, sepia                                               | sepia       |
@@ -488,7 +488,7 @@ md-bg = "blue-300 dark:blue-400"
 | brightness-0, brightness-50, brightness-75, ...              | brightness      |
 | contrast-0, contrast-50, contrast-75, ...                    | contrast        |
 | grayscale-0, grayscale                                       | grayscale       |
-| -hue-roate-180, -hue-rotate-90, ..., hue-rotate-90, hue-rotate-180 | hue-rotate      |
+| -hue-rotate-180, -hue-rotate-90, ..., hue-rotate-90, hue-rotate-180 | hue-rotate      |
 | invert-0, invert                                             | invert          |
 | opacity-0, opacity-5, ... opacity-95                         | opacity         |
 | saturate-0, saturate-50, saturate-100, ...                   | saturate        |
@@ -521,12 +521,12 @@ md-bg = "blue-300 dark:blue-400"
 | :----------------------------------------------------------- | :---------------------- |
 | ~, gpu, none                                                 | transform               |
 | preserve-flat, preserve-3d                                   | transform-style         |
-| perspect-lg, perspect-none, ...                              | prespective             |
+| perspect-lg, perspect-none, ...                              | perspective             |
 | perspect-origin-center, perspect-origin-top                  | perspective-origin      |
 | origin-center, origin-top, origin-top-right, ...             | transform-origin        |
 | scale-0, scale-50, scale-75, ...                             | scale                   |
 | scale-x-60, scale-y-30, scale-z-45                           | scale-x/y/z             |
-| roate-50, -rotate-50, ...                                    | rotate                  |
+| rotate-50, -rotate-50, ...                                   | rotate                  |
 | rotate-x-30, rotate-y-45, rotate-z-90                        | rotate-x/y/z            |
 | translate-x-2, -translate-x-4, translate-y-40, -translate-y-40, translate-z-12 | translate-x/y/z |
 | skew-x-2, -skew-x-4, skew-y-2, -skew-y-2                     | skew-x/skew-y           |

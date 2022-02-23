@@ -56,7 +56,7 @@
 
 ```css
 .btn {
-	@attr[bg] red-500 opacity-30 lg:red-600;
+  @attr[bg] red-500 opacity-30 lg:red-600;
 }
 
 @attr[bg] red-500 opacity-30 lg:red-600; /* global attributify */
@@ -106,9 +106,9 @@ and /* this is multi line comment */
 ```css
 /* only works in the scope */
 @config local {
-	colors: {
-		...
-	}
+  colors: {
+    ...
+  }
 }
 
 /* set global config */
@@ -159,6 +159,7 @@ and /* this is multi line comment */
 @var close = False;
 @var none = None;
 ```
+
 > Refer to python, the initial capital letters are easier to identify.
 
 ### **string**
@@ -403,7 +404,6 @@ import css files
 
 @var c = add(1, 2);
 ```
-
 
 #### Others
 

@@ -95,9 +95,9 @@ windicss './**/*.html' -mto windi.min.css
 windicss './**/*.html' -to windi.css --minify
 ```
 
-#### Using compiliation mode
+#### Using compilation mode
 
-Compiliation mode will combine all windi utilities into a new class, which you can specify with `-p` or `--prefix`
+Compilation mode will combine all windi utilities into a new class, which you can specify with `-p` or `--prefix`
 
 ```bash
 windicss './**/*.html' -cto windi.css
@@ -142,7 +142,7 @@ Give an example
 
 ```html
 <button
-	bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+  bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   text="sm white"
   font="mono light"
   p="y-2 x-4"

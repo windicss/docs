@@ -74,7 +74,7 @@ The `inline-table` utility does not have a direct mapping in HTML. It behaves li
 &lt;/div&gt;'
 />
 
-| inline-table	| display: inline-table; |
+| inline-table | display: inline-table; |
 
 ## Table Caption
 
@@ -216,6 +216,7 @@ The `table-column` utility behaves like `<col>` HTML element. The HTML `<col>` e
     &lt;/div&gt;
 &lt;/div&gt;'
 />
+
 ## Table Row Group
 
 The `table-row-group` utility behaves like `<tbody>` HTML element. The HTML Table Body element (`<tbody>`) encapsulates a set of table rows (`<tr>` elements), indicating that they comprise the body of the table (`<table>`).
@@ -509,7 +510,7 @@ The `empty-cells` utility sets whether borders and backgrounds appear around `<t
 
 Use above utilities to create elements that behave like their respective table elements.
 
-#### Raw Html Tags
+### Raw Html Tags
 
 ```html
 <table>
@@ -539,7 +540,7 @@ Use above utilities to create elements that behave like their respective table e
 </table>
 ```
 
-#### With Windi Utilities
+### With Windi Utilities
 
 ```html
 <div class="table">

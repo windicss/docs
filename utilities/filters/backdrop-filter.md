@@ -17,8 +17,6 @@ Utilities for enabling and disabling backdrop filters on an element.
   &lt;/div&gt;'
 />
 
-
-
 ## Backdrop Blur
 
 <PlaygroundWithVariants
@@ -310,4 +308,5 @@ export default {
   },
 }
 ```
+
 </Customizing>

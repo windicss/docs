@@ -78,4 +78,3 @@ export default {
   :showConfig="true"
   :enableConfig="true"
 />
-

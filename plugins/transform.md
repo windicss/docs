@@ -15,4 +15,4 @@ export default {
 }
 ```
 
-https://github.com/windicss/plugins
+See more plugins: https://github.com/windicss/plugins

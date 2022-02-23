@@ -19,7 +19,6 @@ If it's below, please use the plugin specifically built for your framework.
 | <Logo name="vue" class="inline"/> Vue CLI | [vue-cli-plugin-windicss](/integrations/vue-cli.html) |
 | <Logo name="gridsome" class="inline"/> Gridsome | [gridsome-plugin-windicss](/integrations/gridsome.html) |
 
-
 ### Second Class Framework Support
 
 Frameworks that have been successfully setup and documented to work with Windi.
@@ -63,7 +62,6 @@ export default {
 }
 ```
 
-
 #### Non ES Modules Install
 
 For webpack configurations which don't support the es module import syntax, you can try the following.
@@ -84,15 +82,16 @@ export default {
 Within an entry point file or something only loaded once, add the import.
 
 ESM
+
 ```ts main.js
 import 'windi.css'
 ```
 
 CJS
+
 ```ts main.js
 require('windi.css')
 ```
-
 
 ### Windi Config
 
@@ -168,7 +167,6 @@ export default defineConfig({
 })
 ```
 
-
 ### Layers Ordering
 
 By default, importing `windi.css` or `virtual:windi.css` will import all the three layers with the order `base - components - utilities`. If you want to have better controls over the orders, you can separate them by:
@@ -225,7 +223,6 @@ export default defineConfig({
 ```
 
 Note: JSX usage is experimental. Please report any issues you find.
-
 
 ### Create React App - CRACO
 

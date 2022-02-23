@@ -743,7 +743,7 @@ The `empty-cells` utility sets whether borders and backgrounds appear around `<t
 
 ## Transform Type
 
-Utilities for controlling transform behaviour.
+Utilities for controlling transform behavior.
 
 <PlaygroundWithVariants
   variant=''

@@ -234,7 +234,7 @@ export default {
 
 ## Hooks
 
-You can use the following nuxt hooks to modify the behaviour of the code.
+You can use the following nuxt hooks to modify the behavior of the code.
 
 `windicss:config`
 - Arguments: FullConfig

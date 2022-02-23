@@ -15,7 +15,7 @@ Utilities for controlling how an element can be scrolled and zoomed on touchscre
 | touch-pinch-zoom  | touch-action: pinch-zoom;   |
 | touch-manipulation| touch-action: manipulation; |
 
-### Usage
+## Usage
 
 Use the `touch-{action}` utilities to control how an element can be scrolled (panned) and zoomed (pinched) on `
 touchscreens.

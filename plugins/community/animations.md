@@ -32,6 +32,7 @@ export default {
 ```
 
 ### Available Animate CSS classes
+
 * .animate-animated
 * .animate-infinite
 * .animate-delay

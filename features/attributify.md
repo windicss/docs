@@ -3,7 +3,7 @@
 
 :warning: Attributify is not available with [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess).
 
-With this feature, you can write windi classes in html attributes.
+With this feature, you can write windi classes in HTML attributes.
 
 > Regarding the issue of css size, the css size may be slightly increased, but under gzip compression, the impact is minimal.
 
