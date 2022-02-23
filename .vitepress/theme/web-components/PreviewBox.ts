@@ -30,7 +30,7 @@ template.innerHTML = `
     }
     *::-webkit-scrollbar-corner {
       background-color: transparent;
-    }  
+    }
 
     :host {
       width: 100%;

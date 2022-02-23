@@ -51,7 +51,7 @@ export default defineConfig({
 
 ## Scanning
 
-When the dev-server/build process starts, Windi CSS will scan your source code and extract utility usages. 
+When the dev-server/build process starts, Windi CSS will scan your source code and extract utility usages.
 By default, it will scan files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx`.
 
 If you want to enable/disable scanning for other file-types or locations, you can configure it using `include` and `exclude` options:

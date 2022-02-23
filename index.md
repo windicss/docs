@@ -20,7 +20,7 @@ footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
 
 <Sponsors />
 
-<InlinePlayground 
+<InlinePlayground
   :input="`bg-gradient-to-r from-green-400 to-blue-500
 text-white text-center italic
 px-4 py-2 rounded cursor-default

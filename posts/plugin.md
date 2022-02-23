@@ -105,7 +105,7 @@ plugin(({ addBase, theme }) => {
 
 `config()`
 
-<!-- 
+<!--
 ## Debug
 
 ### Using loadPlugin interface

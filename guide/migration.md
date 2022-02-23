@@ -3,7 +3,7 @@
 
 # Migrate from Tailwind CSS
 
-## Packages 
+## Packages
 
 Some of your dependencies are no longer required. You can remove them from your `package.json` if they were only needed for Tailwind CSS.
 

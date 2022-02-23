@@ -43,7 +43,7 @@ From v0.8.0 of [Windi CSS Intellisense](https://github.com/windicss/windicss-int
 
 ### Online Preview
 
-You can preview the report of the analyser itself at 
+You can preview the report of the analyser itself at
 [analysis-demo.windicss.org](http://analysis-demo.windicss.org)
 
 You can generate your own report and host it statically by running the following command:

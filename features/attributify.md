@@ -20,7 +20,7 @@ export default defineConfig({
 And use them as you would like:
 
 ```html
-<button 
+<button
   bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   text="sm white"
   font="mono light"
@@ -62,7 +62,7 @@ export default {
 ```
 
 ```html
-<button 
+<button
   w:bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   w:text="sm white"
   w:font="mono light"

@@ -473,7 +473,7 @@ The `caption` utility puts the content of a table's `<caption>` on the specified
 
 ## Table Empty Cells
 
-The `empty-cells` utility sets whether borders and backgrounds appear around `<table>`cells that have no visible content. A good use case for empty-cells could be a situation where you may not know whether a table will or will not contain empty data points and you decide to hide them. 
+The `empty-cells` utility sets whether borders and backgrounds appear around `<table>`cells that have no visible content. A good use case for empty-cells could be a situation where you may not know whether a table will or will not contain empty data points and you decide to hide them.
 
 <PlaygroundWithVariants
   variant='visible'
