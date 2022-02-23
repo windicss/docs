@@ -420,6 +420,6 @@ import css files
 
 We currently compile windi lang into JavaScript and run it, just like TypeScript. Later we will also have an interpreter to make it an independent language. In any case, our hope is to have a programming language that **interacts well with JavaScript and windi**. All package dependencies of windi will be built using TypeScript, which means you can call JavaScript/TypeScript functions or classes directly.
 
-In addition, regarding the construction of css, we have our own css build engine since the windi v1 version, and then we have also implemented nested css, so I won't go into details here. In short, I believe that with the above grammar, windi will become more perfect.
+In addition, regarding the construction of CSS, we have our own CSS build engine since the windi v1 version, and then we have also implemented nested CSS, so I won't go into details here. In short, I believe that with the above grammar, windi will become more perfect.
 
 For now, we are still in the draft stage, so **any suggestions are welcome**. You can start a discussion in github discussions, and we will reply to you as soon as possible.

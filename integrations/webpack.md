@@ -178,7 +178,7 @@ By default, importing `windi.css` or `virtual:windi.css` will import all the thr
 + import 'virtual:windi-utilities.css'
 ```
 
-You can also make your custom css be able to be overridden by certain layers:
+You can also make your custom CSS be able to be overridden by certain layers:
 
 ```diff
   import 'virtual:windi-base.css'
