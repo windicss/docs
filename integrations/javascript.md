@@ -34,10 +34,10 @@ export function generateStyles(html) {
     .map(i => i.result)
     .join(' ')
 
-  // Generate preflight based on the html we input
+  // Generate preflight based on the HTML we input
   const preflightSheet = processor.preflight(html)
 
-  // Process the html classes to an interpreted style sheet
+  // Process the HTML classes to an interpreted style sheet
   const interpretedSheet = processor.interpret(htmlClasses).styleSheet
 
   // Build styles
@@ -63,10 +63,10 @@ export function generateStyles(html) {
   // Get windi processor
   const processor = new Processor()
 
-  // Parse html to get array of class matches with location
+  // Parse HTML to get array of class matches with location
   const parser = new HTMLParser(html)
 
-  // Generate preflight based on the html we input
+  // Generate preflight based on the HTML we input
   const preflightSheet = processor.preflight(html)
 
   const PREFIX = 'windi-'
@@ -87,7 +87,7 @@ export function generateStyles(html) {
     // append ignored classes and push to output
     outputHTML += [style.className, ...style.ignored].join(' ')
 
-    // mark the end as our new start for next itteration
+    // mark the end as our new start for next iteration
     indexStart = p.end
   })
 
@@ -123,10 +123,10 @@ export function generateStyles(html) {
   // Get windi processor
   const processor = new Processor()
 
-  // Parse html to get array of class matches with location
+  // Parse HTML to get array of class matches with location
   const parser = new HTMLParser(html)
 
-  // Generate preflight based on the html we input
+  // Generate preflight based on the HTML we input
   const preflightSheet = processor.preflight(html)
 
   // Always returns array
@@ -150,7 +150,7 @@ export function generateStyles(html) {
       // append current value to accumulator value
       acc[attrKey] = [...attrKeyValue, ...attrValue]
     } else {
-      // else add atrribute value array to accumulator
+      // else add attribute value array to accumulator
       acc[attrKey] = attrValue
     }
 

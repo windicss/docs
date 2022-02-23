@@ -19,7 +19,7 @@
     "*.css": "postcss"
   },
   "eslint.workingDirectories": [
-		{ "directory": ".vitepress" }
-	],
+    { "directory": ".vitepress" }
+  ],
   "windicss.sortOnSave": false
 }

@@ -77,7 +77,7 @@ windicss './hello.html' './world.html', './src/**/*.svelte'
 
 #### Generate normal css
 
-Use the `-o` parameter to specify the name of the generated css file, and the `-t` parameter to specify whether to add preflight (basestyles).
+Use the `-o` parameter to specify the name of the generated CSS file, and the `-t` parameter to specify whether to add preflight (basestyles).
 
 ```bash
 windicss './**/*.html'
@@ -88,16 +88,16 @@ windicss './test.html' --preflight --output windi.css
 
 #### Minimize build
 
-Use `-m` or `--minify` to generate minimized css file. This parameter is mostly used for build time.
+Use `-m` or `--minify` to generate minimized CSS file. This parameter is mostly used for build time.
 
 ```bash
 windicss './**/*.html' -mto windi.min.css
 windicss './**/*.html' -to windi.css --minify
 ```
 
-#### Using compiliation mode
+#### Using compilation mode
 
-Compiliation mode will combine all windi utilities into a new class, which you can specify with `-p` or `--prefix`
+Compilation mode will combine all windi utilities into a new class, which you can specify with `-p` or `--prefix`
 
 ```bash
 windicss './**/*.html' -cto windi.css
@@ -142,7 +142,7 @@ Give an example
 
 ```html
 <button
-	bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+  bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   text="sm white"
   font="mono light"
   p="y-2 x-4"
@@ -178,13 +178,13 @@ module.exports = {
 
 #### Dev mode
 
-Development mode will turn on hot reloading and will watch your file changes to update your css file in real time.
+Development mode will turn on hot reloading and will watch your file changes to update your CSS file in real time.
 
 ```bash
 windicss './**/*.html' -to windi.css --dev
 ```
 
-> Note: For better hotloading experience (~5ms) we don't remove built css at development time, so you are expected to rebuild it once at release time using the minimize command to get the best experience for both development and build. Such as `windicss './**/*.html' -mto windi.css`
+> Note: For better hotloading experience (~5ms) we don't remove built CSS at development time, so you are expected to rebuild it once at release time using the minimize command to get the best experience for both development and build. Such as `windicss './**/*.html' -mto windi.css`
 
 #### Fuzzy mode
 

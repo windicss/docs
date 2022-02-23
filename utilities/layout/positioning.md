@@ -304,7 +304,6 @@ export default {
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
 
-
 ### Top
 
 <PlaygroundWithVariants
@@ -316,7 +315,6 @@ export default {
   appended='absolute h-8 bg-green-400 rounded-md text-center max-w-24 p-2'
   html='&lt;div class="absolute {class} bg-green-400 rounded-md p-2 text-center max-w-24 h-8"&gt;{class}&lt;/div&gt;'
 />
-
 
 ### Right
 

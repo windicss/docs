@@ -268,7 +268,6 @@ export default {
 
 </Customizing>
 
-
 ## Grid Column End
 
 Utilities to make an element end at the nth grid line. These utilities should be combined with the [col-start](#grid-column-start) or [col-span](#grid-column-span) utilities to span a specific number of columns.
@@ -295,7 +294,6 @@ Utilities to make an element end at the nth grid line. These utilities should be
 &lt;div class="rounded-md bg-teal-500 w-6 h-6 flex flex-col justify-center"&gt;12&lt;/div&gt;
 &lt;/div&gt;'
 />
-
 
 <Customizing>
 
@@ -356,7 +354,6 @@ export default {
 
 </Customizing>
 
-
 ## Grid Row End
 
 Utilities to make an element end at the nth grid line. These utilities should be combined with the [row-start](#grid-row-start) or [row-span](#grid-row-span) utilities to span a specific number of rows.
@@ -383,7 +380,6 @@ Utilities to make an element end at the nth grid line. These utilities should be
 &lt;div class="rounded-md bg-teal-500 w-6 flex flex-col justify-center"&gt;12&lt;/div&gt;
 &lt;/div&gt;'
 />
-
 
 <Customizing>
 

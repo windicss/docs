@@ -48,7 +48,6 @@ If you have a `tailwind.config.js`, please rename it to `windi.config.js` or `wi
 
 See [here](https://windicss.netlify.app/guide/configuration.html) for configuration details.
 
-
 ## Migrating
 
 If you were previously using `gridsome-plugin-tailwindcss`, please consult the [documentation](https://windicss.netlify.app/guide/migration.html) on migrating.
@@ -56,6 +55,7 @@ If you were previously using `gridsome-plugin-tailwindcss`, please consult the [
 ## Configuration
 
 - Default:
+
 ```js
 export default {
   scan: {
@@ -88,6 +88,7 @@ export default {
 #### Disable Preflight
 
 _gridsome.config.js_
+
 ```js
 export default {
   // ...

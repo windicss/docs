@@ -115,7 +115,7 @@ config = {
 }
 ```
 
-## Pattern names list:
+## Pattern names list
 
 1. anchors-away
 1. architect

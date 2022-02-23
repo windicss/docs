@@ -129,7 +129,6 @@ Utilities for controlling the opacity borders between elements.
 &lt;/div&gt;'
 />
 
-
 <Customizing>
 
 ```js windi.config.js
