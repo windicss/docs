@@ -461,8 +461,8 @@ export default {
 
 ### Text Decoration Opacity
 
-Utilities for controlling the opacity of an element's decoration color. This is a fallback of 
-[Text Decoration Color](#text-decoration-color) beginning with WindiCSS v3.4.0. 
+Utilities for controlling the opacity of an element's decoration color. This is a fallback of
+[Text Decoration Color](#text-decoration-color) beginning with WindiCSS v3.4.0.
 
 <PlaygroundWithVariants
   variant='50'

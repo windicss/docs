@@ -2,7 +2,7 @@
 
 <ColorsPalette />
 
-## Customization 
+## Customization
 
 ```ts windi.config.js
 export default {

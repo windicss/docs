@@ -8,7 +8,7 @@ Use `@apply` to inline any existing utility classes into your style block.
 
 This is useful when you find a common utility pattern in your HTML that you'd like to extract to a new component.
 
-<DirectivesPlayground 
+<DirectivesPlayground
 :input='`
 .btn {
   @apply font-bold py-2 px-4 rounded;
@@ -21,7 +21,7 @@ This is useful when you find a common utility pattern in your HTML that you'd li
 
 If you'd like to `@apply` an existing class and make it `!important`, simply add `!important` to the end of the declaration:
 
-<DirectivesPlayground 
+<DirectivesPlayground
 :input='`
 .btn {
   @apply font-bold py-2 px-4 rounded !important;
@@ -32,7 +32,7 @@ If you'd like to `@apply` an existing class and make it `!important`, simply add
 
 You can generate [screen variants, state variants, theme variants](/utilities/general/variants) of your own utilities by wrapping their definitions in the `@variants` directive.
 
-<DirectivesPlayground 
+<DirectivesPlayground
 :input='`
 @variants focus, hover {
   .rotate-0 {
@@ -55,7 +55,7 @@ You can generate [screen variants, state variants, theme variants](/utilities/ge
 The `@screen` directive allows you to create media queries that reference your breakpoints by name instead of duplicating their values in your own CSS.
 
 
-<DirectivesPlayground 
+<DirectivesPlayground
 :input='`
 @screen sm {
   .custom {
@@ -68,7 +68,7 @@ The `@screen` directive allows you to create media queries that reference your b
 
 The `@layer` directive sets the order of how each class is applied. Valid layers are `base`, `components`, and `utilities`.
 
-<DirectivesPlayground 
+<DirectivesPlayground
 :input='`
 @layer components {
   .components {
@@ -94,7 +94,7 @@ The `@layer` directive sets the order of how each class is applied. Valid layers
 
 The `theme()` function allows you to access your config values using dot notation.
 
-<DirectivesPlayground 
+<DirectivesPlayground
 :input='`
 .btn-blue {
   background-color: theme("colors.blue.500");

@@ -1,7 +1,7 @@
 # Image Rendering
 
-The `image-render` utility defines how the browser should render an image if it is scaled up or down from its original 
-dimensions. By default, each browser will attempt to apply aliasing to this scaled image in order to prevent distortion, 
+The `image-render` utility defines how the browser should render an image if it is scaled up or down from its original
+dimensions. By default, each browser will attempt to apply aliasing to this scaled image in order to prevent distortion,
 but this can sometimes be a problem if we want the image to preserve its original pixelated form.
 
 <PlaygroundWithVariants

@@ -46,7 +46,7 @@ export default {
 }
 ```
 
-You can use the autocompletion from your editor to see possible configuration fields. Customization for features will be described in the corresponding pages. 
+You can use the autocompletion from your editor to see possible configuration fields. Customization for features will be described in the corresponding pages.
 
 ## Example Configuration
 

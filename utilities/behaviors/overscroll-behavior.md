@@ -4,9 +4,9 @@ Utilities for controlling how the browser behaves when reaching the boundary of 
 
 - Use `auto` to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of
   the primary scroll area.
-- Use `none` to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent 
+- Use `none` to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent
   "bounce" effects when scrolling past the end of the container.
-- Use `contain` to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve 
+- Use `contain` to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve
   "bounce" effects when scrolling past the end of the container in operating systems that support it.
 
 <PlaygroundWithVariants

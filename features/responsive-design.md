@@ -10,7 +10,7 @@ When you want to apply a breakpoint variant to multiple utilities, in Windi CSS 
 
 ## Custom Range
 
-By default, Windi CSS's breakpoints are designed as Mobile First. 
+By default, Windi CSS's breakpoints are designed as Mobile First.
 
 This means unprefixed utilities (like `p-1`) take effect on all screen sizes, while prefixed utilities (like `md:p-2`) only take effect at the **specified breakpoint and above**.
 

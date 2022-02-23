@@ -8,7 +8,7 @@ Apply utilities for the same variant by grouping them with a parenthesis.
 
 Play with it:
 
-<InlinePlayground 
+<InlinePlayground
   :input="'bg-blue-200 font-light p-2\nhover:(bg-gray-400 font-medium)'"
   :showCSS="true"
   :showMode="true"

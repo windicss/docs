@@ -17,7 +17,7 @@ Since Windi CSS will only generate the CSS utilities you use, it enables you to 
 
 This is useful when you want to opt-out of your design system and have some fine-grain controls over some specific components. Both direct `p-5px` and explicitly escaping `p-[5px]` are supported.
 
-We also provided [an visual analyser](/features/analyzer) to give you an overview of all the utility usages in your project and to spot unwanted value escaping of your design system with ease. 
+We also provided [an visual analyser](/features/analyzer) to give you an overview of all the utility usages in your project and to spot unwanted value escaping of your design system with ease.
 
 ## Numbers
 
@@ -54,9 +54,9 @@ text-{color} -> color: rgba(...);
 border-hex-{hex} -> border-color: rgba(...);
 ```
 
-<InlinePlayground 
-  :input="'text-cyan-400\nborder-hex-6dd1c7'" 
-  :showCSS="true" 
+<InlinePlayground
+  :input="'text-cyan-400\nborder-hex-6dd1c7'"
+  :showCSS="true"
   :showPreview="false"
   fixed="border border-2 px-4 py-2 rounded"
 />
@@ -69,9 +69,9 @@ You can even pass variable names, which is very useful in combination with CSS v
 bg-${variableName}
 ```
 
-<InlinePlayground 
-  :input="'bg-$test-variable'" 
-  :showCSS="true" 
+<InlinePlayground
+  :input="'bg-$test-variable'"
+  :showCSS="true"
   :showPreview="false"
 />
 
@@ -81,8 +81,8 @@ bg-${variableName}
 grid-cols-[auto,1fr,30px]
 ```
 
-<InlinePlayground 
-  :input="'grid-cols-[auto,1fr,30px]'" 
-  :showCSS="true" 
+<InlinePlayground
+  :input="'grid-cols-[auto,1fr,30px]'"
+  :showCSS="true"
   :showPreview="false"
 />

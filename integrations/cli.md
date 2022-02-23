@@ -128,7 +128,7 @@ Give an example
 
 #### Using attributify mode
 
-You can combine attributify mode with interpretation mode or compilation mode. 
+You can combine attributify mode with interpretation mode or compilation mode.
 
 ```bash
 windicss './**/*.html' -ato windi.css
@@ -141,7 +141,7 @@ windicss './test.html' --attributify --compile --preflight --output windi.css
 Give an example
 
 ```html
-<button 
+<button
 	bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   text="sm white"
   font="mono light"
@@ -221,7 +221,7 @@ To enable style block, you need to use `--style` arg.
 windicss './**/*.html' -to windi.css --dev --style
 ```
 
-Define style block like this: 
+Define style block like this:
 
 ```html
 <head>

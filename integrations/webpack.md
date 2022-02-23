@@ -42,7 +42,7 @@ Frameworks which have been tested with this package and did not work.
 If you are proceeding setup with a custom webpack build, then please report any issues you find.
 
 ```bash
-yarn add windicss-webpack-plugin -D 
+yarn add windicss-webpack-plugin -D
 # npm i windicss-webpack-plugin -D
 ```
 

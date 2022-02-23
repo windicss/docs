@@ -72,7 +72,7 @@ export default {
   },
   transformCSS: 'pre',
 }
-```  
+```
 
 - See [options.ts](https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts) for configuration reference.
 
