@@ -76,11 +76,11 @@ html.dark {
 .DocSearch-Button {
   @apply rounded-lg ml-0 h-auto px-3 py-2;
 }
+.DocSearch-Button-Keys {
+  @apply justify-between min-w-12;
+}
 .DocSearch-Button-Key {
   @apply static w-5 h-5 pb-0 border border-$docsearch-muted-color m-0 top-0;
-}
-.DocSearch-Button-Placeholder + .DocSearch-Button-Key {
-  @apply mr-2;
 }
 .DocSearch-Button-Placeholder {
   @apply pl-3 font-normal pr-0 xl:pr-12;
