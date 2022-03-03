@@ -22,6 +22,7 @@ const colors = [
   'slate',
   'stone',
   'neutral',
+  'zinc',
   'light',
   'dark',
 ]
