@@ -14,7 +14,7 @@ Run the following command in your project root
 npx windicss-analysis
 ```
 
-The analysis report will be available at http://localhost:8113/
+The analysis report will be available at `http://localhost:8113/`
 
 ### NPM
 
