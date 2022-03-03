@@ -23,51 +23,51 @@ const { searchId } = useSearchBox(props)
 }
 
 :root {
-  --docsearch-container-background: rgba(173,181,189,0.7);
+  --docsearch-container-background: rgba(173, 181, 189, 0.7);
 
-  --docsearch-modal-background: theme('colors.white');
+  --docsearch-modal-background: theme("colors.white");
   --docsearch-modal-shadow: none;
 
   --docsearch-footer-background: transparent;
-  --docsearch-footer-shadow: rgba(125,125,125,0.1);
+  --docsearch-footer-shadow: rgba(125, 125, 125, 0.1);
 
-  --docsearch-hit-color: theme('colors.cool-gray.800');
-  --docsearch-hit-background: rgba(125,125,125,0.1);
+  --docsearch-hit-color: theme("colors.gray.800");
+  --docsearch-hit-background: rgba(125, 125, 125, 0.1);
   --docsearch-hit-shadow: none;
   --docsearch-hit-height: 3.5rem;
 
-  --docsearch-primary-color: theme('colors.primary.600');
+  --docsearch-primary-color: theme("colors.primary.600");
   --docsearch-highlight-color: var(--docsearch-primary-color);
 
-  /* --docsearch-searchbox-background: theme('colors.cool-gray.100');
-  --docsearch-searchbox-focus-background: theme('colors.cool-gray.200'); */
+  /* --docsearch-searchbox-background: theme('colors.gray.100');
+  --docsearch-searchbox-focus-background: theme('colors.gray.200'); */
   --docsearch-searchbox-background: transparent;
   --docsearch-searchbox-focus-background: transparent;
   --docsearch-searchbox-shadow: none;
   --docsearch-searchbox-height: 3.5rem;
 
-  --docsearch-text-color: theme('colors.cool-gray.600');
-  --docsearch-muted-color: theme('colors.cool-gray.400');
+  --docsearch-text-color: theme("colors.gray.600");
+  --docsearch-muted-color: theme("colors.gray.400");
 
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
 }
 
 html.dark {
-  --docsearch-container-background: rgba(12,12,12,0.9);
+  --docsearch-container-background: rgba(12, 12, 12, 0.9);
 
-  --docsearch-modal-background: theme('colors.dark.800');
+  --docsearch-modal-background: theme("colors.dark.800");
   --docsearch-modal-shadow: none;
 
-  --docsearch-hit-color: theme('colors.cool-gray.200');
+  --docsearch-hit-color: theme("colors.gray.200");
 
   /* --docsearch-searchbox-background: theme('colors.dark.400');
   --docsearch-searchbox-focus-background: theme('colors.dark.300'); */
   --docsearch-searchbox-background: transparent;
   --docsearch-searchbox-focus-background: transparent;
 
-  --docsearch-text-color: theme('colors.cool-gray.200');
-  --docsearch-muted-color: theme('colors.cool-gray.400');
+  --docsearch-text-color: theme("colors.gray.200");
+  --docsearch-muted-color: theme("colors.gray.400");
 
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
@@ -89,7 +89,8 @@ html.dark {
 .DocSearch-Button:hover .DocSearch-Button-Key {
   @apply text-$docsearch-text-color border-$docsearch-text-color;
 }
-.DocSearch-Form, .DocSearch-Hit a {
+.DocSearch-Form,
+.DocSearch-Hit a {
   @apply rounded-lg;
 }
 .DocSearch-Form {
@@ -120,13 +121,13 @@ html.dark {
   .DocSearch-Button-Key,
   .DocSearch-Button-KeySeparator,
   .DocSearch-Button-Placeholder {
-    display:none
+    display: none;
   }
 }
 
 @screen -xl {
   .DocSearch-Button-Key {
-    display:none
+    display: none;
   }
 }
 </style>

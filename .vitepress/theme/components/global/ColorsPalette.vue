@@ -19,22 +19,20 @@ const colors = [
   'violet',
   'fuchsia',
   'gray',
-  'blue-gray',
-  'cool-gray',
-  'warm-gray',
-  'true-gray',
+  'slate',
+  'stone',
+  'neutral',
   'light',
   'dark',
 ]
+
 </script>
 
 <template>
   <div class="my-8">
     <div v-for="color in colors" :key="color">
       <div class="relative mb-3 mt-6">
-        <span>
-          {{ color }}
-        </span>
+        <span>{{ color }}</span>
       </div>
       <div class="flex gap-2 mb-2 overflow-y-auto">
         <SingleColor v-for="level in levels" :key="level" :color="`bg-${color}-${level}`" />

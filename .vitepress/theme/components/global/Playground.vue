@@ -53,7 +53,12 @@ const {
       <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="w-full h-full default-theme">
         <Pane v-if="layout === 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PlayPreviewBlock class="h-full">
-            <IframePreview class="w-full h-full" :html="finalHTML" :css="generatedCSS" :dark="isDark" />
+            <IframePreview
+              class="w-full h-full"
+              :html="finalHTML"
+              :css="generatedCSS"
+              :dark="isDark"
+            />
           </PlayPreviewBlock>
         </Pane>
         <Pane min-size="20" :size="bpmd ? 60 : 66">
@@ -68,7 +73,12 @@ const {
         </Pane>
         <Pane v-if="layout !== 'left'" min-size="20" :size="bpmd ? 40 : 33">
           <PlayPreviewBlock class="h-full">
-            <IframePreview class="w-full h-full" :html="finalHTML" :css="generatedCSS" :dark="isDark" />
+            <IframePreview
+              class="w-full h-full"
+              :html="finalHTML"
+              :css="generatedCSS"
+              :dark="isDark"
+            />
           </PlayPreviewBlock>
         </Pane>
       </Splitpanes>
@@ -80,7 +90,7 @@ const {
 .playground {
   --c-bg: var(--windi-bg);
   --c-scrollbar: var(--windi-bc);
-  @apply h-140vh p-4 bg-blue-gray-100 dark:bg-dark-800;
+  @apply h-140vh p-4 bg-slate-100 dark:bg-dark-800;
 }
 @screen md {
   .playground {
@@ -101,10 +111,12 @@ const {
 }
 .splitpanes.default-theme .splitpanes__splitter {
   @apply bg-transparent border-transparent min-w-4 min-h-4;
-  &:before, &:after {
+  &:before,
+  &:after {
     @apply bg-gray-300 dark:bg-dark-300;
   }
-  &:hover:before, &:hover:after {
+  &:hover:before,
+  &:hover:after {
     @apply bg-gray-400 dark:bg-dark-100;
   }
 }

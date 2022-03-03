@@ -185,21 +185,16 @@ onMounted(async() => {
     <div v-if="showTabs" class="flex tabs">
       <!-- <div class="tab" :class="{active: tab === 'code'}" @click="tab = 'code'">
       <carbon:code class="inline-block" />
-    </div> -->
+      </div>-->
       <div class="flex-auto" />
-      <div
-        class="tab"
-        title="Toggle CSS"
-        :class="{active: showCSS}"
-        @click="showCSS = !showCSS"
-      >
+      <div class="tab" title="Toggle CSS" :class="{ active: showCSS }" @click="showCSS = !showCSS">
         <uil:css3-simple class="inline-block" />
       </div>
       <div
         v-if="enableConfig"
         class="tab"
         title="Toggle Configurations"
-        :class="{active: showConfig}"
+        :class="{ active: showConfig }"
         @click="showConfig = !showConfig"
       >
         <carbon:settings-adjust class="inline-block" />
@@ -208,17 +203,14 @@ onMounted(async() => {
         v-if="enablePreview"
         class="tab"
         title="Toggle Preview"
-        :class="{active: showPreview}"
+        :class="{ active: showPreview }"
         @click="showPreview = !showPreview"
       >
         <carbon:camera class="inline-block" />
       </div>
     </div>
     <div class="border border-$windi-bc rounded relative">
-      <div
-        class="grid w-full"
-        style="grid-template-columns: 1fr max-content;"
-      >
+      <div class="grid w-full" style="grid-template-columns: 1fr max-content;">
         <div class="flex-auto flex flex-col overflow-auto">
           <div>
             <textarea
@@ -243,10 +235,7 @@ onMounted(async() => {
               />
             </div>
           </div>
-          <div
-            v-show="showCSS"
-            class="text-sm border-t border-$windi-bc"
-          >
+          <div v-show="showCSS" class="text-sm border-t border-$windi-bc">
             <div class="ml-1 p-2 text-sm opacity-50 flex">
               <span>CSS</span>
               <div class="flex-auto" />
@@ -255,19 +244,25 @@ onMounted(async() => {
                 <carbon:circle-packing v-if="mode === 'compile'" />
                 <carbon:chart-bubble-packed v-else />
               </div>
-              <div v-if="showCopy" class="icon-button ml-3" :class="{ active: copied }" title="Copy" @click="copy()">
+              <div
+                v-if="showCopy"
+                class="icon-button ml-3"
+                :class="{ active: copied }"
+                title="Copy"
+                @click="copy()"
+              >
                 <carbon:checkmark-outline v-if="copied" class="text-green-500" />
                 <carbon:copy v-else />
               </div>
             </div>
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <pre class="language-css !bg-transparent max-h-30em !px-4 !py-4" v-html="highlightedCSS" />
+            <pre
+              class="language-css !bg-transparent max-h-30em !px-4 !py-4"
+              v-html="highlightedCSS"
+            />
           </div>
         </div>
-        <div
-          v-if="showPreview"
-          class="border-l border-$windi-bc w-10em p-3 min-h-40"
-        >
+        <div v-if="showPreview" class="border-l border-$windi-bc w-10em p-3 min-h-40">
           <preview-box v-bind="iframeData" :dark="isDark" />
         </div>
       </div>
@@ -277,7 +272,7 @@ onMounted(async() => {
 
 <style lang="postcss">
 .inline-playground .tabs .tab {
-  @apply px-3 py-1 mx-1 cursor-pointer bg-gray-50 dark:bg-true-gray-800 text-gray-400 opacity-75
+  @apply px-3 py-1 mx-1 cursor-pointer bg-gray-50 dark:bg-neutral-800 text-gray-400 opacity-75
     border-t border-l border-r rounded-tr rounded-tl border-$windi-bc;
 }
 .inline-playground .tabs .tab.active {
@@ -287,8 +282,7 @@ onMounted(async() => {
   @apply px-3 py-2 h-auto bg-transparent font-mono text-sm;
 }
 .icon-button {
-  @apply
-    flex items-center text-1.05rem border-0
+  @apply flex items-center text-1.05rem border-0
     focus:outline-none text-$c-text
     opacity-80 cursor-pointer select-none
     hover:opacity-100;

@@ -155,7 +155,7 @@ div[class*='language-'][class*='with-filename'] {
 }
 
 div[class*='language-'] .code-block-filename {
-  @apply absolute top-0 left-0 py-1 px-2 text-xs text-cool-gray-500 dark:text-cool-gray-400 bg-gray-200 dark:bg-dark-300 rounded-br;
+  @apply absolute top-0 left-0 py-1 px-2 text-xs text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-dark-300 rounded-br;
 }
 
 div[class*='language-'] {

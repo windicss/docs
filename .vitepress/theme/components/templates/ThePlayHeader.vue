@@ -8,9 +8,7 @@ const repo = useRepo()
     <div class="flex flex-none h-full w-full px-3 md:px-6">
       <div class="flex items-center flex-1">
         <AppLogo />
-        <span class="hidden md:block text-sm ml-2 mt-1 text-cool-gray-400 dark:text-cool-gray-500">
-          play v1.0.0
-        </span>
+        <span class="hidden md:block text-sm ml-2 mt-1 text-gray-400 dark:text-gray-500">play v1.0.0</span>
       </div>
       <div class="flex items-center md:space-x-3">
         <PlaygroundActionButtons />
@@ -25,8 +23,7 @@ const repo = useRepo()
 
 <style scoped lang="postcss">
 .d-header {
-  @apply
-    fixed top-0 inset-x-0 z-50
+  @apply fixed top-0 inset-x-0 z-50
     bg-light-100 dark:bg-dark-800
     flex items-center
     border-b border-$windi-bc;

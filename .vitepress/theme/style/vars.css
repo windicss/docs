@@ -13,13 +13,13 @@
 html {
   --windi-bg: theme('colors.light.100');
   --windi-hover-bg: theme('colors.light.400');
-  --windi-text: theme('colors.cool-gray.800');
-  --windi-bc: theme('colors.cool-gray.200');
+  --windi-text: theme('colors.gray.800');
+  --windi-bc: theme('colors.gray.200');
 }
 
 html.dark {
   --windi-bg: theme('colors.dark.800');
   --windi-hover-bg: theme('colors.dark.300');
-  --windi-text: theme('colors.cool-gray.100');
+  --windi-text: theme('colors.gray.100');
   --windi-bc: theme('colors.dark.300');
 }

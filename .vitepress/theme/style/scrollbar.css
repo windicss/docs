@@ -10,11 +10,11 @@
 *::-webkit-scrollbar-thumb {
   transition: background .2s ease-in-out;
   border: 3px solid transparent;
-  @apply bg-cool-gray-200 dark:bg-dark-200 rounded-full bg-clip-content;
+  @apply bg-gray-200 dark:bg-dark-200 rounded-full bg-clip-content;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  @apply bg-cool-gray-300 dark:bg-dark-100;
+  @apply bg-gray-300 dark:bg-dark-100;
 }
 
 *::-webkit-scrollbar-corner {

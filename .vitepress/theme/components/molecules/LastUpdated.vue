@@ -19,7 +19,7 @@ const datetime = ref('')
 onMounted(() => {
   // locale string might be different based on end user
   // and will lead to potential hydration mismatch if calculated at build time
-  datetime.value = new Date(page.value.lastUpdated).toLocaleString('en-US')
+  datetime.value = new Date(page.value.lastUpdated || '').toLocaleString('en-US')
 })
 </script>
 
