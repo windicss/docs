@@ -11,18 +11,22 @@
     },
     {
       "url": "https://windicss.org/guide/",
+      "selectors_key": "overview",
       "tags": ["guide"]
     },
     {
       "url": "https://windicss.org/features/",
+      "selectors_key": "overview",
       "tags": ["features"]
     },
     {
       "url": "https://windicss.org/editors/",
+      "selectors_key": "overview",
       "tags": ["editors"]
     },
     {
       "url": "https://windicss.org/intergrations/",
+      "selectors_key": "overview",
       "tags": ["intergrations"]
     }
   ],
@@ -32,9 +36,26 @@
   "selectors": {
     "default": {
       "lvl0": {
-        "selector": ".sidebar h5.active",
+        "selector": ".sidebar h5.active, .content h1",
         "global": true,
         "default_value": "Documentation"
+      },
+      "lvl1": ".content h2",
+      "lvl2": ".content h3, .content li kbd",
+      "lvl3": ".content h4, .content tbody tr td:nth-child(1)",
+      "lvl4": ".content h5",
+      "text": ".content p, .content li",
+      "lang": {
+        "selector": "/html/@lang",
+        "type": "xpath",
+        "global": true
+      }
+    },
+    "overview": {
+      "lvl0": {
+        "selector": ".sidebar h5.parent-active",
+        "global": true,
+        "default_value": "Overview"
       },
       "lvl1": ".content h1",
       "lvl2": ".content h2",

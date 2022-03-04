@@ -63,9 +63,9 @@ const style = computed(() => ([
       dark:text-gray-400
       hover:(text-primary dark:text-primary)`,
   {
-    '!border-primary dark:border-primary !text-primary dark:text-primary': active.value,
+    'active !border-primary dark:border-primary !text-primary dark:text-primary': active.value,
   },
-  { active: isChildActive },
+  { 'parent-active': isChildActive },
 ]))
 
 </script>
