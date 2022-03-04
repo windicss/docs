@@ -9,7 +9,7 @@ import type { PropType } from 'vue'
 
 const props = defineProps({
   item: {
-    type: Object as PropType<Partial<DefaultTheme.SideBarItem>>,
+    type: Object as PropType<DefaultTheme.SideBarItem>,
     required: true,
   },
   header: {
@@ -38,6 +38,8 @@ function resolveLink(base: string, path?: string): string | undefined {
 
 const active = computed(() => isActive(route, props.item.link))
 const link = resolveLink(site.value.base, props.item.link)
+// @ts-ignore
+const isChildActive = props.item.children && props.item.children.map(child => isActive(route, child.link)).some(Boolean)
 
 const style = computed(() => ([
   'transition duration-100',
@@ -63,6 +65,7 @@ const style = computed(() => ([
   {
     '!border-primary dark:border-primary !text-primary dark:text-primary': active.value,
   },
+  { active: isChildActive },
 ]))
 
 </script>

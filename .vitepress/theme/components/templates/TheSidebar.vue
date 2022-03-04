@@ -16,7 +16,7 @@ watch(openSideBar, (v) => {
 </script>
 
 <template>
-  <aside class="fixed z-50 lg:z-0 lg:static">
+  <aside class="sidebar fixed z-50 lg:z-0 lg:static">
     <div class="h-full pointer-events-none">
       <SidebarBackground />
       <div

@@ -117,7 +117,7 @@ export namespace DefaultTheme {
      */
     collapsable?: boolean
 
-    children: SideBarItem[]
+    children?: SideBarItem[]
   }
 
   // algolia  ------------------------------------------------------------------

@@ -1,10 +1,10 @@
 <template>
   <TheHeader />
-  <AppLayout class="content">
+  <AppLayout class="grid-leyout">
     <TheSidebar class="lg:hidden" />
     <ContentLayout class="!pt-0">
       <HomeHero />
-      <div class="prose min-w-0">
+      <div class="content prose min-w-0">
         <Content />
       </div>
     </ContentLayout>
@@ -13,7 +13,7 @@
 </template>
 
 <style scoped lang="postcss">
-.content {
+.grid-leyout {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;

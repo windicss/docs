@@ -3,19 +3,27 @@
   "start_urls": [
     {
       "url": "https://windicss.org/utilities/",
-      "selectors_key": "utilities",
-      "tags": ["utilities"],
-      "page_rank": 3
+      "tags": ["utilities"]
     },
     {
       "url": "https://windicss.org/plugins/",
-      "tags": ["plugins"],
-      "page_rank": 2
+      "tags": ["plugins"]
     },
     {
       "url": "https://windicss.org/guide/",
-      "tags": ["guide"],
-      "page_rank": 1
+      "tags": ["guide"]
+    },
+    {
+      "url": "https://windicss.org/features/",
+      "tags": ["features"]
+    },
+    {
+      "url": "https://windicss.org/editors/",
+      "tags": ["editors"]
+    },
+    {
+      "url": "https://windicss.org/intergrations/",
+      "tags": ["intergrations"]
     }
   ],
   "stop_urls": [
@@ -24,32 +32,15 @@
   "selectors": {
     "default": {
       "lvl0": {
-        "selector": "p.sidebar-heading.open",
+        "selector": ".sidebar h5.active",
         "global": true,
-        "default_value": "Guide"
+        "default_value": "Documentation"
       },
       "lvl1": ".content h1",
       "lvl2": ".content h2",
       "lvl3": ".content h3, .content li kbd",
-      "lvl4": ".content h4",
-      "lvl5": ".content h5",
-      "text": ".content p, .content li",
-      "lang": {
-        "selector": "/html/@lang",
-        "type": "xpath",
-        "global": true
-      }
-    },
-    "utilities": {
-      "lvl0": {
-        "selector": "p.sidebar-heading.open",
-        "global": true,
-        "default_value": "Utilities"
-      },
-      "lvl1": ".content h1",
-      "lvl2": ".content h2",
-      "lvl3": ".content h3",
       "lvl4": ".content h4, .content tbody tr td:nth-child(1)",
+      "lvl5": ".content h5",
       "text": ".content p, .content li",
       "lang": {
         "selector": "/html/@lang",

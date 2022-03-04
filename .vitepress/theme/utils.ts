@@ -137,7 +137,7 @@ export function getFlatSideBarLinks(
       links.push({ text: item.text, link: removeExtension(item.link) })
 
     if (isSideBarGroup(item))
-      links = [...links, ...getFlatSideBarLinks(item.children)]
+      links = [...links, ...getFlatSideBarLinks(item.children || [])]
 
     return links
   }, [])

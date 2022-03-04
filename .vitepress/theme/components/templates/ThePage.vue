@@ -1,10 +1,10 @@
 <template>
   <TheHeader />
-  <AppLayout class="content">
+  <AppLayout class="grid-leyout">
     <TheSidebar />
     <ContentLayout>
       <HomeHero />
-      <div class="prose min-w-0">
+      <div class="content prose min-w-0">
         <Content />
       </div>
       <PageFooter />
@@ -14,7 +14,7 @@
 </template>
 
 <style scoped lang="postcss">
-.content {
+.grid-leyout {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -22,7 +22,7 @@
 }
 
 @screen lg {
-  .content {
+  .grid-leyout {
     grid-template-columns: 250px 1fr 250px;
   }
 }
