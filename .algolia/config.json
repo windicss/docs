@@ -36,7 +36,7 @@
   "selectors": {
     "default": {
       "lvl0": {
-        "selector": ".sidebar h5.active, .content h1",
+        "selector": ".sidebar a.active",
         "global": true,
         "default_value": "Documentation"
       },
