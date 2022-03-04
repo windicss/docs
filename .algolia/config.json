@@ -25,9 +25,9 @@
       "tags": ["editors"]
     },
     {
-      "url": "https://windicss.org/intergrations/",
+      "url": "https://windicss.org/integrations/",
       "selectors_key": "overview",
-      "tags": ["intergrations"]
+      "tags": ["integrations"]
     }
   ],
   "stop_urls": [
