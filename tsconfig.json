@@ -11,9 +11,12 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,
+    "isolatedModules": true,
+    "types": ["vite/client", "node"],
     "paths": {
-      "@/*": ["./.vitepress/theme/*"]
-    }
+      "@/*": ["./.vitepress/theme/*"],
+      "preact/*": ["./.vitepress/theme/empty.d.ts"]
+    },
   },
   "include": [
     ".vitepress/**/*.ts",

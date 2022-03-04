@@ -145,3 +145,5 @@ class Play extends HTMLElement {
 }
 
 window.customElements.define('preview-box', Play)
+
+export {}

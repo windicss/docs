@@ -1,6 +1,7 @@
 import docsearch from '@docsearch/js'
 import { useData, useRoute, useRouter } from 'vitepress'
 import { getCurrentInstance, onMounted, watch } from 'vue'
+import React from 'preact/compat'
 
 import type { DefaultTheme } from '@/config'
 import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
@@ -96,12 +97,9 @@ export function useSearchBox(props: Readonly<{
           const relativeHit = hit.url.startsWith('http')
             ? getRelativePath(hit.url as string)
             : hit.url
-          return {
-            type: 'a',
-            ref: undefined,
-            constructor: undefined,
-            key: undefined,
-            props: {
+          // @ts-ignore
+          return React.createElement('a',
+            {
               href: hit.url,
               onClick: (event: MouseEvent) => {
                 if (isSpecialClick(event))
@@ -120,9 +118,9 @@ export function useSearchBox(props: Readonly<{
 
                 router.go(relativeHit)
               },
-              children,
             },
-          }
+            children,
+          )
         },
       }),
     )
