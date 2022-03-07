@@ -1,12 +1,12 @@
-import { metaData } from './constants'
-import { mdRenderFilename } from './markdown'
-import head from './head'
-import themeConfig from './theme'
+import { defineConfigWithTheme } from 'vitepress'
+import { metaData } from './config/constants'
+import { mdRenderFilename } from './config/markdown'
+import head from './config/head'
+import themeConfig from './config/theme'
 import type { DefaultTheme } from '@/config'
-import type { UserConfig } from 'vitepress'
 
-const config: UserConfig<DefaultTheme.Config> = {
-  title: 'Windi CSS',
+export default defineConfigWithTheme<DefaultTheme.Config>({
+  title: metaData.title,
   description: metaData.description,
   head,
   themeConfig,
@@ -23,6 +23,4 @@ const config: UserConfig<DefaultTheme.Config> = {
       },
     },
   },
-}
-
-export default config
+})

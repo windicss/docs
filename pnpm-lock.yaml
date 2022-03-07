@@ -21,7 +21,6 @@ specifiers:
   codemirror: ^5.65.2
   codemirror-theme-vars: ^0.1.1
   esbuild: ^0.14.24
-  esbuild-register: ^3.3.2
   eslint: ^8.10.0
   eslint-plugin-markdown: ^2.2.1
   json5: ^2.2.0
@@ -78,7 +77,6 @@ devDependencies:
   '@vue/compiler-sfc': 3.2.31
   axios: 0.26.0
   esbuild: 0.14.24
-  esbuild-register: 3.3.2_esbuild@0.14.24
   eslint: 8.10.0
   eslint-plugin-markdown: 2.2.1_eslint@8.10.0
   markdown-it: 12.3.2
@@ -5946,14 +5944,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /esbuild-register/3.3.2_esbuild@0.14.24:
-    resolution: {integrity: sha512-jceAtTO6zxPmCfSD5cBb3rgIK1vmuqCKYwgylHiS1BF4pq0jJiJb4K2QMuqF4BEw7XDBRatYzip0upyTzfkgsQ==}
-    peerDependencies:
-      esbuild: '>=0.12 <1'
-    dependencies:
-      esbuild: 0.14.24
-    dev: true
 
   /esbuild-sunos-64/0.14.24:
     resolution: {integrity: sha512-5iYi76kGQdyCqvSUknqjTZ0T19KvQD6hiklPAY6kVoQ1YoDUGCGILRI9eM/3zLNLG1bUFgcdJ2ktaBxwyXuHyA==}
