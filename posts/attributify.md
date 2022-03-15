@@ -22,9 +22,9 @@ md-bg = "blue-300 dark:blue-400"
 
 ## Utilities
 
-#### Font
+### Font
 
-> font = "sans italic leading-3"
+`font = "sans italic leading-3"`
 
 | values                                                       | property             |
 | :----------------------------------------------------------- | :------------------- |
@@ -36,9 +36,9 @@ md-bg = "blue-300 dark:blue-400"
 | tracking-tighter,tracking-tight, tracking-normal, ..., tracking-widest | letter-spacing       |
 | leading-none, leading-tight, leading-normal, ..., 0, 1, 2, 3, ... | line-height          |
 
-#### Text
+### Text
 
-> text = "sm gray-900 underline truncate"
+`text = "sm gray-900 underline truncate"`
 
 | values                                                       | property            |
 | :----------------------------------------------------------- | :------------------ |
@@ -64,11 +64,11 @@ md-bg = "blue-300 dark:blue-400"
 | placeholder-blue-500, placeholder-gray-700, ...              | placeholder-color   |
 | placeholder-opacity-50, placeholder-opacity-90, ...          | placeholder-opacity |
 
-> You can also use `placeholder = "blue-500 opacity-50"`, but usually it conflicts with the placeholder attribute of input element, so it is better to put it in text, and it's also makes sense.
+`You can also use `placeholder = "blue-500 opacity-50"`, but usually it conflicts with the `placeholder attribute of input element, so it is better to put it in text, and it's also makes sense.
 
-#### Underline
+### Underline
 
-> underline = "~ green-500 opacity-50 2 offset-2"
+`underline = "~ green-500 opacity-50 2 offset-2"`
 
 | values              | property            |
 | :------------------ | :------------------ |
@@ -78,9 +78,9 @@ md-bg = "blue-300 dark:blue-400"
 | auto, 0, 1, 2, 3, 4 ...  | text-decoration-thickness |
 | offset-auto, offset-1, offset-2, ...  | text-decoration-offset |
 
-#### List
+### List
 
-> list = "disc inside"
+`list = "disc inside"`
 
 | values              | property            |
 | :------------------ | :------------------ |
@@ -89,9 +89,9 @@ md-bg = "blue-300 dark:blue-400"
 
 ---
 
-#### Background
+### Background
 
-> bg = "gray-100 opacity-90"
+`bg = "gray-100 opacity-90"`
 
 | values                                         | property              |
 | :--------------------------------------------- | :-------------------- |
@@ -106,9 +106,9 @@ md-bg = "blue-300 dark:blue-400"
 | blend-normal, blend-overlay, blend-darken, ... | background-blend-mode |
 | none                                           | background-image      |
 
-#### Gradient
+### Gradient
 
-> gradient = "to-r from-yellow-400 via-red-500 to-pink-500"
+`gradient = "to-r from-yellow-400 via-red-500 to-pink-500"`
 
 | values                       | property         |
 | :--------------------------- | :--------------- |
@@ -117,11 +117,11 @@ md-bg = "blue-300 dark:blue-400"
 | via-red-500, ...             | via-color        |
 | to-pink-500, ...             | to-color         |
 
-#### Border
+### Border
 
-> border = "~ rounded dashed gray-400 opacity-80"
+`border = "~ rounded dashed gray-400 opacity-80"`
 >
-> ~ represent border itself, means border-DEFAULT
+`~ represent border itself, means border-DEFAULT`
 
 | values                                      | property                              |
 | :------------------------------------------ | :------------------------------------ |
@@ -132,9 +132,9 @@ md-bg = "blue-300 dark:blue-400"
 | gray-500, ...                               | border-color                          |
 | opacity-50, ...                             | border-opacity                        |
 
-#### Divide
+### Divide
 
-> divide = "y dashed gray-800 opacity-90"
+`divide = "y dashed gray-800 opacity-90"`
 
 | values                               | property       |
 | :----------------------------------- | :------------- |
@@ -143,9 +143,9 @@ md-bg = "blue-300 dark:blue-400"
 | gray-500, ...                        | divide-color   |
 | opacity-90, ...                      | divide-opacity |
 
-#### Ring
+### Ring
 
-> ring = "2 gray-200 opacity-50 offset-1 offset-gray-400"
+`ring = "2 gray-200 opacity-50 offset-1 offset-gray-400"`
 
 | values                 | property          |
 | :--------------------- | :---------------- |
@@ -155,9 +155,9 @@ md-bg = "blue-300 dark:blue-400"
 | offset-4, ...          | ring-offset-width |
 | offset-gray-200, ...   | ring-offset-color |
 
-#### Icon
+### Icon
 
-> icon = "fill-gray-200 stroke-blue-400 stroke-2"
+`icon = "fill-gray-200 stroke-blue-400 stroke-2"`
 
 | values                               | property     |
 | :----------------------------------- | :----------- |
@@ -169,23 +169,23 @@ md-bg = "blue-300 dark:blue-400"
 | stroke-cap-auto , stroke-cap-square..| stroke-line-cap |
 | stroke-join-auto, stroke-join-auto...| stroke-line-join |
 
-> You can also use `stroke = "2 gray-400"` or `fill=gray-200`, but usually it conflicts with the fill/stroke attribute of svg element, so it is better to put it in svg.
+`You can also use `stroke = "2 gray-400"` or `fill=gray-200`, but usually it conflicts with the `fill/stroke attribute of svg element, so it is better to put it in svg.
 
 ---
 
-#### Container
+### Container
 
-> container = "~"
+`container = "~"`
 >
-> container just a single utility, you can also write it in the class attr.
+`container just a single utility, you can also write it in the class attr.`
 
 | values | property        |
 | :----- | :-------------- |
 | ~      | width/max-width |
 
-#### Padding
+### Padding
 
-> p = "x-2 y-4 md:4"
+`p = "x-2 y-4 md:4"`
 
 | values                      | property                    |
 | :-------------------------- | :-------------------------- |
@@ -197,9 +197,9 @@ md-bg = "blue-300 dark:blue-400"
 | b-0, b-px, b-1, b-2, b-4... | padding-bottom              |
 | r-0, r-px, r-1, r-2, r-4... | padding-right               |
 
-#### Margin
+### Margin
 
-> m = "x-2 y-4 md:4"
+`m = "x-2 y-4 md:4"`
 
 | values                      | property                  |
 | :-------------------------- | :------------------------ |
@@ -211,9 +211,9 @@ md-bg = "blue-300 dark:blue-400"
 | b-0, b-px, b-1, b-2, b-4... | margin-bottom             |
 | r-0, r-px, r-1, r-2, r-4... | margin-right              |
 
-#### Space
+### Space
 
-> space = "x-2 -y-4 y-reverse"
+`space = "x-2 -y-4 y-reverse"`
 
 | values         | property        |
 | :------------- | :-------------- |
@@ -222,57 +222,57 @@ md-bg = "blue-300 dark:blue-400"
 | y-2, -y-2, ... | space-y         |
 | y-reverse      | space-y-reverse |
 
-#### Width
+### Width
 
-> w = "2xl md:screen"
+`w = "2xl md:screen"`
 
 | values                                    | property |
 | :---------------------------------------- | :------- |
 | 0, auto, px, full, sm, md, screen-sm, ... | width    |
 
-#### Min-Width
+### Min-Width
 
-> min-w = "2xl md:screen"
+`min-w = "2xl md:screen"`
 
 | values                              | property  |
 | :---------------------------------- | :-------- |
 | 0, px, full, sm, md, screen-sm, ... | min-width |
 
-#### Max-Width
+### Max-Width
 
-> max-w = "2xl md:screen"
+`max-w = "2xl md:screen"`
 
 | values                              | property  |
 | :---------------------------------- | :-------- |
 | 0, px, full, sm, md, screen-sm, ... | max-width |
 
-#### Height
+### Height
 
-> h = "screen"
+`h = "screen"`
 
 | values                                    | property |
 | :---------------------------------------- | :------- |
 | 0, auto, px, full, sm, md, screen-sm, ... | height   |
 
-#### Min-Height
+### Min-Height
 
-> min-h = "screen"
+`min-h = "screen"`
 
 | values                              | property   |
 | :---------------------------------- | :--------- |
 | 0, px, full, sm, md, screen-sm, ... | min-height |
 
-#### Max-Height
+### Max-Height
 
-> max-h = "screen"
+`max-h = "screen"`
 
 | values                              | property   |
 | :---------------------------------- | :--------- |
 | 0, px, full, sm, md, screen-sm, ... | max-height |
 
-#### Flex
+### Flex
 
-> flex = "md:~ col wrap"
+`flex = "md:~ col wrap"`
 
 | values                             | property       |
 | :--------------------------------- | :------------- |
@@ -283,9 +283,9 @@ md-bg = "blue-300 dark:blue-400"
 | grow, grow-0                       | flex-grow      |
 | shrink, shrink-0                   | flex-shrink    |
 
-#### Grid
+### Grid
 
-> grid = "~ cols-1 lg:cols-3 gap-4"
+`grid = "~ cols-1 lg:cols-3 gap-4"`
 
 | values                                             | property               |
 | :------------------------------------------------- | :--------------------- |
@@ -298,9 +298,9 @@ md-bg = "blue-300 dark:blue-400"
 | auto-rows-auto, auto-rows-min, auto-rows-max, ...  | gird-auto-rows         |
 | gap-2, gap-x-4, gap-y-2, ...                       | gap/column-gap/row-gap |
 
-#### Table
+### Table
 
-> table = "inline column"
+`table = "inline column"`
 
 | values                                                       | property     |
 | :----------------------------------------------------------- | :----------- |
@@ -311,15 +311,15 @@ md-bg = "blue-300 dark:blue-400"
 
 ### Order
 
-> order = "first lg:last"
+`order = "first lg:last"`
 
 | values                 | property |
 | :--------------------- | :------- |
 | 1, 2, first, last, ... | order    |
 
-#### Align
+### Align
 
-> align = "start md:end"
+`align = "start md:end"`
 
 | values                                                       | property      |
 | :----------------------------------------------------------- | :------------ |
@@ -327,9 +327,9 @@ md-bg = "blue-300 dark:blue-400"
 | items-start, items-end, items-center, items-baseline, items-stretch | align-items   |
 | self-auto, self-start, self-end, self-center, self-stretch   | align-self    |
 
-#### Justify
+### Justify
 
-> justify = "start md:between"
+`justify = "start md:between"`
 
 | values                                                       | property        |
 | :----------------------------------------------------------- | :-------------- |
@@ -337,9 +337,9 @@ md-bg = "blue-300 dark:blue-400"
 | items-start, items-end, items-center, items-baseline, items-stretch | justify-items   |
 | self-auto, self-start, self-end, self-center, self-stretch   | justify-self    |
 
-#### Place
+### Place
 
-> place = "start md:center"
+`place = "start md:center"`
 
 | values                                                       | property      |
 | :----------------------------------------------------------- | :------------ |
@@ -347,9 +347,9 @@ md-bg = "blue-300 dark:blue-400"
 | items-start, items-end, items-center, items-stretch          | place-items   |
 | self-auto, self-start, self-end, self-center, self-stretch   | place-self    |
 
-#### Display
+### Display
 
-> display = "block md:hidden"
+`display = "block md:hidden"`
 
 | values                                                       | property   |
 | :----------------------------------------------------------- | :--------- |
@@ -357,9 +357,9 @@ md-bg = "blue-300 dark:blue-400"
 | visible, invisible                                           | visibility |
 | backface-visible, backface-hidden                   | backface-visibility |
 
-#### Position
+### Position
 
-> pos = "fixed top-0 left-4"
+`pos = "fixed top-0 left-4"`
 
 | values                                                  | property              |
 | :------------------------------------------------------ | :-------------------- |
@@ -370,44 +370,44 @@ md-bg = "blue-300 dark:blue-400"
 | clear-left, clear-right, clear-both, clear-none         | clear                 |
 | isolate, isolation-auto                                 | isolation             |
 
-#### Box
+### Box
 
-> box = "decoration-slice content"
+`box = "decoration-slice content"`
 
 | values                             | property             |
 | :--------------------------------- | :------------------- |
 | decoration-slice, decoration-clone | box-decoration-break |
 | border, content                    | box-sizing           |
 
-#### Caret
+### Caret
 
-> caret = "gray-500 opacity-50"
+`caret = "gray-500 opacity-50"`
 
 | values                             | property             |
 | :--------------------------------- | :------------------- |
 | gray-500 transparent ...           | caret-color          |
 | opacity-0, opacity-50, ...         | caret-opacity        |
 
-#### Isolation
+### Isolation
 
-> isolation = "isolate md:auto"
+`isolation = "isolate md:auto"`
 
 | values        | property  |
 | :------------ | :-------- |
 | isolate, auto | isolation |
 
-#### Object
+### Object
 
-> object = "none center"
+`object = "none center"`
 
 | values                                                  | property        |
 | :------------------------------------------------------ | :-------------- |
 | contain, cover, fill, none, scale-down                  | object-fit      |
 | bottom, center, left, left-bottom, left-top, right, ... | object-position |
 
-#### Overflow
+### Overflow
 
-> overflow = "auto md:scroll"
+`overflow = "auto md:scroll"`
 
 | values                                | property   |
 | :------------------------------------ | :--------- |
@@ -415,9 +415,9 @@ md-bg = "blue-300 dark:blue-400"
 | x-auto, x-hidden, x-visible, x-scroll | overflow-x |
 | y-auto, y-hidden, y-visible, y-scroll | overflow-y |
 
-#### OverScroll
+### OverScroll
 
-> overscroll = "auto md:contain"
+`overscroll = "auto md:contain"`
 
 | values                    | property              |
 | :------------------------ | :-------------------- |
@@ -425,9 +425,9 @@ md-bg = "blue-300 dark:blue-400"
 | x-auto, x-contain, x-none | overscroll-behavior-x |
 | y-auto, y-contain, y-none | overscroll-behavior-y |
 
-#### ZIndex
+### ZIndex
 
-> z = "0 md:50"
+`z = "0 md:50"`
 
 | values                   | property |
 | :----------------------- | :------- |
@@ -435,34 +435,34 @@ md-bg = "blue-300 dark:blue-400"
 
 ---
 
-#### Shadow
+### Shadow
 
-> shadow = "md gray-200"
+`shadow = "md gray-200"`
 
 | values                              | property     |
 | :---------------------------------- | :----------- |
 | sm, ~, md, lg, xl, 2xl, inner, none | box-shadow   |
 | gray-200, ...                       | shadow-color |
 
-#### Opacity
+### Opacity
 
-> opacity = "100 md:50"
+`opacity = "100 md:50"`
 
 | values            | property |
 | :---------------- | :------- |
 | 0, 5, 10, 20, ... | opacity  |
 
-#### Blend
+### Blend
 
-> blend = "darken md:hard-light"
+`blend = "darken md:hard-light"`
 
 | values                                         | property       |
 | :--------------------------------------------- | :------------- |
 | normal, multiply, screen, overlay, darken, ... | mix-blend-mode |
 
-#### Filter
+### Filter
 
-> filter = "~ blur-sm brightness-125"
+`filter = "~ blur-sm brightness-125"`
 
 | values                                                       | property    |
 | :----------------------------------------------------------- | :---------- |
@@ -477,9 +477,9 @@ md-bg = "blue-300 dark:blue-400"
 | saturate-0, saturate-50, saturate-100, ...                   | saturate    |
 | sepia-0, sepia                                               | sepia       |
 
-#### Backdrop Filter
+### Backdrop Filter
 
-> backdrop = "~ blur-sm brightness-125"
+`backdrop = "~ blur-sm brightness-125"`
 
 | values                                                       | property        |
 | :----------------------------------------------------------- | :-------------- |
@@ -494,9 +494,9 @@ md-bg = "blue-300 dark:blue-400"
 | saturate-0, saturate-50, saturate-100, ...                   | saturate        |
 | sepia-0, sepia                                               | sepia           |
 
-#### Transition
+### Transition
 
-> transition = "~ duration-500 ease-in-out"
+`transition = "~ duration-500 ease-in-out"`
 
 | values                                           | property                   |
 | :----------------------------------------------- | :------------------------- |
@@ -505,17 +505,17 @@ md-bg = "blue-300 dark:blue-400"
 | ease-linear, ease-in, ease-out, ease-in-out      | transition-timing-function |
 | delay-75, delay-100, delay-150, ...              | transition-delay           |
 
-#### Animate
+### Animate
 
-> animate = "spin"
+`animate = "spin"`
 
 | values                          | property  |
 | :------------------------------ | :-------- |
 | none, spin, ping, pulse, bounce | animation |
 
-#### Transform
+### Transform
 
-> transform = "~ rotate-45 lg:none"
+`transform = "~ rotate-45 lg:none"`
 
 | values                                                       | property                |
 | :----------------------------------------------------------- | :---------------------- |
@@ -533,57 +533,57 @@ md-bg = "blue-300 dark:blue-400"
 
 ---
 
-#### Appearance
+### Appearance
 
-> appearance = "none"
+`appearance = "none"`
 
 | values | property   |
 | :----- | :--------- |
 | none   | appearance |
 
-#### Cursor
+### Cursor
 
-> cursor = "pointer"
+`cursor = "pointer"`
 
 | values                                                      | property |
 | :---------------------------------------------------------- | :------- |
 | auto, default, pointer, wait, text, move, help, not-allowed | cursor   |
 
-#### Outline
+### Outline
 
-> outline = "none"
+`outline = "none"`
 
 | values             | property |
 | :----------------- | :------- |
 | none, white, black | outline  |
 
-#### Pointer Events
+### Pointer Events
 
-> pointer = "none"
+`pointer = "none"`
 
 | values     | property       |
 | :--------- | :------------- |
 | none, auto | pointer-events |
 
-#### Resize
+### Resize
 
-> resize = "~"
+`resize = "~"`
 
 | values        | property |
 | :------------ | :------- |
 | ~, x, y, none | resize   |
 
-#### User Select
+### User Select
 
-> select = "none"
+`select = "none"`
 
 | values                | property    |
 | :-------------------- | :---------- |
 | none, text, all, auto | user-select |
 
-#### Screen Reader
+### Screen Reader
 
-> sr = "only"
+`sr = "only"`
 
 | values         | property      |
 | :------------- | :------------ |
