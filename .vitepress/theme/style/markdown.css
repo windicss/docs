@@ -122,8 +122,7 @@ h6:focus .header-anchor {
   line-height: 1.5rem;
   padding: 0.6rem 1.2rem;
   opacity: 0.8;
-  margin-left: 1rem;
-  @apply ml-1 lg:ml-4 mr-2 lg:mr-6;
+  @apply ml-0 mr-2 lg:mr-6;
 }
 
 .prose blockquote > :first-child {
