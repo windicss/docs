@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toRefs } from 'vue'
 import { useNavLink } from '@/logics/navLink'
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 const props = defineProps<{
   item: DefaultTheme.NavItemWithLink
   dropdown?: boolean

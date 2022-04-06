@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSearchBox } from '@/logics/search'
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 
 import '@docsearch/css/dist/style.css'
 

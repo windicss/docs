@@ -4,7 +4,7 @@ import { useData, useRoute } from 'vitepress'
 
 import { isActive, joinUrl } from '@/utils'
 
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 import type { PropType } from 'vue'
 
 const props = defineProps({

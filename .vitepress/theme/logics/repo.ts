@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 
 export const platforms = ['GitHub', 'GitLab', 'Bitbucket'].map((platform) => {
   return [platform, new RegExp(platform, 'i')] as const

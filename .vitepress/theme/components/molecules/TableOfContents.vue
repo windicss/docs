@@ -3,7 +3,7 @@ import { useRoute } from 'vitepress'
 
 import { computed } from 'vue'
 import type { Header } from '@/types'
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 
 interface HeaderWithChildren extends Header {
   children?: Header[]
@@ -50,6 +50,7 @@ const hasHeaders = computed(() => headers.value && headers.value?.length > 0)
       <SidebarLinkItem
         :item="{
           text: 'Table of Contents',
+          children: []
         }"
         class="px-2"
         :header="true"

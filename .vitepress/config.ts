@@ -3,7 +3,7 @@ import { metaData } from './config/constants'
 import { mdRenderFilename } from './config/markdown'
 import head from './config/head'
 import themeConfig from './config/theme'
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 
 export default defineConfigWithTheme<DefaultTheme.Config>({
   title: metaData.title,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 import type { PropType } from 'vue'
 
 const props = defineProps({

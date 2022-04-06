@@ -3,7 +3,7 @@ import { useData, useRoute, useRouter } from 'vitepress'
 import { getCurrentInstance, onMounted, watch } from 'vue'
 import React from 'preact/compat'
 
-import type { DefaultTheme } from '@/config'
+import type { DefaultTheme } from 'vitepress'
 
 export function useSearchBox(props: Readonly<{
   options: DefaultTheme.AlgoliaSearchOptions
@@ -57,6 +57,7 @@ export function useSearchBox(props: Readonly<{
     // based on the language
     const facetFilters = props.multilang ? [`language:${lang.value}`] : []
     docsearch(
+    // @ts-ignore-next-line
       Object.assign({}, userOptions, {
         container: '#docsearch',
         searchParameters: Object.assign({}, userOptions.searchParameters, {

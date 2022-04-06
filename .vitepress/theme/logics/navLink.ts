@@ -2,7 +2,7 @@ import { computed } from 'vue'
 import { useRoute, withBase } from 'vitepress'
 import { isExternal as isExternalCheck } from '../utils'
 
-import type { DefaultTheme } from '../config'
+import type { DefaultTheme } from 'vitepress'
 import type { Ref } from 'vue'
 
 export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>, isDropdown = false) {

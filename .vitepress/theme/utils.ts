@@ -1,5 +1,4 @@
-import type { Route } from 'vitepress'
-import type { DefaultTheme } from './config'
+import type { DefaultTheme, Route } from 'vitepress'
 
 export const hashRE = /#.*$/
 export const extRE = /(index)?\.(md|html)$/
