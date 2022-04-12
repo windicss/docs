@@ -57,11 +57,11 @@ That's it! Starting using [classes utilities] or [CSS directives] in your app, a
 
 ### TypeScript
 
-Enable TypeScript for your `tailwind.config.js`? Sure, why not?
+Enable TypeScript for your `windi.config.js`? Sure, why not?
 
-Rename it to `tailwind.config.ts` and things just work!
+Rename it to `windi.config.ts` and things just work!
 
-```ts tailwind.config.ts
+```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
