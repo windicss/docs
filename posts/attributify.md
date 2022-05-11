@@ -295,7 +295,7 @@ md-bg = "blue-300 dark:blue-400"
 | rows-1, rows-3, rows-none, ...                     | grid-template-rows     |
 | flow-row, flow-col, flow-row-dense, flow-col-dense | grid-auto-flow         |
 | auto-cols-auto, auto-cols-min, auto-cols-max, ...  | grid-auto-columns      |
-| auto-rows-auto, auto-rows-min, auto-rows-max, ...  | gird-auto-rows         |
+| auto-rows-auto, auto-rows-min, auto-rows-max, ...  | grid-auto-rows         |
 | gap-2, gap-x-4, gap-y-2, ...                       | gap/column-gap/row-gap |
 
 ### Table
