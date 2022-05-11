@@ -105,7 +105,7 @@ Oh, and don't worry about the final bundle, in production build `virtual:windi-d
 
 ## Configuration
 
-### Preflight (style reseting)
+### Preflight (style resetting)
 
 Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
 
