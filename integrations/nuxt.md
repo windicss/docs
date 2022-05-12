@@ -73,7 +73,7 @@ By default, we scan your source code statically and find all the usages of the u
 <div :class="{ ['p-'+size]: true}">
 ```
 
-For that, you will need to specify the possible combinations in the `safelist` options of `webpack.config.js`.
+For that, you will need to specify the possible combinations in the `safelist` options of `windi.config.js`.
 
 ```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
