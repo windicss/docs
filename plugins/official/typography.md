@@ -81,7 +81,16 @@ export default {
     },
   },
   plugins: [
-    require('windicss/plugin/typography'),
+    require('windicss/plugin/typography')({
+      // Turns text color to light, when dark mode enabled. Default = false
+      darkMode: true,
+      // Right-to-left mode (e.g. for Arabic, Uyghur languages). Default = false
+      rtl: true,
+      // Classname for typography plugin. Default = 'prose'
+      className: 'my-prose',
+      // Additional modifiers
+      modifiers: ['sm', 'lg'],
+    }),
     // ...
   ],
 }
