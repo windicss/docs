@@ -1,6 +1,6 @@
 # Colors
 
-<ColorsPalette />
+<!-- <ColorsPalette /> -->
 
 ## Customization
 
