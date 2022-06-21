@@ -17,7 +17,7 @@ This means unprefixed utilities (like `p-1`) take effect on all screen sizes, wh
 We also provided the ability to have more control over the query range by adding the `<` and `@` prefixes:
 
 ```bash
-lg  => greater or equal than this breakpoint
+lg  => equalt to and greater than this breakpoint
 <lg => smaller than this breakpoint
 @lg => exactly this breakpoint range
 ```
