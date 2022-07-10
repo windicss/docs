@@ -135,6 +135,18 @@ For example, you could then use `print:hidden` to hide elements when styling for
 | marker                      | `.{utility} *::marker, {utility}::marker` | Targets the marker pseudo-element. Can be used inheritable. |
 | selection                   | `.{utility}::selection { ... }`           | Targets the selection pseudo-element.                       |
 
+#### Pseudo Element Content
+
+The content utilities generate the corresponding content css, such as `content: ''`, which can be very helpful in many cases.
+
+<PlaygroundWithVariants
+  variant='[&quot;&quot;]'
+  :variants="['DEFAULT', '[&quot;&quot;]', '👍', 'open-quote', '\[attr(after)\]']"
+  prefix='after:content'
+  fixed='after:text-red-500 after:pl-2 after:inline-block'
+  html='&lt;div class="{class}" after="after text"&gt;Element&lt;/div&gt;'
+/>
+
 ### Parent Selectors
 
 | Variant | Rule | Description |
