@@ -137,7 +137,7 @@ For example, you could then use `print:hidden` to hide elements when styling for
 
 #### Pseudo Element Content
 
-The content utilities generate the corresponding content css, such as `content: ''`, which can be very helpful in many cases.
+The content utilities generate the corresponding content css, such as `content: ""`, which can be very helpful in many cases.
 
 <PlaygroundWithVariants
   variant='[&quot;&quot;]'
