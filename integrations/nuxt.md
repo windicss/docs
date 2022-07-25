@@ -24,12 +24,13 @@ export default {
 ```
 
 ### Nuxt 3
+note: `buildModules` is no longer needed in Nuxt 3 and Nuxt Bridge; all modules should be added to modules instead.
 
 ```js nuxt.config.js
 import { defineNuxtConfig } from 'nuxt3'
 
 export default defineNuxtConfig({
-  buildModules: [
+  modules: [
     'nuxt-windicss',
   ],
 })
