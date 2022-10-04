@@ -1,5 +1,13 @@
 # Filter
 
+<br>
+
+<blockquote>
+  Note that in order for these filters to be usable, you must <a href="https://windicss.org/plugins/official/filters.html">setup</a> filters in the windi.config file.
+</blockquote>
+
+<br>
+
 Utilities for enabling and disabling filters on an element.
 
 <PlaygroundWithVariants
