@@ -80,7 +80,7 @@ export default {
 
 #### Disable Preflight
 
-_ngridsome.config.js_
+_vue.config.js_
 
 ```js
 module.exports = {
