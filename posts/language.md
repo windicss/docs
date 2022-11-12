@@ -152,7 +152,7 @@ and /* this is multi line comment */
 
 ## **Data Types**
 
-## **boolean**
+### **boolean**
 
 ```css
 @var open = True;
