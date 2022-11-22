@@ -26,57 +26,58 @@ md-bg = "blue-300 dark:blue-400"
 
 `font = "sans italic leading-3"`
 
-| values                                                       | property             |
-| :----------------------------------------------------------- | :------------------- |
-| sans, serif, mono                                            | font-family          |
-| italic, not-italic                                           | font-style           |
-| thin, extralight, light, normal, medium, semibold, bold, extrabold, black | font-weight          |
-| antialiased, subpixel-antialiased                            | font-smoothing       |
+| values                                                                               | property             |
+| :----------------------------------------------------------------------------------- | :------------------- |
+| sans, serif, mono                                                                    | font-family          |
+| italic, not-italic                                                                   | font-style           |
+| thin, extralight, light, normal, medium, semibold, bold, extrabold, black            | font-weight          |
+| antialiased, subpixel-antialiased                                                    | font-smoothing       |
 | normal-nums, ordinal, slashed-zero, lining-nums, oldstyle-nums, proportional-nums... | font-variant-numeric |
-| tracking-tighter,tracking-tight, tracking-normal, ..., tracking-widest | letter-spacing       |
-| leading-none, leading-tight, leading-normal, ..., 0, 1, 2, 3, ... | line-height          |
+| tracking-tighter,tracking-tight, tracking-normal, ..., tracking-widest               | letter-spacing       |
+| leading-none, leading-tight, leading-normal, ..., 0, 1, 2, 3, ...                    | line-height          |
 
 ### Text
 
 `text = "sm gray-900 underline truncate"`
 
-| values                                                       | property            |
-| :----------------------------------------------------------- | :------------------ |
-| xs, sm, ..., lg                                              | font-size           |
-| left, center, right, justify                                 | text-align          |
-| baseline, top, middle, bottom, text-top, text-bottom         | vertical-align      |
-| blue-500, gray-700, ...                                      | color               |
-| opacity-40, ... opacity-90                                   | opacity             |
-| underline, line-through, no-underline                        | text-decoration     |
-| underline-green-500, underline-opacity-50, underline-auto, underline-2, underline-offset-auto | text-decoration |
-| tab, tab-0, tab-2, tab-4                                     | tab-size            |
-| indent, indent-xs, indent-sm, indent-md                      | text-indent         |
-| uppercase, lowercase, capitalize, normal-case                | text-transform      |
-| stroke, stroke-none, stroke-sm, ...                          | text-stroke-width   |
-| stroke-transparent, stroke-blue-500, stroke-gray-500, ...    | text-stroke-color   |
-| shadow, shadow-sm, shadow-md, shadow-lg, ...                 | text-stroke-shadow  |
-| truncate, overflow-ellipsis, overflow-clip                   | text-overflow       |
-| space-normal, space-nowrap, space-pre, space-pre-line, space-pre-wrap | white-space|
-| break-normal, break-words, break-all                         | word-break          |
-| write-normal, write-vertical-right, write-vertical-left      | writing-mode        |
-| write-orient-mixed, write-orient-upright, write-orient-sideways| writing-orientation |
-| hyphens-none, hyphens-manual, hyphens-auto                   | hyphens             |
-| placeholder-blue-500, placeholder-gray-700, ...              | placeholder-color   |
-| placeholder-opacity-50, placeholder-opacity-90, ...          | placeholder-opacity |
+| values                                                                                        | property            |
+| :-------------------------------------------------------------------------------------------- | :------------------ |
+| xs, sm, ..., lg                                                                               | font-size           |
+| left, center, right, justify                                                                  | text-align          |
+| baseline, top, middle, bottom, text-top, text-bottom                                          | vertical-align      |
+| blue-500, gray-700, ...                                                                       | color               |
+| opacity-40, ... opacity-90                                                                    | opacity             |
+| underline, line-through, no-underline                                                         | text-decoration     |
+| underline-green-500, underline-opacity-50, underline-auto, underline-2, underline-offset-auto | text-decoration     |
+| tab, tab-0, tab-2, tab-4                                                                      | tab-size            |
+| indent, indent-xs, indent-sm, indent-md                                                       | text-indent         |
+| uppercase, lowercase, capitalize, normal-case                                                 | text-transform      |
+| stroke, stroke-none, stroke-sm, ...                                                           | text-stroke-width   |
+| stroke-transparent, stroke-blue-500, stroke-gray-500, ...                                     | text-stroke-color   |
+| shadow, shadow-sm, shadow-md, shadow-lg, ...                                                  | text-stroke-shadow  |
+| truncate, overflow-ellipsis, overflow-clip                                                    | text-overflow       |
+| space-normal, space-nowrap, space-pre, space-pre-line, space-pre-wrap                         | white-space         |
+| break-normal, break-words, break-all                                                          | word-break          |
+| write-normal, write-vertical-right, write-vertical-left                                       | writing-mode        |
+| write-orient-mixed, write-orient-upright, write-orient-sideways                               | writing-orientation |
+| hyphens-none, hyphens-manual, hyphens-auto                                                    | hyphens             |
+| placeholder-blue-500, placeholder-gray-700, ...                                               | placeholder-color   |
+| placeholder-opacity-50, placeholder-opacity-90, ...                                           | placeholder-opacity |
 
-`You can also use `placeholder = "blue-500 opacity-50"`, but usually it conflicts with the `placeholder attribute of input element, so it is better to put it in text, and it's also makes sense.
+You can also use `placeholder = "blue-500 opacity-50"`, but usually it conflicts with the `placeholder` attribute of the input element,
+so it is better to put it in `text`, and it also makes sense.
 
 ### Underline
 
 `underline = "~ green-500 opacity-50 2 offset-2"`
 
-| values              | property            |
-| :------------------ | :------------------ |
-| ~ line-through none | text-decoration     |
-| green-500, current ...     | text-decoration-color |
-| opacity-50, opacity-60 ... | text-decoration-opacity |
-| auto, 0, 1, 2, 3, 4 ...  | text-decoration-thickness |
-| offset-auto, offset-1, offset-2, ...  | text-decoration-offset |
+| values                               | property                  |
+| :----------------------------------- | :------------------------ |
+| ~ line-through none                  | text-decoration           |
+| green-500, current ...               | text-decoration-color     |
+| opacity-50, opacity-60 ...           | text-decoration-opacity   |
+| auto, 0, 1, 2, 3, 4 ...              | text-decoration-thickness |
+| offset-auto, offset-1, offset-2, ... | text-decoration-offset    |
 
 ### List
 
@@ -120,8 +121,8 @@ md-bg = "blue-300 dark:blue-400"
 ### Border
 
 `border = "~ rounded dashed gray-400 opacity-80"`
->
-`~ represent border itself, means border-DEFAULT`
+
+> `~` represents border itself, which means `border-DEFAULT`
 
 | values                                      | property                              |
 | :------------------------------------------ | :------------------------------------ |
@@ -159,25 +160,27 @@ md-bg = "blue-300 dark:blue-400"
 
 `icon = "fill-gray-200 stroke-blue-400 stroke-2"`
 
-| values                               | property     |
-| :----------------------------------- | :----------- |
-| fill-current, fill-gray-200, ...     | fill         |
-| stroke-current, stroke-gray-400, ... | stroke       |
-| stroke-2, stroke-4, ...              | stroke-width |
-| stroke-dash-2 , stroke-dash-4, ...   | stroke-dasharray |
-| stroke-offset-2, stroke-offset-4, ...| stroke-dashoffset |
-| stroke-cap-auto , stroke-cap-square..| stroke-line-cap |
-| stroke-join-auto, stroke-join-auto...| stroke-line-join |
+| values                                | property          |
+| :------------------------------------ | :---------------- |
+| fill-current, fill-gray-200, ...      | fill              |
+| stroke-current, stroke-gray-400, ...  | stroke            |
+| stroke-2, stroke-4, ...               | stroke-width      |
+| stroke-dash-2 , stroke-dash-4, ...    | stroke-dasharray  |
+| stroke-offset-2, stroke-offset-4, ... | stroke-dashoffset |
+| stroke-cap-auto , stroke-cap-square.. | stroke-line-cap   |
+| stroke-join-auto, stroke-join-auto... | stroke-line-join  |
 
-`You can also use `stroke = "2 gray-400"` or `fill=gray-200`, but usually it conflicts with the `fill/stroke attribute of svg element, so it is better to put it in svg.
+You can also use `stroke = "2 gray-400"` or `fill = "gray-200"`,
+but usually it conflicts with the `fill`/`stroke` attribute of the svg element,
+so it is better to put it in svg.
 
 ---
 
 ### Container
 
 `container = "~"`
->
-`container just a single utility, you can also write it in the class attr.`
+
+> `container` is just a single utility, you can also write it in the `class` attr.
 
 | values | property        |
 | :----- | :-------------- |
@@ -302,12 +305,12 @@ md-bg = "blue-300 dark:blue-400"
 
 `table = "inline column"`
 
-| values                                                       | property     |
-| :----------------------------------------------------------- | :----------- |
+| values                                                                                     | property     |
+| :----------------------------------------------------------------------------------------- | :----------- |
 | ~, inline, caption, cell, column, column-group, footer-group, header-group, row-group, row | display      |
-| auto, fixed                                                  | table-layout |
-| caption-top, caption-bottom                                  | caption-side |
-| empty-cells-visible, empty-cells-hidden                      | empty-cells  |
+| auto, fixed                                                                                | table-layout |
+| caption-top, caption-bottom                                                                | caption-side |
+| empty-cells-visible, empty-cells-hidden                                                    | empty-cells  |
 
 ### Order
 
@@ -321,41 +324,41 @@ md-bg = "blue-300 dark:blue-400"
 
 `align = "start md:end"`
 
-| values                                                       | property      |
-| :----------------------------------------------------------- | :------------ |
+| values                                                                                                  | property      |
+| :------------------------------------------------------------------------------------------------------ | :------------ |
 | (content-)center, (content-)start, (content-)end, (content-)between, (content-)around, (content-)evenly | align-content |
-| items-start, items-end, items-center, items-baseline, items-stretch | align-items   |
-| self-auto, self-start, self-end, self-center, self-stretch   | align-self    |
+| items-start, items-end, items-center, items-baseline, items-stretch                                     | align-items   |
+| self-auto, self-start, self-end, self-center, self-stretch                                              | align-self    |
 
 ### Justify
 
 `justify = "start md:between"`
 
-| values                                                       | property        |
-| :----------------------------------------------------------- | :-------------- |
+| values                                                                                                  | property        |
+| :------------------------------------------------------------------------------------------------------ | :-------------- |
 | (content-)center, (content-)start, (content-)end, (content-)between, (content-)around, (content-)evenly | justify-content |
-| items-start, items-end, items-center, items-baseline, items-stretch | justify-items   |
-| self-auto, self-start, self-end, self-center, self-stretch   | justify-self    |
+| items-start, items-end, items-center, items-baseline, items-stretch                                     | justify-items   |
+| self-auto, self-start, self-end, self-center, self-stretch                                              | justify-self    |
 
 ### Place
 
 `place = "start md:center"`
 
-| values                                                       | property      |
-| :----------------------------------------------------------- | :------------ |
+| values                                                                                                                     | property      |
+| :------------------------------------------------------------------------------------------------------------------------- | :------------ |
 | (content-)center, (content-)start, (content-)end, (content-)between, (content-)around, (content-)evenly, (content-)stretch | place-content |
-| items-start, items-end, items-center, items-stretch          | place-items   |
-| self-auto, self-start, self-end, self-center, self-stretch   | place-self    |
+| items-start, items-end, items-center, items-stretch                                                                        | place-items   |
+| self-auto, self-start, self-end, self-center, self-stretch                                                                 | place-self    |
 
 ### Display
 
 `display = "block md:hidden"`
 
-| values                                                       | property   |
-| :----------------------------------------------------------- | :--------- |
-| inline, flow-root, contents, list-item, hidden, block, inline-block | display    |
-| visible, invisible                                           | visibility |
-| backface-visible, backface-hidden                   | backface-visibility |
+| values                                                              | property            |
+| :------------------------------------------------------------------ | :------------------ |
+| inline, flow-root, contents, list-item, hidden, block, inline-block | display             |
+| visible, invisible                                                  | visibility          |
+| backface-visible, backface-hidden                                   | backface-visibility |
 
 ### Position
 
@@ -383,10 +386,10 @@ md-bg = "blue-300 dark:blue-400"
 
 `caret = "gray-500 opacity-50"`
 
-| values                             | property             |
-| :--------------------------------- | :------------------- |
-| gray-500 transparent ...           | caret-color          |
-| opacity-0, opacity-50, ...         | caret-opacity        |
+| values                     | property      |
+| :------------------------- | :------------ |
+| gray-500 transparent ...   | caret-color   |
+| opacity-0, opacity-50, ... | caret-opacity |
 
 ### Isolation
 
@@ -464,35 +467,35 @@ md-bg = "blue-300 dark:blue-400"
 
 `filter = "~ blur-sm brightness-125"`
 
-| values                                                       | property    |
-| :----------------------------------------------------------- | :---------- |
-| ~, none                                                      | filter      |
-| blur-0, blur-sm, blur, blur-md, ...                          | blur        |
-| brightness-0, brightness-50, brightness-75, ...              | brightness  |
-| contrast-0, contrast-50, contrast-75, ...                    | contrast    |
-| drop-shadow-sm, drop-shadow, drop-shadow-md, ...             | drop-shadow |
-| grayscale-0, grayscale                                       | grayscale   |
+| values                                                              | property    |
+| :------------------------------------------------------------------ | :---------- |
+| ~, none                                                             | filter      |
+| blur-0, blur-sm, blur, blur-md, ...                                 | blur        |
+| brightness-0, brightness-50, brightness-75, ...                     | brightness  |
+| contrast-0, contrast-50, contrast-75, ...                           | contrast    |
+| drop-shadow-sm, drop-shadow, drop-shadow-md, ...                    | drop-shadow |
+| grayscale-0, grayscale                                              | grayscale   |
 | -hue-rotate-180, -hue-rotate-90, ..., hue-rotate-90, hue-rotate-180 | hue-rotate  |
-| invert-0, invert                                             | invert      |
-| saturate-0, saturate-50, saturate-100, ...                   | saturate    |
-| sepia-0, sepia                                               | sepia       |
+| invert-0, invert                                                    | invert      |
+| saturate-0, saturate-50, saturate-100, ...                          | saturate    |
+| sepia-0, sepia                                                      | sepia       |
 
 ### Backdrop Filter
 
 `backdrop = "~ blur-sm brightness-125"`
 
-| values                                                       | property        |
-| :----------------------------------------------------------- | :-------------- |
-| ~, none                                                      | backdrop-filter |
-| blur-0, blur-sm, blur, blur-md, ...                          | blur            |
-| brightness-0, brightness-50, brightness-75, ...              | brightness      |
-| contrast-0, contrast-50, contrast-75, ...                    | contrast        |
-| grayscale-0, grayscale                                       | grayscale       |
+| values                                                              | property        |
+| :------------------------------------------------------------------ | :-------------- |
+| ~, none                                                             | backdrop-filter |
+| blur-0, blur-sm, blur, blur-md, ...                                 | blur            |
+| brightness-0, brightness-50, brightness-75, ...                     | brightness      |
+| contrast-0, contrast-50, contrast-75, ...                           | contrast        |
+| grayscale-0, grayscale                                              | grayscale       |
 | -hue-rotate-180, -hue-rotate-90, ..., hue-rotate-90, hue-rotate-180 | hue-rotate      |
-| invert-0, invert                                             | invert          |
-| opacity-0, opacity-5, ... opacity-95                         | opacity         |
-| saturate-0, saturate-50, saturate-100, ...                   | saturate        |
-| sepia-0, sepia                                               | sepia           |
+| invert-0, invert                                                    | invert          |
+| opacity-0, opacity-5, ... opacity-95                                | opacity         |
+| saturate-0, saturate-50, saturate-100, ...                          | saturate        |
+| sepia-0, sepia                                                      | sepia           |
 
 ### Transition
 
@@ -517,19 +520,19 @@ md-bg = "blue-300 dark:blue-400"
 
 `transform = "~ rotate-45 lg:none"`
 
-| values                                                       | property                |
-| :----------------------------------------------------------- | :---------------------- |
-| ~, gpu, none                                                 | transform               |
-| preserve-flat, preserve-3d                                   | transform-style         |
-| perspect-lg, perspect-none, ...                              | perspective             |
-| perspect-origin-center, perspect-origin-top                  | perspective-origin      |
-| origin-center, origin-top, origin-top-right, ...             | transform-origin        |
-| scale-0, scale-50, scale-75, ...                             | scale                   |
-| scale-x-60, scale-y-30, scale-z-45                           | scale-x/y/z             |
-| rotate-50, -rotate-50, ...                                   | rotate                  |
-| rotate-x-30, rotate-y-45, rotate-z-90                        | rotate-x/y/z            |
-| translate-x-2, -translate-x-4, translate-y-40, -translate-y-40, translate-z-12 | translate-x/y/z |
-| skew-x-2, -skew-x-4, skew-y-2, -skew-y-2                     | skew-x/skew-y           |
+| values                                                                         | property           |
+| :----------------------------------------------------------------------------- | :----------------- |
+| ~, gpu, none                                                                   | transform          |
+| preserve-flat, preserve-3d                                                     | transform-style    |
+| perspect-lg, perspect-none, ...                                                | perspective        |
+| perspect-origin-center, perspect-origin-top                                    | perspective-origin |
+| origin-center, origin-top, origin-top-right, ...                               | transform-origin   |
+| scale-0, scale-50, scale-75, ...                                               | scale              |
+| scale-x-60, scale-y-30, scale-z-45                                             | scale-x/y/z        |
+| rotate-50, -rotate-50, ...                                                     | rotate             |
+| rotate-x-30, rotate-y-45, rotate-z-90                                          | rotate-x/y/z       |
+| translate-x-2, -translate-x-4, translate-y-40, -translate-y-40, translate-z-12 | translate-x/y/z    |
+| skew-x-2, -skew-x-4, skew-y-2, -skew-y-2                                       | skew-x/skew-y      |
 
 ---
 
@@ -591,4 +594,7 @@ md-bg = "blue-300 dark:blue-400"
 
 ## Special cases
 
-`grid table flex ring shadow border filter backdrop transition transform resize`, These classes are special cases, **you cannot write empty attribute values** (`flex=""`). You can write `default` or `~` instead(`flex="~"` or `flex="default"`).
+`grid table flex ring shadow border filter backdrop transition transform resize`
+
+These classes are special cases, **you cannot write empty attribute values** (`flex=""`).
+You can write `default` or `~` instead (`flex="~"` or `flex="default"`).
