@@ -107,7 +107,7 @@ Oh, and don't worry about the final bundle, in production build `virtual:windi-d
 
 ### Preflight (style resetting)
 
-Preflight is enabled on-demanded. If you'd like to completely disable it, you can configure it as below
+Preflight is enabled on-demand. If you'd like to completely disable it, you can configure it as below
 
 ```ts windi.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
