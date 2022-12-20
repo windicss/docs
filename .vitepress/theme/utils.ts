@@ -72,7 +72,7 @@ export function ensureEndingSlash(path: string): string {
 }
 
 /**
- * Remove `.md` or `.html` extention from the given path. It also converts
+ * Remove `.md` or `.html` extension from the given path. It also converts
  * `index` to slush.
  */
 export function removeExtension(path: string): string {
