@@ -295,37 +295,28 @@ See [examples](https://github.com/windicss/vite-plugin-windicss/blob/main/exampl
 
 ---
 
-## SvelteKit (as of 1.0.0-next.102)
+## SvelteKit (as of 1.0.1)
 
-Install plugin with `npm i -D vite-plugin-windicss` and adapt the svelte config:
+Install plugin with `npm i -D vite-plugin-windicss` and edit the `vite.config.js` file:
 
 ```diff
-import preprocess from 'svelte-preprocess'
+import { sveltekit } from '@sveltejs/kit/vite';
 + import WindiCSS from 'vite-plugin-windicss'
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import('vite').UserConfig} */
 const config = {
-  // Consult https://github.com/sveltejs/svelte-preprocess
-  // for more information about preprocessors
-  preprocess: preprocess(),
-
-  kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
-+   vite: {
-+     plugins: [
-+       WindiCSS(),
-+     ],
-+   },
-  },
+  plugins: [
+    sveltekit(),
++   WindiCSS()
+  ]
 };
 
-export default config
+export default config;
 ```
 
-Add `import "virtual:windi.css"` to the top of your __layout.svelte file:
+Add `import "virtual:windi.css"` to the top of your `+layout.svelte` file:
 
-```html __layout.svelte
+```html +layout.svelte
 <script>
   import "virtual:windi.css"
 
@@ -334,5 +325,5 @@ Add `import "virtual:windi.css"` to the top of your __layout.svelte file:
   if (browser) import("virtual:windi-devtools")
   // ...
 </script>
-<!-- ...rest of __layout.svelte -->
+<!-- ...rest of +layout.svelte -->
 ```
