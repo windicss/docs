@@ -27,7 +27,7 @@ export default {
 note: `buildModules` is no longer needed in Nuxt 3 and Nuxt Bridge; all modules should be added to modules instead.
 
 ```js nuxt.config.js
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   modules: [
