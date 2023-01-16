@@ -84,13 +84,13 @@ Within an entry point file or something only loaded once, add the import.
 ESM
 
 ```ts main.js
-import 'windi.css'
+import 'virtual:windi.css'
 ```
 
 CJS
 
 ```ts main.js
-require('windi.css')
+require('virtual:windi.css')
 ```
 
 ### Windi Config
