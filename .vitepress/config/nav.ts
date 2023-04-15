@@ -166,6 +166,9 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: 'Posts',
     items: [
+      { text: 'Windi CSS is Sunsetting', link: '/posts/sunsetting' },
+      { text: 'separator', link: 'separator' },
+
       // { text: 'API', link: '/posts/api' },
       { text: 'The Story of WindiCSS', link: '/posts/story' },
       { text: 'WindiCSS v2.2 is here', link: '/posts/v22' },

@@ -46,7 +46,6 @@ const heroText = computed(() => frontmatter.value.heroText || site.value.title)
           </div>
         </div>
       </div>
-      <HomeNews />
     </div>
   </header>
 </template>

@@ -1,6 +1,7 @@
 {
   "private": true,
   "license": "MIT",
+  "packageManager": "pnpm@7.32.0",
   "scripts": {
     "dev": "vitepress dev",
     "functions": "netlify dev",
